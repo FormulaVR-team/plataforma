@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="product_id" descripcion="product_id" descripcionCorta="product_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="name" descripcion="name" descripcionCorta="name" longitud="100" tipo="CHAR" />
+		<CAM nombre="whoCanSelect_AFU" descripcion="whoCanSelect_AFU" descripcionCorta="whoCanSelect_AFU" longitud="10" tipo="CHAR" />
+		<CAM nombre="deadline" descripcion="deadline" descripcionCorta="deadline" longitud="10" tipo="CHAR" />
+		<CAM nombre="isPercent" descripcion="isPercent" descripcionCorta="isPercent" longitud="1" tipo="CHAR" />
+		<CAM nombre="amount" descripcion="amount" descripcionCorta="amount" longitud="12" tipo="DEC" />
+		<CAM nombre="currency" descripcion="currency" descripcionCorta="currency" longitud="10" tipo="CHAR" />
+		<CAM nombre="duration_minutes" descripcion="duration_minutes" descripcionCorta="duration_minutes" longitud="5" tipo="NUM" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- PT products -->
+	<ENT nombre="products" descripcion="products" prefijo="pt">
+		<FMT archivo="T_PT_products" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="product_id" />
+			<CAM nombre="name" />
+			<CAM nombre="whoCanSelect_AFU" />
+			<CAM nombre="deadline" />
+			<CAM nombre="isPercent" />
+			<CAM nombre="amount" />
+			<CAM nombre="currency" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_PT_products" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="product_id" />
+			<CAM nombre="name" />
+			<CAM nombre="whoCanSelect_AFU" />
+			<CAM nombre="deadline" />
+			<CAM nombre="isPercent" />
+			<CAM nombre="amount" />
+			<CAM nombre="currency" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="json" />
+			<KEY nombre="product_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_PT_RTV_products" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="product_id" />
+			<CAM nombre="name" />
+			<CAM nombre="whoCanSelect_AFU" />
+			<CAM nombre="deadline" />
+			<CAM nombre="isPercent" />
+			<CAM nombre="amount" />
+			<CAM nombre="currency" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="json" />
+			<KEY nombre="product_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>

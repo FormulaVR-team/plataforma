@@ -1,0 +1,17 @@
+angular-load: 
+	Dynamically load scripts and css stylesheets in your Angular.JS app
+	https://github.com/urish/angular-load
+
+UI Bootstrap - AngularJS directives specific to Bootstrap
+	https://github.com/angular-ui/bootstrap
+	https://angular-ui.github.io/bootstrap/
+
+Simple menu con ui-router:
+	https://long2know.com/2015/03/simple-menu-with-ui-router-states/
+	
+ui-sref params, super clarito:
+	https://scotch.io/tutorials/3-simple-tips-for-using-ui-router
+	
+md angular Datepicker:
+	https://www.tutorialspoint.com/angular_material/angular_material_datepicker.htm
+	

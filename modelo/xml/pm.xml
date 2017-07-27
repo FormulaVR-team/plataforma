@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="coupon_id" descripcion="coupon_id" descripcionCorta="coupon_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="name" descripcion="name" descripcionCorta="name" longitud="100" tipo="CHAR" />
+		<CAM nombre="uses_per_user" descripcion="uses_per_user" descripcionCorta="uses_per_user" longitud="5" tipo="NUM" />
+		<CAM nombre="product_id" descripcion="product_id" descripcionCorta="product_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="PT_name" descripcion="PT_name" descripcionCorta="PT_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="PT_whoCanSelect_AFU" descripcion="PT_whoCanSelect_AFU" descripcionCorta="PT_whoCanSelect_AFU" longitud="10" tipo="CHAR" />
+		<CAM nombre="PT_deadline" descripcion="PT_deadline" descripcionCorta="PT_deadline" longitud="10" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="LO_name" descripcion="LO_name" descripcionCorta="LO_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="deadline" descripcion="deadline" descripcionCorta="deadline" longitud="10" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- PM promosManuales -->
+	<ENT nombre="promosManuales" descripcion="promosManuales" prefijo="pm">
+		<FMT archivo="T_PM_promosManuales" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="coupon_id" />
+			<CAM nombre="name" />
+			<CAM nombre="uses_per_user" />
+			<CAM nombre="product_id" />
+			<CAM nombre="location_id" />
+			<CAM nombre="deadline" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_PM_promosManuales" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="coupon_id" />
+			<CAM nombre="name" />
+			<CAM nombre="uses_per_user" />
+			<CAM nombre="product_id" />
+			<CAM nombre="location_id" />
+			<CAM nombre="deadline" />
+			<CAM nombre="json" />
+			<KEY nombre="coupon_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_PM_RTV_promosManuales" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="coupon_id" />
+			<CAM nombre="name" />
+			<CAM nombre="uses_per_user" />
+			<CAM nombre="product_id" />
+			<CAM nombre="PT_name" />
+			<CAM nombre="PT_whoCanSelect_AFU" />
+			<CAM nombre="PT_deadline" />
+			<CAM nombre="location_id" />
+			<CAM nombre="LO_name" />
+			<CAM nombre="deadline" />
+			<CAM nombre="json" />
+			<KEY nombre="coupon_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>

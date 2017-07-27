@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="country_id" descripcion="country_id" descripcionCorta="country_id" longitud="5" tipo="NUM" />
+		<CAM nombre="name" descripcion="name" descripcionCorta="name" longitud="100" tipo="CHAR" />
+		<CAM nombre="alpha_2" descripcion="alpha_2" descripcionCorta="alpha_2" longitud="2" tipo="CHAR" />
+		<CAM nombre="alpha_3" descripcion="alpha_3" descripcionCorta="alpha_3" longitud="3" tipo="CHAR" />
+		<CAM nombre="flag_base64" descripcion="flag_base64" descripcionCorta="flag_base64" longitud="100" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- PS countries -->
+	<ENT nombre="countries" descripcion="countries" prefijo="ps">
+		<FMT archivo="T_PS_countries" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="country_id" />
+			<CAM nombre="name" />
+			<CAM nombre="alpha_2" />
+			<CAM nombre="alpha_3" />
+			<CAM nombre="flag_base64" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_PS_countries" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="country_id" />
+			<CAM nombre="name" />
+			<CAM nombre="alpha_2" />
+			<CAM nombre="alpha_3" />
+			<CAM nombre="flag_base64" />
+			<CAM nombre="json" />
+			<KEY nombre="country_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_PS_RTV_countries" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="country_id" />
+			<CAM nombre="name" />
+			<CAM nombre="alpha_2" />
+			<CAM nombre="alpha_3" />
+			<CAM nombre="flag_base64" />
+			<CAM nombre="json" />
+			<KEY nombre="country_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>

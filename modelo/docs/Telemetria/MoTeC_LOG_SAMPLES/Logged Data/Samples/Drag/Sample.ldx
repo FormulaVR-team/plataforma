@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LDXFile Version="1.6" Locale="English">
+  <Layers>
+    <Layer>
+      <MarkerBlock>
+        <MarkerGroup Name="Outings:Runs" Index="1">
+          <Marker Version="100" ClassName="SOR" Flags="13" Time="176750000.000000"/>
+          <Marker Version="100" ClassName="SOC" Flags="13" Time="-400000.000000"/>
+        </MarkerGroup>
+      </MarkerBlock>
+      <RangeBlock/>
+    </Layer>
+    <Details>
+      <Numeric Id="Gear 2" Value="1.000000" DPS="0"/>
+      <Numeric Id="Speed 1320 ft" Value="300.000000" Unit="mph" DPS="0"/>
+      <String Id="Event" Value="Nationals"/>
+      <Numeric Id="Gear 3" Value="1.000000" DPS="0"/>
+      <String Id="Vehicle Type" Value="Car"/>
+      <String Id="Engine Id" Value="x428i"/>
+      <Numeric Id="Gear 4" Value="0.000000" DPS="0"/>
+      <String Id="Log Time And Date" Value="10/10/2004  3:54 PM"/>
+      <String Id="Long Comment"/>
+      <String Id="Short Comment" Value="First Qualifier"/>
+      <String Id="Vehicle Comment"/>
+      <String Id="Venue" Value="WSID"/>
+      <String Id="Weather Comment"/>
+      <String Id="Wind Direction"/>
+      <Numeric Id="Gear 5" Value="0.000000" DPS="0"/>
+      <String Id="Reaction Time" Value="00.400"/>
+      <String Id="Session"/>
+      <Numeric Id="Gear 6" Value="0.000000" DPS="0"/>
+      <String Id="Time 660 ft" Value="04.070"/>
+      <Numeric Id="Gear 7" Value="0.000000" DPS="0"/>
+      <String Id="Run Name" Value="Q1"/>
+      <Numeric Id="Gear 8" Value="0.000000" DPS="0"/>
+      <String Id="Sky"/>
+      <Numeric Id="Speed 660 ft" Value="100.000000" Unit="mph" DPS="0"/>
+      <String Id="Time 1320 ft" Value="06.138"/>
+      <String Id="Time 330 ft" Value="02.810"/>
+      <String Id="Time 60 ft" Value="01.200"/>
+      <String Id="Vehicle Desc" Value="Car 01"/>
+      <String Id="Dial in Time"/>
+      <Numeric Id="Diff Ratio" Value="0.000000" DPS="0"/>
+      <Numeric Id="Gear 1" Value="1.000000" DPS="0"/>
+      <Numeric Id="Gear 10" Value="0.000000" DPS="0"/>
+      <Numeric Id="Gear 9" Value="0.000000" DPS="0"/>
+      <String Id="Lane" Value="Left"/>
+      <String Id="Time 1000 ft" Value="05.160"/>
+      <String Id="Driver" Value="Driver 1"/>
+      <String Id="Vehicle Drive Type"/>
+      <String Id="Vehicle Id" Value="v219"/>
+      <String Id="Total Laps" Value="1"/>
+    </Details>
+  </Layers>
+</LDXFile>

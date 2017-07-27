@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="day_type" descripcion="day_type" descripcionCorta="day_type" longitud="50" tipo="CHAR" />
+		<CAM nombre="start_time" descripcion="start_time" descripcionCorta="start_time" longitud="4" tipo="CHAR" />
+		<CAM nombre="duration_minutes" descripcion="duration_minutes" descripcionCorta="duration_minutes" longitud="5" tipo="NUM" />
+		<CAM nombre="isBlocked" descripcion="isBlocked" descripcionCorta="isBlocked" longitud="1" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- TT timeTableReference -->
+	<ENT nombre="timeTableReference" descripcion="timeTableReference" prefijo="tt">
+		<FMT archivo="T_TT_timeTableReference" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="day_type" />
+			<CAM nombre="start_time" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="isBlocked" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_TT_timeTableReference" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="day_type" />
+			<CAM nombre="start_time" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="isBlocked" />
+			<CAM nombre="json" />
+			<KEY nombre="location_id" orden="ASC" secuencia="1" />
+			<KEY nombre="day_type" orden="ASC" secuencia="2" />
+			<KEY nombre="start_time" orden="ASC" secuencia="3" />
+		</FMT>
+		<FMT archivo="V_TT_RTV_timeTableReference" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="day_type" />
+			<CAM nombre="start_time" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="isBlocked" />
+			<CAM nombre="json" />
+			<KEY nombre="location_id" orden="ASC" secuencia="1" />
+			<KEY nombre="day_type" orden="ASC" secuencia="2" />
+			<KEY nombre="start_time" orden="ASC" secuencia="3" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>

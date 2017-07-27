@@ -1,0 +1,45 @@
+%!Adobe-FontList 1.13
+%Locale:0xc0a
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:NexaBold
+FamilyName:Nexa Bold
+StyleName:Regular
+FullName:Nexa Bold
+MenuName:Nexa Bold
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\elia\Desktop\formulavr\def\Font\Nexa Bold_1.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:30388
+FileModTime:1342808418
+WeightClass:700
+WidthClass:5
+AngleClass:0
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:NexaLight
+FamilyName:Nexa Light
+StyleName:Regular
+FullName:Nexa Light
+MenuName:Nexa Light
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\elia\Desktop\formulavr\def\Font\Nexa Light_1.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:30004
+FileModTime:1342888244
+WeightClass:400
+WidthClass:5
+AngleClass:0
+%EndFont
+

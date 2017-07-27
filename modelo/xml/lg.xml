@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="serial" descripcion="serial" descripcionCorta="serial" longitud="5" tipo="NUM" />
+		<CAM nombre="text_1" descripcion="text_1" descripcionCorta="text_1" longitud="100" tipo="CHAR" />
+		<CAM nombre="text_2" descripcion="text_2" descripcionCorta="text_2" longitud="100" tipo="CHAR" />
+		<CAM nombre="text_3" descripcion="text_3" descripcionCorta="text_3" longitud="100" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- LG logs -->
+	<ENT nombre="logs" descripcion="logs" prefijo="lg">
+		<FMT archivo="T_LG_logs" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="serial" />
+			<CAM nombre="text_1" />
+			<CAM nombre="text_2" />
+			<CAM nombre="text_3" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_LG_logs" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="serial" />
+			<CAM nombre="text_1" />
+			<CAM nombre="text_2" />
+			<CAM nombre="text_3" />
+			<CAM nombre="json" />
+			<KEY nombre="serial" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_LG_RTV_logs" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="serial" />
+			<CAM nombre="text_1" />
+			<CAM nombre="text_2" />
+			<CAM nombre="text_3" />
+			<CAM nombre="json" />
+			<KEY nombre="serial" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>

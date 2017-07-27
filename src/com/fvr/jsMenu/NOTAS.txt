@@ -1,0 +1,35 @@
+
+RESUMEN DE USO dentro de cualquier JSP.
+
+>>>>>>>>>>>>>> Ver el código js en: \web\script\JSMenu.js
+
+En el <head> del JSP:
+
+        <link rel="stylesheet" type="text/css" href="./res/JSMenu_estilos.css" />
+        <script type="text/javascript" src="./script/JSMenu.js"></script>
+
+En el <body> del JSP: (No importa si esta dentro o fuera de un 'form')
+
+        <div id="elMenu"></div>
+        <logic:present name="JSMenuBeanArray">
+            <script type="text/javascript">var jsMenu = new Array();</script>
+            <logic:iterate id="JSMenu_Items" name="JSMenuBeanArray">
+                <script type="text/javascript">jsMenu.push("${JSMenu_Items.jsMenu_Nivel}|${JSMenu_Items.jsMenu_Literal}|${JSMenu_Items.jsMenu_Accion}");</script>
+            </logic:iterate>
+            <script type="text/javascript">JSMenu_construirMenu( jsMenu );</script>
+        </logic:present>
+
+Añadir su propia carga en el 'action' que alimente al JSP:
+
+        /////////////////////////////////////////
+        // Aqui se cargan 120 items de menú como demostración exclusivamente...
+        // Podría recuperarse desde un archivo "Usuario/Items".
+        com.fvr.jsMenu.bean.JSMenu_bean[] JSMenuBeanArray = new com.fvr.jsMenu.bean.JSMenu_bean[120];
+        for( int idx = 0; idx<120; idx++ )  {
+            JSMenuBeanArray[idx] = new com.fvr.jsMenu.bean.JSMenu_bean();
+            JSMenuBeanArray[idx].setJsMenu_Nivel(""+idx);
+            JSMenuBeanArray[idx].setJsMenu_Literal("Literal del " + idx);
+            JSMenuBeanArray[idx].setJsMenu_Accion("gotoLogon_A");   // También vale: http://www.google.es
+        }
+        request.setAttribute( "JSMenuBeanArray", JSMenuBeanArray );
+        /////////////////////////////////////////

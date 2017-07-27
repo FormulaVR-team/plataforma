@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./res/estilos.css" />
+        <title>Calendario</title>
+        <script type="text/javascript">
+            function persistePeticionario() {
+                // Extraigo cadena de los parámetros de entrada:
+                var v = (window.location.search.length>0)?window.location.search.substring(1):"";
+                // aislo cada parámetro:
+                parms = v.split('&');
+                for (i=0;i<parms.length;i++) {
+                    parm = parms[i].split('=');
+                    // y de cada uno, su nombre y su valor:
+                    if ( parm.length == 2 ) {
+                        // persisto los datos de retorno:
+                        if ( parm[0].toLowerCase() == 'form' )    
+                            window.document.forms['calendario'].elements["retFormulario"].value = parm[1];
+                        if ( parm[0].toLowerCase() == 'element' ) 
+                            window.document.forms['calendario'].elements["retElemento"].value   = parm[1];
+                        if ( parm[0].toLowerCase() == 'value' ) 
+                            window.document.forms['calendario'].elements["valorInicial"].value  = parm[1];
+                    }
+                }
+                if ( window.document.forms['calendario'].elements["valorInicial"].value == null ||
+                     window.document.forms['calendario'].elements["valorInicial"].value == "") {
+                    var wFecha = new Date();
+                    window.document.forms['calendario'].elements["aaaa"].value = wFecha.getFullYear();
+                    window.document.forms['calendario'].elements["mm"].value = wFecha.getMonth()+1; 
+                    window.document.forms['calendario'].elements["dd"].value = wFecha.getDate();
+                } else {
+                    var aa_mm_dd = window.document.forms['calendario'].elements["valorInicial"].value;
+                    window.document.forms['calendario'].elements["aaaa"].value = "20" + aa_mm_dd.substr(6,2);
+                    window.document.forms['calendario'].elements["mm"].value = aa_mm_dd.substr(3,2);
+                    window.document.forms['calendario'].elements["dd"].value = aa_mm_dd.substr(0,2);
+                }
+            }
+            function setRetorno( retValor ) {
+                var retFormulario = window.document.forms['calendario'].elements["retFormulario"].value;
+                var retElemento   = window.document.forms['calendario'].elements["retElemento"].value;
+                if ( retFormulario.length > 0 && retElemento.length > 0 ) {
+                    var formulario = "window.parent.document.forms['" + retFormulario + "']";
+                    var destino = formulario + ".elements['" + retElemento + "'].value";
+                    if ( retValor.length > 0 )
+                        eval( destino + " = '" + retValor +"'" );
+                    // eval( formulario + ".elements['opcionPantalla'].value = 'retornoSelect'" );
+                    // eval( formulario + ".submit()" );
+                }
+            }
+            var bckF, bckC;
+            function onTdOver( oTD )  { bckF=oTD.style.backgroundColor;bckC=oTD.style.color; oTD.style.backgroundColor='#008800';oTD.style.color='#ffffff'; }
+            function onTdOut( oTD )   { oTD.style.backgroundColor=bckF;oTD.style.color=bckC; }
+            
+            function calen_Seleccionado(elem) {
+                window.document.forms['calendario'].elements["dd"].value = elem.innerHTML;
+                var ano = window.document.forms['calendario'].elements["aaaa"].value;
+                var mes = window.document.forms['calendario'].elements["mm"].value;
+                var dia = window.document.forms['calendario'].elements["dd"].value;
+                
+                ano = ano.substr(2,2);
+                mes = (mes*1<10)?"0"+(mes*1):mes;
+                dia = (dia*1<10)?"0"+(dia*1):dia;
+                
+                var retValor = dia + "/" + mes + "/" + ano;
+                
+                setRetorno( retValor );
+                
+                return calen_Dibujar();
+            }
+            
+            function calen_AvanzaAno() {
+                var aaaa = window.document.forms['calendario'].elements["aaaa"].value;
+                aaaa = (aaaa*1)+1;
+                window.document.forms['calendario'].elements["aaaa"].value = aaaa;
+                return calen_Dibujar();
+            }
+            
+            function calen_RetrocedeAno() {
+                var aaaa = window.document.forms['calendario'].elements["aaaa"].value;
+                aaaa = (aaaa*1)-1;
+                window.document.forms['calendario'].elements["aaaa"].value = aaaa;
+                return calen_Dibujar();
+            }
+            
+            function calen_AvanzaMes() {
+                var aaaa = window.document.forms['calendario'].elements["aaaa"].value;
+                var mm = window.document.forms['calendario'].elements["mm"].value;
+                mm = mm*1 +1; 
+                aaaa = (mm>12)?(aaaa*1)+1:aaaa;
+                mm = (mm>12)?1:mm;
+                window.document.forms['calendario'].elements["aaaa"].value = aaaa;
+                window.document.forms['calendario'].elements["mm"].value = mm;
+                return calen_Dibujar();
+            }
+            
+            function calen_RetrocedeMes() {
+                var aaaa = window.document.forms['calendario'].elements["aaaa"].value;
+                var mm = window.document.forms['calendario'].elements["mm"].value;
+                mm = mm*1 -1; 
+                aaaa = (mm<1)?(aaaa*1)-1:aaaa;
+                mm = (mm<1)?12:mm;
+                window.document.forms['calendario'].elements["aaaa"].value = aaaa;
+                window.document.forms['calendario'].elements["mm"].value = mm;
+                return calen_Dibujar();
+            }
+
+            function calen_Dibujar() {
+                var aaaa = window.document.forms['calendario'].elements["aaaa"].value
+                var mm = window.document.forms['calendario'].elements["mm"].value
+                var dd = window.document.forms['calendario'].elements["dd"].value
+                
+                var wResultadoHTML = "";
+                var wFecha = new Date(); wFecha.setFullYear( aaaa ); wFecha.setMonth( mm-1 ); wFecha.setDate( 1 );
+                var wDiaSem = wFecha.getDay()-1; wDiaSem = (wDiaSem<0)?6:wDiaSem; // lunes:0, martes:1, ..., domingo:6.
+                var nDiasMes = "312831303130313130313031"; nDiasMes = nDiasMes.substr( (mm-1)*2, 2 );
+                if(nDiasMes=="28"&&aaaa%4==0) nDiasMes="29";
+                
+                var wMes = "";
+                switch(mm*1) {
+                  case 1: wMes = "enero"; break;
+                  case 2: wMes = "febrero"; break;
+                  case 3: wMes = "marzo"; break;
+                  case 4: wMes = "abril"; break;
+                  case 5: wMes = "mayo"; break;
+                  case 6: wMes = "junio"; break;
+                  case 7: wMes = "julio"; break;
+                  case 8: wMes = "agosto"; break;
+                  case 9: wMes = "septiembre"; break;
+                  case 10: wMes = "octubre"; break;
+                  case 11: wMes = "noviembre"; break;
+                  case 12: wMes = "diciembre"; break;
+                }
+
+                wResultadoHTML += "<fieldset style='width: 140px; margin-left: 2px;'>";
+                wResultadoHTML += "<legend>&nbsp;" + wMes + " " + (aaaa*1) + "&nbsp;</legend>";
+                wResultadoHTML += "<table border='0' cellspacing='0' cellpadding='0'>";
+
+                // FILA DE LOS BOTONES <<MES>>+ y <<AÑO>>
+                wResultadoHTML += "<tr>";
+                wResultadoHTML += "<td colspan='3' style='text-align: left;'>"
+                wResultadoHTML += "<img src=\"./res/RtPg.bmp\" alt=\"Retroceder mes\" width='12' height='12' onmouseover='javascript:this.src=\"./res/RtPg2.bmp\";'onmouseout='javascript:this.src=\"./res/RtPg.bmp\";' onclick=\"javascript:calen_RetrocedeMes();\">"
+                wResultadoHTML += "&nbsp;&nbsp;"
+                wResultadoHTML += "<img src=\"./res/AvPg.bmp\" alt=\"Avanzar mes\" width='12' height='12' onmouseover='javascript:this.src=\"./res/AvPg2.bmp\";'onmouseout='javascript:this.src=\"./res/AvPg.bmp\";' onclick=\"javascript:calen_AvanzaMes();\">"
+                wResultadoHTML += "</td>";
+                wResultadoHTML += "<td>"
+                wResultadoHTML += "<br>"
+                wResultadoHTML += "</td>";
+                wResultadoHTML += "<td colspan='3' style='text-align: right;'>"
+                wResultadoHTML += "<img src=\"./res/RtPg.bmp\" alt=\"Retroceder año\" width='12' height='12' onmouseover='javascript:this.src=\"./res/RtPg2.bmp\";'onmouseout='javascript:this.src=\"./res/RtPg.bmp\";' onclick=\"javascript:calen_RetrocedeAno();\">"
+                wResultadoHTML += "&nbsp;&nbsp;"
+                wResultadoHTML += "<img src=\"./res/AvPg.bmp\" alt=\"Avanzar año\" width='12' height='12' onmouseover='javascript:this.src=\"./res/AvPg2.bmp\";'onmouseout='javascript:this.src=\"./res/AvPg.bmp\";' onclick=\"javascript:calen_AvanzaAno();\">"
+                wResultadoHTML += "</td>";
+                wResultadoHTML += "</tr>";
+
+                wResultadoHTML += "<tr><td class='tbceldadetalleCentro'>L</td><td class='tbceldadetalleCentro'>M</td><td class='tbceldadetalleCentro'>X</td><td class='tbceldadetalleCentro'>J</td><td class='tbceldadetalleCentro'>V</td><td class='tbceldadetalleCentro'>S</td><td class='tbceldadetalleCentro'>D</td></tr>";
+                var filas = (nDiasMes*1 + wDiaSem*1) / 7;
+                for ( f=0; f<filas; f++) {
+                    wResultadoHTML += "<tr>";
+                    for (c=0;c<7;c++) {
+                      nCelda = (f*7)+c;
+                      color = "color: black; ";
+                      fondo = "background-color: white; ";
+                      actividad = "";
+                      dato = "<br>";
+                      if ( c==5 ) fondo = "background-color: #ffdddd; ";
+                      if ( c==6 ) fondo = "background-color: #ffbbbb; ";
+                      if (  nCelda >= wDiaSem && (nCelda-wDiaSem) < nDiasMes ) {
+                        dato = nCelda-wDiaSem+1;
+                        actividad = " onmouseover='onTdOver(this);' onmouseout='onTdOut(this);' onclick='calen_Seleccionado(this);'";
+                      }
+                      if ( dd-dato==0 ) fondo = "background-color: lightgreen; ";
+
+                      pre = "<td class='tbceldadetalleNumero' style='width: 20px; cursor: pointer; " + color + fondo + "'" + actividad + " >"
+                      pos = "</td>"
+                      wResultadoHTML += pre + dato + pos;
+                    }
+                    wResultadoHTML += "</tr>";
+                }
+
+                wResultadoHTML += "</table>";
+                wResultadoHTML += "</fieldset>";
+                
+                var elemento = document.getElementById("idCalendario");
+                if (elemento!=null) elemento.innerHTML = wResultadoHTML;
+            }               
+        </script>
+    </head>
+    <body style="background-color: Lavender;">
+        <form name="calendario">
+            <input type="hidden" name="retFormulario"/><input type="hidden" name="retElemento"/><input type="hidden" name="valorInicial"/>
+            <input type="hidden" name="aaaa"/><input type="hidden" name="mm"/><input type="hidden" name="dd"/>
+            <div id="idCalendario">&nbsp;</div>
+            <script>persistePeticionario();</script>
+            <script>calen_Dibujar();</script>
+        </form>
+    </body>
+</html>

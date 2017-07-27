@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="name" descripcion="name" descripcionCorta="name" longitud="100" tipo="CHAR" />
+		<CAM nombre="address" descripcion="address" descripcionCorta="address" longitud="100" tipo="CHAR" />
+		<CAM nombre="city" descripcion="city" descripcionCorta="city" longitud="100" tipo="CHAR" />
+		<CAM nombre="postal_code" descripcion="postal_code" descripcionCorta="postal_code" longitud="10" tipo="CHAR" />
+		<CAM nombre="province" descripcion="province" descripcionCorta="province" longitud="100" tipo="CHAR" />
+		<CAM nombre="state_region" descripcion="state_region" descripcionCorta="state_region" longitud="100" tipo="CHAR" />
+		<CAM nombre="country" descripcion="country" descripcionCorta="country" longitud="100" tipo="CHAR" />
+		<CAM nombre="lat" descripcion="lat" descripcionCorta="lat" longitud="5" tipo="NUM" />
+		<CAM nombre="lon" descripcion="lon" descripcionCorta="lon" longitud="5" tipo="NUM" />
+		<CAM nombre="comment" descripcion="comment" descripcionCorta="comment" longitud="100" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- LO location -->
+	<ENT nombre="location" descripcion="location" prefijo="lo">
+		<FMT archivo="T_LO_location" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="name" />
+			<CAM nombre="address" />
+			<CAM nombre="city" />
+			<CAM nombre="postal_code" />
+			<CAM nombre="province" />
+			<CAM nombre="state_region" />
+			<CAM nombre="country" />
+			<CAM nombre="lat" />
+			<CAM nombre="lon" />
+			<CAM nombre="comment" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_LO_location" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="name" />
+			<CAM nombre="address" />
+			<CAM nombre="city" />
+			<CAM nombre="postal_code" />
+			<CAM nombre="province" />
+			<CAM nombre="state_region" />
+			<CAM nombre="country" />
+			<CAM nombre="lat" />
+			<CAM nombre="lon" />
+			<CAM nombre="comment" />
+			<CAM nombre="json" />
+			<KEY nombre="location_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_LO_RTV_location" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="name" />
+			<CAM nombre="address" />
+			<CAM nombre="city" />
+			<CAM nombre="postal_code" />
+			<CAM nombre="province" />
+			<CAM nombre="state_region" />
+			<CAM nombre="country" />
+			<CAM nombre="lat" />
+			<CAM nombre="lon" />
+			<CAM nombre="comment" />
+			<CAM nombre="json" />
+			<KEY nombre="location_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>

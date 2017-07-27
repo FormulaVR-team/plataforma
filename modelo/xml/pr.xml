@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="LO_name" descripcion="LO_name" descripcionCorta="LO_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="product_id" descripcion="product_id" descripcionCorta="product_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="PT_name" descripcion="PT_name" descripcionCorta="PT_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="product_id_promo" descripcion="product_id_promo" descripcionCorta="product_id_promo" longitud="50" tipo="CHAR" />
+		<CAM nombre="PT_name_promo" descripcion="PT_name_promo" descripcionCorta="PT_name_promo" longitud="100" tipo="CHAR" />
+		<CAM nombre="deadline" descripcion="deadline" descripcionCorta="deadline" longitud="10" tipo="CHAR" />
+		<CAM nombre="min_quantity" descripcion="min_quantity" descripcionCorta="min_quantity" longitud="5" tipo="NUM" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- PR promos -->
+	<ENT nombre="promos" descripcion="promos" prefijo="pr">
+		<FMT archivo="T_PR_promos" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="product_id" />
+			<CAM nombre="product_id_promo" />
+			<CAM nombre="deadline" />
+			<CAM nombre="min_quantity" />
+		</FMT>
+		<FMT archivo="T_PR_promos" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="product_id" />
+			<CAM nombre="product_id_promo" />
+			<CAM nombre="deadline" />
+			<CAM nombre="min_quantity" />
+			<KEY nombre="location_id" orden="ASC" secuencia="1" />
+			<KEY nombre="product_id" orden="ASC" secuencia="2" />
+		</FMT>
+		<FMT archivo="V_PR_RTV_promos" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="LO_name" />
+			<CAM nombre="product_id" />
+			<CAM nombre="PT_name" />
+			<CAM nombre="product_id_promo" />
+			<CAM nombre="PT_name_promo" />
+			<CAM nombre="deadline" />
+			<CAM nombre="min_quantity" />
+			<KEY nombre="location_id" orden="ASC" secuencia="1" />
+			<KEY nombre="product_id" orden="ASC" secuencia="2" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>

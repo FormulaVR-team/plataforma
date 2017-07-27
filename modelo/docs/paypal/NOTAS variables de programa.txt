@@ -1,0 +1,62 @@
+
+
+https://www.emprendedorinnovador.com/como-aceptar-pagos-con-tarjeta-de-credito-en-mi-sitio-web/
+
+EJEMPLO LISTENER IPN en PHP
+===========================
+https://code.tutsplus.com/tutorials/using-paypals-instant-payment-notification-with-php--net-3271
+
+Credenciales sandbox de merchant:
+=================================
+usr:		dietadelbocadillo-facilitator_api1.outlook.es
+pwd:		DQKQNWSDPREQDPN9
+signature:	AFcWxV21C7fd0v3bYYYRCpSSRl31A2bxjVYW0oLhOZpG5xAdAXqm7ab5
+
+usr logon	:	eestecha@gmail.com / ?
+Cta.Vendedor:	?
+	usr:		eestecha_api1.gmail.com 
+	pwd:		MBKQBRQES8PNT7D2
+	signature:	AFcWxV21C7fd0v3bYYYRCpSSRl31AfouFjBC0jSMP3lKyziTnVmSx29F
+
+usr:		sergiokgn_api1.hotmail.com
+pwd:		QBUSAVFSVVMRCPBM
+signature:	AFcWxV21C7fd0v3bYYYRCpSSRl31A2wVzty7wC0Lt.Ix8Wspa3fhZPt6
+
+usr logon	:	emilio.estecha@billin.eu / Passw0rd
+Cta.Vendedor:	8PWV5YVFEZX3N
+Credenciales API:	
+	usr			:	emilio.estecha_api1.billin.eu
+	pwd		  	:	EF6AKXEACXDC7W62
+	signature	:	An5ns1Kso7MWUdW4ErQKJJJ4qi4-AVgJBaXV3T3lh06TWygPftsigeNL
+	
+usr logon	:	eestecha@yahoo.com / Passw0rd
+Cta.Vendedor:	
+Credenciales API:	
+	usr			:	
+	pwd		  	:	
+	signature	:	
+
+// Para pagar:
+==============
+USR	paganoPaypal@gmail.com
+PWD	Passw0rd
+				VISA patagon
+				4511 2601 0714 3111	
+				4511260107143111	Sin espacios
+				05 06
+				737
+
+CONTROL DE PAYPAL
+=================
+
+Variables en sesión:
+	1 . "isPaypalAut" estará presente si el negocio activo tiene autorizado uso de Paypal en CX.
+	2 . "isPaypalReg" estará presente si el negocio activo tiene registrado campos de Paypal en CX.
+	
+Persistencia:
+	1 . CX Si negocio autorizado a usar PayPal: "isPaypal=S"
+	2 . CX Si negocio tiene campos merchant rellenos se inyectará en sesión "isPaypalReg"
+	3 . DX Si al enviar la factura está activado el check "pagar con paypal" (Campo de pantalla: "isConPaypal") se grabará en ExtraJson "isPaypal=S".
+	4 . DD Si al ejecutar plantilla de factura (manual o recurrente), la forma de pago "Paypal" se grabará en DX se grabará en ExtraJson "isPaypal=S".
+	5 . PY Cuando el cliente inicia un "checkOutExpress" se crea un registro con ID: lzPK, dcPK y Token. 
+			Si campo "stsProceso" es "OK" se ha procesado el pago. ( Vacio:pdte, OK:Procesado, KO:Rechazado )

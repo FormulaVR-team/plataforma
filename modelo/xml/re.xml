@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="LO_name" descripcion="LO_name" descripcionCorta="LO_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="day_type" descripcion="day_type" descripcionCorta="day_type" longitud="50" tipo="CHAR" />
+		<CAM nombre="start_time" descripcion="start_time" descripcionCorta="start_time" longitud="4" tipo="CHAR" />
+		<CAM nombre="cockpit_id" descripcion="cockpit_id" descripcionCorta="cockpit_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="CP_name" descripcion="CP_name" descripcionCorta="CP_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="CP_isBlocked" descripcion="CP_isBlocked" descripcionCorta="CP_isBlocked" longitud="1" tipo="CHAR" />
+		<CAM nombre="CP_asignation_order" descripcion="CP_asignation_order" descripcionCorta="CP_asignation_order" longitud="5" tipo="NUM" />
+		<CAM nombre="CP_note" descripcion="CP_note" descripcionCorta="CP_note" longitud="100" tipo="CHAR" />
+		<CAM nombre="CP_comment" descripcion="CP_comment" descripcionCorta="CP_comment" longitud="100" tipo="CHAR" />
+		<CAM nombre="CP_observation" descripcion="CP_observation" descripcionCorta="CP_observation" longitud="100" tipo="CHAR" />
+		<CAM nombre="CP_warnning" descripcion="CP_warnning" descripcionCorta="CP_warnning" longitud="100" tipo="CHAR" />
+		<CAM nombre="start_date" descripcion="start_date" descripcionCorta="start_date" longitud="10" tipo="CHAR" />
+		<CAM nombre="TT_day_type" descripcion="TT_day_type" descripcionCorta="TT_day_type" longitud="50" tipo="CHAR" />
+		<CAM nombre="TT_start_time" descripcion="TT_start_time" descripcionCorta="TT_start_time" longitud="4" tipo="CHAR" />
+		<CAM nombre="TT_duration_minutes" descripcion="TT_duration_minutes" descripcionCorta="TT_duration_minutes" longitud="5" tipo="NUM" />
+		<CAM nombre="TT_isBlocked" descripcion="TT_isBlocked" descripcionCorta="TT_isBlocked" longitud="1" tipo="CHAR" />
+		<CAM nombre="reservation_id" descripcion="reservation_id" descripcionCorta="reservation_id" longitud="50" tipo="CHAR" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- RE reservedCockpits -->
+	<ENT nombre="reservedCockpits" descripcion="reservedCockpits" prefijo="re">
+		<FMT archivo="T_RE_reservedCockpits" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="day_type" />
+			<CAM nombre="start_time" />
+			<CAM nombre="start_date" />
+			<CAM nombre="cockpit_id" />
+			<CAM nombre="reservation_id" />
+		</FMT>
+		<FMT archivo="T_RE_reservedCockpits" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="day_type" />
+			<CAM nombre="start_time" />
+			<CAM nombre="start_date" />
+			<CAM nombre="cockpit_id" />
+			<CAM nombre="reservation_id" />
+			<KEY nombre="start_date" orden="ASC" secuencia="1" />
+			<KEY nombre="cockpit_id" orden="ASC" secuencia="2" />
+			<KEY nombre="location_id" orden="ASC" secuencia="3" />
+			<KEY nombre="day_type" orden="ASC" secuencia="4" />
+			<KEY nombre="start_time" orden="ASC" secuencia="5" />
+		</FMT>
+		<FMT archivo="V_RE_RTV_reservedCockpits" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="LO_name" />
+			<CAM nombre="day_type" />
+			<CAM nombre="start_time" />
+			<CAM nombre="cockpit_id" />
+			<CAM nombre="CP_name" />
+			<CAM nombre="CP_isBlocked" />
+			<CAM nombre="CP_asignation_order" />
+			<CAM nombre="CP_note" />
+			<CAM nombre="CP_comment" />
+			<CAM nombre="CP_observation" />
+			<CAM nombre="CP_warnning" />
+			<CAM nombre="start_date" />
+			<CAM nombre="TT_day_type" />
+			<CAM nombre="TT_start_time" />
+			<CAM nombre="TT_duration_minutes" />
+			<CAM nombre="TT_isBlocked" />
+			<CAM nombre="reservation_id" />
+			<KEY nombre="start_date" orden="ASC" secuencia="1" />
+			<KEY nombre="cockpit_id" orden="ASC" secuencia="2" />
+			<KEY nombre="location_id" orden="ASC" secuencia="3" />
+			<KEY nombre="day_type" orden="ASC" secuencia="4" />
+			<KEY nombre="start_time" orden="ASC" secuencia="5" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>

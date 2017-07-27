@@ -1,0 +1,44 @@
+<!-- Modal -->
+<div class="modal fade" id="chart_panel" role="dialog" data-backdrop="false">
+    <div class="modal-dialog" style="width: 68%;">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+        <div class="modal-header" style="height: 80px;">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+        	<div layout="row" layout-align="start center">
+				
+				<h4 class="modal-title" style="margin: 0px 0px 24px 0px;">Reservas / Plazas</h4>
+
+				<md-input-container style="margin: 0px 0px 24px 10px;">
+					<label>Local</label>
+					<md-select placeholder="Local" ng-model="aux_rs_location_id" md-on-close="filtrar()" ng-model-options="{trackBy: '$value.value'}">
+						<md-optgroup label="Local">
+							<md-option ng-value="item" ng-repeat="item in lst_lo">{{ item.displayName }}</md-option>
+						</md-optgroup>			
+					</md-select>
+				</md-input-container>
+
+				<md-input-container style="margin: 10px 10px 0px 10px;">
+					<label>Fecha</label>
+					<md-datepicker ng-model="aux_rs_start_date" md-hide-icons="calendar"ng-change="filtrar()"></md-datepicker>
+				</md-input-container>
+        	
+        	</div>
+
+        </div>
+
+        <div class="modal-body">
+			<canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series"></canvas>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+
+      </div>
+      
+	</div>
+</div>

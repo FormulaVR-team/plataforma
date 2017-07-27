@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html ng-app="laAplicacion" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>TEST</title>
+
+	    <!-- ==================================== -->
+		<!-- bootstrap -->
+	 	<script src="./ng/_lib/jquery-1.11.3/jquery.min.js"></script>
+		<script src="./ng/_lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+
+		<link id="" href="./ng/_lib//bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+	    <link href="./resBS/css/styles.css" rel="stylesheet" />
+		
+	    <!-- ==================================== -->
+	    <!-- Angular -->    
+	    <script src="./ng/_lib/ng/angular.min.js"></script>
+	    <script src="./ng/_lib/ng/angular-ui-router.min.js"></script>
+		<script src="./ng/_lib/ng/angular-animate.min.js"></script>
+		<script src="./ng/_lib/ng/angular-aria.min.js"></script>
+		<script src="./ng/_lib/ng/angular-messages.min.js"></script>
+		<script src="./ng/_lib/ng/angular-md5.js"></script>
+		
+		<script src="./ng/_lib/ng/i18n/angular-locale_es-es.min.js"></script>
+		
+		<!-- Angular Material Library -->
+		<script src="./ng/_lib/ng/angular-material.min.js"></script>
+		<!-- Angular Material style sheet -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./ng/_lib/ng/css/angular-material.min.css" />
+		<link rel="stylesheet" href="./ng/_lib/ng/css/angular-material.CUSTOM-FVR.css" />
+		<link rel="stylesheet" href="./ng/_lib/ng/css/icon.css?family=Material+Icons" />
+	
+		<script type="text/javascript" src="./script/rutinas.js"></script>
+		<script type="text/javascript" src="./script/md5Obj.js"></script>
+	    <!-- ==================================== -->
+	
+	</head>
+	<body ng-controller="controlador">
+	
+	 	<main flex layout="row" layout-align="center center" class="">
+			<md-content class="logon-content" style="margin: 20px; padding: 20px;">
+	
+				<div layout="row" layout-align="space-between start">
+	
+					<!-- FORMULARIO LOGON inicio -->
+					<form layout="column" layout-align="center start">
+	
+							<md-input-container>
+								<label>url del sistema</label>
+								<input type="text" size="80" ng-model="system_url" required />
+							</md-input-container>
+							<md-input-container>
+								<label>Usuario</label>
+								<input type="text" size="80" ng-model="formData.USR" required />
+							</md-input-container>
+							<md-input-container>
+								<label>Password</label>
+								<input type="password" size="80" ng-model="formData.PWD" required/>
+							</md-input-container>
+							<md-input-container>
+								<md-button class="md-raised md-accent" aria-label="LOGON" ng-click="submit()">LOGON</md-button> 
+							</md-input-container>
+	
+							<!-- MENU inicio -->
+							<div id="menuBox" style="display:none; border: black solid 1px;">
+								<div class="alert alert-default fade in" style="display: block; padding: 0; margin: 0;">
+	
+									<div layout="column" layout-align="center start">
+										<md-input-container>
+											<label>Clave operaciones (Token)</label>
+											<input type="text" size="80" ng-model="hash_code" value="{{ hash_code === '' ? 'sin sesi&oacute;n' : hash_code }}" />
+										</md-input-container>
+										<div layout="row" layout-align="start center">
+											<md-input-container>
+												<md-button class="md-raised md-warn" aria-label="RESERVAR" ng-click="reservar()">RESERVAR</md-button> 
+											</md-input-container>
+											<md-input-container>
+												<md-button class="md-raised md-warn" aria-label="Mis datos" ng-click="misDatos()">Mis datos</md-button> 
+											</md-input-container>
+											<md-input-container>
+												<md-button class="md-raised md-warn" aria-label="GAMING" ng-click="gaming()">GAMING</md-button> 
+											</md-input-container>
+										</div>
+									</div>
+				
+								</div>
+							</div>
+							<!-- MENU final -->
+	
+					</form>
+					<!-- FORMULARIO LOGON inicio -->
+	
+					<!-- IMAGEN inicio -->
+					<md-card>
+						<img class="md-user-avatar" src="./resBS/img/interconexionSistemas.png" />
+					</md-card>
+					<!-- IMAGEN final -->
+				
+				</div>
+	
+			</md-content>
+	 	</main>
+	
+		<script>
+			angular.module('laAplicacion',['ngMaterial', 'ngMessages'])
+				.controller(
+					'controlador'
+					, function($scope,$http) {
+	
+						$scope.hash_code = "";
+						$scope.system_url = "http://localhost:8080/FormulaVR";
+						$scope.formData = {
+								  USR : "eestecha@gmail.com"
+								, PWD : ""
+						}
+	
+						/////////////////////////////
+						$scope.submit = function() {
+	
+	 						$scope.formData.PWD = md5Obj.md5( $scope.formData.PWD );
+	 
+	 						var accion = "rmtLogon";
+							$http( {
+						        		url: $scope.system_url + "/FvrServlet?ACC=" + accion,
+								        data: $scope.formData,
+								        method: 'POST',
+								        headers : {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'}
+						    		}
+							)
+				    		.success(function(response){
+					    			$scope.formData.PWD = "";
+									if (response.rc === 'OK') {
+						    			$('#menuBox').slideDown();
+						    			$scope.hash_code = response.text;
+									} else {
+						    			$('#menuBox').slideUp();
+										console.log(response.text);
+									}
+					    		}
+				    		)
+				    		.error(function(err){
+					    			alert(err);
+					    		}
+				    		)
+							;
+	
+					    }
+						/////////////////////////////
+	
+						/////////////////////////////
+						$scope.reservar = function() {
+							var accion = "rsAdd";
+							var data = {
+									  USR : $scope.formData.USR
+									, KEY : $scope.hash_code
+							};
+					        var url = $scope.system_url + "/FvrServlet?ACC=" + accion + "&USR=" + data.USR + "&KEY=" + data.KEY;
+							window.open( url ); 
+						}
+						/////////////////////////////
+	
+						/////////////////////////////
+						$scope.misDatos = function() {
+							var accion = "usEdt";
+							var data = {
+									  USR : $scope.formData.USR
+									, KEY : $scope.hash_code
+							};
+					        var url = $scope.system_url + "/FvrServlet?ACC=" + accion + "&USR=" + data.USR + "&KEY=" + data.KEY;
+							window.open( url ); 
+						}
+						/////////////////////////////
+	
+						/////////////////////////////
+						$scope.gaming = function() {
+							// Dos llamadas:
+							//		1 . Al la plataforma para que prepare los datos de la llamada al Gaming Module.
+							//		2 . Al Gaming Module con los datos devueltos por la plataforma.
+							var data = {
+									  USR : $scope.formData.USR
+									, KEY : $scope.hash_code
+							};
+							var accion = "gamingModule";
+							$http( {
+				        		url:$scope.system_url + "/FvrServlet?ACC=" + accion,
+						        data: data,
+						        method: 'POST',
+						        headers : {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'}
+					    		}
+							)
+				    		.success(function(response){
+					    			$scope.formData.PWD = "";
+									if (response.rc === 'OK') {
+										console.log( JSON.stringify( response.text ) );
+	
+										//////////
+										// Submitir formulario de entrada a módulo de gamificación:
+										var f = document.createElement("FORM");
+										f.enctype = "application/x-www-form-urlencoded";
+										f.method = "post";
+										f.acceptCharset = "UTF-8";
+										f.action = response.text.url_redirect;
+										f.setAttribute("id", "gmFormId");
+										f.setAttribute("target", "_blank");
+										document.body.appendChild(f);
+										
+										var x = document.createElement("INPUT");
+										x.setAttribute("type", "hidden");
+										x.setAttribute("name", "gm_user_id");
+										x.setAttribute("value", response.text.user_id);
+										document.getElementById("gmFormId").appendChild(x);
+										
+										var y = document.createElement("INPUT");
+										y.setAttribute("type", "hidden");
+										y.setAttribute("name", "gm_hash_code");
+										y.setAttribute("value", response.text.hash_code);
+										document.getElementById("gmFormId").appendChild(y);
+										
+										var z = document.createElement("INPUT");
+										z.setAttribute("type", "hidden");
+										z.setAttribute("name", "gm_data");
+										z.setAttribute("value", JSON.stringify(response.text.data) );
+										document.getElementById("gmFormId").appendChild(z);
+										
+										f.submit();
+										//////////
+	
+									} else {
+						    			$('#menuBox').slideUp();
+										console.log(response.text);
+									}
+					    		}
+				    		)
+				    		.error(function(err){
+					    			alert(err);
+					    		}
+				    		)
+							;
+	
+						}
+						/////////////////////////////
+					
+					}
+				);
+		</script>
+	
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="group_id" descripcion="group_id" descripcionCorta="group_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="key" descripcion="key" descripcionCorta="key" longitud="50" tipo="CHAR" />
+		<CAM nombre="value" descripcion="value" descripcionCorta="value" longitud="100" tipo="CHAR" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- PA systemParameters -->
+	<ENT nombre="systemParameters" descripcion="systemParameters" prefijo="pa">
+		<FMT archivo="T_PA_systemParameters" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="group_id" />
+			<CAM nombre="key" />
+			<CAM nombre="value" />
+		</FMT>
+		<FMT archivo="T_PA_systemParameters" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="group_id" />
+			<CAM nombre="key" />
+			<CAM nombre="value" />
+			<KEY nombre="group_id" orden="ASC" secuencia="1" />
+			<KEY nombre="key" orden="ASC" secuencia="2" />
+		</FMT>
+		<FMT archivo="V_PA_RTV_systemParameters" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="group_id" />
+			<CAM nombre="key" />
+			<CAM nombre="value" />
+			<KEY nombre="group_id" orden="ASC" secuencia="1" />
+			<KEY nombre="key" orden="ASC" secuencia="2" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>

@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="LO_name" descripcion="LO_name" descripcionCorta="LO_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="LO_address" descripcion="LO_address" descripcionCorta="LO_address" longitud="100" tipo="CHAR" />
+		<CAM nombre="LO_city" descripcion="LO_city" descripcionCorta="LO_city" longitud="100" tipo="CHAR" />
+		<CAM nombre="LO_postal_code" descripcion="LO_postal_code" descripcionCorta="LO_postal_code" longitud="10" tipo="CHAR" />
+		<CAM nombre="LO_lat" descripcion="LO_lat" descripcionCorta="LO_lat" longitud="5" tipo="NUM" />
+		<CAM nombre="LO_lon" descripcion="LO_lon" descripcionCorta="LO_lon" longitud="5" tipo="NUM" />
+		<CAM nombre="cockpit_id" descripcion="cockpit_id" descripcionCorta="cockpit_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="serial_number" descripcion="serial_number" descripcionCorta="serial_number" longitud="100" tipo="CHAR" />
+		<CAM nombre="name" descripcion="name" descripcionCorta="name" longitud="100" tipo="CHAR" />
+		<CAM nombre="isBlocked" descripcion="isBlocked" descripcionCorta="isBlocked" longitud="1" tipo="CHAR" />
+		<CAM nombre="asignation_order" descripcion="asignation_order" descripcionCorta="asignation_order" longitud="5" tipo="NUM" />
+		<CAM nombre="install_date" descripcion="install_date" descripcionCorta="install_date" longitud="10" tipo="CHAR" />
+		<CAM nombre="reset_date_used" descripcion="reset_date_used" descripcionCorta="reset_date_used" longitud="10" tipo="CHAR" />
+		<CAM nombre="hours_used" descripcion="hours_used" descripcionCorta="hours_used" longitud="5" tipo="NUM" />
+		<CAM nombre="note" descripcion="note" descripcionCorta="note" longitud="100" tipo="CHAR" />
+		<CAM nombre="comment" descripcion="comment" descripcionCorta="comment" longitud="100" tipo="CHAR" />
+		<CAM nombre="observation" descripcion="observation" descripcionCorta="observation" longitud="100" tipo="CHAR" />
+		<CAM nombre="warning" descripcion="warning" descripcionCorta="warning" longitud="100" tipo="CHAR" />
+		<CAM nombre="contact_service" descripcion="contact_service" descripcionCorta="contact_service" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="serial" descripcion="serial" descripcionCorta="serial" longitud="5" tipo="NUM" />
+		<CAM nombre="text_1" descripcion="text_1" descripcionCorta="text_1" longitud="100" tipo="CHAR" />
+		<CAM nombre="text_2" descripcion="text_2" descripcionCorta="text_2" longitud="100" tipo="CHAR" />
+		<CAM nombre="text_3" descripcion="text_3" descripcionCorta="text_3" longitud="100" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="name" descripcion="name" descripcionCorta="name" longitud="100" tipo="CHAR" />
+		<CAM nombre="address" descripcion="address" descripcionCorta="address" longitud="100" tipo="CHAR" />
+		<CAM nombre="city" descripcion="city" descripcionCorta="city" longitud="100" tipo="CHAR" />
+		<CAM nombre="postal_code" descripcion="postal_code" descripcionCorta="postal_code" longitud="10" tipo="CHAR" />
+		<CAM nombre="province" descripcion="province" descripcionCorta="province" longitud="100" tipo="CHAR" />
+		<CAM nombre="state_region" descripcion="state_region" descripcionCorta="state_region" longitud="100" tipo="CHAR" />
+		<CAM nombre="country" descripcion="country" descripcionCorta="country" longitud="100" tipo="CHAR" />
+		<CAM nombre="lat" descripcion="lat" descripcionCorta="lat" longitud="5" tipo="NUM" />
+		<CAM nombre="lon" descripcion="lon" descripcionCorta="lon" longitud="5" tipo="NUM" />
+		<CAM nombre="comment" descripcion="comment" descripcionCorta="comment" longitud="100" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="group_id" descripcion="group_id" descripcionCorta="group_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="key" descripcion="key" descripcionCorta="key" longitud="50" tipo="CHAR" />
+		<CAM nombre="value" descripcion="value" descripcionCorta="value" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="coupon_id" descripcion="coupon_id" descripcionCorta="coupon_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="name" descripcion="name" descripcionCorta="name" longitud="100" tipo="CHAR" />
+		<CAM nombre="uses_per_user" descripcion="uses_per_user" descripcionCorta="uses_per_user" longitud="5" tipo="NUM" />
+		<CAM nombre="product_id" descripcion="product_id" descripcionCorta="product_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="PT_name" descripcion="PT_name" descripcionCorta="PT_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="PT_whoCanSelect_AFU" descripcion="PT_whoCanSelect_AFU" descripcionCorta="PT_whoCanSelect_AFU" longitud="10" tipo="CHAR" />
+		<CAM nombre="PT_deadline" descripcion="PT_deadline" descripcionCorta="PT_deadline" longitud="10" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="LO_name" descripcion="LO_name" descripcionCorta="LO_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="deadline" descripcion="deadline" descripcionCorta="deadline" longitud="10" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="LO_name" descripcion="LO_name" descripcionCorta="LO_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="product_id" descripcion="product_id" descripcionCorta="product_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="PT_name" descripcion="PT_name" descripcionCorta="PT_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="product_id_promo" descripcion="product_id_promo" descripcionCorta="product_id_promo" longitud="50" tipo="CHAR" />
+		<CAM nombre="PT_name_promo" descripcion="PT_name_promo" descripcionCorta="PT_name_promo" longitud="100" tipo="CHAR" />
+		<CAM nombre="deadline" descripcion="deadline" descripcionCorta="deadline" longitud="10" tipo="CHAR" />
+		<CAM nombre="min_quantity" descripcion="min_quantity" descripcionCorta="min_quantity" longitud="5" tipo="NUM" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="country_id" descripcion="country_id" descripcionCorta="country_id" longitud="5" tipo="NUM" />
+		<CAM nombre="name" descripcion="name" descripcionCorta="name" longitud="100" tipo="CHAR" />
+		<CAM nombre="alpha_2" descripcion="alpha_2" descripcionCorta="alpha_2" longitud="2" tipo="CHAR" />
+		<CAM nombre="alpha_3" descripcion="alpha_3" descripcionCorta="alpha_3" longitud="3" tipo="CHAR" />
+		<CAM nombre="flag_base64" descripcion="flag_base64" descripcionCorta="flag_base64" longitud="100" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="product_id" descripcion="product_id" descripcionCorta="product_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="name" descripcion="name" descripcionCorta="name" longitud="100" tipo="CHAR" />
+		<CAM nombre="whoCanSelect_AFU" descripcion="whoCanSelect_AFU" descripcionCorta="whoCanSelect_AFU" longitud="10" tipo="CHAR" />
+		<CAM nombre="deadline" descripcion="deadline" descripcionCorta="deadline" longitud="10" tipo="CHAR" />
+		<CAM nombre="isPercent" descripcion="isPercent" descripcionCorta="isPercent" longitud="1" tipo="CHAR" />
+		<CAM nombre="amount" descripcion="amount" descripcionCorta="amount" longitud="12" tipo="DEC" />
+		<CAM nombre="currency" descripcion="currency" descripcionCorta="currency" longitud="10" tipo="CHAR" />
+		<CAM nombre="duration_minutes" descripcion="duration_minutes" descripcionCorta="duration_minutes" longitud="5" tipo="NUM" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="user_id" descripcion="user_id" descripcionCorta="user_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="US_first_name" descripcion="US_first_name" descripcionCorta="US_first_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="US_last_name" descripcion="US_last_name" descripcionCorta="US_last_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="reservation_id" descripcion="reservation_id" descripcionCorta="reservation_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="paypal_token_id" descripcion="paypal_token_id" descripcionCorta="paypal_token_id" longitud="100" tipo="CHAR" />
+		<CAM nombre="paypal_usr" descripcion="paypal_usr" descripcionCorta="paypal_usr" longitud="100" tipo="CHAR" />
+		<CAM nombre="paypal_pwd" descripcion="paypal_pwd" descripcionCorta="paypal_pwd" longitud="100" tipo="CHAR" />
+		<CAM nombre="paypal_signature" descripcion="paypal_signature" descripcionCorta="paypal_signature" longitud="100" tipo="CHAR" />
+		<CAM nombre="stsProceso" descripcion="stsProceso" descripcionCorta="stsProceso" longitud="10" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="reservation_id" descripcion="reservation_id" descripcionCorta="reservation_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="LO_name" descripcion="LO_name" descripcionCorta="LO_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="user_id" descripcion="user_id" descripcionCorta="user_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="US_country_id" descripcion="US_country_id" descripcionCorta="US_country_id" longitud="5" tipo="NUM" />
+		<CAM nombre="US_nick" descripcion="US_nick" descripcionCorta="US_nick" longitud="50" tipo="CHAR" />
+		<CAM nombre="US_avatar" descripcion="US_avatar" descripcionCorta="US_avatar" longitud="100" tipo="CHAR" />
+		<CAM nombre="US_is_admin" descripcion="US_is_admin" descripcionCorta="US_is_admin" longitud="1" tipo="CHAR" />
+		<CAM nombre="US_first_name" descripcion="US_first_name" descripcionCorta="US_first_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="US_last_name" descripcion="US_last_name" descripcionCorta="US_last_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="product_id" descripcion="product_id" descripcionCorta="product_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="PT_name" descripcion="PT_name" descripcionCorta="PT_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="PT_deadline" descripcion="PT_deadline" descripcionCorta="PT_deadline" longitud="10" tipo="CHAR" />
+		<CAM nombre="PT_isPercent" descripcion="PT_isPercent" descripcionCorta="PT_isPercent" longitud="1" tipo="CHAR" />
+		<CAM nombre="PT_amount" descripcion="PT_amount" descripcionCorta="PT_amount" longitud="12" tipo="DEC" />
+		<CAM nombre="PT_duration_minutes" descripcion="PT_duration_minutes" descripcionCorta="PT_duration_minutes" longitud="5" tipo="NUM" />
+		<CAM nombre="quantity" descripcion="quantity" descripcionCorta="quantity" longitud="5" tipo="NUM" />
+		<CAM nombre="product_id2" descripcion="product_id2" descripcionCorta="product_id2" longitud="50" tipo="CHAR" />
+		<CAM nombre="PT_name2" descripcion="PT_name2" descripcionCorta="PT_name2" longitud="100" tipo="CHAR" />
+		<CAM nombre="PT_deadline2" descripcion="PT_deadline2" descripcionCorta="PT_deadline2" longitud="10" tipo="CHAR" />
+		<CAM nombre="PT_isPercent2" descripcion="PT_isPercent2" descripcionCorta="PT_isPercent2" longitud="1" tipo="CHAR" />
+		<CAM nombre="PT_amount2" descripcion="PT_amount2" descripcionCorta="PT_amount2" longitud="12" tipo="DEC" />
+		<CAM nombre="product_id3" descripcion="product_id3" descripcionCorta="product_id3" longitud="50" tipo="CHAR" />
+		<CAM nombre="PT_name3" descripcion="PT_name3" descripcionCorta="PT_name3" longitud="100" tipo="CHAR" />
+		<CAM nombre="PT_deadline3" descripcion="PT_deadline3" descripcionCorta="PT_deadline3" longitud="10" tipo="CHAR" />
+		<CAM nombre="PT_isPercent3" descripcion="PT_isPercent3" descripcionCorta="PT_isPercent3" longitud="1" tipo="CHAR" />
+		<CAM nombre="PT_amount3" descripcion="PT_amount3" descripcionCorta="PT_amount3" longitud="12" tipo="DEC" />
+		<CAM nombre="amount" descripcion="amount" descripcionCorta="amount" longitud="12" tipo="DEC" />
+		<CAM nombre="currency" descripcion="currency" descripcionCorta="currency" longitud="10" tipo="CHAR" />
+		<CAM nombre="phone" descripcion="phone" descripcionCorta="phone" longitud="100" tipo="CHAR" />
+		<CAM nombre="pay_status" descripcion="pay_status" descripcionCorta="pay_status" longitud="10" tipo="CHAR" />
+		<CAM nombre="start_date" descripcion="start_date" descripcionCorta="start_date" longitud="10" tipo="CHAR" />
+		<CAM nombre="start_time" descripcion="start_time" descripcionCorta="start_time" longitud="4" tipo="CHAR" />
+		<CAM nombre="duration_minutes" descripcion="duration_minutes" descripcionCorta="duration_minutes" longitud="5" tipo="NUM" />
+		<CAM nombre="places" descripcion="places" descripcionCorta="places" longitud="5" tipo="NUM" />
+		<CAM nombre="coupon_id" descripcion="coupon_id" descripcionCorta="coupon_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="executed_at" descripcion="executed_at" descripcionCorta="executed_at" longitud="20" tipo="CHAR" />
+		<CAM nombre="note" descripcion="note" descripcionCorta="note" longitud="100" tipo="CHAR" />
+		<CAM nombre="comment" descripcion="comment" descripcionCorta="comment" longitud="100" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="role_id" descripcion="role_id" descripcionCorta="role_id" longitud="1" tipo="CHAR" />
+		<CAM nombre="process_id" descripcion="process_id" descripcionCorta="process_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="token_id" descripcion="token_id" descripcionCorta="token_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="reservation_id" descripcion="reservation_id" descripcionCorta="reservation_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="RS_user_id" descripcion="RS_user_id" descripcionCorta="RS_user_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="RS_location_id" descripcion="RS_location_id" descripcionCorta="RS_location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="RS_start_date" descripcion="RS_start_date" descripcionCorta="RS_start_date" longitud="10" tipo="CHAR" />
+		<CAM nombre="RS_start_time" descripcion="RS_start_time" descripcionCorta="RS_start_time" longitud="4" tipo="CHAR" />
+		<CAM nombre="RS_pay_status" descripcion="RS_pay_status" descripcionCorta="RS_pay_status" longitud="10" tipo="CHAR" />
+		<CAM nombre="RS_product_id" descripcion="RS_product_id" descripcionCorta="RS_product_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="RS_quantity" descripcion="RS_quantity" descripcionCorta="RS_quantity" longitud="5" tipo="NUM" />
+		<CAM nombre="RS_duration_minutes" descripcion="RS_duration_minutes" descripcionCorta="RS_duration_minutes" longitud="5" tipo="NUM" />
+		<CAM nombre="RS_places" descripcion="RS_places" descripcionCorta="RS_places" longitud="5" tipo="NUM" />
+		<CAM nombre="start_date" descripcion="start_date" descripcionCorta="start_date" longitud="10" tipo="CHAR" />
+		<CAM nombre="start_time" descripcion="start_time" descripcionCorta="start_time" longitud="4" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="start_date" descripcion="start_date" descripcionCorta="start_date" longitud="10" tipo="CHAR" />
+		<CAM nombre="start_time" descripcion="start_time" descripcionCorta="start_time" longitud="4" tipo="CHAR" />
+		<CAM nombre="nReservations" descripcion="nReservations" descripcionCorta="nReservations" longitud="20" tipo="NUM" />
+		<CAM nombre="nPlaces" descripcion="nPlaces" descripcionCorta="nPlaces" longitud="20" tipo="NUM" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="day_type" descripcion="day_type" descripcionCorta="day_type" longitud="50" tipo="CHAR" />
+		<CAM nombre="start_time" descripcion="start_time" descripcionCorta="start_time" longitud="4" tipo="CHAR" />
+		<CAM nombre="duration_minutes" descripcion="duration_minutes" descripcionCorta="duration_minutes" longitud="5" tipo="NUM" />
+		<CAM nombre="isBlocked" descripcion="isBlocked" descripcionCorta="isBlocked" longitud="1" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="user_id" descripcion="user_id" descripcionCorta="user_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="role_id" descripcion="role_id" descripcionCorta="role_id" longitud="1" tipo="CHAR" />
+		<CAM nombre="hash_code" descripcion="hash_code" descripcionCorta="hash_code" longitud="50" tipo="CHAR" />
+		<CAM nombre="country_id" descripcion="country_id" descripcionCorta="country_id" longitud="5" tipo="NUM" />
+		<CAM nombre="PS_name" descripcion="PS_name" descripcionCorta="PS_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="PS_flag_base64" descripcion="PS_flag_base64" descripcionCorta="PS_flag_base64" longitud="100" tipo="CHAR" />
+		<CAM nombre="nick" descripcion="nick" descripcionCorta="nick" longitud="50" tipo="CHAR" />
+		<CAM nombre="password" descripcion="password" descripcionCorta="password" longitud="50" tipo="CHAR" />
+		<CAM nombre="first_name" descripcion="first_name" descripcionCorta="first_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="last_name" descripcion="last_name" descripcionCorta="last_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="phone" descripcion="phone" descripcionCorta="phone" longitud="100" tipo="CHAR" />
+		<CAM nombre="gender" descripcion="gender" descripcionCorta="gender" longitud="1" tipo="CHAR" />
+		<CAM nombre="birth_day" descripcion="birth_day" descripcionCorta="birth_day" longitud="10" tipo="CHAR" />
+		<CAM nombre="avatar" descripcion="avatar" descripcionCorta="avatar" longitud="100" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- CP cockpits -->
+	<ENT nombre="cockpits" descripcion="cockpits" prefijo="cp">
+		<FMT archivo="T_CP_cockpits" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="cockpit_id" />
+			<CAM nombre="serial_number" />
+			<CAM nombre="name" />
+			<CAM nombre="isBlocked" />
+			<CAM nombre="asignation_order" />
+			<CAM nombre="install_date" />
+			<CAM nombre="reset_date_used" />
+			<CAM nombre="hours_used" />
+			<CAM nombre="note" />
+			<CAM nombre="comment" />
+			<CAM nombre="observation" />
+			<CAM nombre="warning" />
+			<CAM nombre="contact_service" />
+		</FMT>
+		<FMT archivo="T_CP_cockpits" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="cockpit_id" />
+			<CAM nombre="serial_number" />
+			<CAM nombre="name" />
+			<CAM nombre="isBlocked" />
+			<CAM nombre="asignation_order" />
+			<CAM nombre="install_date" />
+			<CAM nombre="reset_date_used" />
+			<CAM nombre="hours_used" />
+			<CAM nombre="note" />
+			<CAM nombre="comment" />
+			<CAM nombre="observation" />
+			<CAM nombre="warning" />
+			<CAM nombre="contact_service" />
+			<KEY nombre="cockpit_id" orden="ASC" secuencia="1" />
+			<KEY nombre="location_id" orden="ASC" secuencia="2" />
+		</FMT>
+		<FMT archivo="V_CP_RTV_cockpits" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="LO_name" />
+			<CAM nombre="LO_address" />
+			<CAM nombre="LO_city" />
+			<CAM nombre="LO_postal_code" />
+			<CAM nombre="LO_lat" />
+			<CAM nombre="LO_lon" />
+			<CAM nombre="cockpit_id" />
+			<CAM nombre="serial_number" />
+			<CAM nombre="name" />
+			<CAM nombre="isBlocked" />
+			<CAM nombre="asignation_order" />
+			<CAM nombre="install_date" />
+			<CAM nombre="reset_date_used" />
+			<CAM nombre="hours_used" />
+			<CAM nombre="note" />
+			<CAM nombre="comment" />
+			<CAM nombre="observation" />
+			<CAM nombre="warning" />
+			<CAM nombre="contact_service" />
+			<KEY nombre="cockpit_id" orden="ASC" secuencia="1" />
+			<KEY nombre="location_id" orden="ASC" secuencia="2" />
+		</FMT>
+	</ENT>
+
+	<!-- LG logs -->
+	<ENT nombre="logs" descripcion="logs" prefijo="lg">
+		<FMT archivo="T_LG_logs" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="serial" />
+			<CAM nombre="text_1" />
+			<CAM nombre="text_2" />
+			<CAM nombre="text_3" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_LG_logs" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="serial" />
+			<CAM nombre="text_1" />
+			<CAM nombre="text_2" />
+			<CAM nombre="text_3" />
+			<CAM nombre="json" />
+			<KEY nombre="serial" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_LG_RTV_logs" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="serial" />
+			<CAM nombre="text_1" />
+			<CAM nombre="text_2" />
+			<CAM nombre="text_3" />
+			<CAM nombre="json" />
+			<KEY nombre="serial" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	<!-- LO location -->
+	<ENT nombre="location" descripcion="location" prefijo="lo">
+		<FMT archivo="T_LO_location" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="name" />
+			<CAM nombre="address" />
+			<CAM nombre="city" />
+			<CAM nombre="postal_code" />
+			<CAM nombre="province" />
+			<CAM nombre="state_region" />
+			<CAM nombre="country" />
+			<CAM nombre="lat" />
+			<CAM nombre="lon" />
+			<CAM nombre="comment" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_LO_location" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="name" />
+			<CAM nombre="address" />
+			<CAM nombre="city" />
+			<CAM nombre="postal_code" />
+			<CAM nombre="province" />
+			<CAM nombre="state_region" />
+			<CAM nombre="country" />
+			<CAM nombre="lat" />
+			<CAM nombre="lon" />
+			<CAM nombre="comment" />
+			<CAM nombre="json" />
+			<KEY nombre="location_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_LO_RTV_location" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="name" />
+			<CAM nombre="address" />
+			<CAM nombre="city" />
+			<CAM nombre="postal_code" />
+			<CAM nombre="province" />
+			<CAM nombre="state_region" />
+			<CAM nombre="country" />
+			<CAM nombre="lat" />
+			<CAM nombre="lon" />
+			<CAM nombre="comment" />
+			<CAM nombre="json" />
+			<KEY nombre="location_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	<!-- PA systemParameters -->
+	<ENT nombre="systemParameters" descripcion="systemParameters" prefijo="pa">
+		<FMT archivo="T_PA_systemParameters" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="group_id" />
+			<CAM nombre="key" />
+			<CAM nombre="value" />
+		</FMT>
+		<FMT archivo="T_PA_systemParameters" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="group_id" />
+			<CAM nombre="key" />
+			<CAM nombre="value" />
+			<KEY nombre="group_id" orden="ASC" secuencia="1" />
+			<KEY nombre="key" orden="ASC" secuencia="2" />
+		</FMT>
+		<FMT archivo="V_PA_RTV_systemParameters" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="group_id" />
+			<CAM nombre="key" />
+			<CAM nombre="value" />
+			<KEY nombre="group_id" orden="ASC" secuencia="1" />
+			<KEY nombre="key" orden="ASC" secuencia="2" />
+		</FMT>
+	</ENT>
+
+	<!-- PM promosManuales -->
+	<ENT nombre="promosManuales" descripcion="promosManuales" prefijo="pm">
+		<FMT archivo="T_PM_promosManuales" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="coupon_id" />
+			<CAM nombre="name" />
+			<CAM nombre="uses_per_user" />
+			<CAM nombre="product_id" />
+			<CAM nombre="location_id" />
+			<CAM nombre="deadline" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_PM_promosManuales" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="coupon_id" />
+			<CAM nombre="name" />
+			<CAM nombre="uses_per_user" />
+			<CAM nombre="product_id" />
+			<CAM nombre="location_id" />
+			<CAM nombre="deadline" />
+			<CAM nombre="json" />
+			<KEY nombre="coupon_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_PM_RTV_promosManuales" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="coupon_id" />
+			<CAM nombre="name" />
+			<CAM nombre="uses_per_user" />
+			<CAM nombre="product_id" />
+			<CAM nombre="PT_name" />
+			<CAM nombre="PT_whoCanSelect_AFU" />
+			<CAM nombre="PT_deadline" />
+			<CAM nombre="location_id" />
+			<CAM nombre="LO_name" />
+			<CAM nombre="deadline" />
+			<CAM nombre="json" />
+			<KEY nombre="coupon_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	<!-- PR promos -->
+	<ENT nombre="promos" descripcion="promos" prefijo="pr">
+		<FMT archivo="T_PR_promos" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="product_id" />
+			<CAM nombre="product_id_promo" />
+			<CAM nombre="deadline" />
+			<CAM nombre="min_quantity" />
+		</FMT>
+		<FMT archivo="T_PR_promos" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="product_id" />
+			<CAM nombre="product_id_promo" />
+			<CAM nombre="deadline" />
+			<CAM nombre="min_quantity" />
+			<KEY nombre="location_id" orden="ASC" secuencia="1" />
+			<KEY nombre="product_id" orden="ASC" secuencia="2" />
+		</FMT>
+		<FMT archivo="V_PR_RTV_promos" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="LO_name" />
+			<CAM nombre="product_id" />
+			<CAM nombre="PT_name" />
+			<CAM nombre="product_id_promo" />
+			<CAM nombre="PT_name_promo" />
+			<CAM nombre="deadline" />
+			<CAM nombre="min_quantity" />
+			<KEY nombre="location_id" orden="ASC" secuencia="1" />
+			<KEY nombre="product_id" orden="ASC" secuencia="2" />
+		</FMT>
+	</ENT>
+
+	<!-- PS countries -->
+	<ENT nombre="countries" descripcion="countries" prefijo="ps">
+		<FMT archivo="T_PS_countries" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="country_id" />
+			<CAM nombre="name" />
+			<CAM nombre="alpha_2" />
+			<CAM nombre="alpha_3" />
+			<CAM nombre="flag_base64" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_PS_countries" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="country_id" />
+			<CAM nombre="name" />
+			<CAM nombre="alpha_2" />
+			<CAM nombre="alpha_3" />
+			<CAM nombre="flag_base64" />
+			<CAM nombre="json" />
+			<KEY nombre="country_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_PS_RTV_countries" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="country_id" />
+			<CAM nombre="name" />
+			<CAM nombre="alpha_2" />
+			<CAM nombre="alpha_3" />
+			<CAM nombre="flag_base64" />
+			<CAM nombre="json" />
+			<KEY nombre="country_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	<!-- PT products -->
+	<ENT nombre="products" descripcion="products" prefijo="pt">
+		<FMT archivo="T_PT_products" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="product_id" />
+			<CAM nombre="name" />
+			<CAM nombre="whoCanSelect_AFU" />
+			<CAM nombre="deadline" />
+			<CAM nombre="isPercent" />
+			<CAM nombre="amount" />
+			<CAM nombre="currency" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_PT_products" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="product_id" />
+			<CAM nombre="name" />
+			<CAM nombre="whoCanSelect_AFU" />
+			<CAM nombre="deadline" />
+			<CAM nombre="isPercent" />
+			<CAM nombre="amount" />
+			<CAM nombre="currency" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="json" />
+			<KEY nombre="product_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_PT_RTV_products" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="product_id" />
+			<CAM nombre="name" />
+			<CAM nombre="whoCanSelect_AFU" />
+			<CAM nombre="deadline" />
+			<CAM nombre="isPercent" />
+			<CAM nombre="amount" />
+			<CAM nombre="currency" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="json" />
+			<KEY nombre="product_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	<!-- PY PayPalTokens -->
+	<ENT nombre="PayPalTokens" descripcion="PayPalTokens" prefijo="py">
+		<FMT archivo="T_PY_PayPalTokens" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="user_id" />
+			<CAM nombre="reservation_id" />
+			<CAM nombre="paypal_token_id" />
+			<CAM nombre="paypal_usr" />
+			<CAM nombre="paypal_pwd" />
+			<CAM nombre="paypal_signature" />
+			<CAM nombre="stsProceso" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_PY_PayPalTokens" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="user_id" />
+			<CAM nombre="reservation_id" />
+			<CAM nombre="paypal_token_id" />
+			<CAM nombre="paypal_usr" />
+			<CAM nombre="paypal_pwd" />
+			<CAM nombre="paypal_signature" />
+			<CAM nombre="stsProceso" />
+			<CAM nombre="json" />
+			<KEY nombre="user_id" orden="ASC" secuencia="1" />
+			<KEY nombre="reservation_id" orden="ASC" secuencia="2" />
+			<KEY nombre="paypal_token_id" orden="ASC" secuencia="3" />
+		</FMT>
+		<FMT archivo="V_PY_RTV_PayPalTokens" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="user_id" />
+			<CAM nombre="US_first_name" />
+			<CAM nombre="US_last_name" />
+			<CAM nombre="reservation_id" />
+			<CAM nombre="paypal_token_id" />
+			<CAM nombre="paypal_usr" />
+			<CAM nombre="paypal_pwd" />
+			<CAM nombre="paypal_signature" />
+			<CAM nombre="stsProceso" />
+			<CAM nombre="json" />
+			<KEY nombre="user_id" orden="ASC" secuencia="1" />
+			<KEY nombre="reservation_id" orden="ASC" secuencia="2" />
+			<KEY nombre="paypal_token_id" orden="ASC" secuencia="3" />
+		</FMT>
+	</ENT>
+
+	<!-- RS reservations -->
+	<ENT nombre="reservations" descripcion="reservations" prefijo="rs">
+		<FMT archivo="T_RS_reservations" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="reservation_id" />
+			<CAM nombre="location_id" />
+			<CAM nombre="user_id" />
+			<CAM nombre="product_id" />
+			<CAM nombre="quantity" />
+			<CAM nombre="product_id2" />
+			<CAM nombre="product_id3" />
+			<CAM nombre="amount" />
+			<CAM nombre="currency" />
+			<CAM nombre="phone" />
+			<CAM nombre="pay_status" />
+			<CAM nombre="start_date" />
+			<CAM nombre="start_time" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="places" />
+			<CAM nombre="coupon_id" />
+			<CAM nombre="executed_at" />
+			<CAM nombre="note" />
+			<CAM nombre="comment" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_RS_reservations" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="reservation_id" />
+			<CAM nombre="location_id" />
+			<CAM nombre="user_id" />
+			<CAM nombre="product_id" />
+			<CAM nombre="quantity" />
+			<CAM nombre="product_id2" />
+			<CAM nombre="product_id3" />
+			<CAM nombre="amount" />
+			<CAM nombre="currency" />
+			<CAM nombre="phone" />
+			<CAM nombre="pay_status" />
+			<CAM nombre="start_date" />
+			<CAM nombre="start_time" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="places" />
+			<CAM nombre="coupon_id" />
+			<CAM nombre="executed_at" />
+			<CAM nombre="note" />
+			<CAM nombre="comment" />
+			<CAM nombre="json" />
+			<KEY nombre="reservation_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_RS_RTV_reservations" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="reservation_id" />
+			<CAM nombre="location_id" />
+			<CAM nombre="LO_name" />
+			<CAM nombre="user_id" />
+			<CAM nombre="US_country_id" />
+			<CAM nombre="US_nick" />
+			<CAM nombre="US_avatar" />
+			<CAM nombre="US_is_admin" />
+			<CAM nombre="US_first_name" />
+			<CAM nombre="US_last_name" />
+			<CAM nombre="product_id" />
+			<CAM nombre="PT_name" />
+			<CAM nombre="PT_deadline" />
+			<CAM nombre="PT_isPercent" />
+			<CAM nombre="PT_amount" />
+			<CAM nombre="PT_duration_minutes" />
+			<CAM nombre="quantity" />
+			<CAM nombre="product_id2" />
+			<CAM nombre="PT_name2" />
+			<CAM nombre="PT_deadline2" />
+			<CAM nombre="PT_isPercent2" />
+			<CAM nombre="PT_amount2" />
+			<CAM nombre="product_id3" />
+			<CAM nombre="PT_name3" />
+			<CAM nombre="PT_deadline3" />
+			<CAM nombre="PT_isPercent3" />
+			<CAM nombre="PT_amount3" />
+			<CAM nombre="amount" />
+			<CAM nombre="currency" />
+			<CAM nombre="phone" />
+			<CAM nombre="pay_status" />
+			<CAM nombre="start_date" />
+			<CAM nombre="start_time" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="places" />
+			<CAM nombre="coupon_id" />
+			<CAM nombre="executed_at" />
+			<CAM nombre="note" />
+			<CAM nombre="comment" />
+			<CAM nombre="json" />
+			<KEY nombre="reservation_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	<!-- SG publicProcesses -->
+	<ENT nombre="publicProcesses" descripcion="publicProcesses" prefijo="sg">
+		<FMT archivo="T_SG_publicProcesses" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="role_id" />
+			<CAM nombre="process_id" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_SG_publicProcesses" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="role_id" />
+			<CAM nombre="process_id" />
+			<CAM nombre="json" />
+			<KEY nombre="role_id" orden="ASC" secuencia="1" />
+			<KEY nombre="process_id" orden="ASC" secuencia="2" />
+		</FMT>
+		<FMT archivo="V_SG_RTV_publicProcesses" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="role_id" />
+			<CAM nombre="process_id" />
+			<CAM nombre="json" />
+			<KEY nombre="role_id" orden="ASC" secuencia="1" />
+			<KEY nombre="process_id" orden="ASC" secuencia="2" />
+		</FMT>
+	</ENT>
+
+	<!-- TK tokens -->
+	<ENT nombre="tokens" descripcion="tokens" prefijo="tk">
+		<FMT archivo="T_TK_tokens" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="token_id" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_TK_tokens" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="token_id" />
+			<CAM nombre="json" />
+			<KEY nombre="token_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_TK_RTV_tokens" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="token_id" />
+			<CAM nombre="json" />
+			<KEY nombre="token_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	<!-- TS timeSlices -->
+	<ENT nombre="timeSlices" descripcion="timeSlices" prefijo="ts">
+		<FMT archivo="T_TS_timeSlices" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="reservation_id" />
+			<CAM nombre="start_date" />
+			<CAM nombre="start_time" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_TS_timeSlices" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="reservation_id" />
+			<CAM nombre="start_date" />
+			<CAM nombre="start_time" />
+			<CAM nombre="json" />
+			<KEY nombre="reservation_id" orden="ASC" secuencia="1" />
+			<KEY nombre="start_date" orden="ASC" secuencia="2" />
+			<KEY nombre="start_time" orden="ASC" secuencia="3" />
+		</FMT>
+		<FMT archivo="V_TS_RTV_timeSlices" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="reservation_id" />
+			<CAM nombre="RS_user_id" />
+			<CAM nombre="RS_location_id" />
+			<CAM nombre="RS_start_date" />
+			<CAM nombre="RS_start_time" />
+			<CAM nombre="RS_pay_status" />
+			<CAM nombre="RS_product_id" />
+			<CAM nombre="RS_quantity" />
+			<CAM nombre="RS_duration_minutes" />
+			<CAM nombre="RS_places" />
+			<CAM nombre="start_date" />
+			<CAM nombre="start_time" />
+			<CAM nombre="json" />
+			<KEY nombre="reservation_id" orden="ASC" secuencia="1" />
+			<KEY nombre="start_date" orden="ASC" secuencia="2" />
+			<KEY nombre="start_time" orden="ASC" secuencia="3" />
+		</FMT>
+	</ENT>
+
+	<!-- TS timeSlicesSumLocFecHor -->
+	<ENT nombre="timeSlicesSumLocFecHor" descripcion="timeSlicesSumLocFecHor" prefijo="ts">
+		<FMT archivo="T_TS_timeSlicesSumLocFecHor" nombre="Fisico" tipo="PHY">
+		</FMT>
+		<FMT archivo="T_TS_timeSlicesSumLocFecHor" nombre="Actualizacion" tipo="UPD">
+		</FMT>
+		<FMT archivo="V_TS_RTV_timeSlicesSumLocFecHor" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="location_id" />
+			<CAM nombre="start_date" />
+			<CAM nombre="start_time" />
+			<CAM nombre="nReservations" />
+			<CAM nombre="nPlaces" />
+		</FMT>
+	</ENT>
+
+	<!-- TT timeTableReference -->
+	<ENT nombre="timeTableReference" descripcion="timeTableReference" prefijo="tt">
+		<FMT archivo="T_TT_timeTableReference" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="day_type" />
+			<CAM nombre="start_time" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="isBlocked" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_TT_timeTableReference" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="day_type" />
+			<CAM nombre="start_time" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="isBlocked" />
+			<CAM nombre="json" />
+			<KEY nombre="location_id" orden="ASC" secuencia="1" />
+			<KEY nombre="day_type" orden="ASC" secuencia="2" />
+			<KEY nombre="start_time" orden="ASC" secuencia="3" />
+		</FMT>
+		<FMT archivo="V_TT_RTV_timeTableReference" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="day_type" />
+			<CAM nombre="start_time" />
+			<CAM nombre="duration_minutes" />
+			<CAM nombre="isBlocked" />
+			<CAM nombre="json" />
+			<KEY nombre="location_id" orden="ASC" secuencia="1" />
+			<KEY nombre="day_type" orden="ASC" secuencia="2" />
+			<KEY nombre="start_time" orden="ASC" secuencia="3" />
+		</FMT>
+	</ENT>
+
+	<!-- US users -->
+	<ENT nombre="users" descripcion="users" prefijo="us">
+		<FMT archivo="T_US_users" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="user_id" />
+			<CAM nombre="role_id" />
+			<CAM nombre="hash_code" />
+			<CAM nombre="country_id" />
+			<CAM nombre="nick" />
+			<CAM nombre="password" />
+			<CAM nombre="first_name" />
+			<CAM nombre="last_name" />
+			<CAM nombre="phone" />
+			<CAM nombre="gender" />
+			<CAM nombre="birth_day" />
+			<CAM nombre="avatar" />
+			<CAM nombre="location_id" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_US_users" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="user_id" />
+			<CAM nombre="role_id" />
+			<CAM nombre="hash_code" />
+			<CAM nombre="country_id" />
+			<CAM nombre="nick" />
+			<CAM nombre="password" />
+			<CAM nombre="first_name" />
+			<CAM nombre="last_name" />
+			<CAM nombre="phone" />
+			<CAM nombre="gender" />
+			<CAM nombre="birth_day" />
+			<CAM nombre="avatar" />
+			<CAM nombre="location_id" />
+			<CAM nombre="json" />
+			<KEY nombre="user_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_US_RTV_users" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="user_id" />
+			<CAM nombre="role_id" />
+			<CAM nombre="hash_code" />
+			<CAM nombre="country_id" />
+			<CAM nombre="PS_name" />
+			<CAM nombre="PS_flag_base64" />
+			<CAM nombre="nick" />
+			<CAM nombre="password" />
+			<CAM nombre="first_name" />
+			<CAM nombre="last_name" />
+			<CAM nombre="phone" />
+			<CAM nombre="gender" />
+			<CAM nombre="birth_day" />
+			<CAM nombre="avatar" />
+			<CAM nombre="location_id" />
+			<CAM nombre="json" />
+			<KEY nombre="user_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>

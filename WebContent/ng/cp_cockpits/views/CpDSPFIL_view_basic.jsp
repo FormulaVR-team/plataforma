@@ -1,0 +1,315 @@
+<%@page contentType="text/html"%>
+<%@page pageEncoding="UTF-8"%>
+
+<%@taglib uri="/WEB-INF/struts-html.tld" prefix="html"%>
+<%@taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<%@taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<div name="CpDSPFIL_form">
+    <div class="modal-header">
+
+		<div class="row">
+			<div class="col-xs-12" style="padding: 0px; min-height: 40px;"><div dynamic="adminMenu"></div></div>
+		</div>
+
+		<div class="row">
+
+		<div layout="row" layout-align="space-between stretch">
+
+			<div>
+				<h4>
+					<!-- <md-input-container style="vertical-align: top;"> -->
+						<!-- <label>location_id</label> -->
+						<md-select placeholder="location_id" ng-model="aux_FLT_cp_location_id" md-on-close="filtrar()" ng-model-options="{trackBy: '$value.value'}">
+							<md-optgroup label="location_id">
+								<md-option ng-value="item" ng-repeat="item in lst_lo">{{ item.displayName }}</md-option>
+							</md-optgroup>			
+						</md-select>
+					<!-- </md-input-container> -->
+				</h4>
+				<!-- Botones inicio -->
+				<div class="btn-group">
+					<md-button class="button-close md-fab md-mini" ng-click="filtrar()" title="<bean:message key="common.client.refrescar"/>"><md-icon> autorenew </md-icon></md-button>
+					<md-button class="button-close md-fab md-mini" ng-click="rtPg()" title="<bean:message key="common.client.retroceder"/>"><md-icon> skip_previous </md-icon></md-button>
+					<md-button class="button-close md-fab md-mini" ng-click="avPg()" title="<bean:message key="common.client.avanzar"/>"><md-icon> skip_next </md-icon></md-button>
+					<md-button class="button-close md-fab md-mini" ng-click="initReg()" data-toggle="modal" data-target="#cpDSPFIL_ADDRCD_modal" title="<bean:message key="common.client.nuevo"/>"><md-icon> add </md-icon></md-button>
+					<md-button class="button-close md-fab md-mini" onclick="$('#filterIcon').toggleClass('rotate');$('#cpFilterBox').slideToggle();" title="<bean:message key="common.client.filtrar"/>"><md-icon id="filterIcon"> filter_list </md-icon></md-button>
+					<md-button class="button-close md-fab md-mini" ng-click="exportar()" title="<bean:message key="common.client.exportar"/>"><md-icon> file_download </md-icon></md-button>
+				</div>
+				<!-- Botones final -->
+			</div>
+
+			<div>
+				<h3>
+					COCKPITS
+					<span dynamic="exportLink"></span>
+				</h3>
+			</div>
+
+			<div>
+				<!-- <span>{{actionForm.logon_USR}}</span> -->
+				<!-- Paginador inicio -->
+				<div>
+					<input type="hidden" ng-model="actionForm.filaInicioGrid" />
+					<input type="hidden" ng-model="actionForm.filasTotales" />
+					<span dynamic="txtHtmlPaginador"></span>
+					<md-input-container>
+						<md-select ng-model="aux_filasGrid" md-on-close="filtrar()" ng-model-options="{trackBy: '$value.value'}" placeholder="Filas lista">
+							<md-optgroup label="M&aacute;x.filas lista">
+								<md-option ng-value="item" ng-repeat="item in rowsPerPage">{{ item.displayName }}</md-option>
+							</md-optgroup>			
+						</md-select>
+					</md-input-container>
+				</div>
+				<!-- Paginador final -->
+			</div>
+
+		</div>
+
+		<div>
+			<!-- Caja de filtros inicio -->
+			<div id="cpFilterBox" style="display:none; border: black solid 1px;">
+				<md-button class=" md-raised md-warn md-button md-ink-ripple" ng-click="filtrar()" onclick="$('#filterIcon').toggleClass('rotate');$('#cpFilterBox').slideToggle();">Aplicar</md-button>
+				<div class="alert alert-default fade in" style="display: block; padding: 0; margin: 0;">
+<!-- 
+					<md-input-container>
+						<label>sincro</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_sincro" />
+					</md-input-container>
+					<md-input-container>
+						<label>mark</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_mark" />
+					</md-input-container>
+					<md-input-container>
+						<label>is_deleted</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_is_deleted" />
+					</md-input-container>
+					<md-input-container>
+						<label>author</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_author" />
+					</md-input-container>
+ 					<md-input-container>
+						<label>LO_name</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_LO_name" />
+					</md-input-container>
+					<md-input-container>
+						<label>LO_address</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_LO_address" />
+					</md-input-container>
+					<md-input-container>
+						<label>LO_city</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_LO_city" />
+					</md-input-container>
+					<md-input-container>
+						<label>LO_postal_code</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_LO_postal_code" />
+					</md-input-container>
+					<md-input-container>
+						<label>LO_lat</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_LO_lat" />
+					</md-input-container>
+					<md-input-container>
+						<label>LO_lon</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_LO_lon" />
+					</md-input-container>
+ -->
+					<md-input-container>
+						<label>cockpit_id</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_cockpit_id" />
+					</md-input-container>
+					<md-input-container>
+						<label>serial_number</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_serial_number" />
+					</md-input-container>
+					<md-input-container>
+						<label>name</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_name" />
+					</md-input-container>
+					<md-input-container>
+						<label>isBlocked</label>
+						<md-select placeholder="isBlocked" ng-model="actionForm.cp_filtro.cp_isBlocked">
+							<md-optgroup label="isBlocked">
+								<md-option ng-repeat="item in lst_isBlocked" value="{{item}}">{{item}}</md-option>
+							</md-optgroup>			
+						</md-select>
+					</md-input-container>
+<!-- 
+					<md-input-container>
+						<label>asignation_order</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_asignation_order" />
+					</md-input-container>
+					<md-input-container>
+						<label>install_date</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_install_date" />
+					</md-input-container>
+					<md-input-container>
+						<label>reset_date_used</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_reset_date_used" />
+					</md-input-container>
+					<md-input-container>
+						<label>hours_used</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_hours_used" />
+					</md-input-container>
+					<md-input-container>
+						<label>note</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_note" />
+					</md-input-container>
+					<md-input-container>
+						<label>comment</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_comment" />
+					</md-input-container>
+					<md-input-container>
+						<label>observation</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_observation" />
+					</md-input-container>
+					<md-input-container>
+						<label>warning</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_warning" />
+					</md-input-container>
+					<md-input-container>
+						<label>contact_service</label>
+						<input type="text" ng-model="actionForm.cp_filtro.cp_contact_service" />
+					</md-input-container>
+ -->
+				</div>
+			</div>
+			<!-- Caja de filtros final -->
+		</div>
+
+	</div>
+
+	<div class="row">
+		<table class="table table-striped table-hover">
+
+			<tr>
+<!-- 
+				<th>{{actionForm.filasMarcadas}}&nbsp;{{actionForm.clavesMarcadas}}</th>
+				<th>sincro</th>
+				<th>mark</th>
+				<th>is_deleted</th>
+				<th>author</th>
+ 				<th>location_id</th>
+-->
+				<th>location</th>
+<!-- 
+				<th>LO_address</th>
+				<th>LO_city</th>
+				<th>LO_postal_code</th>
+				<th>LO_lat</th>
+				<th>LO_lon</th>
+ -->
+ 				<th>cockpit</th>
+				<th>serial_number</th>
+				<th>name</th>
+				<th>isBlocked</th>
+				<th>asignation_order</th>
+				<th>install_date</th>
+				<th>reset_date_used</th>
+				<th>hours_used</th>
+				<th>note</th>
+				<th>comment</th>
+				<th>observation</th>
+				<th>warning</th>
+<!--
+ 				<th>contact_service</th>
+ -->
+ 			</tr>
+
+			<tr ng-repeat="reg in actionForm.grid" ng-click="putRecordAsTheCurrent(reg)" data-toggle="modal" data-target="#cpDSPFIL_EDTRCD_modal">
+<!--
+				<td><input type="checkbox" onclick="event.stopPropagation();" ng-model="actionForm.filasMarcadas[$index]" ng-click="setClaveMarcada( this.reg.key, $index );"/></td>
+
+				<td>{{reg.cp_sincro}}&nbsp;</td>
+				<td>{{reg.cp_mark}}&nbsp;</td>
+				<td>{{reg.cp_is_deleted}}&nbsp;</td>
+				<td>{{reg.cp_author}}&nbsp;</td>
+ 				<td>{{reg.cp_location_id}}&nbsp;</td>
+ -->
+ 				<td>{{reg.cp_LO_name}}&nbsp;</td>
+<!-- 
+				<td>{{reg.cp_LO_address}}&nbsp;</td>
+				<td>{{reg.cp_LO_city}}&nbsp;</td>
+				<td>{{reg.cp_LO_postal_code}}&nbsp;</td>
+				<td>{{reg.cp_LO_lat}}&nbsp;</td>
+				<td>{{reg.cp_LO_lon}}&nbsp;</td>
+ -->
+ 				<td>{{reg.cp_cockpit_id}}&nbsp;</td>
+				<td>{{reg.cp_serial_number}}&nbsp;</td>
+				<td>{{reg.cp_name}}&nbsp;</td>
+				<td>{{reg.cp_isBlocked}}&nbsp;</td>
+				<td>{{reg.cp_asignation_order}}&nbsp;</td>
+				<td>{{reg.cp_install_date}}&nbsp;</td>
+				<td>{{reg.cp_reset_date_used}}&nbsp;</td>
+				<td>{{reg.cp_hours_used}}&nbsp;</td>
+				<td>{{reg.cp_note}}&nbsp;</td>
+				<td>{{reg.cp_comment}}&nbsp;</td>
+				<td>{{reg.cp_observation}}&nbsp;</td>
+				<td>{{reg.cp_warning}}&nbsp;</td>
+<!--
+ 				<td>{{reg.cp_contact_service}}&nbsp;</td>
+ -->
+ 			</tr>
+		</table>
+	</div>
+
+	
+<!-- Panel ADDRCD inicio -->	
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="cpDSPFIL_ADDRCD_modal" role="dialog" data-backdrop="false">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Agregar: cockpits</h4>
+        </div>
+        <div class="modal-body">
+			<span ng-include="'ng/cp_cockpits/views/CpADDRCD_view_basic.jsp'" />
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Panel ADDRCD final -->	
+	
+<!-- Panel EDTRCD inicio -->	
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade" id="cpDSPFIL_EDTRCD_modal" role="dialog" data-backdrop="false">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modificar: cockpits</h4>
+        </div>
+        <div class="modal-body">
+			<span ng-include="'ng/cp_cockpits/views/CpEDTRCD_view_basic.jsp'" />
+        </div>
+ 
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- Panel EDTRCD final -->	
+
+    </div>
+</div>
+

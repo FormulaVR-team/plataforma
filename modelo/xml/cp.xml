@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="LO_name" descripcion="LO_name" descripcionCorta="LO_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="LO_address" descripcion="LO_address" descripcionCorta="LO_address" longitud="100" tipo="CHAR" />
+		<CAM nombre="LO_city" descripcion="LO_city" descripcionCorta="LO_city" longitud="100" tipo="CHAR" />
+		<CAM nombre="LO_postal_code" descripcion="LO_postal_code" descripcionCorta="LO_postal_code" longitud="10" tipo="CHAR" />
+		<CAM nombre="LO_lat" descripcion="LO_lat" descripcionCorta="LO_lat" longitud="5" tipo="NUM" />
+		<CAM nombre="LO_lon" descripcion="LO_lon" descripcionCorta="LO_lon" longitud="5" tipo="NUM" />
+		<CAM nombre="cockpit_id" descripcion="cockpit_id" descripcionCorta="cockpit_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="serial_number" descripcion="serial_number" descripcionCorta="serial_number" longitud="100" tipo="CHAR" />
+		<CAM nombre="name" descripcion="name" descripcionCorta="name" longitud="100" tipo="CHAR" />
+		<CAM nombre="isBlocked" descripcion="isBlocked" descripcionCorta="isBlocked" longitud="1" tipo="CHAR" />
+		<CAM nombre="asignation_order" descripcion="asignation_order" descripcionCorta="asignation_order" longitud="5" tipo="NUM" />
+		<CAM nombre="install_date" descripcion="install_date" descripcionCorta="install_date" longitud="10" tipo="CHAR" />
+		<CAM nombre="reset_date_used" descripcion="reset_date_used" descripcionCorta="reset_date_used" longitud="10" tipo="CHAR" />
+		<CAM nombre="hours_used" descripcion="hours_used" descripcionCorta="hours_used" longitud="5" tipo="NUM" />
+		<CAM nombre="note" descripcion="note" descripcionCorta="note" longitud="100" tipo="CHAR" />
+		<CAM nombre="comment" descripcion="comment" descripcionCorta="comment" longitud="100" tipo="CHAR" />
+		<CAM nombre="observation" descripcion="observation" descripcionCorta="observation" longitud="100" tipo="CHAR" />
+		<CAM nombre="warning" descripcion="warning" descripcionCorta="warning" longitud="100" tipo="CHAR" />
+		<CAM nombre="contact_service" descripcion="contact_service" descripcionCorta="contact_service" longitud="100" tipo="CHAR" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- CP cockpits -->
+	<ENT nombre="cockpits" descripcion="cockpits" prefijo="cp">
+		<FMT archivo="T_CP_cockpits" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="cockpit_id" />
+			<CAM nombre="serial_number" />
+			<CAM nombre="name" />
+			<CAM nombre="isBlocked" />
+			<CAM nombre="asignation_order" />
+			<CAM nombre="install_date" />
+			<CAM nombre="reset_date_used" />
+			<CAM nombre="hours_used" />
+			<CAM nombre="note" />
+			<CAM nombre="comment" />
+			<CAM nombre="observation" />
+			<CAM nombre="warning" />
+			<CAM nombre="contact_service" />
+		</FMT>
+		<FMT archivo="T_CP_cockpits" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="cockpit_id" />
+			<CAM nombre="serial_number" />
+			<CAM nombre="name" />
+			<CAM nombre="isBlocked" />
+			<CAM nombre="asignation_order" />
+			<CAM nombre="install_date" />
+			<CAM nombre="reset_date_used" />
+			<CAM nombre="hours_used" />
+			<CAM nombre="note" />
+			<CAM nombre="comment" />
+			<CAM nombre="observation" />
+			<CAM nombre="warning" />
+			<CAM nombre="contact_service" />
+			<KEY nombre="cockpit_id" orden="ASC" secuencia="1" />
+			<KEY nombre="location_id" orden="ASC" secuencia="2" />
+		</FMT>
+		<FMT archivo="V_CP_RTV_cockpits" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="location_id" />
+			<CAM nombre="LO_name" />
+			<CAM nombre="LO_address" />
+			<CAM nombre="LO_city" />
+			<CAM nombre="LO_postal_code" />
+			<CAM nombre="LO_lat" />
+			<CAM nombre="LO_lon" />
+			<CAM nombre="cockpit_id" />
+			<CAM nombre="serial_number" />
+			<CAM nombre="name" />
+			<CAM nombre="isBlocked" />
+			<CAM nombre="asignation_order" />
+			<CAM nombre="install_date" />
+			<CAM nombre="reset_date_used" />
+			<CAM nombre="hours_used" />
+			<CAM nombre="note" />
+			<CAM nombre="comment" />
+			<CAM nombre="observation" />
+			<CAM nombre="warning" />
+			<CAM nombre="contact_service" />
+			<KEY nombre="cockpit_id" orden="ASC" secuencia="1" />
+			<KEY nombre="location_id" orden="ASC" secuencia="2" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>

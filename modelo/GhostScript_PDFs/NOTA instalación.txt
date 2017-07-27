@@ -1,0 +1,6 @@
+Esto es para que funcione el Ghost4J de la aplicación
+Se usa para convertir PDF a image PNG.
+
+Después de instalar este producto, copiar la dll siguiente en Windows\system32.:
+E:\Program Files\gs\gs9.15\bin\gsdll64.dll	(Si es Windows 64 bits)
+E:\Program Files(x86)\gs\gs9.15\bin\gsdll64.dll	(Si es Windows 32 bits)

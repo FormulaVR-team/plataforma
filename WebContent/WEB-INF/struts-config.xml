@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "struts-config_1_2.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="Logon_AF" type="com.fvr.logon.forms.Logon_AF"/>
+		<form-bean name="menu_AF" type="com.fvr.menu.forms.menu_AF"/>
+		<form-bean name="LgRCD_AF" type="com.fvr.lg_logs.forms.LgRCD_AF"/>
+		<form-bean name="CpRCD_AF" type="com.fvr.cp_cockpits.forms.CpRCD_AF"/>
+		<form-bean name="LoRCD_AF" type="com.fvr.lo_location.forms.LoRCD_AF"/>
+		<form-bean name="PtRCD_AF" type="com.fvr.pt_products.forms.PtRCD_AF"/>
+		<form-bean name="RsRCD_AF" type="com.fvr.rs_reservations.forms.RsRCD_AF"/>
+		<form-bean name="TkRCD_AF" type="com.fvr.tk_tokens.forms.TkRCD_AF"/>
+		<form-bean name="TtRCD_AF" type="com.fvr.tt_timeTableReference.forms.TtRCD_AF"/>
+		<form-bean name="UsRCD_AF" type="com.fvr.us_users.forms.UsRCD_AF"/>
+		<form-bean name="SgRCD_AF" type="com.fvr.sg_publicProcesses.forms.SgRCD_AF"/>
+		<form-bean name="PaRCD_AF" type="com.fvr.pa_systemParameters.forms.PaRCD_AF"/>
+		<form-bean name="PyRCD_AF" type="com.fvr.py_PayPalTokens.forms.PyRCD_AF"/>
+		<form-bean name="PrRCD_AF" type="com.fvr.pr_promos.forms.PrRCD_AF"/>
+		<form-bean name="TsRCD_AF" type="com.fvr.ts_timeSlices.forms.TsRCD_AF"/>
+		<form-bean name="Ad_rsRCD_AF" type="com.fvr.ad_rs_reservations.forms.Ad_rsRCD_AF"/>
+		<form-bean name="PsRCD_AF" type="com.fvr.ps_countries.forms.PsRCD_AF"/>
+		<form-bean name="PmRCD_AF" type="com.fvr.pm_promosManuales.forms.PmRCD_AF"/>
+	</form-beans>
+	<global-exceptions>
+	</global-exceptions>
+	<global-forwards>
+		<forward name="ERROR" path="/jsp/ERROR.jsp"/>
+	</global-forwards>
+	<action-mappings>
+		<!-- ::::::::::::::::::::::::::::::::::::: -->
+		<!-- ::::::::::::::::::::::::::::::::::::: -->
+		<!-- ::::::::::::::::::::::::::::::::::::: -->
+		<!-- ::::::::::::::::::::::::::::::::::::: -->
+		<action input="/Logon.jsp" name="Logon_AF" path="/Logon_A" scope="request" type="com.fvr.logon.actions.Logon_A" validate="false">
+			<forward name="OK" path="/Logon.jsp"/>
+			<!-- <forward name="ENTRAR" path="/menu_A.do"/> -->
+			<forward name="ENTRAR" path="/Index_A.do"/>
+		</action>
+		<action input="/index.jsp" name="Logon_AF" path="/Index_A" scope="request" type="com.fvr.logon.actions.Index_A" validate="false">
+			<forward name="OK" path="/index.jsp"/>
+		</action>
+		<!-- ::::::::::::::::::::::::::::::::::::: -->
+		<action input="/jsp/menu.jsp" name="menu_AF" path="/menu_A" scope="request" type="com.fvr.menu.actions.menu_A" validate="false">
+			<forward name="OK" path="/jsp/menu.jsp"/>
+			<forward name="MenuPpal_A" path="/jsp/menu.jsp"/>
+			<!-- Llamadas del menú (Los que requieran algún parámetro antes de llamarse, se les mete en el action del menú...) -->
+			<forward name="Logon_A" path="/Logon.jsp"/>
+			<forward name="LgDSPFIL_A" path="/LgDSPFIL_A.do"/>
+			<forward name="CpDSPFIL_A" path="/CpDSPFIL_A.do"/>
+			<forward name="LoDSPFIL_A" path="/LoDSPFIL_A.do"/>
+			<forward name="PtDSPFIL_A" path="/PtDSPFIL_A.do"/>
+			<forward name="RsDSPFIL_A" path="/RsDSPFIL_A.do"/>
+			<forward name="TkDSPFIL_A" path="/TkDSPFIL_A.do"/>
+			<forward name="TtDSPFIL_A" path="/TtDSPFIL_A.do"/>
+			<forward name="UsDSPFIL_A" path="/UsDSPFIL_A.do"/>
+			<forward name="SgDSPFIL_A" path="/SgDSPFIL_A.do"/>
+			<forward name="PaDSPFIL_A" path="/PaDSPFIL_A.do"/>
+			<forward name="PyDSPFIL_A" path="/PyDSPFIL_A.do"/>
+			<forward name="PrDSPFIL_A" path="/PrDSPFIL_A.do"/>
+			<forward name="TsDSPFIL_A" path="/TsDSPFIL_A.do"/>
+			<forward name="Ad_rsDSPFIL_A" path="/Ad_rsDSPFIL_A.do"/>
+			<forward name="PsDSPFIL_A" path="/PsDSPFIL_A.do"/>
+			<forward name="PmDSPFIL_A" path="/PmDSPFIL_A.do"/>
+		</action>
+		<!-- ::::::::::::::::::::::::::::::::::::: -->
+		<!-- ::::::::::::::::::::::::::::::::::::: -->
+		<!-- ::::::::::::::::::::::::::::::::::::: -->
+		<!-- ::::::::::::::::::::::::::::::::::::: -->
+		<action input="/jsp/LgDSPFIL.jsp" name="LgRCD_AF" path="/LgDSPFIL_A" scope="request" type="com.fvr.lg_logs.actions.LgDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/LgDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/LgADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/LgEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/LgSELRCD.jsp" name="LgRCD_AF" path="/LgSELRCD_A" scope="request" type="com.fvr.lg_logs.actions.LgSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/LgSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/LgADDRCD.jsp" name="LgRCD_AF" path="/LgADDRCD_A" scope="request" type="com.fvr.lg_logs.actions.LgADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/LgADDRCD.jsp"/>
+			<forward name="CERRAR" path="/LgDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/LgEDTRCD.jsp" name="LgRCD_AF" path="/LgEDTRCD_A" scope="request" type="com.fvr.lg_logs.actions.LgEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/LgEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/LgDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/CpDSPFIL.jsp" name="CpRCD_AF" path="/CpDSPFIL_A" scope="request" type="com.fvr.cp_cockpits.actions.CpDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/CpDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/CpADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/CpEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/CpSELRCD.jsp" name="CpRCD_AF" path="/CpSELRCD_A" scope="request" type="com.fvr.cp_cockpits.actions.CpSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/CpSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/CpADDRCD.jsp" name="CpRCD_AF" path="/CpADDRCD_A" scope="request" type="com.fvr.cp_cockpits.actions.CpADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/CpADDRCD.jsp"/>
+			<forward name="CERRAR" path="/CpDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/CpEDTRCD.jsp" name="CpRCD_AF" path="/CpEDTRCD_A" scope="request" type="com.fvr.cp_cockpits.actions.CpEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/CpEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/CpDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/LoDSPFIL.jsp" name="LoRCD_AF" path="/LoDSPFIL_A" scope="request" type="com.fvr.lo_location.actions.LoDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/LoDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/LoADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/LoEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/LoSELRCD.jsp" name="LoRCD_AF" path="/LoSELRCD_A" scope="request" type="com.fvr.lo_location.actions.LoSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/LoSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/LoADDRCD.jsp" name="LoRCD_AF" path="/LoADDRCD_A" scope="request" type="com.fvr.lo_location.actions.LoADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/LoADDRCD.jsp"/>
+			<forward name="CERRAR" path="/LoDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/LoEDTRCD.jsp" name="LoRCD_AF" path="/LoEDTRCD_A" scope="request" type="com.fvr.lo_location.actions.LoEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/LoEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/LoDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/PtDSPFIL.jsp" name="PtRCD_AF" path="/PtDSPFIL_A" scope="request" type="com.fvr.pt_products.actions.PtDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/PtDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/PtADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/PtEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/PtSELRCD.jsp" name="PtRCD_AF" path="/PtSELRCD_A" scope="request" type="com.fvr.pt_products.actions.PtSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PtSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/PtADDRCD.jsp" name="PtRCD_AF" path="/PtADDRCD_A" scope="request" type="com.fvr.pt_products.actions.PtADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PtADDRCD.jsp"/>
+			<forward name="CERRAR" path="/PtDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/PtEDTRCD.jsp" name="PtRCD_AF" path="/PtEDTRCD_A" scope="request" type="com.fvr.pt_products.actions.PtEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PtEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/PtDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/RsDSPFIL.jsp" name="RsRCD_AF" path="/RsDSPFIL_A" scope="request" type="com.fvr.rs_reservations.actions.RsDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/RsDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/RsADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/RsEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/RsSELRCD.jsp" name="RsRCD_AF" path="/RsSELRCD_A" scope="request" type="com.fvr.rs_reservations.actions.RsSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/RsSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/RsADDRCD.jsp" name="RsRCD_AF" path="/RsADDRCD_A" scope="request" type="com.fvr.rs_reservations.actions.RsADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/RsADDRCD.jsp"/>
+			<forward name="CERRAR" path="/RsDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/RsEDTRCD.jsp" name="RsRCD_AF" path="/RsEDTRCD_A" scope="request" type="com.fvr.rs_reservations.actions.RsEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/RsEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/RsDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/TkDSPFIL.jsp" name="TkRCD_AF" path="/TkDSPFIL_A" scope="request" type="com.fvr.tk_tokens.actions.TkDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/TkDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/TkADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/TkEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/TkSELRCD.jsp" name="TkRCD_AF" path="/TkSELRCD_A" scope="request" type="com.fvr.tk_tokens.actions.TkSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/TkSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/TkADDRCD.jsp" name="TkRCD_AF" path="/TkADDRCD_A" scope="request" type="com.fvr.tk_tokens.actions.TkADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/TkADDRCD.jsp"/>
+			<forward name="CERRAR" path="/TkDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/TkEDTRCD.jsp" name="TkRCD_AF" path="/TkEDTRCD_A" scope="request" type="com.fvr.tk_tokens.actions.TkEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/TkEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/TkDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/TtDSPFIL.jsp" name="TtRCD_AF" path="/TtDSPFIL_A" scope="request" type="com.fvr.tt_timeTableReference.actions.TtDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/TtDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/TtADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/TtEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/TtSELRCD.jsp" name="TtRCD_AF" path="/TtSELRCD_A" scope="request" type="com.fvr.tt_timeTableReference.actions.TtSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/TtSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/TtADDRCD.jsp" name="TtRCD_AF" path="/TtADDRCD_A" scope="request" type="com.fvr.tt_timeTableReference.actions.TtADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/TtADDRCD.jsp"/>
+			<forward name="CERRAR" path="/TtDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/TtEDTRCD.jsp" name="TtRCD_AF" path="/TtEDTRCD_A" scope="request" type="com.fvr.tt_timeTableReference.actions.TtEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/TtEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/TtDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/UsDSPFIL.jsp" name="UsRCD_AF" path="/UsDSPFIL_A" scope="request" type="com.fvr.us_users.actions.UsDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/UsDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/UsADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/UsEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/UsSELRCD.jsp" name="UsRCD_AF" path="/UsSELRCD_A" scope="request" type="com.fvr.us_users.actions.UsSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/UsSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/UsADDRCD.jsp" name="UsRCD_AF" path="/UsADDRCD_A" scope="request" type="com.fvr.us_users.actions.UsADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/UsADDRCD.jsp"/>
+			<forward name="CERRAR" path="/UsDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/UsEDTRCD.jsp" name="UsRCD_AF" path="/UsEDTRCD_A" scope="request" type="com.fvr.us_users.actions.UsEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/UsEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/UsDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/UsADDRCD.jsp" name="UsRCD_AF" path="/RsUsADDRCD_A" scope="request" type="com.fvr.us_users.actions.RsUsADDRCD_A" validate="false">
+		</action>
+		<action input="/jsp/UsEDTRCD.jsp" name="UsRCD_AF" path="/RsUsEDTRCD_A" scope="request" type="com.fvr.us_users.actions.RsUsEDTRCD_A" validate="false">
+		</action>
+		<action input="/jsp/SgDSPFIL.jsp" name="SgRCD_AF" path="/SgDSPFIL_A" scope="request" type="com.fvr.sg_publicProcesses.actions.SgDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/SgDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/SgADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/SgEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/SgSELRCD.jsp" name="SgRCD_AF" path="/SgSELRCD_A" scope="request" type="com.fvr.sg_publicProcesses.actions.SgSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/SgSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/SgADDRCD.jsp" name="SgRCD_AF" path="/SgADDRCD_A" scope="request" type="com.fvr.sg_publicProcesses.actions.SgADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/SgADDRCD.jsp"/>
+			<forward name="CERRAR" path="/SgDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/SgEDTRCD.jsp" name="SgRCD_AF" path="/SgEDTRCD_A" scope="request" type="com.fvr.sg_publicProcesses.actions.SgEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/SgEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/SgDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/PaDSPFIL.jsp" name="PaRCD_AF" path="/PaDSPFIL_A" scope="request" type="com.fvr.pa_systemParameters.actions.PaDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/PaDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/PaADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/PaEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/PaSELRCD.jsp" name="PaRCD_AF" path="/PaSELRCD_A" scope="request" type="com.fvr.pa_systemParameters.actions.PaSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PaSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/PaADDRCD.jsp" name="PaRCD_AF" path="/PaADDRCD_A" scope="request" type="com.fvr.pa_systemParameters.actions.PaADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PaADDRCD.jsp"/>
+			<forward name="CERRAR" path="/PaDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/PaEDTRCD.jsp" name="PaRCD_AF" path="/PaEDTRCD_A" scope="request" type="com.fvr.pa_systemParameters.actions.PaEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PaEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/PaDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/PyDSPFIL.jsp" name="PyRCD_AF" path="/PyDSPFIL_A" scope="request" type="com.fvr.py_PayPalTokens.actions.PyDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/PyDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/PyADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/PyEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/PySELRCD.jsp" name="PyRCD_AF" path="/PySELRCD_A" scope="request" type="com.fvr.py_PayPalTokens.actions.PySELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PySELRCD.jsp"/>
+		</action>
+		<action input="/jsp/PyADDRCD.jsp" name="PyRCD_AF" path="/PyADDRCD_A" scope="request" type="com.fvr.py_PayPalTokens.actions.PyADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PyADDRCD.jsp"/>
+			<forward name="CERRAR" path="/PyDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/PyEDTRCD.jsp" name="PyRCD_AF" path="/PyEDTRCD_A" scope="request" type="com.fvr.py_PayPalTokens.actions.PyEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PyEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/PyDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/PrDSPFIL.jsp" name="PrRCD_AF" path="/PrDSPFIL_A" scope="request" type="com.fvr.pr_promos.actions.PrDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/PrDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/PrADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/PrEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/PrSELRCD.jsp" name="PrRCD_AF" path="/PrSELRCD_A" scope="request" type="com.fvr.pr_promos.actions.PrSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PrSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/PrADDRCD.jsp" name="PrRCD_AF" path="/PrADDRCD_A" scope="request" type="com.fvr.pr_promos.actions.PrADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PrADDRCD.jsp"/>
+			<forward name="CERRAR" path="/PrDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/PrEDTRCD.jsp" name="PrRCD_AF" path="/PrEDTRCD_A" scope="request" type="com.fvr.pr_promos.actions.PrEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PrEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/PrDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/TsDSPFIL.jsp" name="TsRCD_AF" path="/TsDSPFIL_A" scope="request" type="com.fvr.ts_timeSlices.actions.TsDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/TsDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/TsADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/TsEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/TsSELRCD.jsp" name="TsRCD_AF" path="/TsSELRCD_A" scope="request" type="com.fvr.ts_timeSlices.actions.TsSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/TsSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/TsADDRCD.jsp" name="TsRCD_AF" path="/TsADDRCD_A" scope="request" type="com.fvr.ts_timeSlices.actions.TsADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/TsADDRCD.jsp"/>
+			<forward name="CERRAR" path="/TsDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/TsEDTRCD.jsp" name="TsRCD_AF" path="/TsEDTRCD_A" scope="request" type="com.fvr.ts_timeSlices.actions.TsEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/TsEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/TsDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/Ad_rsDSPFIL.jsp" name="Ad_rsRCD_AF" path="/Ad_rsDSPFIL_A" scope="request" type="com.fvr.ad_rs_reservations.actions.Ad_rsDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/Ad_rsDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/Ad_rsADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/Ad_rsEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/Ad_rsSELRCD.jsp" name="Ad_rsRCD_AF" path="/Ad_rsSELRCD_A" scope="request" type="com.fvr.ad_rs_reservations.actions.Ad_rsSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/Ad_rsSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/Ad_rsADDRCD.jsp" name="Ad_rsRCD_AF" path="/Ad_rsADDRCD_A" scope="request" type="com.fvr.ad_rs_reservations.actions.Ad_rsADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/Ad_rsADDRCD.jsp"/>
+			<forward name="CERRAR" path="/Ad_rsDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/Ad_rsEDTRCD.jsp" name="Ad_rsRCD_AF" path="/Ad_rsEDTRCD_A" scope="request" type="com.fvr.ad_rs_reservations.actions.Ad_rsEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/Ad_rsEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/Ad_rsDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/PsDSPFIL.jsp" name="PsRCD_AF" path="/PsDSPFIL_A" scope="request" type="com.fvr.ps_countries.actions.PsDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/PsDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/PsADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/PsEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/PsSELRCD.jsp" name="PsRCD_AF" path="/PsSELRCD_A" scope="request" type="com.fvr.ps_countries.actions.PsSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PsSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/PsADDRCD.jsp" name="PsRCD_AF" path="/PsADDRCD_A" scope="request" type="com.fvr.ps_countries.actions.PsADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PsADDRCD.jsp"/>
+			<forward name="CERRAR" path="/PsDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/PsEDTRCD.jsp" name="PsRCD_AF" path="/PsEDTRCD_A" scope="request" type="com.fvr.ps_countries.actions.PsEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PsEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/PsDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/PmDSPFIL.jsp" name="PmRCD_AF" path="/PmDSPFIL_A" scope="request" type="com.fvr.pm_promosManuales.actions.PmDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/PmDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/PmADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/PmEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/PmSELRCD.jsp" name="PmRCD_AF" path="/PmSELRCD_A" scope="request" type="com.fvr.pm_promosManuales.actions.PmSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PmSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/PmADDRCD.jsp" name="PmRCD_AF" path="/PmADDRCD_A" scope="request" type="com.fvr.pm_promosManuales.actions.PmADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PmADDRCD.jsp"/>
+			<forward name="CERRAR" path="/PmDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/PmEDTRCD.jsp" name="PmRCD_AF" path="/PmEDTRCD_A" scope="request" type="com.fvr.pm_promosManuales.actions.PmEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/PmEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/PmDSPFIL_A.do"/>
+		</action>
+	</action-mappings>
+	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+	<message-resources parameter="com/fvr/struts/ApplicationResource"/>
+	<!-- ========================= Tiles plugin ===============================-->
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+		<set-property property="moduleAware" value="true"/>
+	</plug-in>
+	<!-- ========================= Validator plugin ================================= -->
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+	</plug-in>
+</struts-config>

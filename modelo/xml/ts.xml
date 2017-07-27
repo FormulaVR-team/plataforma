@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="start_date" descripcion="start_date" descripcionCorta="start_date" longitud="10" tipo="CHAR" />
+		<CAM nombre="start_time" descripcion="start_time" descripcionCorta="start_time" longitud="4" tipo="CHAR" />
+		<CAM nombre="nReservations" descripcion="nReservations" descripcionCorta="nReservations" longitud="20" tipo="NUM" />
+		<CAM nombre="nPlaces" descripcion="nPlaces" descripcionCorta="nPlaces" longitud="20" tipo="NUM" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- TS timeSlicesSumLocFecHor -->
+	<ENT nombre="timeSlicesSumLocFecHor" descripcion="timeSlicesSumLocFecHor" prefijo="ts">
+		<FMT archivo="T_TS_timeSlicesSumLocFecHor" nombre="Fisico" tipo="PHY">
+		</FMT>
+		<FMT archivo="T_TS_timeSlicesSumLocFecHor" nombre="Actualizacion" tipo="UPD">
+		</FMT>
+		<FMT archivo="V_TS_RTV_timeSlicesSumLocFecHor" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="location_id" />
+			<CAM nombre="start_date" />
+			<CAM nombre="start_time" />
+			<CAM nombre="nReservations" />
+			<CAM nombre="nPlaces" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>
