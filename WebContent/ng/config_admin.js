@@ -1,10 +1,19 @@
 angular.module('laAplicacion', ['ui.router', 'commonServices_module', 'ngMaterial', 'ngMessages', 'angular-md5', 'chart.js'])
 .config(function ($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdDateLocaleProvider) {
-	$mdThemingProvider
+	var fvrRedMap = $mdThemingProvider.extendPalette('red', {
+			'500': '#CE1417',
+			'contrastDefaultColor': 'light'
+		});
+
+	// Register the new color palette map with the name <code>neonRed</code>
+	$mdThemingProvider.definePalette('fvrRed', fvrRedMap);
+
+// Available palettes: red, pink, purple, deep-purple, indigo, blue, light-blue, cyan, teal, green, light-green, lime, yellow, amber, orange, deep-orange, brown, grey, blue-grey
+$mdThemingProvider
 	.theme('default')
-	.primaryPalette('blue-grey',{'default': '200'})
-	.accentPalette('indigo',{'default': '600'})
-	.warnPalette('blue',{'default': '500'})
+	.primaryPalette('fvrRed',{'default': '500'})
+	.accentPalette('light-blue',{'default': '500'})
+	.warnPalette('orange',{'default': '500'})
 	.backgroundPalette('grey')
 	;
 	$mdDateLocaleProvider.firstDayOfWeek = 1;
@@ -362,8 +371,8 @@ angular.module('laAplicacion', ['ui.router', 'commonServices_module', 'ngMateria
 				controller: "PyDSPFIL_Ctrl_basic"
 			}
 		}
-	}).state('RsDSPFIL', {
-		url: "/RsDSPFIL/:panel_add",
+	}).state('allRsDSPFIL', {
+		url: "/allRsDSPFIL/:panel_add",
 		params: {
 			panel_add: {
 				value: null
@@ -389,8 +398,8 @@ angular.module('laAplicacion', ['ui.router', 'commonServices_module', 'ngMateria
 				controller: "Ad_rsDSPFIL_Ctrl_basic"
 			}
 		}
-	}).state('misRsDSPFIL', {
-		url: "/misRsDSPFIL/:panel_add",
+	}).state('RsDSPFIL', {
+		url: "/RsDSPFIL/:panel_add",
 		params: {
 			panel_add: {
 				value: null

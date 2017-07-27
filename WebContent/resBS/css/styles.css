@@ -37,7 +37,9 @@ pixelarte:
 	/*	background-size: 99% 87%; */
 	}
 	.itemActivo {
-	    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	    box-shadow: 0 2px 10px 0 rgba(0,0,0,.50);
+		background-color: #f0ad4e;
+		color: white;
 	/*
 		color: #fff;
 		background-color: #f0ad4e;
