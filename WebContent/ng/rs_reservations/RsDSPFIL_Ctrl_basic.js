@@ -789,6 +789,10 @@ angular
 						$scope.actionForm.rs_product_id = $scope.aux_rs_product_id.value;
 						$scope.actionForm.rs_start_date = $filter('date')($scope.aux_rs_start_date, 'yyyy-MM-dd');
 						$scope.actionForm.rs_start_time = $scope.aux_rs_start_time.value;
+						
+						// Anular campos autocompletados por el servidor:
+						$scope.actionForm.rs_product_id2 = "";	// Promo automática
+						$scope.actionForm.rs_product_id3 = "";	// Promo manual derivada de un cupón
 
 						//llamo a su servicio pasandole el actionForm de entidad
 						RsDSPFIL_service
