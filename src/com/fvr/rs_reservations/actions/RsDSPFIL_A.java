@@ -449,6 +449,7 @@ public class RsDSPFIL_A extends org.apache.struts.action.Action {
         UsBean reg_us = Subrutinas.getUsFromId(dataBase, pantalla.getLogon_USR());
 		pantalla.setRs_US_is_admin( reg_us.getUs_role_id() );
 		pantalla.setRs_US_nick( reg_us.getUs_nick() );
+		pantalla.setRs_phone( reg_us.getUs_phone() );
 		pantalla.setRs_US_avatar( reg_us.getUs_avatar() );
 		pantalla.setRs_US_country_id( reg_us.getUs_country_id() );
         

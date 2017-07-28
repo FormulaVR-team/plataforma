@@ -255,8 +255,8 @@
 
 					</div>
 				</div>
-	</div>
-</div>
+			</div>
+		</div>
 <!-- Panel ADDRCD inicio -->	
 <div class="container">
 	<!-- Modal -->
@@ -291,4 +291,4 @@
 </div>
 <!-- Panel ADDRCD final -->	
 
-</div>
+	</div>
