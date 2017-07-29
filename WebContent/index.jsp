@@ -22,6 +22,7 @@
 
 	<script src="./ng/_custom/pagination.js?fvrVer=${miVersion}"></script>
 	<script type="text/javascript" src="./script/rutinas.js?fvrVer=${miVersion}"></script>
+	<script type="text/javascript" src="./script/img2D.js?fvrVer=${miVersion}"></script>
 
 	<link id="" href="./ng/_lib//bootstrap-3.3.6/css/bootstrap.min.css?fvrVer=${miVersion}" rel="stylesheet" />
     <link href="./resBS/css/styles.css?fvrVer=${miVersion}" rel="stylesheet" />

@@ -110,7 +110,7 @@
      	</div>
      	<div class="col-xs-12 col-sm-4">
 
-     							<md-input-container style="margin-top: 0px;">
+     			<md-input-container style="margin-top: 0px;">
 					<input type="text" id="avatar" ng-model="actionForm.us_avatar" aria-label="avatar" style="display: none;" />
 					<md-card>
 						<md-card-header>
@@ -143,10 +143,17 @@
 					});
 					function changeimg(str) {
 					    if(typeof str === "object") { str = str.target.result; }
-					    $("#imgUsr").prop( "src", str );
-					    $("#imgUsrBig").prop( "src", str );
-					    $("#avatar").val( str );
-					    $("#avatar").trigger('change');
+					    // Limitar tamaño de la imagen:
+					    img2DObj.base64_resize(str,260);	// Lanza el evento"imageResized"		
+					    $(document).on("imageResized", function (event) {
+					        if (event.url) {
+					            str = event.url;
+							    $("#imgUsr").prop( "src", str );
+							    $("#imgUsrBig").prop( "src", str );
+							    $("#avatar").val( str );
+							    $("#avatar").trigger('change');
+					        }
+					    });					    
 					}
 				</script>
 
