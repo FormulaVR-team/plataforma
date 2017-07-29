@@ -175,7 +175,7 @@ angular
 								console.error("Ha sucedido un error: " + response.statusText);
 							});
 				    // Combos y auxiliares para componentes de presentación:
-					app_services.ps_lst($scope.actionForm.logon_USR,$scope.actionForm.logon_HSH,true).then( function(response) {if (response.rc === 'OK') { $scope.lst_ps = response.text;} else { alert( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+					// app_services.ps_lst($scope.actionForm.logon_USR,$scope.actionForm.logon_HSH,true).then( function(response) {if (response.rc === 'OK') { $scope.lst_ps = response.text;} else { alert( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
 					///////////////////////////////////////////////////////////////////////
 					///////////////////////////////////////////////////////////////////////
 					///////////////////////////////////////////////////////////////////////
@@ -489,6 +489,11 @@ angular
 //						}
 					};
 	/////////////
+	/////////////
+	// Eventos de componentes:
+					$scope.country_id_onOpen = function() {
+						app_services.ps_lst($scope.actionForm.logon_USR,$scope.actionForm.logon_HSH,true).then( function(response) {if (response.rc === 'OK') { $scope.lst_ps = response.text;} else { alert( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+					}
 	/////////////
 
 				} ]);

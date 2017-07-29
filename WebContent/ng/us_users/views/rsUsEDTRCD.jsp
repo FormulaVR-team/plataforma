@@ -64,8 +64,8 @@
 		     			<div class="col-xs-12 col-sm-6 col-md-4">
 		     			<!-- Selector PAIS -->
 						<md-input-container class="md-block input-md">
-							<label>País</label>
-							<md-select placeholder="country_id" ng-model="aux_us_country_id" ng-model-options="{trackBy: '$value.value'}" required>
+							<label>Cambiar país</label>
+							<md-select placeholder="country_id" ng-model="aux_us_country_id" md-on-open="country_id_onOpen()" ng-model-options="{trackBy: '$value.value'}" required>
 								<md-optgroup label="country_id">
 									<md-option ng-value="item" ng-repeat="item in lst_ps">
 										<img width="40px" ng-src="{{item.flag}}" ><img>
@@ -94,6 +94,12 @@
 		     			<md-input-container class="md-block input-md">
 							<label>Nacimiento</label>
 							<md-datepicker ng-model="aux_birth_day"></md-datepicker>
+						</md-input-container>
+		     			</div>	
+		     			<div class="col-xs-12 col-sm-6 col-md-4">
+		     			<md-input-container class="md-block input-md">
+							<!-- <label>País actual</label> -->
+			     			<span><img src="{{actionForm.us_PS_flag_base64}}" ></img>&nbsp;{{actionForm.us_PS_name}}</span>
 						</md-input-container>
 		     			</div>	
 		     		</div>

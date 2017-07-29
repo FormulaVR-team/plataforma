@@ -64,7 +64,7 @@
      			<!-- Selector PAIS -->
 				<md-input-container class="md-block">
 					<label>País</label>
-					<md-select placeholder="country_id" ng-model="aux_us_country_id" ng-model-options="{trackBy: '$value.value'}" required>
+					<md-select placeholder="country_id" ng-model="aux_us_country_id" md-on-open="country_id_onOpen()" ng-model-options="{trackBy: '$value.value'}" required>
 						<md-optgroup label="country_id">
 							<md-option ng-value="item" ng-repeat="item in lst_ps">
 								<img width="40px" ng-src="{{item.flag}}" ><img>
