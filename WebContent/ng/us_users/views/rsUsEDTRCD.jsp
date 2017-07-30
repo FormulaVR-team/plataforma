@@ -65,8 +65,8 @@
 		     			<!-- Selector PAIS -->
 						<md-input-container class="md-block input-md">
 							<label>Cambiar país</label>
-							<md-select placeholder="country_id" ng-model="aux_us_country_id" md-on-open="country_id_onOpen()" ng-model-options="{trackBy: '$value.value'}" required>
-								<md-optgroup label="country_id">
+							<md-select placeholder="Cambiar país" ng-model="aux_us_country_id" md-on-open="country_id_onOpen()" ng-model-options="{trackBy: '$value.value'}" required>
+								<md-optgroup label="Paises">
 									<md-option ng-value="item" ng-repeat="item in lst_ps">
 										<img width="40px" ng-src="{{item.flag}}" ><img>
 										&nbsp;{{item.displayName}}

@@ -70,6 +70,7 @@ public class RsUsEDTRCD_A extends Action {
                 resultado = this.cargarPantalla( request, pantalla );
             } else if ( opcion.trim().equalsIgnoreCase("CambiarReg") ) {
                 resultado = opcion_CambiarReg(request,pantalla);
+                resultado = this.cargarPantalla( request, pantalla );
             } else if ( opcion.trim().equalsIgnoreCase("Suprimir") ) {
                 resultado = opcion_Suprimir(request,form);
             } else if ( opcion.trim().equalsIgnoreCase("Cerrar") ) {
