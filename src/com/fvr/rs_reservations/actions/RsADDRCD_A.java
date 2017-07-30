@@ -284,12 +284,14 @@ public class RsADDRCD_A extends Action {
 
 		Reservas.determinarImporte(dataBase, reg_rs, misErrores);
 
+		// Se pueden haber reescrito estos campos:
 		pantalla.setRs_quantity( reg_rs.getRs_quantity() );
 		pantalla.setRs_places( reg_rs.getRs_places() );
         pantalla.setRs_duration_minutes( reg_rs.getRs_duration_minutes() );
 		pantalla.setRs_amount( reg_rs.getRs_amount() );
 
 		pantalla.setRs_comment( reg_rs.getRs_comment() );
+		pantalla.setRs_product_id( reg_rs.getRs_product_id() );
 		pantalla.setRs_product_id2( reg_rs.getRs_product_id2() );
 		pantalla.setRs_product_id3( reg_rs.getRs_product_id3() );
 

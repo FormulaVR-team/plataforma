@@ -95,11 +95,13 @@ public class PmAccesoBaseDatos {
 		", \"mark\"" + // mark
 		", \"is_deleted\"" + // is_deleted
 		", \"author\"" + // author
+		", \"location_id\"" + // location_id
 		", \"coupon_id\"" + // coupon_id
 		", \"name\"" + // name
 		", \"uses_per_user\"" + // uses_per_user
+		", \"places\"" + // places
 		", \"product_id\"" + // product_id
-		", \"location_id\"" + // location_id
+		", \"product_id_promo\"" + // product_id_promo
 		", \"deadline\"" + // deadline
 		", \"json\"" + // json
                 "  ) VALUES ( " + 
@@ -107,11 +109,13 @@ public class PmAccesoBaseDatos {
 		", '"  + registro.getPm_mark() + "'" + // mark
 		", '"  + registro.getPm_is_deleted() + "'" + // is_deleted
 		", '"  + registro.getPm_author() + "'" + // author
+		", '"  + registro.getPm_location_id() + "'" + // location_id
 		", '"  + registro.getPm_coupon_id() + "'" + // coupon_id
 		", '"  + registro.getPm_name() + "'" + // name
 		", "  + registro.getPm_uses_per_user() + "" + // uses_per_user
+		", "  + registro.getPm_places() + "" + // places
 		", '"  + registro.getPm_product_id() + "'" + // product_id
-		", '"  + registro.getPm_location_id() + "'" + // location_id
+		", '"  + registro.getPm_product_id_promo() + "'" + // product_id_promo
 		", '"  + registro.getPm_deadline() + "'" + // deadline
 		", '"  + registro.getPm_json() + "'" + // json 
                 ")"
@@ -149,11 +153,13 @@ public class PmAccesoBaseDatos {
 		", \"mark\" = '"  + registro.getPm_mark() + "'" + // mark
 		", \"is_deleted\" = '"  + registro.getPm_is_deleted() + "'" + // is_deleted
 		", \"author\" = '"  + registro.getPm_author() + "'" + // author
+		", \"location_id\" = '"  + registro.getPm_location_id() + "'" + // location_id
 		", \"coupon_id\" = '"  + registro.getPm_coupon_id() + "'" + // coupon_id
 		", \"name\" = '"  + registro.getPm_name() + "'" + // name
 		", \"uses_per_user\" = "  + registro.getPm_uses_per_user() + "" + // uses_per_user
+		", \"places\" = "  + registro.getPm_places() + "" + // places
 		", \"product_id\" = '"  + registro.getPm_product_id() + "'" + // product_id
-		", \"location_id\" = '"  + registro.getPm_location_id() + "'" + // location_id
+		", \"product_id_promo\" = '"  + registro.getPm_product_id_promo() + "'" + // product_id_promo
 		", \"deadline\" = '"  + registro.getPm_deadline() + "'" + // deadline
 		", \"json\" = '"  + registro.getPm_json() + "'" + // json
                 " WHERE " + 
@@ -241,12 +247,14 @@ public class PmAccesoBaseDatos {
 		regRead.setPm_coupon_id( rs.getString("coupon_id") ); regRead.setPm_coupon_id( (regRead.getPm_coupon_id() == null)?"":regRead.getPm_coupon_id().trim() ); // coupon_id
 		regRead.setPm_name( rs.getString("name") ); regRead.setPm_name( (regRead.getPm_name() == null)?"":regRead.getPm_name().trim() ); // name
 		regRead.setPm_uses_per_user( rs.getLong("uses_per_user") );  // uses_per_user
+		regRead.setPm_places( rs.getLong("places") );  // places
+		regRead.setPm_location_id( rs.getString("location_id") ); regRead.setPm_location_id( (regRead.getPm_location_id() == null)?"":regRead.getPm_location_id().trim() ); // location_id
+		regRead.setPm_LO_name( rs.getString("LO_name") ); regRead.setPm_LO_name( (regRead.getPm_LO_name() == null)?"":regRead.getPm_LO_name().trim() ); // LO_name
 		regRead.setPm_product_id( rs.getString("product_id") ); regRead.setPm_product_id( (regRead.getPm_product_id() == null)?"":regRead.getPm_product_id().trim() ); // product_id
 		regRead.setPm_PT_name( rs.getString("PT_name") ); regRead.setPm_PT_name( (regRead.getPm_PT_name() == null)?"":regRead.getPm_PT_name().trim() ); // PT_name
 		regRead.setPm_PT_whoCanSelect_AFU( rs.getString("PT_whoCanSelect_AFU") ); regRead.setPm_PT_whoCanSelect_AFU( (regRead.getPm_PT_whoCanSelect_AFU() == null)?"":regRead.getPm_PT_whoCanSelect_AFU().trim() ); // PT_whoCanSelect_AFU
 		regRead.setPm_PT_deadline( rs.getString("PT_deadline") ); regRead.setPm_PT_deadline( (regRead.getPm_PT_deadline() == null)?"":regRead.getPm_PT_deadline().trim() ); // PT_deadline
-		regRead.setPm_location_id( rs.getString("location_id") ); regRead.setPm_location_id( (regRead.getPm_location_id() == null)?"":regRead.getPm_location_id().trim() ); // location_id
-		regRead.setPm_LO_name( rs.getString("LO_name") ); regRead.setPm_LO_name( (regRead.getPm_LO_name() == null)?"":regRead.getPm_LO_name().trim() ); // LO_name
+		regRead.setPm_product_id_promo( rs.getString("product_id_promo") ); regRead.setPm_product_id_promo( (regRead.getPm_product_id_promo() == null)?"":regRead.getPm_product_id_promo().trim() ); // product_id_promo
 		regRead.setPm_deadline( rs.getString("deadline") ); regRead.setPm_deadline( (regRead.getPm_deadline() == null)?"":regRead.getPm_deadline().trim() ); // deadline
 		regRead.setPm_json( rs.getString("json") ); regRead.setPm_json( (regRead.getPm_json() == null)?"":regRead.getPm_json().trim() ); // json
             }
@@ -311,12 +319,14 @@ public class PmAccesoBaseDatos {
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getPm_coupon_id(),"coupon_id",sqlWhere);   // coupon_id
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getPm_name(),"name",sqlWhere);   // name
 	sqlWhere = fltOper.getNUM_EQ(rst.getPm_uses_per_user(),"uses_per_user",sqlWhere);   // uses_per_user
+	sqlWhere = fltOper.getNUM_EQ(rst.getPm_places(),"places",sqlWhere);   // places
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getPm_location_id(),"location_id",sqlWhere);   // location_id
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getPm_LO_name(),"LO_name",sqlWhere);   // LO_name
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getPm_product_id(),"product_id",sqlWhere);   // product_id
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getPm_PT_name(),"PT_name",sqlWhere);   // PT_name
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getPm_PT_whoCanSelect_AFU(),"PT_whoCanSelect_AFU",sqlWhere);   // PT_whoCanSelect_AFU
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getPm_PT_deadline(),"PT_deadline",sqlWhere);   // PT_deadline
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getPm_location_id(),"location_id",sqlWhere);   // location_id
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getPm_LO_name(),"LO_name",sqlWhere);   // LO_name
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getPm_product_id_promo(),"product_id_promo",sqlWhere);   // product_id_promo
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getPm_deadline(),"deadline",sqlWhere);   // deadline
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getPm_json(),"json",sqlWhere);   // json
         //////////////////////////////////////////////////////
@@ -370,12 +380,14 @@ public class PmAccesoBaseDatos {
 		regRead.setPm_coupon_id( rs.getString("coupon_id") ); regRead.setPm_coupon_id( (regRead.getPm_coupon_id() == null)?"":regRead.getPm_coupon_id().trim() ); // coupon_id
 		regRead.setPm_name( rs.getString("name") ); regRead.setPm_name( (regRead.getPm_name() == null)?"":regRead.getPm_name().trim() ); // name
 		regRead.setPm_uses_per_user( rs.getLong("uses_per_user") );  // uses_per_user
+		regRead.setPm_places( rs.getLong("places") );  // places
+		regRead.setPm_location_id( rs.getString("location_id") ); regRead.setPm_location_id( (regRead.getPm_location_id() == null)?"":regRead.getPm_location_id().trim() ); // location_id
+		regRead.setPm_LO_name( rs.getString("LO_name") ); regRead.setPm_LO_name( (regRead.getPm_LO_name() == null)?"":regRead.getPm_LO_name().trim() ); // LO_name
 		regRead.setPm_product_id( rs.getString("product_id") ); regRead.setPm_product_id( (regRead.getPm_product_id() == null)?"":regRead.getPm_product_id().trim() ); // product_id
 		regRead.setPm_PT_name( rs.getString("PT_name") ); regRead.setPm_PT_name( (regRead.getPm_PT_name() == null)?"":regRead.getPm_PT_name().trim() ); // PT_name
 		regRead.setPm_PT_whoCanSelect_AFU( rs.getString("PT_whoCanSelect_AFU") ); regRead.setPm_PT_whoCanSelect_AFU( (regRead.getPm_PT_whoCanSelect_AFU() == null)?"":regRead.getPm_PT_whoCanSelect_AFU().trim() ); // PT_whoCanSelect_AFU
 		regRead.setPm_PT_deadline( rs.getString("PT_deadline") ); regRead.setPm_PT_deadline( (regRead.getPm_PT_deadline() == null)?"":regRead.getPm_PT_deadline().trim() ); // PT_deadline
-		regRead.setPm_location_id( rs.getString("location_id") ); regRead.setPm_location_id( (regRead.getPm_location_id() == null)?"":regRead.getPm_location_id().trim() ); // location_id
-		regRead.setPm_LO_name( rs.getString("LO_name") ); regRead.setPm_LO_name( (regRead.getPm_LO_name() == null)?"":regRead.getPm_LO_name().trim() ); // LO_name
+		regRead.setPm_product_id_promo( rs.getString("product_id_promo") ); regRead.setPm_product_id_promo( (regRead.getPm_product_id_promo() == null)?"":regRead.getPm_product_id_promo().trim() ); // product_id_promo
 		regRead.setPm_deadline( rs.getString("deadline") ); regRead.setPm_deadline( (regRead.getPm_deadline() == null)?"":regRead.getPm_deadline().trim() ); // deadline
 		regRead.setPm_json( rs.getString("json") ); regRead.setPm_json( (regRead.getPm_json() == null)?"":regRead.getPm_json().trim() ); // json
                         
@@ -432,12 +444,14 @@ public class PmAccesoBaseDatos {
 				s += "<td><strong style='color:darkblue;'>" + "coupon_id" + "</strong></td>";  // coupon_id
 				s += "<td><strong style='color:darkblue;'>" + "name" + "</strong></td>";  // name
 				s += "<td><strong style='color:darkblue;'>" + "uses_per_user" + "</strong></td>";  // uses_per_user
+				s += "<td><strong style='color:darkblue;'>" + "places" + "</strong></td>";  // places
+				s += "<td><strong style='color:darkblue;'>" + "location_id" + "</strong></td>";  // location_id
+				s += "<td><strong style='color:darkblue;'>" + "LO_name" + "</strong></td>";  // LO_name
 				s += "<td><strong style='color:darkblue;'>" + "product_id" + "</strong></td>";  // product_id
 				s += "<td><strong style='color:darkblue;'>" + "PT_name" + "</strong></td>";  // PT_name
 				s += "<td><strong style='color:darkblue;'>" + "PT_whoCanSelect_AFU" + "</strong></td>";  // PT_whoCanSelect_AFU
 				s += "<td><strong style='color:darkblue;'>" + "PT_deadline" + "</strong></td>";  // PT_deadline
-				s += "<td><strong style='color:darkblue;'>" + "location_id" + "</strong></td>";  // location_id
-				s += "<td><strong style='color:darkblue;'>" + "LO_name" + "</strong></td>";  // LO_name
+				s += "<td><strong style='color:darkblue;'>" + "product_id_promo" + "</strong></td>";  // product_id_promo
 				s += "<td><strong style='color:darkblue;'>" + "deadline" + "</strong></td>";  // deadline
 				s += "<td><strong style='color:darkblue;'>" + "json" + "</strong></td>";  // json
 				s += "</tr>\r\n";
@@ -474,6 +488,13 @@ public class PmAccesoBaseDatos {
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // name
 				s += "<td>" + new Long(registro.getPm_uses_per_user()).toString() + "</td>";  // uses_per_user
+				s += "<td>" + new Long(registro.getPm_places()).toString() + "</td>";  // places
+				tmp = registro.getPm_location_id();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // location_id
+				tmp = registro.getPm_LO_name();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // LO_name
 				tmp = registro.getPm_product_id();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // product_id
@@ -486,12 +507,9 @@ public class PmAccesoBaseDatos {
 				tmp = registro.getPm_PT_deadline();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // PT_deadline
-				tmp = registro.getPm_location_id();
+				tmp = registro.getPm_product_id_promo();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
-				s += "<td>" + tmp + "</td>";  // location_id
-				tmp = registro.getPm_LO_name();
-				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
-				s += "<td>" + tmp + "</td>";  // LO_name
+				s += "<td>" + tmp + "</td>";  // product_id_promo
 				tmp = registro.getPm_deadline();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // deadline
@@ -667,14 +685,16 @@ public class PmAccesoBaseDatos {
 				registro.setPm_coupon_id( jsonReg.getString(4) );	// coupon_id
 				registro.setPm_name( jsonReg.getString(5) );	// name
 				registro.setPm_uses_per_user( jsonReg.getLong(6) );	// uses_per_user
-				registro.setPm_product_id( jsonReg.getString(7) );	// product_id
-				registro.setPm_PT_name( jsonReg.getString(8) );	// PT_name
-				registro.setPm_PT_whoCanSelect_AFU( jsonReg.getString(9) );	// PT_whoCanSelect_AFU
-				registro.setPm_PT_deadline( jsonReg.getString(10) );	// PT_deadline
-				registro.setPm_location_id( jsonReg.getString(11) );	// location_id
-				registro.setPm_LO_name( jsonReg.getString(12) );	// LO_name
-				registro.setPm_deadline( jsonReg.getString(13) );	// deadline
-				registro.setPm_json( jsonReg.getString(14) );	// json
+				registro.setPm_places( jsonReg.getLong(7) );	// places
+				registro.setPm_location_id( jsonReg.getString(8) );	// location_id
+				registro.setPm_LO_name( jsonReg.getString(9) );	// LO_name
+				registro.setPm_product_id( jsonReg.getString(10) );	// product_id
+				registro.setPm_PT_name( jsonReg.getString(11) );	// PT_name
+				registro.setPm_PT_whoCanSelect_AFU( jsonReg.getString(12) );	// PT_whoCanSelect_AFU
+				registro.setPm_PT_deadline( jsonReg.getString(13) );	// PT_deadline
+				registro.setPm_product_id_promo( jsonReg.getString(14) );	// product_id_promo
+				registro.setPm_deadline( jsonReg.getString(15) );	// deadline
+				registro.setPm_json( jsonReg.getString(16) );	// json
 					
 					arrayTmp.add(registro);
 				} catch (Exception e) {;}

@@ -390,10 +390,12 @@ public class PmDSPFIL_A extends org.apache.struts.action.Action {
 		if ( accion.trim().equalsIgnoreCase("colectivo_mark") ) { reg.setPm_mark( pantalla.getPm_mark() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_is_deleted") ) { reg.setPm_is_deleted( pantalla.getPm_is_deleted() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_author") ) { reg.setPm_author( pantalla.getPm_author() ); }
+		if ( accion.trim().equalsIgnoreCase("colectivo_location_id") ) { reg.setPm_location_id( pantalla.getPm_location_id() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_name") ) { reg.setPm_name( pantalla.getPm_name() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_uses_per_user") ) { reg.setPm_uses_per_user( pantalla.getPm_uses_per_user() ); }
+		if ( accion.trim().equalsIgnoreCase("colectivo_places") ) { reg.setPm_places( pantalla.getPm_places() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_product_id") ) { reg.setPm_product_id( pantalla.getPm_product_id() ); }
-		if ( accion.trim().equalsIgnoreCase("colectivo_location_id") ) { reg.setPm_location_id( pantalla.getPm_location_id() ); }
+		if ( accion.trim().equalsIgnoreCase("colectivo_product_id_promo") ) { reg.setPm_product_id_promo( pantalla.getPm_product_id_promo() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_deadline") ) { reg.setPm_deadline( pantalla.getPm_deadline() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_json") ) { reg.setPm_json( pantalla.getPm_json() ); }
                     ///////////////////////////////////

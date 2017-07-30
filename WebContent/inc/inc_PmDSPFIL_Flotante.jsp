@@ -69,6 +69,15 @@
 		<tr>
 			<td>&nbsp;</td>
 			<td>
+				<button type="button" class="btn btn-info pull-right" style="width:70%;" onclick="if ( confirmar('<bean:message key="common.client.pregunta_modificar_marcados"/>',this)==true ) setOpcion('PmRCD_AF','colectivo_location_id', null);"><span class="glyphicon glyphicon-ok pull-left"></span>
+				&nbsp;location_id
+				</button>
+			</td>
+			<td><html:text maxlength="50" styleClass="form-control" property="pm_location_id"  style="width: 105px;"/></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
 				<button type="button" class="btn btn-info pull-right" style="width:70%;" onclick="if ( confirmar('<bean:message key="common.client.pregunta_modificar_marcados"/>',this)==true ) setOpcion('PmRCD_AF','colectivo_name', null);"><span class="glyphicon glyphicon-ok pull-left"></span>
 				&nbsp;name
 				</button>
@@ -87,6 +96,15 @@
 		<tr>
 			<td>&nbsp;</td>
 			<td>
+				<button type="button" class="btn btn-info pull-right" style="width:70%;" onclick="if ( confirmar('<bean:message key="common.client.pregunta_modificar_marcados"/>',this)==true ) setOpcion('PmRCD_AF','colectivo_places', null);"><span class="glyphicon glyphicon-ok pull-left"></span>
+				&nbsp;places
+				</button>
+			</td>
+			<td><html:text maxlength="5" styleClass="form-control" property="pm_places"  style="text-align: right; width: 35px;"/></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
 				<button type="button" class="btn btn-info pull-right" style="width:70%;" onclick="if ( confirmar('<bean:message key="common.client.pregunta_modificar_marcados"/>',this)==true ) setOpcion('PmRCD_AF','colectivo_product_id', null);"><span class="glyphicon glyphicon-ok pull-left"></span>
 				&nbsp;product_id
 				</button>
@@ -96,11 +114,11 @@
 		<tr>
 			<td>&nbsp;</td>
 			<td>
-				<button type="button" class="btn btn-info pull-right" style="width:70%;" onclick="if ( confirmar('<bean:message key="common.client.pregunta_modificar_marcados"/>',this)==true ) setOpcion('PmRCD_AF','colectivo_location_id', null);"><span class="glyphicon glyphicon-ok pull-left"></span>
-				&nbsp;location_id
+				<button type="button" class="btn btn-info pull-right" style="width:70%;" onclick="if ( confirmar('<bean:message key="common.client.pregunta_modificar_marcados"/>',this)==true ) setOpcion('PmRCD_AF','colectivo_product_id_promo', null);"><span class="glyphicon glyphicon-ok pull-left"></span>
+				&nbsp;product_id_promo
 				</button>
 			</td>
-			<td><html:text maxlength="50" styleClass="form-control" property="pm_location_id"  style="width: 105px;"/></td>
+			<td><html:text maxlength="50" styleClass="form-control" property="pm_product_id_promo"  style="width: 105px;"/></td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>

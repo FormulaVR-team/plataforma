@@ -90,6 +90,26 @@
 			</div>
 		</div>
 		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">places&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="5" styleClass="form-control" property="pm_places"  style="text-align: right; width: 35px;" onkeypress="return soloNumeros(event);"/>
+			</div>
+		</div>
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">location_id&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="50" styleClass="form-control" property="pm_location_id"  style="width: 350px;"/>
+			</div>
+		</div>
+<!-- CAMPO VIRTUAL
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">LO_name&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleClass="form-control" property="pm_LO_name"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+-->
+		<div class='form-group'>
 			<label class="col-sm-3 control-label" for="textinput">product_id&nbsp;</label>
 			<div class="col-sm-9">
 				<html:text maxlength="50" styleClass="form-control" property="pm_product_id"  style="width: 350px;"/>
@@ -120,19 +140,11 @@
 		</div>
 -->
 		<div class='form-group'>
-			<label class="col-sm-3 control-label" for="textinput">location_id&nbsp;</label>
+			<label class="col-sm-3 control-label" for="textinput">product_id_promo&nbsp;</label>
 			<div class="col-sm-9">
-				<html:text maxlength="50" styleClass="form-control" property="pm_location_id"  style="width: 350px;"/>
+				<html:text maxlength="50" styleClass="form-control" property="pm_product_id_promo"  style="width: 350px;"/>
 			</div>
 		</div>
-<!-- CAMPO VIRTUAL
-		<div class='form-group'>
-			<label class="col-sm-3 control-label" for="textinput">LO_name&nbsp;</label>
-			<div class="col-sm-9">
-				<html:text maxlength="100" styleClass="form-control" property="pm_LO_name"  disabled="true" style="width: 700px;"/>
-			</div>
-		</div>
--->
 		<div class='form-group'>
 			<label class="col-sm-3 control-label" for="textinput">deadline&nbsp;</label>
 			<div class="col-sm-9">
@@ -170,11 +182,13 @@
 		<!-- <html:hidden property="pm_mark"/> mark -->
 		<!-- <html:hidden property="pm_is_deleted"/> is_deleted -->
 		<!-- <html:hidden property="pm_author"/> author -->
+		<!-- <html:hidden property="pm_location_id"/> location_id -->
 		<!-- <html:hidden property="pm_coupon_id"/> coupon_id -->
 		<!-- <html:hidden property="pm_name"/> name -->
 		<!-- <html:hidden property="pm_uses_per_user"/> uses_per_user -->
+		<!-- <html:hidden property="pm_places"/> places -->
 		<!-- <html:hidden property="pm_product_id"/> product_id -->
-		<!-- <html:hidden property="pm_location_id"/> location_id -->
+		<!-- <html:hidden property="pm_product_id_promo"/> product_id_promo -->
 		<!-- <html:hidden property="pm_deadline"/> deadline -->
 		<!-- <html:hidden property="pm_json"/> json -->
 

@@ -1,6 +1,6 @@
 ﻿/*
 Created: 01/05/2017
-Modified: 10/07/2017
+Modified: 30/07/2017
 Model: FormulaVR_V10_PostgreSQL
 Database: PostgreSQL 9.2
 */
@@ -65,17 +65,25 @@ CREATE TABLE "FormulaVR"."T_PM_promosManuales"(
  "mark" Character(1) DEFAULT '' NOT NULL,
  "is_deleted" Character(1) DEFAULT '' NOT NULL,
  "author" Character varying(50) DEFAULT '' NOT NULL,
+ "location_id" Character varying(50) DEFAULT '' NOT NULL,
  "coupon_id" Character varying(50) DEFAULT '' NOT NULL,
  "name" Text NOT NULL,
  "uses_per_user" Integer DEFAULT 0 NOT NULL,
+ "places" Integer DEFAULT 0 NOT NULL,
  "product_id" Character varying(50) DEFAULT '' NOT NULL,
- "location_id" Character varying(50) DEFAULT '' NOT NULL,
+ "product_id_promo" Character varying(50) DEFAULT '' NOT NULL,
  "deadline" Character(10) DEFAULT '2099-12-31' NOT NULL,
  "json" Text NOT NULL
 )
 WITH (OIDS=FALSE)
 ;
 COMMENT ON COLUMN "FormulaVR"."T_PM_promosManuales"."sincro" IS 'Momento inserción: aammddhhMMssDDD'
+;
+COMMENT ON COLUMN "FormulaVR"."T_PM_promosManuales"."places" IS 'Sustituirá al campo places de la reserva si es mayor que 0.'
+;
+COMMENT ON COLUMN "FormulaVR"."T_PM_promosManuales"."product_id" IS 'A asignar a la reserva en product_id (Si contiene valor).'
+;
+COMMENT ON COLUMN "FormulaVR"."T_PM_promosManuales"."product_id_promo" IS 'A asignar a la reserva en product_id3.'
 ;
 
 -- Add keys for table FormulaVR.T_PM_promosManuales
@@ -255,7 +263,7 @@ SELECT
     , count(reservation_id) as "nReservations"
     , sum("RS_places") as "nPlaces"
  FROM "FormulaVR"."V_TS_RTV_timeSlices"
- WHERE "RS_pay_status" like '%OK%'
+ WHERE ("RS_pay_status" like '%OK%' or  "RS_pay_status" = 'CASH_PDT')
  GROUP BY
       "RS_location_id"
     , "start_date"
@@ -279,7 +287,7 @@ FROM
 ;
 
 CREATE VIEW "FormulaVR"."V_PM_RTV_promosManuales" AS
-SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."coupon_id", "a"."name", "a"."uses_per_user", "a"."product_id", "b"."name" AS "PT_name", "b"."whoCanSelect_AFU" AS "PT_whoCanSelect_AFU", "b"."deadline" AS "PT_deadline", "a"."location_id", "c"."name" AS "LO_name", "a"."deadline", "a"."json"
+SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."coupon_id", "a"."name", "a"."uses_per_user", "a"."places", "a"."location_id", "c"."name" AS "LO_name", "a"."product_id", "b"."name" AS "PT_name", "b"."whoCanSelect_AFU" AS "PT_whoCanSelect_AFU", "b"."deadline" AS "PT_deadline", "a"."product_id_promo", "a"."deadline", "a"."json"
 FROM 
 
 

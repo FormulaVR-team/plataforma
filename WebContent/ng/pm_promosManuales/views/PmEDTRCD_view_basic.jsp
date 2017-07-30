@@ -44,6 +44,18 @@
 				<input type="text" ng-model="actionForm.pm_uses_per_user" />
 			</md-input-container>
 			<md-input-container>
+				<label>places</label>
+				<input type="text" ng-model="actionForm.pm_places" />
+			</md-input-container>
+			<md-input-container>
+				<label>location_id</label>
+				<input type="text" ng-model="actionForm.pm_location_id" />
+			</md-input-container>
+			<md-input-container>
+				<label>LO_name</label>
+				<input type="text" ng-model="actionForm.pm_LO_name" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
 				<label>product_id</label>
 				<input type="text" ng-model="actionForm.pm_product_id" />
 			</md-input-container>
@@ -60,12 +72,8 @@
 				<input type="text" ng-model="actionForm.pm_PT_deadline" disabled="disabled" />
 			</md-input-container>
 			<md-input-container>
-				<label>location_id</label>
-				<input type="text" ng-model="actionForm.pm_location_id" />
-			</md-input-container>
-			<md-input-container>
-				<label>LO_name</label>
-				<input type="text" ng-model="actionForm.pm_LO_name" disabled="disabled" />
+				<label>product_id_promo</label>
+				<input type="text" ng-model="actionForm.pm_product_id_promo" />
 			</md-input-container>
 			<md-input-container>
 				<label>deadline</label>

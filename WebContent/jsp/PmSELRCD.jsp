@@ -118,12 +118,14 @@
 <th style="text-align: left;">coupon_id</th>
 <th style="text-align: left;">name</th>
 <th style="text-align: right;">uses_per_user</th>
+<th style="text-align: right;">places</th>
+<th style="text-align: left;">location_id</th>
+<th style="text-align: left;">LO_name</th>
 <th style="text-align: left;">product_id</th>
 <th style="text-align: left;">PT_name</th>
 <th style="text-align: left;">PT_whoCanSelect_AFU</th>
 <th style="text-align: left;">PT_deadline</th>
-<th style="text-align: left;">location_id</th>
-<th style="text-align: left;">LO_name</th>
+<th style="text-align: left;">product_id_promo</th>
 <th style="text-align: left;">deadline</th>
 <th style="text-align: left;">json</th>
                 </tr>
@@ -142,6 +144,12 @@
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_uses_per_user" maxlength="5" style="width: 35px; text-align: right;" onkeypress="return soloNumeros(event);" onclick="this.select();" />
 			</td>
+			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_places" maxlength="5" style="width: 35px; text-align: right;" onkeypress="return soloNumeros(event);" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_location_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_LO_name" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
 			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_product_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_PT_name" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
@@ -150,9 +158,7 @@
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_PT_deadline" maxlength="10" style="width: 70px; text-align: left;" onclick="this.select();" />
 			</td>
-			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_location_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
-			</td>
-			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_LO_name" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_product_id_promo" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_deadline" maxlength="10" style="width: 70px; text-align: left;" onclick="this.select();" />
 			</td>
@@ -169,12 +175,14 @@
 <td class="tbceldadetalle" onmouseover="onTdOver(this);" onmouseout="onTdOut(this);" onclick="javascript:setRetorno( '<bean:write name="grid" property="pm_coupon_id"/>' );"><bean:write name="grid" property="pm_coupon_id"/><br/></td>   <!-- coupon_id -->
 <td class="tbceldadetalle"><bean:write name="grid" property="pm_name"/><br/></td>   <!-- name -->
 <td class="tbceldadetalle" style="text-align: right;"><bean:write name="grid" property="pm_uses_per_user"/><br/></td>   <!-- uses_per_user -->
+<td class="tbceldadetalle" style="text-align: right;"><bean:write name="grid" property="pm_places"/><br/></td>   <!-- places -->
+<td class="tbceldadetalle"><bean:write name="grid" property="pm_location_id"/><br/></td>   <!-- location_id -->
+<td class="tbceldadetalle"><bean:write name="grid" property="pm_LO_name"/><br/></td>   <!-- LO_name -->
 <td class="tbceldadetalle"><bean:write name="grid" property="pm_product_id"/><br/></td>   <!-- product_id -->
 <td class="tbceldadetalle"><bean:write name="grid" property="pm_PT_name"/><br/></td>   <!-- PT_name -->
 <td class="tbceldadetalle"><bean:write name="grid" property="pm_PT_whoCanSelect_AFU"/><br/></td>   <!-- PT_whoCanSelect_AFU -->
 <td class="tbceldadetalle"><bean:write name="grid" property="pm_PT_deadline"/><br/></td>   <!-- PT_deadline -->
-<td class="tbceldadetalle"><bean:write name="grid" property="pm_location_id"/><br/></td>   <!-- location_id -->
-<td class="tbceldadetalle"><bean:write name="grid" property="pm_LO_name"/><br/></td>   <!-- LO_name -->
+<td class="tbceldadetalle"><bean:write name="grid" property="pm_product_id_promo"/><br/></td>   <!-- product_id_promo -->
 <td class="tbceldadetalle"><bean:write name="grid" property="pm_deadline"/><br/></td>   <!-- deadline -->
 <td class="tbceldadetalle"><bean:write name="grid" property="pm_json"/><br/></td>   <!-- json -->
                     </tr>

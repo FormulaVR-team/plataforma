@@ -1,6 +1,6 @@
 ﻿/*
 Created: 01/05/2017
-Modified: 20/07/2017
+Modified: 30/07/2017
 Model: FormulaVR_V10_PostgreSQL
 Database: PostgreSQL 9.2
 */
@@ -258,6 +258,12 @@ CREATE TABLE "FormulaVR"."T_RS_reservations"(
 WITH (OIDS=FALSE)
 ;
 COMMENT ON COLUMN "FormulaVR"."T_RS_reservations"."sincro" IS 'Momento inserción: aammddhhMMssDDD'
+;
+COMMENT ON COLUMN "FormulaVR"."T_RS_reservations"."product_id" IS 'Seleccionado por usuario'
+;
+COMMENT ON COLUMN "FormulaVR"."T_RS_reservations"."product_id2" IS 'Seleccionado por promociones automáticas'
+;
+COMMENT ON COLUMN "FormulaVR"."T_RS_reservations"."product_id3" IS 'Seleccionado por Cupones (Promos manuales)'
 ;
 COMMENT ON COLUMN "FormulaVR"."T_RS_reservations"."pay_status" IS 'RP:Reservado pdte confirm, R:Reserva cobrada, CP:Cobro pdte confirm, C:Cobro confirmado'
 ;
@@ -585,17 +591,25 @@ CREATE TABLE "FormulaVR"."T_PM_promosManuales"(
  "mark" Character(1) DEFAULT '' NOT NULL,
  "is_deleted" Character(1) DEFAULT '' NOT NULL,
  "author" Character varying(50) DEFAULT '' NOT NULL,
+ "location_id" Character varying(50) DEFAULT '' NOT NULL,
  "coupon_id" Character varying(50) DEFAULT '' NOT NULL,
  "name" Text NOT NULL,
  "uses_per_user" Integer DEFAULT 0 NOT NULL,
+ "places" Integer DEFAULT 0 NOT NULL,
  "product_id" Character varying(50) DEFAULT '' NOT NULL,
- "location_id" Character varying(50) DEFAULT '' NOT NULL,
+ "product_id_promo" Character varying(50) DEFAULT '' NOT NULL,
  "deadline" Character(10) DEFAULT '2099-12-31' NOT NULL,
  "json" Text NOT NULL
 )
 WITH (OIDS=FALSE)
 ;
 COMMENT ON COLUMN "FormulaVR"."T_PM_promosManuales"."sincro" IS 'Momento inserción: aammddhhMMssDDD'
+;
+COMMENT ON COLUMN "FormulaVR"."T_PM_promosManuales"."places" IS 'Sustituirá al campo places de la reserva si es mayor que 0.'
+;
+COMMENT ON COLUMN "FormulaVR"."T_PM_promosManuales"."product_id" IS 'A asignar a la reserva en product_id (Si contiene valor).'
+;
+COMMENT ON COLUMN "FormulaVR"."T_PM_promosManuales"."product_id_promo" IS 'A asignar a la reserva en product_id3.'
 ;
 
 -- Add keys for table FormulaVR.T_PM_promosManuales
@@ -799,7 +813,7 @@ FROM
 ;
 
 CREATE VIEW "FormulaVR"."V_PM_RTV_promosManuales" AS
-SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."coupon_id", "a"."name", "a"."uses_per_user", "a"."product_id", "b"."name" AS "PT_name", "b"."whoCanSelect_AFU" AS "PT_whoCanSelect_AFU", "b"."deadline" AS "PT_deadline", "a"."location_id", "c"."name" AS "LO_name", "a"."deadline", "a"."json"
+SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."coupon_id", "a"."name", "a"."uses_per_user", "a"."places", "a"."location_id", "c"."name" AS "LO_name", "a"."product_id", "b"."name" AS "PT_name", "b"."whoCanSelect_AFU" AS "PT_whoCanSelect_AFU", "b"."deadline" AS "PT_deadline", "a"."product_id_promo", "a"."deadline", "a"."json"
 FROM 
 
 

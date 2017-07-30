@@ -69,12 +69,14 @@
 		<CAM nombre="coupon_id" descripcion="coupon_id" descripcionCorta="coupon_id" longitud="50" tipo="CHAR" />
 		<CAM nombre="name" descripcion="name" descripcionCorta="name" longitud="100" tipo="CHAR" />
 		<CAM nombre="uses_per_user" descripcion="uses_per_user" descripcionCorta="uses_per_user" longitud="5" tipo="NUM" />
+		<CAM nombre="places" descripcion="places" descripcionCorta="places" longitud="5" tipo="NUM" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="LO_name" descripcion="LO_name" descripcionCorta="LO_name" longitud="100" tipo="CHAR" />
 		<CAM nombre="product_id" descripcion="product_id" descripcionCorta="product_id" longitud="50" tipo="CHAR" />
 		<CAM nombre="PT_name" descripcion="PT_name" descripcionCorta="PT_name" longitud="100" tipo="CHAR" />
 		<CAM nombre="PT_whoCanSelect_AFU" descripcion="PT_whoCanSelect_AFU" descripcionCorta="PT_whoCanSelect_AFU" longitud="10" tipo="CHAR" />
 		<CAM nombre="PT_deadline" descripcion="PT_deadline" descripcionCorta="PT_deadline" longitud="10" tipo="CHAR" />
-		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
-		<CAM nombre="LO_name" descripcion="LO_name" descripcionCorta="LO_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="product_id_promo" descripcion="product_id_promo" descripcionCorta="product_id_promo" longitud="50" tipo="CHAR" />
 		<CAM nombre="deadline" descripcion="deadline" descripcionCorta="deadline" longitud="10" tipo="CHAR" />
 		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
 
@@ -464,11 +466,13 @@
 			<CAM nombre="mark" />
 			<CAM nombre="is_deleted" />
 			<CAM nombre="author" />
+			<CAM nombre="location_id" />
 			<CAM nombre="coupon_id" />
 			<CAM nombre="name" />
 			<CAM nombre="uses_per_user" />
+			<CAM nombre="places" />
 			<CAM nombre="product_id" />
-			<CAM nombre="location_id" />
+			<CAM nombre="product_id_promo" />
 			<CAM nombre="deadline" />
 			<CAM nombre="json" />
 		</FMT>
@@ -477,11 +481,13 @@
 			<CAM nombre="mark" />
 			<CAM nombre="is_deleted" />
 			<CAM nombre="author" />
+			<CAM nombre="location_id" />
 			<CAM nombre="coupon_id" />
 			<CAM nombre="name" />
 			<CAM nombre="uses_per_user" />
+			<CAM nombre="places" />
 			<CAM nombre="product_id" />
-			<CAM nombre="location_id" />
+			<CAM nombre="product_id_promo" />
 			<CAM nombre="deadline" />
 			<CAM nombre="json" />
 			<KEY nombre="coupon_id" orden="ASC" secuencia="1" />
@@ -494,12 +500,14 @@
 			<CAM nombre="coupon_id" />
 			<CAM nombre="name" />
 			<CAM nombre="uses_per_user" />
+			<CAM nombre="places" />
+			<CAM nombre="location_id" />
+			<CAM nombre="LO_name" />
 			<CAM nombre="product_id" />
 			<CAM nombre="PT_name" />
 			<CAM nombre="PT_whoCanSelect_AFU" />
 			<CAM nombre="PT_deadline" />
-			<CAM nombre="location_id" />
-			<CAM nombre="LO_name" />
+			<CAM nombre="product_id_promo" />
 			<CAM nombre="deadline" />
 			<CAM nombre="json" />
 			<KEY nombre="coupon_id" orden="ASC" secuencia="1" />

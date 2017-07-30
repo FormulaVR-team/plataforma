@@ -43,12 +43,14 @@ public class PmRCD_AF extends org.apache.struts.action.ActionForm {
 	public String pm_coupon_id; // coupon_id
 	public String pm_name; // name
 	public long   pm_uses_per_user; // uses_per_user
+	public long   pm_places; // places
+	public String pm_location_id; // location_id
+	public String pm_LO_name; // LO_name
 	public String pm_product_id; // product_id
 	public String pm_PT_name; // PT_name
 	public String pm_PT_whoCanSelect_AFU; // PT_whoCanSelect_AFU
 	public String pm_PT_deadline; // PT_deadline
-	public String pm_location_id; // location_id
-	public String pm_LO_name; // LO_name
+	public String pm_product_id_promo; // product_id_promo
 	public String pm_deadline; // deadline
 	public String pm_json; // json
     
@@ -78,12 +80,14 @@ public class PmRCD_AF extends org.apache.struts.action.ActionForm {
 	Destino.setPm_coupon_id( getPm_coupon_id() ); // coupon_id
 	Destino.setPm_name( getPm_name() ); // name
 	Destino.setPm_uses_per_user( getPm_uses_per_user() ); // uses_per_user
+	Destino.setPm_places( getPm_places() ); // places
+	Destino.setPm_location_id( getPm_location_id() ); // location_id
+	Destino.setPm_LO_name( getPm_LO_name() ); // LO_name
 	Destino.setPm_product_id( getPm_product_id() ); // product_id
 	Destino.setPm_PT_name( getPm_PT_name() ); // PT_name
 	Destino.setPm_PT_whoCanSelect_AFU( getPm_PT_whoCanSelect_AFU() ); // PT_whoCanSelect_AFU
 	Destino.setPm_PT_deadline( getPm_PT_deadline() ); // PT_deadline
-	Destino.setPm_location_id( getPm_location_id() ); // location_id
-	Destino.setPm_LO_name( getPm_LO_name() ); // LO_name
+	Destino.setPm_product_id_promo( getPm_product_id_promo() ); // product_id_promo
 	Destino.setPm_deadline( getPm_deadline() ); // deadline
 	Destino.setPm_json( getPm_json() ); // json
     }
@@ -98,12 +102,14 @@ public class PmRCD_AF extends org.apache.struts.action.ActionForm {
 	setPm_coupon_id( Origen.getPm_coupon_id() ); // coupon_id
 	setPm_name( Origen.getPm_name() ); // name
 	setPm_uses_per_user( Origen.getPm_uses_per_user() ); // uses_per_user
+	setPm_places( Origen.getPm_places() ); // places
+	setPm_location_id( Origen.getPm_location_id() ); // location_id
+	setPm_LO_name( Origen.getPm_LO_name() ); // LO_name
 	setPm_product_id( Origen.getPm_product_id() ); // product_id
 	setPm_PT_name( Origen.getPm_PT_name() ); // PT_name
 	setPm_PT_whoCanSelect_AFU( Origen.getPm_PT_whoCanSelect_AFU() ); // PT_whoCanSelect_AFU
 	setPm_PT_deadline( Origen.getPm_PT_deadline() ); // PT_deadline
-	setPm_location_id( Origen.getPm_location_id() ); // location_id
-	setPm_LO_name( Origen.getPm_LO_name() ); // LO_name
+	setPm_product_id_promo( Origen.getPm_product_id_promo() ); // product_id_promo
 	setPm_deadline( Origen.getPm_deadline() ); // deadline
 	setPm_json( Origen.getPm_json() ); // json
     }
@@ -131,12 +137,14 @@ public class PmRCD_AF extends org.apache.struts.action.ActionForm {
 	setPm_coupon_id( Origen.getPm_coupon_id() ); // coupon_id
 	setPm_name( Origen.getPm_name() ); // name
 	setPm_uses_per_user( Origen.getPm_uses_per_user() ); // uses_per_user
+	setPm_places( Origen.getPm_places() ); // places
+	setPm_location_id( Origen.getPm_location_id() ); // location_id
+	setPm_LO_name( Origen.getPm_LO_name() ); // LO_name
 	setPm_product_id( Origen.getPm_product_id() ); // product_id
 	setPm_PT_name( Origen.getPm_PT_name() ); // PT_name
 	setPm_PT_whoCanSelect_AFU( Origen.getPm_PT_whoCanSelect_AFU() ); // PT_whoCanSelect_AFU
 	setPm_PT_deadline( Origen.getPm_PT_deadline() ); // PT_deadline
-	setPm_location_id( Origen.getPm_location_id() ); // location_id
-	setPm_LO_name( Origen.getPm_LO_name() ); // LO_name
+	setPm_product_id_promo( Origen.getPm_product_id_promo() ); // product_id_promo
 	setPm_deadline( Origen.getPm_deadline() ); // deadline
 	setPm_json( Origen.getPm_json() ); // json
     }
@@ -234,6 +242,21 @@ public class PmRCD_AF extends org.apache.struts.action.ActionForm {
 	/** Set uses_per_user*/
 	public void setPm_uses_per_user(long pm_uses_per_user) {this.pm_uses_per_user = pm_uses_per_user;}
 
+	/** Get places*/
+	public long getPm_places() {return pm_places;}
+	/** Set places*/
+	public void setPm_places(long pm_places) {this.pm_places = pm_places;}
+
+	/** Get location_id*/
+	public String getPm_location_id() {return pm_location_id;}
+	/** Set location_id*/
+	public void setPm_location_id(String pm_location_id) {this.pm_location_id = pm_location_id;}
+
+	/** Get LO_name*/
+	public String getPm_LO_name() {return pm_LO_name;}
+	/** Set LO_name*/
+	public void setPm_LO_name(String pm_LO_name) {this.pm_LO_name = pm_LO_name;}
+
 	/** Get product_id*/
 	public String getPm_product_id() {return pm_product_id;}
 	/** Set product_id*/
@@ -254,15 +277,10 @@ public class PmRCD_AF extends org.apache.struts.action.ActionForm {
 	/** Set PT_deadline*/
 	public void setPm_PT_deadline(String pm_PT_deadline) {this.pm_PT_deadline = pm_PT_deadline;}
 
-	/** Get location_id*/
-	public String getPm_location_id() {return pm_location_id;}
-	/** Set location_id*/
-	public void setPm_location_id(String pm_location_id) {this.pm_location_id = pm_location_id;}
-
-	/** Get LO_name*/
-	public String getPm_LO_name() {return pm_LO_name;}
-	/** Set LO_name*/
-	public void setPm_LO_name(String pm_LO_name) {this.pm_LO_name = pm_LO_name;}
+	/** Get product_id_promo*/
+	public String getPm_product_id_promo() {return pm_product_id_promo;}
+	/** Set product_id_promo*/
+	public void setPm_product_id_promo(String pm_product_id_promo) {this.pm_product_id_promo = pm_product_id_promo;}
 
 	/** Get deadline*/
 	public String getPm_deadline() {return pm_deadline;}

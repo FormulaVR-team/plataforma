@@ -91,12 +91,14 @@
 <th style="text-align: left;">coupon_id</th>
 <th style="text-align: left;">name</th>
 <th style="text-align: right;">uses_per_user</th>
+<th style="text-align: right;">places</th>
+<th style="text-align: left;">location_id</th>
+<th style="text-align: left;">LO_name</th>
 <th style="text-align: left;">product_id</th>
 <th style="text-align: left;">PT_name</th>
 <th style="text-align: left;">PT_whoCanSelect_AFU</th>
 <th style="text-align: left;">PT_deadline</th>
-<th style="text-align: left;">location_id</th>
-<th style="text-align: left;">LO_name</th>
+<th style="text-align: left;">product_id_promo</th>
 <th style="text-align: left;">deadline</th>
 <th style="text-align: left;">json</th>
 			</tr>
@@ -116,6 +118,12 @@
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_uses_per_user" maxlength="5" style="width: 35px; text-align: right;" onkeypress="return soloNumeros(event);" onclick="this.select();" />
 			</td>
+			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_places" maxlength="5" style="width: 35px; text-align: right;" onkeypress="return soloNumeros(event);" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_location_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_LO_name" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
 			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_product_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_PT_name" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
@@ -124,9 +132,7 @@
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_PT_deadline" maxlength="10" style="width: 70px; text-align: left;" onclick="this.select();" />
 			</td>
-			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_location_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
-			</td>
-			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_LO_name" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_product_id_promo" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="pm_filtro.pm_deadline" maxlength="10" style="width: 70px; text-align: left;" onclick="this.select();" />
 			</td>
@@ -160,12 +166,14 @@
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="pm_coupon_id"/>',30));</script><html:hidden name="grid" property="pm_coupon_id" indexed="true" />&nbsp;</td>   <!-- coupon_id -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="pm_name"/>',30));</script><html:hidden name="grid" property="pm_name" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- name -->
 <td style="text-align: right;">&nbsp;<bean:write name="grid" property="pm_uses_per_user"/><html:hidden name="grid" property="pm_uses_per_user" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- uses_per_user -->
+<td style="text-align: right;">&nbsp;<bean:write name="grid" property="pm_places"/><html:hidden name="grid" property="pm_places" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- places -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="pm_location_id"/>',30));</script><html:hidden name="grid" property="pm_location_id" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- location_id -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="pm_LO_name"/>',30));</script><html:hidden name="grid" property="pm_LO_name" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- LO_name -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="pm_product_id"/>',30));</script><html:hidden name="grid" property="pm_product_id" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- product_id -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="pm_PT_name"/>',30));</script><html:hidden name="grid" property="pm_PT_name" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- PT_name -->
 <td>&nbsp;<bean:write name="grid" property="pm_PT_whoCanSelect_AFU"/><html:hidden name="grid" property="pm_PT_whoCanSelect_AFU" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- PT_whoCanSelect_AFU -->
 <td>&nbsp;<bean:write name="grid" property="pm_PT_deadline"/><html:hidden name="grid" property="pm_PT_deadline" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- PT_deadline -->
-<td><script>document.write(recortarTexto('<bean:write name="grid" property="pm_location_id"/>',30));</script><html:hidden name="grid" property="pm_location_id" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- location_id -->
-<td><script>document.write(recortarTexto('<bean:write name="grid" property="pm_LO_name"/>',30));</script><html:hidden name="grid" property="pm_LO_name" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- LO_name -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="pm_product_id_promo"/>',30));</script><html:hidden name="grid" property="pm_product_id_promo" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- product_id_promo -->
 <td>&nbsp;<bean:write name="grid" property="pm_deadline"/><html:hidden name="grid" property="pm_deadline" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- deadline -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="pm_json"/>',30));</script><html:hidden name="grid" property="pm_json" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.pm_coupon_id}';" />&nbsp;</td>   <!-- json -->
 				</tr>

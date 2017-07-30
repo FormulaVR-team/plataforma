@@ -113,7 +113,7 @@ public class Reservas implements Serializable{
 		
 		////////////////////
 		// Reserva tiene tres claves de producto:
-		//		1. El principal seleccionado por el cliente
+		//		1. El principal seleccionado por el cliente (..o derivado del cupón si aparte del "producto descuent"o trae "producto de usuario" relleno)
 		//		2. El que pone el sistema automáticamente como promoción automática. (Descuentos por volumen, etc...)
 		//		3. El derivado de un cupón introducido por el usuario en la reserva.
 		////////////////////
@@ -126,10 +126,10 @@ public class Reservas implements Serializable{
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
 		//////////////
-		// ¿hAY CUPÓN?
+		// ¿HAY CUPÓN?
 		if ( reg_rs.getRs_coupon_id() != null && reg_rs.getRs_coupon_id().trim().length() > 0 ) {
 			PmBean reg_pm = Subrutinas.getPmFromId(dataBase, reg_rs.getRs_coupon_id());
-			if ( reg_pm != null && reg_pm.getPm_product_id() != null && reg_pm.getPm_product_id().trim().length() > 0 ) {
+			if ( reg_pm != null && reg_pm.getPm_product_id_promo() != null && reg_pm.getPm_product_id_promo().trim().length() > 0 ) {
 				// ¿vigente?
 				try {
 					ahora = Subrutinas.parse_long( Subrutinas.getDateAuditoria() );
@@ -138,7 +138,19 @@ public class Reservas implements Serializable{
 						// ¿Lo ha usado menos veces que las permitidas?
 						RsBean[] lista = Subrutinas.getRsFromUs(dataBase, reg_rs.getRs_user_id(), reg_rs.getRs_coupon_id(), true);
 						if ( lista == null || reg_pm.getPm_uses_per_user() > lista.length ) {
-							reg_rs.setRs_product_id3( reg_pm.getPm_product_id() );
+
+							///////////////////
+							if ( reg_pm.getPm_product_id() != null && reg_pm.getPm_product_id().trim().length() > 0 ) {
+								// Si solo se puede aplicar a un producto, se inserta el producto como si lo hubiera metido el usuario:
+								reg_rs.setRs_product_id( reg_pm.getPm_product_id() );
+							}
+							if ( reg_pm.getPm_places() > 0L ) {
+								// Si se quiere limitar las cabinas a usar, se especifica en el cupón:
+								reg_rs.setRs_places( reg_pm.getPm_places() );
+							}
+							reg_rs.setRs_product_id3( reg_pm.getPm_product_id_promo() );
+							///////////////////
+
 						}
 					}
 				} catch (ParseException e) {;}

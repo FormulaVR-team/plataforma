@@ -98,6 +98,27 @@
 		</div>
 
 		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">places&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="5" styleId="textinput" styleClass="form-control" property="pm_places"  style="text-align: right; width: 35px;" onkeypress="return soloNumeros(event);"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">location_id&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="50" styleId="textinput" styleClass="form-control" property="pm_location_id"  style="width: 350px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">LO_name&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="pm_LO_name"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
 			<label class="col-sm-3 control-label" for="textinput">product_id&nbsp;</label>
 			<div class="col-sm-9">
 				<html:text maxlength="50" styleId="textinput" styleClass="form-control" property="pm_product_id"  style="width: 350px;"/>
@@ -126,16 +147,9 @@
 		</div>
 
 		<div class='form-group'>
-			<label class="col-sm-3 control-label" for="textinput">location_id&nbsp;</label>
+			<label class="col-sm-3 control-label" for="textinput">product_id_promo&nbsp;</label>
 			<div class="col-sm-9">
-				<html:text maxlength="50" styleId="textinput" styleClass="form-control" property="pm_location_id"  style="width: 350px;"/>
-			</div>
-		</div>
-
-		<div class='form-group'>
-			<label class="col-sm-3 control-label" for="textinput">LO_name&nbsp;</label>
-			<div class="col-sm-9">
-				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="pm_LO_name"  disabled="true" style="width: 700px;"/>
+				<html:text maxlength="50" styleId="textinput" styleClass="form-control" property="pm_product_id_promo"  style="width: 350px;"/>
 			</div>
 		</div>
 
@@ -183,12 +197,14 @@
 	     <html:hidden property="pm_coupon_id"/> <!-- coupon_id -->
 	<!-- <html:hidden property="pm_name"/> name -->
 	<!-- <html:hidden property="pm_uses_per_user"/> uses_per_user -->
+	<!-- <html:hidden property="pm_places"/> places -->
+	<!-- <html:hidden property="pm_location_id"/> location_id -->
+	     <html:hidden property="pm_LO_name"/> <!-- LO_name -->
 	<!-- <html:hidden property="pm_product_id"/> product_id -->
 	     <html:hidden property="pm_PT_name"/> <!-- PT_name -->
 	     <html:hidden property="pm_PT_whoCanSelect_AFU"/> <!-- PT_whoCanSelect_AFU -->
 	     <html:hidden property="pm_PT_deadline"/> <!-- PT_deadline -->
-	<!-- <html:hidden property="pm_location_id"/> location_id -->
-	     <html:hidden property="pm_LO_name"/> <!-- LO_name -->
+	<!-- <html:hidden property="pm_product_id_promo"/> product_id_promo -->
 	<!-- <html:hidden property="pm_deadline"/> deadline -->
 	<!-- <html:hidden property="pm_json"/> json -->
 

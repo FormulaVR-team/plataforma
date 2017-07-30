@@ -78,6 +78,22 @@ angular
 		 		                data: actionForm
 				            }).then ( function( response) { return response; });
 		        		}
+		        	  , marcarTodo: function(actionForm){
+		        			actionForm.opcionPantalla = "MarcarTodo";
+		        			return $http({
+				                url: './PmDSPFIL_A.do',
+		 		                method: 'POST',
+		 		                data: actionForm
+				            }).then ( function( response) { return response; });
+		        		}
+		        	  , marcados_suprimir: function(actionForm){
+		        			actionForm.opcionPantalla = "Borrar";
+		        			return $http({
+				                url: './PmDSPFIL_A.do',
+		 		                method: 'POST',
+		 		                data: actionForm
+				            }).then ( function( response) { return response; });
+		        		}
 			        };
 		      }
 	

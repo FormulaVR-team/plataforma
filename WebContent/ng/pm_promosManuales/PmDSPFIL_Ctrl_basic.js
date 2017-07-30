@@ -59,12 +59,14 @@ angular
 								, pm_coupon_id: "" // coupon_id
 								, pm_name: "" // name
 								, pm_uses_per_user: "" // uses_per_user
+								, pm_places: "" // places
+								, pm_location_id: "" // location_id
+								, pm_LO_name: "" // LO_name
 								, pm_product_id: "" // product_id
 								, pm_PT_name: "" // PT_name
 								, pm_PT_whoCanSelect_AFU: "" // PT_whoCanSelect_AFU
 								, pm_PT_deadline: "" // PT_deadline
-								, pm_location_id: "" // location_id
-								, pm_LO_name: "" // LO_name
+								, pm_product_id_promo: "" // product_id_promo
 								, pm_deadline: "" // deadline
 								, pm_json: "" // json						
 							}
@@ -77,12 +79,14 @@ angular
 								, pm_coupon_id: "" // coupon_id
 								, pm_name: "" // name
 								, pm_uses_per_user: "" // uses_per_user
+								, pm_places: "" // places
+								, pm_location_id: "" // location_id
+								, pm_LO_name: "" // LO_name
 								, pm_product_id: "" // product_id
 								, pm_PT_name: "" // PT_name
 								, pm_PT_whoCanSelect_AFU: "" // PT_whoCanSelect_AFU
 								, pm_PT_deadline: "" // PT_deadline
-								, pm_location_id: "" // location_id
-								, pm_LO_name: "" // LO_name
+								, pm_product_id_promo: "" // product_id_promo
 								, pm_deadline: "" // deadline
 								, pm_json: "" // json						
 							/////////////////////////////////////////////////
@@ -297,12 +301,14 @@ angular
 						$scope.actionForm.pm_coupon_id = reg.pm_coupon_id; // coupon_id
 						$scope.actionForm.pm_name = reg.pm_name; // name
 						$scope.actionForm.pm_uses_per_user = reg.pm_uses_per_user; // uses_per_user
+						$scope.actionForm.pm_places = reg.pm_places; // places
+						$scope.actionForm.pm_location_id = reg.pm_location_id; // location_id
+						$scope.actionForm.pm_LO_name = reg.pm_LO_name; // LO_name
 						$scope.actionForm.pm_product_id = reg.pm_product_id; // product_id
 						$scope.actionForm.pm_PT_name = reg.pm_PT_name; // PT_name
 						$scope.actionForm.pm_PT_whoCanSelect_AFU = reg.pm_PT_whoCanSelect_AFU; // PT_whoCanSelect_AFU
 						$scope.actionForm.pm_PT_deadline = reg.pm_PT_deadline; // PT_deadline
-						$scope.actionForm.pm_location_id = reg.pm_location_id; // location_id
-						$scope.actionForm.pm_LO_name = reg.pm_LO_name; // LO_name
+						$scope.actionForm.pm_product_id_promo = reg.pm_product_id_promo; // product_id_promo
 						$scope.actionForm.pm_deadline = reg.pm_deadline; // deadline
 						$scope.actionForm.pm_json = reg.pm_json; // json						
 					};
@@ -321,15 +327,73 @@ angular
 						$scope.actionForm.pm_coupon_id = ""; // coupon_id
 						$scope.actionForm.pm_name = ""; // name
 						$scope.actionForm.pm_uses_per_user = ""; // uses_per_user
+						$scope.actionForm.pm_places = ""; // places
+						$scope.actionForm.pm_location_id = ""; // location_id
+						$scope.actionForm.pm_LO_name = ""; // LO_name
 						$scope.actionForm.pm_product_id = ""; // product_id
 						$scope.actionForm.pm_PT_name = ""; // PT_name
 						$scope.actionForm.pm_PT_whoCanSelect_AFU = ""; // PT_whoCanSelect_AFU
 						$scope.actionForm.pm_PT_deadline = ""; // PT_deadline
-						$scope.actionForm.pm_location_id = ""; // location_id
-						$scope.actionForm.pm_LO_name = ""; // LO_name
+						$scope.actionForm.pm_product_id_promo = ""; // product_id_promo
 						$scope.actionForm.pm_deadline = ""; // deadline
 						$scope.actionForm.pm_json = ""; // json						
 					};
+
+					$scope.marcarTodo = function() {
+
+						// Combos y auxiliares para componentes de presentación:
+						$scope.actionForm.filasGrid = $scope.aux_filasGrid.value;
+
+						PmDSPFIL_service
+						.marcarTodo($scope.actionForm)
+						.then(
+							function(response) {
+
+								if (response.data.rc === 'OK') {
+									var modelo = response.data.text;
+									moveModelToView( $scope, modelo );
+									for ( var i = 0; i < $scope.actionForm.clavesMarcadas.length; i++ ) {
+										$scope.actionForm.filasMarcadas[i] = true;
+									}
+								} else {
+									app_services.errorComun(response.data.text);
+								}
+
+							},
+							function(response) {
+								console.error("Ha sucedido un error: " + response.statusText);
+							});
+					};
+
+					$scope.desMarcarTodo = function() {
+						$scope.filtrar();
+					};
+
+					$scope.marcados_suprimir = function() {
+						if ( ! confirmar('Suprimir las filas marcadas, ¿está seguro?',this) ) { return; }
+
+						// Combos y auxiliares para componentes de presentación:
+						$scope.actionForm.filasGrid = $scope.aux_filasGrid.value;
+
+						PmDSPFIL_service
+						.marcados_suprimir($scope.actionForm)
+						.then(
+							function(response) {
+
+								if (response.data.rc === 'OK') {
+									var modelo = response.data.text;
+									moveModelToView( $scope, modelo );
+									$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
+								} else {
+									app_services.errorComun(response.data.text);
+								}
+
+							},
+							function(response) {
+								console.error("Ha sucedido un error: " + response.statusText);
+							});
+					};
+
 					
 	/////////////
 	/////////////
