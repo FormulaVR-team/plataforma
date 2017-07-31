@@ -16,6 +16,7 @@
 		<title>Logon</title>
 
 		<!-- ==================================== -->
+			<script src="./ng/_lib/jquery-1.11.3/jquery.min.js?fvrVer=${miVersion}"></script>
 		<!-- Angular --> 
 			<script src="./ng/_lib/ng/angular.min.js?fvrVer=${miVersion}"></script>
 			<script src="./ng/_lib/ng/angular-ui-router.min.js?fvrVer=${miVersion}"></script>
@@ -82,34 +83,54 @@
 				<form name="Logon_AF" action="./Logon_A.do" method="post" ng-submit="Logon_AF.$valid && submitForm(this)" >
 
 					<input type="hidden" name="opcionPantalla"/>
-					<input type="hidden" id="errmsg" value="<html:errors property="error"/>">
+					<input type="hidden" id="errmsg" value="<html:errors property="error"/>"/>
 
 					<section ng-hide="showRegister" style="background-color: transparent;">
 
 						<md-card>
 							<%-- <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out"> --%>
+
 							<md-card-title>
 								<md-card-title-text>
 									<picture style="text-align: center;">
 										<img class="brand-img" src="./resBS/img/formulavr.png" width="250" alt="Formula VR"/>
 									</picture> 
-									<h4>Reserva tu carrera</h4>
+									<h4>Introduce tu CORREO ELECTRÓNICO</h4>
+									<small style="min-height:20px;">{{ (logon_USR_1d2 + "@" + logon_USR_2d2)==="@"? "" : (logon_USR_1d2 + "@" + logon_USR_2d2) }}</small>
 								</md-card-title-text>
 							</md-card-title>
+
 							<md-card-content layout="column">
-								<md-input-container>
+								<%-- <md-input-container>
 									<label>Correo electrónico</label>
-									<input type="text" ng-model="logon_USR" required ng-pattern="/^.+@.+\..+$/" id="logon_USR" name="logon_USR" style="text-transform: lowercase;" onkeyup="pressEnter(event,'USR');">
+									<input type="text" ng-model="logon_USR" required ng-pattern="/^.+@.+\..+$/" id="logon_USR" name="logon_USR" style="text-transform: lowercase;" ng-keyup="detect_pressEnter($event,'USR');" />
+								</md-input-container> --%>
+								<div layout="row">
+									<md-input-container>
+										<label>Usuario</label>
+										<input type="text" auto-focus id="logon_USR_1d2" ng-model="logon_USR_1d2" style="text-transform: lowercase;" ng-keyup="detect_pressEnter($event,'goto_logon_USR_2d2');"/>
+									</md-input-container>
+									<h4>@</h4>
+									<md-input-container>
+										<label><small>...hotmail.es, gmail.com...</small></label>
+										<input type="text" id="logon_USR_2d2" ng-model="logon_USR_2d2" style="text-transform: lowercase;" ng-keyup="detect_pressEnter($event,'USR');"/>
+									</md-input-container>
+								</div>						
+								<md-input-container>
+									<input type="hidden" ng-model="logon_USR" id="logon_USR" name="logon_USR" /></br>
 								</md-input-container>
 							</md-card-content>
+
 							<md-card-actions layout="column">
-								<md-button class="md-raised md-primary" onclick="reservaExpress()">
+								<md-button class="md-raised md-primary" ng-click="reservaExpress()">
 									INICIAR
 									<!-- <md-tooltip>Reserva sin registrarte</md-tooltip> -->
 								</md-button>
 								<!-- <md-button class="md-primary" ng-click="showRegister = ! showRegister">Ya tengo cuenta</md-button> -->
 							</md-card-actions>
-							<md-card-content layout="column"><small>Recuerda que esta cuenta de correo la usaremos para todas las comunicaciones contigo, incluyendo las confirmaciones de pagos y reservas. Por favor, asegúrate de escribirla correctamente</small></md-card-content>
+
+							<md-card-content layout="column"><small>Recuerda que esta cuenta de correo la usaremos para todas las comunicaciones contigo.</br>Te mandaremos las <span style="color:blue;">confirmaciones de pago y reservas</span>.</br>Por favor, asegúrate de escribirla correctamente</small></md-card-content>
+
 						</md-card>
 								
 					</section>
@@ -118,6 +139,7 @@
 
 						<md-card>
 							<%-- <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out"> --%>
+
 							<md-card-title>
 								<md-card-title-text>
 								<picture style="text-align: center;">
@@ -126,37 +148,41 @@
 								<!-- <h4>Acceder a Formula VR</h4> -->
 								</md-card-title-text>
 							</md-card-title>
+
 							<md-card-content layout="column">
 								<md-input-container>
-											<label>Correo electrónico</label>
-											<input type="text" ng-model="logon_USR" required ng-pattern="/^.+@.+\..+$/" id="logon_USR" name="logon_USR" style="text-transform: lowercase;">
+										<label>Correo electrónico</label>
+										<input type="text" ng-model="logon_USR" required ng-pattern="/^.+@.+\..+$/" id="logon_USR" name="logon_USR" style="text-transform: lowercase;"/>
 								</md-input-container>
 								<div layout="row" layout-align="space-between start">
 									<md-input-container>
-											<label>Contraseña</label>
-												<input type="password" ng-model="logon_PWD" id="logon_PWD" name="logon_PWD" onkeyup="pressEnter(event,'PASS');">
+										<label>Contraseña</label>
+										<input type="password" auto-focus ng-model="logon_PWD" id="logon_PWD" name="logon_PWD" ng-keyup="detect_pressEnter($event,'PASS');"/>
 									</md-input-container>
 									<logic:present name="noPwd-button-ON">
-										<md-button class="md-raised md-warn" onclick="forgotPass()" style="font-size: 12px; text-transform: uppercase;">Pedir contraseña</md-button>
+										<md-button class="md-raised md-warn" ng-click="forgotPass()" style="font-size: 12px; text-transform: uppercase;">Pedir contraseña</md-button>
 									</logic:present>
 								</div>
 							</md-card-content>
+
+							<md-card-content layout="column">
 							<!-- <md-card-actions layout="column"> -->
-								<md-button class="md-raised md-primary" onclick="enter()">
+								<md-button class="md-raised md-primary" ng-click="submitForm()">
 									Acceder con contraseña
 									<md-tooltip>Entrar al sistema</md-tooltip>
 								</md-button>
 								<div style="padding-top: 10px;padding-bottom: 10px;">
 									<div style="display: inline-block;">
-										<md-button class="md-raised" onclick="forgotPass();" style="font-size: 12px;">Olvidé la contraseña</md-button>
+										<md-button class="md-raised" ng-click="forgotPass()" style="font-size: 12px;">Olvidé la contraseña</md-button>
 									</div>
 <%-- 								<div style="display: inline-block; float: right;">
-										<md-button class="md-primary" onclick="newUser()" style="font-size: 12px;">Crear nuevo usuario</md-button>
+										<md-button class="md-primary" ng-click="newUser()" style="font-size: 12px;">Crear nuevo usuario</md-button>
 									</div>									
-								</div>
 --%>
+								</div>
  							<!-- </md-card-actions> -->
 							</md-card-content>
+
 						</md-card>
 
 						<inpunt class="hide" type="submit" />
@@ -177,8 +203,21 @@
 					<%@include file="/script/mdThemingProvider.js"%>
 				}
 			)
-			.controller('AppCtrl', function($scope, $timeout, $mdSidenav, $mdToast) {
+ 			.directive('autoFocus', function($timeout) {
+			    return {
+			        restrict: 'A',
+			        link: function(_scope, _element) {
+			            $timeout(function(){
+			                _element[0].focus();
+			            }, 500);
+			        }
+			    };
+			})
+ 			.controller('AppCtrl', function($scope, $timeout, $mdSidenav, $mdToast) {
 				$scope.logon_USR = '${logon_USR}';
+
+				$scope.logon_USR_1d2 = $scope.logon_USR.split("@")[0];
+				$scope.logon_USR_2d2 = $scope.logon_USR.split("@")[1];
 
 				var errmsg = document.getElementById('errmsg').value;
 				if ( "" !== errmsg ) { 
@@ -191,6 +230,7 @@
 						;
 					$mdToast.show(myToast);
 				}
+
 				<logic:present name="panel-pwd-ON">
 					$scope.showRegister = ! $scope.showRegister;
 				</logic:present>
@@ -200,32 +240,51 @@
 					}
 				</logic:notPresent>
 
-				$scope.submitForm = function (formData) {
+				////////////////////
+				$scope.reservaExpress = function () { 
+					$scope.logon_USR = ($scope.logon_USR_1d2!=undefined?$scope.logon_USR_1d2:"") + "@" + ($scope.logon_USR_2d2!=undefined?$scope.logon_USR_2d2:"");
+					document.getElementsByName('logon_USR')[0].value=$scope.logon_USR;
+					document.getElementsByName('logon_USR')[1].value=$scope.logon_USR;
+					document.getElementsByName('opcionPantalla')[0].value='reservaExpress'; 
+					document.forms[0].submit(); 
+				}
+				$scope.forgotPass = function () { 
+					 if ( confirm('ENVIAREMOS UN CORREO A TU CUENTA.\n\nPor favor sigue las instrucciones que contiene.\n') ) {
+						 document.getElementsByName('opcionPantalla')[0].value='forgotPass'; 
+						 document.forms[0].submit();
+					} 				
+				}
+				$scope.newUser = function () { 
+					document.getElementsByName('opcionPantalla')[0].value='newUser'; document.forms[0].submit();
+				}
+				$scope.submitForm = function () { 
+					$scope.logon_USR = ($scope.logon_USR_1d2!=undefined?$scope.logon_USR_1d2:"") + "@" + ($scope.logon_USR_2d2!=undefined?$scope.logon_USR_2d2:"");
+					document.getElementsByName('logon_USR')[0].value=$scope.logon_USR;
+					document.getElementsByName('logon_USR')[1].value=$scope.logon_USR;
+					document.getElementsByName('opcionPantalla')[0].value='ENTER';
 					document.getElementsByName('logon_PWD')[0].value=md5Obj.md5(document.getElementsByName('logon_PWD')[0].value);
-				};		
+					document.forms[0].submit();
+				}
+				$scope.detect_pressEnter = function (e,id) {
+					e.preventDefault();
+					e.stopPropagation();
+					(e.keyCode)?k=e.keyCode:k=e.which;
+					if(k==13) {
+						if ( id === "USR" )	$scope.reservaExpress();
+						else if ( id === 'PASS') $scope.submitForm();
+						else if ( id === 'goto_logon_USR_2d2') {
+							 $timeout(function() {
+								    $('#logon_USR_2d2').trigger('focus');
+							}, 0);
+						}
+					}
+				}
+				////////////////////
 
 			}
 			);
 
-		function forgotPass() { if ( confirm('ENVIAREMOS UN CORREO A TU CUENTA.\n\nPor favor sigue las instrucciones que contiene.\n') ) {document.getElementsByName('opcionPantalla')[0].value='forgotPass'; document.forms[0].submit();} }
-		function newUser() { document.getElementsByName('opcionPantalla')[0].value='newUser'; document.forms[0].submit(); }
-		function enter() { 
-			document.getElementsByName('opcionPantalla')[0].value='ENTER';
-			document.getElementsByName('logon_PWD')[0].value=md5Obj.md5(document.getElementsByName('logon_PWD')[0].value);
-			document.forms[0].submit();
-		}
-		function reservaExpress() { document.getElementsByName('opcionPantalla')[0].value='reservaExpress'; document.forms[0].submit(); }
-
-		function pressEnter(e,id){
-			e.preventDefault();
-			e.stopPropagation();
-			(e.keyCode)?k=e.keyCode:k=e.which;
-			if(k==13) {
-				if ( id === "USR" )	reservaExpress();
-				else if ( id === 'PASS') enter();
-			}
-		}
-
 	</script>
+
 	</body>
 </html>

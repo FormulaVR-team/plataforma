@@ -26,14 +26,22 @@ import java.nio.file.StandardCopyOption;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
+import javax.naming.NamingException;
+import javax.naming.directory.Attribute;
+import javax.naming.directory.Attributes;
+import javax.naming.directory.DirContext;
+import javax.naming.directory.InitialDirContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -1144,6 +1152,112 @@ public class Subrutinas {
 		return;
 	}
 
+	public static boolean isEmailCreible( final String email ) {
+		// Para evaluar cuentas de correo, por ejemplo:
+		// 		eestecha@gmail.com => gmail.com
+		
+		if ( email == null || email.trim().length() < 1 ) { return false; }
+		
+		String trozos[] = email.split("@");
+		if ( trozos == null || trozos.length != 2 ) { return false; }
+		if ( trozos[0] == null || trozos[0].trim().length() < 1 ) { return false; }
+		if ( trozos[1] == null || trozos[1].trim().length() < 1 ) { return false; }
+
+		return isDominioCorrecto( trozos[1] );
+	}
+	public static boolean isDominioCorrecto( final String dominio ) {
+		// Para evaluar cuentas de correo, por ejemplo:
+		// 		eestecha@gmail.com => gmail.com
+		boolean resultado = false;
+
+		if ( dominio != null && dominio.trim().length() > 0 ) {
+			try {
+				InetAddress inet = InetAddress.getByName( dominio );
+				if ( inet != null ) {
+					resultado = true;
+				}
+			} catch (UnknownHostException e) {
+//				e.printStackTrace();
+				System.err.println("*** ERROR en check dominio(1d2) - InetAddress.getByName('" + dominio +"'): " + e.getMessage());
+			}
+		}
+		
+		if ( ! resultado ) {
+			try {
+				String[] listaHostsMX = lookupMailHosts(dominio);
+				if ( listaHostsMX != null && listaHostsMX.length > 0 ) {
+					resultado = true;
+				}
+			} catch (NamingException e) {
+//				e.printStackTrace();
+				System.err.println("*** ERROR en check dominio(2d2) - lookupMailHosts('" + dominio +"'): " + e.getMessage());
+			}
+		}
+		
+// INTERCEPTADO !!!!! BASURA !!!!!!! INCUBATE !!!!!
+//		resultado = true;
+
+		return resultado;
+	}
+	public static String[] lookupMailHosts( final String domainName) throws NamingException {
+        // see: RFC 974 - Mail routing and the domain system
+        // see: RFC 1034 - Domain names - concepts and facilities
+        // see: http://java.sun.com/j2se/1.5.0/docs/guide/jndi/jndi-dns.html
+        //    - DNS Service Provider for the Java Naming Directory Interface (JNDI)
+		
+//        // get the default initial Directory Context
+//        InitialDirContext iDirC = new InitialDirContext();
+//        // get the MX records from the default DNS directory service provider
+//        //    NamingException thrown if no DNS record found for domainName
+//        Attributes attributes = iDirC.getAttributes("dns:/" + domainName, new String[] {"MX"});
+
+		////////////////
+		// Retocado por EED porque el código anterior no funcionaba en GlassFish, solo iba en TomCat:
+		Hashtable<String,String> env = new Hashtable<String,String>();
+		env.put("java.naming.factory.initial", "com.sun.jndi.dns.DnsContextFactory");
+		env.put("java.naming.provider.url",    "dns://8.8.8.8");	// Google "anticensura" (Don´t be evil)
+		////////////////
+
+		DirContext ictx = new InitialDirContext(env);
+		Attributes attributes = ictx.getAttributes( domainName, new String[] {"MX"});
+        // attributeMX is an attribute ('list') of the Mail Exchange(MX) Resource Records(RR)
+        Attribute attributeMX = attributes.get("MX");
+
+        // if there are no MX RRs then default to domainName (see: RFC 974)
+        if (attributeMX == null) {
+//            return (new String[] {domainName});
+            return null;
+        }
+
+        // split MX RRs into Preference Values(pvhn[0]) and Host Names(pvhn[1])
+        String[][] pvhn = new String[attributeMX.size()][2];
+        for (int i = 0; i < attributeMX.size(); i++) {
+            pvhn[i] = ("" + attributeMX.get(i)).split("\\s+");
+        }
+
+        // sort the MX RRs by RR value (lower is preferred)
+        Arrays.sort(
+		        		pvhn, new Comparator<String[]>() {
+			                public int compare(String[] o1, String[] o2) {
+			                    return (Integer.parseInt(o1[0]) - Integer.parseInt(o2[0]));
+			                }
+		        		}
+        			);
+
+        // put sorted host names in an array, get rid of any trailing '.' 
+        String[] sortedHostNames = new String[pvhn.length];
+        for (int i = 0; i < pvhn.length; i++) {
+            sortedHostNames[i] = pvhn[i][1].endsWith(".") ? 
+                pvhn[i][1].substring(0, pvhn[i][1].length() - 1) : pvhn[i][1];
+        }
+        
+        for( String item : sortedHostNames ) {
+        	System.out.println( "Subrutinas.lookupMailHosts( " + domainName + " ) -> " + item );
+        }
+        
+        return sortedHostNames;
+    }	
+
 	public static String macroSustituye( String losDatos, String patron, String valor ) {
         String pre, pos;
         for (int ix = losDatos.indexOf(patron);ix>-1;ix=losDatos.indexOf(patron)) {
@@ -1790,8 +1904,6 @@ public class Subrutinas {
 		return resultado;
 	}
 
-	
-	
 	//////////////////////
 
 }

@@ -39,12 +39,18 @@ public class Logon_A extends Action {
         if ( pantalla.getLogon_USR() != null ) { pantalla.setLogon_USR( pantalla.getLogon_USR().toLowerCase().trim() ); }
         
         /////////////////////////////////////////////////
-        // Acciones en 'opcionPantalla':
-        //		'newUser'			Nuevo registro. Requiere		logon_USR
-        //		'forgotPass'		Recordar password. Requiere		logon_USR
-        //		'ENTER'				Login. Requiere					logon_USR, logon_PWD
+        // Acciones en 'opcionPantalla':							REQUIERE
+        //															======================
+        //		'newUser'			Nuevo registro.					logon_USR
+        //		'forgotPass'		Recordar password.				logon_USR
+        //		'reservaExpress'	Autocrea usuario sin pwd.		logon_USR
+        //		'ENTER'				Login.							logon_USR, logon_PWD
         /////////////////////////////////////////////////
         if ( pantalla != null && pantalla.getOpcionPantalla() != null && pantalla.getOpcionPantalla().trim().length() > 0 ) {
+        	if ( ! Subrutinas.isEmailCreible( pantalla.getLogon_USR() ) ) {
+                errores.add("error", new ActionMessage( "errors.detail", "El correo '" + pantalla.getLogon_USR() + "' no se considera válido para el sistema." ));
+	            saveErrors(request,errores);
+        	} else {
 ////////////////////////////////
         	if ( "newUser".equals(pantalla.getOpcionPantalla() ) ) {
 				if ( pantalla.getLogon_USR().trim().length() < 1 ) {
@@ -121,7 +127,8 @@ public class Logon_A extends Action {
 
         	}
 ////////////////////////////////
-        } 
+        	}
+    	};
         /////////////////////////////////////////////////
         // Para que permanezca en pantalla el user_id:
         request.setAttribute("logon_USR", pantalla.getLogon_USR());

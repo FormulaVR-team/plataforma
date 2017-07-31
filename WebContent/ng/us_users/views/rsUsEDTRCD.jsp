@@ -62,20 +62,11 @@
 						</md-input-container>
 		     			</div>  			
 		     			<div class="col-xs-12 col-sm-6 col-md-4">
-		     			<!-- Selector PAIS -->
-						<md-input-container class="md-block input-md">
-							<label>Cambiar país</label>
-							<md-select placeholder="Cambiar país" ng-model="aux_us_country_id" md-on-open="country_id_onOpen()" ng-model-options="{trackBy: '$value.value'}" required>
-								<md-optgroup label="Paises">
-									<md-option ng-value="item" ng-repeat="item in lst_ps">
-										<img width="40px" ng-src="{{item.flag}}" ><img>
-										&nbsp;{{item.displayName}}
-									</md-option>
-								</md-optgroup>			
-							</md-select>
-			    		</md-input-container>
-			    		<!-- Selector PAIS fin -->
-		     			</div>		
+		     			<md-input-container class="md-block input-md">
+							<!-- <label>País actual</label> -->
+			     			<span style="font-size: 16px;"><img src="{{actionForm.us_PS_flag_base64}}" ></img>&nbsp;&nbsp;&nbsp;{{actionForm.us_PS_name}}</span>
+						</md-input-container>
+		     			</div>	
 		     		</div>
 		
 		     		<div class="row">
@@ -97,11 +88,20 @@
 						</md-input-container>
 		     			</div>	
 		     			<div class="col-xs-12 col-sm-6 col-md-4">
-		     			<md-input-container class="md-block input-md">
-							<!-- <label>País actual</label> -->
-			     			<span><img src="{{actionForm.us_PS_flag_base64}}" ></img>&nbsp;{{actionForm.us_PS_name}}</span>
-						</md-input-container>
-		     			</div>	
+		     			<!-- Selector PAIS -->
+						<md-input-container class="md-block input-md">
+							<label>Cambiar país</label>
+							<md-select placeholder="Cambiar país" ng-model="aux_us_country_id" md-on-open="country_id_onOpen()" ng-model-options="{trackBy: '$value.value'}" required>
+								<md-optgroup label="Paises">
+									<md-option ng-value="item" ng-repeat="item in lst_ps">
+										<img width="40px" ng-src="{{item.flag}}" ><img>
+										&nbsp;{{item.displayName}}
+									</md-option>
+								</md-optgroup>			
+							</md-select>
+			    		</md-input-container>
+			    		<!-- Selector PAIS fin -->
+		     			</div>		
 		     		</div>
 		
 		     		<div class="row">
