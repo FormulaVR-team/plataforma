@@ -22,8 +22,10 @@ SET search_path = "FormulaVR", pg_catalog;
 --
 
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'VERSION', '17164');
+INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'MG_URL', 'https://driver.formulavr.net/');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'RS_LAST_KEY', '11840001');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'DOMAIN', 'formulavr.net');
+INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'URL_WEB_PAGE', 'http://localhost:8080/FormulaVR/');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'SMTP_HOST_NAME', 'smtp.formulavr.net');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'SMTP_AUTH_USER', 'glsmtp');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'SMTP_AUTH_PWD', 'F0rmula.vr');
@@ -50,10 +52,10 @@ INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'S
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'TPV_LaCaixa_Ds_Merchant_MerchantCode', '343583191');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'TPV_LaCaixa_Ds_Merchant_Terminal', '1');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'TPV_LaCaixa_Ds_Merchant_Currency', '978');
+INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'TPV_LaCaixa_claveCifrado', 'sq7HjrUOBfKmC576ILgskD5srU870gJ7');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'TPV_LaCaixa_tipoCifrado', 'SHA256');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'TPV_LaCaixa_version', 'HMAC_SHA256_V1');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'TPV_LaCaixa_URL', 'https://sis-t.redsys.es:25443/sis/realizarPago');
-INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'TPV_LaCaixa_claveCifrado', 'sq7HjrUOBfKmC576ILgskD5srU870gJ7');
 
 
 -- Completed on 2017-07-10 12:42:28

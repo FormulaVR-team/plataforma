@@ -13,6 +13,6 @@ $mdThemingProvider
 	.theme('default')
 	.primaryPalette('fvrRed',{'default': '500'})
 	.accentPalette('light-blue',{'default': '500'})
-	.warnPalette('orange',{'default': '500'})
+	.warnPalette('orange',{'default': '200'})
 	.backgroundPalette('grey')
 	;

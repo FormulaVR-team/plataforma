@@ -75,7 +75,7 @@ public class Logon_A extends Action {
 					// Existe ese usuario ya?
 					UsBean reg_us = Subrutinas.getUsFromId(dataBase, pantalla.getLogon_USR());
 					if ( reg_us != null && reg_us.getUs_sincro() != null && reg_us.getUs_sincro().trim().length() > 0) {
-			            errores.add("error", new ActionMessage( "errors.detail", "Ese eMail ya se usó en el sistema, solicita ahora una contraseña si todavía no la tienes." ));
+//			            errores.add("error", new ActionMessage( "errors.detail", "Ese eMail ya se usó en el sistema, solicita ahora una contraseña si todavía no la tienes." ));
 			            request.setAttribute("panel-pwd-ON", "panel-pwd-ON");
 			            request.setAttribute("noPwd-button-ON", "noPwd-button-ON");
 			            saveErrors(request,errores);
