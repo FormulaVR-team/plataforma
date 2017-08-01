@@ -243,7 +243,7 @@ angular
 									if (response.rc === 'OK') { 
 										$scope.lst_ocupacion = response.text.ocupacion;
 									} else { 
-										alert( "ERROR: " + response.text); }
+										app_services.errorComun( "ERROR: " + response.text); }
 									}
 								,function(response) { 
 									console.error("Ha sucedido un error: " + response.statusText); 
@@ -295,7 +295,7 @@ angular
 									var modelo = response.data.text;
 									moveModelToView( $scope, modelo );
 								} else {
-									alert( response.data.text );
+									app_services.errorComun( response.data.text );
 								}
 
 							},
@@ -304,8 +304,8 @@ angular
 							});
 
 				    // Combos y auxiliares para componentes de presentación:
-					app_services.lo_lst().then( function(response) {if (response.rc === 'OK') { $scope.lst_lo = response.text;} else { alert( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
-					app_services.pt_lst($scope.actionForm.logon_USR,$scope.actionForm.logon_HSH).then( function(response) {if (response.rc === 'OK') { $scope.lst_pt = response.text;} else { alert( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+					app_services.lo_lst().then( function(response) {if (response.rc === 'OK') { $scope.lst_lo = response.text;} else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+					app_services.pt_lst($scope.actionForm.logon_USR,$scope.actionForm.logon_HSH).then( function(response) {if (response.rc === 'OK') { $scope.lst_pt = response.text;} else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
 
 					///////////////////////////////////////////////////////////////////////
 					///////////////////////////////////////////////////////////////////////
@@ -345,7 +345,7 @@ angular
 									var modelo = response.data.text;
 									moveModelToView( $scope, modelo );
 								} else {
-									alert( response.data.text );
+									app_services.errorComun( response.data.text );
 								}
 
 							},
@@ -386,7 +386,7 @@ angular
 									var modelo = response.data.text;
 									moveModelToView( $scope, modelo );
 								} else {
-									alert( response.data.text );
+									app_services.errorComun( response.data.text );
 								}
 
 							},
@@ -406,7 +406,7 @@ angular
 									var modelo = response.data.text;
 									moveModelToView( $scope, modelo );
 								} else {
-									alert( response.data.text );
+									app_services.errorComun( response.data.text );
 								}
 
 							},
@@ -427,7 +427,7 @@ angular
 									var modelo = response.data.text;
 									moveModelToView( $scope, modelo );
 								} else {
-									alert( response.data.text );
+									app_services.errorComun( response.data.text );
 								}
 
 							},
@@ -629,7 +629,7 @@ angular
 											window.location = response.data.text.rs_note; 
 											/////////////
 										} else {
-											alert( response.data.text );
+											app_services.errorComun( response.data.text );
 										}
 	
 									},
@@ -668,7 +668,7 @@ angular
 											tpv_submitForm( response.data.text );
 											/////////////
 										} else {
-											alert( response.data.text );
+											app_services.errorComun( response.data.text );
 										}
 	
 									},
@@ -702,7 +702,7 @@ angular
 											$("#rsDSPFIL_ADDRCD_modal").modal("hide");
 											$scope.filtrar();
 										} else {
-											alert( response.data.text );
+											app_services.errorComun( response.data.text );
 										}
 	
 									},
@@ -742,7 +742,7 @@ angular
 											// $state.reload();
 											$scope.goRow( $scope.actionForm.filaInicioGrid );
 										} else {
-											alert( response.data.text );
+											app_services.errorComun( response.data.text );
 										}
 	
 									},
@@ -770,7 +770,7 @@ angular
 											// $state.reload();
 											$scope.goRow( $scope.actionForm.filaInicioGrid );
 										} else {
-											alert( response.data.text );
+											app_services.errorComun( response.data.text );
 										}
 	
 									},
@@ -819,7 +819,7 @@ angular
 
 										} else {
 											app_services.showAlert(response.data.text, 'Por favor, revise los campos del formulario', 'OK' );
-											//alert( response.data.text );
+											//app_services.errorComun( response.data.text );
 										}
 	
 									},
@@ -834,15 +834,15 @@ angular
 					// Eventos de "location_id":
 					$scope.location_id_onOpen = function() {
 						$scope.lst_lo = null;
-						app_services.lo_lst().then( function(response) {if (response.rc === 'OK') { $scope.lst_lo = response.text;} else { alert( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+						app_services.lo_lst().then( function(response) {if (response.rc === 'OK') { $scope.lst_lo = response.text;} else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
 					}
 					$scope.location_id_onClose = function() {
 						$scope.aux_rs_start_time = {value: "", displayName: ""};
 						var location_id = $scope.aux_rs_location_id.value; 
 						if ( location_id != undefined && location_id.length  > 0) {
 						    // Combos dependientes de cambio en location:
-							app_services.tt_lst(location_id,"NORMAL","N").then( function(response) { if (response.rc === 'OK') { $scope.lst_tt = response.text; } else { alert( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
-							app_services.cp_lst(location_id,"N").then( function(response) { if (response.rc === 'OK') { $scope.lst_cp = response.text; } else { alert( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+							app_services.tt_lst(location_id,"NORMAL","N").then( function(response) { if (response.rc === 'OK') { $scope.lst_tt = response.text; } else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+							app_services.cp_lst(location_id,"N").then( function(response) { if (response.rc === 'OK') { $scope.lst_cp = response.text; } else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
 						}
 						sincro_ocupacion();
 					}
@@ -892,7 +892,7 @@ angular
 	//////////
 										
 										} else { 
-											alert( "ERROR: " + response.text); }
+											app_services.errorComun( "ERROR: " + response.text); }
 										}
 										,function(response) { 
 											console.error("Ha sucedido un error: " + response.statusText); 
