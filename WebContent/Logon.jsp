@@ -73,7 +73,7 @@
 		})(document);
 		smartlook('init', '887d25f46d8f8b78b6eaf272a8303a326331a1bb');
 	</script>
-	
+
 	</head>
 	<body layout="column" flex ng-controller="AppCtrl" ng-app="theNgApp" ng-cloak="" style="">
 		<%-- <bean:message key="menu.client.title"/> --%>
@@ -107,13 +107,13 @@
 								</md-input-container> --%>
 								<div layout="row">
 									<md-input-container>
-										<label>Usuario</label>
-										<input type="text" auto-focus id="logon_USR_1d2" ng-model="logon_USR_1d2" style="text-transform: lowercase;" ng-keyup="detect_pressEnter($event,'goto_logon_USR_2d2');"/>
+										<label>Cuenta</label>
+										<input type="text" auto-focus id="logon_USR_1d2" ng-model="logon_USR_1d2" style="text-transform: lowercase; text-align: right;" onclick="this.select();" ng-keyup="detect_pressEnter($event,'goto_logon_USR_2d2');"/>
 									</md-input-container>
-									<h4>@</h4>
+									<h3>&nbsp;@&nbsp;</h3>
 									<md-input-container>
 										<label><small>...hotmail.es, gmail.com...</small></label>
-										<input type="text" id="logon_USR_2d2" ng-model="logon_USR_2d2" style="text-transform: lowercase;" ng-keyup="detect_pressEnter($event,'USR');"/>
+										<input type="text" id="logon_USR_2d2" ng-model="logon_USR_2d2" style="text-transform: lowercase;" onclick="this.select();" ng-keyup="detect_pressEnter($event,'USR');"/>
 									</md-input-container>
 								</div>						
 								<md-input-container>
@@ -150,17 +150,21 @@
 							</md-card-title>
 
 							<md-card-content layout="column">
-								<md-input-container>
-										<label>Correo electrónico</label>
-										<input type="text" ng-model="logon_USR" required ng-pattern="/^.+@.+\..+$/" id="logon_USR" name="logon_USR" style="text-transform: lowercase;"/>
-								</md-input-container>
-								<div layout="row" layout-align="space-between start">
+								<div layout="row" layout-align="start start">
+									<md-button class="md-fab md-mini" ng-click="swapScreen()" title="Cambiar de usuario"><md-icon>arrow_back</md-icon></md-button>
+									<md-input-container>
+											<label>Correo electrónico</label>
+											<input type="text" ng-model="logon_USR" required readonly="readonly" ng-pattern="/^.+@.+\..+$/" id="logon_USR" name="logon_USR" style="text-transform: lowercase;"/>
+									</md-input-container>
+								</div>
+								<div layout="row" layout-align="start start">
+									<md-button class="md-fab md-mini" ng-click="forgotPass()" title="La he olvidado"><md-icon>help_outline</md-icon></md-button>
 									<md-input-container>
 										<label>Contraseña</label>
-										<input type="password" auto-focus ng-model="logon_PWD" id="logon_PWD" name="logon_PWD" ng-keyup="detect_pressEnter($event,'PASS');"/>
+										<input type="password" auto-focus ng-model="logon_PWD" id="logon_PWD" name="logon_PWD" onclick="this.select();" ng-keyup="detect_pressEnter($event,'PASS');"/>
 									</md-input-container>
 									<logic:present name="noPwd-button-ON">
-										<md-button class="md-raised md-warn" ng-click="forgotPass()" style="font-size: 12px; text-transform: uppercase;">Pedir contraseña</md-button>
+										<md-button class="md-raised md-warn" ng-click="forgotPass()" style="font-size: 12px; text-transform: uppercase;">NUEVA !</md-button>
 									</logic:present>
 								</div>
 							</md-card-content>
@@ -171,15 +175,15 @@
 									Acceder con contraseña
 									<md-tooltip>Entrar al sistema</md-tooltip>
 								</md-button>
-								<div style="padding-top: 10px;padding-bottom: 10px;">
+<%--							<div style="padding-top: 10px;padding-bottom: 10px;">
 									<div style="display: inline-block;">
 										<md-button class="md-raised" ng-click="forgotPass()" style="font-size: 12px;">Olvidé la contraseña</md-button>
 									</div>
-<%-- 								<div style="display: inline-block; float: right;">
-										<md-button class="md-primary" ng-click="newUser()" style="font-size: 12px;">Crear nuevo usuario</md-button>
+	 								<div style="display: inline-block; float: right;">
+											<md-button class="md-primary" ng-click="newUser()" style="font-size: 12px;">Crear nuevo usuario</md-button>
 									</div>									
---%>
 								</div>
+--%>
  							<!-- </md-card-actions> -->
 							</md-card-content>
 
@@ -279,6 +283,9 @@
 						else if ( id === 'goto_logon_USR_2d2') { $timeout(function() { $('#logon_USR_2d2').trigger('focus'); }, 0);
 						}
 					}
+				}
+				$scope.swapScreen = function () {
+					$scope.showRegister = ! $scope.showRegister;
 				}
 				////////////////////
 
