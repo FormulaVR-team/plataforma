@@ -249,12 +249,16 @@
 					document.forms[0].submit(); 
 				}
 				$scope.forgotPass = function () { 
-					 if ( confirm('ENVIAREMOS UN CORREO A TU CUENTA.\n\nPor favor sigue las instrucciones que contiene.\n') ) {
-						 document.getElementsByName('opcionPantalla')[0].value='forgotPass'; 
-						 document.forms[0].submit();
+					if ( confirm('ENVIAREMOS UN CORREO A TU CUENTA.\n\nPor favor sigue las instrucciones que contiene.\n') ) {
+						document.getElementsByName('logon_USR')[0].value=$scope.logon_USR;
+						document.getElementsByName('logon_USR')[1].value=$scope.logon_USR;
+						document.getElementsByName('opcionPantalla')[0].value='forgotPass'; 
+						document.forms[0].submit();
 					} 				
 				}
 				$scope.newUser = function () { 
+					document.getElementsByName('logon_USR')[0].value=$scope.logon_USR;
+					document.getElementsByName('logon_USR')[1].value=$scope.logon_USR;
 					document.getElementsByName('opcionPantalla')[0].value='newUser'; document.forms[0].submit();
 				}
 				$scope.submitForm = function () { 
@@ -272,10 +276,7 @@
 					if(k==13) {
 						if ( id === "USR" )	$scope.reservaExpress();
 						else if ( id === 'PASS') $scope.submitForm();
-						else if ( id === 'goto_logon_USR_2d2') {
-							 $timeout(function() {
-								    $('#logon_USR_2d2').trigger('focus');
-							}, 0);
+						else if ( id === 'goto_logon_USR_2d2') { $timeout(function() { $('#logon_USR_2d2').trigger('focus'); }, 0);
 						}
 					}
 				}
