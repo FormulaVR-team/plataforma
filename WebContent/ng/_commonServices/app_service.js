@@ -62,7 +62,7 @@ angular.module('commonServices_module')
 	              errorComun : function( text  ) {
 	            	  if ( text.includes("error de seguridad") ) {
 		            	  alert(text);
-	            		  window.location = "./";
+	            		  window.location = "./Off";
 	            	  } else {
 	            		  showAlert( text, null, null );	            		  
 	            	  }
