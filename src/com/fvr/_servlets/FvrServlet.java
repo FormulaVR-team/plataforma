@@ -114,6 +114,8 @@ public class FvrServlet extends HttpServlet {
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=rsAdd&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215
     private static final String usEdt = "usEdt";  // Llamada externa para "Editar mis datos de usuario"
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=usEdt&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215
+    private static final String FVRMonitor = "FVRMonitor";  // Llamada externa para "Editar mis datos de usuario"
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=FVRMonitor
 
 //	/////////////////////////////////
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -257,6 +259,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_rsAdd(request, response, usr, key);
     	} else if (usEdt.equalsIgnoreCase( acc )) {
     		cmd_usEdt(request, response, usr, key);
+    	} else if (FVRMonitor.equalsIgnoreCase( acc )) {
+    		cmd_FVRMonitor(request, response, payload);
     	} else {
     		responder(request, response, false, "Servicio no contemplado " + acc );
     	}
@@ -923,6 +927,12 @@ public class FvrServlet extends HttpServlet {
 	
 	
 	
+	}
+
+	private void cmd_FVRMonitor(HttpServletRequest request, HttpServletResponse response, JSONObject payload) throws IOException {
+
+		responder(request, response, true, "cmd_FVRMonitor OK");
+
 	}
 
 	///////////////////////////
