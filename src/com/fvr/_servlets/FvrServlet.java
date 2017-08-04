@@ -931,8 +931,31 @@ public class FvrServlet extends HttpServlet {
 
 	private void cmd_FVRMonitor(HttpServletRequest request, HttpServletResponse response, JSONObject payload) throws IOException {
 
-		// Para arrancar el FVRMonitor que es el cliente que llama aquÍ:
+		// Para arrancar el FVRMonitor, que es el cliente que llama aquÍ:
 		// java -jar FVRMonitor.jar c:\datos\new2.html 5 http://localhost:8080/FormulaVR/FvrServlet?ACC=FVRMonitor
+		
+		// DEBE EJECUTARSE A TODA LECHE!!
+		if ( payload == null || payload.toString().trim().length() < 3 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		// Para arrancar el FVRMonitor, que es el cliente que llama aquÍ:
+		// java -jar FVRMonitor.jar c:\datos\new2.html 5 http://localhost:8080/FormulaVR/FvrServlet?ACC=FVRMonitor
+
+		try {
+			com.fvr.ac_activityCockpits.db.AcAccesoBaseDatos dao_ac = new com.fvr.ac_activityCockpits.db.AcAccesoBaseDatos();
+			com.fvr.ac_activityCockpits.bean.AcBean          reg_ac = new com.fvr.ac_activityCockpits.bean.AcBean();
+			
+			// La pk es un serial:
+			reg_ac.setAc_author(this.getClass().getSimpleName());
+			try { reg_ac.setAc_computername( payload.getString("client") ); } catch (Exception e) {;}
+			try { reg_ac.setAc_filename( payload.getString("filename") ); } catch (Exception e) {;}
+			try { reg_ac.setAc_content( payload.getString("content") ); } catch (Exception e) {;}
+
+			dao_ac.ac_crtObj(new Subrutinas().getBDConexion(request), reg_ac);
+
+		} catch (StExcepcion e) {
+			responder(request, response, false, e.getMessage());
+			return;
+		}
 
 		responder(request, response, true, "cmd_FVRMonitor OK");
 

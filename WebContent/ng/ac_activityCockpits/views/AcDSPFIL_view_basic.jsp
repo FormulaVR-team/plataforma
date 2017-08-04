@@ -126,7 +126,7 @@
 				<%-- <th>is_deleted</th> --%>
 				<%-- <th>author</th> --%>
 				<th>serial</th>
-				<th>computername</th>
+				<th>client</th>
 				<th>filename</th>
 				<th>content</th>
 				<th>json</th>
