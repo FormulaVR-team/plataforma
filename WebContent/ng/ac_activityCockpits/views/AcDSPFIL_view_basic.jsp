@@ -93,7 +93,7 @@
 						<input type="text" ng-model="actionForm.ac_filtro.ac_serial" />
 					</md-input-container>
 					<md-input-container>
-						<label>computername</label>
+						<label>client</label>
 						<input type="text" ng-model="actionForm.ac_filtro.ac_computername" />
 					</md-input-container>
 					<md-input-container>
