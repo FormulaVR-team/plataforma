@@ -69,6 +69,9 @@
 			<script src="ng/us_users/userRole_Ctrl.js?fvrVer=${miVersion}"></script>
 			<script src="ng/us_users/userRole_service.js?fvrVer=${miVersion}"></script>
 
+			<script src="ng/ac_activityCockpits/AcDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
+			<script src="ng/ac_activityCockpits/AcDSPFIL_service.js?fvrVer=${miVersion}"></script>
+
 			<script src="ng/cp_cockpits/CpDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
 			<script src="ng/cp_cockpits/CpDSPFIL_service.js?fvrVer=${miVersion}"></script>
 		

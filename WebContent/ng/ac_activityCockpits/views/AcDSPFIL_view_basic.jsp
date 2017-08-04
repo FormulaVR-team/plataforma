@@ -20,7 +20,7 @@
 		<div layout="row" layout-align="space-between stretch">
 
 			<div>
-				<!-- Botones inicio -->
+				<%-- Botones inicio --%>
 				<div class="btn-group">
 					<md-button class="button-close md-fab md-mini" ng-click="filtrar()" title="<bean:message key="common.client.refrescar"/>"><md-icon> autorenew </md-icon></md-button>
 					<md-button class="button-close md-fab md-mini" ng-click="rtPg()" title="<bean:message key="common.client.retroceder"/>"><md-icon> skip_previous </md-icon></md-button>
@@ -28,13 +28,15 @@
 					<md-button class="button-close md-fab md-mini" ng-click="initReg()" data-toggle="modal" data-target="#acDSPFIL_ADDRCD_modal" title="<bean:message key="common.client.nuevo"/>"><md-icon> add </md-icon></md-button>
 					<md-button class="button-close md-fab md-mini" onclick="$('#filterIcon').toggleClass('rotate');$('#acFilterBox').slideToggle();" title="<bean:message key="common.client.filtrar"/>"><md-icon id="filterIcon"> filter_list </md-icon></md-button>
 					<md-button class="button-close md-fab md-mini" ng-click="exportar()" title="<bean:message key="common.client.exportar"/>"><md-icon> file_download </md-icon></md-button>
+<%--
 					&nbsp;&nbsp;
 					<md-button class="button-close md-fab md-mini" ng-click="desMarcarTodo()" title="desmarcar todo"><md-icon> clear </md-icon></md-button>
 					<md-button class="button-close md-fab md-mini" ng-click="marcarTodo()" title="Marcar todo"><md-icon> done_all </md-icon></md-button>
 					<md-button class="button-close md-fab md-mini" ng-click="marcados_suprimir()" title="Suprimir marcados"><md-icon> delete </md-icon></md-button>
 					&nbsp;&nbsp;
-				</div>
-				<!-- Botones final -->
+ --%>
+ 				</div>
+				<%-- Botones final --%>
 			</div>
 
 			<div>
@@ -45,8 +47,8 @@
 			</div>
 
 			<div>
-				<!-- <span>{{actionForm.logon_USR}}</span> -->
-				<!-- Paginador inicio -->
+				<%-- <span>{{actionForm.logon_USR}}</span> --%>
+				<%-- Paginador inicio --%>
 				<div>
 					<input type="hidden" ng-model="actionForm.filaInicioGrid" />
 					<input type="hidden" ng-model="actionForm.filasTotales" />
@@ -59,13 +61,13 @@
 						</md-select>
 					</md-input-container>
 				</div>
-				<!-- Paginador final -->
+				<%-- Paginador final --%>
 			</div>
 
 		</div>
 
 		<div>
-			<!-- Caja de filtros inicio -->
+			<%-- Caja de filtros inicio --%>
 			<div id="acFilterBox" style="display:none; border: black solid 1px;">
 				<md-button class=" md-raised md-warn md-button md-ink-ripple" ng-click="filtrar()" onclick="$('#filterIcon').toggleClass('rotate');$('#acFilterBox').slideToggle();">Aplicar</md-button>
 				<div class="alert alert-default fade in" style="display: block; padding: 0; margin: 0;">
@@ -109,7 +111,7 @@
 
 				</div>
 			</div>
-			<!-- Caja de filtros final -->
+			<%-- Caja de filtros final --%>
 		</div>
 
 	</div>
@@ -118,11 +120,11 @@
 		<table class="table table-striped table-hover">
 
 			<tr>
-				<th><!-- {{actionForm.filasMarcadas}}&nbsp;{{actionForm.clavesMarcadas}} --></th>
+				<%-- <th>{{actionForm.filasMarcadas}}&nbsp;{{actionForm.clavesMarcadas}}</th> --%>
 				<th>sincro</th>
-				<th>mark</th>
-				<th>is_deleted</th>
-				<th>author</th>
+				<%-- <th>mark</th> --%>
+				<%-- <th>is_deleted</th> --%>
+				<%-- <th>author</th> --%>
 				<th>serial</th>
 				<th>computername</th>
 				<th>filename</th>
@@ -131,11 +133,11 @@
 			</tr>
 
 			<tr ng-repeat="reg in actionForm.grid" ng-click="putRecordAsTheCurrent(reg)" data-toggle="modal" data-target="#acDSPFIL_EDTRCD_modal">
-				<td><input type="checkbox" onclick="event.stopPropagation();" ng-model="actionForm.filasMarcadas[$index]" ng-click="setClaveMarcada( this.reg.key, $index );"/></td>
+				<%-- <td><input type="checkbox" onclick="event.stopPropagation();" ng-model="actionForm.filasMarcadas[$index]" ng-click="setClaveMarcada( this.reg.key, $index );"/></td> --%>
 				<td>{{reg.ac_sincro}}&nbsp;</td>
-				<td>{{reg.ac_mark}}&nbsp;</td>
-				<td>{{reg.ac_is_deleted}}&nbsp;</td>
-				<td>{{reg.ac_author}}&nbsp;</td>
+				<%-- <td>{{reg.ac_mark}}&nbsp;</td> --%>
+				<%-- <td>{{reg.ac_is_deleted}}&nbsp;</td> --%>
+				<%-- <td>{{reg.ac_author}}&nbsp;</td> --%>
 				<td>{{reg.ac_serial}}&nbsp;</td>
 				<td>{{reg.ac_computername}}&nbsp;</td>
 				<td>{{reg.ac_filename}}&nbsp;</td>
@@ -146,13 +148,13 @@
 	</div>
 
 	
-<!-- Panel ADDRCD inicio -->	
+<%-- Panel ADDRCD inicio --%>	
 <div class="container">
-  <!-- Modal -->
+  <%-- Modal --%>
   <div class="modal fade" id="acDSPFIL_ADDRCD_modal" role="dialog" data-backdrop="false">
     <div class="modal-dialog">
     
-      <!-- Modal content-->
+      <%-- Modal content--%>
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -171,15 +173,15 @@
     </div>
   </div>
 </div>
-<!-- Panel ADDRCD final -->	
+<%-- Panel ADDRCD final --%>	
 	
-<!-- Panel EDTRCD inicio -->	
+<%-- Panel EDTRCD inicio --%>	
 <div class="container">
-  <!-- Modal -->
+  <%-- Modal --%>
   <div class="modal fade" id="acDSPFIL_EDTRCD_modal" role="dialog" data-backdrop="false">
     <div class="modal-dialog">
     
-      <!-- Modal content-->
+      <%-- Modal content--%>
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -198,7 +200,7 @@
     </div>
   </div>
 </div>
-<!-- Panel EDTRCD final -->	
+<%-- Panel EDTRCD final --%>	
 
     </div>
 </div>

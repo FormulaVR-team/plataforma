@@ -68,7 +68,8 @@ $mdThemingProvider
 				controller: "userRole_Ctrl"
 			}
 		}
-	}).state('rsUsEDTRCD', {
+	})
+	.state('rsUsEDTRCD', {
 		url: "/rsUsEDTRCD",
 		params: {
 			logon_USR: {
@@ -98,7 +99,39 @@ $mdThemingProvider
 				controller: "rsUsEDTRCD_Ctrl"
 			}
 		}
-	}).state('CpDSPFIL', {
+	})
+	.state('AcDSPFIL', {
+		url: "/AcDSPFIL",
+		params: {
+			logon_USR: {
+				value: null
+			},
+			logon_HSH: {
+				value: null
+			}
+		},
+		resolve: {
+			greeting: function ($q, $timeout) {}
+		},
+		views: {
+			"rgnNavBar": {
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
+				controller: "nav_bar_controller"
+			},
+			"rgnHeader": {
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
+				controller: "header_controller"
+			},
+			"rgnFooter": {
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
+			},
+			"rgnMain": {
+				templateUrl: "./ng/ac_activityCockpits/views/AcDSPFIL_view_basic.jsp?version=fake2",
+				controller: "AcDSPFIL_Ctrl_basic"
+			}
+		}
+	})
+	.state('CpDSPFIL', {
 		url: "/CpDSPFIL",
 		params: {
 			logon_USR: {
@@ -128,7 +161,8 @@ $mdThemingProvider
 				controller: "CpDSPFIL_Ctrl_basic"
 			}
 		}
-	}).state('LgDSPFIL', {
+	})
+	.state('LgDSPFIL', {
 		url: "/LgDSPFIL",
 		params: {
 			logon_USR: {
@@ -158,7 +192,8 @@ $mdThemingProvider
 				controller: "LgDSPFIL_Ctrl_basic"
 			}
 		}
-	}).state('LoDSPFIL', {
+	})
+	.state('LoDSPFIL', {
 		url: "/LoDSPFIL",
 		params: {
 			logon_USR: {
@@ -281,7 +316,8 @@ $mdThemingProvider
 				controller: "PrDSPFIL_Ctrl_basic"
 			}
 		}
-	}).state('PsDSPFIL', {
+	})
+	.state('PsDSPFIL', {
 		url: "/PsDSPFIL",
 		params: {
 			logon_USR: {
@@ -311,7 +347,8 @@ $mdThemingProvider
 				controller: "PsDSPFIL_Ctrl_basic"
 			}
 		}
-	}).state('PtDSPFIL', {
+	})
+	.state('PtDSPFIL', {
 		url: "/PtDSPFIL",
 		params: {
 			logon_USR: {
@@ -341,7 +378,8 @@ $mdThemingProvider
 				controller: "PtDSPFIL_Ctrl_basic"
 			}
 		}
-	}).state('PyDSPFIL', {
+	})
+	.state('PyDSPFIL', {
 		url: "/PyDSPFIL",
 		params: {
 			logon_USR: {
@@ -371,7 +409,8 @@ $mdThemingProvider
 				controller: "PyDSPFIL_Ctrl_basic"
 			}
 		}
-	}).state('allRsDSPFIL', {
+	})
+	.state('allRsDSPFIL', {
 		url: "/allRsDSPFIL/:panel_add",
 		params: {
 			panel_add: {
@@ -398,7 +437,8 @@ $mdThemingProvider
 				controller: "Ad_rsDSPFIL_Ctrl_basic"
 			}
 		}
-	}).state('RsDSPFIL', {
+	})
+	.state('RsDSPFIL', {
 		url: "/RsDSPFIL/:panel_add",
 		params: {
 			panel_add: {
@@ -425,7 +465,8 @@ $mdThemingProvider
 				controller: "RsDSPFIL_Ctrl_basic"
 			}
 		}
-	}).state('SgDSPFIL', {
+	})
+	.state('SgDSPFIL', {
 		url: "/SgDSPFIL",
 		params: {
 			logon_USR: {
@@ -455,7 +496,8 @@ $mdThemingProvider
 				controller: "SgDSPFIL_Ctrl_basic"
 			}
 		}
-	}).state('TkDSPFIL', {
+	})
+	.state('TkDSPFIL', {
 		url: "/TkDSPFIL",
 		params: {
 			logon_USR: {
@@ -485,7 +527,8 @@ $mdThemingProvider
 				controller: "TkDSPFIL_Ctrl_basic"
 			}
 		}
-	}).state('TsDSPFIL', {
+	})
+	.state('TsDSPFIL', {
 		url: "/TsDSPFIL",
 		params: {
 			logon_USR: {
@@ -581,7 +624,8 @@ $mdThemingProvider
 				controller: "UsDSPFIL_Ctrl_basic"
 			}
 		}
-	}).state("signoff", {
+	})
+	.state("signoff", {
 		url: "/",
 		views: {
 			"rgnNavBar": {
@@ -592,7 +636,8 @@ $mdThemingProvider
 				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			}
 		}
-	}).state("defaultState", {
+	})
+	.state("defaultState", {
 		url: "/",
 		views: {
 			"rgnNavBar": {

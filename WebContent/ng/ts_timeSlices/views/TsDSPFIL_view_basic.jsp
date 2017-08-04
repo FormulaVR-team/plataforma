@@ -52,7 +52,7 @@
 
 			<div>
 				<h3>
-					TIME SLICES (Ocupación de tiempo y recursos)
+					TIME SLICES (Ocupación tiempo/recursos)
 					<span dynamic="exportLink"></span>
 				</h3>
 			</div>
