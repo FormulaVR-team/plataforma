@@ -6,6 +6,16 @@
 		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
 		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
 		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="serial" descripcion="serial" descripcionCorta="serial" longitud="5" tipo="NUM" />
+		<CAM nombre="computername" descripcion="computername" descripcionCorta="computername" longitud="100" tipo="CHAR" />
+		<CAM nombre="filename" descripcion="filename" descripcionCorta="filename" longitud="100" tipo="CHAR" />
+		<CAM nombre="content" descripcion="content" descripcionCorta="content" longitud="100" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
 		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
 		<CAM nombre="LO_name" descripcion="LO_name" descripcionCorta="LO_name" longitud="100" tipo="CHAR" />
 		<CAM nombre="LO_address" descripcion="LO_address" descripcionCorta="LO_address" longitud="100" tipo="CHAR" />
@@ -251,6 +261,45 @@
 
 	</CAMPOS>
 	<ENTIDADES>
+	<!-- AC activityCockpits -->
+	<ENT nombre="activityCockpits" descripcion="activityCockpits" prefijo="ac">
+		<FMT archivo="T_AC_activityCockpits" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="serial" />
+			<CAM nombre="computername" />
+			<CAM nombre="filename" />
+			<CAM nombre="content" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_AC_activityCockpits" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="serial" />
+			<CAM nombre="computername" />
+			<CAM nombre="filename" />
+			<CAM nombre="content" />
+			<CAM nombre="json" />
+			<KEY nombre="serial" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_AC_RTV_activityCockpits" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="serial" />
+			<CAM nombre="computername" />
+			<CAM nombre="filename" />
+			<CAM nombre="content" />
+			<CAM nombre="json" />
+			<KEY nombre="serial" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
 	<!-- CP cockpits -->
 	<ENT nombre="cockpits" descripcion="cockpits" prefijo="cp">
 		<FMT archivo="T_CP_cockpits" nombre="Fisico" tipo="PHY">
