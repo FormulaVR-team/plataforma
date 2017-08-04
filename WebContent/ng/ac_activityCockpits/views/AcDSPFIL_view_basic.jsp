@@ -141,8 +141,8 @@
 				<td>{{reg.ac_serial}}&nbsp;</td>
 				<td>{{reg.ac_computername}}&nbsp;</td>
 				<td>{{reg.ac_filename}}&nbsp;</td>
-				<td>{{reg.ac_content}}&nbsp;</td>
-				<td>{{reg.ac_json}}&nbsp;</td>
+				<td>{{reg.ac_content | limitTo:'30'}}&nbsp;</td>
+				<td>{{reg.ac_json | limitTo:'30'}}&nbsp;</td>
 			</tr>
 		</table>
 	</div>

@@ -110,6 +110,8 @@ public class FvrServlet extends HttpServlet {
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=gamingModule&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215
     private static final String rmtLogon = "rmtLogon";  // retorna la clave de operaciones a utilizar en sucesivas llamadas
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=rmtLogon&USR=eestecha@gmail.com&PWD=d41d8cd98f00b204e9800998ecf8427e
+    private static final String isUsrExists = "isUsrExists";  // retorna true o false según exista o no el usuario en la base de datos
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=isUsrExists&USR=eestecha@gmail.com
     private static final String rsAdd = "rsAdd";  // Llamada externa para "Crear nueva Reserva"
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=rsAdd&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215
     private static final String usEdt = "usEdt";  // Llamada externa para "Editar mis datos de usuario"
@@ -255,6 +257,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_gamingModule(request, response, usr, key);
     	} else if (rmtLogon.equalsIgnoreCase( acc )) {
     		cmd_rmtLogon(request, response, usr, pwd);
+    	} else if (isUsrExists.equalsIgnoreCase( acc )) {
+    		cmd_isUsrExists(request, response, usr);
     	} else if (rsAdd.equalsIgnoreCase( acc )) {
     		cmd_rsAdd(request, response, usr, key);
     	} else if (usEdt.equalsIgnoreCase( acc )) {
@@ -867,6 +871,21 @@ public class FvrServlet extends HttpServlet {
 
 		responder(request, response, false, "KO");
 		
+	}
+
+	private void cmd_isUsrExists(HttpServletRequest request, HttpServletResponse response, String usr) throws IOException {
+		if ( usr == null || usr.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		try { usr = URLDecoder.decode(usr, "UTF-8"); } catch (Exception e) {;}
+
+		BDConexion dataBase = new Subrutinas().getBDConexion(request);
+
+		UsBean reg_us = Subrutinas.getUsFromId(dataBase, usr);
+		if ( reg_us != null && reg_us.getUs_sincro() != null && reg_us.getUs_sincro().trim().length() > 0 ) {
+			responder(request, response, true, "true" );
+		} else {
+			responder(request, response, true, "false" );
+		}
 	}
 
 	private void cmd_rsAdd(HttpServletRequest request, HttpServletResponse response, String usr, String key) throws IOException {
