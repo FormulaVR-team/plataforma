@@ -931,6 +931,9 @@ public class FvrServlet extends HttpServlet {
 
 	private void cmd_FVRMonitor(HttpServletRequest request, HttpServletResponse response, JSONObject payload) throws IOException {
 
+		// Para arrancar el FVRMonitor que es el cliente que llama aquÍ:
+		// java -jar FVRMonitor.jar c:\datos\new2.html 5 http://localhost:8080/FormulaVR/FvrServlet?ACC=FVRMonitor
+
 		responder(request, response, true, "cmd_FVRMonitor OK");
 
 	}
