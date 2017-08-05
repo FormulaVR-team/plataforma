@@ -180,6 +180,8 @@ angular
 					$scope.aux_rs_start_date_minDate	= new Date();
 					$scope.aux_rs_start_date_maxDate	= new Date(); $scope.aux_rs_start_date_maxDate.setDate($scope.aux_rs_start_date_minDate.getDate()+60 );
 					$scope.aux_rs_start_date_filterFnc	= function(date) { return app_services.md_date_filter_onlyWorkable( date ); }
+					
+					$scope.showPayments = false;
 					/////
 					/////
 
@@ -512,6 +514,11 @@ angular
 					};
 
 					$scope.initReg = function() {
+
+						// Inicializar:
+						$scope.showPayments = false;
+						var date = new Date();
+
 						// Formato de registro:
 						$scope.actionForm.rs_sincro = ""; // sincro
 						$scope.actionForm.rs_mark = ""; // mark
@@ -558,8 +565,6 @@ angular
 						$scope.actionForm.rs_comment = ""; // comment
 						$scope.actionForm.rs_json = ""; // json					
 
-						// Inicializar:
-						var date = new Date();
 						// Only workable:
 						var cuentaLimite = 0;
 						while ( ! app_services.md_date_filter_onlyWorkable( date ) && cuentaLimite <= 10 ) {
@@ -800,12 +805,15 @@ angular
 								.then(
 									function(response) {
 
+										$scope.showPayments = false;
+
 										if (response.data.rc === 'OK') {
 
 											$scope.putRecordAsTheCurrent( response.data.text );
 											
 											if ( "" == $scope.actionForm.rs_comment ) {
 												app_services.showAlert( 'Puedes reservar en el día y hora seleccionada. Selecciona tu forma de pago para completar la reserva.', 'Disponibilidad OK!', 'OK' );
+												$scope.showPayments = true;
 											} else {
 
 												if ( $scope.actionForm.rs_comment.toUpperCase().includes( 'GRATIS' ) ) {

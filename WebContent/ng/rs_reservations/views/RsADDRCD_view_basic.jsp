@@ -149,7 +149,10 @@
 		     			<md-button class="md-raised md-warn" ng-click="check()"><h4>Comprobar disponibilidad</h4></md-button>
 		     		</div>
 		     	</div>
-		
+
+
+
+<div  ng-show="showPayments">
 		     	<div class="row text-right">
 		 			<div class="col-xs-12 col-sm-6">
 		 				<h4 class="" style="display: inline-block;">Selecciona tu forma de pago</h4>
@@ -175,8 +178,8 @@
 			 			</div>
 		 			</div>
 				</div>
-		
-		
+</div>
+
 				<div class="hide">
 							<md-input-container class="col-sm-3">
 								<label>quantity</label>
@@ -195,8 +198,7 @@
 								<input type="text" ng-model="actionForm.rs_pay_status" />
 							</md-input-container>
 				</div>		
-		
-		
+
 		 		</div>		
 		
 		 	</div>		
