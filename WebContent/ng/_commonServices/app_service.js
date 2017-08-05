@@ -117,6 +117,13 @@ angular.module('commonServices_module')
 	                    data :  { ACC: "lo_lst" }
 	                });
 	            }
+	            , getRsFecMin : function (location_id) {
+	                return peticionHTTP({
+	                    method: 'POST',
+	                    url: './FvrServlet',
+	                    data :  { ACC: "getRsFecMin", LOC: location_id }
+	                });
+	            }
 	            , cp_lst : function (location_id, isBlocked) {
 	                return peticionHTTP({
 	                    method: 'POST',

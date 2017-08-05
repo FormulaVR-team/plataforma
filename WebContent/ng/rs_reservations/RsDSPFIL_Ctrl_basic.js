@@ -843,6 +843,16 @@ angular
 						    // Combos dependientes de cambio en location:
 							app_services.tt_lst(location_id,"NORMAL","N").then( function(response) { if (response.rc === 'OK') { $scope.lst_tt = response.text; } else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
 							app_services.cp_lst(location_id,"N").then( function(response) { if (response.rc === 'OK') { $scope.lst_cp = response.text; } else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+							app_services.getRsFecMin(location_id).then( function(response) { 
+								if (response.rc === 'OK') { 
+									var aaaa = response.text.substring(0,4); 
+									var   mm = response.text.substring(5,7); 
+									var   dd = response.text.substring(8); 
+									var minFec = new Date( response.text ); // minFec.setFullYear(aaaa); minFec.setMonth(mm); minFec.setDate(dd);
+									$scope.aux_rs_start_date			= new Date( minFec.getTime() ); //$scope.aux_rs_start_date.setDate( minFec.getDate() );
+									$scope.aux_rs_start_date_minDate	= new Date( minFec.getTime() ); //$scope.aux_rs_start_date_minDate.setDate( minFec.getDate() );
+									$scope.aux_rs_start_date_maxDate	= new Date( minFec.getTime() ); $scope.aux_rs_start_date_maxDate.setDate( $scope.aux_rs_start_date_maxDate.getDate() + 60 );
+								} else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
 						}
 						sincro_ocupacion();
 					}
