@@ -9,6 +9,7 @@ import java.net.URLDecoder;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -118,6 +119,8 @@ public class FvrServlet extends HttpServlet {
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=usEdt&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215
     private static final String FVRMonitor = "FVRMonitor";  // Llamada externa para "Editar mis datos de usuario"
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=FVRMonitor
+    private static final String getRsFecMin = "getRsFecMin";  // Devuelve la fecha ISO mínima posible para reservar
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=getRsFecMin&LOC=CENTRAL
 
 //	/////////////////////////////////
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -265,6 +268,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_usEdt(request, response, usr, key);
     	} else if (FVRMonitor.equalsIgnoreCase( acc )) {
     		cmd_FVRMonitor(request, response, payload);
+    	} else if (getRsFecMin.equalsIgnoreCase( acc )) {
+    		cmd_getRsFecMin(request, response, loc);
     	} else {
     		responder(request, response, false, "Servicio no contemplado " + acc );
     	}
@@ -977,6 +982,31 @@ public class FvrServlet extends HttpServlet {
 		}
 
 		responder(request, response, true, "cmd_FVRMonitor OK");
+
+	}
+
+	private void cmd_getRsFecMin(HttpServletRequest request, HttpServletResponse response, String loc) throws IOException {
+		if ( loc == null || loc.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		Date hoy = Subrutinas.cvtFec_aaaa_mm_dd__date( Subrutinas.getFecha_aaaa_mm_dd() ); 
+		Date minReservar = hoy; 
+		String rsFecMin = null;
+		BDConexion dataBase = new Subrutinas().getBDConexion(request);
+
+//		LoBean reg_lo = Subrutinas.getLoFromId(dataBase, loc);
+//		if ( reg_lo != null && reg_lo.getLo_sincro() != null && reg_lo.getLo_sincro().trim().length() > 0 ) {
+			rsFecMin = Subrutinas.getDBValueFromKey(dataBase, loc, _K.PA_KEY_RS_MIN_FEC);
+//		}
+		
+		if ( rsFecMin != null && rsFecMin.trim().length() == 10 ) {
+			minReservar = Subrutinas.cvtFec_aaaa_mm_dd__date( rsFecMin );
+		}
+
+		if ( minReservar.after( hoy ) ) {
+			responder(request, response, true, Subrutinas.getFecha_aaaa_mm_dd( minReservar ) );
+		} else {
+			responder(request, response, true, Subrutinas.getFecha_aaaa_mm_dd( hoy ) );
+		}
 
 	}
 
