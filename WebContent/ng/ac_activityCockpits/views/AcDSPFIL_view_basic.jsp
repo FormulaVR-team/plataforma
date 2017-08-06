@@ -28,13 +28,12 @@
 					<md-button class="button-close md-fab md-mini" ng-click="initReg()" data-toggle="modal" data-target="#acDSPFIL_ADDRCD_modal" title="<bean:message key="common.client.nuevo"/>"><md-icon> add </md-icon></md-button>
 					<md-button class="button-close md-fab md-mini" onclick="$('#filterIcon').toggleClass('rotate');$('#acFilterBox').slideToggle();" title="<bean:message key="common.client.filtrar"/>"><md-icon id="filterIcon"> filter_list </md-icon></md-button>
 					<md-button class="button-close md-fab md-mini" ng-click="exportar()" title="<bean:message key="common.client.exportar"/>"><md-icon> file_download </md-icon></md-button>
-<%--
+
 					&nbsp;&nbsp;
-					<md-button class="button-close md-fab md-mini" ng-click="desMarcarTodo()" title="desmarcar todo"><md-icon> clear </md-icon></md-button>
-					<md-button class="button-close md-fab md-mini" ng-click="marcarTodo()" title="Marcar todo"><md-icon> done_all </md-icon></md-button>
-					<md-button class="button-close md-fab md-mini" ng-click="marcados_suprimir()" title="Suprimir marcados"><md-icon> delete </md-icon></md-button>
-					&nbsp;&nbsp;
- --%>
+					<md-button class="button-close md-mini" ng-click="desMarcarTodo()" title="desmarcar todo"><md-icon> clear </md-icon></md-button>
+					<md-button class="button-close md-mini" ng-click="marcarTodo()" title="Marcar todo"><md-icon> done_all </md-icon></md-button>
+					<md-button class="button-close md-mini" ng-click="marcados_suprimir()" title="Suprimir marcados"><md-icon> delete </md-icon></md-button>
+
  				</div>
 				<%-- Botones final --%>
 			</div>
@@ -120,7 +119,7 @@
 		<table class="table table-striped table-hover">
 
 			<tr>
-				<%-- <th>{{actionForm.filasMarcadas}}&nbsp;{{actionForm.clavesMarcadas}}</th> --%>
+				<th><%-- {{actionForm.filasMarcadas}}&nbsp;{{actionForm.clavesMarcadas}} --%></th>
 				<th>sincro</th>
 				<%-- <th>mark</th> --%>
 				<%-- <th>is_deleted</th> --%>
@@ -133,7 +132,7 @@
 			</tr>
 
 			<tr ng-repeat="reg in actionForm.grid" ng-click="putRecordAsTheCurrent(reg)" data-toggle="modal" data-target="#acDSPFIL_EDTRCD_modal">
-				<%-- <td><input type="checkbox" onclick="event.stopPropagation();" ng-model="actionForm.filasMarcadas[$index]" ng-click="setClaveMarcada( this.reg.key, $index );"/></td> --%>
+				<td><input type="checkbox" onclick="event.stopPropagation();" ng-model="actionForm.filasMarcadas[$index]" ng-click="setClaveMarcada( this.reg.key, $index );"/></td>
 				<td>{{reg.ac_sincro}}&nbsp;</td>
 				<%-- <td>{{reg.ac_mark}}&nbsp;</td> --%>
 				<%-- <td>{{reg.ac_is_deleted}}&nbsp;</td> --%>
