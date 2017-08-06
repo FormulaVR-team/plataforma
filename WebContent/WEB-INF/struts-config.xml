@@ -21,6 +21,7 @@
 		<form-bean name="PsRCD_AF" type="com.fvr.ps_countries.forms.PsRCD_AF"/>
 		<form-bean name="PmRCD_AF" type="com.fvr.pm_promosManuales.forms.PmRCD_AF"/>
 		<form-bean name="AcRCD_AF" type="com.fvr.ac_activityCockpits.forms.AcRCD_AF"/>
+		<form-bean name="CdRCD_AF" type="com.fvr.cd_LocationClosedDays.forms.CdRCD_AF"/>
 	</form-beans>
 	<global-exceptions>
 	</global-exceptions>
@@ -63,6 +64,7 @@
 			<forward name="PsDSPFIL_A" path="/PsDSPFIL_A.do"/>
 			<forward name="PmDSPFIL_A" path="/PmDSPFIL_A.do"/>
 			<forward name="AcDSPFIL_A" path="/AcDSPFIL_A.do"/>
+			<forward name="CdDSPFIL_A" path="/CdDSPFIL_A.do"/>
 		</action>
 		<!-- ::::::::::::::::::::::::::::::::::::: -->
 		<!-- ::::::::::::::::::::::::::::::::::::: -->
@@ -343,6 +345,22 @@
 		<action input="/jsp/AcEDTRCD.jsp" name="AcRCD_AF" path="/AcEDTRCD_A" scope="request" type="com.fvr.ac_activityCockpits.actions.AcEDTRCD_A" validate="false">
 			<forward name="OK" path="/jsp/AcEDTRCD.jsp"/>
 			<forward name="CERRAR" path="/AcDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/CdDSPFIL.jsp" name="CdRCD_AF" path="/CdDSPFIL_A" scope="request" type="com.fvr.cd_LocationClosedDays.actions.CdDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/CdDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/CdADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/CdEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/CdSELRCD.jsp" name="CdRCD_AF" path="/CdSELRCD_A" scope="request" type="com.fvr.cd_LocationClosedDays.actions.CdSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/CdSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/CdADDRCD.jsp" name="CdRCD_AF" path="/CdADDRCD_A" scope="request" type="com.fvr.cd_LocationClosedDays.actions.CdADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/CdADDRCD.jsp"/>
+			<forward name="CERRAR" path="/CdDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/CdEDTRCD.jsp" name="CdRCD_AF" path="/CdEDTRCD_A" scope="request" type="com.fvr.cd_LocationClosedDays.actions.CdEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/CdEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/CdDSPFIL_A.do"/>
 		</action>
 	</action-mappings>
 	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
