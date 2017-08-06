@@ -35,6 +35,7 @@ import com.fvr._comun.Subrutinas;
 import com.fvr._comun._K;
 import com.fvr._comun.img2D.util.ImageUtils;
 import com.fvr._comun.mail.SendMail;
+import com.fvr.cd_LocationClosedDays.bean.CdBean;
 import com.fvr.cp_cockpits.bean.CpBean;
 import com.fvr.lo_location.bean.LoBean;
 import com.fvr.ps_countries.bean.PsBean;
@@ -90,6 +91,8 @@ public class FvrServlet extends HttpServlet {
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=rtvNickData&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215&NCK=Chuki
     private static final String lo_lst = "lo_lst";  // Retorna lista de Departamentos
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=lo_lst
+    private static final String cd_lst = "cd_lst";  // Retorna lista de días de cierre del local
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=cd_lst&LOC=CENTRAL
     private static final String cp_lst = "cp_lst";  // Retorna lista de cockpits de la instalación (opcionalmente también los bloqueados)
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=cp_lst&LOC=CENTRAL [&BLK=S]
     private static final String tt_lst = "tt_lst";  // Retorna lista de sesiones
@@ -240,6 +243,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_rtvUsData(request, response, usr, key);
     	} else if (rtvNickData.equalsIgnoreCase( acc )) {
     		cmd_rtvNickData(request, response, usr, key, nck);
+    	} else if (cd_lst.equalsIgnoreCase( acc )) {
+    		cmd_cd_lst(request, response, loc);
     	} else if (cp_lst.equalsIgnoreCase( acc )) {
     		cmd_cp_lst(request, response, loc, blk);
     	} else if (tt_lst.equalsIgnoreCase( acc )) {
@@ -591,6 +596,36 @@ public class FvrServlet extends HttpServlet {
 //		System.out.println( "cmd_de_lst() " + jsonArray.toString() );
 
 		responder(request, response, true, jsonArray.toString() );
+		return;
+	}
+
+	private void cmd_cd_lst(HttpServletRequest request, HttpServletResponse response, String location_id) throws IOException {
+		if ( location_id == null || location_id.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		BDConexion dataBase = new Subrutinas().getBDConexion(request);
+
+		List<String> lista = new ArrayList<String>();
+
+		try {
+			com.fvr.cd_LocationClosedDays.db.CdAccesoBaseDatos dao = new com.fvr.cd_LocationClosedDays.db.CdAccesoBaseDatos();
+			com.fvr.cd_LocationClosedDays.bean.CdBeanFiltro    flt = new com.fvr.cd_LocationClosedDays.bean.CdBeanFiltro();
+			com.fvr.cd_LocationClosedDays.bean.CdBean[]        rgs = null;
+			
+			flt.setCd_location_id( location_id );
+			
+			rgs = dao.cd_getSeq(dataBase, new ConfigPantalla( Integer.MAX_VALUE ), flt);
+
+			if ( rgs != null ) {
+				for ( CdBean item : rgs ) {
+					lista.add( item.getCd_closed_day_aaaa_mm_dd() );
+				}
+			}
+		} catch (StExcepcion e) {
+			responder(request, response, false, e.getMessage());
+			return;
+		}
+
+		responder(request, response, true, lista.toString() );
 		return;
 	}
 
