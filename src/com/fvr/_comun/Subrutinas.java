@@ -76,7 +76,6 @@ import sun.misc.BASE64Encoder;
 public class Subrutinas {
 	private final static String tag = "Subrutinas";	//this.getClass().getSimpleName();
 
-	
 	////////////////////////////////////
 //	Para DESPLEGAR Billin:
 	public static String m_modoEjecucion = "test";	// "test" / "real". En real lanza la "Autenticacion_FS()" 
