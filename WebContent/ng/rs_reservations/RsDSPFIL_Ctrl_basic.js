@@ -167,6 +167,7 @@ angular
 					$scope.lst_tt = null; // [ {value: "10", displayName: 'Diez'}, {value: "20", displayName: 'Veinte'} ];
 					$scope.lst_pt = null; // [ {value: "10", displayName: 'Diez'}, {value: "20", displayName: 'Veinte'} ];
 					$scope.lst_cp = null; // [1,2,3,4,5,6];	// Solo VALORES!!!
+					$scope.lst_cd = null; // ["2017-08-07","2017-08-08"];	// Solo VALORES!!!
 					$scope.lst_pay_status = ["","TPV_OK","PAYPAL_OK"];
 					$scope.lst_durations = [10,20,30];
 
@@ -179,7 +180,9 @@ angular
 					$scope.aux_rs_start_date			= new Date();		// Inicializar el objeto DatePicker...para que no se queje del tipo de dato.
 					$scope.aux_rs_start_date_minDate	= new Date();
 					$scope.aux_rs_start_date_maxDate	= new Date(); $scope.aux_rs_start_date_maxDate.setDate($scope.aux_rs_start_date_minDate.getDate()+60 );
-					$scope.aux_rs_start_date_filterFnc	= function(date) { return app_services.md_date_filter_onlyWorkable( date ); }
+					$scope.aux_rs_start_date_filterFnc	= null; // function(date) { return app_services.md_date_filter_onlyWorkable( date, $scope.lst_cd ); }
+					
+					$scope.showPayments = false;
 					/////
 					/////
 
@@ -512,6 +515,12 @@ angular
 					};
 
 					$scope.initReg = function() {
+
+						// Inicializar:
+						$scope.showPayments = false;
+						var date = new Date();
+						$scope.lst_cd = null;
+
 						// Formato de registro:
 						$scope.actionForm.rs_sincro = ""; // sincro
 						$scope.actionForm.rs_mark = ""; // mark
@@ -565,7 +574,7 @@ angular
 						var date = new Date();
 						// Only workable:
 						var cuentaLimite = 0;
-						while ( ! app_services.md_date_filter_onlyWorkable( date ) && cuentaLimite <= 10 ) {
+						while ( ! app_services.md_date_filter_onlyWorkable( date, $scope.lst_cd ) && cuentaLimite <= 30 ) {
 							date.setDate( date.getDate() + 1 );
 							cuentaLimite++;
 						}
@@ -820,14 +829,18 @@ angular
 								.then(
 									function(response) {
 
+										$scope.showPayments = false;
+
 										if (response.data.rc === 'OK') {
 
 											$scope.putRecordAsTheCurrent( response.data.text );
+
 											if (!isPrice) {
 												if ( "" == $scope.actionForm.rs_comment ) {
 														// a ver que coño hago aqui
 													$('#contentReservar').slideToggle(400);
 													$('#contentPayment').slideToggle(400);
+
 												} else {
 
 													if ( $scope.actionForm.rs_comment.toUpperCase().includes( 'GRATIS' ) ) {
@@ -868,6 +881,30 @@ angular
 						    // Combos dependientes de cambio en location:
 							app_services.tt_lst(location_id,"NORMAL","N").then( function(response) { if (response.rc === 'OK') { $scope.lst_tt = response.text; } else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
 							app_services.cp_lst(location_id,"N").then( function(response) { if (response.rc === 'OK') { $scope.lst_cp = response.text; } else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+							app_services.cd_lst(location_id).then( 
+									function(response) { 
+										if (response.rc === 'OK') { 
+											$scope.lst_cd = response.text; 
+											
+											///////////////
+											app_services.getRsFecMin(location_id).then( function(response) {
+												if (response.rc === 'OK') {
+													var aaaa = response.text.substring(0,4); 
+													var   mm = response.text.substring(5,7); 
+													var   dd = response.text.substring(8); 
+													var minFec = new Date( response.text ); // minFec.setFullYear(aaaa); minFec.setMonth(mm); minFec.setDate(dd);
+													$scope.aux_rs_start_date			= new Date( minFec.getTime() ); //$scope.aux_rs_start_date.setDate( minFec.getDate() );
+													$scope.aux_rs_start_date_minDate	= new Date( minFec.getTime() ); //$scope.aux_rs_start_date_minDate.setDate( minFec.getDate() );
+													$scope.aux_rs_start_date_maxDate	= new Date( minFec.getTime() ); $scope.aux_rs_start_date_maxDate.setDate( $scope.aux_rs_start_date_maxDate.getDate() + 60 );
+													$scope.aux_rs_start_date_filterFnc	= function(date) { return app_services.md_date_filter_onlyWorkable( date, $scope.lst_cd ); }
+												} else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+											///////////////
+
+										} else { 
+											app_services.errorComun( "ERROR: " + response.text); 
+										}
+									}
+									,function(response) { console.error("Ha sucedido un error: " + response.statusText); });
 						}
 						sincro_ocupacion();
 					}

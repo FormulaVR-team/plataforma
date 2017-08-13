@@ -46,6 +46,7 @@ public class _K {
 	public static final String PA_KEY_VERSION = "VERSION";											// Fecha juliana: 17148
 	
 	public static final String PA_KEY_RS_LAST_KEY = "RS_LAST_KEY";									// Siguiente clave de reserva
+	public static final String PA_KEY_RS_MIN_FEC = "RS_MIN_FEC";									// Fecha ISO: 2017-09-01
 	
 	public static final String PA_KEY_URL_WEB_PAGE = "URL_WEB_PAGE";								// Url de la página web: https:www.formulavr.net
 

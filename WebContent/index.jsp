@@ -82,6 +82,9 @@
 			<script src="ng/lo_location/LoDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
 			<script src="ng/lo_location/LoDSPFIL_service.js?fvrVer=${miVersion}"></script>
 		
+			<script src="ng/cd_LocationClosedDays/CdDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
+			<script src="ng/cd_LocationClosedDays/CdDSPFIL_service.js?fvrVer=${miVersion}"></script>
+		
 			<script src="ng/pa_systemParameters/PaDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
 			<script src="ng/pa_systemParameters/PaDSPFIL_service.js?fvrVer=${miVersion}"></script>
 

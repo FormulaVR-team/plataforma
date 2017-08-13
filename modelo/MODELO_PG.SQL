@@ -1,6 +1,6 @@
 ﻿/*
 Created: 01/05/2017
-Modified: 04/08/2017
+Modified: 06/08/2017
 Model: FormulaVR_V10_PostgreSQL
 Database: PostgreSQL 9.2
 */
@@ -39,6 +39,8 @@ Database: PostgreSQL 9.2
 
 -- Drop keys for tables section -------------------------------------------------
 
+ALTER TABLE "FormulaVR"."T_CD_LocationClosedDays" DROP CONSTRAINT "PK_T_CD_LocationClosedDays"
+;
 ALTER TABLE "FormulaVR"."T_AC_activityCockpits" DROP CONSTRAINT "PK_T_AC_actividadCocpits"
 ;
 ALTER TABLE "FormulaVR"."T_PM_promosManuales" DROP CONSTRAINT "PK_T_PM_promos_manuales"
@@ -80,6 +82,8 @@ DROP INDEX "FormulaVR"."idx_rs_pkDescend"
 
 -- Drop views section --------------------------------------------------- 
 
+DROP VIEW "FormulaVR"."V_CD_RTV_LocationClosedDays"
+;
 DROP VIEW "FormulaVR"."V_AC_RTV_activityCockpits"
 ;
 DROP VIEW "FormulaVR"."V_PM_RTV_promosManuales"
@@ -117,6 +121,8 @@ DROP VIEW "FormulaVR"."V_US_RTV_users"
 
 -- Drop tables section ---------------------------------------------------
 
+DROP TABLE "FormulaVR"."T_CD_LocationClosedDays"
+;
 DROP TABLE "FormulaVR"."T_AC_activityCockpits"
 ;
 DROP TABLE "FormulaVR"."T_PM_promosManuales"
@@ -646,6 +652,27 @@ COMMENT ON COLUMN "FormulaVR"."T_AC_activityCockpits"."sincro" IS 'Momento inser
 ALTER TABLE "FormulaVR"."T_AC_activityCockpits" ADD CONSTRAINT "PK_T_AC_actividadCocpits" PRIMARY KEY ("serial")
 ;
 
+-- Table FormulaVR.T_CD_LocationClosedDays
+
+CREATE TABLE "FormulaVR"."T_CD_LocationClosedDays"(
+ "sincro" Character varying(20) DEFAULT '' NOT NULL,
+ "mark" Character(1) DEFAULT '' NOT NULL,
+ "is_deleted" Character(1) DEFAULT '' NOT NULL,
+ "author" Character varying(50) DEFAULT '' NOT NULL,
+ "location_id" Character varying(50) DEFAULT '' NOT NULL,
+ "closed_day_aaaa_mm_dd" Character(10) DEFAULT '2099-12-31' NOT NULL,
+ "json" Text NOT NULL
+)
+WITH (OIDS=FALSE)
+;
+COMMENT ON COLUMN "FormulaVR"."T_CD_LocationClosedDays"."sincro" IS 'Momento inserción: aammddhhMMssDDD'
+;
+
+-- Add keys for table FormulaVR.T_CD_LocationClosedDays
+
+ALTER TABLE "FormulaVR"."T_CD_LocationClosedDays" ADD CONSTRAINT "PK_T_CD_LocationClosedDays" PRIMARY KEY ("location_id","closed_day_aaaa_mm_dd")
+;
+
 -- Create views section -------------------------------------------------
 
 CREATE VIEW "FormulaVR"."V_US_RTV_users" AS
@@ -867,12 +894,23 @@ FROM
  "FormulaVR"."T_AC_activityCockpits" "a"
 ;
 
+CREATE VIEW "FormulaVR"."V_CD_RTV_LocationClosedDays" AS
+SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."location_id", "a"."closed_day_aaaa_mm_dd", "a"."json"
+FROM 
+
+
+-- COD.AUTOGENERADO. Para fijarlo copiar en el apartado 'Notes'...
+
+ "FormulaVR"."T_CD_LocationClosedDays" "a"
+;
+
 
 
 
 GRANT USAGE ON SCHEMA "FormulaVR" TO public;
 
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_AC_activityCockpits" TO public;
+GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_CD_LocationClosedDays" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_CP_cockpits" TO public;
 GRANT ALL                ON TABLE "FormulaVR"."T_LG_logs" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_LO_location" TO public;
@@ -890,6 +928,7 @@ GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_TT_timeTableReference" TO publi
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_US_users" TO public;
 
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_AC_RTV_activityCockpits" TO public;
+GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_CD_RTV_LocationClosedDays" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_CP_RTV_cockpits" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_LG_RTV_logs" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_LO_RTV_location" TO public;
@@ -1353,6 +1392,7 @@ INSERT INTO "T_PS_countries" VALUES ('1705091000999', ' ', ' ', 'SYS', 716, 'Zim
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'VERSION', '17164');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'MG_URL', 'https://driver.formulavr.net/');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'RS_LAST_KEY', '11840001');
+INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'CENTRAL', 'SYS', 'RS_MIN_FEC', '2000-12-31');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'DOMAIN', 'formulavr.net');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'URL_WEB_PAGE', 'https://www.formulavr.net');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'SMTP_HOST_NAME', 'smtp.formulavr.net');

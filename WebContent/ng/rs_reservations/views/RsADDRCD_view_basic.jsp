@@ -28,6 +28,19 @@
 				<div class="row">
 				<div id="contentReservar" class="col-xs-12">
 		     	<div class="row">
+
+		     		<div class="col-xs-12 col-sm-6 col-md-4">
+						<!-- Selector CENTRO -->
+						<md-input-container class="md-block input-md">
+							<label><md-icon>edit_location</md-icon>Establecimiento selecionado</label>
+							<md-select placeholder="Seleccione Local" ng-model="$parent.aux_rs_location_id" md-on-open="location_id_onOpen()" md-on-close="location_id_onClose()" ng-model-options="{trackBy: '$value.value'}" ng-change="getprice()" required>
+								<md-optgroup label="Local">
+									<md-option ng-value="item" ng-repeat="item in $parent.lst_lo">{{item.displayName}}</md-option>
+								</md-optgroup>			
+							</md-select>
+			    		</md-input-container>
+			    		<!-- Selector CENTRO fin -->
+		     		</div>
 	
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
 		     			<!-- Fecha -->
@@ -45,19 +58,6 @@
 							></md-datepicker>
 						</md-input-container>
 						<!-- Fecha fin -->
-		     		</div>
-	
-		     		<div class="col-xs-12 col-sm-6 col-md-4">
-			     		<!-- Selector CENTRO -->
-						<md-input-container class="md-block input-md">
-							<label><md-icon>edit_location</md-icon>Establecimiento selecionado</label>
-							<md-select placeholder="Seleccione Local" ng-model="$parent.aux_rs_location_id" md-on-open="location_id_onOpen()" md-on-close="location_id_onClose()" ng-model-options="{trackBy: '$value.value'}" ng-change="getprice()" required>
-								<md-optgroup label="Local">
-									<md-option ng-value="item" ng-repeat="item in $parent.lst_lo">{{item.displayName}}</md-option>
-								</md-optgroup>			
-							</md-select>
-			    		</md-input-container>
-			    		<!-- Selector CENTRO fin -->
 		     		</div>
 	
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
@@ -152,6 +152,7 @@
 		     		</div>
 		     	</div>
 
+<<<<<<< HEAD
 		    </div> 	
 		    </div>
 				<div class="row">
@@ -229,10 +230,9 @@
 								<label>pay_status</label>
 								<input type="text" ng-model="actionForm.rs_pay_status" />
 							</md-input-container>
-				</div>		
+						</div>		
 
-		
-		 		</div>		
+		 			</div>		
 		
 		 	</div>		
 	

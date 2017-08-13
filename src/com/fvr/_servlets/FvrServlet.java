@@ -9,6 +9,7 @@ import java.net.URLDecoder;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -34,6 +35,7 @@ import com.fvr._comun.Subrutinas;
 import com.fvr._comun._K;
 import com.fvr._comun.img2D.util.ImageUtils;
 import com.fvr._comun.mail.SendMail;
+import com.fvr.cd_LocationClosedDays.bean.CdBean;
 import com.fvr.cp_cockpits.bean.CpBean;
 import com.fvr.lo_location.bean.LoBean;
 import com.fvr.ps_countries.bean.PsBean;
@@ -89,6 +91,8 @@ public class FvrServlet extends HttpServlet {
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=rtvNickData&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215&NCK=Chuki
     private static final String lo_lst = "lo_lst";  // Retorna lista de Departamentos
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=lo_lst
+    private static final String cd_lst = "cd_lst";  // Retorna lista de días de cierre del local
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=cd_lst&LOC=CENTRAL
     private static final String cp_lst = "cp_lst";  // Retorna lista de cockpits de la instalación (opcionalmente también los bloqueados)
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=cp_lst&LOC=CENTRAL [&BLK=S]
     private static final String tt_lst = "tt_lst";  // Retorna lista de sesiones
@@ -118,6 +122,8 @@ public class FvrServlet extends HttpServlet {
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=usEdt&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215
     private static final String FVRMonitor = "FVRMonitor";  // Llamada externa para "Editar mis datos de usuario"
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=FVRMonitor
+    private static final String getRsFecMin = "getRsFecMin";  // Devuelve la fecha ISO mínima posible para reservar
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=getRsFecMin&LOC=CENTRAL
 
 //	/////////////////////////////////
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -237,6 +243,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_rtvUsData(request, response, usr, key);
     	} else if (rtvNickData.equalsIgnoreCase( acc )) {
     		cmd_rtvNickData(request, response, usr, key, nck);
+    	} else if (cd_lst.equalsIgnoreCase( acc )) {
+    		cmd_cd_lst(request, response, loc);
     	} else if (cp_lst.equalsIgnoreCase( acc )) {
     		cmd_cp_lst(request, response, loc, blk);
     	} else if (tt_lst.equalsIgnoreCase( acc )) {
@@ -265,6 +273,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_usEdt(request, response, usr, key);
     	} else if (FVRMonitor.equalsIgnoreCase( acc )) {
     		cmd_FVRMonitor(request, response, payload);
+    	} else if (getRsFecMin.equalsIgnoreCase( acc )) {
+    		cmd_getRsFecMin(request, response, loc);
     	} else {
     		responder(request, response, false, "Servicio no contemplado " + acc );
     	}
@@ -586,6 +596,36 @@ public class FvrServlet extends HttpServlet {
 //		System.out.println( "cmd_de_lst() " + jsonArray.toString() );
 
 		responder(request, response, true, jsonArray.toString() );
+		return;
+	}
+
+	private void cmd_cd_lst(HttpServletRequest request, HttpServletResponse response, String location_id) throws IOException {
+		if ( location_id == null || location_id.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		BDConexion dataBase = new Subrutinas().getBDConexion(request);
+
+		List<String> lista = new ArrayList<String>();
+
+		try {
+			com.fvr.cd_LocationClosedDays.db.CdAccesoBaseDatos dao = new com.fvr.cd_LocationClosedDays.db.CdAccesoBaseDatos();
+			com.fvr.cd_LocationClosedDays.bean.CdBeanFiltro    flt = new com.fvr.cd_LocationClosedDays.bean.CdBeanFiltro();
+			com.fvr.cd_LocationClosedDays.bean.CdBean[]        rgs = null;
+			
+			flt.setCd_location_id( location_id );
+			
+			rgs = dao.cd_getSeq(dataBase, new ConfigPantalla( Integer.MAX_VALUE ), flt);
+
+			if ( rgs != null ) {
+				for ( CdBean item : rgs ) {
+					lista.add( item.getCd_closed_day_aaaa_mm_dd() );
+				}
+			}
+		} catch (StExcepcion e) {
+			responder(request, response, false, e.getMessage());
+			return;
+		}
+
+		responder(request, response, true, lista.toString() );
 		return;
 	}
 
@@ -977,6 +1017,31 @@ public class FvrServlet extends HttpServlet {
 		}
 
 		responder(request, response, true, "cmd_FVRMonitor OK");
+
+	}
+
+	private void cmd_getRsFecMin(HttpServletRequest request, HttpServletResponse response, String loc) throws IOException {
+		if ( loc == null || loc.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		Date hoy = Subrutinas.cvtFec_aaaa_mm_dd__date( Subrutinas.getFecha_aaaa_mm_dd() ); 
+		Date minReservar = hoy; 
+		String rsFecMin = null;
+		BDConexion dataBase = new Subrutinas().getBDConexion(request);
+
+//		LoBean reg_lo = Subrutinas.getLoFromId(dataBase, loc);
+//		if ( reg_lo != null && reg_lo.getLo_sincro() != null && reg_lo.getLo_sincro().trim().length() > 0 ) {
+			rsFecMin = Subrutinas.getDBValueFromKey(dataBase, loc, _K.PA_KEY_RS_MIN_FEC);
+//		}
+		
+		if ( rsFecMin != null && rsFecMin.trim().length() == 10 ) {
+			minReservar = Subrutinas.cvtFec_aaaa_mm_dd__date( rsFecMin );
+		}
+
+		if ( minReservar.after( hoy ) ) {
+			responder(request, response, true, Subrutinas.getFecha_aaaa_mm_dd( minReservar ) );
+		} else {
+			responder(request, response, true, Subrutinas.getFecha_aaaa_mm_dd( hoy ) );
+		}
 
 	}
 

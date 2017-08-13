@@ -25,6 +25,8 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -73,8 +75,7 @@ import sun.misc.BASE64Encoder;
  */
 public class Subrutinas {
 	private final static String tag = "Subrutinas";	//this.getClass().getSimpleName();
-
-	
+    
 	////////////////////////////////////
 //	Para DESPLEGAR Billin:
 	public static String m_modoEjecucion = "test";	// "test" / "real". En real lanza la "Autenticacion_FS()" 
@@ -987,6 +988,20 @@ public class Subrutinas {
 			res = res.substring(8) + "/" + res.substring(5,7) + "/" + res.substring(2,4);
 		}
 		return res;
+	}
+	public static Date   cvtFec_aaaa_mm_dd__date(String aaaa_mm_dd) {
+		Date parsed = null;
+		 try {
+			 if ( aaaa_mm_dd != null && aaaa_mm_dd.trim().length() == 10 ) {
+				parsed = new SimpleDateFormat("yyyy-MM-dd").parse(aaaa_mm_dd);
+			 }
+		} catch (ParseException e) {System.err.println(e.getMessage());}
+		return parsed;		
+	}
+	public static Date   cvtFec_mills__date( long dateMills ) {
+		Calendar cal = Calendar.getInstance();
+		cal.setTimeInMillis(dateMills);
+		return cal.getTime();
 	}
 	////////////////////////
 	public static String transformar_Lista_Vertical_a_Horizontal(BeanParaTablaHash[] lista) {
