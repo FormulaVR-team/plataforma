@@ -4,7 +4,7 @@
 <%@taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
 <%@taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+"http://www.w3.org/TR/html4/strict.dtd">
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,7 +13,7 @@
 		<link rel="apple-touch-icon-precomposed" href="https://www.formulavr.net/wp-content/uploads/2017/06/cropped-formulvr-ico-180x180.png" />
 		<meta name="msapplication-TileImage" content="https://www.formulavr.net/wp-content/uploads/2017/06/cropped-formulvr-ico-270x270.png" />
 
-		<title>Logon</title>
+		<title>Formula VR | Logon</title>
 
 		<!-- ==================================== -->
 			<script src="./ng/_lib/jquery-1.11.3/jquery.min.js?fvrVer=${miVersion}"></script>
@@ -34,14 +34,9 @@
 		
 		<script type="text/javascript" src="./script/md5Obj.js?fvrVer=${miVersion}"></script>
 		<style type="text/css">
-			body {			
-			background: url('./resBS/img/formula-vr-head-wh.jpg') no-repeat center center fixed; 
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
+			body, html {			
 						
-			background-color: #F1F1F1;
+			background-color: #F0F0F0;
 			}	
 			/* LOGON */
 
@@ -52,7 +47,7 @@
 			}
 			.logon-content{
 				min-width:320px;
-				width: 400px;
+				width: 450px;
 				background-color: transparent;
 			}
 			@media (max-width: 767px) {
@@ -88,106 +83,93 @@
 					<section ng-hide="showRegister" style="background-color: transparent;">
 
 						<md-card>
-							<%-- <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out"> --%>
-
 							<md-card-title>
+							<div ui-preloader="" id="preloaderbar1" class="preloaderbar hide"><span class="bar"></span></div>
 								<md-card-title-text>
-									<picture style="text-align: center;">
+									<picture style="margin-bottom: 5px;">
 										<img class="brand-img" src="./resBS/img/formulavr.png" width="250" alt="Formula VR"/>
-									</picture> 
-									<h4>Introduce tu CORREO ELECTRÓNICO</h4>
-									<small style="min-height:20px;">{{ (logon_USR_1d2 + "@" + logon_USR_2d2)==="@"? "" : (logon_USR_1d2 + "@" + logon_USR_2d2) }}</small>
+									</picture>
 								</md-card-title-text>
 							</md-card-title>
 
-							<md-card-content layout="column">
-								<%-- <md-input-container>
-									<label>Correo electrónico</label>
-									<input type="text" ng-model="logon_USR" required ng-pattern="/^.+@.+\..+$/" id="logon_USR" name="logon_USR" style="text-transform: lowercase;" ng-keyup="detect_pressEnter($event,'USR');" />
-								</md-input-container> --%>
-								<div layout="row">
-									<md-input-container>
-										<label>Cuenta</label>
-										<input type="text" auto-focus id="logon_USR_1d2" ng-model="logon_USR_1d2" style="text-transform: lowercase; text-align: right;" onclick="this.select();" ng-keyup="detect_pressEnter($event,'goto_logon_USR_2d2');"/>
-									</md-input-container>
-									<h3>&nbsp;@&nbsp;</h3>
-									<md-input-container>
-										<label><small>...hotmail.es, gmail.com...</small></label>
-										<input type="text" id="logon_USR_2d2" ng-model="logon_USR_2d2" style="text-transform: lowercase;" onclick="this.select();" ng-keyup="detect_pressEnter($event,'USR');"/>
-									</md-input-container>
-								</div>						
-								<md-input-container>
-									<input type="hidden" ng-model="logon_USR" id="logon_USR" name="logon_USR" /></br>
-								</md-input-container>
+							<md-card-content>
+								<h4>Iniciar Sesión</h4>
+								<h6 style="margin-top: 0px;">Utiliza tu cuenta de correo electrónico</h6>
+								<p>&nbsp;</p>
+									<md-input-container class="md-block" >
+										<label>Correo electrónico</label>
+										<input type="text" auto-focus 
+											ng-model="logon_USR" 
+											id="logon_USR" 
+											name="logon_USR" 
+											style="text-transform: lowercase;" 
+											onclick="this.select();" 
+											ng-keyup="detect_pressEnter($event,'USR');"
+											pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$"/>		
+											<div ng-messages="Logon_AF.logon_USR.$error" role="alert" md-auto-hide="true" ng-if="Logon_AF.logon_USR.$touched">
+							          <div ng-message-exp="['required', 'pattern']">
+							            El email es incorrecto.
+							          </div>
+							        </div>
+									</md-input-container>	
 							</md-card-content>
 
-							<md-card-actions layout="column">
-								<md-button class="md-raised md-primary" ng-click="reservaExpress()">
-									INICIAR
-									<!-- <md-tooltip>Reserva sin registrarte</md-tooltip> -->
+							<md-card-actions>
+								<md-button class="md-raised md-primary" ng-click="reservaExpress()" style="float: right;">
+									SIGUIENTE
 								</md-button>
-								<!-- <md-button class="md-primary" ng-click="showRegister = ! showRegister">Ya tengo cuenta</md-button> -->
 							</md-card-actions>
-
-							<md-card-content layout="column"><small>Recuerda que esta cuenta de correo la usaremos para todas las comunicaciones contigo.</br>Te mandaremos las <span style="color:blue;">confirmaciones de pago y reservas</span>.</br>Por favor, asegúrate de escribirla correctamente</small></md-card-content>
-
 						</md-card>
-								
+						<md-button class="" ng-href="https://www.formulavr.net" target="_self">
+						Ir a la web
+						</md-button>
+						<md-button class="md-primary" ng-href="https://www.formulavr.net" target="_blank">
+						Condiciones legales
+						</md-button>		
 					</section>
 
 					<section ng-show="showRegister">
 
 						<md-card>
-							<%-- <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out"> --%>
-
 							<md-card-title>
+							<div ui-preloader="" id="preloaderbar2" class="preloaderbar hide"><span class="bar"></span></div>
 								<md-card-title-text>
-								<picture style="text-align: center;">
+								<picture  style="margin-bottom: 5px;">
 									<img class="brand-img" src="./resBS/img/formulavr.png" width="250" alt="Formula VR"/>
 								</picture> 
-								<!-- <h4>Acceder a Formula VR</h4> -->
 								</md-card-title-text>
 							</md-card-title>
 
-							<md-card-content layout="column">
-								<div layout="row" layout-align="start start">
-									<md-button class="md-fab md-mini" ng-click="swapScreen()" title="Cambiar de usuario"><md-icon>arrow_back</md-icon></md-button>
-									<md-input-container>
-											<label>Correo electrónico</label>
-											<input type="text" ng-model="logon_USR" required readonly="readonly" ng-pattern="/^.+@.+\..+$/" id="logon_USR" name="logon_USR" style="text-transform: lowercase;"/>
-									</md-input-container>
-								</div>
-								<div layout="row" layout-align="start start">
-									<md-button class="md-fab md-mini" ng-click="forgotPass()" title="La he olvidado"><md-icon>help_outline</md-icon></md-button>
-									<md-input-container>
-										<label>Contraseña</label>
-										<input type="password" auto-focus ng-model="logon_PWD" id="logon_PWD" name="logon_PWD" onclick="this.select();" ng-keyup="detect_pressEnter($event,'PASS');"/>
-									</md-input-container>
-									<logic:present name="noPwd-button-ON">
-										<md-button class="md-raised md-warn" ng-click="forgotPass()" style="font-size: 12px; text-transform: uppercase;">NUEVA !</md-button>
-									</logic:present>
-								</div>
+							<md-card-content>
+								<h4>Iniciar Sesión</h4>
+								<p>
+								<img id="imgUSR" style="width: 40px;border-radius: 50px;vertical-align: middle;margin-right: 10px;"/>
+								{{ logon_USR  }}
+								<md-icon ng-click="swapScreen()" style="cursor: pointer;">keyboard_arrow_down</md-icon>
+								<span id="volver" class="mythemes-icon-down-open" style="float: right; cursor: pointer;margin-top: 10px;"/></p><br />
+								<p>&nbsp;</p>
+								<md-input-container class="md-block">
+									<label>Contraseña</label>
+									<input type="password" auto-focus ng-model="logon_PWD" id="logon_PWD" name="logon_PWD" onclick="this.select();" ng-keyup="detect_pressEnter($event,'PASS');"/>
+								</md-input-container>
 							</md-card-content>
 
-							<md-card-content layout="column">
-							<!-- <md-card-actions layout="column"> -->
-								<md-button class="md-raised md-primary" ng-click="submitForm()">
-									Acceder con contraseña
-									<md-tooltip>Entrar al sistema</md-tooltip>
+							<md-card-actions>
+								<md-button class="md-raised md-primary" ng-click="submitForm()" style="float: right;">
+									Siguiente
 								</md-button>
-<%--							<div style="padding-top: 10px;padding-bottom: 10px;">
-									<div style="display: inline-block;">
-										<md-button class="md-raised" ng-click="forgotPass()" style="font-size: 12px;">Olvidé la contraseña</md-button>
-									</div>
-	 								<div style="display: inline-block; float: right;">
-											<md-button class="md-primary" ng-click="newUser()" style="font-size: 12px;">Crear nuevo usuario</md-button>
-									</div>									
-								</div>
---%>
- 							<!-- </md-card-actions> -->
-							</md-card-content>
+								<md-button class="md-primary btn-lnk" ng-click="forgotPass()" style="float: left;font-size: 12px;">
+								¿Has olvidado tu contraseña?
+								</md-button>
+							</md-card-actions>
 
 						</md-card>
+						<md-button class="" ng-href="https://www.formulavr.net" target="_self">
+						Ir a la web
+						</md-button>
+						<md-button class="md-primary" ng-href="https://www.formulavr.net" target="_blank">
+						Condiciones legales
+						</md-button>	
 
 						<inpunt class="hide" type="submit" />
 
@@ -217,13 +199,10 @@
 			        }
 			    };
 			})
- 			.controller('AppCtrl', function($scope, $timeout, $mdSidenav, $mdToast) {
-				$scope.logon_USR = '${logon_USR}';
+ 			.controller('AppCtrl', function($scope, $timeout, $mdSidenav, $mdToast, $http) {
+				$scope.logon_USR = ('${logon_USR}' !== 'undefined') ? '${logon_USR}' : "";
 
-				$scope.logon_USR_1d2 = $scope.logon_USR.split("@")[0];
-				$scope.logon_USR_2d2 = $scope.logon_USR.split("@")[1];
-
-				var errmsg = document.getElementById('errmsg').value;
+				var errmsg = document.getElementById('errmsg').value.replace('\'undefined\'','');;
 				if ( "" !== errmsg ) { 
 					var myToast = $mdToast
 						.simple()
@@ -245,33 +224,34 @@
 				</logic:notPresent>
 
 				////////////////////
-				$scope.reservaExpress = function () { 
-					$scope.logon_USR = ($scope.logon_USR_1d2!=undefined?$scope.logon_USR_1d2:"") + "@" + ($scope.logon_USR_2d2!=undefined?$scope.logon_USR_2d2:"");
+				$scope.reservaExpress = function () {
+					document.getElementById('preloaderbar1').className = "preloaderbar active";
 					document.getElementsByName('logon_USR')[0].value=$scope.logon_USR;
-					document.getElementsByName('logon_USR')[1].value=$scope.logon_USR;
 					document.getElementsByName('opcionPantalla')[0].value='reservaExpress'; 
 					document.forms[0].submit(); 
 				}
-				$scope.forgotPass = function () { 
-					if ( confirm('ENVIAREMOS UN CORREO A TU CUENTA.\n\nPor favor sigue las instrucciones que contiene.\n') ) {
+				$scope.forgotPass = function () {
+					document.getElementById('preloaderbar2').className = "preloaderbar active";
+					// if ( confirm('ENVIAREMOS UN CORREO A TU CUENTA.\n\nPor favor sigue las instrucciones que contiene.\n') ) {
 						document.getElementsByName('logon_USR')[0].value=$scope.logon_USR;
-						document.getElementsByName('logon_USR')[1].value=$scope.logon_USR;
 						document.getElementsByName('opcionPantalla')[0].value='forgotPass'; 
 						document.forms[0].submit();
-					} 				
+					// } 				
+
 				}
-				$scope.newUser = function () { 
+				$scope.newUser = function () {
+					document.getElementById('preloaderbar1').className = "preloaderbar active";
 					document.getElementsByName('logon_USR')[0].value=$scope.logon_USR;
-					document.getElementsByName('logon_USR')[1].value=$scope.logon_USR;
 					document.getElementsByName('opcionPantalla')[0].value='newUser'; document.forms[0].submit();
+
 				}
-				$scope.submitForm = function () { 
-					$scope.logon_USR = ($scope.logon_USR_1d2!=undefined?$scope.logon_USR_1d2:"") + "@" + ($scope.logon_USR_2d2!=undefined?$scope.logon_USR_2d2:"");
+				$scope.submitForm = function () {
+					document.getElementById('preloaderbar2').className = "preloaderbar active";
 					document.getElementsByName('logon_USR')[0].value=$scope.logon_USR;
-					document.getElementsByName('logon_USR')[1].value=$scope.logon_USR;
 					document.getElementsByName('opcionPantalla')[0].value='ENTER';
 					document.getElementsByName('logon_PWD')[0].value=md5Obj.md5(document.getElementsByName('logon_PWD')[0].value);
 					document.forms[0].submit();
+
 				}
 				$scope.detect_pressEnter = function (e,id) {
 					e.preventDefault();
@@ -280,15 +260,37 @@
 					if(k==13) {
 						if ( id === "USR" )	$scope.reservaExpress();
 						else if ( id === 'PASS') $scope.submitForm();
-						else if ( id === 'goto_logon_USR_2d2') { $timeout(function() { $('#logon_USR_2d2').trigger('focus'); }, 0);
-						}
+						
 					}
 				}
 				$scope.swapScreen = function () {
+					$scope.logon_USR = "";
 					$scope.showRegister = ! $scope.showRegister;
 				}
 				////////////////////
-
+								/////////////////////////////
+				$scope.getUsrImg = function(){
+					var accion = "getUsrImg";
+					$http( {
+									url: "./FvrServlet?ACC=" + accion + "&USR=" + $scope.USR,
+									method: 'POST',
+									headers : {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'}
+								}
+					)
+						.success(function(response){
+							if (response.rc === 'OK') {
+								document.getElementById('imgUSR').setAttribute("src", response.text);
+							}
+						}
+					)
+						.error(function(err){
+								alert(err);
+							}
+						)
+					;
+				}
+				$scope.getUsrImg();
+				// src="./FvrServlet?ACC=getUsrImg&USR={{logon_USR}}" 
 			}
 			);
 

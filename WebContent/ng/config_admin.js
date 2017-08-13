@@ -1,4 +1,4 @@
-angular.module('laAplicacion', ['ui.router', 'commonServices_module', 'ngMaterial', 'ngMessages', 'angular-md5', 'chart.js'])
+angular.module('laAplicacion', ['ui.router', 'commonServices_module', 'ngMaterial', 'ngMessages', 'angular-md5', 'ngSanitize', 'chart.js'])
 .config(function ($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdDateLocaleProvider) {
 	var fvrRedMap = $mdThemingProvider.extendPalette('red', {
 			'500': '#CE1417',

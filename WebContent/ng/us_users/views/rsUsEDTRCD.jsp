@@ -106,7 +106,7 @@
 		
 		     		<div class="row">
 		     			<div class="col-xs-12 text-right">
-		     			<md-button class="md-raised md-primary md-button" ng-click="cambiar()"><h4>Guardar cambios</h4></md-button>
+		     			<md-button class="md-raised md-primary md-button" ng-click="cambiar()">Guardar cambios</md-button>
 		     			</div>
 		     		</div>
 		

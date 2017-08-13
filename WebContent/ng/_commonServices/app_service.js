@@ -42,11 +42,11 @@ angular.module('commonServices_module')
 
 			      dlg = $mdDialog.alert({
 			        title: 'Attention',
-			        textContent: 'This is an example of how easy dialogs can be!',
+			        htmlContent: 'This is an example of how easy dialogs can be!',
 			        ok: 'Close'
 			      }).clickOutsideToClose(true)
 			        .title(title)
-			        .textContent(content)
+			        .htmlContent(content)
 			        .ok(ok_text);
 		        // .ariaLabel('Alert Dialog Demo')
 
@@ -57,7 +57,6 @@ angular.module('commonServices_module')
 			        });
 
             }
-
             return {
 	              errorComun : function( text  ) {
 	            	  if ( text.includes("error de seguridad") ) {
@@ -70,6 +69,9 @@ angular.module('commonServices_module')
 	            } 
 	        	, showAlert : function( content, title, ok_text ) {
 	        		showAlert(content, title, ok_text);
+	        	} 
+	        	, showAlertTemplate : function( templateContent ) {
+	        		showAlertTemplate( templateContent );
 	        	} 
             	, toTrustedHTML : function( html_text  ) {
             		  return $sce.trustAsHtml( html_text );	// $sce: Strict Contextual Escaping

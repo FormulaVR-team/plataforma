@@ -29,7 +29,7 @@
 			<span class="{{ actionForm.rs_US_is_admin === 'A' ? '' : 'hide' }}">
 			<md-button class="md-raised md-primary" ng-click="gamingModule()" title="Resultados"><md-icon> extension </md-icon> Resultados </md-button>
 			</span>
-			<md-button class="md-raised md-primary" ng-click="initReg()" data-toggle="modal" data-target="#rsDSPFIL_ADDRCD_modal" title="<bean:message key="common.client.nuevo"/>"><md-icon> add </md-icon> Nueva reserva </md-button>
+			<md-button class="md-raised md-accent" ng-click="initReg()" data-toggle="modal" data-target="#rsDSPFIL_ADDRCD_modal" title="<bean:message key="common.client.nuevo"/>"><md-icon> add </md-icon> Nueva reserva </md-button>
 		</div>
 
 	</div>
@@ -268,13 +268,13 @@
 			<div class="modal-content" style="background-color: #F5F5F5;">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" ng-click="filtrar()">&times;</button>
-					<h4 class="modal-title" style="margin-top: 4px;" layout="row" layout-align="space-between none">
+					<h6 class="modal-title" style="margin-top: 4px;" layout="row" layout-align="space-between none">
 						<picture>
 							<img class="brand-img hidden-xs" style="width: 250px;margin-left: 20px;" src="./resBS/img/formulavr.png" alt="Formula VR" onclick="window.location ='./index.jsp';"/>
 							<img class="brand-img show-xs" style="width: 200px;margin-left: 20px;" src="./resBS/img/formulavr.png" alt="Formula VR" onclick="window.location ='./index.jsp';"/>
 						</picture>
 						<span class="modal-spn-title hidden-xs">{{varGlobal.logon_USR}}&nbsp;&nbsp;</span>
-					</h4>
+					</h6>
 				</div>
 				<div class="modal-body" style="padding: 0px 15px 15px 15px;">
 					<span ng-include="'ng/rs_reservations/views/RsADDRCD_view_basic.jsp'" />

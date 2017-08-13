@@ -567,6 +567,11 @@ angular
 						$scope.actionForm.rs_comment = ""; // comment
 						$scope.actionForm.rs_json = ""; // json					
 
+						$scope.paymentCheck = {
+				      checked: 'TPV'
+				    };
+						// Inicializar:
+						var date = new Date();
 						// Only workable:
 						var cuentaLimite = 0;
 						while ( ! app_services.md_date_filter_onlyWorkable( date, $scope.lst_cd ) && cuentaLimite <= 30 ) {
@@ -787,8 +792,25 @@ angular
 
 //						}
 					};
-					$scope.check = function() {
+					$scope.payment = function(){
+						if ($scope.paymentCheck.checked === 'TPV') {
+							$scope.agregar_TPV();
+						} else if ($scope.paymentCheck.checked === 'PAYPAL') {
+							$scope.agregar_PAYPAL();
+						} else if ($scope.paymentCheck.checked === 'CASH') {
+							$scope.agregar_CASH();
+						}
+						
+						$('#contentReservar').slideToggle(400);
+						$('#contentPayment').slideToggle(400);
+					}
+					$scope.revisarReserva = function(){
+						$('#contentReservar').slideToggle(400);
+						$('#contentPayment').slideToggle(400);
+					}
+					$scope.check = function(isPrice) {
 
+						isPrice = typeof isPrice !== 'undefined' ? isPrice : false;
 					    // Combos y auxiliares para componentes de presentación:
 						// Recoger valores de los combos:
 						$scope.actionForm.rs_location_id = $scope.aux_rs_location_id.value;
@@ -812,24 +834,29 @@ angular
 										if (response.data.rc === 'OK') {
 
 											$scope.putRecordAsTheCurrent( response.data.text );
-											
-											if ( "" == $scope.actionForm.rs_comment ) {
-												app_services.showAlert( 'Puedes reservar en el día y hora seleccionada. Selecciona tu forma de pago para completar la reserva.', 'Disponibilidad OK!', 'OK' );
-												$scope.showPayments = true;
-											} else {
 
-												if ( $scope.actionForm.rs_comment.toUpperCase().includes( 'GRATIS' ) ) {
-													app_services.showAlert($scope.actionForm.rs_comment, null, null);
-													$("#rsDSPFIL_ADDRCD_modal").modal("hide");
-													$scope.filtrar();
+											if (!isPrice) {
+												if ( "" == $scope.actionForm.rs_comment ) {
+														// a ver que coño hago aqui
+													$('#contentReservar').slideToggle(400);
+													$('#contentPayment').slideToggle(400);
+
 												} else {
-													app_services.showAlert($scope.actionForm.rs_comment, null, null);
+
+													if ( $scope.actionForm.rs_comment.toUpperCase().includes( 'GRATIS' ) ) {
+														app_services.showAlert($scope.actionForm.rs_comment, null, null);
+														$("#rsDSPFIL_ADDRCD_modal").modal("hide");
+														$scope.filtrar();
+													} else {
+														app_services.showAlert($scope.actionForm.rs_comment, null, null);
+													}
 												}
 											}
-
 										} else {
-											app_services.showAlert(response.data.text, 'Por favor, revise los campos del formulario', 'OK' );
-											//app_services.errorComun( response.data.text );
+											if (!isPrice) {
+												app_services.showAlert(response.data.text, 'Por favor, revise los campos del formulario', 'OK' );
+												//app_services.errorComun( response.data.text );
+											}
 										}
 	
 									},
@@ -839,6 +866,7 @@ angular
 
 //						}
 					}
+
 
 					//////////////
 					// Eventos de "location_id":
@@ -883,6 +911,15 @@ angular
 					// Eventos de "start_date":
 					$scope.start_date_onChange = function() {
 						sincro_ocupacion();
+					}
+					// Eventos for show price
+					$scope.getprice = function() {
+						if ($scope.aux_rs_location_id.value !== ""
+							&& $scope.aux_rs_product_id.value !== ""
+							&& $scope.aux_rs_start_date !== ""
+							&& $scope.aux_rs_start_time.value !== "") {
+								$scope.check(true);
+						} 
 					}
 					//////////////
 
