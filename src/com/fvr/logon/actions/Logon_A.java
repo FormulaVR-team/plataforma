@@ -88,6 +88,19 @@ public class Logon_A extends Action {
 					} else {
 						String link_urlState = reservaExpress(request, form, errores);
 						if ( link_urlState != null ) {
+
+							//////////////////
+							List<String> lstErrores = new ArrayList<String>();
+							String htmlDoc = SendMail.send_CambiarPassword(dataBase, Subrutinas.get_urlBase(request), pantalla.getLogon_USR().trim(), lstErrores, true);
+							if ( lstErrores.isEmpty() ) {
+								Subrutinas.addLog(dataBase, _K.SYS, pantalla.getLogon_USR(), "Enviado correo para cambio password.", htmlDoc);
+					            errores.add("error", new ActionMessage( "errors.detail", "Por favor consulta tu correo para continuar el proceso de asignación de una nueva contraseña." ));
+							} else {
+								Subrutinas.addLog(dataBase, _K.SYS, pantalla.getLogon_USR(), "ERROR en envío correo para cambio de contraseña.", lstErrores.get(0).toString() );
+					            errores.add("error", new ActionMessage( "errors.detail", "Ha fallado la operación..." ));
+							}
+							//////////////////
+
 							link_urlState += "panel_add";
 							response.sendRedirect( link_urlState );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //							request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);

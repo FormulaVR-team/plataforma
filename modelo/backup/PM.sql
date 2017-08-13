@@ -1,4 +1,4 @@
---
+﻿--
 -- PostgreSQL database dump
 --
 
@@ -21,7 +21,7 @@ SET search_path = "FormulaVR", pg_catalog;
 -- Data for Name: T_PM_promosManuales; Type: TABLE DATA; Schema: FormulaVR; Owner: postgres
 --
 
-INSERT INTO "T_PM_promosManuales" VALUES ('170813123030462', ' ', ' ', '', 'CENTRAL', 'BVDA-1357', 'Bienvenida gratis', 10, 4, '0100', 'DP100', '2017-12-31', '');
+INSERT INTO "T_PM_promosManuales" VALUES ('170813123030462', ' ', ' ', '', 'CENTRAL', 'BVDA-1357', 'Bienvenida gratis', 10, 1, '0100', 'DP100', '2017-08-31', '');
 
 
 -- Completed on 2017-08-13 12:56:48
