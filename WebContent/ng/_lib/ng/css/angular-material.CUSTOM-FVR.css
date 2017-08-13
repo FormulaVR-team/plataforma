@@ -4,6 +4,174 @@
  * @license MIT
  * v1.1.0 
  */
+/* FONTS */
+@font-face {
+    font-family: "Raleway-Thin"; /* 100 */
+    src: url('./../../../../resBS/fonts/Raleway-Thin.ttf');
+}
+@font-face {
+    font-family: "Raleway-ThinItalic";
+    src: url('./../../../../resBS/fonts/Raleway-ThinItalic.ttf');
+}
+@font-face {
+    font-family: "Raleway-ExtraLight"; /* 200 */
+    src: url('./../../../../resBS/fonts/Raleway-ExtraLight.ttf');
+}
+@font-face {
+    font-family: "Raleway-ExtraLightItalic";
+    src: url('./../../../../resBS/fonts/Raleway--ExtraLightItalic.ttf');
+}
+@font-face {
+    font-family: "Raleway-Light"; /* 300 */
+    src: url('./../../../../resBS/fonts/Raleway-Light.ttf');
+}
+@font-face {
+    font-family: "Raleway-LightItalic";
+    src: url('./../../../../resBS/fonts/Raleway-LightItalic.ttf');
+}
+@font-face {
+    font-family: "Raleway-Regular"; /* 400 */
+    src: url('./../../../../resBS/fonts/Raleway-Regular.ttf');
+}
+@font-face {
+    font-family: "Raleway-Italic";
+    src: url('./../../../../resBS/fonts/Raleway-Italic.ttf');
+}
+@font-face {
+    font-family: "Raleway-Medium"; /* 500 */
+    src: url('./../../../../resBS/fonts/Raleway-Medium.ttf');
+}
+@font-face {
+    font-family: "Raleway-MediumItalic";
+    src: url('./../../../../resBS/fonts/Raleway-MediumItalic.ttf');
+}
+@font-face {
+    font-family: "Raleway-SemiBold"; /* 600 */
+    src: url('./../../../../resBS/fonts/Raleway-SemiBold.ttf');
+}
+@font-face {
+    font-family: "Raleway-SemiBoldItalic";
+    src: url('./../../../../resBS/fonts/Raleway-SemiBoldItalic.ttf');
+}
+@font-face {
+    font-family: "Raleway-Bold"; /* 700 */
+    src: url('./../../../../resBS/fonts/Raleway-Bold.ttf');
+}
+@font-face {
+    font-family: "Raleway-BoldItalic";
+    src: url('./../../../../resBS/fonts/Raleway-BoldItalic.ttf');
+}
+@font-face {
+    font-family: "Raleway-ExtraBold"; /* 800 */
+    src: url('./../../../../resBS/fonts/Raleway-ExtraBold.ttf');
+}
+@font-face {
+    font-family: "Raleway-ExtraBoldItalic";
+    src: url('./../../../../resBS/fonts/Raleway-ExtraBoldItalic.ttf');
+}
+@font-face {
+    font-family: "Raleway-Black"; /* 900 */
+    src: url('./../../../../resBS/fonts/Raleway-Black.ttf');
+}
+@font-face {
+    font-family: "Raleway-BlackItalic";
+    src: url('./../../../../resBS/fonts/Raleway-BlackItalic.ttf');
+}
+
+body, html {
+    font-family: "Raleway-Regular", sans-serif, Arial, serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: sans-serif;
+    font-weight: normal;
+    color: rgba(0,0,0,0.87);
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+}
+
+button {
+	font-family: "Raleway-Regular", sans-serif, Arial, serif !important;
+}
+h1, h2, h3, h4, h5, h6, p {
+	line-height: 1.2em;
+    font-weight: 400;
+}
+h1 {
+	font-size: 2.2em;
+	margin: 1em 0 0.8em 0;
+    font-weight: 600;
+}
+h2 {
+	font-size: 2em;	
+	margin: 0.9em 0 0.7em 0;
+    font-weight: 600;
+}
+h3 {
+	font-size: 1.8em;	
+	margin: 0.8em 0 0.6em 0;
+    font-weight: 500;
+}
+h4 {
+	font-size: 1.6em;	
+	margin: 0.7em 0 0.5em 0;
+    font-weight: 500;
+}
+h5 {
+	font-size: 1.4em;	
+	margin: 0.6em 0 0.4em 0;
+    font-weight: 400;
+}
+h6 {
+	font-size: 1.2em;	
+	margin: 0.5em 0 0.3em 0;
+    font-weight: 400;
+}
+p {
+	font-size: 1em;	
+	margin: 0.4em 0 0.3em 0;
+}
+@media ( min-width: 1200px ){
+	html {
+	    font-size: 16px;
+	}
+}
+@media ( min-width: 992px ) and (max-width: 1199px ){
+	html {
+	    font-size: 16px;
+	}
+}
+@media ( max-width: 991px ){
+	html {
+	    font-size: 15px;
+	}
+}
+@media ( min-width: 768px ) and ( max-width: 991px ){
+	html {
+	    font-size: 15px;
+	}
+}
+@media ( max-width: 767px ){
+	html {
+	    font-size: 14px;
+	}
+}
+@media ( min-width: 481px ) and ( max-width: 767px ){
+	html {
+	    font-size: 14px;
+	}
+}
+@media ( max-width: 480px ){
+	html {
+	    font-size: 14px;
+	}
+}
+
 
 	.md-button.button-close {
 		min-width: auto;
@@ -28,9 +196,22 @@
 		z-index: 2000;
 	}
 md-card {
-    box-shadow: 0 1px 5px 2px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12) !important;
+    box-shadow: 0 0px 5px 0px rgba(0,0,0,.5) !important;
+    border-radius: 4px !important;
 }
 
+md-card md-card-title {
+	padding: 40px 40px 0px 40px !important;
+}
+md-card md-card-title + md-card-content {
+    padding: 0px 40px 40px 40px !important;
+}
+md-card md-card-actions {
+	padding: 0px 40px 40px 40px !important;
+}
+.md-button {
+	padding: 0 20px;
+}
 
 .list md-chip {
     cursor: default;
@@ -62,4 +243,85 @@ md-card {
 md-card md-card-header md-card-avatar .md-user-avatar {
 	width: 40px;
 	height: 40px;
+}
+md-card .md-button.btn-lnk, a.md-button {
+	text-transform: initial;
+}
+md-card .md-button.btn-lnk:hover, md-card .md-button.btn-lnk:active, md-card .md-button.btn-lnk:focus
+a.md-button:hover, a.md-button:active, a.md-button:focus {
+background-color: transparent !important;
+text-decoration: underline;
+}
+
+/* PRELOADER */
+.preloaderbar {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  margin-bottom: -4px;
+}
+.preloaderbar .bar {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  text-indent: -9999px;
+  background-color: #23b7e5;
+}
+.preloaderbar .bar:before {
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  height: 4px;
+  background-color: inherit;
+  content: "";
+}
+.preloaderbar.active {
+  animation: changebar 2.25s infinite 0.75s;
+}
+.preloaderbar.active .bar {
+  animation: changebar 2.25s infinite;
+}
+.preloaderbar.active .bar:before {
+  animation: movingbar 0.75s infinite;
+}
+
+@keyframes movingbar {
+  0% {
+    right: 50%;
+    left: 50%;
+  }
+  99.9% {
+    right: 0;
+    left: 0;
+  }
+  100% {
+    right: 50%;
+    left: 50%;
+  }
+}
+@keyframes changebar {
+  0% {
+    background-color: #FF0;
+  }
+  33.3% {
+    background-color: #FF0;
+  }
+  33.33% {
+    background-color: #F00;
+  }
+  66.6% {
+    background-color: #F00;
+  }
+  66.66% {
+    background-color: #000;
+  }
+  99.9% {
+    background-color: #000;
+  }
+  100% {
+    background-color: #FF0;
+  }
 }

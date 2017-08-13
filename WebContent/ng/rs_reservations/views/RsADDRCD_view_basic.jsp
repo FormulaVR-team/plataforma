@@ -8,7 +8,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 
-<form name="RsADDRCD_form">
+<form name="RsADDRCD_form" class="modal-open md-dialog-is-showing">
+
 <section>
 
 	<div class="row">
@@ -21,10 +22,11 @@
 		
 				<div class="row">
 					<div class="col-xs-12" style="color: #FFF;background-color: #333C44;margin-bottom: 25px;">
-					<h4>Reserva<h4><span class="modal-spn-title hidden-sm hidden-md hidden-lg">&nbsp;{{varGlobal.logon_USR}}</span>
+					<h5>1 - Reserva<h5><span class="modal-spn-title hidden-sm hidden-md hidden-lg">&nbsp;{{varGlobal.logon_USR}}</span>
 					</div>
 				</div>
-	
+				<div class="row">
+				<div id="contentReservar" class="col-xs-12">
 		     	<div class="row">
 	
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
@@ -38,7 +40,7 @@
 									md-date-filter="$parent.aux_rs_start_date_filterFnc"
 									md-hide-icons="calendar"
 									md-open-on-focus="true"
-									ng-change="start_date_onChange()"
+									ng-change="start_date_onChange();getprice();"
 									required
 							></md-datepicker>
 						</md-input-container>
@@ -49,7 +51,7 @@
 			     		<!-- Selector CENTRO -->
 						<md-input-container class="md-block input-md">
 							<label><md-icon>edit_location</md-icon>Establecimiento selecionado</label>
-							<md-select placeholder="Seleccione Local" ng-model="$parent.aux_rs_location_id" md-on-open="location_id_onOpen()" md-on-close="location_id_onClose()" ng-model-options="{trackBy: '$value.value'}" required>
+							<md-select placeholder="Seleccione Local" ng-model="$parent.aux_rs_location_id" md-on-open="location_id_onOpen()" md-on-close="location_id_onClose()" ng-model-options="{trackBy: '$value.value'}" ng-change="getprice()" required>
 								<md-optgroup label="Local">
 									<md-option ng-value="item" ng-repeat="item in $parent.lst_lo">{{item.displayName}}</md-option>
 								</md-optgroup>			
@@ -62,7 +64,7 @@
 		     			<!-- hora -->
 						<md-input-container class="md-block input-md">
 							<label><md-icon>access_time</md-icon>Hora</label>
-							<md-select placeholder="Seleccione Hora" ng-model="$parent.aux_rs_start_time" ng-model-options="{trackBy: '$value.value'}" required>
+							<md-select placeholder="Seleccione Hora" ng-model="$parent.aux_rs_start_time" ng-model-options="{trackBy: '$value.value'}" ng-change="getprice();" required>
 								<md-optgroup label="Hora">
 									<md-option ng-value="item" ng-repeat="item in $parent.lst_tt">{{item.displayName}}</md-option>
 								</md-optgroup>			
@@ -78,7 +80,7 @@
 			     		<!-- Selector PRODUCTO -->
 						<md-input-container class="md-block input-md">
 							<label>Modalidad</label>
-							<md-select placeholder="Seleccione Modalidad" ng-model="$parent.aux_rs_product_id" ng-model-options="{trackBy: '$value.value'}" required>
+							<md-select placeholder="Seleccione Modalidad" ng-model="$parent.aux_rs_product_id" ng-change="getprice();" ng-model-options="{trackBy: '$value.value'}" required>
 								<md-optgroup label="Opciones">
 									<md-option ng-value="item" ng-repeat="item in $parent.lst_pt">{{item.displayName}}</md-option>
 								</md-optgroup>			
@@ -91,7 +93,7 @@
 		     			<!-- plazas -->
 						<md-input-container class="md-block input-md">
 							<label><md-icon>people_outline</md-icon>Coches</label>
-							<md-select placeholder="Seleccione Plazas" ng-model="$parent.actionForm.rs_places" required>
+							<md-select placeholder="Seleccione Plazas" ng-model="$parent.actionForm.rs_places" ng-change="getprice();" required>
 								<md-optgroup label="Plazas">
 									<md-option ng-repeat="item in $parent.lst_cp" value="{{item}}">{{item}} cabinas</md-option>
 								</md-optgroup>			
@@ -135,7 +137,7 @@
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
 						<md-input-container class="md-block input-md">
 							<label><md-icon style="font-size: 16px;"> card_giftcard </md-icon>Cupón promocional (opcional)</label>
-							<input type="text" ng-model="actionForm.rs_coupon_id" />
+							<input type="text" ng-model="actionForm.rs_coupon_id" ng-change="getprice();"/>
 						</md-input-container>
 		     		</div>
 	
@@ -143,39 +145,72 @@
 		
 		     	<div class="row text-right">
 		     		<div class="col-xs-12">
-		     			<h2 style="margin-top: 10px;text-align:right;" md-colors="{color: 'default-accent-800'}">Total a pagar: <span style="padding-left: 20px;">{{actionForm.rs_amount | number:2 }}&nbsp;€</span></h2>
+		     			<h3 style="margin-top: 10px;text-align:right;" md-colors="{color: 'default-accent-800'}">Total a pagar: <span style="padding-left: 20px;font-weight: bolder;">{{actionForm.rs_amount | number:2 }}&nbsp;€</span></h3>
 		     		</div>
-		     		<div class="col-xs-12 text-right">
-		     			<md-button class="md-raised md-warn" ng-click="check()"><h4>Comprobar disponibilidad</h4></md-button>
+		     		<div class="col-xs-12 text-right" style="margin-bottom: 20px;">
+		     			<md-button class="md-raised md-accent" ng-click="check()" style="font-size: 1.2em;padding: 5px 25px;">Siguiente</md-button>
 		     		</div>
 		     	</div>
-		
-		     	<div class="row text-right">
-		 			<div class="col-xs-12 col-sm-6">
-		 				<h4 class="" style="display: inline-block;">Selecciona tu forma de pago</h4>
-		 			</div>
-		 			<div class="col-xs-12 col-sm-6">
-			 			<div class="row">
-				 			<div class="col-xs-12">
-				 				<button class="md-raised md-button " style="width: 100%" ng-click="agregar_TPV()">
-				          			<img class="logo-icon-img" style="height: 40px;" src="./resBS/img/tarjetas.png" alt="" />
-								</button>
-				 			</div>
-				 			<div class="col-xs-12">
-				 				<button class="md-raised md-button " style="width: 100%" ng-click="agregar_PAYPAL()">
-					          		<img class="logo-icon-img" style="height: 40px;" src="./resBS/img/paypal.png" alt=""/>
-								</button>
-				 			</div>
-		
-				 			<div class="col-xs-12" style="margin-bottom: 20px;">
-				 				<button class="md-raised md-button " style="width: 100%" ng-click="agregar_CASH()">
-				          			<strong style="color: #0080ff">Efectivo / Tarjeta en establecimiento</strong>
-				          		</button>
-				 			</div>
-			 			</div>
-		 			</div>
+
+		    </div> 	
+		    </div>
+				<div class="row">
+					<div class="col-xs-12" style="color: #FFF;background-color: #333C44;margin-bottom: 25px;">
+					<h5>2 - Finalizar Reserva<h5>
+					</div>
 				</div>
-		
+		     	<div id="contentPayment" style="display: none" class="row">
+
+		     		<div class="col-xs-12 col-sm-6">
+			     		<h5>Resumen</h5>
+			     		<div class="row" style="margin: 0px;">
+		     				<div class="col-xs-12">
+					     		<div class="row" style="line-height: 35px;border-top: 1px solid #EAEAEA;">
+						     		<div class="col-xs-6">Lugar:</div>
+						     		<div class="col-xs-6"><b>{{ actionForm.rs_LO_name }}</b></div>
+						     	</div>
+					     		<div class="row" style="line-height: 35px;border-top: 1px solid #EAEAEA;">	
+					     			<div class="col-xs-6">Día:</div>
+					     			<div class="col-xs-6"><b>{{ actionForm.rs_start_date }}</b></div>
+									</div>
+					     		<div class="row" style="line-height: 35px;border-top: 1px solid #EAEAEA;">
+					     			<div class="col-xs-6">Hora:</div>
+					     			<div class="col-xs-6"><b>{{actionForm.rs_start_time.substr(0,2)}}:{{actionForm.rs_start_time.substr(2,2)}}</b></div>
+					     		</div>
+					     		<div class="row" style="line-height: 35px;border-top: 1px solid #EAEAEA;">
+					     			<div class="col-xs-6">Plazas:</div>
+					     			<div class="col-xs-6"><b>{{ actionForm.rs_places }}</b></div>
+					     		</div>
+					     		<div class="row" style="line-height: 35px;border-top: 1px solid #EAEAEA;border-bottom: 1px solid #EAEAEA;">
+					     			<div class="col-xs-6">Total:</div>
+					     			<div class="col-xs-6"><b>{{actionForm.rs_amount | number:2 }}&nbsp;€</b></div>
+					     		</div>
+					     	</div>
+					    </div>
+			     		<div class="row" >
+			     			<div class="col-xs-12" style="margin-top: 20px;margin-bottom: 20px;">
+			     				<md-button class="md-raised" ng-click="revisarReserva();">Revisar</md-button> 
+			     			</div>
+			     		</div>
+		     		</div>
+		     		<div class="col-xs-12 col-sm-6">
+							<h5>Selecciona una forma de pago</h5> 
+							<p>&nbsp;</p>	 
+					    <md-radio-group ng-model="paymentCheck.checked"> 
+
+					      <md-radio-button value="TPV" class="md-primary" style="border-top: 1px dashed;border-bottom: 1px dashed;line-height: 50px;"><b>Tarjeta</b> <img class="logo-icon-img" style="height: 40px;padding-left: 20px;" src="./resBS/img/tarjetas.png" alt="" /></md-radio-button> 
+					      <md-radio-button value="PAYPAL" class="md-primary" style="border-top: 1px dashed;border-bottom: 1px dashed;line-height: 50px;"><b>PayPal</b> <img class="logo-icon-img" style="height: 40px;padding-left: 20px;" src="./resBS/img/paypal.png" alt=""/></md-radio-button> 
+					      <md-radio-button value="CASH" class="md-primary" style="border-top: 1px dashed; border-bottom: 1px dashed;line-height: 50px;"><b>Efectivo / Tarjeta en establecimiento</b></md-radio-button> 
+
+					    </md-radio-group> 
+
+							<div class="row">
+								<div class="col-xs-12 text-right" style="margin-bottom:20px;">
+									<md-button class="md-raised md-accent" ng-click="payment();" style="font-size: 1.2em;padding: 5px 25px;">Reservar</md-button>
+								</div>
+							</div>
+						</div>
+		     	</div>
 		
 				<div class="hide">
 							<md-input-container class="col-sm-3">
@@ -195,7 +230,7 @@
 								<input type="text" ng-model="actionForm.rs_pay_status" />
 							</md-input-container>
 				</div>		
-		
+
 		
 		 		</div>		
 		
@@ -210,7 +245,7 @@
 				<div class="col-xs-12 box" style="padding: 0px 15px 25px;">
 					<div class="row">
 						<div class="col-xs-12" style="color: #FFF;background-color: #333C44;margin-bottom: 0px;">
-							<h4>Ocupación:&nbsp;{{actionForm.rs_LO_name}}<h4>
+							<h5>Ocupación:&nbsp;{{actionForm.rs_LO_name}}<h5>
 						</div>
 					</div>
 					<h4>{{actionForm.rs_start_date | date:'EEEE, d MMMM y' }}</h4>
@@ -238,7 +273,6 @@
 	</div>		
 
 </section>
-
     <div class="modal-footer hidden">
     	<div layout="row" layout-align="start start">
 
