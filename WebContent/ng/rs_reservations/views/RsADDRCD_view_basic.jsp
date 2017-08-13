@@ -32,7 +32,8 @@
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
 						<!-- Selector CENTRO -->
 						<md-input-container class="md-block input-md">
-							<label><md-icon>edit_location</md-icon>Establecimiento selecionado</label>
+							<label>Establecimiento selecionado</label>
+							<md-icon>place</md-icon>
 							<md-select placeholder="Seleccione Local" ng-model="$parent.aux_rs_location_id" md-on-open="location_id_onOpen()" md-on-close="location_id_onClose()" ng-model-options="{trackBy: '$value.value'}" ng-change="getprice()" required>
 								<md-optgroup label="Local">
 									<md-option ng-value="item" ng-repeat="item in $parent.lst_lo">{{item.displayName}}</md-option>
@@ -45,7 +46,8 @@
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
 		     			<!-- Fecha -->
 						<md-input-container class="md-block input-md">
-							<label><md-icon>today</md-icon>Fecha a Reservar</label>
+							<label>Fecha a Reservar</label>
+							<md-icon>today</md-icon>
 							<md-datepicker 
 									ng-model="$parent.aux_rs_start_date"
 									md-min-date="$parent.aux_rs_start_date_minDate"
@@ -53,6 +55,7 @@
 									md-date-filter="$parent.aux_rs_start_date_filterFnc"
 									md-hide-icons="calendar"
 									md-open-on-focus="true"
+									style="margin-left: 30px;"
 									ng-change="start_date_onChange();getprice();"
 									required
 							></md-datepicker>
@@ -63,7 +66,8 @@
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
 		     			<!-- hora -->
 						<md-input-container class="md-block input-md">
-							<label><md-icon>access_time</md-icon>Hora</label>
+							<label>Hora</label>
+							<md-icon>access_time</md-icon>
 							<md-select placeholder="Seleccione Hora" ng-model="$parent.aux_rs_start_time" ng-model-options="{trackBy: '$value.value'}" ng-change="getprice();" required>
 								<md-optgroup label="Hora">
 									<md-option ng-value="item" ng-repeat="item in $parent.lst_tt">{{item.displayName}}</md-option>
@@ -80,6 +84,7 @@
 			     		<!-- Selector PRODUCTO -->
 						<md-input-container class="md-block input-md">
 							<label>Modalidad</label>
+							<md-icon>local_offer</md-icon>
 							<md-select placeholder="Seleccione Modalidad" ng-model="$parent.aux_rs_product_id" ng-change="getprice();" ng-model-options="{trackBy: '$value.value'}" required>
 								<md-optgroup label="Opciones">
 									<md-option ng-value="item" ng-repeat="item in $parent.lst_pt">{{item.displayName}}</md-option>
@@ -92,7 +97,8 @@
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
 		     			<!-- plazas -->
 						<md-input-container class="md-block input-md">
-							<label><md-icon>people_outline</md-icon>Coches</label>
+							<label>Coches</label>
+							<md-icon>supervisor_account</md-icon>
 							<md-select placeholder="Seleccione Plazas" ng-model="$parent.actionForm.rs_places" ng-change="getprice();" required>
 								<md-optgroup label="Plazas">
 									<md-option ng-repeat="item in $parent.lst_cp" value="{{item}}">{{item}} cabinas</md-option>
@@ -105,7 +111,8 @@
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
 		     			<!-- phone -->
 						<md-input-container class="md-block input-md">
-							<label><md-icon style="font-size: 16px;"> phone </md-icon>Teléfono</label>
+							<label>Teléfono</label>
+							<md-icon> phone </md-icon>
 							<input type="text" ng-model="actionForm.rs_phone" required />
 						</md-input-container>
 						<!-- phone fin -->
@@ -119,6 +126,7 @@
 		     			<!-- Nick -->
 						<md-input-container class="md-block input-md">
 							<label> Alias de piloto (Nick)</label>
+							<md-icon>person</md-icon>
 							<input type="text" ng-model="actionForm.rs_US_nick" required />
 						</md-input-container>
 						<!-- Nick fin -->
@@ -126,7 +134,8 @@
 	
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
 			     		<md-input-container class="md-block input-md">
-							<label><md-icon style="font-size: 16px;"> message </md-icon>Notas o comentario (opcional)</label>
+							<label>Notas o comentario (opcional)</label>
+							<md-icon> message </md-icon>
 							<textarea name="rs_note" md-maxlength="200" cols="100" rows="1" ng-model="actionForm.rs_note"></textarea>
 						    <div ng-messages="RsADDRCD_form.rs_note.$error" ng-show="RsADDRCD_form.rs_note.$dirty">
 						      <div ng-message="md-maxlength">Comentario demasiado largo!</div>
@@ -136,7 +145,8 @@
 	
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
 						<md-input-container class="md-block input-md">
-							<label><md-icon style="font-size: 16px;"> card_giftcard </md-icon>Cupón promocional (opcional)</label>
+							<label>Cupón promocional (opcional)</label>
+							<md-icon> card_giftcard </md-icon>
 							<input type="text" ng-model="actionForm.rs_coupon_id" ng-change="getprice();"/>
 						</md-input-container>
 		     		</div>
@@ -152,7 +162,6 @@
 		     		</div>
 		     	</div>
 
-<<<<<<< HEAD
 		    </div> 	
 		    </div>
 				<div class="row">
