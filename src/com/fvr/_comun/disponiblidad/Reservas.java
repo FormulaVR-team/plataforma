@@ -257,6 +257,11 @@ public class Reservas implements Serializable{
 				}
 			}
 		}
+		
+		////////////////
+		// 2017-08-13. Redondeo a entero:
+		amount = (double)((long)(amount + 0.5));
+		////////////////
 
 		reg_rs.setRs_comment( "" );
 		reg_rs.setRs_amount( amount );
