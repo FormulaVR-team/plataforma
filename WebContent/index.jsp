@@ -34,6 +34,7 @@
 	<script src="./ng/_lib/ng/angular-animate.min.js?fvrVer=${miVersion}"></script>
 	<script src="./ng/_lib/ng/angular-aria.min.js?fvrVer=${miVersion}"></script>
 	<script src="./ng/_lib/ng/angular-messages.min.js?fvrVer=${miVersion}"></script>
+	<script src="./ng/_lib/ng/angular-sanitize.min.js?fvrVer=${miVersion}"></script>
 	<script src="./ng/_lib/ng/angular-md5.js?fvrVer=${miVersion}"></script>
 	
 	<script src="./ng/_lib/ng/i18n/angular-locale_es-es.min.js"></script>
