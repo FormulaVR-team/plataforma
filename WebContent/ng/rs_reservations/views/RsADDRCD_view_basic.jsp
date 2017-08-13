@@ -176,24 +176,24 @@
 			     		<div class="row" style="margin: 0px;">
 		     				<div class="col-xs-12">
 					     		<div class="row" style="line-height: 35px;border-top: 1px solid #EAEAEA;">
-						     		<div class="col-xs-6">Lugar:</div>
-						     		<div class="col-xs-6"><b>{{ actionForm.rs_LO_name }}</b></div>
+						     		<div class="col-xs-5">Lugar:</div>
+						     		<div class="col-xs-7"><b>{{ actionForm.rs_LO_name }}</b></div>
 						     	</div>
 					     		<div class="row" style="line-height: 35px;border-top: 1px solid #EAEAEA;">	
-					     			<div class="col-xs-6">Día:</div>
-					     			<div class="col-xs-6"><b>{{ actionForm.rs_start_date }}</b></div>
+					     			<div class="col-xs-5">Día:</div>
+					     			<div class="col-xs-7"><b>{{actionForm.rs_start_date | date:'EEEE, d MMMM y'}}</b></div>
 									</div>
 					     		<div class="row" style="line-height: 35px;border-top: 1px solid #EAEAEA;">
-					     			<div class="col-xs-6">Hora:</div>
-					     			<div class="col-xs-6"><b>{{actionForm.rs_start_time.substr(0,2)}}:{{actionForm.rs_start_time.substr(2,2)}}</b></div>
+					     			<div class="col-xs-5">Hora:</div>
+					     			<div class="col-xs-7"><b>{{actionForm.rs_start_time.substr(0,2)}}:{{actionForm.rs_start_time.substr(2,2)}}</b></div>
 					     		</div>
 					     		<div class="row" style="line-height: 35px;border-top: 1px solid #EAEAEA;">
-					     			<div class="col-xs-6">Plazas:</div>
-					     			<div class="col-xs-6"><b>{{ actionForm.rs_places }}</b></div>
+					     			<div class="col-xs-5">Plazas:</div>
+					     			<div class="col-xs-7"><b>{{ actionForm.rs_places }}</b></div>
 					     		</div>
 					     		<div class="row" style="line-height: 35px;border-top: 1px solid #EAEAEA;border-bottom: 1px solid #EAEAEA;">
-					     			<div class="col-xs-6">Total:</div>
-					     			<div class="col-xs-6"><b>{{actionForm.rs_amount | number:2 }}&nbsp;€</b></div>
+					     			<div class="col-xs-5">Total:</div>
+					     			<div class="col-xs-7"><b>{{actionForm.rs_amount | number:2 }}&nbsp;€</b></div>
 					     		</div>
 					     	</div>
 					    </div>
