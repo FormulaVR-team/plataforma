@@ -27,6 +27,7 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.struts.action.ActionMessage;
 
 import com.fvr.FuentesDeDatos.BDConexion;
 import com.fvr._comun.ConfigPantalla;
@@ -124,6 +125,8 @@ public class FvrServlet extends HttpServlet {
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=FVRMonitor
     private static final String getRsFecMin = "getRsFecMin";  // Devuelve la fecha ISO mínima posible para reservar
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=getRsFecMin&LOC=CENTRAL
+    private static final String sndMail_forgotPass = "sndMail_forgotPass";  // Lanza un correo de "Olvidé la password"
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=sndMail_forgotPass&USR=eestecha@gmail.com
 
 //	/////////////////////////////////
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -275,6 +278,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_FVRMonitor(request, response, payload);
     	} else if (getRsFecMin.equalsIgnoreCase( acc )) {
     		cmd_getRsFecMin(request, response, loc);
+    	} else if (sndMail_forgotPass.equalsIgnoreCase( acc )) {
+    		cmd_sndMail_forgotPass(request, response, usr);
     	} else {
     		responder(request, response, false, "Servicio no contemplado " + acc );
     	}
@@ -1030,6 +1035,34 @@ public class FvrServlet extends HttpServlet {
 			responder(request, response, true, Subrutinas.getFecha_aaaa_mm_dd( hoy ) );
 		}
 
+	}
+
+	private void cmd_sndMail_forgotPass(HttpServletRequest request, HttpServletResponse response, String usr) throws IOException {
+		if ( usr == null || usr.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		BDConexion dataBase = new Subrutinas().getBDConexion(request);
+		com.fvr.us_users.bean.UsBean reg_us = Subrutinas.getUsFromId(dataBase, usr);
+		
+		if ( reg_us != null && reg_us.getUs_sincro() != null && reg_us.getUs_sincro().trim().length() > 0 ) {
+
+			//////////////////
+			List<String> lstErrores = new ArrayList<String>();
+			String htmlDoc = SendMail.send_CambiarPassword(dataBase, Subrutinas.get_urlBase(request), reg_us.getUs_user_id(), lstErrores, true);
+			if ( lstErrores.isEmpty() ) {
+				Subrutinas.addLog(dataBase, _K.SYS, reg_us.getUs_user_id(), "Enviado correo para cambio password.", htmlDoc);
+				responder(request, response, true, usr + ": Consulta tu correo para continuar el proceso.");
+				return;
+			} else {
+				Subrutinas.addLog(dataBase, _K.SYS, reg_us.getUs_user_id(), "ERROR en envío correo para cambio de contraseña.", lstErrores.get(0).toString() );
+				responder(request, response, false, usr + ": " + lstErrores.get(0).toString());
+				return;
+			}
+			//////////////////
+
+		}
+
+		responder(request, response, false, "No existe: " + usr);
+		
 	}
 
 	///////////////////////////
