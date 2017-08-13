@@ -11,6 +11,7 @@ import com.fvr._comun.ConfigPantalla;
 import com.fvr._comun.StExcepcion;
 import com.fvr._comun.Subrutinas;
 import com.fvr._comun._K;
+import com.fvr.cd_LocationClosedDays.bean.CdBean;
 import com.fvr.pm_promosManuales.bean.PmBean;
 import com.fvr.pt_products.bean.PtBean;
 import com.fvr.rs_reservations.bean.RsBean;
@@ -291,6 +292,19 @@ public class Reservas implements Serializable{
 		if ( reg_rs.getRs_start_time() == null || reg_rs.getRs_start_time().trim().length() < 1 ) { errores.add(tag+": Falta start_time"); return resultado; }
 		if ( reg_rs.getRs_duration_minutes()  < 1L ) { errores.add(tag+": Falta duration_minutes"); return resultado; }
 		if ( reg_rs.getRs_places()  < 1L ) { errores.add(tag+": Falta places"); return resultado; }
+		
+		///////
+		// Chequear que no es un día de cierre del local:
+		com.fvr.cd_LocationClosedDays.bean.CdBean[] rgs_cd = Subrutinas.getCdFromLo(dataBase, reg_rs.getRs_location_id());
+		if ( rgs_cd != null ) {
+			for ( CdBean item : rgs_cd ) {
+				if ( reg_rs.getRs_start_date().equalsIgnoreCase( item.getCd_closed_day_aaaa_mm_dd() ) ) {
+					errores.add("El lugar se encuentra cerrado en la fecha seleccionada: " + reg_rs.getRs_start_date() + "."); 
+					return resultado;
+				}
+			}
+		}
+		///////
 
 		///////////////////
 		// Time slices: (Crear trozos de tiempo en intervalos del mínimo vendible)

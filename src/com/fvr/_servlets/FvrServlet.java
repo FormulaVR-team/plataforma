@@ -602,27 +602,14 @@ public class FvrServlet extends HttpServlet {
 	private void cmd_cd_lst(HttpServletRequest request, HttpServletResponse response, String location_id) throws IOException {
 		if ( location_id == null || location_id.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
 
-		BDConexion dataBase = new Subrutinas().getBDConexion(request);
-
 		List<String> lista = new ArrayList<String>();
 
-		try {
-			com.fvr.cd_LocationClosedDays.db.CdAccesoBaseDatos dao = new com.fvr.cd_LocationClosedDays.db.CdAccesoBaseDatos();
-			com.fvr.cd_LocationClosedDays.bean.CdBeanFiltro    flt = new com.fvr.cd_LocationClosedDays.bean.CdBeanFiltro();
-			com.fvr.cd_LocationClosedDays.bean.CdBean[]        rgs = null;
-			
-			flt.setCd_location_id( location_id );
-			
-			rgs = dao.cd_getSeq(dataBase, new ConfigPantalla( Integer.MAX_VALUE ), flt);
+		com.fvr.cd_LocationClosedDays.bean.CdBean[] rgs = Subrutinas.getCdFromLo(new Subrutinas().getBDConexion(request), location_id);
 
-			if ( rgs != null ) {
-				for ( CdBean item : rgs ) {
-					lista.add( item.getCd_closed_day_aaaa_mm_dd() );
-				}
+		if ( rgs != null ) {
+			for ( CdBean item : rgs ) {
+				lista.add( item.getCd_closed_day_aaaa_mm_dd() );
 			}
-		} catch (StExcepcion e) {
-			responder(request, response, false, e.getMessage());
-			return;
 		}
 
 		responder(request, response, true, lista.toString() );

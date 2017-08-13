@@ -54,6 +54,7 @@ import org.apache.struts.action.ActionMessages;
 
 import com.fvr.FuentesDeDatos.BDConexion;
 import com.fvr._comun.disponiblidad.Reservas;
+import com.fvr.cd_LocationClosedDays.bean.CdBean;
 import com.fvr.lo_location.bean.LoBean;
 import com.fvr.pa_systemParameters.bean.PaBean;
 import com.fvr.pm_promosManuales.bean.PmBean;
@@ -1900,6 +1901,18 @@ public class Subrutinas {
 			resultado = dao_rs.rs_getSeq(dataBase, new ConfigPantalla(Integer.MAX_VALUE), flt_rs, isSolopagadas);
 		} catch (StExcepcion e) {;}
 		return resultado;
+	}
+	public static CdBean[] getCdFromLo(BDConexion dataBase, String location_id) {
+		com.fvr.cd_LocationClosedDays.bean.CdBean[] rgs = null;
+		if ( location_id != null && location_id.trim().length() > 0 ) {
+			try {
+				com.fvr.cd_LocationClosedDays.db.CdAccesoBaseDatos dao = new com.fvr.cd_LocationClosedDays.db.CdAccesoBaseDatos();
+				com.fvr.cd_LocationClosedDays.bean.CdBeanFiltro    flt = new com.fvr.cd_LocationClosedDays.bean.CdBeanFiltro();
+				flt.setCd_location_id( location_id );
+				rgs = dao.cd_getSeq(dataBase, new ConfigPantalla( Integer.MAX_VALUE ), flt);
+			} catch (StExcepcion e) {;}
+		}
+		return rgs;
 	}
 	public static PmBean getPmFromId(BDConexion dataBase, String coupon_id) {
 		PmBean key = new PmBean();
