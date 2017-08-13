@@ -147,7 +147,7 @@
 						<md-input-container class="md-block input-md">
 							<label>Cupón promocional (opcional)</label>
 							<md-icon> card_giftcard </md-icon>
-							<input type="text" ng-model="actionForm.rs_coupon_id" ng-change="getprice();"/>
+							<input type="text" ng-model="actionForm.rs_coupon_id" ng-change="//getprice();"/>
 						</md-input-container>
 		     		</div>
 	

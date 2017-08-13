@@ -24,6 +24,7 @@ SET search_path = "FormulaVR", pg_catalog;
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'VERSION', '17164');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'MG_URL', 'https://driver.formulavr.net/');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'RS_LAST_KEY', '11840001');
+INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'CENTRAL', 'SYS', 'RS_MIN_FEC', '2000-12-31');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'DOMAIN', 'formulavr.net');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'URL_WEB_PAGE', 'http://localhost:8080/FormulaVR/');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'SMTP_HOST_NAME', 'smtp.formulavr.net');

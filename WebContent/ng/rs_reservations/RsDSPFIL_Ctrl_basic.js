@@ -182,7 +182,7 @@ angular
 					$scope.aux_rs_start_date_maxDate	= new Date(); $scope.aux_rs_start_date_maxDate.setDate($scope.aux_rs_start_date_minDate.getDate()+60 );
 					$scope.aux_rs_start_date_filterFnc	= null; // function(date) { return app_services.md_date_filter_onlyWorkable( date, $scope.lst_cd ); }
 					
-					$scope.showPayments = false;
+//					$scope.showPayments = false;
 					/////
 					/////
 
@@ -517,7 +517,7 @@ angular
 					$scope.initReg = function() {
 
 						// Inicializar:
-						$scope.showPayments = false;
+//						$scope.showPayments = false;
 						var date = new Date();
 						$scope.lst_cd = null;
 
@@ -567,10 +567,8 @@ angular
 						$scope.actionForm.rs_comment = ""; // comment
 						$scope.actionForm.rs_json = ""; // json					
 
-						$scope.paymentCheck = {
-				      checked: 'TPV'
-				    };
 						// Inicializar:
+						$scope.paymentCheck = { checked: 'TPV' };
 						var date = new Date();
 						// Only workable:
 						var cuentaLimite = 0;
@@ -808,9 +806,9 @@ angular
 						$('#contentReservar').slideToggle(400);
 						$('#contentPayment').slideToggle(400);
 					}
-					$scope.check = function(isPrice) {
+					$scope.check = function(isOnlyForValoration) {
 
-						isPrice = typeof isPrice !== 'undefined' ? isPrice : false;
+						isOnlyForValoration = typeof isOnlyForValoration !== 'undefined' ? isOnlyForValoration : false;
 					    // Combos y auxiliares para componentes de presentación:
 						// Recoger valores de los combos:
 						$scope.actionForm.rs_location_id = $scope.aux_rs_location_id.value;
@@ -829,34 +827,40 @@ angular
 								.then(
 									function(response) {
 
-										$scope.showPayments = false;
+//										$scope.showPayments = false;
 
 										if (response.data.rc === 'OK') {
 
 											$scope.putRecordAsTheCurrent( response.data.text );
 
-											if (!isPrice) {
-												if ( "" == $scope.actionForm.rs_comment ) {
+											/////////////////////////
+											// NOTAS PARA QUE LAS VEA EL USUARIO:
+											// (ESPECIAL: SI LE SALE GRATIS YA LA HABRÁ GENERADO EL SERVIDOR)
+											if ( "" != $scope.actionForm.rs_comment ) {
+												if ( $scope.actionForm.rs_comment.toUpperCase().includes( 'GRATIS' ) ) {
+													// SI LE SALE GRATIS YA LA HABRÁ CREADO EL SERVIDOR. SALIR DE AQUI!!!
+													app_services.showAlert($scope.actionForm.rs_comment, null, null);
+													$("#rsDSPFIL_ADDRCD_modal").modal("hide");
+													$scope.filtrar();	// SALIDA DEL PANEL >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+												} else {
+													app_services.showAlert($scope.actionForm.rs_comment, null, null);
+												}
+											}
+											/////////////////////////
+
+											if (!isOnlyForValoration) {
+//												if ( "" == $scope.actionForm.rs_comment ) {
 														// a ver que coño hago aqui
 													$('#contentReservar').slideToggle(400);
 													$('#contentPayment').slideToggle(400);
-
-												} else {
-
-													if ( $scope.actionForm.rs_comment.toUpperCase().includes( 'GRATIS' ) ) {
-														app_services.showAlert($scope.actionForm.rs_comment, null, null);
-														$("#rsDSPFIL_ADDRCD_modal").modal("hide");
-														$scope.filtrar();
-													} else {
-														app_services.showAlert($scope.actionForm.rs_comment, null, null);
-													}
-												}
+//												}
 											}
+
 										} else {
-											if (!isPrice) {
+//											if (!isOnlyForValoration) {
 												app_services.showAlert(response.data.text, 'Por favor, revise los campos del formulario', 'OK' );
 												//app_services.errorComun( response.data.text );
-											}
+//											}
 										}
 	
 									},
