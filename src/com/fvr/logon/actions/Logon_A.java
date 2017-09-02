@@ -38,6 +38,9 @@ public class Logon_A extends Action {
         // ATENCIÓN: solo se adminten caracteres en minúsculas.
         if ( pantalla.getLogon_USR() != null ) { pantalla.setLogon_USR( pantalla.getLogon_USR().toLowerCase().trim() ); }
         
+        // ATENCIÓN: no puede contener blancos.
+        if ( pantalla.getLogon_USR() != null ) { pantalla.setLogon_USR( pantalla.getLogon_USR().replace(" ", "") ); }
+        
         /////////////////////////////////////////////////
         // Acciones en 'opcionPantalla':							REQUIERE
         //															======================
