@@ -183,7 +183,7 @@ public class TjADDRCD_A extends Action {
         ///////////////////////////////////////////
         // Inicializar campos:
         
-        
+        pantalla.setTj_author(pantalla.getLogon_USR());
 
         ///////////////////////////////////////////
         // Campos deducidos:

@@ -528,6 +528,37 @@ $mdThemingProvider
 			}
 		}
 	})
+	.state('TjDSPFIL', {
+		url: "/TjDSPFIL",
+		params: {
+			logon_USR: {
+				value: null
+			},
+			logon_HSH: {
+				value: null
+			}
+		},
+		resolve: {
+			greeting: function ($q, $timeout) {}
+		},
+		views: {
+			"rgnNavBar": {
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake3",
+				controller: "nav_bar_controller"
+			},
+			"rgnHeader": {
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake3",
+				controller: "header_controller"
+			},
+			"rgnFooter": {
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake3"
+			},
+			"rgnMain": {
+				templateUrl: "./ng/tj_tarjetasPrepago/views/TjDSPFIL_view_basic.jsp?version=fake3",
+				controller: "TjDSPFIL_Ctrl_basic"
+			}
+		}
+	})
 	.state('TkDSPFIL', {
 		url: "/TkDSPFIL",
 		params: {

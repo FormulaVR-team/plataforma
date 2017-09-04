@@ -111,6 +111,9 @@
 			<script src="ng/sg_publicProcesses/SgDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
 			<script src="ng/sg_publicProcesses/SgDSPFIL_service.js?fvrVer=${miVersion}"></script>
 		
+			<script src="ng/tj_tarjetasPrepago/TjDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
+			<script src="ng/tj_tarjetasPrepago/TjDSPFIL_service.js?fvrVer=${miVersion}"></script>
+		
 			<script src="ng/tk_tokens/TkDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
 			<script src="ng/tk_tokens/TkDSPFIL_service.js?fvrVer=${miVersion}"></script>
 		
