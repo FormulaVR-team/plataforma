@@ -1,6 +1,6 @@
 ﻿/*
 Created: 01/05/2017
-Modified: 06/08/2017
+Modified: 04/09/2017
 Model: FormulaVR_V10_PostgreSQL
 Database: PostgreSQL 9.2
 */
@@ -39,6 +39,8 @@ Database: PostgreSQL 9.2
 
 -- Drop keys for tables section -------------------------------------------------
 
+ALTER TABLE "FormulaVR"."T_TJ_tarjetasPrepago" DROP CONSTRAINT "PK_T_TJ_tarjetasPrepago"
+;
 ALTER TABLE "FormulaVR"."T_CD_LocationClosedDays" DROP CONSTRAINT "PK_T_CD_LocationClosedDays"
 ;
 ALTER TABLE "FormulaVR"."T_AC_activityCockpits" DROP CONSTRAINT "PK_T_AC_actividadCocpits"
@@ -82,6 +84,8 @@ DROP INDEX "FormulaVR"."idx_rs_pkDescend"
 
 -- Drop views section --------------------------------------------------- 
 
+DROP VIEW "FormulaVR"."V_TJ_RTV_tarjetasPrepago"
+;
 DROP VIEW "FormulaVR"."V_CD_RTV_LocationClosedDays"
 ;
 DROP VIEW "FormulaVR"."V_AC_RTV_activityCockpits"
@@ -121,6 +125,8 @@ DROP VIEW "FormulaVR"."V_US_RTV_users"
 
 -- Drop tables section ---------------------------------------------------
 
+DROP TABLE "FormulaVR"."T_TJ_tarjetasPrepago"
+;
 DROP TABLE "FormulaVR"."T_CD_LocationClosedDays"
 ;
 DROP TABLE "FormulaVR"."T_AC_activityCockpits"
@@ -673,6 +679,31 @@ COMMENT ON COLUMN "FormulaVR"."T_CD_LocationClosedDays"."sincro" IS 'Momento ins
 ALTER TABLE "FormulaVR"."T_CD_LocationClosedDays" ADD CONSTRAINT "PK_T_CD_LocationClosedDays" PRIMARY KEY ("location_id","closed_day_aaaa_mm_dd")
 ;
 
+-- Table FormulaVR.T_TJ_tarjetasPrepago
+
+CREATE TABLE "FormulaVR"."T_TJ_tarjetasPrepago"(
+ "sincro" Character varying(20) DEFAULT '' NOT NULL,
+ "mark" Character(1) DEFAULT '' NOT NULL,
+ "is_deleted" Character(1) DEFAULT '' NOT NULL,
+ "author" Character varying(50) DEFAULT '' NOT NULL,
+ "card_id" Character varying(50) DEFAULT '' NOT NULL,
+ "balance_initial" Numeric(12,3) NOT NULL,
+ "balance_current" Numeric(12,3) NOT NULL,
+ "last_sale_amount" Numeric(12,3) NOT NULL,
+ "last_sale_moment" Character varying(20) DEFAULT '' NOT NULL
+)
+WITH (OIDS=FALSE)
+;
+COMMENT ON COLUMN "FormulaVR"."T_TJ_tarjetasPrepago"."sincro" IS 'Momento inserción: aammddhhMMssDDD'
+;
+COMMENT ON COLUMN "FormulaVR"."T_TJ_tarjetasPrepago"."last_sale_moment" IS 'aammddhhMMssDDD'
+;
+
+-- Add keys for table FormulaVR.T_TJ_tarjetasPrepago
+
+ALTER TABLE "FormulaVR"."T_TJ_tarjetasPrepago" ADD CONSTRAINT "PK_T_TJ_tarjetasPrepago" PRIMARY KEY ("card_id")
+;
+
 -- Create views section -------------------------------------------------
 
 CREATE VIEW "FormulaVR"."V_US_RTV_users" AS
@@ -904,6 +935,16 @@ FROM
  "FormulaVR"."T_CD_LocationClosedDays" "a"
 ;
 
+CREATE VIEW "FormulaVR"."V_TJ_RTV_tarjetasPrepago" AS
+SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."card_id", "a"."balance_initial", "a"."balance_current", "a"."last_sale_amount", "a"."last_sale_moment"
+FROM 
+
+
+-- COD.AUTOGENERADO. Para fijarlo copiar en el apartado 'Notes'...
+
+ "FormulaVR"."T_TJ_tarjetasPrepago" "a"
+;
+
 
 
 
@@ -922,6 +963,7 @@ GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_PT_products" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_PY_PayPalTokens" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_RS_reservations" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_SG_publicProcesses" TO public;
+GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_TJ_tarjetasPrepago" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_TK_tokens" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_TS_timeSlices" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_TT_timeTableReference" TO public;
@@ -940,6 +982,7 @@ GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_PT_RTV_products" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_PY_RTV_PayPalTokens" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_RS_RTV_reservations" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_SG_RTV_publicProcesses" TO public;
+GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_TJ_RTV_tarjetasPrepago" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_TK_RTV_tokens" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_TS_RTV_timeSlices" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_TT_RTV_timeTableReference" TO public;

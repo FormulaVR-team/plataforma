@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="card_id" descripcion="card_id" descripcionCorta="card_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="balance_initial" descripcion="balance_initial" descripcionCorta="balance_initial" longitud="12" tipo="DEC" />
+		<CAM nombre="balance_current" descripcion="balance_current" descripcionCorta="balance_current" longitud="12" tipo="DEC" />
+		<CAM nombre="last_sale_amount" descripcion="last_sale_amount" descripcionCorta="last_sale_amount" longitud="12" tipo="DEC" />
+		<CAM nombre="last_sale_moment" descripcion="last_sale_moment" descripcionCorta="last_sale_moment" longitud="20" tipo="CHAR" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- TJ tarjetasPrepago -->
+	<ENT nombre="tarjetasPrepago" descripcion="tarjetasPrepago" prefijo="tj">
+		<FMT archivo="T_TJ_tarjetasPrepago" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="card_id" />
+			<CAM nombre="balance_initial" />
+			<CAM nombre="balance_current" />
+			<CAM nombre="last_sale_amount" />
+			<CAM nombre="last_sale_moment" />
+		</FMT>
+		<FMT archivo="T_TJ_tarjetasPrepago" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="card_id" />
+			<CAM nombre="balance_initial" />
+			<CAM nombre="balance_current" />
+			<CAM nombre="last_sale_amount" />
+			<CAM nombre="last_sale_moment" />
+			<KEY nombre="card_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_TJ_RTV_tarjetasPrepago" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="card_id" />
+			<CAM nombre="balance_initial" />
+			<CAM nombre="balance_current" />
+			<CAM nombre="last_sale_amount" />
+			<CAM nombre="last_sale_moment" />
+			<KEY nombre="card_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>
