@@ -61,6 +61,7 @@ import com.fvr.pm_promosManuales.bean.PmBean;
 import com.fvr.ps_countries.bean.PsBean;
 import com.fvr.pt_products.bean.PtBean;
 import com.fvr.rs_reservations.bean.RsBean;
+import com.fvr.tj_tarjetasPrepago.bean.TjBean;
 import com.fvr.tk_tokens.bean.TkBean;
 import com.fvr.us_users.bean.UsBean;
 
@@ -1923,6 +1924,23 @@ public class Subrutinas {
 		PmBean resultado = null;
 		try {
 			resultado = new com.fvr.pm_promosManuales.db.PmAccesoBaseDatos().pm_getRcd(dataBase, key);
+		} catch (StExcepcion e) {;}
+		finally {
+			if ( resultado == null ) {
+				resultado = key;
+			}
+		}
+		return resultado;
+	}
+	public static TjBean getTjFromId(BDConexion dataBase, String card_id) {
+		TjBean key = new TjBean();
+		key.setTj_card_id( card_id );
+		return getTjFromId(dataBase,key);
+	}
+	public static TjBean getTjFromId(BDConexion dataBase, TjBean key) {
+		TjBean resultado = null;
+		try {
+			resultado = new com.fvr.tj_tarjetasPrepago.db.TjAccesoBaseDatos().tj_getRcd(dataBase, key);
 		} catch (StExcepcion e) {;}
 		finally {
 			if ( resultado == null ) {

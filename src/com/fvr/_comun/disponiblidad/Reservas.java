@@ -16,6 +16,7 @@ import com.fvr.pm_promosManuales.bean.PmBean;
 import com.fvr.pt_products.bean.PtBean;
 import com.fvr.rs_reservations.bean.RsBean;
 import com.fvr.rs_reservations.db.RsAccesoBaseDatos;
+import com.fvr.tj_tarjetasPrepago.bean.TjBean;
 import com.fvr.us_users.bean.UsBean;
 
 public class Reservas implements Serializable{
@@ -370,6 +371,42 @@ public class Reservas implements Serializable{
 			errores.add(e.getMessage());
 		}
 
+		return resultado;
+	}
+
+	public static synchronized boolean tarjetaPrepago_descontarImporte( BDConexion dataBase, String card_id, double amount, ArrayList<String> errores, boolean isGrabarlo ) {
+		boolean resultado = false;
+		
+		if ( card_id == null || card_id.trim().length() < 1) { errores.add("Falta clave de tarjeta"); return resultado; }
+		if ( amount == 0.0 ) { resultado = true; }
+		
+		if ( ! resultado ) {
+			
+			TjBean reg_tj = Subrutinas.getTjFromId(dataBase, card_id);
+			
+			if ( reg_tj != null && reg_tj.getTj_sincro() != null && reg_tj.getTj_sincro().trim().length() > 1 ) {
+				if ( amount > reg_tj.getTj_balance_current() ) {
+					errores.add("Saldo superado");
+				} else {
+					reg_tj.setTj_balance_current( reg_tj.getTj_balance_current() - amount );
+					reg_tj.setTj_last_sale_amount( amount );
+					reg_tj.setTj_last_sale_moment( Subrutinas.getDateAuditoria() );
+					try {
+						if ( isGrabarlo) {
+							new com.fvr.tj_tarjetasPrepago.db.TjAccesoBaseDatos().tj_chgObj(dataBase, reg_tj);
+						}
+						errores.add("Saldo restante: " + reg_tj.getTj_balance_current());
+						resultado = true;
+					} catch (StExcepcion e) {
+						errores.add(e.getMessage());
+					}
+				}
+			} else {
+				errores.add("Tarjeta '" + card_id + "' no hallada");
+			}
+			
+		}
+		
 		return resultado;
 	}
 }

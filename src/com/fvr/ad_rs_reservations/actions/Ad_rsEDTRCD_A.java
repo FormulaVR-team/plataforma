@@ -1,6 +1,8 @@
 ﻿package com.fvr.ad_rs_reservations.actions;
 
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,6 +17,7 @@ import com.fvr._comun.ConfigPantalla;
 import com.fvr._comun.StExcepcion;
 import com.fvr._comun.Subrutinas;
 import com.fvr._comun._K;
+import com.fvr._comun.disponiblidad.Reservas;
 import com.fvr.ad_rs_reservations.bean.Ad_rsBean;
 import com.fvr.ad_rs_reservations.db.Ad_rsAccesoBaseDatos;
 import com.fvr.ad_rs_reservations.forms.Ad_rsRCD_AF;
@@ -85,6 +88,8 @@ public class Ad_rsEDTRCD_A extends Action {
             	resultado = executeReservation(request, form);
             } else if (opcion.trim().equalsIgnoreCase("executeReservation_c")) {	// En establecimiento: compensación
             	resultado = executeReservation(request, form);
+            } else if (opcion.trim().equalsIgnoreCase("executeReservation_prepago")) {	// En establecimiento: descontar de tarjeta prepago
+            	resultado = executeReservation_tarjetaPrepago(request, form);
             } else {
                 resultado = this.cargarPantalla( request, pantalla );
             }
@@ -356,6 +361,72 @@ public class Ad_rsEDTRCD_A extends Action {
         else
             resultado = "OK";
         ///////////////////////////////////////////
+        return resultado;
+	}
+    private String executeReservation_tarjetaPrepago(HttpServletRequest request, ActionForm form) {
+        String resultado = "OK";
+        ///////////////////////////////////////////
+        ActionMessages errores = new ActionMessages();
+        Ad_rsRCD_AF pantalla = (Ad_rsRCD_AF)form;
+        Subrutinas subrut = new Subrutinas();
+        ///////////////////////////////////////////
+        resultado = this.chkPantalla( request, pantalla );
+
+        ///////////////////////////////////////////
+        // Se edbe descontar el importe del saldo de la tarjeta prepago:
+        if ( resultado.equalsIgnoreCase("OK") && pantalla.getAd_rs_amount() > 0.0 ) {
+
+            ArrayList<String> mensajes = new ArrayList<String>();
+
+			///////////////////////////////////////////
+
+            if ( ! Reservas.tarjetaPrepago_descontarImporte( 
+            		  subrut.getBDConexion(request)
+            		, pantalla.getAd_rs_coupon_id()
+            		, pantalla.getAd_rs_amount()
+            		, mensajes, true 
+            	) ) {
+                resultado = "ERROR";
+            	if ( mensajes != null && mensajes.size() > 0 ) {
+            		for ( String item : mensajes ) {
+            			if ( item != null && item.trim().length() > 0 ) {
+                            errores.add("error", new ActionMessage( "errors.detail", item ));
+            			}
+            		}
+            	}
+        	};
+        	if ( ! errores.isEmpty() ) {
+                saveErrors(request,errores);
+        	}
+
+        	///////////////////////////////////////////
+        }
+
+        ///////////////////////////////////////////
+    	if ( resultado.equalsIgnoreCase("OK") ) {
+            String opcion = pantalla.getOpcionPantalla();
+            
+            String[] trozos = opcion.split("_");
+            
+            pantalla.setAd_rs_executed_at( Subrutinas.getDateAuditoria() );
+            
+            if ( _K.PAY_STS_CASH_PreConfirmado.equalsIgnoreCase( pantalla.getAd_rs_pay_status() ) ) {
+            	if ( trozos != null && trozos.length == 2 ) {
+                	pantalla.setAd_rs_pay_status( "pp" + "_" + _K.PAY_STS_CASH_Completado );
+            	} else {
+                	pantalla.setAd_rs_pay_status( _K.PAY_STS_CASH_Completado );
+            	}
+            }
+            
+            if (resultado.equalsIgnoreCase("OK"))
+                resultado = this.chgRcd( request, pantalla );
+            if (resultado.equalsIgnoreCase("OK"))
+                resultado = "CERRAR";
+            else
+                resultado = "OK";
+    	}
+        ///////////////////////////////////////////
+
         return resultado;
 	}
 }

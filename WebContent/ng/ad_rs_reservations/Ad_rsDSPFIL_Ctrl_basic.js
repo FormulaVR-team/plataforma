@@ -613,7 +613,43 @@ angular
 
 //						}
 					};
+					$scope.card_view_details = function() {
+						if ( $scope.actionForm.ad_rs_coupon_id == undefined || $scope.actionForm.ad_rs_coupon_id.length < 1 ) {
+							alert("Hay que indicar una TARJETA");
+							return;
+						}
+						
+						app_services
+							.rtvTjData($scope.actionForm.logon_USR,$scope.actionForm.logon_HSH,$scope.actionForm.ad_rs_coupon_id)
+							.then(
+								function(response) {
+	
+									if (response.rc === 'OK') {
+										app_services.errorComun( 
+												       "Propietario: " + response.text.tj_author 
+												+ "</br>Tarjeta: " + response.text.tj_card_id 
+												+ "</br>Carga inicial: " + response.text.tj_balance_initial
+												+ "</br><h2>Saldo: " + response.text.tj_balance_current + "</h2>" 
+												);
+									} else {
+										app_services.errorComun(response.text);
+									}
+	
+								},
+								function(response) {
+									console.error("Ha sucedido un error: " + response.statusText);
+								});
+						
+					};
 					$scope.executeReservation = function(caso) {
+						
+						if ( caso === 'prepago' ) {
+							if ( $scope.actionForm.ad_rs_coupon_id == undefined || $scope.actionForm.ad_rs_coupon_id.length < 1 ) {
+								alert("Hay que indicar una TARJETA");
+								return;
+							}
+						}
+						
 						if ( confirmar('¿Estas seguro de confirmar esta reserva?',this)==true ) {
 							//llamo a su servicio pasandole el actionForm de entidad
 							Ad_rsDSPFIL_service
@@ -626,6 +662,9 @@ angular
 												// $('.modal-backdrop').remove();
 												// $state.reload();
 												$scope.goRow( $scope.actionForm.filaInicioGrid );
+
+												$('#ad_rsDSPFIL_CONFIRM_modal').modal('hide');
+												
 											} else {
 												app_services.errorComun(response.data.text);
 											}

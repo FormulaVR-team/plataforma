@@ -27,7 +27,6 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
-import org.apache.struts.action.ActionMessage;
 
 import com.fvr.FuentesDeDatos.BDConexion;
 import com.fvr._comun.ConfigPantalla;
@@ -42,6 +41,7 @@ import com.fvr.lo_location.bean.LoBean;
 import com.fvr.ps_countries.bean.PsBean;
 import com.fvr.pt_products.bean.PtBean;
 import com.fvr.rs_reservations.bean.RsBean;
+import com.fvr.tj_tarjetasPrepago.bean.TjBean;
 import com.fvr.tk_tokens.bean.TkBean;
 import com.fvr.tt_timeTableReference.bean.TtBean;
 import com.fvr.us_users.bean.UsBean;
@@ -88,6 +88,8 @@ public class FvrServlet extends HttpServlet {
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=rtvOcu&LOC=CENTRAL&DAT=2017-06-05&TIM=0930
     private static final String rtvUsData = "rtvUsData";  // Retorna datos basicos del usuario
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=rtvUsData&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215
+    private static final String rtvTjData = "rtvTjData";  // Retorna datos  de una tarjeta prepago
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=rtvTjData&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215&DAT=FVR-000123
     private static final String rtvNickData = "rtvNickData";  // Retorna datos basicos del usuario
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=rtvNickData&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215&NCK=Chuki
     private static final String lo_lst = "lo_lst";  // Retorna lista de Departamentos
@@ -229,7 +231,7 @@ public class FvrServlet extends HttpServlet {
     	loc = loc==null?request.getParameter("LOC"):loc;   // Location
     	typ = typ==null?request.getParameter("TYP"):typ;   // Day type
     	blk = blk==null?request.getParameter("BLK"):blk;   // Incluir también los que sean "isBlocked"
-    	dat = dat==null?request.getParameter("DAT"):dat;   // Date
+    	dat = dat==null?request.getParameter("DAT"):dat;   // Date, Data
     	tim = tim==null?request.getParameter("TIM"):tim;   // Time
     	kps = kps==null?request.getParameter("KPS"):kps;   // Clave de país
     	nck = nck==null?request.getParameter("NCK"):nck;   // Nick del usuario
@@ -244,6 +246,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_rtvOcu(request, response, loc, dat, tim);
     	} else if (rtvUsData.equalsIgnoreCase( acc )) {
     		cmd_rtvUsData(request, response, usr, key);
+    	} else if (rtvTjData.equalsIgnoreCase( acc )) {
+    		cmd_rtvTjData(request, response, usr, key, dat);
     	} else if (rtvNickData.equalsIgnoreCase( acc )) {
     		cmd_rtvNickData(request, response, usr, key, nck);
     	} else if (cd_lst.equalsIgnoreCase( acc )) {
@@ -446,6 +450,26 @@ public class FvrServlet extends HttpServlet {
 			responder(request, response, true, respuesta.toString() ); return;
 		}
 		responder(request, response, false, "Error al ejecutar: cmd_rtvUsData()");
+	}
+
+	private void cmd_rtvTjData(HttpServletRequest request, HttpServletResponse response, String usr, String key, String card_id) throws IOException {
+		if ( usr == null || usr.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+		if ( key == null || key.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+		if ( card_id == null || card_id.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		BDConexion dataBase = new Subrutinas().getBDConexion(request);
+		com.fvr.us_users.bean.UsBean reg_us = new com.fvr.us_users.bean.UsBean();
+		if ( ! Subrutinas.isUsrHashCorrecto(dataBase, usr, key, reg_us) ) {
+			responder(request, response, false, "Error de seguridad"); return;
+		};
+		
+		TjBean reg_tj = Subrutinas.getTjFromId(dataBase, card_id);
+		
+		if ( reg_tj != null && reg_tj.getTj_sincro() != null && reg_tj.getTj_sincro().trim().length() > 0 ) {
+			responder(request, response, true, reg_tj.toString() );
+		} else {
+			responder(request, response, false, "No hallada la tarjeta: " + card_id );
+		}
 	}
 
 	private void cmd_rtvNickData(HttpServletRequest request, HttpServletResponse response, String usr, String key, String nck) throws IOException {

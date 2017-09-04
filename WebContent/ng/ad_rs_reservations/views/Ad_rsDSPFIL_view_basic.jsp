@@ -488,14 +488,29 @@
       <div class="modal-content">
         <div class="modal-header" style="color: white; background-color: red;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">EjECUTAR RESERVA ({{actionForm.ad_rs_pay_status}})</h4>
+          <h4 class="modal-title">EJECUTAR RESERVA ({{actionForm.ad_rs_pay_status}})</h4>
         </div>
         <div class="modal-body">
 
-	        <div class="{{actionForm.ad_rs_pay_status === 'CASH_PDT' ? '' : 'hide'}}">
-				<md-button class="md-raised md-primary" data-dismiss="modal" data-toggle="modal" ng-click="executeReservation('t')" >t&nbsp;<md-icon> settings_remote </md-icon>&nbsp;&nbsp;TPV</md-button>
-				<md-button class="md-raised md-warn" data-dismiss="modal" data-toggle="modal" ng-click="executeReservation('e')" >e&nbsp;<md-icon> euro_symbol </md-icon>&nbsp;&nbsp;Efectivo</md-button>
-				<md-button class="md-raised md-accent" data-dismiss="modal" data-toggle="modal" ng-click="executeReservation('c')" >c&nbsp;<md-icon> gavel </md-icon>&nbsp;&nbsp;Compensación</md-button>
+	        <div class="{{actionForm.ad_rs_pay_status === 'CASH_PDT' ? '' : 'hide'}}" layout="column" layout-align="space-around start">
+	        	<div>
+	        		<h3>{{actionForm.ad_rs_reservation_id}}, Euros: {{actionForm.ad_rs_amount}}</h3> 
+	        	</div>
+</br>
+	        	<div>
+					<md-button class="md-raised md-primary" data-dismiss="modal" data-toggle="modal" ng-click="executeReservation('t')" >t&nbsp;<md-icon> settings_remote </md-icon>&nbsp;&nbsp;TPV</md-button>
+					<md-button class="md-raised md-warn" data-dismiss="modal" data-toggle="modal" ng-click="executeReservation('e')" >e&nbsp;<md-icon> euro_symbol </md-icon>&nbsp;&nbsp;Efectivo</md-button>
+					<md-button class="md-raised md-accent" data-dismiss="modal" data-toggle="modal" ng-click="executeReservation('c')" >c&nbsp;<md-icon> gavel </md-icon>&nbsp;&nbsp;Compensación</md-button>
+	        	</div>
+</br>
+				<div layout="row" layout-align="start center">
+					<md-input-container>
+						<label>Tarjeta prepago</label>
+						<h3><input id="laCaca" type="text" ng-model="actionForm.ad_rs_coupon_id" /></h3>
+					</md-input-container>
+					<md-button class="md-raised md-accent md-fab md-mini" ng-click="card_view_details()" ><md-icon> help_outline </md-icon></md-button>
+					<md-button class="md-raised md-warn" ng-click="executeReservation('prepago')" ><md-icon> card_membership </md-icon>&nbsp;&nbsp;Descontar de tarjeta</md-button>
+				</div>
 	        </div>
 
         </div>

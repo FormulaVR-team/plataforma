@@ -154,6 +154,13 @@ angular.module('commonServices_module')
 	                    data :  { ACC: "rtvUsData", USR: user, KEY: hashCode }
 	                });
 	            }
+	            , rtvTjData : function ( user, hashCode, card_id ) {
+	                return peticionHTTP({
+	                    method: 'POST',
+	                    url: './FvrServlet',
+	                    data :  { ACC: "rtvTjData", USR: user, KEY: hashCode, DAT: card_id }
+	                });
+	            }
 	            , md_date_filter_onlyWeekEnds : function ( date ) {
 	            	if ( date === undefined ) { return false; }
 	                var day = date.getDay();

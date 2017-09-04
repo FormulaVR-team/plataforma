@@ -18,7 +18,7 @@
 	        </div>
 			<!-- Se quiere pagar en el establecimiento-->
 	        <div class="{{actionForm.ad_rs_pay_status === 'CASH_PDT' ? '' : 'hide'}}">
-				<md-button class="md-raised md-warn" data-dismiss="modal" data-toggle="modal" data-target="#ad_rsDSPFIL_CONFIRM_modal" ><md-icon> gavel </md-icon>&nbsp;&nbsp;Ejecutar</md-button>
+				<md-button class="md-raised md-warn" data-dismiss="modal" data-toggle="modal" data-target="#ad_rsDSPFIL_CONFIRM_modal" onclick="setTimeout( function() { $( '#laCaca' ).focus() }, 500 );" ><md-icon> gavel </md-icon>&nbsp;&nbsp;Ejecutar</md-button>
 	        </div>
 		</div>
 
