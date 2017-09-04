@@ -348,7 +348,7 @@ public class UsAccesoBaseDatos {
 	sqlWhere = fltOper.getNUM_EQ(rst.getUs_country_id(),"country_id",sqlWhere);   // country_id
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getUs_PS_name(),"PS_name",sqlWhere);   // PS_name
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getUs_PS_flag_base64(),"PS_flag_base64",sqlWhere);   // PS_flag_base64
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getUs_nick(),"nick",sqlWhere);   // nick
+	sqlWhere = fltOper.getCHAR_EQ(rst.getUs_nick(),"nick",sqlWhere);   // nick
 	sqlWhere = fltOper.getCHAR_EQ(rst.getUs_password(),"password",sqlWhere);   // password
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getUs_first_name(),"first_name",sqlWhere);   // first_name
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getUs_last_name(),"last_name",sqlWhere);   // last_name
