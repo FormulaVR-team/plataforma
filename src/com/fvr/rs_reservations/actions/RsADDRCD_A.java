@@ -483,7 +483,7 @@ public class RsADDRCD_A extends Action {
     	///////////////////////////////////////////
         if (resultado.equalsIgnoreCase("OK")) { 
 
-        	Paypal_API paypal = new Paypal_API(dataBase, Subrutinas.get_urlBase(request) + "/Paypal");
+        	Paypal_API paypal = new Paypal_API(dataBase, pantalla.getRs_location_id(), Subrutinas.get_urlBase(request) + "/Paypal");
         	
         	String nombreFiscalProveedor = "Formula VR";
 			String user_id = pantalla.getRs_user_id();

@@ -32,14 +32,19 @@ public class Paypal_API {
 
 //	Paypal Sandbox PAGAR: 	emilio.estecha@gmail.com / Passw0rd
 
-	private String m_callBack = "http://219582dd.ngrok.io/Billin/Paypal";
+	private static String m_callBack = "http://219582dd.ngrok.io/Billin/Paypal";
+	private static String m_location_id = _K.CUENTA_DE_SISTEMA;	// Empresa
 
-	public Paypal_API( BDConexion dataBase, String callBack_o_null ) {
+	public Paypal_API( BDConexion dataBase, String location_id, String callBack_o_null ) {
+		
+		if ( location_id != null ) {
+			m_location_id = location_id;
+		}
 		
 		if ( callBack_o_null != null ) {
-			this.m_callBack = callBack_o_null;
+			Paypal_API.m_callBack = callBack_o_null;
 		} else {
-			this.m_callBack = Subrutinas.getDBValueFromKey(dataBase, _K.CUENTA_DE_SISTEMA, _K.PA_KEY_PAYPAL_CHECKOUT_EXPRESS_CALLBACK_URL );
+			Paypal_API.m_callBack = Subrutinas.getDBValueFromKey(dataBase, m_location_id, _K.PA_KEY_PAYPAL_CHECKOUT_EXPRESS_CALLBACK_URL );
 		}
 		
 	}
@@ -56,13 +61,13 @@ public class Paypal_API {
 		////////////////
 		boolean isPagarSinCuentaClienteObligada = true;
 
-		PaypalResponse respuesta = api_setExpressCheckout(dataBase, nombreFiscalProveedor, user_id, reservation_id, amount, _K.CUENTA_DE_SISTEMA, true, isPagarSinCuentaClienteObligada, RecurringPaymentDescription_o_null);
+		PaypalResponse respuesta = api_setExpressCheckout(dataBase, nombreFiscalProveedor, user_id, reservation_id, amount, m_location_id, true, isPagarSinCuentaClienteObligada, RecurringPaymentDescription_o_null);
 
 		if ( respuesta != null  ) {
 			
 			if ( "Success".equalsIgnoreCase( respuesta.getAcknowledge() ) ) {
 
-				link_redireccion = Subrutinas.getDBValueFromKey( dataBase, _K.CUENTA_DE_SISTEMA, _K.PA_KEY_PAYPAL_CHECKOUT_EXPRESS_REDIRECT_URL );
+				link_redireccion = Subrutinas.getDBValueFromKey( dataBase, m_location_id, _K.PA_KEY_PAYPAL_CHECKOUT_EXPRESS_REDIRECT_URL );
 				
 				if ( link_redireccion != null && link_redireccion.trim().length() > 0 ) {
 					
@@ -187,7 +192,7 @@ public class Paypal_API {
 //		//		2.2 . Esperar una respuesta de "VERIFIED" o "INVALID".
 //
 //		String payload = Subrutinas.getRequestPayload_txt(request);
-//		String ipn_url = Subrutinas.getDBValueFromKey(dataBase, _K.CUENTA_DE_SISTEMA, _K.KEY_PAYPAL_IPN_URL);
+//		String ipn_url = Subrutinas.getDBValueFromKey(dataBase, m_location_id, _K.KEY_PAYPAL_IPN_URL);
 //		String[] resultado = null;
 //		if ( PaypalMethods.ipn_ack_paso1d2(response) ) {
 //			resultado = PaypalMethods.ipn_ack_paso2d2(request, response, ipn_url, payload);
@@ -225,7 +230,7 @@ public class Paypal_API {
 //				reg_pym.setPym_Sincro( Subrutinas.getDateInMills() ); // Sincro
 //				reg_pym.setPym_Marca( _K.MARCA_PYM_NOTIFICACION_PENDIENTE ); // Marca
 //				reg_pym.setPym_Suprimido( "" ); // Suprimido
-//				reg_pym.setPym_Autor( _K.CUENTA_DE_SISTEMA ); // Autor
+//				reg_pym.setPym_Autor( m_empresa ); // Autor
 ////				reg_pym.setPym_PK( 0 ); // PK
 //				reg_pym.setPym_ipn_track_id( ipn_track_id ); // ipn_track_id
 //				reg_pym.setPym_txn_type( txn_type ); // txn_type
@@ -300,8 +305,8 @@ public class Paypal_API {
 			////////////////////////
 			//	1.1 - Confirmar a Paypal el pago.
 			if ( seguir ) {
-				APICredentials vendedor = new PaypalCredentials(dataBase);
-				PaypalAPI paypal = PaypalAPIFactory.createPaypalAPI( dataBase, vendedor );
+				APICredentials vendedor = new PaypalCredentials(dataBase, m_location_id);
+				PaypalAPI paypal = PaypalAPIFactory.createPaypalAPI( dataBase, m_location_id, vendedor );
 				PaypalResponse respuesta = api_doExpressCheckout( dataBase, errores, paypal, user_id, reservation_id, importe );
 				if ( "Failure".equalsIgnoreCase( respuesta.getAcknowledge() ) ) {
 					seguir = false;
@@ -389,11 +394,11 @@ public class Paypal_API {
 
 		String callbackUrl = m_callBack;
 
-		APICredentials vendedor = new PaypalCredentials(dataBase);
+		APICredentials vendedor = new PaypalCredentials(dataBase, m_location_id);
 
 		if ( vendedor != null ) {
 			
-			paypal = PaypalAPIFactory.createPaypalAPI( dataBase, vendedor );
+			paypal = PaypalAPIFactory.createPaypalAPI( dataBase, m_location_id, vendedor );
 			
 //			String nombreFiscalProveedor = "FormulaVR";
 			resultado = PaypalMethods.setExpressCheckout(
@@ -451,7 +456,7 @@ public class Paypal_API {
 						reg_py.setPy_sincro( Subrutinas.getDateAuditoria() ); // Sincro
 //						reg_py.setPy_Marca( _K.MARCA_SINCRO_PENDIENTE ); // Marca
 						reg_py.setPy_is_deleted(""); // Suprimido
-						reg_py.setPy_author( autor==null?_K.CUENTA_DE_SISTEMA:autor ); // Autor
+						reg_py.setPy_author( autor==null?m_location_id:autor ); // Autor
 						reg_py.setPy_paypal_usr( vendedor.getUser() ); // paypal_USR
 						reg_py.setPy_paypal_pwd( vendedor.getPassword() ); // paypal_PWD
 						reg_py.setPy_paypal_signature( vendedor.getSignature() ); // paypal_SIGNATURE
@@ -506,7 +511,7 @@ public class Paypal_API {
 		// Primero se obtiene el "payerID":
 
 		///////////////////////
-		APICredentials vendedor = new PaypalCredentials(dataBase);
+		APICredentials vendedor = new PaypalCredentials(dataBase, m_location_id);
 		if ( vendedor != null ) {
 
 			GetExpressCheckoutResponse detailsPayer = PaypalMethods.getExpressCheckoutDetails(paypal, token);

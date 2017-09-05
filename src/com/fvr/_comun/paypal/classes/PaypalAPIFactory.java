@@ -13,10 +13,10 @@ public class PaypalAPIFactory {
 	 * @param credentials
 	 * @return instancia de la clase  {@link PaypalAPI}, null en el caso que no se encuentren las claves necesarias de la tabla PA.
 	 */
-	public static PaypalAPI createPaypalAPI(BDConexion dataBase, APICredentials credentials) {
+	public static PaypalAPI createPaypalAPI(BDConexion dataBase, String location_id, APICredentials credentials) {
 		Logger logger = Logger.newLogger("PaypalAPIFactory|createPaypalAPI");
-		String paypalAPIURL = Subrutinas.getDBValueFromKey(dataBase, _K.CUENTA_DE_SISTEMA, _K.PA_KEY_PAYPAL_CHECKOUT_EXPRESS_API_URL);
-		String paypalAPIVersion = Subrutinas.getDBValueFromKey(dataBase, _K.CUENTA_DE_SISTEMA, _K.PA_KEY_PAYPAL_CHECKOUT_EXPRESS_API_VERSION);
+		String paypalAPIURL = Subrutinas.getDBValueFromKey(dataBase, location_id, _K.PA_KEY_PAYPAL_CHECKOUT_EXPRESS_API_URL);
+		String paypalAPIVersion = Subrutinas.getDBValueFromKey(dataBase, location_id, _K.PA_KEY_PAYPAL_CHECKOUT_EXPRESS_API_VERSION);
 		
 		if (paypalAPIURL==null || paypalAPIURL.trim().length()<1) {
 			logger.a("ERROR No se ha encontrado en BD.PA la KEY: ").a(_K.PA_KEY_PAYPAL_CHECKOUT_EXPRESS_API_URL).pln();

@@ -10,11 +10,11 @@ public class PaypalCredentials implements APICredentials {
 	private String paypal_PWD;
 	private String paypal_SIGNATURE;
 	
-	public PaypalCredentials(BDConexion dataBase) {
+	public PaypalCredentials(BDConexion dataBase, String location_id) {
 		//Recuperar registros:
-		paypal_USR = Subrutinas.getDBValueFromKey(dataBase, _K.PA_KEY_paypal_USR);
-		paypal_PWD = Subrutinas.getDBValueFromKey(dataBase, _K.PA_KEY_paypal_PWD);
-		paypal_SIGNATURE = Subrutinas.getDBValueFromKey(dataBase, _K.PA_KEY_paypal_SIGNATURE);
+		paypal_USR = Subrutinas.getDBValueFromKey(dataBase, location_id, _K.PA_KEY_paypal_USR);
+		paypal_PWD = Subrutinas.getDBValueFromKey(dataBase, location_id, _K.PA_KEY_paypal_PWD);
+		paypal_SIGNATURE = Subrutinas.getDBValueFromKey(dataBase, location_id, _K.PA_KEY_paypal_SIGNATURE);
 	}
 	
 	public String getUser() {
