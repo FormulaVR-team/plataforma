@@ -190,6 +190,13 @@ angular.module('commonServices_module')
 	                    data :  { ACC: "gamingModule", USR: user, KEY: hashCode }
 	                });
 	            }
+	            , getPaymentMethods : function ( user, hashCode, location_id ) {
+	                return peticionHTTP({
+	                    method: 'POST',
+	                    url: './FvrServlet',
+	                    data :  { ACC: "getPaymentMethods", USR: user, KEY: hashCode, DAT: location_id }
+	                });
+	            }
 
             };
         }

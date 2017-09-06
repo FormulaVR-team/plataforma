@@ -33,8 +33,12 @@ import com.fvr._comun.ConfigPantalla;
 import com.fvr._comun.StExcepcion;
 import com.fvr._comun.Subrutinas;
 import com.fvr._comun._K;
+import com.fvr._comun.TPV_LaCaixa.TPV_API;
+import com.fvr._comun.TPV_LaCaixa.TPV_API.FormStruct;
 import com.fvr._comun.img2D.util.ImageUtils;
 import com.fvr._comun.mail.SendMail;
+import com.fvr._comun.paypal.classes.APICredentials;
+import com.fvr._comun.paypal.classes.PaypalCredentials;
 import com.fvr.cd_LocationClosedDays.bean.CdBean;
 import com.fvr.cp_cockpits.bean.CpBean;
 import com.fvr.lo_location.bean.LoBean;
@@ -129,6 +133,8 @@ public class FvrServlet extends HttpServlet {
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=getRsFecMin&LOC=CENTRAL
     private static final String sndMail_forgotPass = "sndMail_forgotPass";  // Lanza un correo de "Olvidé la password"
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=sndMail_forgotPass&USR=eestecha@gmail.com
+    private static final String getPaymentMethods = "getPaymentMethods";  // Retorna los medios de pago de un location_id
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=getPaymentMethods&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215&DAT=CENTRAL
 
 //	/////////////////////////////////
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -284,6 +290,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_getRsFecMin(request, response, loc);
     	} else if (sndMail_forgotPass.equalsIgnoreCase( acc )) {
     		cmd_sndMail_forgotPass(request, response, usr);
+    	} else if (getPaymentMethods.equalsIgnoreCase( acc )) {
+    		cmd_getPaymentMethods(request, response, usr, key, dat);
     	} else {
     		responder(request, response, false, "Servicio no contemplado " + acc );
     	}
@@ -1087,6 +1095,42 @@ public class FvrServlet extends HttpServlet {
 
 		responder(request, response, false, "No existe: " + usr);
 		
+	}
+
+	private void cmd_getPaymentMethods(HttpServletRequest request, HttpServletResponse response, String usr, String key, String location_id) throws IOException {
+		if ( usr == null || usr.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+		if ( key == null || key.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+		if ( location_id == null || location_id.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		BDConexion dataBase = new Subrutinas().getBDConexion(request);
+		com.fvr.us_users.bean.UsBean reg_us = new com.fvr.us_users.bean.UsBean();
+		if ( ! Subrutinas.isUsrHashCorrecto(dataBase, usr, key, reg_us) ) {
+			responder(request, response, false, "Error de seguridad"); return;
+		};
+		
+		// Averiguar si tiene credenciales para los modos de pago del location_id pedido:
+		String resultado = "";
+		
+		// Paypal:
+		APICredentials vendedor = new PaypalCredentials(dataBase, location_id);
+		if (   vendedor != null 
+			&& vendedor.getUser() != null && vendedor.getUser().trim().length() > 0 
+			&& vendedor.getPassword() != null && vendedor.getPassword().trim().length() > 0
+			&& vendedor.getSignature() != null && vendedor.getSignature().trim().length() > 0 
+			) { 
+				resultado += " PAYPAL";
+			}
+		
+		// TPV virtual de "La Caixa":
+		TPV_API tpv = new TPV_API(dataBase); 
+		FormStruct out_formData = tpv.new FormStruct();
+		List<String> lstErrores = new ArrayList<String>();
+		String link_redireccion = tpv.prepareFormData( Subrutinas.get_urlBase(request), out_formData, "order", 12.34, "token_id", location_id, lstErrores );
+		if ( link_redireccion != null && link_redireccion.trim().length() > 0 ) {
+			resultado += " TPV";
+		}
+
+		responder(request, response, true, resultado.trim() );
 	}
 
 	///////////////////////////

@@ -208,8 +208,8 @@
 							<p>&nbsp;</p>	 
 					    <md-radio-group ng-model="paymentCheck.checked"> 
 
-					      <md-radio-button value="TPV" class="md-primary" style="border-top: 1px dashed;border-bottom: 1px dashed;line-height: 50px;"><b>Tarjeta</b> <img class="logo-icon-img" style="height: 40px;padding-left: 20px;" src="./resBS/img/tarjetas.png" alt="" /></md-radio-button> 
-					      <md-radio-button value="PAYPAL" class="md-primary" style="border-top: 1px dashed;border-bottom: 1px dashed;line-height: 50px;"><b>PayPal</b> <img class="logo-icon-img" style="height: 40px;padding-left: 20px;" src="./resBS/img/paypal.png" alt=""/></md-radio-button> 
+					      <md-radio-button style="display: none;" id="radio_TPV" value="TPV" class="md-primary" style="border-top: 1px dashed;border-bottom: 1px dashed;line-height: 50px;"><b>Tarjeta</b> <img class="logo-icon-img" style="height: 40px;padding-left: 20px;" src="./resBS/img/tarjetas.png" alt="" /></md-radio-button> 
+					      <md-radio-button style="display: none;" id="radio_PAYPAL" value="PAYPAL" class="md-primary" style="border-top: 1px dashed;border-bottom: 1px dashed;line-height: 50px;"><b>PayPal</b> <img class="logo-icon-img" style="height: 40px;padding-left: 20px;" src="./resBS/img/paypal.png" alt=""/></md-radio-button> 
 					      <md-radio-button value="CASH" class="md-primary" style="border-top: 1px dashed; border-bottom: 1px dashed;line-height: 50px;"><b>Efectivo / Tarjeta en establecimiento</b></md-radio-button> 
 
 					    </md-radio-group> 

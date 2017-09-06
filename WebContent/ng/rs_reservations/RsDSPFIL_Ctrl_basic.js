@@ -254,6 +254,9 @@ angular
 								);
 						}
 						/////
+						// Refrescar los modos de pago del location_id:
+						$scope.getPaymentMethods();
+						/////
 					}
 					function tpv_submitForm(campos_tpv) {
 						// Submitir formulario "TPV_form":
@@ -975,7 +978,27 @@ angular
 								);
 					}
 					//////////////
+					$scope.getPaymentMethods = function() {
 
+						if ( $scope.actionForm.rs_location_id == undefined || $scope.actionForm.rs_location_id.trim() === '' ) {
+							return;
+						}
+
+						app_services.getPaymentMethods(  $scope.actionForm.logon_USR, $scope.actionForm.logon_HSH, $scope.actionForm.rs_location_id  )
+							.then( function(response) { 
+										if (response.rc === 'OK') { 
+											if ( response.text.includes("TPV") ) { $("#radio_TPV").show(); } else { $("#radio_TPV").hide(); }
+											if ( response.text.includes("PAYPAL") ) { $("#radio_PAYPAL").show(); } else { $("#radio_PAYPAL").hide(); }
+										} else { 
+											app_services.errorComun( "ERROR: " + response.text); }
+										}
+										,function(response) { 
+											console.error("Ha sucedido un error: " + response.statusText); 
+										}
+								);
+					}
+
+					//////////////
 /////////////
 /////////////
 
