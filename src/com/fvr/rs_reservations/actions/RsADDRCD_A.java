@@ -533,6 +533,7 @@ public class RsADDRCD_A extends Action {
 			FormStruct out_formData = tpv.new FormStruct();
 			String order = pantalla.getRs_reservation_id();
 			double amount = pantalla.getRs_amount();
+			String location_id = pantalla.getRs_location_id();
 
 			///////////////////////
 			// TOKEN. Conseguir una clave única para el callback:
@@ -544,7 +545,7 @@ public class RsADDRCD_A extends Action {
 			}
 			///////////////////////
 			
-			String link_redireccion = tpv.prepareFormData( url_base, out_formData, order, amount, token_id, lstErrores );
+			String link_redireccion = tpv.prepareFormData( url_base, out_formData, order, amount, token_id, location_id, lstErrores );
 			
 			if ( link_redireccion != null ) {
 				System.out.println( "TPV LINK REDIRECCION: " + link_redireccion );

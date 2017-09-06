@@ -31,7 +31,7 @@ public class TPV_API implements Serializable {
 
 	public TPV_API(BDConexion dataBase) { m_dataBase = dataBase; }
 
-	public String prepareFormData(String url_base, FormStruct form, String order, double amount_dbl, String token_id, List<String> lstErrores) {
+	public String prepareFormData(String url_base, FormStruct form, String order, double amount_dbl, String token_id, String location_id, List<String> lstErrores) {
 		String resultado = null;
 
     	String amount = ""+(long)(amount_dbl * 100.0);	// Truncar!!
@@ -39,13 +39,18 @@ public class TPV_API implements Serializable {
 		///////////////////////////
 		try {
 			ApiMacSha256 apiMacSha256 = new ApiMacSha256();
-			String claveModuloAdmin = Subrutinas.getDBValueFromKey(m_dataBase, _K.TPV_LaCaixa_claveCifrado);
+			String claveModuloAdmin = Subrutinas.getDBValueFromKey(m_dataBase, location_id, _K.TPV_LaCaixa_claveCifrado);
+			
+			if ( claveModuloAdmin == null || claveModuloAdmin.trim().length() < 1 ) {
+				lstErrores.add( "Para location: " + location_id + ", Falta clave en PA: " + _K.TPV_LaCaixa_claveCifrado );
+				return resultado;
+			}
 
-			apiMacSha256.setParameter("DS_MERCHANT_MERCHANTCODE", Subrutinas.getDBValueFromKey(m_dataBase, _K.TPV_LaCaixa_Ds_Merchant_MerchantCode) );
-			apiMacSha256.setParameter("DS_MERCHANT_TERMINAL", Subrutinas.getDBValueFromKey(m_dataBase, _K.TPV_LaCaixa_Ds_Merchant_Terminal) );
+			apiMacSha256.setParameter("DS_MERCHANT_MERCHANTCODE", Subrutinas.getDBValueFromKey(m_dataBase, location_id, _K.TPV_LaCaixa_Ds_Merchant_MerchantCode) );
+			apiMacSha256.setParameter("DS_MERCHANT_TERMINAL", Subrutinas.getDBValueFromKey(m_dataBase, location_id, _K.TPV_LaCaixa_Ds_Merchant_Terminal) );
 			apiMacSha256.setParameter("DS_MERCHANT_ORDER", order);
 			apiMacSha256.setParameter("DS_MERCHANT_AMOUNT", amount);	// dos últimos dígitos son los 2 céntimos para euro.
-			apiMacSha256.setParameter("DS_MERCHANT_CURRENCY", Subrutinas.getDBValueFromKey(m_dataBase, _K.TPV_LaCaixa_Ds_Merchant_Currency) );
+			apiMacSha256.setParameter("DS_MERCHANT_CURRENCY", Subrutinas.getDBValueFromKey(m_dataBase, location_id, _K.TPV_LaCaixa_Ds_Merchant_Currency) );
 			apiMacSha256.setParameter("DS_MERCHANT_TRANSACTIONTYPE", "0");
 			apiMacSha256.setParameter("DS_MERCHANT_MERCHANTURL", url_base + "/");
 			apiMacSha256.setParameter("DS_MERCHANT_URLOK", url_base + "/FvrServlet?ACC=TPV_OK&KEY="+token_id);
@@ -53,9 +58,9 @@ public class TPV_API implements Serializable {
 
 			form.ds_MerchantParameters = apiMacSha256.createMerchantParameters();
 			form.ds_Signature = apiMacSha256.createMerchantSignature( claveModuloAdmin );
-			form.ds_SignatureVersion = Subrutinas.getDBValueFromKey(m_dataBase, _K.TPV_LaCaixa_version);
+			form.ds_SignatureVersion = Subrutinas.getDBValueFromKey(m_dataBase, location_id, _K.TPV_LaCaixa_version);
 			
-			resultado = Subrutinas.getDBValueFromKey(m_dataBase, _K.TPV_LaCaixa_URL);
+			resultado = Subrutinas.getDBValueFromKey(m_dataBase, location_id, _K.TPV_LaCaixa_URL);
 			
 		} catch (UnsupportedEncodingException e) {
 			lstErrores.add(e.getMessage());

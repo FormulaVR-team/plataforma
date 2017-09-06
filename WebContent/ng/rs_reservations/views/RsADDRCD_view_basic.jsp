@@ -32,12 +32,12 @@
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
 						<!-- Selector CENTRO -->
 						<md-input-container class="md-block input-md">
-							<label>Establecimiento selecionado</label>
+							<label>Establecimiento</label>
 							<md-icon>place</md-icon>
 							<md-select placeholder="Seleccione Local" ng-model="$parent.aux_rs_location_id" md-on-open="location_id_onOpen()" md-on-close="location_id_onClose()" ng-model-options="{trackBy: '$value.value'}" ng-change="getprice()" required>
-								<md-optgroup label="Local">
+								<!-- <md-optgroup label="Local"> -->
 									<md-option ng-value="item" ng-repeat="item in $parent.lst_lo">{{item.displayName}}</md-option>
-								</md-optgroup>			
+								<!-- </md-optgroup> -->			
 							</md-select>
 			    		</md-input-container>
 			    		<!-- Selector CENTRO fin -->
@@ -69,9 +69,9 @@
 							<label>Hora</label>
 							<md-icon>access_time</md-icon>
 							<md-select placeholder="Seleccione Hora" ng-model="$parent.aux_rs_start_time" ng-model-options="{trackBy: '$value.value'}" ng-change="getprice();" required>
-								<md-optgroup label="Hora">
+								<!-- <md-optgroup label="Hora"> -->
 									<md-option ng-value="item" ng-repeat="item in $parent.lst_tt">{{item.displayName}}</md-option>
-								</md-optgroup>			
+								<!-- </md-optgroup> -->			
 							</md-select>
 						</md-input-container>
 						<!-- hora fin -->
@@ -86,9 +86,9 @@
 							<label>Modalidad</label>
 							<md-icon>local_offer</md-icon>
 							<md-select placeholder="Seleccione Modalidad" ng-model="$parent.aux_rs_product_id" ng-change="getprice();" ng-model-options="{trackBy: '$value.value'}" required>
-								<md-optgroup label="Opciones">
+								<!-- <md-optgroup label="Opciones"> -->
 									<md-option ng-value="item" ng-repeat="item in $parent.lst_pt">{{item.displayName}}</md-option>
-								</md-optgroup>			
+								<!-- </md-optgroup> -->			
 							</md-select>
 						</md-input-container>
 			    		<!-- Selector PRODUCTO fin -->
@@ -100,9 +100,9 @@
 							<label>Coches</label>
 							<md-icon>supervisor_account</md-icon>
 							<md-select placeholder="Seleccione Plazas" ng-model="$parent.actionForm.rs_places" ng-change="getprice();" required>
-								<md-optgroup label="Plazas">
+								<!-- <md-optgroup label="Plazas"> -->
 									<md-option ng-repeat="item in $parent.lst_cp" value="{{item}}">{{item}} cabinas</md-option>
-								</md-optgroup>			
+								<!-- </md-optgroup> -->			
 							</md-select>
 						</md-input-container>
 						<!-- plazas fin -->
