@@ -44,14 +44,13 @@
 				<input type="text" ng-model="actionForm.ac_filename" />
 			</md-input-container>
 			<md-input-container>
-				<label>content</label>
-				<input type="text" ng-model="actionForm.ac_content" />
-			</md-input-container>
-			<md-input-container>
 				<label>json</label>
 				<input type="text" ng-model="actionForm.ac_json" />
 			</md-input-container>
-
+			<md-input-container>
+				<label>content</label>
+				<textarea rows="5" max-rows="5" style="width: 600px; background-color: silver;" ng-model="actionForm.ac_content" />
+			</md-input-container>
 
     </div>
     <div class="modal-footer">

@@ -140,7 +140,7 @@
 				<td>{{reg.ac_serial}}&nbsp;</td>
 				<td>{{reg.ac_computername}}&nbsp;</td>
 				<td>{{reg.ac_filename}}&nbsp;</td>
-				<td>{{reg.ac_content | limitTo:'30'}}&nbsp;</td>
+				<td title="{{reg.ac_content}}">{{reg.ac_content | limitTo:'30'}}&nbsp;</td>
 				<td>{{reg.ac_json | limitTo:'30'}}&nbsp;</td>
 			</tr>
 		</table>
@@ -178,7 +178,7 @@
 <div class="container">
   <%-- Modal --%>
   <div class="modal fade" id="acDSPFIL_EDTRCD_modal" role="dialog" data-backdrop="false">
-    <div class="modal-dialog">
+    <div class="modal-dialog" style="width: 800px;">
     
       <%-- Modal content--%>
       <div class="modal-content">
