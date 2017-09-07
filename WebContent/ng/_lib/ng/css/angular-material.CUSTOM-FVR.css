@@ -210,7 +210,10 @@ md-card md-card-actions {
 	padding: 0px 40px 40px 40px !important;
 }
 .md-button {
-	padding: 0 20px;
+/* EED 2017-09-07 inicio */
+/*	padding: 0 20px; */
+	padding: 0 0px;
+/* EED 2017-09-07 final */
 }
 
 .list md-chip {

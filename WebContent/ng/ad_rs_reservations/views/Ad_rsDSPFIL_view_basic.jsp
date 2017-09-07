@@ -12,7 +12,7 @@
     <div class="modal-header">
 
 		<div class="row">
-			<div class="col-xs-12" style="padding: 0px; min-height: 40px;"><div dynamic="adminMenu"></div></div>
+			<div class="col-xs-12" style="padding: 0px; min-height: 80px;"><div dynamic="adminMenu"></div></div>
 		</div>
 
 		<div layout="row" layout-align="space-between stretch">
