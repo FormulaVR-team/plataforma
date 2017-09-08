@@ -1,23 +1,27 @@
 ﻿package com.fvr.tt_timeTableReference.actions;
 
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.action.ActionMessages;
+
+import com.fvr.FuentesDeDatos.BDConexion;
 import com.fvr._comun.ConfigPantalla;
 import com.fvr._comun.StExcepcion;
 import com.fvr._comun.Subrutinas;
+import com.fvr._comun._K;
+import com.fvr.lo_location.bean.LoBean;
 import com.fvr.tt_timeTableReference.bean.TtBean;
 import com.fvr.tt_timeTableReference.bean.TtBeanFiltro;
 import com.fvr.tt_timeTableReference.db.TtAccesoBaseDatos;
 import com.fvr.tt_timeTableReference.forms.TtRCD_AF;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import net.sf.json.JSONObject;
-
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMessage;
-import org.apache.struts.action.ActionMessages;
 
 public class TtDSPFIL_A extends org.apache.struts.action.Action {
     
@@ -88,6 +92,8 @@ public class TtDSPFIL_A extends org.apache.struts.action.Action {
                     resultado = this.cargarPantalla( request, pantalla );
                 } else if ( opcion.trim().equalsIgnoreCase("Borrar") ) {
                     resultado = opcion_Selec_Borrar( request, pantalla );
+                } else if ( opcion.trim().equalsIgnoreCase("Copiar") ) {
+                    resultado = opcion_Selec_Copiar( request, pantalla );
                 } else if ( opcion.trim().equalsIgnoreCase("Exportar") ) {
                     resultado = this.opcion_Exportar( request, pantalla );
                 } else if ( opcion.trim().equalsIgnoreCase("Grabar") ) {
@@ -356,6 +362,84 @@ public class TtDSPFIL_A extends org.apache.struts.action.Action {
             //////////////////////////////
         }
 //        errores.add("error", new ActionMessage( "errors.detail", nfilas + " registros procesados." ));
+        if (errores.size()>0) saveErrors(request,errores);
+        pantalla.setClavesMarcadas(null);
+        ///////////////////////////////////////////
+        resultado = cargarPantalla(request,form);
+        return resultado;
+    }
+    
+    private String opcion_Selec_Copiar( HttpServletRequest request, ActionForm  form ) {
+        String resultado = "OK";
+        ///////////////////////////////////////////
+        TtRCD_AF pantalla = (TtRCD_AF)form;
+        ActionMessages errores = new ActionMessages();
+        BDConexion dataBase = new Subrutinas().getBDConexion(request);
+        ///////////////////////////////////////////
+        
+        if ( ! _K.ROL_ADMIN.equals( Subrutinas.getUsFromId(dataBase, pantalla.getLogon_USR()).getUs_role_id() ) ) {
+            errores.add("error", new ActionMessage( "errors.detail", "Se requiere rol de Administrador para realizar esta acción." ));
+            saveErrors(request,errores);
+        	return cargarPantalla(request,form);
+        };
+        
+        ///////////////////////////////////////////
+        // Aborta si no hay filas marcadas:
+        int nfilas = (pantalla.getClavesMarcadas()!=null)?pantalla.getClavesMarcadas().length:0;
+        if (nfilas<1) {
+            errores.add("error", new ActionMessage( "errors.detail", "Se requiere marcar alguna fila para ser copiada." ));
+            saveErrors(request,errores);
+        	return cargarPantalla(request,form);
+        }
+        
+        String location_id_destino = pantalla.getTt_json();
+
+        // Aborta si no clave para el destino de la copia:
+        if ( location_id_destino == null || location_id_destino.trim().length() < 1 ) {
+        	return cargarPantalla(request,form);
+        }
+
+        // Aborta si clave para el destino es la misma que el origen:
+        if ( location_id_destino.equalsIgnoreCase( pantalla.getTt_location_id() ) ) {
+            errores.add("error", new ActionMessage( "errors.detail", "El destino de la copia debe ser distinto al origen." ));
+            saveErrors(request,errores);
+        	return cargarPantalla(request,form);
+        }
+
+		// Aborta si la clave para el destino no es válida:
+        LoBean reg_lo = Subrutinas.getLoFromId(dataBase, location_id_destino);
+        if ( reg_lo == null || reg_lo.getLo_sincro() == null || reg_lo.getLo_sincro().trim().length() < 1 ) {
+            errores.add("error", new ActionMessage( "errors.detail", "Location_id no hallada: " + location_id_destino ));
+            saveErrors(request,errores);
+        	return cargarPantalla(request,form);
+        }
+        ///////////////////////////////////////////
+        TtAccesoBaseDatos db = new TtAccesoBaseDatos();
+        String opcion = null;
+        TtBean key = new TtBean();
+        for (int j=0;j<nfilas;j++) {
+            opcion = pantalla.getClavesMarcadas()[j];
+            //////////////////////////////
+            // Rescato la clave concatenada:
+            key.inicializar();
+            String k;
+	k = opcion.trim().substring( 0, opcion.indexOf("^") ); key.setTt_location_id( k ); opcion = opcion.trim().substring( opcion.indexOf("^")+1 );
+	k = opcion.trim().substring( 0, opcion.indexOf("^") ); key.setTt_day_type( k ); opcion = opcion.trim().substring( opcion.indexOf("^")+1 );
+	k = opcion; key.setTt_start_time( k );
+            ///////////////////////////////////
+            try {
+            	key = db.tt_getRcd( dataBase, key );
+            	if ( key != null ) {
+            		key.setTt_author( pantalla.getLogon_USR() );
+            		key.setTt_location_id(location_id_destino);
+            		try { db.tt_crtObj( dataBase, key ); } catch (Exception e) {;}
+            	}
+            } catch (StExcepcion ex) {
+                errores.add("error", new ActionMessage( "errors.detail", ex.getMessage() ));
+            }
+            //////////////////////////////
+        }
+        errores.add("error", new ActionMessage( "errors.detail", nfilas + " registros procesados." ));
         if (errores.size()>0) saveErrors(request,errores);
         pantalla.setClavesMarcadas(null);
         ///////////////////////////////////////////

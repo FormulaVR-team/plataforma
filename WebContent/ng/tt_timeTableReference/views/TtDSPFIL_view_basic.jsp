@@ -42,6 +42,7 @@
 					<md-button class="button-close md-fab md-mini" ng-click="desMarcarTodo()" title="desmarcar todo"><md-icon> clear </md-icon></md-button>
 					<md-button class="button-close md-fab md-mini" ng-click="marcarTodo()" title="Marcar todo"><md-icon> done_all </md-icon></md-button>
 					<md-button class="button-close md-fab md-mini" ng-click="marcados_suprimir()" title="Suprimir marcados"><md-icon> delete </md-icon></md-button>
+					<md-button class="button-close md-fab md-mini" ng-click="marcados_copiar()" title="Copiar marcados"><md-icon> content_copy </md-icon></md-button>
 					&nbsp;&nbsp;
 				</div>
 				<!-- Botones final -->

@@ -94,6 +94,14 @@ angular
 		 		                data: actionForm
 				            }).then ( function( response) { return response; });
 		        		}
+		        	  , marcados_copiar: function(actionForm){
+		        			actionForm.opcionPantalla = "Copiar";
+		        			return $http({
+				                url: './TtDSPFIL_A.do',
+		 		                method: 'POST',
+		 		                data: actionForm
+				            }).then ( function( response) { return response; });
+		        		}
 			        };
 		      }
 	

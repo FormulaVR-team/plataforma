@@ -395,6 +395,39 @@ angular
 							});
 					};
 
+					$scope.marcados_copiar = function() {
+						if ( ! confirmar('Copiar las filas marcadas a otro location, ¿está seguro?',this) ) { return; }
+
+						var location_id_destino = prompt("Teclear el LOCATION_ID destino de la copia", "");
+						if (location_id_destino === "") { return; }
+						
+						// Combos y auxiliares para componentes de presentación:
+						$scope.actionForm.filasGrid = $scope.aux_filasGrid.value;
+					    // Combos y auxiliares para componentes de presentación:
+					    $scope.actionForm.tt_filtro.tt_location_id = $scope.aux_FLT_tt_location_id.value;
+						
+						// Usar este campo para llevar la clave destino de la copia:
+						$scope.actionForm.tt_json = location_id_destino;
+
+						TtDSPFIL_service
+						.marcados_copiar($scope.actionForm)
+						.then(
+							function(response) {
+
+								if (response.data.rc === 'OK') {
+									var modelo = response.data.text;
+									moveModelToView( $scope, modelo );
+									$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
+								} else {
+									app_services.errorComun(response.data.text);
+								}
+
+							},
+							function(response) {
+								console.error("Ha sucedido un error: " + response.statusText);
+							});
+					};
+
 					
 	/////////////
 	/////////////
@@ -405,7 +438,7 @@ angular
 
 					    // Combos y auxiliares para componentes de presentación:
 						// Recoger valores de combos:
-						$scope.actionForm.ad_tt_location_id = $scope.aux_tt_location_id.value;
+						$scope.actionForm.tt_location_id = $scope.aux_tt_location_id.value;
 
 						//llamo a su servicio pasandole el actionForm de entidad
 						TtDSPFIL_service
@@ -440,7 +473,7 @@ angular
 
 					    // Combos y auxiliares para componentes de presentación:
 						// Recoger valores de combos:
-						$scope.actionForm.ad_tt_location_id = $scope.aux_tt_location_id.value;
+						$scope.actionForm.tt_location_id = $scope.aux_tt_location_id.value;
 
 						//llamo a su servicio pasandole el actionForm de entidad
 						TtDSPFIL_service
