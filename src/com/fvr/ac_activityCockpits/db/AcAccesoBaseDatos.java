@@ -237,6 +237,11 @@ public class AcAccesoBaseDatos {
 		regRead.setAc_filename( rs.getString("filename") ); regRead.setAc_filename( (regRead.getAc_filename() == null)?"":regRead.getAc_filename().trim() ); // filename
 		regRead.setAc_content( rs.getString("content") ); regRead.setAc_content( (regRead.getAc_content() == null)?"":regRead.getAc_content().trim() ); // content
 		regRead.setAc_json( rs.getString("json") ); regRead.setAc_json( (regRead.getAc_json() == null)?"":regRead.getAc_json().trim() ); // json
+		regRead.setAc_aaaa_mm( rs.getString("aaaa_mm") ); regRead.setAc_aaaa_mm( (regRead.getAc_aaaa_mm() == null)?"":regRead.getAc_aaaa_mm().trim() ); // aaaa_mm
+		regRead.setAc_aaaa_mm_dd( rs.getString("aaaa_mm_dd") ); regRead.setAc_aaaa_mm_dd( (regRead.getAc_aaaa_mm_dd() == null)?"":regRead.getAc_aaaa_mm_dd().trim() ); // aaaa_mm_dd
+		regRead.setAc_aaaa_mm_dd_hh( rs.getString("aaaa_mm_dd_hh") ); regRead.setAc_aaaa_mm_dd_hh( (regRead.getAc_aaaa_mm_dd_hh() == null)?"":regRead.getAc_aaaa_mm_dd_hh().trim() ); // aaaa_mm_dd_hh
+		regRead.setAc_aaaa_mm_dd_hh_mm( rs.getString("aaaa_mm_dd_hh_mm") ); regRead.setAc_aaaa_mm_dd_hh_mm( (regRead.getAc_aaaa_mm_dd_hh_mm() == null)?"":regRead.getAc_aaaa_mm_dd_hh_mm().trim() ); // aaaa_mm_dd_hh_mm
+		regRead.setAc_aaaa_mm_dd_hh_mm_ss( rs.getString("aaaa_mm_dd_hh_mm_ss") ); regRead.setAc_aaaa_mm_dd_hh_mm_ss( (regRead.getAc_aaaa_mm_dd_hh_mm_ss() == null)?"":regRead.getAc_aaaa_mm_dd_hh_mm_ss().trim() ); // aaaa_mm_dd_hh_mm_ss
             }
         } catch (SQLException ex0) {
             throw new StExcepcion(ex0.getMessage());
@@ -301,6 +306,11 @@ public class AcAccesoBaseDatos {
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_filename(),"filename",sqlWhere);   // filename
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_content(),"content",sqlWhere);   // content
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_json(),"json",sqlWhere);   // json
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm(),"aaaa_mm",sqlWhere);   // aaaa_mm
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd(),"aaaa_mm_dd",sqlWhere);   // aaaa_mm_dd
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd_hh(),"aaaa_mm_dd_hh",sqlWhere);   // aaaa_mm_dd_hh
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd_hh_mm(),"aaaa_mm_dd_hh_mm",sqlWhere);   // aaaa_mm_dd_hh_mm
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd_hh_mm_ss(),"aaaa_mm_dd_hh_mm_ss",sqlWhere);   // aaaa_mm_dd_hh_mm_ss
         //////////////////////////////////////////////////////
         
 	   
@@ -354,6 +364,11 @@ public class AcAccesoBaseDatos {
 		regRead.setAc_filename( rs.getString("filename") ); regRead.setAc_filename( (regRead.getAc_filename() == null)?"":regRead.getAc_filename().trim() ); // filename
 		regRead.setAc_content( rs.getString("content") ); regRead.setAc_content( (regRead.getAc_content() == null)?"":regRead.getAc_content().trim() ); // content
 		regRead.setAc_json( rs.getString("json") ); regRead.setAc_json( (regRead.getAc_json() == null)?"":regRead.getAc_json().trim() ); // json
+		regRead.setAc_aaaa_mm( rs.getString("aaaa_mm") ); regRead.setAc_aaaa_mm( (regRead.getAc_aaaa_mm() == null)?"":regRead.getAc_aaaa_mm().trim() ); // aaaa_mm
+		regRead.setAc_aaaa_mm_dd( rs.getString("aaaa_mm_dd") ); regRead.setAc_aaaa_mm_dd( (regRead.getAc_aaaa_mm_dd() == null)?"":regRead.getAc_aaaa_mm_dd().trim() ); // aaaa_mm_dd
+		regRead.setAc_aaaa_mm_dd_hh( rs.getString("aaaa_mm_dd_hh") ); regRead.setAc_aaaa_mm_dd_hh( (regRead.getAc_aaaa_mm_dd_hh() == null)?"":regRead.getAc_aaaa_mm_dd_hh().trim() ); // aaaa_mm_dd_hh
+		regRead.setAc_aaaa_mm_dd_hh_mm( rs.getString("aaaa_mm_dd_hh_mm") ); regRead.setAc_aaaa_mm_dd_hh_mm( (regRead.getAc_aaaa_mm_dd_hh_mm() == null)?"":regRead.getAc_aaaa_mm_dd_hh_mm().trim() ); // aaaa_mm_dd_hh_mm
+		regRead.setAc_aaaa_mm_dd_hh_mm_ss( rs.getString("aaaa_mm_dd_hh_mm_ss") ); regRead.setAc_aaaa_mm_dd_hh_mm_ss( (regRead.getAc_aaaa_mm_dd_hh_mm_ss() == null)?"":regRead.getAc_aaaa_mm_dd_hh_mm_ss().trim() ); // aaaa_mm_dd_hh_mm_ss
                         
                         if ( cfg.isExportar() ) getSeq_Sub_ExportMid( regRead );
                         else                    arrayTmp.add( regRead );
@@ -410,6 +425,11 @@ public class AcAccesoBaseDatos {
 				s += "<td><strong style='color:darkblue;'>" + "filename" + "</strong></td>";  // filename
 				s += "<td><strong style='color:darkblue;'>" + "content" + "</strong></td>";  // content
 				s += "<td><strong style='color:darkblue;'>" + "json" + "</strong></td>";  // json
+				s += "<td><strong style='color:darkblue;'>" + "aaaa_mm" + "</strong></td>";  // aaaa_mm
+				s += "<td><strong style='color:darkblue;'>" + "aaaa_mm_dd" + "</strong></td>";  // aaaa_mm_dd
+				s += "<td><strong style='color:darkblue;'>" + "aaaa_mm_dd_hh" + "</strong></td>";  // aaaa_mm_dd_hh
+				s += "<td><strong style='color:darkblue;'>" + "aaaa_mm_dd_hh_mm" + "</strong></td>";  // aaaa_mm_dd_hh_mm
+				s += "<td><strong style='color:darkblue;'>" + "aaaa_mm_dd_hh_mm_ss" + "</strong></td>";  // aaaa_mm_dd_hh_mm_ss
 				s += "</tr>\r\n";
                 dout.write(s);
             }
@@ -450,6 +470,21 @@ public class AcAccesoBaseDatos {
 				tmp = registro.getAc_json();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // json
+				tmp = registro.getAc_aaaa_mm();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // aaaa_mm
+				tmp = registro.getAc_aaaa_mm_dd();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // aaaa_mm_dd
+				tmp = registro.getAc_aaaa_mm_dd_hh();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // aaaa_mm_dd_hh
+				tmp = registro.getAc_aaaa_mm_dd_hh_mm();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // aaaa_mm_dd_hh_mm
+				tmp = registro.getAc_aaaa_mm_dd_hh_mm_ss();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // aaaa_mm_dd_hh_mm_ss
 		s += "</tr>\r\n";
 
         // Grabar en el archivo de salida:
@@ -621,6 +656,11 @@ public class AcAccesoBaseDatos {
 				registro.setAc_filename( jsonReg.getString(6) );	// filename
 				registro.setAc_content( jsonReg.getString(7) );	// content
 				registro.setAc_json( jsonReg.getString(8) );	// json
+				registro.setAc_aaaa_mm( jsonReg.getString(9) );	// aaaa_mm
+				registro.setAc_aaaa_mm_dd( jsonReg.getString(10) );	// aaaa_mm_dd
+				registro.setAc_aaaa_mm_dd_hh( jsonReg.getString(11) );	// aaaa_mm_dd_hh
+				registro.setAc_aaaa_mm_dd_hh_mm( jsonReg.getString(12) );	// aaaa_mm_dd_hh_mm
+				registro.setAc_aaaa_mm_dd_hh_mm_ss( jsonReg.getString(13) );	// aaaa_mm_dd_hh_mm_ss
 					
 					arrayTmp.add(registro);
 				} catch (Exception e) {;}

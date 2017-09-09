@@ -101,6 +101,46 @@
 				<html:text maxlength="100" styleClass="form-control" property="ac_json"  style="width: 700px;"/>
 			</div>
 		</div>
+<!-- CAMPO VIRTUAL
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleClass="form-control" property="ac_aaaa_mm"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+-->
+<!-- CAMPO VIRTUAL
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm_dd&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleClass="form-control" property="ac_aaaa_mm_dd"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+-->
+<!-- CAMPO VIRTUAL
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm_dd_hh&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleClass="form-control" property="ac_aaaa_mm_dd_hh"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+-->
+<!-- CAMPO VIRTUAL
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm_dd_hh_mm&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleClass="form-control" property="ac_aaaa_mm_dd_hh_mm"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+-->
+<!-- CAMPO VIRTUAL
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm_dd_hh_mm_ss&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleClass="form-control" property="ac_aaaa_mm_dd_hh_mm_ss"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+-->
 
 					<div class="form-group">
 						<div class="col-sm-9 col-sm-offset-3">

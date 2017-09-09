@@ -11,6 +11,11 @@
 		<CAM nombre="filename" descripcion="filename" descripcionCorta="filename" longitud="100" tipo="CHAR" />
 		<CAM nombre="content" descripcion="content" descripcionCorta="content" longitud="100" tipo="CHAR" />
 		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+		<CAM nombre="aaaa_mm" descripcion="aaaa_mm" descripcionCorta="aaaa_mm" longitud="100" tipo="CHAR" />
+		<CAM nombre="aaaa_mm_dd" descripcion="aaaa_mm_dd" descripcionCorta="aaaa_mm_dd" longitud="100" tipo="CHAR" />
+		<CAM nombre="aaaa_mm_dd_hh" descripcion="aaaa_mm_dd_hh" descripcionCorta="aaaa_mm_dd_hh" longitud="100" tipo="CHAR" />
+		<CAM nombre="aaaa_mm_dd_hh_mm" descripcion="aaaa_mm_dd_hh_mm" descripcionCorta="aaaa_mm_dd_hh_mm" longitud="100" tipo="CHAR" />
+		<CAM nombre="aaaa_mm_dd_hh_mm_ss" descripcion="aaaa_mm_dd_hh_mm_ss" descripcionCorta="aaaa_mm_dd_hh_mm_ss" longitud="100" tipo="CHAR" />
 
 	</CAMPOS>
 	<ENTIDADES>
@@ -49,6 +54,11 @@
 			<CAM nombre="filename" />
 			<CAM nombre="content" />
 			<CAM nombre="json" />
+			<CAM nombre="aaaa_mm" />
+			<CAM nombre="aaaa_mm_dd" />
+			<CAM nombre="aaaa_mm_dd_hh" />
+			<CAM nombre="aaaa_mm_dd_hh_mm" />
+			<CAM nombre="aaaa_mm_dd_hh_mm_ss" />
 			<KEY nombre="serial" orden="ASC" secuencia="1" />
 		</FMT>
 	</ENT>

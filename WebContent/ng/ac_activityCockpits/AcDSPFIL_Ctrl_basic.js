@@ -60,7 +60,12 @@ angular
 								, ac_computername: "" // computername
 								, ac_filename: "" // filename
 								, ac_content: "" // content
-								, ac_json: "" // json						
+								, ac_json: "" // json
+								, ac_aaaa_mm: "" // aaaa_mm
+								, ac_aaaa_mm_dd: "" // aaaa_mm_dd
+								, ac_aaaa_mm_dd_hh: "" // aaaa_mm_dd_hh
+								, ac_aaaa_mm_dd_hh_mm: "" // aaaa_mm_dd_hh_mm
+								, ac_aaaa_mm_dd_hh_mm_ss: "" // aaaa_mm_dd_hh_mm_ss						
 							}
 						    // Datos calculados, no de BD:
 						    // Formato de registro:
@@ -72,7 +77,12 @@ angular
 								, ac_computername: "" // computername
 								, ac_filename: "" // filename
 								, ac_content: "" // content
-								, ac_json: "" // json						
+								, ac_json: "" // json
+								, ac_aaaa_mm: "" // aaaa_mm
+								, ac_aaaa_mm_dd: "" // aaaa_mm_dd
+								, ac_aaaa_mm_dd_hh: "" // aaaa_mm_dd_hh
+								, ac_aaaa_mm_dd_hh_mm: "" // aaaa_mm_dd_hh_mm
+								, ac_aaaa_mm_dd_hh_mm_ss: "" // aaaa_mm_dd_hh_mm_ss						
 							/////////////////////////////////////////////////
 					};
 					
@@ -286,7 +296,12 @@ angular
 						$scope.actionForm.ac_computername = reg.ac_computername; // computername
 						$scope.actionForm.ac_filename = reg.ac_filename; // filename
 						$scope.actionForm.ac_content = reg.ac_content; // content
-						$scope.actionForm.ac_json = reg.ac_json; // json						
+						$scope.actionForm.ac_json = reg.ac_json; // json
+						$scope.actionForm.ac_aaaa_mm = reg.ac_aaaa_mm; // aaaa_mm
+						$scope.actionForm.ac_aaaa_mm_dd = reg.ac_aaaa_mm_dd; // aaaa_mm_dd
+						$scope.actionForm.ac_aaaa_mm_dd_hh = reg.ac_aaaa_mm_dd_hh; // aaaa_mm_dd_hh
+						$scope.actionForm.ac_aaaa_mm_dd_hh_mm = reg.ac_aaaa_mm_dd_hh_mm; // aaaa_mm_dd_hh_mm
+						$scope.actionForm.ac_aaaa_mm_dd_hh_mm_ss = reg.ac_aaaa_mm_dd_hh_mm_ss; // aaaa_mm_dd_hh_mm_ss						
 					};
 
 					$scope.initKey = function() {
@@ -304,7 +319,12 @@ angular
 						$scope.actionForm.ac_computername = ""; // computername
 						$scope.actionForm.ac_filename = ""; // filename
 						$scope.actionForm.ac_content = ""; // content
-						$scope.actionForm.ac_json = ""; // json						
+						$scope.actionForm.ac_json = ""; // json
+						$scope.actionForm.ac_aaaa_mm = ""; // aaaa_mm
+						$scope.actionForm.ac_aaaa_mm_dd = ""; // aaaa_mm_dd
+						$scope.actionForm.ac_aaaa_mm_dd_hh = ""; // aaaa_mm_dd_hh
+						$scope.actionForm.ac_aaaa_mm_dd_hh_mm = ""; // aaaa_mm_dd_hh_mm
+						$scope.actionForm.ac_aaaa_mm_dd_hh_mm_ss = ""; // aaaa_mm_dd_hh_mm_ss						
 					};
 
 					$scope.marcarTodo = function() {

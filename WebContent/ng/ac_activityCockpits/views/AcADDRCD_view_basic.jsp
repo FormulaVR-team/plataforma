@@ -51,6 +51,26 @@
 				<label>json</label>
 				<input type="text" ng-model="actionForm.ac_json" />
 			</md-input-container>
+			<md-input-container>
+				<label>aaaa_mm</label>
+				<input type="text" ng-model="actionForm.ac_aaaa_mm" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
+				<label>aaaa_mm_dd</label>
+				<input type="text" ng-model="actionForm.ac_aaaa_mm_dd" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
+				<label>aaaa_mm_dd_hh</label>
+				<input type="text" ng-model="actionForm.ac_aaaa_mm_dd_hh" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
+				<label>aaaa_mm_dd_hh_mm</label>
+				<input type="text" ng-model="actionForm.ac_aaaa_mm_dd_hh_mm" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
+				<label>aaaa_mm_dd_hh_mm_ss</label>
+				<input type="text" ng-model="actionForm.ac_aaaa_mm_dd_hh_mm_ss" disabled="disabled" />
+			</md-input-container>
 
 
     </div>

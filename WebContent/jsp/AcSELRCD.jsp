@@ -120,6 +120,11 @@
 <th style="text-align: left;">filename</th>
 <th style="text-align: left;">content</th>
 <th style="text-align: left;">json</th>
+<th style="text-align: left;">aaaa_mm</th>
+<th style="text-align: left;">aaaa_mm_dd</th>
+<th style="text-align: left;">aaaa_mm_dd_hh</th>
+<th style="text-align: left;">aaaa_mm_dd_hh_mm</th>
+<th style="text-align: left;">aaaa_mm_dd_hh_mm_ss</th>
                 </tr>
                 <tr>
 			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_sincro" maxlength="20" style="width: 140px; text-align: left;" onclick="this.select();" />
@@ -140,6 +145,16 @@
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_json" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm_dd" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm_dd_hh" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm_dd_hh_mm" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm_dd_hh_mm_ss" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
                 </tr>
                 <logic:iterate indexId="gridIdx" id="grid" name="AcRCD_AF" property="grid">
                     <tr id="laFila${gridIdx}">
@@ -153,6 +168,11 @@
 <td class="tbceldadetalle"><bean:write name="grid" property="ac_filename"/><br/></td>   <!-- filename -->
 <td class="tbceldadetalle"><bean:write name="grid" property="ac_content"/><br/></td>   <!-- content -->
 <td class="tbceldadetalle"><bean:write name="grid" property="ac_json"/><br/></td>   <!-- json -->
+<td class="tbceldadetalle"><bean:write name="grid" property="ac_aaaa_mm"/><br/></td>   <!-- aaaa_mm -->
+<td class="tbceldadetalle"><bean:write name="grid" property="ac_aaaa_mm_dd"/><br/></td>   <!-- aaaa_mm_dd -->
+<td class="tbceldadetalle"><bean:write name="grid" property="ac_aaaa_mm_dd_hh"/><br/></td>   <!-- aaaa_mm_dd_hh -->
+<td class="tbceldadetalle"><bean:write name="grid" property="ac_aaaa_mm_dd_hh_mm"/><br/></td>   <!-- aaaa_mm_dd_hh_mm -->
+<td class="tbceldadetalle"><bean:write name="grid" property="ac_aaaa_mm_dd_hh_mm_ss"/><br/></td>   <!-- aaaa_mm_dd_hh_mm_ss -->
                     </tr>
                 </logic:iterate>
             </table>

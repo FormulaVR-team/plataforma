@@ -111,6 +111,41 @@
 			</div>
 		</div>
 
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_aaaa_mm"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm_dd&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_aaaa_mm_dd"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm_dd_hh&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_aaaa_mm_dd_hh"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm_dd_hh_mm&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_aaaa_mm_dd_hh_mm"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm_dd_hh_mm_ss&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_aaaa_mm_dd_hh_mm_ss"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+
 					<div class="form-group">
 						<div class="col-sm-9 col-sm-offset-3">
 							<input class="btn btn-info" type="button" value="<bean:message key="common.client.gestion_lista"/>" onclick="setOpcion('AcRCD_AF','Cerrar',null);"> 
@@ -143,6 +178,11 @@
 	<!-- <html:hidden property="ac_filename"/> filename -->
 	<!-- <html:hidden property="ac_content"/> content -->
 	<!-- <html:hidden property="ac_json"/> json -->
+	     <html:hidden property="ac_aaaa_mm"/> <!-- aaaa_mm -->
+	     <html:hidden property="ac_aaaa_mm_dd"/> <!-- aaaa_mm_dd -->
+	     <html:hidden property="ac_aaaa_mm_dd_hh"/> <!-- aaaa_mm_dd_hh -->
+	     <html:hidden property="ac_aaaa_mm_dd_hh_mm"/> <!-- aaaa_mm_dd_hh_mm -->
+	     <html:hidden property="ac_aaaa_mm_dd_hh_mm_ss"/> <!-- aaaa_mm_dd_hh_mm_ss -->
 
 		<!-- external javascript for ui-->
 

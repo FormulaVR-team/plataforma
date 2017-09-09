@@ -93,6 +93,11 @@
 <th style="text-align: left;">filename</th>
 <th style="text-align: left;">content</th>
 <th style="text-align: left;">json</th>
+<th style="text-align: left;">aaaa_mm</th>
+<th style="text-align: left;">aaaa_mm_dd</th>
+<th style="text-align: left;">aaaa_mm_dd_hh</th>
+<th style="text-align: left;">aaaa_mm_dd_hh_mm</th>
+<th style="text-align: left;">aaaa_mm_dd_hh_mm_ss</th>
 			</tr>
 			<tr>
 				<td><br /></td>
@@ -113,6 +118,16 @@
 			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_content" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_json" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm_dd" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm_dd_hh" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm_dd_hh_mm" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm_dd_hh_mm_ss" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			</tr>
 			<!-- -----------------------------------------------------------------------------------------  -->
@@ -144,6 +159,11 @@
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="ac_filename"/>',30));</script><html:hidden name="grid" property="ac_filename" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.ac_serial}';" />&nbsp;</td>   <!-- filename -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="ac_content"/>',30));</script><html:hidden name="grid" property="ac_content" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.ac_serial}';" />&nbsp;</td>   <!-- content -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="ac_json"/>',30));</script><html:hidden name="grid" property="ac_json" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.ac_serial}';" />&nbsp;</td>   <!-- json -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="ac_aaaa_mm"/>',30));</script><html:hidden name="grid" property="ac_aaaa_mm" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.ac_serial}';" />&nbsp;</td>   <!-- aaaa_mm -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="ac_aaaa_mm_dd"/>',30));</script><html:hidden name="grid" property="ac_aaaa_mm_dd" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.ac_serial}';" />&nbsp;</td>   <!-- aaaa_mm_dd -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="ac_aaaa_mm_dd_hh"/>',30));</script><html:hidden name="grid" property="ac_aaaa_mm_dd_hh" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.ac_serial}';" />&nbsp;</td>   <!-- aaaa_mm_dd_hh -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="ac_aaaa_mm_dd_hh_mm"/>',30));</script><html:hidden name="grid" property="ac_aaaa_mm_dd_hh_mm" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.ac_serial}';" />&nbsp;</td>   <!-- aaaa_mm_dd_hh_mm -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="ac_aaaa_mm_dd_hh_mm_ss"/>',30));</script><html:hidden name="grid" property="ac_aaaa_mm_dd_hh_mm_ss" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.ac_serial}';" />&nbsp;</td>   <!-- aaaa_mm_dd_hh_mm_ss -->
 				</tr>
 			</logic:iterate>
 		</table>

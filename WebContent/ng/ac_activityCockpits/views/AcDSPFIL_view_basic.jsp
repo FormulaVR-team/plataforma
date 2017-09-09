@@ -40,7 +40,7 @@
 
 			<div>
 				<h3>
-					activityCockpits
+					Activity Cockpits TRACE
 					<span dynamic="exportLink"></span>
 				</h3>
 			</div>
@@ -92,12 +92,32 @@
 						<input type="text" ng-model="actionForm.ac_filtro.ac_serial" />
 					</md-input-container>
 					<md-input-container>
-						<label>client</label>
+						<label>computername</label>
 						<input type="text" ng-model="actionForm.ac_filtro.ac_computername" />
 					</md-input-container>
 					<md-input-container>
 						<label>filename</label>
 						<input type="text" ng-model="actionForm.ac_filtro.ac_filename" />
+					</md-input-container>
+					<md-input-container>
+						<label>aaaa_mm</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm" />
+					</md-input-container>
+					<md-input-container>
+						<label>aaaa_mm_dd</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd" />
+					</md-input-container>
+					<md-input-container>
+						<label>aaaa_mm_dd_hh</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd_hh" />
+					</md-input-container>
+					<md-input-container>
+						<label>aaaa_mm_dd_hh_mm</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd_hh_mm" />
+					</md-input-container>
+					<md-input-container>
+						<label>aaaa_mm_dd_hh_mm_ss</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd_hh_mm_ss" />
 					</md-input-container>
 					<md-input-container>
 						<label>content</label>
@@ -125,8 +145,13 @@
 				<%-- <th>is_deleted</th> --%>
 				<%-- <th>author</th> --%>
 				<th>serial</th>
-				<th>client</th>
-				<th>filename</th>
+				<th>computername</th>
+				<%-- <th>filename</th>
+				<th>aaaa_mm</th>
+				<th>aaaa_mm_dd</th>
+				<th>aaaa_mm_dd_hh</th>
+				<th>aaaa_mm_dd_hh_mm</th> --%>
+				<th>UTC</th>
 				<th>content</th>
 				<th>json</th>
 			</tr>
@@ -139,8 +164,13 @@
 				<%-- <td>{{reg.ac_author}}&nbsp;</td> --%>
 				<td>{{reg.ac_serial}}&nbsp;</td>
 				<td>{{reg.ac_computername}}&nbsp;</td>
-				<td>{{reg.ac_filename}}&nbsp;</td>
-				<td title="{{reg.ac_content}}">{{reg.ac_content | limitTo:'30'}}&nbsp;</td>
+				<%-- <td>{{reg.ac_filename}}&nbsp;</td>
+				<td>{{reg.ac_aaaa_mm}}&nbsp;</td>
+				<td>{{reg.ac_aaaa_mm_dd}}&nbsp;</td>
+				<td>{{reg.ac_aaaa_mm_dd_hh}}&nbsp;</td>
+				<td>{{reg.ac_aaaa_mm_dd_hh_mm}}&nbsp;</td> --%>
+				<td>{{reg.ac_aaaa_mm_dd_hh_mm_ss}}&nbsp;</td>
+				<td title="{{reg.ac_content}}">{{reg.ac_content | limitTo:'25'}}&nbsp;</td>
 				<td>{{reg.ac_json | limitTo:'30'}}&nbsp;</td>
 			</tr>
 		</table>

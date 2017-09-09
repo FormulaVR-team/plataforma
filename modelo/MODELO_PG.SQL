@@ -916,7 +916,7 @@ FROM
 ;
 
 CREATE VIEW "FormulaVR"."V_AC_RTV_activityCockpits" AS
-SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."serial", "a"."computername", "a"."filename", "a"."content", "a"."json"
+SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."serial", "a"."computername", "a"."filename", "a"."content", "a"."json", COALESCE( substring( filename from 1 for 7), '') AS "aaaa_mm", COALESCE( substring( filename from 1 for 10), '') AS "aaaa_mm_dd", COALESCE( substring( filename from 1 for 10) || ' ' || substring( filename from 12 for 2), '') AS "aaaa_mm_dd_hh", COALESCE( substring( filename from 1 for 10) || ' ' || substring( filename from 12 for 2) || ':' || substring( filename from 15 for 2), '') AS "aaaa_mm_dd_hh_mm", COALESCE( substring( filename from 1 for 10) || ' ' || substring( filename from 12 for 2) || ':' || substring( filename from 15 for 2) || ':' || substring( filename from 18 for 2), '') AS "aaaa_mm_dd_hh_mm_ss"
 FROM 
 
 

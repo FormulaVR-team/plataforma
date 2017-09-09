@@ -45,6 +45,11 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	public String ac_filename; // filename
 	public String ac_content; // content
 	public String ac_json; // json
+	public String ac_aaaa_mm; // aaaa_mm
+	public String ac_aaaa_mm_dd; // aaaa_mm_dd
+	public String ac_aaaa_mm_dd_hh; // aaaa_mm_dd_hh
+	public String ac_aaaa_mm_dd_hh_mm; // aaaa_mm_dd_hh_mm
+	public String ac_aaaa_mm_dd_hh_mm_ss; // aaaa_mm_dd_hh_mm_ss
     
 
     public AcRCD_AF() {
@@ -74,6 +79,11 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	Destino.setAc_filename( getAc_filename() ); // filename
 	Destino.setAc_content( getAc_content() ); // content
 	Destino.setAc_json( getAc_json() ); // json
+	Destino.setAc_aaaa_mm( getAc_aaaa_mm() ); // aaaa_mm
+	Destino.setAc_aaaa_mm_dd( getAc_aaaa_mm_dd() ); // aaaa_mm_dd
+	Destino.setAc_aaaa_mm_dd_hh( getAc_aaaa_mm_dd_hh() ); // aaaa_mm_dd_hh
+	Destino.setAc_aaaa_mm_dd_hh_mm( getAc_aaaa_mm_dd_hh_mm() ); // aaaa_mm_dd_hh_mm
+	Destino.setAc_aaaa_mm_dd_hh_mm_ss( getAc_aaaa_mm_dd_hh_mm_ss() ); // aaaa_mm_dd_hh_mm_ss
     }
     
     public void copyFrom(StBean beanOrigen) {
@@ -88,6 +98,11 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	setAc_filename( Origen.getAc_filename() ); // filename
 	setAc_content( Origen.getAc_content() ); // content
 	setAc_json( Origen.getAc_json() ); // json
+	setAc_aaaa_mm( Origen.getAc_aaaa_mm() ); // aaaa_mm
+	setAc_aaaa_mm_dd( Origen.getAc_aaaa_mm_dd() ); // aaaa_mm_dd
+	setAc_aaaa_mm_dd_hh( Origen.getAc_aaaa_mm_dd_hh() ); // aaaa_mm_dd_hh
+	setAc_aaaa_mm_dd_hh_mm( Origen.getAc_aaaa_mm_dd_hh_mm() ); // aaaa_mm_dd_hh_mm
+	setAc_aaaa_mm_dd_hh_mm_ss( Origen.getAc_aaaa_mm_dd_hh_mm_ss() ); // aaaa_mm_dd_hh_mm_ss
     }
     
     public void copyFrom(AcRCD_AF beanOrigen) {
@@ -115,6 +130,11 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	setAc_filename( Origen.getAc_filename() ); // filename
 	setAc_content( Origen.getAc_content() ); // content
 	setAc_json( Origen.getAc_json() ); // json
+	setAc_aaaa_mm( Origen.getAc_aaaa_mm() ); // aaaa_mm
+	setAc_aaaa_mm_dd( Origen.getAc_aaaa_mm_dd() ); // aaaa_mm_dd
+	setAc_aaaa_mm_dd_hh( Origen.getAc_aaaa_mm_dd_hh() ); // aaaa_mm_dd_hh
+	setAc_aaaa_mm_dd_hh_mm( Origen.getAc_aaaa_mm_dd_hh_mm() ); // aaaa_mm_dd_hh_mm
+	setAc_aaaa_mm_dd_hh_mm_ss( Origen.getAc_aaaa_mm_dd_hh_mm_ss() ); // aaaa_mm_dd_hh_mm_ss
     }
     
     public AcBeanFiltro getAc_filtro() { return ac_filtro; }
@@ -219,5 +239,30 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	public String getAc_json() {return ac_json;}
 	/** Set json*/
 	public void setAc_json(String ac_json) {this.ac_json = ac_json;}
+
+	/** Get aaaa_mm*/
+	public String getAc_aaaa_mm() {return ac_aaaa_mm;}
+	/** Set aaaa_mm*/
+	public void setAc_aaaa_mm(String ac_aaaa_mm) {this.ac_aaaa_mm = ac_aaaa_mm;}
+
+	/** Get aaaa_mm_dd*/
+	public String getAc_aaaa_mm_dd() {return ac_aaaa_mm_dd;}
+	/** Set aaaa_mm_dd*/
+	public void setAc_aaaa_mm_dd(String ac_aaaa_mm_dd) {this.ac_aaaa_mm_dd = ac_aaaa_mm_dd;}
+
+	/** Get aaaa_mm_dd_hh*/
+	public String getAc_aaaa_mm_dd_hh() {return ac_aaaa_mm_dd_hh;}
+	/** Set aaaa_mm_dd_hh*/
+	public void setAc_aaaa_mm_dd_hh(String ac_aaaa_mm_dd_hh) {this.ac_aaaa_mm_dd_hh = ac_aaaa_mm_dd_hh;}
+
+	/** Get aaaa_mm_dd_hh_mm*/
+	public String getAc_aaaa_mm_dd_hh_mm() {return ac_aaaa_mm_dd_hh_mm;}
+	/** Set aaaa_mm_dd_hh_mm*/
+	public void setAc_aaaa_mm_dd_hh_mm(String ac_aaaa_mm_dd_hh_mm) {this.ac_aaaa_mm_dd_hh_mm = ac_aaaa_mm_dd_hh_mm;}
+
+	/** Get aaaa_mm_dd_hh_mm_ss*/
+	public String getAc_aaaa_mm_dd_hh_mm_ss() {return ac_aaaa_mm_dd_hh_mm_ss;}
+	/** Set aaaa_mm_dd_hh_mm_ss*/
+	public void setAc_aaaa_mm_dd_hh_mm_ss(String ac_aaaa_mm_dd_hh_mm_ss) {this.ac_aaaa_mm_dd_hh_mm_ss = ac_aaaa_mm_dd_hh_mm_ss;}
 
 }
