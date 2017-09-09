@@ -15,7 +15,7 @@
 			<div class="col-xs-12" style="padding: 0px; min-height: 80px;"><div dynamic="adminMenu"></div></div>
 		</div>
 
-		<div class="row">
+		<div class="row" style="padding: 0">
 
 			<div layout="row" layout-align="space-between stretch">
 
