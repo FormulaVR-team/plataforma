@@ -10,10 +10,6 @@
 
 <div name="AcADDRCD_form">
     <div class="modal-header">
-		<ul>
-			<li>logon_USR &nbsp; {{actionForm.logon_USR}}</li>
-		</ul>
-
 
 			<md-input-container>
 				<label>sincro</label>
