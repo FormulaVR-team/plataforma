@@ -18,8 +18,8 @@
 		<div class="row">
 
 			<div layout="row" layout-align="space-between stretch">
-	
-				<div>
+
+				<div class="col-xs-4" style="padding: 0">
 					<%-- Botones inicio --%>
 					<div class="btn-group">
 						<md-button class="button-close md-fab md-mini" ng-click="filtrar()" title="<bean:message key="common.client.refrescar"/>"><md-icon> autorenew </md-icon></md-button>
@@ -34,21 +34,21 @@
 						<md-button class="button-close md-mini" ng-click="marcarTodo()" title="Marcar todo"><md-icon> done_all </md-icon></md-button>
 						<md-button class="button-close md-mini" ng-click="marcados_suprimir()" title="Suprimir marcados"><md-icon> delete </md-icon></md-button>
 	
-	 				</div>
+					</div>
 					<%-- Botones final --%>
 				</div>
-	
-				<div>
+
+				<div class="col-xs-3" style="padding: 0">
 					<h3>
 						Activity Cockpits TRACE
 						<span dynamic="exportLink"></span>
 					</h3>
 				</div>
-	
-				<div>
+
+				<div class="col-xs-5" style="padding: 0">
 					<%-- <span>{{actionForm.logon_USR}}</span> --%>
 					<%-- Paginador inicio --%>
-					<div>
+					<div class="pull-right">
 						<input type="hidden" ng-model="actionForm.filaInicioGrid" />
 						<input type="hidden" ng-model="actionForm.filasTotales" />
 						<span dynamic="txtHtmlPaginador"></span>
@@ -62,7 +62,7 @@
 					</div>
 					<%-- Paginador final --%>
 				</div>
-	
+
 			</div>
 
 			<div>
@@ -70,64 +70,64 @@
 				<div id="acFilterBox" style="display:none; border: black solid 1px;">
 					<md-button class=" md-raised md-warn md-button md-ink-ripple" ng-click="filtrar()" onclick="$('#filterIcon').toggleClass('rotate');$('#acFilterBox').slideToggle();">Aplicar</md-button>
 					<div class="alert alert-default fade in" style="display: block; padding: 0; margin: 0;">
-	
-						<md-input-container>
-							<label>sincro</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_sincro" />
-						</md-input-container>
-						<md-input-container>
-							<label>mark</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_mark" />
-						</md-input-container>
-						<md-input-container>
-							<label>is_deleted</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_is_deleted" />
-						</md-input-container>
-						<md-input-container>
-							<label>author</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_author" />
-						</md-input-container>
-						<md-input-container>
-							<label>serial</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_serial" />
-						</md-input-container>
-						<md-input-container>
-							<label>computername</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_computername" />
-						</md-input-container>
-						<md-input-container>
-							<label>filename</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_filename" />
-						</md-input-container>
-						<md-input-container>
-							<label>aaaa_mm</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm" />
-						</md-input-container>
-						<md-input-container>
-							<label>aaaa_mm_dd</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd" />
-						</md-input-container>
-						<md-input-container>
-							<label>aaaa_mm_dd_hh</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd_hh" />
-						</md-input-container>
-						<md-input-container>
-							<label>aaaa_mm_dd_hh_mm</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd_hh_mm" />
-						</md-input-container>
-						<md-input-container>
-							<label>aaaa_mm_dd_hh_mm_ss</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd_hh_mm_ss" />
-						</md-input-container>
-						<md-input-container>
-							<label>content</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_content" />
-						</md-input-container>
-						<md-input-container>
-							<label>json</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_json" />
-						</md-input-container>
-	
+
+					<md-input-container>
+						<label>sincro</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_sincro" />
+					</md-input-container>
+					<md-input-container>
+						<label>mark</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_mark" />
+					</md-input-container>
+					<md-input-container>
+						<label>is_deleted</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_is_deleted" />
+					</md-input-container>
+					<md-input-container>
+						<label>author</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_author" />
+					</md-input-container>
+					<md-input-container>
+						<label>serial</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_serial" />
+					</md-input-container>
+					<md-input-container>
+						<label>computername</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_computername" />
+					</md-input-container>
+					<md-input-container>
+						<label>filename</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_filename" />
+					</md-input-container>
+					<md-input-container>
+						<label>content</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_content" />
+					</md-input-container>
+					<md-input-container>
+						<label>json</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_json" />
+					</md-input-container>
+					<md-input-container>
+						<label>aaaa_mm</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm" />
+					</md-input-container>
+					<md-input-container>
+						<label>aaaa_mm_dd</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd" />
+					</md-input-container>
+					<md-input-container>
+						<label>aaaa_mm_dd_hh</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd_hh" />
+					</md-input-container>
+					<md-input-container>
+						<label>aaaa_mm_dd_hh_mm</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd_hh_mm" />
+					</md-input-container>
+					<md-input-container>
+						<label>aaaa_mm_dd_hh_mm_ss</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd_hh_mm_ss" />
+					</md-input-container>
+
 					</div>
 				</div>
 				<%-- Caja de filtros final --%>
