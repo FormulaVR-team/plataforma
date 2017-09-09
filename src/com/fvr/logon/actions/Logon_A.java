@@ -277,6 +277,7 @@ public class Logon_A extends Action {
 				}
 	            saveErrors(request,errores);
 			}
+	        request.getSession().setAttribute( "CHGPWD_MAIL_SENDED", "CHGPWD_MAIL_SENDED" );
 			///////////
 
         } catch (StExcepcion e) {
