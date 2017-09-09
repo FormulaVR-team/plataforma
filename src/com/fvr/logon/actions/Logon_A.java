@@ -266,6 +266,18 @@ public class Logon_A extends Action {
         	reg_us.setUs_json( "" ); // json
 
 			new com.fvr.us_users.db.UsAccesoBaseDatos().us_crtObj(dataBase, reg_us);
+			
+			///////////
+			// Enviar correo para cambio de password:
+			List<String> losErrores = new ArrayList<String>();
+			SendMail.send_CambiarPassword(dataBase, Subrutinas.get_urlBase(request), user_id, losErrores, true);
+			if ( !losErrores.isEmpty() ) {
+				for( String item : losErrores ) {
+		            errores.add("error", new ActionMessage( "errors.detail", item ));
+				}
+	            saveErrors(request,errores);
+			}
+			///////////
 
         } catch (StExcepcion e) {
             errores.add("error", new ActionMessage( "errors.detail", e.getMessage() ));
