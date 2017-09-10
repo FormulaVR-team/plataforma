@@ -11,7 +11,7 @@
         </div>
 
 
-        <div class="brand">
+        <div class="brand header-no-sidebar-logo">
             <a href="#!/">
                     <span>
                         <img class="brand-img" src="./resBS/img/formulavr.png" alt="Formula VR" onclick="window.location ='Off';"/>
@@ -26,13 +26,37 @@
 
         <div class="top-nav-right">
             <ul class="list-unstyled float-right">
-                <li class="hidden-xs" style="line-height: 40px;padding: 0px 5px;">
+                <li class="hidden-xs">
                     {{varGlobal.logon_USR}}
                 </li>
                 <li>
-                    <a class="header-btn" ui-sref="signoff" ui-sref-active="itemActivo" style="line-height: 53px;padding: 0px 10px;">
-                        <i class="material-icons">power_settings_new</i>
-                    </a>
+                  <md-menu md-position-mode="target-right target">
+                    <md-button aria-label="menu" class="md-fab md-mini" ng-click="openMenu($mdOpenMenu, $event)">
+                      <md-icon>more_vert</md-icon>
+                    </md-button>
+                    <md-menu-content width="4">
+                      <md-menu-item>
+                        <md-button ui-sref="RsDSPFIL">
+                          <md-icon>shopping_cart</md-icon>
+                          Mis reservas
+                        </md-button>
+                      </md-menu-item>
+                      <md-menu-item>
+                        <md-button ui-sref="rsUsEDTRCD">
+                          <md-icon>person</md-icon>
+                          Mi perfil
+                        </md-button>
+                      </md-menu-item>
+                      <md-menu-divider></md-menu-divider>
+                      <md-menu-item>
+                        <md-button ui-sref="signoff">
+                          <md-icon>power_settings_new</md-icon>
+                          Cerrar sesion
+                        </md-button>
+                      </md-menu-item>
+                       
+                    </md-menu-content>
+                  </md-menu>
                 </li>
             </ul>
         </div>

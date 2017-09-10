@@ -9,8 +9,7 @@ angular.module('commonServices_module')
         function($http,$q,$sce,$mdDialog) {
 
             /* ---------- GESTION DE ERRORES DE SERVICIOS GENERICA ---------- */
-
-            // Funcion comun para gestion de los errores en funcion del codigo http
+						// Funcion comun para gestion de los errores en funcion del codigo http
             function tratarError(data, status, deferred) {
                 if (status === 404 || status === 0) {
                     deferred.reject("Servicio no disponible");
@@ -57,6 +56,14 @@ angular.module('commonServices_module')
 			        });
 
             }
+
+            // Funcion para menu superior
+            var originatorEv;
+				    function openMenu($mdOpenMenu, ev)     {
+				      originatorEv = ev;
+				      $mdOpenMenu(ev);
+				    };
+
             return {
 	              errorComun : function( text  ) {
 	            	  if ( text.includes("error de seguridad") ) {
@@ -69,6 +76,9 @@ angular.module('commonServices_module')
 	            } 
 	        	, showAlert : function( content, title, ok_text ) {
 	        		showAlert(content, title, ok_text);
+	        	} 
+	        	, openMenu : function( $mdOpenMenu, ev ) {
+	        		openMenu($mdOpenMenu, ev);
 	        	} 
 	        	, showAlertTemplate : function( templateContent ) {
 	        		showAlertTemplate( templateContent );

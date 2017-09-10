@@ -9,21 +9,8 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 
 <div name="UsEDTRCD_form">
-	<div class="row">
-		<div class="col-xs-12" style="padding: 0px; min-height: 50px;">
 
-		<div dynamic="adminMenu"></div>
-
-		</div>
-	</div>
-<!-- 
-	<div class="row">
-		<div class="col-xs-12">
-			<h3>Mis datos</h3>
-		</div>
-	</div>
- -->
-	<div class="row">
+	<div class="row" style="margin-top: 25px;">
 
 		<div class="col-xs-12 col-sm-8">
 
@@ -106,7 +93,7 @@
 		
 		     		<div class="row">
 		     			<div class="col-xs-12 text-right">
-		     			<md-button class="md-raised md-primary md-button" ng-click="cambiar()">Guardar cambios</md-button>
+		     			<md-button class="md-raised md-primary md-button padding-10" ng-click="cambiar()">Guardar cambios</md-button>
 		     			</div>
 		     		</div>
 		

@@ -158,7 +158,7 @@
 		     			<h3 style="margin-top: 10px;text-align:right;" md-colors="{color: 'default-accent-800'}">Total a pagar: <span style="padding-left: 20px;font-weight: bolder;">{{actionForm.rs_amount | number:2 }}&nbsp;€</span></h3>
 		     		</div>
 		     		<div class="col-xs-12 text-right" style="margin-bottom: 20px;">
-		     			<md-button class="md-raised md-accent" ng-click="check()" style="font-size: 1.2em;padding: 5px 25px;">Siguiente</md-button>
+		     			<md-button class="md-raised md-primary" ng-click="check()" style="font-size: 1.2em;padding: 5px 25px;">Siguiente</md-button>
 		     		</div>
 		     	</div>
 
@@ -216,7 +216,7 @@
 
 							<div class="row">
 								<div class="col-xs-12 text-right" style="margin-bottom:20px;">
-									<md-button class="md-raised md-accent" ng-click="payment();" style="font-size: 1.2em;padding: 5px 25px;">Reservar</md-button>
+									<md-button class="md-raised md-primary" ng-click="payment();" style="font-size: 1.2em;padding: 5px 25px;">Reservar</md-button>
 								</div>
 							</div>
 						</div>
