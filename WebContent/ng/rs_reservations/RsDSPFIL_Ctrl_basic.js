@@ -1004,6 +1004,9 @@ angular
 
 					// Esto se pone aqui para evitar problemas de "forward references":
 					if ( $stateParams.panel_add === 'panel_add' ) {
+						if ( (""+window.location).includes( "CHGPWD_MAIL_SENDED=true" ) ) {
+							app_services.errorComun( "<h3>Revisa tu correo para obtener una contraseña</h3><br/>" + $scope.actionForm.logon_USR );
+						}
 						$scope.initReg();
 						$('#rsDSPFIL_ADDRCD_modal').modal("show");
 					}

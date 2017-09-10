@@ -1024,6 +1024,7 @@ public class FvrServlet extends HttpServlet {
 		// java -jar FVRMonitor.jar c:\datos\new2.html 5 http://localhost:8080/FormulaVR/FvrServlet?ACC=FVRMonitor
 
 		try {
+			BDConexion dataBase = new Subrutinas().getBDConexion(request);
 			com.fvr.ac_activityCockpits.db.AcAccesoBaseDatos dao_ac = new com.fvr.ac_activityCockpits.db.AcAccesoBaseDatos();
 			com.fvr.ac_activityCockpits.bean.AcBean          reg_ac = new com.fvr.ac_activityCockpits.bean.AcBean();
 			
@@ -1032,8 +1033,24 @@ public class FvrServlet extends HttpServlet {
 			try { reg_ac.setAc_computername( payload.getString("client") ); } catch (Exception e) {;}
 			try { reg_ac.setAc_filename( payload.getString("filename") ); } catch (Exception e) {;}
 			try { reg_ac.setAc_content( payload.getString("content") ); } catch (Exception e) {;}
+			
+			if ( reg_ac.getAc_computername() != null && reg_ac.getAc_computername().trim().length() > 0 ) {
+				try {
+					com.fvr.cp_cockpits.db.CpAccesoBaseDatos dao_cp = new com.fvr.cp_cockpits.db.CpAccesoBaseDatos();
+					com.fvr.cp_cockpits.bean.CpBeanFiltro    flt_cp = new com.fvr.cp_cockpits.bean.CpBeanFiltro();
+					com.fvr.cp_cockpits.bean.CpBean[]        rgs_cp = null;
 
-			dao_ac.ac_crtObj(new Subrutinas().getBDConexion(request), reg_ac);
+					flt_cp.setCp_name( reg_ac.getAc_computername().trim() );
+
+					rgs_cp = dao_cp.cp_getSeq(dataBase, new ConfigPantalla(1), flt_cp);
+
+					if ( rgs_cp != null && rgs_cp.length > 0 ) {
+						reg_ac.setAc_location_id( rgs_cp[0].getCp_location_id() );
+					}
+				} catch (Exception e) { ; }
+			}
+
+			dao_ac.ac_crtObj(dataBase, reg_ac);
 
 		} catch (StExcepcion e) {
 			responder(request, response, false, e.getMessage());

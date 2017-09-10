@@ -10,10 +10,6 @@
 
 <div name="AcEDTRCD_form">
     <div class="modal-header">
-		<ul>
-			<li>logon_USR &nbsp; {{actionForm.logon_USR}}</li>
-		</ul>
-
 
 			<md-input-container>
 				<label>sincro</label>
@@ -36,6 +32,14 @@
 				<input type="text" ng-model="actionForm.ac_serial" />
 			</md-input-container>
 			<md-input-container>
+				<label>location_id</label>
+				<input type="text" ng-model="actionForm.ac_location_id" />
+			</md-input-container>
+			<md-input-container>
+				<label>LO_name</label>
+				<input type="text" ng-model="actionForm.ac_LO_name" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
 				<label>computername</label>
 				<input type="text" ng-model="actionForm.ac_computername" />
 			</md-input-container>
@@ -46,6 +50,30 @@
 			<md-input-container>
 				<label>json</label>
 				<input type="text" ng-model="actionForm.ac_json" />
+			</md-input-container>
+			<md-input-container>
+				<label>aaaa_mm</label>
+				<input type="text" ng-model="actionForm.ac_aaaa_mm" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
+				<label>aaaa_mm_dd</label>
+				<input type="text" ng-model="actionForm.ac_aaaa_mm_dd" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
+				<label>aaaa_mm_dd_hh</label>
+				<input type="text" ng-model="actionForm.ac_aaaa_mm_dd_hh" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
+				<label>aaaa_mm_dd_hh_m0</label>
+				<input type="text" ng-model="actionForm.ac_aaaa_mm_dd_hh_m0" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
+				<label>aaaa_mm_dd_hh_mm</label>
+				<input type="text" ng-model="actionForm.ac_aaaa_mm_dd_hh_mm" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
+				<label>aaaa_mm_dd_hh_mm_ss</label>
+				<input type="text" ng-model="actionForm.ac_aaaa_mm_dd_hh_mm_ss" disabled="disabled" />
 			</md-input-container>
 			<md-input-container>
 				<label>content</label>

@@ -104,7 +104,7 @@ public class Logon_A extends Action {
 							}
 							//////////////////
 
-							link_urlState += "panel_add";
+							link_urlState += "panel_add" + "?CHGPWD_MAIL_SENDED=true";
 							response.sendRedirect( link_urlState );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //							request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
 						}

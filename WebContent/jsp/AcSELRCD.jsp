@@ -116,10 +116,18 @@
 <th style="text-align: left;">is_deleted</th>
 <th style="text-align: left;">author</th>
 <th style="text-align: right;">serial</th>
+<th style="text-align: left;">location_id</th>
+<th style="text-align: left;">LO_name</th>
 <th style="text-align: left;">computername</th>
 <th style="text-align: left;">filename</th>
 <th style="text-align: left;">content</th>
 <th style="text-align: left;">json</th>
+<th style="text-align: left;">aaaa_mm</th>
+<th style="text-align: left;">aaaa_mm_dd</th>
+<th style="text-align: left;">aaaa_mm_dd_hh</th>
+<th style="text-align: left;">aaaa_mm_dd_hh_m0</th>
+<th style="text-align: left;">aaaa_mm_dd_hh_mm</th>
+<th style="text-align: left;">aaaa_mm_dd_hh_mm_ss</th>
                 </tr>
                 <tr>
 			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_sincro" maxlength="20" style="width: 140px; text-align: left;" onclick="this.select();" />
@@ -132,6 +140,10 @@
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_serial" maxlength="5" style="width: 35px; text-align: right;" onkeypress="return soloNumeros(event);" onclick="this.select();" />
 			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_location_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_LO_name" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
 			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_computername" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_filename" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
@@ -139,6 +151,18 @@
 			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_content" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_json" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm_dd" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm_dd_hh" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm_dd_hh_m0" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm_dd_hh_mm" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="ac_filtro.ac_aaaa_mm_dd_hh_mm_ss" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
                 </tr>
                 <logic:iterate indexId="gridIdx" id="grid" name="AcRCD_AF" property="grid">
@@ -149,10 +173,18 @@
 <td class="tbceldadetalle"><bean:write name="grid" property="ac_is_deleted"/><br/></td>   <!-- is_deleted -->
 <td class="tbceldadetalle"><bean:write name="grid" property="ac_author"/><br/></td>   <!-- author -->
 <td class="tbceldadetalle" onmouseover="onTdOver(this);" onmouseout="onTdOut(this);" onclick="javascript:setRetorno( '<bean:write name="grid" property="ac_serial"/>' );" style="text-align: right;"><bean:write name="grid" property="ac_serial"/><br/></td>   <!-- serial -->
+<td class="tbceldadetalle"><bean:write name="grid" property="ac_location_id"/><br/></td>   <!-- location_id -->
+<td class="tbceldadetalle"><bean:write name="grid" property="ac_LO_name"/><br/></td>   <!-- LO_name -->
 <td class="tbceldadetalle"><bean:write name="grid" property="ac_computername"/><br/></td>   <!-- computername -->
 <td class="tbceldadetalle"><bean:write name="grid" property="ac_filename"/><br/></td>   <!-- filename -->
 <td class="tbceldadetalle"><bean:write name="grid" property="ac_content"/><br/></td>   <!-- content -->
 <td class="tbceldadetalle"><bean:write name="grid" property="ac_json"/><br/></td>   <!-- json -->
+<td class="tbceldadetalle"><bean:write name="grid" property="ac_aaaa_mm"/><br/></td>   <!-- aaaa_mm -->
+<td class="tbceldadetalle"><bean:write name="grid" property="ac_aaaa_mm_dd"/><br/></td>   <!-- aaaa_mm_dd -->
+<td class="tbceldadetalle"><bean:write name="grid" property="ac_aaaa_mm_dd_hh"/><br/></td>   <!-- aaaa_mm_dd_hh -->
+<td class="tbceldadetalle"><bean:write name="grid" property="ac_aaaa_mm_dd_hh_m0"/><br/></td>   <!-- aaaa_mm_dd_hh_m0 -->
+<td class="tbceldadetalle"><bean:write name="grid" property="ac_aaaa_mm_dd_hh_mm"/><br/></td>   <!-- aaaa_mm_dd_hh_mm -->
+<td class="tbceldadetalle"><bean:write name="grid" property="ac_aaaa_mm_dd_hh_mm_ss"/><br/></td>   <!-- aaaa_mm_dd_hh_mm_ss -->
                     </tr>
                 </logic:iterate>
             </table>

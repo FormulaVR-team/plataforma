@@ -84,6 +84,20 @@
 		</div>
 
 		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">location_id&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="50" styleId="textinput" styleClass="form-control" property="ac_location_id"  style="width: 350px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">LO_name&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_LO_name"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
 			<label class="col-sm-3 control-label" for="textinput">computername&nbsp;</label>
 			<div class="col-sm-9">
 				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_computername"  style="width: 700px;"/>
@@ -108,6 +122,48 @@
 			<label class="col-sm-3 control-label" for="textinput">json&nbsp;</label>
 			<div class="col-sm-9">
 				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_json"  style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_aaaa_mm"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm_dd&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_aaaa_mm_dd"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm_dd_hh&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_aaaa_mm_dd_hh"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm_dd_hh_m0&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_aaaa_mm_dd_hh_m0"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm_dd_hh_mm&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_aaaa_mm_dd_hh_mm"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">aaaa_mm_dd_hh_mm_ss&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="ac_aaaa_mm_dd_hh_mm_ss"  disabled="true" style="width: 700px;"/>
 			</div>
 		</div>
 
@@ -139,10 +195,18 @@
 	<!-- <html:hidden property="ac_is_deleted"/> is_deleted -->
 	<!-- <html:hidden property="ac_author"/> author -->
 	     <html:hidden property="ac_serial"/> <!-- serial -->
+	<!-- <html:hidden property="ac_location_id"/> location_id -->
+	     <html:hidden property="ac_LO_name"/> <!-- LO_name -->
 	<!-- <html:hidden property="ac_computername"/> computername -->
 	<!-- <html:hidden property="ac_filename"/> filename -->
 	<!-- <html:hidden property="ac_content"/> content -->
 	<!-- <html:hidden property="ac_json"/> json -->
+	     <html:hidden property="ac_aaaa_mm"/> <!-- aaaa_mm -->
+	     <html:hidden property="ac_aaaa_mm_dd"/> <!-- aaaa_mm_dd -->
+	     <html:hidden property="ac_aaaa_mm_dd_hh"/> <!-- aaaa_mm_dd_hh -->
+	     <html:hidden property="ac_aaaa_mm_dd_hh_m0"/> <!-- aaaa_mm_dd_hh_m0 -->
+	     <html:hidden property="ac_aaaa_mm_dd_hh_mm"/> <!-- aaaa_mm_dd_hh_mm -->
+	     <html:hidden property="ac_aaaa_mm_dd_hh_mm_ss"/> <!-- aaaa_mm_dd_hh_mm_ss -->
 
 		<!-- external javascript for ui-->
 

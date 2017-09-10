@@ -7,10 +7,18 @@
 		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
 		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
 		<CAM nombre="serial" descripcion="serial" descripcionCorta="serial" longitud="5" tipo="NUM" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="LO_name" descripcion="LO_name" descripcionCorta="LO_name" longitud="100" tipo="CHAR" />
 		<CAM nombre="computername" descripcion="computername" descripcionCorta="computername" longitud="100" tipo="CHAR" />
 		<CAM nombre="filename" descripcion="filename" descripcionCorta="filename" longitud="100" tipo="CHAR" />
 		<CAM nombre="content" descripcion="content" descripcionCorta="content" longitud="100" tipo="CHAR" />
 		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+		<CAM nombre="aaaa_mm" descripcion="aaaa_mm" descripcionCorta="aaaa_mm" longitud="100" tipo="CHAR" />
+		<CAM nombre="aaaa_mm_dd" descripcion="aaaa_mm_dd" descripcionCorta="aaaa_mm_dd" longitud="100" tipo="CHAR" />
+		<CAM nombre="aaaa_mm_dd_hh" descripcion="aaaa_mm_dd_hh" descripcionCorta="aaaa_mm_dd_hh" longitud="100" tipo="CHAR" />
+		<CAM nombre="aaaa_mm_dd_hh_m0" descripcion="aaaa_mm_dd_hh_m0" descripcionCorta="aaaa_mm_dd_hh_m0" longitud="100" tipo="CHAR" />
+		<CAM nombre="aaaa_mm_dd_hh_mm" descripcion="aaaa_mm_dd_hh_mm" descripcionCorta="aaaa_mm_dd_hh_mm" longitud="100" tipo="CHAR" />
+		<CAM nombre="aaaa_mm_dd_hh_mm_ss" descripcion="aaaa_mm_dd_hh_mm_ss" descripcionCorta="aaaa_mm_dd_hh_mm_ss" longitud="100" tipo="CHAR" />
 
 		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
 		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
@@ -287,6 +295,7 @@
 			<CAM nombre="is_deleted" />
 			<CAM nombre="author" />
 			<CAM nombre="serial" />
+			<CAM nombre="location_id" />
 			<CAM nombre="computername" />
 			<CAM nombre="filename" />
 			<CAM nombre="content" />
@@ -298,6 +307,7 @@
 			<CAM nombre="is_deleted" />
 			<CAM nombre="author" />
 			<CAM nombre="serial" />
+			<CAM nombre="location_id" />
 			<CAM nombre="computername" />
 			<CAM nombre="filename" />
 			<CAM nombre="content" />
@@ -310,10 +320,18 @@
 			<CAM nombre="is_deleted" />
 			<CAM nombre="author" />
 			<CAM nombre="serial" />
+			<CAM nombre="location_id" />
+			<CAM nombre="LO_name" />
 			<CAM nombre="computername" />
 			<CAM nombre="filename" />
 			<CAM nombre="content" />
 			<CAM nombre="json" />
+			<CAM nombre="aaaa_mm" />
+			<CAM nombre="aaaa_mm_dd" />
+			<CAM nombre="aaaa_mm_dd_hh" />
+			<CAM nombre="aaaa_mm_dd_hh_m0" />
+			<CAM nombre="aaaa_mm_dd_hh_mm" />
+			<CAM nombre="aaaa_mm_dd_hh_mm_ss" />
 			<KEY nombre="serial" orden="ASC" secuencia="1" />
 		</FMT>
 	</ENT>
