@@ -69,6 +69,15 @@
 		<tr>
 			<td>&nbsp;</td>
 			<td>
+				<button type="button" class="btn btn-info pull-right" style="width:70%;" onclick="if ( confirmar('<bean:message key="common.client.pregunta_modificar_marcados"/>',this)==true ) setOpcion('AcRCD_AF','colectivo_location_id', null);"><span class="glyphicon glyphicon-ok pull-left"></span>
+				&nbsp;location_id
+				</button>
+			</td>
+			<td><html:text maxlength="50" styleClass="form-control" property="ac_location_id"  style="width: 105px;"/></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
 				<button type="button" class="btn btn-info pull-right" style="width:70%;" onclick="if ( confirmar('<bean:message key="common.client.pregunta_modificar_marcados"/>',this)==true ) setOpcion('AcRCD_AF','colectivo_computername', null);"><span class="glyphicon glyphicon-ok pull-left"></span>
 				&nbsp;computername
 				</button>

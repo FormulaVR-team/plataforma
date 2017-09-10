@@ -4,7 +4,7 @@
 
 -- Dumped from database version 9.4.12
 -- Dumped by pg_dump version 9.4.0
--- Started on 2017-09-09 13:02:09
+-- Started on 2017-09-10 10:55:25
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -21,7 +21,7 @@ SET search_path = "FormulaVR", pg_catalog;
 -- Data for Name: T_AC_activityCockpits; Type: TABLE DATA; Schema: FormulaVR; Owner: postgres
 --
 
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903195826933', ' ', ' ', 'FvrServlet', 64, 'LN01CP04', '2017-09-03T17-58-22.249836Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903195826933', ' ', ' ', 'FvrServlet', 64, 'CENTRAL', 'LN01CP04', '2017-09-03T17-58-22.249836Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -111,7 +111,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903200308746', ' ', ' ', 'FvrServlet', 65, 'LN01CP04', '2017-09-03T18-03-07.455466Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903200308746', ' ', ' ', 'FvrServlet', 65, 'CENTRAL', 'LN01CP04', '2017-09-03T18-03-07.455466Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -201,7 +201,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903200311090', ' ', ' ', 'FvrServlet', 66, 'LN01CP04', '2017-09-03T18-03-07.455466Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903200311090', ' ', ' ', 'FvrServlet', 66, 'CENTRAL', 'LN01CP04', '2017-09-03T18-03-07.455466Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -291,7 +291,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903200311964', ' ', ' ', 'FvrServlet', 67, 'LN01CP04', '2017-09-03T18-03-07.455466Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903200311964', ' ', ' ', 'FvrServlet', 67, 'CENTRAL', 'LN01CP04', '2017-09-03T18-03-07.455466Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -381,7 +381,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203051386', ' ', ' ', 'FvrServlet', 68, 'LN01CP04', '2017-09-03T18-30-49.404903Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203051386', ' ', ' ', 'FvrServlet', 68, 'CENTRAL', 'LN01CP04', '2017-09-03T18-30-49.404903Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -471,7 +471,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203052058', ' ', ' ', 'FvrServlet', 69, 'LN01CP04', '2017-09-03T18-30-49.404903Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203052058', ' ', ' ', 'FvrServlet', 69, 'CENTRAL', 'LN01CP04', '2017-09-03T18-30-49.404903Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -561,7 +561,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203053871', ' ', ' ', 'FvrServlet', 70, 'LN01CP04', '2017-09-03T18-30-49.404903Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203053871', ' ', ' ', 'FvrServlet', 70, 'CENTRAL', 'LN01CP04', '2017-09-03T18-30-49.404903Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -651,7 +651,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203421210', ' ', ' ', 'FvrServlet', 71, 'LN01CP04', '2017-09-03T18-34-20.013217Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203421210', ' ', ' ', 'FvrServlet', 71, 'CENTRAL', 'LN01CP04', '2017-09-03T18-34-20.013217Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -741,7 +741,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203422085', ' ', ' ', 'FvrServlet', 72, 'LN01CP04', '2017-09-03T18-34-21.4133Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203422085', ' ', ' ', 'FvrServlet', 72, 'CENTRAL', 'LN01CP04', '2017-09-03T18-34-21.4133Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -831,7 +831,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203423882', ' ', ' ', 'FvrServlet', 73, 'LN01CP04', '2017-09-03T18-34-21.4133Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203423882', ' ', ' ', 'FvrServlet', 73, 'CENTRAL', 'LN01CP04', '2017-09-03T18-34-21.4133Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -921,7 +921,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203426210', ' ', ' ', 'FvrServlet', 74, 'LN01CP04', '2017-09-03T18-34-21.4133Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203426210', ' ', ' ', 'FvrServlet', 74, 'CENTRAL', 'LN01CP04', '2017-09-03T18-34-21.4133Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -1011,7 +1011,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203826224', ' ', ' ', 'FvrServlet', 75, 'LN01CP04', '2017-09-03T18-38-24.005871Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203826224', ' ', ' ', 'FvrServlet', 75, 'CENTRAL', 'LN01CP04', '2017-09-03T18-38-24.005871Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -1101,7 +1101,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203827083', ' ', ' ', 'FvrServlet', 76, 'LN01CP04', '2017-09-03T18-38-24.005871Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203827083', ' ', ' ', 'FvrServlet', 76, 'CENTRAL', 'LN01CP04', '2017-09-03T18-38-24.005871Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -1191,7 +1191,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203828896', ' ', ' ', 'FvrServlet', 77, 'LN01CP04', '2017-09-03T18-38-24.005871Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203828896', ' ', ' ', 'FvrServlet', 77, 'CENTRAL', 'LN01CP04', '2017-09-03T18-38-24.005871Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -1281,97 +1281,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203851225', ' ', ' ', 'FvrServlet', 78, 'LN01CP04', '2017-09-03T18-38-49.28117Z_file.snd', '
-[RACE]
-TRACK=ks_barcelona
-CONFIG_TRACK=layout_gp
-MODEL=ferrari_f80
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=rosso_corsa
-DRIVER_NAME=Lorvader
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[SESSION_0]
-NAME=Practice
-TYPE=1
-DURATION_MINUTES=0
-SPAWN_SET=PIT
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=ferrari_f80
-NAME=Lorvader
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=1
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203852116', ' ', ' ', 'FvrServlet', 79, 'LN01CP04', '2017-09-03T18-38-49.28117Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203851225', ' ', ' ', 'FvrServlet', 78, 'CENTRAL', 'LN01CP04', '2017-09-03T18-38-49.28117Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -1461,7 +1371,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203853913', ' ', ' ', 'FvrServlet', 80, 'LN01CP04', '2017-09-03T18-38-49.28117Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203852116', ' ', ' ', 'FvrServlet', 79, 'CENTRAL', 'LN01CP04', '2017-09-03T18-38-49.28117Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -1551,7 +1461,97 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203942103', ' ', ' ', 'FvrServlet', 81, 'LN01CP04', '2017-09-03T18-39-42.04248Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203853913', ' ', ' ', 'FvrServlet', 80, 'CENTRAL', 'LN01CP04', '2017-09-03T18-38-49.28117Z_file.snd', '
+[RACE]
+TRACK=ks_barcelona
+CONFIG_TRACK=layout_gp
+MODEL=ferrari_f80
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[SESSION_0]
+NAME=Practice
+TYPE=1
+DURATION_MINUTES=0
+SPAWN_SET=PIT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=ferrari_f80
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203942103', ' ', ' ', 'FvrServlet', 81, 'CENTRAL', 'LN01CP04', '2017-09-03T18-39-42.04248Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -1641,7 +1641,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203943915', ' ', ' ', 'FvrServlet', 82, 'LN01CP04', '2017-09-03T18-39-42.04248Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203943915', ' ', ' ', 'FvrServlet', 82, 'CENTRAL', 'LN01CP04', '2017-09-03T18-39-42.04248Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -1731,7 +1731,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903203946228', ' ', ' ', 'FvrServlet', 83, 'LN01CP04', '2017-09-03T18-39-42.04248Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903203946228', ' ', ' ', 'FvrServlet', 83, 'CENTRAL', 'LN01CP04', '2017-09-03T18-39-42.04248Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -1821,7 +1821,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903210903322', ' ', ' ', 'FvrServlet', 84, 'LN01CP04', '2017-09-03T19-09-01.943718Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903210903322', ' ', ' ', 'FvrServlet', 84, 'CENTRAL', 'LN01CP04', '2017-09-03T19-09-01.943718Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -1911,7 +1911,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903210904010', ' ', ' ', 'FvrServlet', 85, 'LN01CP04', '2017-09-03T19-09-01.943718Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903210904010', ' ', ' ', 'FvrServlet', 85, 'CENTRAL', 'LN01CP04', '2017-09-03T19-09-01.943718Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -2001,7 +2001,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903210906010', ' ', ' ', 'FvrServlet', 86, 'LN01CP04', '2017-09-03T19-09-01.943718Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903210906010', ' ', ' ', 'FvrServlet', 86, 'CENTRAL', 'LN01CP04', '2017-09-03T19-09-01.943718Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -2091,7 +2091,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903210924011', ' ', ' ', 'FvrServlet', 87, 'LN01CP04', '2017-09-03T19-09-23.340566Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903210924011', ' ', ' ', 'FvrServlet', 87, 'CENTRAL', 'LN01CP04', '2017-09-03T19-09-23.340566Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -2181,7 +2181,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903210925808', ' ', ' ', 'FvrServlet', 88, 'LN01CP04', '2017-09-03T19-09-24.63152Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903210925808', ' ', ' ', 'FvrServlet', 88, 'CENTRAL', 'LN01CP04', '2017-09-03T19-09-24.63152Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -2271,7 +2271,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903210928136', ' ', ' ', 'FvrServlet', 89, 'LN01CP04', '2017-09-03T19-09-24.63152Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903210928136', ' ', ' ', 'FvrServlet', 89, 'CENTRAL', 'LN01CP04', '2017-09-03T19-09-24.63152Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -2361,7 +2361,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903210929011', ' ', ' ', 'FvrServlet', 90, 'LN01CP04', '2017-09-03T19-09-24.63152Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903210929011', ' ', ' ', 'FvrServlet', 90, 'CENTRAL', 'LN01CP04', '2017-09-03T19-09-24.63152Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -2451,7 +2451,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903211510826', ' ', ' ', 'FvrServlet', 91, 'LN01CP04', '2017-09-03T19-15-09.766426Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903211510826', ' ', ' ', 'FvrServlet', 91, 'CENTRAL', 'LN01CP04', '2017-09-03T19-15-09.766426Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -2541,7 +2541,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903211513155', ' ', ' ', 'FvrServlet', 92, 'LN01CP04', '2017-09-03T19-15-12.254925Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903211513155', ' ', ' ', 'FvrServlet', 92, 'CENTRAL', 'LN01CP04', '2017-09-03T19-15-12.254925Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -2631,7 +2631,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903211514030', ' ', ' ', 'FvrServlet', 93, 'LN01CP04', '2017-09-03T19-15-12.254925Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903211514030', ' ', ' ', 'FvrServlet', 93, 'CENTRAL', 'LN01CP04', '2017-09-03T19-15-12.254925Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -2721,7 +2721,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903211515827', ' ', ' ', 'FvrServlet', 94, 'LN01CP04', '2017-09-03T19-15-12.254925Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903211515827', ' ', ' ', 'FvrServlet', 94, 'CENTRAL', 'LN01CP04', '2017-09-03T19-15-12.254925Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -2811,7 +2811,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903211528155', ' ', ' ', 'FvrServlet', 95, 'LN01CP04', '2017-09-03T19-15-25.549653Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903211528155', ' ', ' ', 'FvrServlet', 95, 'CENTRAL', 'LN01CP04', '2017-09-03T19-15-25.549653Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -2901,7 +2901,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903211529030', ' ', ' ', 'FvrServlet', 96, 'LN01CP04', '2017-09-03T19-15-25.549653Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903211529030', ' ', ' ', 'FvrServlet', 96, 'CENTRAL', 'LN01CP04', '2017-09-03T19-15-25.549653Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -2991,7 +2991,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903211530827', ' ', ' ', 'FvrServlet', 97, 'LN01CP04', '2017-09-03T19-15-25.549653Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903211530827', ' ', ' ', 'FvrServlet', 97, 'CENTRAL', 'LN01CP04', '2017-09-03T19-15-25.549653Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -3081,7 +3081,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903211538156', ' ', ' ', 'FvrServlet', 98, 'LN01CP04', '2017-09-03T19-15-36.570429Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903211538156', ' ', ' ', 'FvrServlet', 98, 'CENTRAL', 'LN01CP04', '2017-09-03T19-15-36.570429Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -3171,7 +3171,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903211539015', ' ', ' ', 'FvrServlet', 99, 'LN01CP04', '2017-09-03T19-15-37.774898Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903211539015', ' ', ' ', 'FvrServlet', 99, 'CENTRAL', 'LN01CP04', '2017-09-03T19-15-37.774898Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -3261,7 +3261,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903211540828', ' ', ' ', 'FvrServlet', 100, 'LN01CP04', '2017-09-03T19-15-37.774898Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903211540828', ' ', ' ', 'FvrServlet', 100, 'CENTRAL', 'LN01CP04', '2017-09-03T19-15-37.774898Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -3351,7 +3351,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903211543156', ' ', ' ', 'FvrServlet', 101, 'LN01CP04', '2017-09-03T19-15-37.774898Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903211543156', ' ', ' ', 'FvrServlet', 101, 'CENTRAL', 'LN01CP04', '2017-09-03T19-15-37.774898Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -3441,7 +3441,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903213601053', ' ', ' ', 'FvrServlet', 102, 'LN01CP04', '2017-09-03T19-35-59.944031Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903213601053', ' ', ' ', 'FvrServlet', 102, 'CENTRAL', 'LN01CP04', '2017-09-03T19-35-59.944031Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -3531,7 +3531,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903213603225', ' ', ' ', 'FvrServlet', 103, 'LN01CP04', '2017-09-03T19-35-59.944031Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903213603225', ' ', ' ', 'FvrServlet', 103, 'CENTRAL', 'LN01CP04', '2017-09-03T19-35-59.944031Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -3621,7 +3621,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903213604084', ' ', ' ', 'FvrServlet', 104, 'LN01CP04', '2017-09-03T19-35-59.944031Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903213604084', ' ', ' ', 'FvrServlet', 104, 'CENTRAL', 'LN01CP04', '2017-09-03T19-35-59.944031Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -3711,7 +3711,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903214140898', ' ', ' ', 'FvrServlet', 105, 'LN01CP04', '2017-09-03T19-41-39.196191Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903214140898', ' ', ' ', 'FvrServlet', 105, 'CENTRAL', 'LN01CP04', '2017-09-03T19-41-39.196191Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -3801,7 +3801,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903214143273', ' ', ' ', 'FvrServlet', 106, 'LN01CP04', '2017-09-03T19-41-40.530184Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903214143273', ' ', ' ', 'FvrServlet', 106, 'CENTRAL', 'LN01CP04', '2017-09-03T19-41-40.530184Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -3891,7 +3891,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903214144101', ' ', ' ', 'FvrServlet', 107, 'LN01CP04', '2017-09-03T19-41-40.530184Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903214144101', ' ', ' ', 'FvrServlet', 107, 'CENTRAL', 'LN01CP04', '2017-09-03T19-41-40.530184Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -3981,7 +3981,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903214145898', ' ', ' ', 'FvrServlet', 108, 'LN01CP04', '2017-09-03T19-41-40.530184Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903214145898', ' ', ' ', 'FvrServlet', 108, 'CENTRAL', 'LN01CP04', '2017-09-03T19-41-40.530184Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -4071,7 +4071,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903215238434', ' ', ' ', 'FvrServlet', 109, 'LN01CP04', '2017-09-03T19-52-36.370799Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903215238434', ' ', ' ', 'FvrServlet', 109, 'CENTRAL', 'LN01CP04', '2017-09-03T19-52-36.370799Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -4161,7 +4161,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903215239137', ' ', ' ', 'FvrServlet', 110, 'LN01CP04', '2017-09-03T19-52-36.370799Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903215239137', ' ', ' ', 'FvrServlet', 110, 'CENTRAL', 'LN01CP04', '2017-09-03T19-52-36.370799Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -4251,7 +4251,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170903215240934', ' ', ' ', 'FvrServlet', 111, 'LN01CP04', '2017-09-03T19-52-36.370799Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170903215240934', ' ', ' ', 'FvrServlet', 111, 'CENTRAL', 'LN01CP04', '2017-09-03T19-52-36.370799Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -4341,7 +4341,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160045739', ' ', ' ', 'FvrServlet', 112, 'LN01CP04', '2017-09-04T14-00-45.519019Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160045739', ' ', ' ', 'FvrServlet', 112, 'CENTRAL', 'LN01CP04', '2017-09-04T14-00-45.519019Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -4431,7 +4431,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160046395', ' ', ' ', 'FvrServlet', 113, 'LN01CP04', '2017-09-04T14-00-45.519019Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160046395', ' ', ' ', 'FvrServlet', 113, 'CENTRAL', 'LN01CP04', '2017-09-04T14-00-45.519019Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -4521,7 +4521,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160048177', ' ', ' ', 'FvrServlet', 114, 'LN01CP04', '2017-09-04T14-00-45.519019Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160048177', ' ', ' ', 'FvrServlet', 114, 'CENTRAL', 'LN01CP04', '2017-09-04T14-00-45.519019Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -4611,7 +4611,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160108256', ' ', ' ', 'FvrServlet', 115, 'LN01CP04', '2017-09-04T14-01-08.748267Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160108256', ' ', ' ', 'FvrServlet', 115, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-08.748267Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -4701,7 +4701,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160110553', ' ', ' ', 'FvrServlet', 116, 'LN01CP04', '2017-09-04T14-01-08.748267Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160110553', ' ', ' ', 'FvrServlet', 116, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-08.748267Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -4791,7 +4791,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160111397', ' ', ' ', 'FvrServlet', 117, 'LN01CP04', '2017-09-04T14-01-08.748267Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160111397', ' ', ' ', 'FvrServlet', 117, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-08.748267Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -4881,7 +4881,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160133210', ' ', ' ', 'FvrServlet', 118, 'LN01CP04', '2017-09-04T14-01-32.781664Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160133210', ' ', ' ', 'FvrServlet', 118, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-32.781664Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -4971,7 +4971,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160135554', ' ', ' ', 'FvrServlet', 119, 'LN01CP04', '2017-09-04T14-01-32.781664Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160135554', ' ', ' ', 'FvrServlet', 119, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-32.781664Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -5061,7 +5061,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160136398', ' ', ' ', 'FvrServlet', 120, 'LN01CP04', '2017-09-04T14-01-32.781664Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160136398', ' ', ' ', 'FvrServlet', 120, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-32.781664Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -5151,7 +5151,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160146399', ' ', ' ', 'FvrServlet', 121, 'LN01CP04', '2017-09-04T14-01-46.604977Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160146399', ' ', ' ', 'FvrServlet', 121, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-46.604977Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -5241,7 +5241,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160148196', ' ', ' ', 'FvrServlet', 122, 'LN01CP04', '2017-09-04T14-01-46.604977Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160148196', ' ', ' ', 'FvrServlet', 122, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-46.604977Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -5331,7 +5331,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160150555', ' ', ' ', 'FvrServlet', 123, 'LN01CP04', '2017-09-04T14-01-50.366677Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160150555', ' ', ' ', 'FvrServlet', 123, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-50.366677Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -5421,7 +5421,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160151399', ' ', ' ', 'FvrServlet', 124, 'LN01CP04', '2017-09-04T14-01-50.366677Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160151399', ' ', ' ', 'FvrServlet', 124, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-50.366677Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -5511,7 +5511,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160153196', ' ', ' ', 'FvrServlet', 125, 'LN01CP04', '2017-09-04T14-01-53.726888Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160153196', ' ', ' ', 'FvrServlet', 125, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-53.726888Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -5601,7 +5601,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160155556', ' ', ' ', 'FvrServlet', 126, 'LN01CP04', '2017-09-04T14-01-54.949195Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160155556', ' ', ' ', 'FvrServlet', 126, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-54.949195Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -5691,7 +5691,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160156399', ' ', ' ', 'FvrServlet', 127, 'LN01CP04', '2017-09-04T14-01-54.949195Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160156399', ' ', ' ', 'FvrServlet', 127, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-54.949195Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -5781,7 +5781,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160158181', ' ', ' ', 'FvrServlet', 128, 'LN01CP04', '2017-09-04T14-01-54.949195Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160158181', ' ', ' ', 'FvrServlet', 128, 'CENTRAL', 'LN01CP04', '2017-09-04T14-01-54.949195Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -5871,7 +5871,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160220572', ' ', ' ', 'FvrServlet', 129, 'LN01CP04', '2017-09-04T14-02-20.387162Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160220572', ' ', ' ', 'FvrServlet', 129, 'CENTRAL', 'LN01CP04', '2017-09-04T14-02-20.387162Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -5961,7 +5961,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160221432', ' ', ' ', 'FvrServlet', 130, 'LN01CP04', '2017-09-04T14-02-20.387162Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160221432', ' ', ' ', 'FvrServlet', 130, 'CENTRAL', 'LN01CP04', '2017-09-04T14-02-20.387162Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -6051,7 +6051,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904160223182', ' ', ' ', 'FvrServlet', 131, 'LN01CP04', '2017-09-04T14-02-20.387162Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904160223182', ' ', ' ', 'FvrServlet', 131, 'CENTRAL', 'LN01CP04', '2017-09-04T14-02-20.387162Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -6141,7 +6141,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904162110810', ' ', ' ', 'FvrServlet', 132, 'LN01CP04', '2017-09-04T14-21-09.768369Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904162110810', ' ', ' ', 'FvrServlet', 132, 'CENTRAL', 'LN01CP04', '2017-09-04T14-21-09.768369Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -6231,7 +6231,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904162111482', ' ', ' ', 'FvrServlet', 133, 'LN01CP04', '2017-09-04T14-21-09.768369Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904162111482', ' ', ' ', 'FvrServlet', 133, 'CENTRAL', 'LN01CP04', '2017-09-04T14-21-09.768369Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -6321,7 +6321,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904162113264', ' ', ' ', 'FvrServlet', 134, 'LN01CP04', '2017-09-04T14-21-09.768369Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904162113264', ' ', ' ', 'FvrServlet', 134, 'CENTRAL', 'LN01CP04', '2017-09-04T14-21-09.768369Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -6411,7 +6411,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904162845661', ' ', ' ', 'FvrServlet', 135, 'LN01CP04', '2017-09-04T14-28-45.235286Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904162845661', ' ', ' ', 'FvrServlet', 135, 'CENTRAL', 'LN01CP04', '2017-09-04T14-28-45.235286Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -6501,7 +6501,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904162846504', ' ', ' ', 'FvrServlet', 136, 'LN01CP04', '2017-09-04T14-28-45.235286Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904162846504', ' ', ' ', 'FvrServlet', 136, 'CENTRAL', 'LN01CP04', '2017-09-04T14-28-45.235286Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -6591,7 +6591,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904162848286', ' ', ' ', 'FvrServlet', 137, 'LN01CP04', '2017-09-04T14-28-45.235286Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904162848286', ' ', ' ', 'FvrServlet', 137, 'CENTRAL', 'LN01CP04', '2017-09-04T14-28-45.235286Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -6681,7 +6681,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904163840863', ' ', ' ', 'FvrServlet', 138, 'LN01CP04', '2017-09-04T14-38-40.825384Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904163840863', ' ', ' ', 'FvrServlet', 138, 'CENTRAL', 'LN01CP04', '2017-09-04T14-38-40.825384Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -6771,7 +6771,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904163841534', ' ', ' ', 'FvrServlet', 139, 'LN01CP04', '2017-09-04T14-38-40.825384Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904163841534', ' ', ' ', 'FvrServlet', 139, 'CENTRAL', 'LN01CP04', '2017-09-04T14-38-40.825384Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -6861,7 +6861,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904163843316', ' ', ' ', 'FvrServlet', 140, 'LN01CP04', '2017-09-04T14-38-40.825384Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904163843316', ' ', ' ', 'FvrServlet', 140, 'CENTRAL', 'LN01CP04', '2017-09-04T14-38-40.825384Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -6951,97 +6951,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904165740927', ' ', ' ', 'FvrServlet', 141, 'LN01CP04', '2017-09-04T14-57-41.207237Z_file.snd', '
-[RACE]
-TRACK=ks_barcelona
-CONFIG_TRACK=layout_gp
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Vettel
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[SESSION_0]
-NAME=Practice
-TYPE=1
-DURATION_MINUTES=0
-SPAWN_SET=PIT
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Vettel
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=1
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904165741599', ' ', ' ', 'FvrServlet', 142, 'LN01CP04', '2017-09-04T14-57-41.207237Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904165740927', ' ', ' ', 'FvrServlet', 141, 'CENTRAL', 'LN01CP04', '2017-09-04T14-57-41.207237Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -7131,7 +7041,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904165743396', ' ', ' ', 'FvrServlet', 143, 'LN01CP04', '2017-09-04T14-57-41.207237Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904165741599', ' ', ' ', 'FvrServlet', 142, 'CENTRAL', 'LN01CP04', '2017-09-04T14-57-41.207237Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -7221,277 +7131,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904170508424', ' ', ' ', 'FvrServlet', 144, 'LN01CP04', '2017-09-04T15-05-08.484481Z_file.snd', '
-[RACE]
-TRACK=ks_barcelona
-CONFIG_TRACK=layout_gp
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Vettel
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[SESSION_0]
-NAME=Practice
-TYPE=1
-DURATION_MINUTES=0
-SPAWN_SET=PIT
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Vettel
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=0
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904170510783', ' ', ' ', 'FvrServlet', 145, 'LN01CP04', '2017-09-04T15-05-08.484481Z_file.snd', '
-[RACE]
-TRACK=ks_barcelona
-CONFIG_TRACK=layout_gp
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Vettel
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[SESSION_0]
-NAME=Practice
-TYPE=1
-DURATION_MINUTES=0
-SPAWN_SET=PIT
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Vettel
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=0
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904170511627', ' ', ' ', 'FvrServlet', 146, 'LN01CP04', '2017-09-04T15-05-08.484481Z_file.snd', '
-[RACE]
-TRACK=ks_barcelona
-CONFIG_TRACK=layout_gp
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Vettel
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[SESSION_0]
-NAME=Practice
-TYPE=1
-DURATION_MINUTES=0
-SPAWN_SET=PIT
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Vettel
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=0
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904170613443', ' ', ' ', 'FvrServlet', 147, 'LN01CP04', '2017-09-04T15-06-13.69819Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904165743396', ' ', ' ', 'FvrServlet', 143, 'CENTRAL', 'LN01CP04', '2017-09-04T14-57-41.207237Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -7581,7 +7221,277 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904170615802', ' ', ' ', 'FvrServlet', 148, 'LN01CP04', '2017-09-04T15-06-13.69819Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904170508424', ' ', ' ', 'FvrServlet', 144, 'CENTRAL', 'LN01CP04', '2017-09-04T15-05-08.484481Z_file.snd', '
+[RACE]
+TRACK=ks_barcelona
+CONFIG_TRACK=layout_gp
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Vettel
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[SESSION_0]
+NAME=Practice
+TYPE=1
+DURATION_MINUTES=0
+SPAWN_SET=PIT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Vettel
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904170510783', ' ', ' ', 'FvrServlet', 145, 'CENTRAL', 'LN01CP04', '2017-09-04T15-05-08.484481Z_file.snd', '
+[RACE]
+TRACK=ks_barcelona
+CONFIG_TRACK=layout_gp
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Vettel
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[SESSION_0]
+NAME=Practice
+TYPE=1
+DURATION_MINUTES=0
+SPAWN_SET=PIT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Vettel
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904170511627', ' ', ' ', 'FvrServlet', 146, 'CENTRAL', 'LN01CP04', '2017-09-04T15-05-08.484481Z_file.snd', '
+[RACE]
+TRACK=ks_barcelona
+CONFIG_TRACK=layout_gp
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Vettel
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[SESSION_0]
+NAME=Practice
+TYPE=1
+DURATION_MINUTES=0
+SPAWN_SET=PIT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Vettel
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904170613443', ' ', ' ', 'FvrServlet', 147, 'CENTRAL', 'LN01CP04', '2017-09-04T15-06-13.69819Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -7671,7 +7581,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904170616631', ' ', ' ', 'FvrServlet', 149, 'LN01CP04', '2017-09-04T15-06-13.69819Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904170615802', ' ', ' ', 'FvrServlet', 148, 'CENTRAL', 'LN01CP04', '2017-09-04T15-06-13.69819Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -7761,7 +7671,97 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171406001', ' ', ' ', 'FvrServlet', 150, 'LN01CP04', '2017-09-04T15-14-06.473628Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904170616631', ' ', ' ', 'FvrServlet', 149, 'CENTRAL', 'LN01CP04', '2017-09-04T15-06-13.69819Z_file.snd', '
+[RACE]
+TRACK=ks_barcelona
+CONFIG_TRACK=layout_gp
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Vettel
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[SESSION_0]
+NAME=Practice
+TYPE=1
+DURATION_MINUTES=0
+SPAWN_SET=PIT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Vettel
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171406001', ' ', ' ', 'FvrServlet', 150, 'CENTRAL', 'LN01CP04', '2017-09-04T15-14-06.473628Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -7851,7 +7851,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171406658', ' ', ' ', 'FvrServlet', 151, 'LN01CP04', '2017-09-04T15-14-06.473628Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171406658', ' ', ' ', 'FvrServlet', 151, 'CENTRAL', 'LN01CP04', '2017-09-04T15-14-06.473628Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -7941,7 +7941,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171408454', ' ', ' ', 'FvrServlet', 152, 'LN01CP04', '2017-09-04T15-14-06.473628Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171408454', ' ', ' ', 'FvrServlet', 152, 'CENTRAL', 'LN01CP04', '2017-09-04T15-14-06.473628Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -8031,99 +8031,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171533474', ' ', ' ', 'FvrServlet', 153, 'LN01CP04', '2017-09-04T15-15-32.661107Z_file.snd', '
-[RACE]
-TRACK=ks_barcelona
-CONFIG_TRACK=layout_gp
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Vettel
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Vettel
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=0
-[SESSION_0]
-STARTING_POSITION=10
-NAME=Quick Race
-TYPE=3
-LAPS=10
-DURATION_MINUTES=0
-SPAWN_SET=START
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171535834', ' ', ' ', 'FvrServlet', 154, 'LN01CP04', '2017-09-04T15-15-32.661107Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171533474', ' ', ' ', 'FvrServlet', 153, 'CENTRAL', 'LN01CP04', '2017-09-04T15-15-32.661107Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -8215,7 +8123,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171536662', ' ', ' ', 'FvrServlet', 155, 'LN01CP04', '2017-09-04T15-15-32.661107Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171535834', ' ', ' ', 'FvrServlet', 154, 'CENTRAL', 'LN01CP04', '2017-09-04T15-15-32.661107Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -8307,7 +8215,99 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171640852', ' ', ' ', 'FvrServlet', 156, 'LN01CP04', '2017-09-04T15-16-40.481228Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171536662', ' ', ' ', 'FvrServlet', 155, 'CENTRAL', 'LN01CP04', '2017-09-04T15-15-32.661107Z_file.snd', '
+[RACE]
+TRACK=ks_barcelona
+CONFIG_TRACK=layout_gp
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Vettel
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Vettel
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=10
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171640852', ' ', ' ', 'FvrServlet', 156, 'CENTRAL', 'LN01CP04', '2017-09-04T15-16-40.481228Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -8399,7 +8399,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171641665', ' ', ' ', 'FvrServlet', 157, 'LN01CP04', '2017-09-04T15-16-40.481228Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171641665', ' ', ' ', 'FvrServlet', 157, 'CENTRAL', 'LN01CP04', '2017-09-04T15-16-40.481228Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -8491,7 +8491,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171643477', ' ', ' ', 'FvrServlet', 158, 'LN01CP04', '2017-09-04T15-16-40.481228Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171643477', ' ', ' ', 'FvrServlet', 158, 'CENTRAL', 'LN01CP04', '2017-09-04T15-16-40.481228Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -8583,7 +8583,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171918486', ' ', ' ', 'FvrServlet', 159, 'LN01CP04', '2017-09-04T15-19-18.652238Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171918486', ' ', ' ', 'FvrServlet', 159, 'CENTRAL', 'LN01CP04', '2017-09-04T15-19-18.652238Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -8675,7 +8675,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171920845', ' ', ' ', 'FvrServlet', 160, 'LN01CP04', '2017-09-04T15-19-18.652238Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171920845', ' ', ' ', 'FvrServlet', 160, 'CENTRAL', 'LN01CP04', '2017-09-04T15-19-18.652238Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -8767,7 +8767,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171921689', ' ', ' ', 'FvrServlet', 161, 'LN01CP04', '2017-09-04T15-19-18.652238Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171921689', ' ', ' ', 'FvrServlet', 161, 'CENTRAL', 'LN01CP04', '2017-09-04T15-19-18.652238Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -8859,7 +8859,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171938487', ' ', ' ', 'FvrServlet', 162, 'LN01CP04', '2017-09-04T15-19-39.16302Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171938487', ' ', ' ', 'FvrServlet', 162, 'CENTRAL', 'LN01CP04', '2017-09-04T15-19-39.16302Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -8951,7 +8951,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171940846', ' ', ' ', 'FvrServlet', 163, 'LN01CP04', '2017-09-04T15-19-39.744578Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171940846', ' ', ' ', 'FvrServlet', 163, 'CENTRAL', 'LN01CP04', '2017-09-04T15-19-39.744578Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -9043,7 +9043,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171941674', ' ', ' ', 'FvrServlet', 164, 'LN01CP04', '2017-09-04T15-19-39.744578Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171941674', ' ', ' ', 'FvrServlet', 164, 'CENTRAL', 'LN01CP04', '2017-09-04T15-19-39.744578Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -9135,7 +9135,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904171943471', ' ', ' ', 'FvrServlet', 165, 'LN01CP04', '2017-09-04T15-19-39.744578Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904171943471', ' ', ' ', 'FvrServlet', 165, 'CENTRAL', 'LN01CP04', '2017-09-04T15-19-39.744578Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -9227,99 +9227,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172601883', ' ', ' ', 'FvrServlet', 166, 'LN01CP04', '2017-09-04T15-26-02.198928Z_file.snd', '
-[RACE]
-TRACK=indi
-CONFIG_TRACK=
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Vettel
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Vettel
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=0
-
-[SESSION_0]
-STARTING_POSITION=11
-NAME=Quick Race
-TYPE=3
-LAPS=10
-DURATION_MINUTES=0
-SPAWN_SET=START
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172603508', ' ', ' ', 'FvrServlet', 167, 'LN01CP04', '2017-09-04T15-26-02.198928Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172601883', ' ', ' ', 'FvrServlet', 166, 'CENTRAL', 'LN01CP04', '2017-09-04T15-26-02.198928Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -9411,7 +9319,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172605867', ' ', ' ', 'FvrServlet', 168, 'LN01CP04', '2017-09-04T15-26-02.198928Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172603508', ' ', ' ', 'FvrServlet', 167, 'CENTRAL', 'LN01CP04', '2017-09-04T15-26-02.198928Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -9503,7 +9411,99 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172640869', ' ', ' ', 'FvrServlet', 169, 'LN01CP04', '2017-09-04T15-26-40.836788Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172605867', ' ', ' ', 'FvrServlet', 168, 'CENTRAL', 'LN01CP04', '2017-09-04T15-26-02.198928Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Vettel
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Vettel
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=11
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172640869', ' ', ' ', 'FvrServlet', 169, 'CENTRAL', 'LN01CP04', '2017-09-04T15-26-40.836788Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -9595,7 +9595,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172641697', ' ', ' ', 'FvrServlet', 170, 'LN01CP04', '2017-09-04T15-26-40.836788Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172641697', ' ', ' ', 'FvrServlet', 170, 'CENTRAL', 'LN01CP04', '2017-09-04T15-26-40.836788Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -9687,7 +9687,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172643494', ' ', ' ', 'FvrServlet', 171, 'LN01CP04', '2017-09-04T15-26-40.836788Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172643494', ' ', ' ', 'FvrServlet', 171, 'CENTRAL', 'LN01CP04', '2017-09-04T15-26-40.836788Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -9779,7 +9779,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172658511', ' ', ' ', 'FvrServlet', 172, 'LN01CP04', '2017-09-04T15-26-59.203236Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172658511', ' ', ' ', 'FvrServlet', 172, 'CENTRAL', 'LN01CP04', '2017-09-04T15-26-59.203236Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -9871,7 +9871,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172700870', ' ', ' ', 'FvrServlet', 173, 'LN01CP04', '2017-09-04T15-27-00.774894Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172700870', ' ', ' ', 'FvrServlet', 173, 'CENTRAL', 'LN01CP04', '2017-09-04T15-27-00.774894Z_file.snd', '
 [RACE]
 TRACK=indif1
 CONFIG_TRACK=
@@ -9963,7 +9963,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172701698', ' ', ' ', 'FvrServlet', 174, 'LN01CP04', '2017-09-04T15-27-00.774894Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172701698', ' ', ' ', 'FvrServlet', 174, 'CENTRAL', 'LN01CP04', '2017-09-04T15-27-00.774894Z_file.snd', '
 [RACE]
 TRACK=indif1
 CONFIG_TRACK=
@@ -10055,7 +10055,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172703511', ' ', ' ', 'FvrServlet', 175, 'LN01CP04', '2017-09-04T15-27-00.774894Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172703511', ' ', ' ', 'FvrServlet', 175, 'CENTRAL', 'LN01CP04', '2017-09-04T15-27-00.774894Z_file.snd', '
 [RACE]
 TRACK=indif1
 CONFIG_TRACK=
@@ -10147,7 +10147,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172733513', ' ', ' ', 'FvrServlet', 176, 'LN01CP04', '2017-09-04T15-27-33.212797Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172733513', ' ', ' ', 'FvrServlet', 176, 'CENTRAL', 'LN01CP04', '2017-09-04T15-27-33.212797Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -10239,7 +10239,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172735872', ' ', ' ', 'FvrServlet', 177, 'LN01CP04', '2017-09-04T15-27-33.212797Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172735872', ' ', ' ', 'FvrServlet', 177, 'CENTRAL', 'LN01CP04', '2017-09-04T15-27-33.212797Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -10331,7 +10331,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172736700', ' ', ' ', 'FvrServlet', 178, 'LN01CP04', '2017-09-04T15-27-33.212797Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172736700', ' ', ' ', 'FvrServlet', 178, 'CENTRAL', 'LN01CP04', '2017-09-04T15-27-33.212797Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -10423,7 +10423,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172751717', ' ', ' ', 'FvrServlet', 179, 'LN01CP04', '2017-09-04T15-27-52.406548Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172751717', ' ', ' ', 'FvrServlet', 179, 'CENTRAL', 'LN01CP04', '2017-09-04T15-27-52.406548Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -10558,7 +10558,7 @@ DRIVER_NAME=Orlando Gallardi
 NATIONALITY=
 NATION_CODE=USA
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904174150915', ' ', ' ', 'FvrServlet', 210, 'LN01CP04', '2017-09-04T15-41-49.247155Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904174150915', ' ', ' ', 'FvrServlet', 210, 'CENTRAL', 'LN01CP04', '2017-09-04T15-41-49.247155Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -10708,7 +10708,7 @@ DRIVER_NAME=Shel Borchard
 NATIONALITY=
 NATION_CODE=IRL
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172753514', ' ', ' ', 'FvrServlet', 180, 'LN01CP04', '2017-09-04T15-27-53.991511Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172753514', ' ', ' ', 'FvrServlet', 180, 'CENTRAL', 'LN01CP04', '2017-09-04T15-27-53.991511Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -10898,7 +10898,7 @@ DRIVER_NAME=Federico Jimenez
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172755873', ' ', ' ', 'FvrServlet', 181, 'LN01CP04', '2017-09-04T15-27-53.991511Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172755873', ' ', ' ', 'FvrServlet', 181, 'CENTRAL', 'LN01CP04', '2017-09-04T15-27-53.991511Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -11088,7 +11088,7 @@ DRIVER_NAME=Federico Jimenez
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904172756717', ' ', ' ', 'FvrServlet', 182, 'LN01CP04', '2017-09-04T15-27-53.991511Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904172756717', ' ', ' ', 'FvrServlet', 182, 'CENTRAL', 'LN01CP04', '2017-09-04T15-27-53.991511Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -11278,7 +11278,7 @@ DRIVER_NAME=Federico Jimenez
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173103524', ' ', ' ', 'FvrServlet', 183, 'LN01CP04', '2017-09-04T15-31-02.686696Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173103524', ' ', ' ', 'FvrServlet', 183, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-02.686696Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -11468,7 +11468,7 @@ DRIVER_NAME=Federico Jimenez
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173105884', ' ', ' ', 'FvrServlet', 184, 'LN01CP04', '2017-09-04T15-31-02.686696Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173105884', ' ', ' ', 'FvrServlet', 184, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-02.686696Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -11658,7 +11658,7 @@ DRIVER_NAME=Federico Jimenez
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173106712', ' ', ' ', 'FvrServlet', 185, 'LN01CP04', '2017-09-04T15-31-02.686696Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173106712', ' ', ' ', 'FvrServlet', 185, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-02.686696Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -11848,198 +11848,7 @@ DRIVER_NAME=Federico Jimenez
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173120885', ' ', ' ', 'FvrServlet', 186, 'LN01CP04', '2017-09-04T15-31-21.287218Z_file.snd', '
-[RACE]
-TRACK=indifield
-CONFIG_TRACK=
-MODEL=ks_lamborghini_aventador_sv
-CARS=11
-AI_LEVEL=80
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Vettel
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=0
-
-[SESSION_0]
-STARTING_POSITION=11
-NAME=Quick Race
-TYPE=3
-LAPS=10
-DURATION_MINUTES=0
-SPAWN_SET=START
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=00_rosso_bia_glittered
-DRIVER_NAME=Vettel
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-
-[CAR_1]
-MODEL=ks_lamborghini_aventador_sv
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01_giallo_evros_solid
-DRIVER_NAME=Olavi Virtanen
-NATIONALITY=
-NATION_CODE=FIN
-
-[CAR_2]
-MODEL=ks_lamborghini_aventador_sv
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02_arancio_argos_pearl
-DRIVER_NAME=Joy Vasquez
-NATIONALITY=
-NATION_CODE=PRT
-
-[CAR_3]
-MODEL=ks_lamborghini_aventador_sv
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03_azzurro_thetys_metal
-DRIVER_NAME=Andrew Castillo
-NATIONALITY=
-NATION_CODE=ITA
-
-[CAR_4]
-MODEL=ks_lamborghini_aventador_sv
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04_verde_ithaca_pearl
-DRIVER_NAME=Ronald Cavey
-NATIONALITY=
-NATION_CODE=GBR
-
-[CAR_5]
-MODEL=ks_lamborghini_aventador_sv
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=05_nero_pegaso_metal
-DRIVER_NAME=Orlando Gallardi
-NATIONALITY=
-NATION_CODE=USA
-
-[CAR_6]
-MODEL=ks_lamborghini_aventador_sv
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=06_verde_ermes_metal
-DRIVER_NAME=Truman Fishman
-NATIONALITY=
-NATION_CODE=GBR
-
-[CAR_7]
-MODEL=ks_lamborghini_aventador_sv
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=07_oro_elios_metal
-DRIVER_NAME=Charley Rico
-NATIONALITY=
-NATION_CODE=VEN
-
-[CAR_8]
-MODEL=ks_lamborghini_aventador_sv
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=08_rosso_mars_metallic
-DRIVER_NAME=Marcela Walther
-NATIONALITY=
-NATION_CODE=CAN
-
-[CAR_9]
-MODEL=ks_lamborghini_aventador_sv
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=09_grigio_thalasso_metal
-DRIVER_NAME=Steve Douglas
-NATIONALITY=
-NATION_CODE=GBR
-
-[CAR_10]
-MODEL=ks_lamborghini_aventador_sv
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=10_giallo_horus_matt
-DRIVER_NAME=Federico Jimenez
-NATIONALITY=
-NATION_CODE=MEX
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173121713', ' ', ' ', 'FvrServlet', 187, 'LN01CP04', '2017-09-04T15-31-21.287218Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173120885', ' ', ' ', 'FvrServlet', 186, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-21.287218Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -12230,7 +12039,7 @@ DRIVER_NAME=Federico Jimenez
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173123525', ' ', ' ', 'FvrServlet', 188, 'LN01CP04', '2017-09-04T15-31-21.287218Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173121713', ' ', ' ', 'FvrServlet', 187, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-21.287218Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -12421,7 +12230,7 @@ DRIVER_NAME=Federico Jimenez
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173140885', ' ', ' ', 'FvrServlet', 189, 'LN01CP04', '2017-09-04T15-31-41.590741Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173123525', ' ', ' ', 'FvrServlet', 188, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-21.287218Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -12612,7 +12421,7 @@ DRIVER_NAME=Federico Jimenez
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173141714', ' ', ' ', 'FvrServlet', 190, 'LN01CP04', '2017-09-04T15-31-42.003995Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173140885', ' ', ' ', 'FvrServlet', 189, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-41.590741Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -12803,7 +12612,198 @@ DRIVER_NAME=Federico Jimenez
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173143526', ' ', ' ', 'FvrServlet', 191, 'LN01CP04', '2017-09-04T15-31-42.560971Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173141714', ' ', ' ', 'FvrServlet', 190, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-42.003995Z_file.snd', '
+[RACE]
+TRACK=indifield
+CONFIG_TRACK=
+MODEL=ks_lamborghini_aventador_sv
+CARS=11
+AI_LEVEL=80
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Vettel
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=11
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=00_rosso_bia_glittered
+DRIVER_NAME=Vettel
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ks_lamborghini_aventador_sv
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01_giallo_evros_solid
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_2]
+MODEL=ks_lamborghini_aventador_sv
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02_arancio_argos_pearl
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[CAR_3]
+MODEL=ks_lamborghini_aventador_sv
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03_azzurro_thetys_metal
+DRIVER_NAME=Andrew Castillo
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ks_lamborghini_aventador_sv
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04_verde_ithaca_pearl
+DRIVER_NAME=Ronald Cavey
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_5]
+MODEL=ks_lamborghini_aventador_sv
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05_nero_pegaso_metal
+DRIVER_NAME=Orlando Gallardi
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_6]
+MODEL=ks_lamborghini_aventador_sv
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06_verde_ermes_metal
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_7]
+MODEL=ks_lamborghini_aventador_sv
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07_oro_elios_metal
+DRIVER_NAME=Charley Rico
+NATIONALITY=
+NATION_CODE=VEN
+
+[CAR_8]
+MODEL=ks_lamborghini_aventador_sv
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=08_rosso_mars_metallic
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_9]
+MODEL=ks_lamborghini_aventador_sv
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=09_grigio_thalasso_metal
+DRIVER_NAME=Steve Douglas
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_10]
+MODEL=ks_lamborghini_aventador_sv
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=10_giallo_horus_matt
+DRIVER_NAME=Federico Jimenez
+NATIONALITY=
+NATION_CODE=MEX
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173143526', ' ', ' ', 'FvrServlet', 191, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-42.560971Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -12994,7 +12994,7 @@ DRIVER_NAME=Federico Jimenez
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173145886', ' ', ' ', 'FvrServlet', 192, 'LN01CP04', '2017-09-04T15-31-42.560971Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173145886', ' ', ' ', 'FvrServlet', 192, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-42.560971Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -13185,7 +13185,7 @@ DRIVER_NAME=Federico Jimenez
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173146714', ' ', ' ', 'FvrServlet', 193, 'LN01CP04', '2017-09-04T15-31-42.560971Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173146714', ' ', ' ', 'FvrServlet', 193, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-42.560971Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -13376,7 +13376,7 @@ DRIVER_NAME=Federico Jimenez
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173153527', ' ', ' ', 'FvrServlet', 194, 'LN01CP04', '2017-09-04T15-31-54.151983Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173153527', ' ', ' ', 'FvrServlet', 194, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-54.151983Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -13567,7 +13567,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173155902', ' ', ' ', 'FvrServlet', 195, 'LN01CP04', '2017-09-04T15-31-54.151983Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173155902', ' ', ' ', 'FvrServlet', 195, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-54.151983Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -13758,7 +13758,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173156714', ' ', ' ', 'FvrServlet', 196, 'LN01CP04', '2017-09-04T15-31-54.151983Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173156714', ' ', ' ', 'FvrServlet', 196, 'CENTRAL', 'LN01CP04', '2017-09-04T15-31-54.151983Z_file.snd', '
 [RACE]
 TRACK=indifield
 CONFIG_TRACK=
@@ -13949,7 +13949,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173200886', ' ', ' ', 'FvrServlet', 197, 'LN01CP04', '2017-09-04T15-32-01.475644Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173200886', ' ', ' ', 'FvrServlet', 197, 'CENTRAL', 'LN01CP04', '2017-09-04T15-32-01.475644Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -14140,7 +14140,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173201714', ' ', ' ', 'FvrServlet', 198, 'LN01CP04', '2017-09-04T15-32-01.475644Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173201714', ' ', ' ', 'FvrServlet', 198, 'CENTRAL', 'LN01CP04', '2017-09-04T15-32-01.475644Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -14331,7 +14331,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173203527', ' ', ' ', 'FvrServlet', 199, 'LN01CP04', '2017-09-04T15-32-01.475644Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173203527', ' ', ' ', 'FvrServlet', 199, 'CENTRAL', 'LN01CP04', '2017-09-04T15-32-01.475644Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -14522,7 +14522,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173208512', ' ', ' ', 'FvrServlet', 200, 'LN01CP04', '2017-09-04T15-32-09.16597Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173208512', ' ', ' ', 'FvrServlet', 200, 'CENTRAL', 'LN01CP04', '2017-09-04T15-32-09.16597Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -14712,7 +14712,7 @@ DRIVER_NAME=Jonas Tanzi
 NATIONALITY=
 NATION_CODE=ITA
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173210887', ' ', ' ', 'FvrServlet', 201, 'LN01CP04', '2017-09-04T15-32-09.16597Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173210887', ' ', ' ', 'FvrServlet', 201, 'CENTRAL', 'LN01CP04', '2017-09-04T15-32-09.16597Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -14902,7 +14902,7 @@ DRIVER_NAME=Jonas Tanzi
 NATIONALITY=
 NATION_CODE=ITA
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904173211715', ' ', ' ', 'FvrServlet', 202, 'LN01CP04', '2017-09-04T15-32-09.16597Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904173211715', ' ', ' ', 'FvrServlet', 202, 'CENTRAL', 'LN01CP04', '2017-09-04T15-32-09.16597Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -15092,7 +15092,7 @@ DRIVER_NAME=Jonas Tanzi
 NATIONALITY=
 NATION_CODE=ITA
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904174101084', ' ', ' ', 'FvrServlet', 203, 'LN01CP04', '2017-09-04T15-40-59.773192Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904174101084', ' ', ' ', 'FvrServlet', 203, 'CENTRAL', 'LN01CP04', '2017-09-04T15-40-59.773192Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -15282,7 +15282,7 @@ DRIVER_NAME=Jonas Tanzi
 NATIONALITY=
 NATION_CODE=ITA
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904174101740', ' ', ' ', 'FvrServlet', 204, 'LN01CP04', '2017-09-04T15-40-59.773192Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904174101740', ' ', ' ', 'FvrServlet', 204, 'CENTRAL', 'LN01CP04', '2017-09-04T15-40-59.773192Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -15472,7 +15472,7 @@ DRIVER_NAME=Jonas Tanzi
 NATIONALITY=
 NATION_CODE=ITA
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904174103552', ' ', ' ', 'FvrServlet', 205, 'LN01CP04', '2017-09-04T15-40-59.773192Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904174103552', ' ', ' ', 'FvrServlet', 205, 'CENTRAL', 'LN01CP04', '2017-09-04T15-40-59.773192Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -15662,7 +15662,7 @@ DRIVER_NAME=Jonas Tanzi
 NATIONALITY=
 NATION_CODE=ITA
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904174116756', ' ', ' ', 'FvrServlet', 206, 'LN01CP04', '2017-09-04T15-41-17.053967Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904174116756', ' ', ' ', 'FvrServlet', 206, 'CENTRAL', 'LN01CP04', '2017-09-04T15-41-17.053967Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -15852,7 +15852,7 @@ DRIVER_NAME=Jonas Tanzi
 NATIONALITY=
 NATION_CODE=ITA
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904174118569', ' ', ' ', 'FvrServlet', 207, 'LN01CP04', '2017-09-04T15-41-17.053967Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904174118569', ' ', ' ', 'FvrServlet', 207, 'CENTRAL', 'LN01CP04', '2017-09-04T15-41-17.053967Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -16042,7 +16042,7 @@ DRIVER_NAME=Jonas Tanzi
 NATIONALITY=
 NATION_CODE=ITA
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904174120913', ' ', ' ', 'FvrServlet', 208, 'LN01CP04', '2017-09-04T15-41-17.053967Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904174120913', ' ', ' ', 'FvrServlet', 208, 'CENTRAL', 'LN01CP04', '2017-09-04T15-41-17.053967Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -16232,7 +16232,7 @@ DRIVER_NAME=Jonas Tanzi
 NATIONALITY=
 NATION_CODE=ITA
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904174148555', ' ', ' ', 'FvrServlet', 209, 'LN01CP04', '2017-09-04T15-41-49.247155Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904174148555', ' ', ' ', 'FvrServlet', 209, 'CENTRAL', 'LN01CP04', '2017-09-04T15-41-49.247155Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -16382,7 +16382,7 @@ DRIVER_NAME=Shel Borchard
 NATIONALITY=
 NATION_CODE=IRL
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904174151742', ' ', ' ', 'FvrServlet', 211, 'LN01CP04', '2017-09-04T15-41-49.247155Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904174151742', ' ', ' ', 'FvrServlet', 211, 'CENTRAL', 'LN01CP04', '2017-09-04T15-41-49.247155Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -16532,7 +16532,7 @@ DRIVER_NAME=Shel Borchard
 NATIONALITY=
 NATION_CODE=IRL
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904175401142', ' ', ' ', 'FvrServlet', 212, 'LN01CP04', '2017-09-04T15-54-01.12078Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904175401142', ' ', ' ', 'FvrServlet', 212, 'CENTRAL', 'LN01CP04', '2017-09-04T15-54-01.12078Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -16682,7 +16682,7 @@ DRIVER_NAME=Shel Borchard
 NATIONALITY=
 NATION_CODE=IRL
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904175401799', ' ', ' ', 'FvrServlet', 213, 'LN01CP04', '2017-09-04T15-54-01.12078Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904175401799', ' ', ' ', 'FvrServlet', 213, 'CENTRAL', 'LN01CP04', '2017-09-04T15-54-01.12078Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -16832,7 +16832,7 @@ DRIVER_NAME=Shel Borchard
 NATIONALITY=
 NATION_CODE=IRL
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170904175403595', ' ', ' ', 'FvrServlet', 214, 'LN01CP04', '2017-09-04T15-54-01.12078Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170904175403595', ' ', ' ', 'FvrServlet', 214, 'CENTRAL', 'LN01CP04', '2017-09-04T15-54-01.12078Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -16982,7 +16982,7 @@ DRIVER_NAME=Shel Borchard
 NATIONALITY=
 NATION_CODE=IRL
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905113511703', ' ', ' ', 'FvrServlet', 215, 'LN01CP04', '2017-09-04T15-54-01.12078Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905113511703', ' ', ' ', 'FvrServlet', 215, 'CENTRAL', 'LN01CP04', '2017-09-04T15-54-01.12078Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -17132,7 +17132,7 @@ DRIVER_NAME=Shel Borchard
 NATIONALITY=
 NATION_CODE=IRL
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905114155444', ' ', ' ', 'FvrServlet', 216, 'LN01CP04', '2017-09-05T09-41-41.505118Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905114155444', ' ', ' ', 'FvrServlet', 216, 'CENTRAL', 'LN01CP04', '2017-09-05T09-41-41.505118Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -17284,7 +17284,7 @@ DRIVER_NAME=Shel Borchard
 NATIONALITY=
 NATION_CODE=IRL
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905115540660', ' ', ' ', 'FvrServlet', 217, 'LN01CP04', '2017-09-05T09-55-40.811805Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905115540660', ' ', ' ', 'FvrServlet', 217, 'CENTRAL', 'LN01CP04', '2017-09-05T09-55-40.811805Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -17435,7 +17435,7 @@ DRIVER_NAME=Shel Borchard
 NATIONALITY=
 NATION_CODE=IRL
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905115610490', ' ', ' ', 'FvrServlet', 218, 'LN01CP04', '2017-09-05T09-56-04.192367Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905115610490', ' ', ' ', 'FvrServlet', 218, 'CENTRAL', 'LN01CP04', '2017-09-05T09-56-04.192367Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -17586,7 +17586,7 @@ DRIVER_NAME=Shel Borchard
 NATIONALITY=
 NATION_CODE=IRL
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905115625475', ' ', ' ', 'FvrServlet', 219, 'LN01CP04', '2017-09-05T09-56-25.261574Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905115625475', ' ', ' ', 'FvrServlet', 219, 'CENTRAL', 'LN01CP04', '2017-09-05T09-56-25.261574Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -17737,7 +17737,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905115640476', ' ', ' ', 'FvrServlet', 220, 'LN01CP04', '2017-09-05T09-56-35.744051Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905115640476', ' ', ' ', 'FvrServlet', 220, 'CENTRAL', 'LN01CP04', '2017-09-05T09-56-35.744051Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -17888,7 +17888,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905115810543', ' ', ' ', 'FvrServlet', 221, 'LN01CP04', '2017-09-05T09-57-59.794068Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905115810543', ' ', ' ', 'FvrServlet', 221, 'CENTRAL', 'LN01CP04', '2017-09-05T09-57-59.794068Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -18098,7 +18098,7 @@ DRIVER_NAME=Ronald Cavey
 NATIONALITY=
 NATION_CODE=GBR
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905115825482', ' ', ' ', 'FvrServlet', 222, 'LN01CP04', '2017-09-05T09-58-20.786023Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905115825482', ' ', ' ', 'FvrServlet', 222, 'CENTRAL', 'LN01CP04', '2017-09-05T09-58-20.786023Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -18308,7 +18308,7 @@ DRIVER_NAME=Ronald Cavey
 NATIONALITY=
 NATION_CODE=GBR
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905115855483', ' ', ' ', 'FvrServlet', 223, 'LN01CP04', '2017-09-05T09-58-51.563777Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905115855483', ' ', ' ', 'FvrServlet', 223, 'CENTRAL', 'LN01CP04', '2017-09-05T09-58-51.563777Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -18518,7 +18518,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905115910484', ' ', ' ', 'FvrServlet', 224, 'LN01CP04', '2017-09-05T09-59-04.096184Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905115910484', ' ', ' ', 'FvrServlet', 224, 'CENTRAL', 'LN01CP04', '2017-09-05T09-59-04.096184Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -18728,7 +18728,7 @@ DRIVER_NAME=Renato Ramires
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905121255705', ' ', ' ', 'FvrServlet', 225, 'LN01CP04', '2017-09-05T10-12-47.501415Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905121255705', ' ', ' ', 'FvrServlet', 225, 'CENTRAL', 'LN01CP04', '2017-09-05T10-12-47.501415Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -18938,7 +18938,7 @@ DRIVER_NAME=Renato Ramires
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905121310550', ' ', ' ', 'FvrServlet', 226, 'LN01CP04', '2017-09-05T10-13-05.831862Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905121310550', ' ', ' ', 'FvrServlet', 226, 'CENTRAL', 'LN01CP04', '2017-09-05T10-13-05.831862Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -19148,7 +19148,7 @@ DRIVER_NAME=Renato Ramires
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905121325504', ' ', ' ', 'FvrServlet', 227, 'LN01CP04', '2017-09-05T10-13-11.641702Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905121325504', ' ', ' ', 'FvrServlet', 227, 'CENTRAL', 'LN01CP04', '2017-09-05T10-13-11.641702Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -19358,7 +19358,7 @@ DRIVER_NAME=Renato Ramires
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905121440508', ' ', ' ', 'FvrServlet', 228, 'LN01CP04', '2017-09-05T10-14-31.384511Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905121440508', ' ', ' ', 'FvrServlet', 228, 'CENTRAL', 'LN01CP04', '2017-09-05T10-14-31.384511Z_file.snd', '
 [RACE]
 TRACK=paul_ricard
 CONFIG_TRACK=blancpain
@@ -19568,7 +19568,7 @@ DRIVER_NAME=Renato Ramires
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905121510494', ' ', ' ', 'FvrServlet', 229, 'LN01CP04', '2017-09-05T10-15-01.024615Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905121510494', ' ', ' ', 'FvrServlet', 229, 'CENTRAL', 'LN01CP04', '2017-09-05T10-15-01.024615Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -19778,7 +19778,7 @@ DRIVER_NAME=Renato Ramires
 NATIONALITY=
 NATION_CODE=MEX
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905121525495', ' ', ' ', 'FvrServlet', 230, 'LN01CP04', '2017-09-05T10-15-16.734061Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905121525495', ' ', ' ', 'FvrServlet', 230, 'CENTRAL', 'LN01CP04', '2017-09-05T10-15-16.734061Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -19988,7 +19988,7 @@ DRIVER_NAME=Esteban Ocon
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905133840752', ' ', ' ', 'FvrServlet', 231, 'LN01CP04', '2017-09-05T11-38-37.076194Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905133840752', ' ', ' ', 'FvrServlet', 231, 'CENTRAL', 'LN01CP04', '2017-09-05T11-38-37.076194Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -20198,7 +20198,7 @@ DRIVER_NAME=Esteban Ocon
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905133925551', ' ', ' ', 'FvrServlet', 232, 'LN01CP04', '2017-09-05T11-39-13.580726Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905133925551', ' ', ' ', 'FvrServlet', 232, 'CENTRAL', 'LN01CP04', '2017-09-05T11-39-13.580726Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -20409,7 +20409,7 @@ DRIVER_NAME=Esteban Ocon
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905133940552', ' ', ' ', 'FvrServlet', 233, 'LN01CP04', '2017-09-05T11-39-35.164379Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905133940552', ' ', ' ', 'FvrServlet', 233, 'CENTRAL', 'LN01CP04', '2017-09-05T11-39-35.164379Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -20620,7 +20620,7 @@ DRIVER_NAME=Esteban Ocon
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905134010538', ' ', ' ', 'FvrServlet', 234, 'LN01CP04', '2017-09-05T11-40-06.013501Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905134010538', ' ', ' ', 'FvrServlet', 234, 'CENTRAL', 'LN01CP04', '2017-09-05T11-40-06.013501Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -20831,7 +20831,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905134055556', ' ', ' ', 'FvrServlet', 235, 'LN01CP04', '2017-09-05T11-40-52.000767Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905134055556', ' ', ' ', 'FvrServlet', 235, 'CENTRAL', 'LN01CP04', '2017-09-05T11-40-52.000767Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -21043,7 +21043,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905183854350', ' ', ' ', 'FvrServlet', 236, 'LN01CP04', '2017-09-05T16-38-53.613366Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905183854350', ' ', ' ', 'FvrServlet', 236, 'CENTRAL', 'LN01CP04', '2017-09-05T16-38-53.613366Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -21255,7 +21255,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905183924133', ' ', ' ', 'FvrServlet', 237, 'LN01CP04', '2017-09-05T16-39-16.614676Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905183924133', ' ', ' ', 'FvrServlet', 237, 'CENTRAL', 'LN01CP04', '2017-09-05T16-39-16.614676Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -21467,7 +21467,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905184439134', ' ', ' ', 'FvrServlet', 238, 'LN01CP04', '2017-09-05T16-44-40.117866Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905184439134', ' ', ' ', 'FvrServlet', 238, 'CENTRAL', 'LN01CP04', '2017-09-05T16-44-40.117866Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -21679,7 +21679,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905184454135', ' ', ' ', 'FvrServlet', 239, 'LN01CP04', '2017-09-05T16-44-51.926964Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905184454135', ' ', ' ', 'FvrServlet', 239, 'CENTRAL', 'LN01CP04', '2017-09-05T16-44-51.926964Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -21891,7 +21891,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905184509136', ' ', ' ', 'FvrServlet', 240, 'LN01CP04', '2017-09-05T16-44-59.003606Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905184509136', ' ', ' ', 'FvrServlet', 240, 'CENTRAL', 'LN01CP04', '2017-09-05T16-44-59.003606Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -22103,7 +22103,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905184539137', ' ', ' ', 'FvrServlet', 241, 'LN01CP04', '2017-09-05T16-45-38.731695Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905184539137', ' ', ' ', 'FvrServlet', 241, 'CENTRAL', 'LN01CP04', '2017-09-05T16-45-38.731695Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -22315,7 +22315,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905184554138', ' ', ' ', 'FvrServlet', 242, 'LN01CP04', '2017-09-05T16-45-49.067668Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905184554138', ' ', ' ', 'FvrServlet', 242, 'CENTRAL', 'LN01CP04', '2017-09-05T16-45-49.067668Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -22527,7 +22527,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905185809321', ' ', ' ', 'FvrServlet', 243, 'LN01CP04', '2017-09-05T16-57-59.035312Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905185809321', ' ', ' ', 'FvrServlet', 243, 'CENTRAL', 'LN01CP04', '2017-09-05T16-57-59.035312Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -22739,7 +22739,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905190054158', ' ', ' ', 'FvrServlet', 244, 'LN01CP04', '2017-09-05T17-00-44.785471Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905190054158', ' ', ' ', 'FvrServlet', 244, 'CENTRAL', 'LN01CP04', '2017-09-05T17-00-44.785471Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -22951,7 +22951,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905190109159', ' ', ' ', 'FvrServlet', 245, 'LN01CP04', '2017-09-05T17-01-08.560795Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905190109159', ' ', ' ', 'FvrServlet', 245, 'CENTRAL', 'LN01CP04', '2017-09-05T17-01-08.560795Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -23163,7 +23163,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905190124144', ' ', ' ', 'FvrServlet', 246, 'LN01CP04', '2017-09-05T17-01-21.29686Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905190124144', ' ', ' ', 'FvrServlet', 246, 'CENTRAL', 'LN01CP04', '2017-09-05T17-01-21.29686Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -23375,7 +23375,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905190139145', ' ', ' ', 'FvrServlet', 247, 'LN01CP04', '2017-09-05T17-01-36.657073Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905190139145', ' ', ' ', 'FvrServlet', 247, 'CENTRAL', 'LN01CP04', '2017-09-05T17-01-36.657073Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -23587,7 +23587,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905190154146', ' ', ' ', 'FvrServlet', 248, 'LN01CP04', '2017-09-05T17-01-42.526631Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905190154146', ' ', ' ', 'FvrServlet', 248, 'CENTRAL', 'LN01CP04', '2017-09-05T17-01-42.526631Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -23797,7 +23797,7 @@ DRIVER_NAME=Sergio Perez
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905190224147', ' ', ' ', 'FvrServlet', 249, 'LN01CP04', '2017-09-05T17-02-20.63283Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905190224147', ' ', ' ', 'FvrServlet', 249, 'CENTRAL', 'LN01CP04', '2017-09-05T17-02-20.63283Z_file.snd', '
 [RACE]
 TRACK=gilles-villeneuve
 CONFIG_TRACK=
@@ -24007,7 +24007,7 @@ DRIVER_NAME=Sergio Perez
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905190354152', ' ', ' ', 'FvrServlet', 250, 'LN01CP04', '2017-09-05T17-03-41.787689Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905190354152', ' ', ' ', 'FvrServlet', 250, 'CENTRAL', 'LN01CP04', '2017-09-05T17-03-41.787689Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -24217,7 +24217,7 @@ DRIVER_NAME=Sergio Perez
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905190409153', ' ', ' ', 'FvrServlet', 251, 'LN01CP04', '2017-09-05T17-04-06.927826Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905190409153', ' ', ' ', 'FvrServlet', 251, 'CENTRAL', 'LN01CP04', '2017-09-05T17-04-06.927826Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -24427,7 +24427,7 @@ DRIVER_NAME=Sergio Perez
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905190424169', ' ', ' ', 'FvrServlet', 252, 'LN01CP04', '2017-09-05T17-04-19.775485Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905190424169', ' ', ' ', 'FvrServlet', 252, 'CENTRAL', 'LN01CP04', '2017-09-05T17-04-19.775485Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -24637,7 +24637,7 @@ DRIVER_NAME=Sergio Perez
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905190439155', ' ', ' ', 'FvrServlet', 253, 'LN01CP04', '2017-09-05T17-04-34.470408Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905190439155', ' ', ' ', 'FvrServlet', 253, 'CENTRAL', 'LN01CP04', '2017-09-05T17-04-34.470408Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -24847,7 +24847,7 @@ DRIVER_NAME=Sergio Perez
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905190454155', ' ', ' ', 'FvrServlet', 254, 'LN01CP04', '2017-09-05T17-04-45.958826Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905190454155', ' ', ' ', 'FvrServlet', 254, 'CENTRAL', 'LN01CP04', '2017-09-05T17-04-45.958826Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -25057,7 +25057,7 @@ DRIVER_NAME=Sergio Perez
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905190539158', ' ', ' ', 'FvrServlet', 255, 'LN01CP04', '2017-09-05T17-05-39.634141Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905190539158', ' ', ' ', 'FvrServlet', 255, 'CENTRAL', 'LN01CP04', '2017-09-05T17-05-39.634141Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -25257,7 +25257,7 @@ DRIVER_NAME=Lance Stroll
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905190554159', ' ', ' ', 'FvrServlet', 256, 'LN01CP04', '2017-09-05T17-05-41.137172Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905190554159', ' ', ' ', 'FvrServlet', 256, 'CENTRAL', 'LN01CP04', '2017-09-05T17-05-41.137172Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -25457,7 +25457,7 @@ DRIVER_NAME=Lance Stroll
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905193009349', ' ', ' ', 'FvrServlet', 257, 'LN01CP04', '2017-09-05T17-30-02.894171Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905193009349', ' ', ' ', 'FvrServlet', 257, 'CENTRAL', 'LN01CP04', '2017-09-05T17-30-02.894171Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -25657,7 +25657,7 @@ DRIVER_NAME=Lance Stroll
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905193924207', ' ', ' ', 'FvrServlet', 258, 'LN01CP04', '2017-09-05T17-39-21.307363Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905193924207', ' ', ' ', 'FvrServlet', 258, 'CENTRAL', 'LN01CP04', '2017-09-05T17-39-21.307363Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -25858,7 +25858,7 @@ DRIVER_NAME=Lance Stroll
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905193954193', ' ', ' ', 'FvrServlet', 259, 'LN01CP04', '2017-09-05T17-39-42.920046Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905193954193', ' ', ' ', 'FvrServlet', 259, 'CENTRAL', 'LN01CP04', '2017-09-05T17-39-42.920046Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -26059,7 +26059,7 @@ DRIVER_NAME=Lance Stroll
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905194024367', ' ', ' ', 'FvrServlet', 260, 'LN01CP04', '2017-09-05T17-40-18.224485Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905194024367', ' ', ' ', 'FvrServlet', 260, 'CENTRAL', 'LN01CP04', '2017-09-05T17-40-18.224485Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -26260,7 +26260,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905194039196', ' ', ' ', 'FvrServlet', 261, 'LN01CP04', '2017-09-05T17-40-33.571383Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905194039196', ' ', ' ', 'FvrServlet', 261, 'CENTRAL', 'LN01CP04', '2017-09-05T17-40-33.571383Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -26462,7 +26462,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905202339397', ' ', ' ', 'FvrServlet', 262, 'LN01CP04', '2017-09-05T18-23-25.680544Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905202339397', ' ', ' ', 'FvrServlet', 262, 'CENTRAL', 'LN01CP04', '2017-09-05T18-23-25.680544Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -26664,1421 +26664,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905203354400', ' ', ' ', 'FvrServlet', 263, 'LN01CP04', '2017-09-05T18-33-54.937739Z_file.snd', '
-[RACE]
-TRACK=singapore
-CONFIG_TRACK=
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=07-renault-y-palmer
-DRIVER_NAME=Lorvader
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[CAR_1]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Lewis Hamilton
-NATIONALITY=
-NATION_CODE=
-
-[CAR_2]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-v-bottas
-DRIVER_NAME=Valtteri Bottas
-NATIONALITY=
-NATION_CODE=
-
-[CAR_3]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=010-mcgregor-motors
-DRIVER_NAME=Viktor Abramov
-NATIONALITY=
-NATION_CODE=RUS
-
-[CAR_4]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=011-quake-racing
-DRIVER_NAME=Mark Schroeter
-NATIONALITY=
-NATION_CODE=DEU
-
-[CAR_5]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-a-vettel
-DRIVER_NAME=Sebastian Vettel
-NATIONALITY=
-NATION_CODE=
-
-[CAR_6]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-k-raikkonen
-DRIVER_NAME=Kimi Raikkonen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_7]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-oxfordshire-group
-DRIVER_NAME=Jaymes Bray
-NATIONALITY=
-NATION_CODE=GBR
-
-[CAR_8]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-d-ricciardo
-DRIVER_NAME=Daniel Ricciardo
-NATIONALITY=
-NATION_CODE=
-
-[CAR_9]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-m-verstappen
-DRIVER_NAME=Max Verstappen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_10]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-d-resta
-DRIVER_NAME=Paul Di Resta
-NATIONALITY=
-NATION_CODE=
-
-[CAR_11]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-l-stroll
-DRIVER_NAME=Lance Stroll
-NATIONALITY=
-NATION_CODE=
-
-[SESSION_0]
-STARTING_POSITION=12
-NAME=Quick Race
-TYPE=3
-LAPS=10
-DURATION_MINUTES=0
-SPAWN_SET=START
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Lorvader
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=1
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170905204954411', ' ', ' ', 'FvrServlet', 264, 'LN01CP04', '2017-09-05T18-49-51.304936Z_file.snd', '
-[RACE]
-TRACK=singapore
-CONFIG_TRACK=
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=07-renault-y-palmer
-DRIVER_NAME=Lorvader
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[CAR_1]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Lewis Hamilton
-NATIONALITY=
-NATION_CODE=
-
-[CAR_2]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-v-bottas
-DRIVER_NAME=Valtteri Bottas
-NATIONALITY=
-NATION_CODE=
-
-[CAR_3]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=010-mcgregor-motors
-DRIVER_NAME=Viktor Abramov
-NATIONALITY=
-NATION_CODE=RUS
-
-[CAR_4]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=011-quake-racing
-DRIVER_NAME=Mark Schroeter
-NATIONALITY=
-NATION_CODE=DEU
-
-[CAR_5]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-a-vettel
-DRIVER_NAME=Sebastian Vettel
-NATIONALITY=
-NATION_CODE=
-
-[CAR_6]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-k-raikkonen
-DRIVER_NAME=Kimi Raikkonen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_7]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-oxfordshire-group
-DRIVER_NAME=Jaymes Bray
-NATIONALITY=
-NATION_CODE=GBR
-
-[CAR_8]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-d-ricciardo
-DRIVER_NAME=Daniel Ricciardo
-NATIONALITY=
-NATION_CODE=
-
-[CAR_9]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-m-verstappen
-DRIVER_NAME=Max Verstappen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_10]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-d-resta
-DRIVER_NAME=Paul Di Resta
-NATIONALITY=
-NATION_CODE=
-
-[CAR_11]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-l-stroll
-DRIVER_NAME=Lance Stroll
-NATIONALITY=
-NATION_CODE=
-
-[SESSION_0]
-STARTING_POSITION=12
-NAME=Quick Race
-TYPE=3
-LAPS=10
-DURATION_MINUTES=0
-SPAWN_SET=START
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Lorvader
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=0
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170906191949739', ' ', ' ', 'FvrServlet', 265, 'LN01CP04', '2017-09-06T17-19-43.840994Z_file.snd', '
-[RACE]
-TRACK=singapore
-CONFIG_TRACK=
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=07-renault-y-palmer
-DRIVER_NAME=Lorvader
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[CAR_1]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Lewis Hamilton
-NATIONALITY=
-NATION_CODE=
-
-[CAR_2]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-v-bottas
-DRIVER_NAME=Valtteri Bottas
-NATIONALITY=
-NATION_CODE=
-
-[CAR_3]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=010-mcgregor-motors
-DRIVER_NAME=Viktor Abramov
-NATIONALITY=
-NATION_CODE=RUS
-
-[CAR_4]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=011-quake-racing
-DRIVER_NAME=Mark Schroeter
-NATIONALITY=
-NATION_CODE=DEU
-
-[CAR_5]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-a-vettel
-DRIVER_NAME=Sebastian Vettel
-NATIONALITY=
-NATION_CODE=
-
-[CAR_6]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-k-raikkonen
-DRIVER_NAME=Kimi Raikkonen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_7]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-oxfordshire-group
-DRIVER_NAME=Jaymes Bray
-NATIONALITY=
-NATION_CODE=GBR
-
-[CAR_8]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-d-ricciardo
-DRIVER_NAME=Daniel Ricciardo
-NATIONALITY=
-NATION_CODE=
-
-[CAR_9]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-m-verstappen
-DRIVER_NAME=Max Verstappen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_10]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-d-resta
-DRIVER_NAME=Paul Di Resta
-NATIONALITY=
-NATION_CODE=
-
-[CAR_11]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-l-stroll
-DRIVER_NAME=Lance Stroll
-NATIONALITY=
-NATION_CODE=
-
-[SESSION_0]
-STARTING_POSITION=12
-NAME=Quick Race
-TYPE=3
-LAPS=10
-DURATION_MINUTES=0
-SPAWN_SET=START
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Lorvader
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=0
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170906192019522', ' ', ' ', 'FvrServlet', 266, 'LN01CP04', '2017-09-06T17-20-07.517506Z_file.snd', '
-[RACE]
-TRACK=singapore
-CONFIG_TRACK=
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=07-renault-y-palmer
-DRIVER_NAME=Lorvader
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[CAR_1]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Lewis Hamilton
-NATIONALITY=
-NATION_CODE=
-
-[CAR_2]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-v-bottas
-DRIVER_NAME=Valtteri Bottas
-NATIONALITY=
-NATION_CODE=
-
-[CAR_3]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=010-mcgregor-motors
-DRIVER_NAME=Viktor Abramov
-NATIONALITY=
-NATION_CODE=RUS
-
-[CAR_4]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=011-quake-racing
-DRIVER_NAME=Mark Schroeter
-NATIONALITY=
-NATION_CODE=DEU
-
-[CAR_5]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-a-vettel
-DRIVER_NAME=Sebastian Vettel
-NATIONALITY=
-NATION_CODE=
-
-[CAR_6]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-k-raikkonen
-DRIVER_NAME=Kimi Raikkonen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_7]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-oxfordshire-group
-DRIVER_NAME=Jaymes Bray
-NATIONALITY=
-NATION_CODE=GBR
-
-[CAR_8]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-d-ricciardo
-DRIVER_NAME=Daniel Ricciardo
-NATIONALITY=
-NATION_CODE=
-
-[CAR_9]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-m-verstappen
-DRIVER_NAME=Max Verstappen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_10]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-d-resta
-DRIVER_NAME=Paul Di Resta
-NATIONALITY=
-NATION_CODE=
-
-[CAR_11]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-l-stroll
-DRIVER_NAME=Lance Stroll
-NATIONALITY=
-NATION_CODE=
-
-[SESSION_0]
-STARTING_POSITION=12
-NAME=Quick Race
-TYPE=3
-LAPS=10
-DURATION_MINUTES=0
-SPAWN_SET=START
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Lorvader
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=0
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170906192419520', ' ', ' ', 'FvrServlet', 267, 'LN01CP04', '2017-09-06T17-24-20.799517Z_file.snd', '
-[RACE]
-TRACK=singapore
-CONFIG_TRACK=
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=07-renault-y-palmer
-DRIVER_NAME=Lorvader
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[CAR_1]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Lewis Hamilton
-NATIONALITY=
-NATION_CODE=
-
-[CAR_2]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-v-bottas
-DRIVER_NAME=Valtteri Bottas
-NATIONALITY=
-NATION_CODE=
-
-[CAR_3]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=010-mcgregor-motors
-DRIVER_NAME=Viktor Abramov
-NATIONALITY=
-NATION_CODE=RUS
-
-[CAR_4]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=011-quake-racing
-DRIVER_NAME=Mark Schroeter
-NATIONALITY=
-NATION_CODE=DEU
-
-[CAR_5]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-a-vettel
-DRIVER_NAME=Sebastian Vettel
-NATIONALITY=
-NATION_CODE=
-
-[CAR_6]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-k-raikkonen
-DRIVER_NAME=Kimi Raikkonen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_7]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-oxfordshire-group
-DRIVER_NAME=Jaymes Bray
-NATIONALITY=
-NATION_CODE=GBR
-
-[CAR_8]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-d-ricciardo
-DRIVER_NAME=Daniel Ricciardo
-NATIONALITY=
-NATION_CODE=
-
-[CAR_9]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-m-verstappen
-DRIVER_NAME=Max Verstappen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_10]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-d-resta
-DRIVER_NAME=Paul Di Resta
-NATIONALITY=
-NATION_CODE=
-
-[CAR_11]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-l-stroll
-DRIVER_NAME=Lance Stroll
-NATIONALITY=
-NATION_CODE=
-
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Lorvader
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=0
-[SESSION_0]
-STARTING_POSITION=12
-NAME=Quick Race
-TYPE=3
-LAPS=10
-DURATION_MINUTES=0
-SPAWN_SET=START
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170906192434506', ' ', ' ', 'FvrServlet', 268, 'LN01CP04', '2017-09-06T17-24-26.068195Z_file.snd', '
-[RACE]
-TRACK=singapore
-CONFIG_TRACK=
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=07-renault-y-palmer
-DRIVER_NAME=Lorvader
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[CAR_1]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Lewis Hamilton
-NATIONALITY=
-NATION_CODE=
-
-[CAR_2]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-v-bottas
-DRIVER_NAME=Valtteri Bottas
-NATIONALITY=
-NATION_CODE=
-
-[CAR_3]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=010-mcgregor-motors
-DRIVER_NAME=Viktor Abramov
-NATIONALITY=
-NATION_CODE=RUS
-
-[CAR_4]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=011-quake-racing
-DRIVER_NAME=Mark Schroeter
-NATIONALITY=
-NATION_CODE=DEU
-
-[CAR_5]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-a-vettel
-DRIVER_NAME=Sebastian Vettel
-NATIONALITY=
-NATION_CODE=
-
-[CAR_6]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-k-raikkonen
-DRIVER_NAME=Kimi Raikkonen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_7]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-oxfordshire-group
-DRIVER_NAME=Jaymes Bray
-NATIONALITY=
-NATION_CODE=GBR
-
-[CAR_8]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-d-ricciardo
-DRIVER_NAME=Daniel Ricciardo
-NATIONALITY=
-NATION_CODE=
-
-[CAR_9]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-m-verstappen
-DRIVER_NAME=Max Verstappen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_10]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-d-resta
-DRIVER_NAME=Paul Di Resta
-NATIONALITY=
-NATION_CODE=
-
-[CAR_11]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-l-stroll
-DRIVER_NAME=Lance Stroll
-NATIONALITY=
-NATION_CODE=
-
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Lorvader
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=0
-[SESSION_0]
-STARTING_POSITION=12
-NAME=Quick Race
-TYPE=3
-LAPS=10
-DURATION_MINUTES=0
-SPAWN_SET=START
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170906192449522', ' ', ' ', 'FvrServlet', 269, 'LN01CP04', '2017-09-06T17-24-43.311178Z_file.snd', '
-[RACE]
-TRACK=singapore
-CONFIG_TRACK=
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=07-renault-y-palmer
-DRIVER_NAME=Lorvader
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[CAR_1]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Lewis Hamilton
-NATIONALITY=
-NATION_CODE=
-
-[CAR_2]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-v-bottas
-DRIVER_NAME=Valtteri Bottas
-NATIONALITY=
-NATION_CODE=
-
-[CAR_3]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=010-mcgregor-motors
-DRIVER_NAME=Viktor Abramov
-NATIONALITY=
-NATION_CODE=RUS
-
-[CAR_4]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=011-quake-racing
-DRIVER_NAME=Mark Schroeter
-NATIONALITY=
-NATION_CODE=DEU
-
-[CAR_5]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-a-vettel
-DRIVER_NAME=Sebastian Vettel
-NATIONALITY=
-NATION_CODE=
-
-[CAR_6]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-k-raikkonen
-DRIVER_NAME=Kimi Raikkonen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_7]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-oxfordshire-group
-DRIVER_NAME=Jaymes Bray
-NATIONALITY=
-NATION_CODE=GBR
-
-[CAR_8]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-d-ricciardo
-DRIVER_NAME=Daniel Ricciardo
-NATIONALITY=
-NATION_CODE=
-
-[CAR_9]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-m-verstappen
-DRIVER_NAME=Max Verstappen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_10]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-d-resta
-DRIVER_NAME=Paul Di Resta
-NATIONALITY=
-NATION_CODE=
-
-[CAR_11]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-l-stroll
-DRIVER_NAME=Lance Stroll
-NATIONALITY=
-NATION_CODE=
-
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=Lorvader
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=0
-[SESSION_0]
-STARTING_POSITION=12
-NAME=Quick Race
-TYPE=3
-LAPS=10
-DURATION_MINUTES=0
-SPAWN_SET=START
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170906192504539', ' ', ' ', 'FvrServlet', 270, 'LN01CP04', '2017-09-06T17-25-01.769565Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905203354400', ' ', ' ', 'FvrServlet', 263, 'CENTRAL', 'LN01CP04', '2017-09-05T18-33-54.937739Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -28280,7 +26866,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170906195149705', ' ', ' ', 'FvrServlet', 271, 'LN01CP04', '2017-09-06T17-51-48.655404Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170905204954411', ' ', ' ', 'FvrServlet', 264, 'CENTRAL', 'LN01CP04', '2017-09-05T18-49-51.304936Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -28482,7 +27068,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170907215712347', ' ', ' ', 'FvrServlet', 272, 'LN01CP04', '2017-09-07T19-57-12.084867Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170906191949739', ' ', ' ', 'FvrServlet', 265, 'CENTRAL', 'LN01CP04', '2017-09-06T17-19-43.840994Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -28684,7 +27270,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170907215742130', ' ', ' ', 'FvrServlet', 273, 'LN01CP04', '2017-09-07T19-57-37.486535Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170906192019522', ' ', ' ', 'FvrServlet', 266, 'CENTRAL', 'LN01CP04', '2017-09-06T17-20-07.517506Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -28886,7 +27472,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170907220257148', ' ', ' ', 'FvrServlet', 274, 'LN01CP04', '2017-09-07T20-02-53.767621Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170906192419520', ' ', ' ', 'FvrServlet', 267, 'CENTRAL', 'LN01CP04', '2017-09-06T17-24-20.799517Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -29088,7 +27674,1421 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170907220327149', ' ', ' ', 'FvrServlet', 275, 'LN01CP04', '2017-09-07T20-03-28.058457Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170906192434506', ' ', ' ', 'FvrServlet', 268, 'CENTRAL', 'LN01CP04', '2017-09-06T17-24-26.068195Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Mark Schroeter
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=12
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170906192449522', ' ', ' ', 'FvrServlet', 269, 'CENTRAL', 'LN01CP04', '2017-09-06T17-24-43.311178Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Mark Schroeter
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=12
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170906192504539', ' ', ' ', 'FvrServlet', 270, 'CENTRAL', 'LN01CP04', '2017-09-06T17-25-01.769565Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Mark Schroeter
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+STARTING_POSITION=12
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170906195149705', ' ', ' ', 'FvrServlet', 271, 'CENTRAL', 'LN01CP04', '2017-09-06T17-51-48.655404Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Mark Schroeter
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+STARTING_POSITION=12
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170907215712347', ' ', ' ', 'FvrServlet', 272, 'CENTRAL', 'LN01CP04', '2017-09-07T19-57-12.084867Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Mark Schroeter
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+STARTING_POSITION=12
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170907215742130', ' ', ' ', 'FvrServlet', 273, 'CENTRAL', 'LN01CP04', '2017-09-07T19-57-37.486535Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Mark Schroeter
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+STARTING_POSITION=12
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170907220257148', ' ', ' ', 'FvrServlet', 274, 'CENTRAL', 'LN01CP04', '2017-09-07T20-02-53.767621Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Mark Schroeter
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=12
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170907220327149', ' ', ' ', 'FvrServlet', 275, 'CENTRAL', 'LN01CP04', '2017-09-07T20-03-28.058457Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -29290,7 +29290,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170907221357323', ' ', ' ', 'FvrServlet', 276, 'LN01CP04', '2017-09-07T20-13-44.194719Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170907221357323', ' ', ' ', 'FvrServlet', 276, 'CENTRAL', 'LN01CP04', '2017-09-07T20-13-44.194719Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -29492,209 +29492,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170907222727336', ' ', ' ', 'FvrServlet', 277, 'LN01CP04', '2017-09-07T20-27-28.438612Z_file.snd', '
-[RACE]
-TRACK=singapore
-CONFIG_TRACK=
-MODEL=rss_formula_hybrid_2017_s1
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=07-renault-y-palmer
-DRIVER_NAME=m.jimeenez
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[CAR_1]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Lewis Hamilton
-NATIONALITY=
-NATION_CODE=
-
-[CAR_2]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-v-bottas
-DRIVER_NAME=Valtteri Bottas
-NATIONALITY=
-NATION_CODE=
-
-[CAR_3]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=010-mcgregor-motors
-DRIVER_NAME=Viktor Abramov
-NATIONALITY=
-NATION_CODE=RUS
-
-[CAR_4]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=011-quake-racing
-DRIVER_NAME=Mark Schroeter
-NATIONALITY=
-NATION_CODE=DEU
-
-[CAR_5]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-a-vettel
-DRIVER_NAME=Sebastian Vettel
-NATIONALITY=
-NATION_CODE=
-
-[CAR_6]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-k-raikkonen
-DRIVER_NAME=Kimi Raikkonen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_7]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-oxfordshire-group
-DRIVER_NAME=Jaymes Bray
-NATIONALITY=
-NATION_CODE=GBR
-
-[CAR_8]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-d-ricciardo
-DRIVER_NAME=Daniel Ricciardo
-NATIONALITY=
-NATION_CODE=
-
-[CAR_9]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-m-verstappen
-DRIVER_NAME=Max Verstappen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_10]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-d-resta
-DRIVER_NAME=Paul Di Resta
-NATIONALITY=
-NATION_CODE=
-
-[CAR_11]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-l-stroll
-DRIVER_NAME=Lance Stroll
-NATIONALITY=
-NATION_CODE=
-
-[SESSION_0]
-STARTING_POSITION=12
-NAME=Quick Race
-TYPE=3
-LAPS=10
-DURATION_MINUTES=0
-SPAWN_SET=START
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=m.jimeenez
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=1
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908182625848', ' ', ' ', 'FvrServlet', 278, 'LN01CP04', '2017-09-08T16-26-23.373279Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170907222727336', ' ', ' ', 'FvrServlet', 277, 'CENTRAL', 'LN01CP04', '2017-09-07T20-27-28.438612Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -29896,7 +29694,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908182654974', ' ', ' ', 'FvrServlet', 279, 'LN01CP04', '2017-09-08T16-26-45.839481Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908182625848', ' ', ' ', 'FvrServlet', 278, 'CENTRAL', 'LN01CP04', '2017-09-08T16-26-23.373279Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -30098,7 +29896,209 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908185012880', ' ', ' ', 'FvrServlet', 280, 'LN01CP04', '2017-09-08T16-50-07.718006Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908182654974', ' ', ' ', 'FvrServlet', 279, 'CENTRAL', 'LN01CP04', '2017-09-08T16-26-45.839481Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=07-renault-y-palmer
+DRIVER_NAME=m.jimeenez
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Mark Schroeter
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+STARTING_POSITION=12
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=m.jimeenez
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908185012880', ' ', ' ', 'FvrServlet', 280, 'CENTRAL', 'LN01CP04', '2017-09-08T16-50-07.718006Z_file.snd', '
 [RACE]
 TRACK=singapore
 CONFIG_TRACK=
@@ -30300,7 +30300,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908185057695', ' ', ' ', 'FvrServlet', 281, 'LN01CP04', '2017-09-08T16-50-51.77637Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908185057695', ' ', ' ', 'FvrServlet', 281, 'CENTRAL', 'LN01CP04', '2017-09-08T16-50-51.77637Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -30502,209 +30502,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908185112696', ' ', ' ', 'FvrServlet', 282, 'LN01CP04', '2017-09-08T16-51-03.70805Z_file.snd', '
-[RACE]
-TRACK=indi
-CONFIG_TRACK=
-MODEL=ferrari_f80
-CARS=1
-AI_LEVEL=98
-DRIFT_MODE=0
-FIXED_SETUP=0
-PENALTIES=0
-MODEL_CONFIG=
-
-[GHOST_CAR]
-RECORDING=0
-PLAYING=0
-SECONDS_ADVANTAGE=0
-LOAD=1
-FILE=
-ENABLED=0
-
-[LIGHTING]
-SUN_ANGLE=48
-TIME_MULT=1
-CLOUD_SPEED=0.2
-
-[GROOVE]
-VIRTUAL_LAPS=10
-MAX_LAPS=30
-STARTING_LAPS=0
-
-[LAP_INVALIDATOR]
-ALLOWED_TYRES_OUT=-1
-
-[TEMPERATURE]
-AMBIENT=26
-ROAD=36
-
-[DYNAMIC_TRACK]
-PRESET=5
-SESSION_START=100
-RANDOMNESS=0
-LAP_GAIN=1
-SESSION_TRANSFER=100
-
-[REPLAY]
-ACTIVE=0
-FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
-
-[WEATHER]
-NAME=3_clear
-
-[WIND]
-SPEED_KMH_MIN=2
-SPEED_KMH_MAX=40
-DIRECTION_DEG=-1
-
-[BENCHMARK]
-ACTIVE=0
-
-[HEADER]
-VERSION=1
-
-[CAR_0]
-MODEL=-
-MODEL_CONFIG=
-SKIN=rosso_corsa
-DRIVER_NAME=m.jimeenez
-NATIONALITY=Spain
-NATION_CODE=ESP
-AI_LEVEL=96
-SETUP=
-
-[CAR_1]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-l-hamilton
-DRIVER_NAME=Lewis Hamilton
-NATIONALITY=
-NATION_CODE=
-
-[CAR_2]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=01-mercedes-v-bottas
-DRIVER_NAME=Valtteri Bottas
-NATIONALITY=
-NATION_CODE=
-
-[CAR_3]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=010-mcgregor-motors
-DRIVER_NAME=Viktor Abramov
-NATIONALITY=
-NATION_CODE=RUS
-
-[CAR_4]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=011-quake-racing
-DRIVER_NAME=Mark Schroeter
-NATIONALITY=
-NATION_CODE=DEU
-
-[CAR_5]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-a-vettel
-DRIVER_NAME=Sebastian Vettel
-NATIONALITY=
-NATION_CODE=
-
-[CAR_6]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-ferrari-k-raikkonen
-DRIVER_NAME=Kimi Raikkonen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_7]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=02-oxfordshire-group
-DRIVER_NAME=Jaymes Bray
-NATIONALITY=
-NATION_CODE=GBR
-
-[CAR_8]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-d-ricciardo
-DRIVER_NAME=Daniel Ricciardo
-NATIONALITY=
-NATION_CODE=
-
-[CAR_9]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=03-redbull-m-verstappen
-DRIVER_NAME=Max Verstappen
-NATIONALITY=
-NATION_CODE=
-
-[CAR_10]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-d-resta
-DRIVER_NAME=Paul Di Resta
-NATIONALITY=
-NATION_CODE=
-
-[CAR_11]
-MODEL=rss_formula_hybrid_2017_s1
-MODEL_CONFIG=
-AI_LEVEL=100
-AI_AGGRESSION=0
-SKIN=04-williams-l-stroll
-DRIVER_NAME=Lance Stroll
-NATIONALITY=
-NATION_CODE=
-
-
-[REMOTE]
-SERVER_IP=192.168.10.11
-SERVER_PORT=9200
-SERVER_NAME=FVR F1 2017
-SERVER_HTTP_PORT=8081
-REQUESTED_CAR=rss_formula_hybrid_2017_s1
-NAME=m.jimeenez
-TEAM=
-PASSWORD=F0rmula.vr
-GUID=76561198400832748
-ACTIVE=1
-[SESSION_0]
-STARTING_POSITION=12
-NAME=Quick Race
-TYPE=3
-LAPS=10
-DURATION_MINUTES=0
-SPAWN_SET=START
-', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908185327704', ' ', ' ', 'FvrServlet', 283, 'LN01CP04', '2017-09-08T16-53-15.18349Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908185112696', ' ', ' ', 'FvrServlet', 282, 'CENTRAL', 'LN01CP04', '2017-09-08T16-51-03.70805Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -30886,6 +30684,7 @@ DRIVER_NAME=Lance Stroll
 NATIONALITY=
 NATION_CODE=
 
+
 [REMOTE]
 SERVER_IP=192.168.10.11
 SERVER_PORT=9200
@@ -30897,7 +30696,6 @@ TEAM=
 PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
-
 [SESSION_0]
 STARTING_POSITION=12
 NAME=Quick Race
@@ -30906,7 +30704,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908185342704', ' ', ' ', 'FvrServlet', 284, 'LN01CP04', '2017-09-08T16-53-35.85135Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908185327704', ' ', ' ', 'FvrServlet', 283, 'CENTRAL', 'LN01CP04', '2017-09-08T16-53-15.18349Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -31108,7 +30906,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908185357721', ' ', ' ', 'FvrServlet', 285, 'LN01CP04', '2017-09-08T16-53-57.231856Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908185342704', ' ', ' ', 'FvrServlet', 284, 'CENTRAL', 'LN01CP04', '2017-09-08T16-53-35.85135Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -31310,7 +31108,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908185412706', ' ', ' ', 'FvrServlet', 286, 'LN01CP04', '2017-09-08T16-54-04.937675Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908185357721', ' ', ' ', 'FvrServlet', 285, 'CENTRAL', 'LN01CP04', '2017-09-08T16-53-57.231856Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -31512,7 +31310,209 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908185427707', ' ', ' ', 'FvrServlet', 287, 'LN01CP04', '2017-09-08T16-54-25.639746Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908185412706', ' ', ' ', 'FvrServlet', 286, 'CENTRAL', 'LN01CP04', '2017-09-08T16-54-04.937675Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=36
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=3_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=m.jimeenez
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Mark Schroeter
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=m.jimeenez
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=1
+
+[SESSION_0]
+STARTING_POSITION=12
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908185427707', ' ', ' ', 'FvrServlet', 287, 'CENTRAL', 'LN01CP04', '2017-09-08T16-54-25.639746Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -31714,7 +31714,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908185442723', ' ', ' ', 'FvrServlet', 288, 'LN01CP04', '2017-09-08T16-54-31.564147Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908185442723', ' ', ' ', 'FvrServlet', 288, 'CENTRAL', 'LN01CP04', '2017-09-08T16-54-31.564147Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -31916,7 +31916,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908185457709', ' ', ' ', 'FvrServlet', 289, 'LN01CP04', '2017-09-08T16-54-56.66346Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908185457709', ' ', ' ', 'FvrServlet', 289, 'CENTRAL', 'LN01CP04', '2017-09-08T16-54-56.66346Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -32186,7 +32186,7 @@ DRIVER_NAME=Joy Vasquez
 NATIONALITY=
 NATION_CODE=PRT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908191943165', ' ', ' ', 'FvrServlet', 290, 'LN01CP04', '2017-09-08T17-19-42.082448Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908191943165', ' ', ' ', 'FvrServlet', 290, 'CENTRAL', 'LN01CP04', '2017-09-08T17-19-42.082448Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -32456,7 +32456,7 @@ DRIVER_NAME=Joy Vasquez
 NATIONALITY=
 NATION_CODE=PRT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908191957822', ' ', ' ', 'FvrServlet', 291, 'LN01CP04', '2017-09-08T17-19-47.119963Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908191957822', ' ', ' ', 'FvrServlet', 291, 'CENTRAL', 'LN01CP04', '2017-09-08T17-19-47.119963Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -32726,7 +32726,7 @@ DRIVER_NAME=Joy Vasquez
 NATIONALITY=
 NATION_CODE=PRT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908192012729', ' ', ' ', 'FvrServlet', 292, 'LN01CP04', '2017-09-08T17-20-07.476545Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908192012729', ' ', ' ', 'FvrServlet', 292, 'CENTRAL', 'LN01CP04', '2017-09-08T17-20-07.476545Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -32997,7 +32997,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908193342929', ' ', ' ', 'FvrServlet', 293, 'LN01CP04', '2017-09-08T17-33-39.728741Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908193342929', ' ', ' ', 'FvrServlet', 293, 'CENTRAL', 'LN01CP04', '2017-09-08T17-33-39.728741Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -33268,7 +33268,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908200827947', ' ', ' ', 'FvrServlet', 294, 'LN01CP04', '2017-09-08T18-08-16.221443Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908200827947', ' ', ' ', 'FvrServlet', 294, 'CENTRAL', 'LN01CP04', '2017-09-08T18-08-16.221443Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -33539,7 +33539,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908202642962', ' ', ' ', 'FvrServlet', 295, 'LN01CP04', '2017-09-08T18-26-37.790803Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908202642962', ' ', ' ', 'FvrServlet', 295, 'CENTRAL', 'LN01CP04', '2017-09-08T18-26-37.790803Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -33810,7 +33810,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908204827973', ' ', ' ', 'FvrServlet', 296, 'LN01CP04', '2017-09-08T18-48-15.320623Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908204827973', ' ', ' ', 'FvrServlet', 296, 'CENTRAL', 'LN01CP04', '2017-09-08T18-48-15.320623Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -34082,7 +34082,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908204842817', ' ', ' ', 'FvrServlet', 297, 'LN01CP04', '2017-09-08T18-48-37.88403Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908204842817', ' ', ' ', 'FvrServlet', 297, 'CENTRAL', 'LN01CP04', '2017-09-08T18-48-37.88403Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -34354,7 +34354,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908204857818', ' ', ' ', 'FvrServlet', 298, 'LN01CP04', '2017-09-08T18-48-53.507296Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908204857818', ' ', ' ', 'FvrServlet', 298, 'CENTRAL', 'LN01CP04', '2017-09-08T18-48-53.507296Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -34626,7 +34626,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908204912834', ' ', ' ', 'FvrServlet', 299, 'LN01CP04', '2017-09-08T18-49-12.719406Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908204912834', ' ', ' ', 'FvrServlet', 299, 'CENTRAL', 'LN01CP04', '2017-09-08T18-49-12.719406Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -34898,7 +34898,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908210205922', ' ', ' ', 'FvrServlet', 300, 'LN01CP06', '2017-09-08T16-20-43.635347Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908210205922', ' ', ' ', 'FvrServlet', 300, 'CENTRAL', 'LN01CP06', '2017-09-08T16-20-43.635347Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -34986,7 +34986,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198420606252
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908210242861', ' ', ' ', 'FvrServlet', 301, 'LN01CP04', '2017-09-08T19-02-38.919863Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908210242861', ' ', ' ', 'FvrServlet', 301, 'CENTRAL', 'LN01CP04', '2017-09-08T19-02-38.919863Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -35258,7 +35258,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908210353100', ' ', ' ', 'FvrServlet', 302, 'LN01CP05', '2017-09-08T16-23-11.292677Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908210353100', ' ', ' ', 'FvrServlet', 302, 'CENTRAL', 'LN01CP05', '2017-09-08T16-23-11.292677Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -35398,7 +35398,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198406733507
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908210557826', ' ', ' ', 'FvrServlet', 303, 'LN01CP04', '2017-09-08T19-05-42.981159Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908210557826', ' ', ' ', 'FvrServlet', 303, 'CENTRAL', 'LN01CP04', '2017-09-08T19-05-42.981159Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -35670,7 +35670,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908210845726', ' ', ' ', 'FvrServlet', 304, 'LN01CP02', '2017-09-08T16-25-47.243038Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908210845726', ' ', ' ', 'FvrServlet', 304, 'CENTRAL', 'LN01CP02', '2017-09-08T16-25-47.243038Z_file.snd', '
 [RACE]
 TRACK=valencia
 CONFIG_TRACK=
@@ -35758,7 +35758,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400586536
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908211012824', ' ', ' ', 'FvrServlet', 305, 'LN01CP04', '2017-09-08T19-10-00.91668Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908211012824', ' ', ' ', 'FvrServlet', 305, 'CENTRAL', 'LN01CP04', '2017-09-08T19-10-00.91668Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -36030,7 +36030,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908211233535', ' ', ' ', 'FvrServlet', 306, 'LN01CP03', '2017-09-08T19-02-51.961554Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908211233535', ' ', ' ', 'FvrServlet', 306, 'CENTRAL', 'LN01CP03', '2017-09-08T19-02-51.961554Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -36118,7 +36118,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198401625228
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908212212879', ' ', ' ', 'FvrServlet', 307, 'LN01CP04', '2017-09-08T19-21-58.599694Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908212212879', ' ', ' ', 'FvrServlet', 307, 'CENTRAL', 'LN01CP04', '2017-09-08T19-21-58.599694Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -36390,7 +36390,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908212227833', ' ', ' ', 'FvrServlet', 308, 'LN01CP04', '2017-09-08T19-22-20.065416Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908212227833', ' ', ' ', 'FvrServlet', 308, 'CENTRAL', 'LN01CP04', '2017-09-08T19-22-20.065416Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -36662,7 +36662,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908212443058', ' ', ' ', 'FvrServlet', 309, 'LN01CP04', '2017-09-08T19-24-37.300928Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908212443058', ' ', ' ', 'FvrServlet', 309, 'CENTRAL', 'LN01CP04', '2017-09-08T19-24-37.300928Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -36934,7 +36934,7 @@ LAPS=10
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908212457840', ' ', ' ', 'FvrServlet', 310, 'LN01CP04', '2017-09-08T19-24-55.844448Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908212457840', ' ', ' ', 'FvrServlet', 310, 'CENTRAL', 'LN01CP04', '2017-09-08T19-24-55.844448Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -37206,7 +37206,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908212552999', ' ', ' ', 'FvrServlet', 311, 'LN01CP05', '2017-09-08T19-25-47.738312Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908212552999', ' ', ' ', 'FvrServlet', 311, 'CENTRAL', 'LN01CP05', '2017-09-08T19-25-47.738312Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -37346,7 +37346,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198406733507
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908212622829', ' ', ' ', 'FvrServlet', 312, 'LN01CP05', '2017-09-08T19-26-11.974888Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908212622829', ' ', ' ', 'FvrServlet', 312, 'CENTRAL', 'LN01CP05', '2017-09-08T19-26-11.974888Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -37486,7 +37486,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198406733507
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908212737848', ' ', ' ', 'FvrServlet', 313, 'LN01CP05', '2017-09-08T19-27-34.482814Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908212737848', ' ', ' ', 'FvrServlet', 313, 'CENTRAL', 'LN01CP05', '2017-09-08T19-27-34.482814Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -37626,7 +37626,7 @@ LAPS=8
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908212752833', ' ', ' ', 'FvrServlet', 314, 'LN01CP05', '2017-09-08T19-27-46.134464Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908212752833', ' ', ' ', 'FvrServlet', 314, 'CENTRAL', 'LN01CP05', '2017-09-08T19-27-46.134464Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -37766,7 +37766,7 @@ LAPS=8
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908212822850', ' ', ' ', 'FvrServlet', 315, 'LN01CP05', '2017-09-08T19-28-10.26883Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908212822850', ' ', ' ', 'FvrServlet', 315, 'CENTRAL', 'LN01CP05', '2017-09-08T19-28-10.26883Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -37906,7 +37906,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198406733507
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908212903274', ' ', ' ', 'FvrServlet', 316, 'LN01CP03', '2017-09-08T19-29-03.259696Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908212903274', ' ', ' ', 'FvrServlet', 316, 'CENTRAL', 'LN01CP03', '2017-09-08T19-29-03.259696Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -37994,7 +37994,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198401625228
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908212933213', ' ', ' ', 'FvrServlet', 317, 'LN01CP03', '2017-09-08T19-29-29.483749Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908212933213', ' ', ' ', 'FvrServlet', 317, 'CENTRAL', 'LN01CP03', '2017-09-08T19-29-29.483749Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -38082,7 +38082,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198401625228
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908213003215', ' ', ' ', 'FvrServlet', 318, 'LN01CP03', '2017-09-08T19-30-00.357116Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908213003215', ' ', ' ', 'FvrServlet', 318, 'CENTRAL', 'LN01CP03', '2017-09-08T19-30-00.357116Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -38170,7 +38170,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908213018215', ' ', ' ', 'FvrServlet', 319, 'LN01CP03', '2017-09-08T19-30-17.067413Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908213018215', ' ', ' ', 'FvrServlet', 319, 'CENTRAL', 'LN01CP03', '2017-09-08T19-30-17.067413Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -38258,7 +38258,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908213033216', ' ', ' ', 'FvrServlet', 320, 'LN01CP03', '2017-09-08T19-30-32.938312Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908213033216', ' ', ' ', 'FvrServlet', 320, 'CENTRAL', 'LN01CP03', '2017-09-08T19-30-32.938312Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -38346,7 +38346,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198401625228
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908214152754', ' ', ' ', 'FvrServlet', 321, 'LN01CP01', '2017-09-01T19-49-03.693505Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908214152754', ' ', ' ', 'FvrServlet', 321, 'CENTRAL', 'LN01CP01', '2017-09-01T19-49-03.693505Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -38432,7 +38432,7 @@ DRIVER_NAME=Marce
 NATIONALITY=Spain
 NATION_CODE=ESP
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908214307900', ' ', ' ', 'FvrServlet', 322, 'LN01CP05', '2017-09-08T19-43-03.415711Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908214307900', ' ', ' ', 'FvrServlet', 322, 'CENTRAL', 'LN01CP05', '2017-09-08T19-43-03.415711Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -38572,7 +38572,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198406733507
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908214348402', ' ', ' ', 'FvrServlet', 323, 'LN01CP03', '2017-09-08T19-43-41.604862Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908214348402', ' ', ' ', 'FvrServlet', 323, 'CENTRAL', 'LN01CP03', '2017-09-08T19-43-41.604862Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -38660,7 +38660,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198401625228
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908214427889', ' ', ' ', 'FvrServlet', 324, 'LN01CP04', '2017-09-08T19-44-21.811914Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908214427889', ' ', ' ', 'FvrServlet', 324, 'CENTRAL', 'LN01CP04', '2017-09-08T19-44-21.811914Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -38932,7 +38932,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908214437421', ' ', ' ', 'FvrServlet', 325, 'LN01CP01', '2017-09-08T19-44-28.738265Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908214437421', ' ', ' ', 'FvrServlet', 325, 'CENTRAL', 'LN01CP01', '2017-09-08T19-44-28.738265Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -39019,7 +39019,7 @@ NATIONALITY=Spain
 NATION_CODE=ESP
 AI_LEVEL=96
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908214507408', ' ', ' ', 'FvrServlet', 326, 'LN01CP01', '2017-09-08T19-44-56.582558Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908214507408', ' ', ' ', 'FvrServlet', 326, 'CENTRAL', 'LN01CP01', '2017-09-08T19-44-56.582558Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -39106,7 +39106,7 @@ NATIONALITY=Spain
 NATION_CODE=ESP
 AI_LEVEL=96
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908215007878', ' ', ' ', 'FvrServlet', 327, 'LN01CP05', '2017-09-08T19-50-02.350224Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908215007878', ' ', ' ', 'FvrServlet', 327, 'CENTRAL', 'LN01CP05', '2017-09-08T19-50-02.350224Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -39246,7 +39246,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198406733507
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908215042864', ' ', ' ', 'FvrServlet', 328, 'LN01CP04', '2017-09-08T19-50-38.534886Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908215042864', ' ', ' ', 'FvrServlet', 328, 'CENTRAL', 'LN01CP04', '2017-09-08T19-50-38.534886Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -39518,7 +39518,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=1
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908215833406', ' ', ' ', 'FvrServlet', 329, 'LN01CP03', '2017-09-08T19-58-28.962224Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908215833406', ' ', ' ', 'FvrServlet', 329, 'CENTRAL', 'LN01CP03', '2017-09-08T19-58-28.962224Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -39606,7 +39606,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198401625228
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908215848251', ' ', ' ', 'FvrServlet', 330, 'LN01CP03', '2017-09-08T19-58-48.527377Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908215848251', ' ', ' ', 'FvrServlet', 330, 'CENTRAL', 'LN01CP03', '2017-09-08T19-58-48.527377Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -39694,7 +39694,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198401625228
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908215903252', ' ', ' ', 'FvrServlet', 331, 'LN01CP03', '2017-09-08T19-58-49.791588Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908215903252', ' ', ' ', 'FvrServlet', 331, 'CENTRAL', 'LN01CP03', '2017-09-08T19-58-49.791588Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -39782,7 +39782,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198401625228
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908215948254', ' ', ' ', 'FvrServlet', 332, 'LN01CP03', '2017-09-08T19-59-41.446215Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908215948254', ' ', ' ', 'FvrServlet', 332, 'CENTRAL', 'LN01CP03', '2017-09-08T19-59-41.446215Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -39870,7 +39870,7 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908220003255', ' ', ' ', 'FvrServlet', 333, 'LN01CP03', '2017-09-08T20-00-02.071054Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908220003255', ' ', ' ', 'FvrServlet', 333, 'CENTRAL', 'LN01CP03', '2017-09-08T20-00-02.071054Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -39960,7 +39960,7 @@ LAPS=8
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908220118259', ' ', ' ', 'FvrServlet', 334, 'LN01CP03', '2017-09-08T20-01-15.609542Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908220118259', ' ', ' ', 'FvrServlet', 334, 'CENTRAL', 'LN01CP03', '2017-09-08T20-01-15.609542Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -40228,7 +40228,7 @@ DRIVER_NAME=Romain Grosjean
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908220408050', ' ', ' ', 'FvrServlet', 335, 'LN01CP05', '2017-09-08T20-04-02.153444Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908220408050', ' ', ' ', 'FvrServlet', 335, 'CENTRAL', 'LN01CP05', '2017-09-08T20-04-02.153444Z_file.snd', '
 [RACE]
 TRACK=ks_barcelona
 CONFIG_TRACK=layout_gp
@@ -40368,7 +40368,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198406733507
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908220512913', ' ', ' ', 'FvrServlet', 336, 'LN01CP04', '2017-09-08T20-05-05.963796Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908220512913', ' ', ' ', 'FvrServlet', 336, 'CENTRAL', 'LN01CP04', '2017-09-08T20-05-05.963796Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -40640,7 +40640,7 @@ PASSWORD=F0rmula.vr
 GUID=76561198400832748
 ACTIVE=0
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908220948428', ' ', ' ', 'FvrServlet', 337, 'LN01CP03', '2017-09-08T20-09-45.420925Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908220948428', ' ', ' ', 'FvrServlet', 337, 'CENTRAL', 'LN01CP03', '2017-09-08T20-09-45.420925Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -40908,7 +40908,7 @@ DRIVER_NAME=Romain Grosjean
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908221103260', ' ', ' ', 'FvrServlet', 338, 'LN01CP03', '2017-09-08T20-10-56.202835Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908221103260', ' ', ' ', 'FvrServlet', 338, 'CENTRAL', 'LN01CP03', '2017-09-08T20-10-56.202835Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -41176,7 +41176,7 @@ DRIVER_NAME=Romain Grosjean
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908221218281', ' ', ' ', 'FvrServlet', 339, 'LN01CP03', '2017-09-08T20-12-18.250294Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908221218281', ' ', ' ', 'FvrServlet', 339, 'CENTRAL', 'LN01CP03', '2017-09-08T20-12-18.250294Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -41442,7 +41442,147 @@ TYPE=1
 DURATION_MINUTES=0
 SPAWN_SET=PIT
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908221233266', ' ', ' ', 'FvrServlet', 340, 'LN01CP03', '2017-09-08T20-12-30.632598Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909182620124', ' ', ' ', 'FvrServlet', 349, 'CENTRAL', 'LN01CP05', '2017-09-09T16-26-15.642491Z_file.snd', '
+[RACE]
+TRACK=ks_barcelona
+CONFIG_TRACK=layout_gp
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_250617-185041_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=34
+
+[WEATHER]
+NAME=3_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=carbon
+DRIVER_NAME=Alber_gorras
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=ks_lamborghini_huracan_st
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=0_racing_63
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_2]
+MODEL=ks_lamborghini_huracan_st
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=racing_18
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_3]
+MODEL=ks_lamborghini_huracan_st
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=racing_23
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_4]
+MODEL=ks_lamborghini_huracan_st
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=racing_26
+DRIVER_NAME=Jordon Ordonez
+NATIONALITY=
+NATION_CODE=ESP
+
+[CAR_5]
+MODEL=ks_lamborghini_huracan_st
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=racing_28
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[SESSION_0]
+STARTING_POSITION=6
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Alber_gorras
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198406733507
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908221233266', ' ', ' ', 'FvrServlet', 340, 'CENTRAL', 'LN01CP03', '2017-09-08T20-12-30.632598Z_file.snd', '
 [RACE]
 TRACK=indi
 CONFIG_TRACK=
@@ -41710,7 +41850,7 @@ LAPS=8
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908221248267', ' ', ' ', 'FvrServlet', 341, 'LN01CP03', '2017-09-08T20-12-45.351053Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908221248267', ' ', ' ', 'FvrServlet', 341, 'CENTRAL', 'LN01CP03', '2017-09-08T20-12-45.351053Z_file.snd', '
 [RACE]
 TRACK=monza
 CONFIG_TRACK=
@@ -41978,7 +42118,7 @@ LAPS=8
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908221303268', ' ', ' ', 'FvrServlet', 342, 'LN01CP03', '2017-09-08T20-13-00.728678Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908221303268', ' ', ' ', 'FvrServlet', 342, 'CENTRAL', 'LN01CP03', '2017-09-08T20-13-00.728678Z_file.snd', '
 [RACE]
 TRACK=monza
 CONFIG_TRACK=
@@ -42246,7 +42386,7 @@ LAPS=8
 DURATION_MINUTES=0
 SPAWN_SET=START
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908221333270', ' ', ' ', 'FvrServlet', 343, 'LN01CP03', '2017-09-08T20-13-21.496173Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908221333270', ' ', ' ', 'FvrServlet', 343, 'CENTRAL', 'LN01CP03', '2017-09-08T20-13-21.496173Z_file.snd', '
 [RACE]
 TRACK=monza
 CONFIG_TRACK=
@@ -42514,7 +42654,7 @@ DRIVER_NAME=Jolyon Palmer
 NATIONALITY=
 NATION_CODE=
 ', '');
-INSERT INTO "T_AC_activityCockpits" VALUES ('170908222703457', ' ', ' ', 'FvrServlet', 344, 'LN01CP03', '2017-09-08T20-26-52.15172Z_file.snd', '
+INSERT INTO "T_AC_activityCockpits" VALUES ('170908222703457', ' ', ' ', 'FvrServlet', 344, 'CENTRAL', 'LN01CP03', '2017-09-08T20-26-52.15172Z_file.snd', '
 [RACE]
 TRACK=monza
 CONFIG_TRACK=
@@ -42781,6 +42921,16921 @@ SKIN=07-renault-y-palmer
 DRIVER_NAME=Jolyon Palmer
 NATIONALITY=
 NATION_CODE=
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909182428070', ' ', ' ', 'FvrServlet', 345, 'CENTRAL', 'LN01CP02', '2017-09-08T16-25-47.243038Z_file.snd', '
+[RACE]
+TRACK=valencia
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_250617-185041_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=34
+
+[WEATHER]
+NAME=8_clear2
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Davichu
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[SESSION_0]
+NAME=Practice
+TYPE=1
+DURATION_MINUTES=0
+SPAWN_SET=PIT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Davichu
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400586536
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909182510291', ' ', ' ', 'FvrServlet', 346, 'CENTRAL', 'LN01CP06', '2017-09-09T16-25-04.345606Z_file.snd', '
+[RACE]
+TRACK=ks_barcelona
+CONFIG_TRACK=layout_gp
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_250617-185041_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=34
+
+[WEATHER]
+NAME=3_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=carbon
+DRIVER_NAME=Jesus
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[SESSION_0]
+NAME=Practice
+TYPE=1
+DURATION_MINUTES=0
+SPAWN_SET=PIT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jesus
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198420606252
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909182540028', ' ', ' ', 'FvrServlet', 347, 'CENTRAL', 'LN01CP06', '2017-09-09T16-25-28.351313Z_file.snd', '
+[RACE]
+TRACK=ks_barcelona
+CONFIG_TRACK=layout_gp
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_250617-185041_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=34
+
+[WEATHER]
+NAME=3_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=carbon
+DRIVER_NAME=Jesus
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[SESSION_0]
+NAME=Practice
+TYPE=1
+DURATION_MINUTES=0
+SPAWN_SET=PIT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jesus
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198420606252
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909182605279', ' ', ' ', 'FvrServlet', 348, 'CENTRAL', 'LN01CP05', '2017-09-09T16-25-52.290051Z_file.snd', '
+[RACE]
+TRACK=ks_barcelona
+CONFIG_TRACK=layout_gp
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_250617-185041_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=34
+
+[WEATHER]
+NAME=3_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=carbon
+DRIVER_NAME=Alber_gorras
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=ks_lamborghini_huracan_st
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=0_racing_63
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_2]
+MODEL=ks_lamborghini_huracan_st
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=racing_18
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_3]
+MODEL=ks_lamborghini_huracan_st
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=racing_23
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_4]
+MODEL=ks_lamborghini_huracan_st
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=racing_26
+DRIVER_NAME=Jordon Ordonez
+NATIONALITY=
+NATION_CODE=ESP
+
+[CAR_5]
+MODEL=ks_lamborghini_huracan_st
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=racing_28
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[SESSION_0]
+STARTING_POSITION=6
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Alber_gorras
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198406733507
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909182651329', ' ', ' ', 'FvrServlet', 350, 'CENTRAL', 'LN01CP04', '2017-09-09T16-26-50.795691Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909182721127', ' ', ' ', 'FvrServlet', 351, 'CENTRAL', 'LN01CP04', '2017-09-09T16-27-14.064445Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909182745660', ' ', ' ', 'FvrServlet', 352, 'CENTRAL', 'LN01CP03', '2017-09-09T16-27-39.323615Z_file.snd', '
+[RACE]
+TRACK=monza
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=80
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=33
+ROAD=43
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Bonilla
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=09-mclaren-f-alonso
+DRIVER_NAME=Arman
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909182815459', ' ', ' ', 'FvrServlet', 353, 'CENTRAL', 'LN01CP03', '2017-09-09T16-28-01.872528Z_file.snd', '
+[RACE]
+TRACK=monza
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=33
+ROAD=43
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Bonilla
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=09-mclaren-f-alonso
+DRIVER_NAME=Arman
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909182912665', ' ', ' ', 'FvrServlet', 354, 'CENTRAL', 'LN01CP02', '2017-09-09T16-29-02.399536Z_file.snd', '
+[RACE]
+TRACK=valencia
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_250617-185041_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=34
+
+[WEATHER]
+NAME=8_clear2
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Davichu
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[SESSION_0]
+NAME=Practice
+TYPE=1
+DURATION_MINUTES=0
+SPAWN_SET=PIT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Davichu
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400586536
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909182927651', ' ', ' ', 'FvrServlet', 355, 'CENTRAL', 'LN01CP02', '2017-09-09T16-29-28.083064Z_file.snd', '
+[RACE]
+TRACK=valencia
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_250617-185041_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=34
+
+[WEATHER]
+NAME=8_clear2
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Davichu
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[SESSION_0]
+NAME=Practice
+TYPE=1
+DURATION_MINUTES=0
+SPAWN_SET=PIT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Davichu
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400586536
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909182942652', ' ', ' ', 'FvrServlet', 356, 'CENTRAL', 'LN01CP02', '2017-09-09T16-29-29.239568Z_file.snd', '
+[RACE]
+TRACK=valencia
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_250617-185041_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=26
+ROAD=34
+
+[WEATHER]
+NAME=8_clear2
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Davichu
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[SESSION_0]
+NAME=Practice
+TYPE=1
+DURATION_MINUTES=0
+SPAWN_SET=PIT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Davichu
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400586536
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909184636194', ' ', ' ', 'FvrServlet', 357, 'CENTRAL', 'LN01CP04', '2017-09-09T16-46-29.767078Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909184736135', ' ', ' ', 'FvrServlet', 358, 'CENTRAL', 'LN01CP04', '2017-09-09T16-47-30.442938Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909184821122', ' ', ' ', 'FvrServlet', 359, 'CENTRAL', 'LN01CP04', '2017-09-09T16-48-14.354276Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909184851108', ' ', ' ', 'FvrServlet', 360, 'CENTRAL', 'LN01CP04', '2017-09-09T16-48-42.119999Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909184906109', ' ', ' ', 'FvrServlet', 361, 'CENTRAL', 'LN01CP04', '2017-09-09T16-49-03.711689Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909184921109', ' ', ' ', 'FvrServlet', 362, 'CENTRAL', 'LN01CP04', '2017-09-09T16-49-17.743883Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909184936110', ' ', ' ', 'FvrServlet', 363, 'CENTRAL', 'LN01CP04', '2017-09-09T16-49-32.023567Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=black
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909184951127', ' ', ' ', 'FvrServlet', 364, 'CENTRAL', 'LN01CP04', '2017-09-09T16-49-44.592161Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909185021113', ' ', ' ', 'FvrServlet', 365, 'CENTRAL', 'LN01CP04', '2017-09-09T16-50-08.968846Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909185151118', ' ', ' ', 'FvrServlet', 366, 'CENTRAL', 'LN01CP04', '2017-09-09T16-51-44.834081Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909185206119', ' ', ' ', 'FvrServlet', 367, 'CENTRAL', 'LN01CP04', '2017-09-09T16-52-05.963926Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909185221120', ' ', ' ', 'FvrServlet', 368, 'CENTRAL', 'LN01CP04', '2017-09-09T16-52-15.884492Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=98
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909185236120', ' ', ' ', 'FvrServlet', 369, 'CENTRAL', 'LN01CP04', '2017-09-09T16-52-35.414731Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=80
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Jorg
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jere Zanetti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marcela Walther
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Conrad Giugovaz
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=19
+NAME=Quick Race
+TYPE=3
+LAPS=10
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909185436299', ' ', ' ', 'FvrServlet', 370, 'CENTRAL', 'LN01CP04', '2017-09-09T16-54-26.437458Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=19
+AI_LEVEL=80
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Culeja6
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Robert Cole
+NATIONALITY=
+NATION_CODE=SCT
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Martin Fleming
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Dewayne Maupin
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=08-haas-r-grosjean
+DRIVER_NAME=Romain Grosjean
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+NAME=Qualifying
+TYPE=2
+DURATION_MINUTES=5
+SPAWN_SET=PIT
+
+[SESSION_1]
+NAME=Race
+TYPE=3
+LAPS=6
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909190800704', ' ', ' ', 'FvrServlet', 371, 'CENTRAL', 'LN01CP03', '2017-09-09T17-07-57.873877Z_file.snd', '
+[RACE]
+TRACK=monza
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=33
+ROAD=43
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Bonilla
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=09-mclaren-f-alonso
+DRIVER_NAME=Arman
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909190815502', ' ', ' ', 'FvrServlet', 372, 'CENTRAL', 'LN01CP03', '2017-09-09T17-08-07.315699Z_file.snd', '
+[RACE]
+TRACK=monza
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=33
+ROAD=43
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Bonilla
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=09-mclaren-f-alonso
+DRIVER_NAME=Arman
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909190900505', ' ', ' ', 'FvrServlet', 373, 'CENTRAL', 'LN01CP03', '2017-09-09T17-08-47.608374Z_file.snd', '
+[RACE]
+TRACK=monza
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=33
+ROAD=43
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=09-mclaren-f-alonso
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909191636293', ' ', ' ', 'FvrServlet', 374, 'CENTRAL', 'LN01CP04', '2017-09-09T17-16-33.817565Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=80
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Jorg
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Culeja6
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Robert Cole
+NATIONALITY=
+NATION_CODE=SCT
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Martin Fleming
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Dewayne Maupin
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=08-haas-r-grosjean
+DRIVER_NAME=Romain Grosjean
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+NAME=Qualifying
+TYPE=2
+DURATION_MINUTES=5
+SPAWN_SET=PIT
+
+[SESSION_1]
+NAME=Race
+TYPE=3
+LAPS=6
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909191706138', ' ', ' ', 'FvrServlet', 375, 'CENTRAL', 'LN01CP04', '2017-09-09T17-16-59.599101Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=80
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Culeja6
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Robert Cole
+NATIONALITY=
+NATION_CODE=SCT
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Martin Fleming
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Dewayne Maupin
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=08-haas-r-grosjean
+DRIVER_NAME=Romain Grosjean
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+NAME=Qualifying
+TYPE=2
+DURATION_MINUTES=5
+SPAWN_SET=PIT
+
+[SESSION_1]
+NAME=Race
+TYPE=3
+LAPS=6
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Culeja6
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909193145691', ' ', ' ', 'FvrServlet', 376, 'CENTRAL', 'LN01CP03', '2017-09-09T17-31-41.200238Z_file.snd', '
+[RACE]
+TRACK=monza
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=33
+ROAD=43
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=09-mclaren-f-alonso
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909193221303', ' ', ' ', 'FvrServlet', 377, 'CENTRAL', 'LN01CP04', '2017-09-09T17-32-15.504242Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=80
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Culeja6
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Robert Cole
+NATIONALITY=
+NATION_CODE=SCT
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Martin Fleming
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Dewayne Maupin
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=08-haas-r-grosjean
+DRIVER_NAME=Romain Grosjean
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+NAME=Qualifying
+TYPE=2
+DURATION_MINUTES=5
+SPAWN_SET=PIT
+
+[SESSION_1]
+NAME=Race
+TYPE=3
+LAPS=6
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Culeja6
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909195238563', ' ', ' ', 'FvrServlet', 378, 'CENTRAL', 'LN01CP03', '2017-09-09T17-52-30.054119Z_file.snd', '
+[RACE]
+TRACK=monza
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=33
+ROAD=43
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=09-mclaren-f-alonso
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909195253360', ' ', ' ', 'FvrServlet', 379, 'CENTRAL', 'LN01CP03', '2017-09-09T17-52-52.994891Z_file.snd', '
+[RACE]
+TRACK=monza
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=33
+ROAD=43
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=09-mclaren-f-alonso
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909195308346', ' ', ' ', 'FvrServlet', 380, 'CENTRAL', 'LN01CP03', '2017-09-09T17-53-07.274934Z_file.snd', '
+[RACE]
+TRACK=monza
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=33
+ROAD=43
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=09-mclaren-f-alonso
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909195353348', ' ', ' ', 'FvrServlet', 381, 'CENTRAL', 'LN01CP03', '2017-09-09T17-53-47.012616Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=33
+ROAD=43
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=09-mclaren-f-alonso
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909195408380', ' ', ' ', 'FvrServlet', 382, 'CENTRAL', 'LN01CP03', '2017-09-09T17-53-55.773928Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=33
+ROAD=43
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909195423350', ' ', ' ', 'FvrServlet', 383, 'CENTRAL', 'LN01CP03', '2017-09-09T17-54-23.388675Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=90
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909195438351', ' ', ' ', 'FvrServlet', 384, 'CENTRAL', 'LN01CP03', '2017-09-09T17-54-37.524055Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=90
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909195453352', ' ', ' ', 'FvrServlet', 385, 'CENTRAL', 'LN01CP03', '2017-09-09T17-54-45.929571Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=90
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=90
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909195523353', ' ', ' ', 'FvrServlet', 386, 'CENTRAL', 'LN01CP03', '2017-09-09T17-55-19.880177Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=90
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=90
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909195553355', ' ', ' ', 'FvrServlet', 387, 'CENTRAL', 'LN01CP03', '2017-09-09T17-55-40.635618Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=90
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909195608356', ' ', ' ', 'FvrServlet', 388, 'CENTRAL', 'LN01CP03', '2017-09-09T17-55-57.624715Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=90
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909195623357', ' ', ' ', 'FvrServlet', 389, 'CENTRAL', 'LN01CP03', '2017-09-09T17-56-20.180002Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=1
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Viktor Abramov
+NATIONALITY=
+NATION_CODE=RUS
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909195638436', ' ', ' ', 'FvrServlet', 390, 'CENTRAL', 'LN01CP03', '2017-09-09T17-56-29.376943Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Steven Brewer
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Donato Border
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Max Rowe
+NATIONALITY=
+NATION_CODE=WLS
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shel Borchard
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Koos Larsen
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Robert Cole
+NATIONALITY=
+NATION_CODE=SCT
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eckbert Zitnik
+NATIONALITY=
+NATION_CODE=SVN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Dewayne Maupin
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Berry Gomes
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Chris Smith
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Ronald Cavey
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909201408915', ' ', ' ', 'FvrServlet', 391, 'CENTRAL', 'LN01CP03', '2017-09-09T18-14-05.945502Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Steven Brewer
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Donato Border
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Max Rowe
+NATIONALITY=
+NATION_CODE=WLS
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shel Borchard
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Koos Larsen
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Robert Cole
+NATIONALITY=
+NATION_CODE=SCT
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eckbert Zitnik
+NATIONALITY=
+NATION_CODE=SVN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Dewayne Maupin
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Berry Gomes
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Chris Smith
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Ronald Cavey
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909201453370', ' ', ' ', 'FvrServlet', 392, 'CENTRAL', 'LN01CP03', '2017-09-09T18-14-40.023255Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ks_porsche_919_hybrid_2015
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=00_lms_19
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Steven Brewer
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Donato Border
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Max Rowe
+NATIONALITY=
+NATION_CODE=WLS
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shel Borchard
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Koos Larsen
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Robert Cole
+NATIONALITY=
+NATION_CODE=SCT
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eckbert Zitnik
+NATIONALITY=
+NATION_CODE=SVN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Dewayne Maupin
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Berry Gomes
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Chris Smith
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Ronald Cavey
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909201508371', ' ', ' ', 'FvrServlet', 393, 'CENTRAL', 'LN01CP03', '2017-09-09T18-15-06.562266Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01_lms_01
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Steven Brewer
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Donato Border
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Max Rowe
+NATIONALITY=
+NATION_CODE=WLS
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shel Borchard
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Koos Larsen
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Robert Cole
+NATIONALITY=
+NATION_CODE=SCT
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eckbert Zitnik
+NATIONALITY=
+NATION_CODE=SVN
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Truman Fishman
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Dewayne Maupin
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Berry Gomes
+NATIONALITY=
+NATION_CODE=CAN
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Chris Smith
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Ronald Cavey
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Olavi Virtanen
+NATIONALITY=
+NATION_CODE=FIN
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909201538388', ' ', ' ', 'FvrServlet', 394, 'CENTRAL', 'LN01CP03', '2017-09-09T18-15-38.045502Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=84
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01_lms_01
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Heriberto Herbert
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_2]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Andrew Castillo
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_3]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_4]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_5]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_6]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_7]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Renato Ramires
+NATIONALITY=
+NATION_CODE=MEX
+
+[CAR_8]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Aiden Damiani
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_9]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Orlando Gallardi
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_10]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_11]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Brenton Gaddis
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_12]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[CAR_13]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_14]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Matti Laine
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_15]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shel Borchard
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_16]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_17]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Chris Smith
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_18]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shaw Ellis
+NATIONALITY=
+NATION_CODE=USA
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909201553374', ' ', ' ', 'FvrServlet', 395, 'CENTRAL', 'LN01CP03', '2017-09-09T18-15-39.549421Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=84
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01_lms_01
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Heriberto Herbert
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_2]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Andrew Castillo
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_3]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_4]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_5]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_6]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_7]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Renato Ramires
+NATIONALITY=
+NATION_CODE=MEX
+
+[CAR_8]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Aiden Damiani
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_9]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Orlando Gallardi
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_10]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_11]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Brenton Gaddis
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_12]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[CAR_13]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_14]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Matti Laine
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_15]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shel Borchard
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_16]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_17]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Chris Smith
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_18]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shaw Ellis
+NATIONALITY=
+NATION_CODE=USA
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909202423556', ' ', ' ', 'FvrServlet', 396, 'CENTRAL', 'LN01CP03', '2017-09-09T18-24-20.739722Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=84
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01_lms_01
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Heriberto Herbert
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_2]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Andrew Castillo
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_3]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_4]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_5]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_6]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_7]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Renato Ramires
+NATIONALITY=
+NATION_CODE=MEX
+
+[CAR_8]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Aiden Damiani
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_9]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Orlando Gallardi
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_10]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_11]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Brenton Gaddis
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_12]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[CAR_13]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_14]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Matti Laine
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_15]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shel Borchard
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_16]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_17]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Chris Smith
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_18]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shaw Ellis
+NATIONALITY=
+NATION_CODE=USA
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909202438385', ' ', ' ', 'FvrServlet', 397, 'CENTRAL', 'LN01CP03', '2017-09-09T18-24-37.680393Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=84
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01_lms_01
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Heriberto Herbert
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_2]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Andrew Castillo
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_3]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_4]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_5]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_6]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_7]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Renato Ramires
+NATIONALITY=
+NATION_CODE=MEX
+
+[CAR_8]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Aiden Damiani
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_9]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Orlando Gallardi
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_10]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_11]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Brenton Gaddis
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_12]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[CAR_13]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_14]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Matti Laine
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_15]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shel Borchard
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_16]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_17]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Chris Smith
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_18]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shaw Ellis
+NATIONALITY=
+NATION_CODE=USA
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909202508386', ' ', ' ', 'FvrServlet', 398, 'CENTRAL', 'LN01CP03', '2017-09-09T18-25-06.952439Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01_lms_01
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Heriberto Herbert
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_2]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Andrew Castillo
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_3]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_4]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_5]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_6]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_7]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Renato Ramires
+NATIONALITY=
+NATION_CODE=MEX
+
+[CAR_8]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Aiden Damiani
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_9]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Orlando Gallardi
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_10]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_11]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Brenton Gaddis
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_12]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[CAR_13]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_14]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Matti Laine
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_15]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shel Borchard
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_16]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_17]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Chris Smith
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_18]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shaw Ellis
+NATIONALITY=
+NATION_CODE=USA
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909202523371', ' ', ' ', 'FvrServlet', 399, 'CENTRAL', 'LN01CP03', '2017-09-09T18-25-15.216376Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Heriberto Herbert
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_2]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Andrew Castillo
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_3]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_4]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_5]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_6]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_7]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Renato Ramires
+NATIONALITY=
+NATION_CODE=MEX
+
+[CAR_8]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Aiden Damiani
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_9]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Orlando Gallardi
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_10]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_11]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Brenton Gaddis
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_12]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[CAR_13]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_14]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Matti Laine
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_15]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shel Borchard
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_16]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_17]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Chris Smith
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_18]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shaw Ellis
+NATIONALITY=
+NATION_CODE=USA
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=8
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909202553373', ' ', ' ', 'FvrServlet', 400, 'CENTRAL', 'LN01CP03', '2017-09-09T18-25-41.94729Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=98
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Heriberto Herbert
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_2]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Andrew Castillo
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_3]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_4]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_5]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_6]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_7]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Renato Ramires
+NATIONALITY=
+NATION_CODE=MEX
+
+[CAR_8]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Aiden Damiani
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_9]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Orlando Gallardi
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_10]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_11]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Brenton Gaddis
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_12]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[CAR_13]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_14]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Matti Laine
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_15]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shel Borchard
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_16]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_17]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Chris Smith
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_18]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shaw Ellis
+NATIONALITY=
+NATION_CODE=USA
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=5
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909202608389', ' ', ' ', 'FvrServlet', 401, 'CENTRAL', 'LN01CP03', '2017-09-09T18-25-53.883809Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=89
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+AI_LEVEL=96
+
+[CAR_1]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Heriberto Herbert
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_2]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Andrew Castillo
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_3]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kurtis Nadeau
+NATIONALITY=
+NATION_CODE=ARG
+
+[CAR_4]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Jaymes Bray
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_5]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_6]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Juhani Korhonen
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_7]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Renato Ramires
+NATIONALITY=
+NATION_CODE=MEX
+
+[CAR_8]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Aiden Damiani
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_9]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Orlando Gallardi
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_10]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_11]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Brenton Gaddis
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_12]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joy Vasquez
+NATIONALITY=
+NATION_CODE=PRT
+
+[CAR_13]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Carlo Giannini
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_14]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Matti Laine
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_15]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shel Borchard
+NATIONALITY=
+NATION_CODE=IRL
+
+[CAR_16]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Joaquin Steinberg
+NATIONALITY=
+NATION_CODE=AUT
+
+[CAR_17]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Chris Smith
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_18]
+MODEL=ks_porsche_919_hybrid_2016
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=00_lms_02
+DRIVER_NAME=Shaw Ellis
+NATIONALITY=
+NATION_CODE=USA
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=5
+DURATION_MINUTES=0
+SPAWN_SET=START
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909202623375', ' ', ' ', 'FvrServlet', 402, 'CENTRAL', 'LN01CP03', '2017-09-09T18-26-19.871415Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=89
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=5
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Matti Laine
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Max Rowe
+NATIONALITY=
+NATION_CODE=WLS
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Burt Tobin
+NATIONALITY=
+NATION_CODE=DNK
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Mark Schroeter
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marquis Morrill
+NATIONALITY=
+NATION_CODE=COL
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Dean Walther
+NATIONALITY=
+NATION_CODE=NZL
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jean Sauvage
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Luciano Molina
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Federico Jimenez
+NATIONALITY=
+NATION_CODE=MEX
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lauren Beaty
+NATIONALITY=
+NATION_CODE=IMN
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909203308460', ' ', ' ', 'FvrServlet', 403, 'CENTRAL', 'LN01CP03', '2017-09-09T18-33-07.388799Z_file.snd', '
+[RACE]
+TRACK=indi
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=89
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=5
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Matti Laine
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Max Rowe
+NATIONALITY=
+NATION_CODE=WLS
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Burt Tobin
+NATIONALITY=
+NATION_CODE=DNK
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Mark Schroeter
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marquis Morrill
+NATIONALITY=
+NATION_CODE=COL
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Dean Walther
+NATIONALITY=
+NATION_CODE=NZL
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jean Sauvage
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Luciano Molina
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Federico Jimenez
+NATIONALITY=
+NATION_CODE=MEX
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lauren Beaty
+NATIONALITY=
+NATION_CODE=IMN
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909203923559', ' ', ' ', 'FvrServlet', 404, 'CENTRAL', 'LN01CP03', '2017-09-09T18-39-09.377489Z_file.snd', '
+[RACE]
+TRACK=yas_marina_circuit-day
+CONFIG_TRACK=
+MODEL=ferrari_f80
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=89
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=5
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=rosso_corsa
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Matti Laine
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Max Rowe
+NATIONALITY=
+NATION_CODE=WLS
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Burt Tobin
+NATIONALITY=
+NATION_CODE=DNK
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Mark Schroeter
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marquis Morrill
+NATIONALITY=
+NATION_CODE=COL
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Dean Walther
+NATIONALITY=
+NATION_CODE=NZL
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jean Sauvage
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Luciano Molina
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Federico Jimenez
+NATIONALITY=
+NATION_CODE=MEX
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lauren Beaty
+NATIONALITY=
+NATION_CODE=IMN
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909203938388', ' ', ' ', 'FvrServlet', 405, 'CENTRAL', 'LN01CP03', '2017-09-09T18-39-34.809041Z_file.snd', '
+[RACE]
+TRACK=yas_marina_circuit-day
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=89
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=5
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Michael Schumacher
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Erlend Braband
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_3]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Matti Laine
+NATIONALITY=
+NATION_CODE=FIN
+
+[CAR_4]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Max Rowe
+NATIONALITY=
+NATION_CODE=WLS
+
+[CAR_5]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Burt Tobin
+NATIONALITY=
+NATION_CODE=DNK
+
+[CAR_6]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Eleuterio Tifft
+NATIONALITY=
+NATION_CODE=BRA
+
+[CAR_7]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Shaun Akiyama
+NATIONALITY=
+NATION_CODE=JPN
+
+[CAR_8]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Mark Schroeter
+NATIONALITY=
+NATION_CODE=DEU
+
+[CAR_9]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Marquis Morrill
+NATIONALITY=
+NATION_CODE=COL
+
+[CAR_10]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lore Van Ophoven
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_11]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Dean Walther
+NATIONALITY=
+NATION_CODE=NZL
+
+[CAR_12]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Jean Sauvage
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_13]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Giorgio Uberti
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_14]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Luciano Molina
+NATIONALITY=
+NATION_CODE=ITA
+
+[CAR_15]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Harlan Cowden
+NATIONALITY=
+NATION_CODE=GBR
+
+[CAR_16]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Federico Jimenez
+NATIONALITY=
+NATION_CODE=MEX
+
+[CAR_17]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Kendal Buckley
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_18]
+MODEL=ferrari_f80
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=rosso_corsa
+DRIVER_NAME=Lauren Beaty
+NATIONALITY=
+NATION_CODE=IMN
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909204008405', ' ', ' ', 'FvrServlet', 406, 'CENTRAL', 'LN01CP03', '2017-09-09T18-40-00.985282Z_file.snd', '
+[RACE]
+TRACK=yas_marina_circuit-day
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=80
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=5
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Shaw Ellis
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Leon Schuhart
+NATIONALITY=
+NATION_CODE=COL
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=08-haas-r-grosjean
+DRIVER_NAME=Romain Grosjean
+NATIONALITY=
+NATION_CODE=
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909210253607', ' ', ' ', 'FvrServlet', 407, 'CENTRAL', 'LN01CP03', '2017-09-09T19-02-49.990614Z_file.snd', '
+[RACE]
+TRACK=yas_marina_circuit-day
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+CARS=19
+AI_LEVEL=80
+FIXED_SETUP=0
+PENALTIES=0
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+
+[REPLAY]
+FILENAME=AC_060817-214529_R_rss_formula_hybrid_2017_s1_ks_barcelona_layout_gp
+ACTIVE=0
+
+[LIGHTING]
+SUN_ANGLE=-48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[DYNAMIC_TRACK]
+SESSION_START=100
+SESSION_TRANSFER=100
+RANDOMNESS=0
+LAP_GAIN=1
+PRESET=5
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=36
+ROAD=47
+
+[WEATHER]
+NAME=4_mid_clear
+
+[BENCHMARK]
+ACTIVE=0
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[HEADER]
+VERSION=1
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Lorvader
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198401625228
+ACTIVE=0
+
+[SESSION_0]
+STARTING_POSITION=9
+NAME=Quick Race
+TYPE=3
+LAPS=5
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lorvader
+NATIONALITY=Spain
+NATION_CODE=ESP
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Shaw Ellis
+NATIONALITY=
+NATION_CODE=USA
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Leon Schuhart
+NATIONALITY=
+NATION_CODE=COL
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Daniel Ricciardo
+NATIONALITY=
+NATION_CODE=
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Jazmine Hermanson
+NATIONALITY=
+NATION_CODE=SWE
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=08-haas-r-grosjean
+DRIVER_NAME=Romain Grosjean
+NATIONALITY=
+NATION_CODE=
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909210536382', ' ', ' ', 'FvrServlet', 408, 'CENTRAL', 'LN01CP04', '2017-09-09T19-05-34.339319Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=80
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Culeja6
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Robert Cole
+NATIONALITY=
+NATION_CODE=SCT
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Martin Fleming
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Dewayne Maupin
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=08-haas-r-grosjean
+DRIVER_NAME=Romain Grosjean
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+NAME=Qualifying
+TYPE=2
+DURATION_MINUTES=5
+SPAWN_SET=PIT
+
+[SESSION_1]
+NAME=Race
+TYPE=3
+LAPS=6
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Culeja6
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909210551211', ' ', ' ', 'FvrServlet', 409, 'CENTRAL', 'LN01CP04', '2017-09-09T19-05-44.157167Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=80
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Hopery
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Robert Cole
+NATIONALITY=
+NATION_CODE=SCT
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Martin Fleming
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Dewayne Maupin
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=08-haas-r-grosjean
+DRIVER_NAME=Romain Grosjean
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+NAME=Qualifying
+TYPE=2
+DURATION_MINUTES=5
+SPAWN_SET=PIT
+
+[SESSION_1]
+NAME=Race
+TYPE=3
+LAPS=6
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Hopery
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909211251218', ' ', ' ', 'FvrServlet', 410, 'CENTRAL', 'LN01CP04', '2017-09-09T19-12-37.491121Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=80
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Hopery
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Robert Cole
+NATIONALITY=
+NATION_CODE=SCT
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Martin Fleming
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Dewayne Maupin
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=08-haas-r-grosjean
+DRIVER_NAME=Romain Grosjean
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+NAME=Qualifying
+TYPE=2
+DURATION_MINUTES=5
+SPAWN_SET=PIT
+
+[SESSION_1]
+NAME=Race
+TYPE=3
+LAPS=6
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Hopery
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909211336220', ' ', ' ', 'FvrServlet', 411, 'CENTRAL', 'LN01CP04', '2017-09-09T19-13-22.733277Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=80
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Hopery
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Robert Cole
+NATIONALITY=
+NATION_CODE=SCT
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Martin Fleming
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Dewayne Maupin
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=08-haas-r-grosjean
+DRIVER_NAME=Romain Grosjean
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+NAME=Qualifying
+TYPE=2
+DURATION_MINUTES=5
+SPAWN_SET=PIT
+
+[SESSION_1]
+NAME=Race
+TYPE=3
+LAPS=6
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Hopery
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=1
+', '');
+INSERT INTO "T_AC_activityCockpits" VALUES ('170909212006398', ' ', ' ', 'FvrServlet', 412, 'CENTRAL', 'LN01CP04', '2017-09-09T19-20-03.319423Z_file.snd', '
+[RACE]
+TRACK=singapore
+CONFIG_TRACK=
+MODEL=rss_formula_hybrid_2017_s1
+CARS=1
+AI_LEVEL=80
+DRIFT_MODE=0
+FIXED_SETUP=0
+PENALTIES=0
+MODEL_CONFIG=
+
+[GHOST_CAR]
+RECORDING=0
+PLAYING=0
+SECONDS_ADVANTAGE=0
+LOAD=1
+FILE=
+ENABLED=0
+
+[LIGHTING]
+SUN_ANGLE=48
+TIME_MULT=1
+CLOUD_SPEED=0.2
+
+[GROOVE]
+VIRTUAL_LAPS=10
+MAX_LAPS=30
+STARTING_LAPS=0
+
+[LAP_INVALIDATOR]
+ALLOWED_TYRES_OUT=-1
+
+[TEMPERATURE]
+AMBIENT=31
+ROAD=42
+
+[DYNAMIC_TRACK]
+PRESET=5
+SESSION_START=100
+RANDOMNESS=0
+LAP_GAIN=1
+SESSION_TRANSFER=100
+
+[REPLAY]
+ACTIVE=0
+FILENAME=AC_020917-210401_R_rss_formula_hybrid_2017_s1_monza_
+
+[WEATHER]
+NAME=4_mid_clear
+
+[WIND]
+SPEED_KMH_MIN=2
+SPEED_KMH_MAX=40
+DIRECTION_DEG=-1
+
+[BENCHMARK]
+ACTIVE=0
+
+[HEADER]
+VERSION=1
+
+[CAR_0]
+MODEL=-
+MODEL_CONFIG=
+SKIN=03-redbull-d-ricciardo
+DRIVER_NAME=Hopery
+NATIONALITY=Spain
+NATION_CODE=ESP
+SETUP=
+
+[CAR_1]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-l-hamilton
+DRIVER_NAME=Lewis Hamilton
+NATIONALITY=
+NATION_CODE=
+
+[CAR_2]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=01-mercedes-v-bottas
+DRIVER_NAME=Valtteri Bottas
+NATIONALITY=
+NATION_CODE=
+
+[CAR_3]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=010-mcgregor-motors
+DRIVER_NAME=Robert Cole
+NATIONALITY=
+NATION_CODE=SCT
+
+[CAR_4]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=011-quake-racing
+DRIVER_NAME=Martin Fleming
+NATIONALITY=
+NATION_CODE=AUS
+
+[CAR_5]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-a-vettel
+DRIVER_NAME=Sebastian Vettel
+NATIONALITY=
+NATION_CODE=
+
+[CAR_6]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-ferrari-k-raikkonen
+DRIVER_NAME=Kimi Raikkonen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_7]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=02-oxfordshire-group
+DRIVER_NAME=Dewayne Maupin
+NATIONALITY=
+NATION_CODE=FRA
+
+[CAR_8]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=03-redbull-m-verstappen
+DRIVER_NAME=Max Verstappen
+NATIONALITY=
+NATION_CODE=
+
+[CAR_9]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-d-resta
+DRIVER_NAME=Paul Di Resta
+NATIONALITY=
+NATION_CODE=
+
+[CAR_10]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=04-williams-l-stroll
+DRIVER_NAME=Lance Stroll
+NATIONALITY=
+NATION_CODE=
+
+[CAR_11]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-c-perez
+DRIVER_NAME=Sergio Perez
+NATIONALITY=
+NATION_CODE=
+
+[CAR_12]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=05-forceindia-e-ocon
+DRIVER_NAME=Esteban Ocon
+NATIONALITY=
+NATION_CODE=
+
+[CAR_13]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-brutus-racing-team
+DRIVER_NAME=Thomas Leitner
+NATIONALITY=
+NATION_CODE=NLD
+
+[CAR_14]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-c-sainz
+DRIVER_NAME=Carlos Sainz
+NATIONALITY=
+NATION_CODE=
+
+[CAR_15]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=06-tororosso-d-kvyat
+DRIVER_NAME=Daniil Kvyat
+NATIONALITY=
+NATION_CODE=
+
+[CAR_16]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-n-hulkenberg
+DRIVER_NAME=Nico Hulkenberg
+NATIONALITY=
+NATION_CODE=
+
+[CAR_17]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=07-renault-y-palmer
+DRIVER_NAME=Jolyon Palmer
+NATIONALITY=
+NATION_CODE=
+
+[CAR_18]
+MODEL=rss_formula_hybrid_2017_s1
+MODEL_CONFIG=
+AI_LEVEL=100
+AI_AGGRESSION=0
+SKIN=08-haas-r-grosjean
+DRIVER_NAME=Romain Grosjean
+NATIONALITY=
+NATION_CODE=
+
+[SESSION_0]
+NAME=Qualifying
+TYPE=2
+DURATION_MINUTES=5
+SPAWN_SET=PIT
+
+[SESSION_1]
+NAME=Race
+TYPE=3
+LAPS=6
+DURATION_MINUTES=0
+SPAWN_SET=START
+
+[REMOTE]
+SERVER_IP=192.168.10.11
+SERVER_PORT=9200
+SERVER_NAME=FVR F1 2017
+SERVER_HTTP_PORT=8081
+REQUESTED_CAR=rss_formula_hybrid_2017_s1
+NAME=Hopery
+TEAM=
+PASSWORD=F0rmula.vr
+GUID=76561198400832748
+ACTIVE=0
 ', '');
 
 
@@ -42790,10 +59845,10 @@ NATION_CODE=
 -- Name: T_AC_activityCockpits_serial_seq; Type: SEQUENCE SET; Schema: FormulaVR; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"T_AC_activityCockpits_serial_seq"', 344, true);
+SELECT pg_catalog.setval('"T_AC_activityCockpits_serial_seq"', 412, true);
 
 
--- Completed on 2017-09-09 13:02:12
+-- Completed on 2017-09-10 10:55:39
 
 --
 -- PostgreSQL database dump complete

@@ -92,6 +92,14 @@
 						<input type="text" ng-model="actionForm.ac_filtro.ac_serial" />
 					</md-input-container>
 					<md-input-container>
+						<label>location_id</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_location_id" />
+					</md-input-container>
+					<md-input-container>
+						<label>LO_name</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_LO_name" />
+					</md-input-container>
+					<md-input-container>
 						<label>computername</label>
 						<input type="text" ng-model="actionForm.ac_filtro.ac_computername" />
 					</md-input-container>
@@ -120,6 +128,10 @@
 						<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd_hh" />
 					</md-input-container>
 					<md-input-container>
+						<label>aaaa_mm_dd_hh_m0</label>
+						<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd_hh_m0" />
+					</md-input-container>
+					<md-input-container>
 						<label>aaaa_mm_dd_hh_mm</label>
 						<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd_hh_mm" />
 					</md-input-container>
@@ -145,11 +157,14 @@
 					<%-- <th>is_deleted</th> --%>
 					<%-- <th>author</th> --%>
 					<th>serial</th>
+					<th>location_id</th>
+					<th>LO_name</th>
 					<th>computername</th>
 					<%-- <th>filename</th>
 					<th>aaaa_mm</th>
 					<th>aaaa_mm_dd</th>
 					<th>aaaa_mm_dd_hh</th>
+					<th>aaaa_mm_dd_hh_m0</th>
 					<th>aaaa_mm_dd_hh_mm</th> --%>
 					<th>UTC</th>
 					<th>content</th>
@@ -163,11 +178,14 @@
 					<%-- <td>{{reg.ac_is_deleted}}&nbsp;</td> --%>
 					<%-- <td>{{reg.ac_author}}&nbsp;</td> --%>
 					<td>{{reg.ac_serial}}&nbsp;</td>
+					<td>{{reg.ac_location_id}}&nbsp;</td>
+					<td>{{reg.ac_LO_name}}&nbsp;</td>
 					<td>{{reg.ac_computername}}&nbsp;</td>
 					<%-- <td>{{reg.ac_filename}}&nbsp;</td>
 					<td>{{reg.ac_aaaa_mm}}&nbsp;</td>
 					<td>{{reg.ac_aaaa_mm_dd}}&nbsp;</td>
 					<td>{{reg.ac_aaaa_mm_dd_hh}}&nbsp;</td>
+					<td>{{reg.ac_aaaa_mm_dd_hh_m0}}&nbsp;</td>
 					<td>{{reg.ac_aaaa_mm_dd_hh_mm}}&nbsp;</td> --%>
 					<td>{{reg.ac_aaaa_mm_dd_hh_mm_ss}}&nbsp;</td>
 					<td title="{{reg.ac_content}}">{{reg.ac_content | limitTo:'25'}}&nbsp;</td>

@@ -390,6 +390,7 @@ public class AcDSPFIL_A extends org.apache.struts.action.Action {
 		if ( accion.trim().equalsIgnoreCase("colectivo_mark") ) { reg.setAc_mark( pantalla.getAc_mark() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_is_deleted") ) { reg.setAc_is_deleted( pantalla.getAc_is_deleted() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_author") ) { reg.setAc_author( pantalla.getAc_author() ); }
+		if ( accion.trim().equalsIgnoreCase("colectivo_location_id") ) { reg.setAc_location_id( pantalla.getAc_location_id() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_computername") ) { reg.setAc_computername( pantalla.getAc_computername() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_filename") ) { reg.setAc_filename( pantalla.getAc_filename() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_content") ) { reg.setAc_content( pantalla.getAc_content() ); }

@@ -350,7 +350,10 @@ public class CpAccesoBaseDatos {
 	sqlWhere = fltOper.getNUM_EQ(rst.getCp_LO_lon(),"LO_lon",sqlWhere);   // LO_lon
 	sqlWhere = fltOper.getCHAR_EQ(rst.getCp_cockpit_id(),"cockpit_id",sqlWhere);   // cockpit_id
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getCp_serial_number(),"serial_number",sqlWhere);   // serial_number
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getCp_name(),"name",sqlWhere);   // name
+
+	// ATENCIÓN: se usa para determinar el "location_id" desde el servlet "FVRMonitor":
+	sqlWhere = fltOper.getCHAR_EQ(rst.getCp_name(),"name",sqlWhere);   // name
+
 //	sqlWhere = fltOper.getCHAR_EQ(rst.getCp_isBlocked(),"isBlocked",sqlWhere);   // isBlocked
 	sqlWhere = fltOper.getNUM_EQ(rst.getCp_asignation_order(),"asignation_order",sqlWhere);   // asignation_order
 	sqlWhere = fltOper.getCHAR_EQ(rst.getCp_install_date(),"install_date",sqlWhere);   // install_date

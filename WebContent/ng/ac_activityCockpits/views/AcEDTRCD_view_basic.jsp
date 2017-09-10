@@ -32,6 +32,14 @@
 				<input type="text" ng-model="actionForm.ac_serial" />
 			</md-input-container>
 			<md-input-container>
+				<label>location_id</label>
+				<input type="text" ng-model="actionForm.ac_location_id" />
+			</md-input-container>
+			<md-input-container>
+				<label>LO_name</label>
+				<input type="text" ng-model="actionForm.ac_LO_name" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
 				<label>computername</label>
 				<input type="text" ng-model="actionForm.ac_computername" />
 			</md-input-container>
@@ -54,6 +62,10 @@
 			<md-input-container>
 				<label>aaaa_mm_dd_hh</label>
 				<input type="text" ng-model="actionForm.ac_aaaa_mm_dd_hh" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
+				<label>aaaa_mm_dd_hh_m0</label>
+				<input type="text" ng-model="actionForm.ac_aaaa_mm_dd_hh_m0" disabled="disabled" />
 			</md-input-container>
 			<md-input-container>
 				<label>aaaa_mm_dd_hh_mm</label>

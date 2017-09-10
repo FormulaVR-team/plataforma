@@ -41,6 +41,8 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	public String ac_is_deleted; // is_deleted
 	public String ac_author; // author
 	public long   ac_serial; // serial
+	public String ac_location_id; // location_id
+	public String ac_LO_name; // LO_name
 	public String ac_computername; // computername
 	public String ac_filename; // filename
 	public String ac_content; // content
@@ -48,6 +50,7 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	public String ac_aaaa_mm; // aaaa_mm
 	public String ac_aaaa_mm_dd; // aaaa_mm_dd
 	public String ac_aaaa_mm_dd_hh; // aaaa_mm_dd_hh
+	public String ac_aaaa_mm_dd_hh_m0; // aaaa_mm_dd_hh_m0
 	public String ac_aaaa_mm_dd_hh_mm; // aaaa_mm_dd_hh_mm
 	public String ac_aaaa_mm_dd_hh_mm_ss; // aaaa_mm_dd_hh_mm_ss
     
@@ -75,6 +78,8 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	Destino.setAc_is_deleted( getAc_is_deleted() ); // is_deleted
 	Destino.setAc_author( getAc_author() ); // author
 	Destino.setAc_serial( getAc_serial() ); // serial
+	Destino.setAc_location_id( getAc_location_id() ); // location_id
+	Destino.setAc_LO_name( getAc_LO_name() ); // LO_name
 	Destino.setAc_computername( getAc_computername() ); // computername
 	Destino.setAc_filename( getAc_filename() ); // filename
 	Destino.setAc_content( getAc_content() ); // content
@@ -82,6 +87,7 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	Destino.setAc_aaaa_mm( getAc_aaaa_mm() ); // aaaa_mm
 	Destino.setAc_aaaa_mm_dd( getAc_aaaa_mm_dd() ); // aaaa_mm_dd
 	Destino.setAc_aaaa_mm_dd_hh( getAc_aaaa_mm_dd_hh() ); // aaaa_mm_dd_hh
+	Destino.setAc_aaaa_mm_dd_hh_m0( getAc_aaaa_mm_dd_hh_m0() ); // aaaa_mm_dd_hh_m0
 	Destino.setAc_aaaa_mm_dd_hh_mm( getAc_aaaa_mm_dd_hh_mm() ); // aaaa_mm_dd_hh_mm
 	Destino.setAc_aaaa_mm_dd_hh_mm_ss( getAc_aaaa_mm_dd_hh_mm_ss() ); // aaaa_mm_dd_hh_mm_ss
     }
@@ -94,6 +100,8 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	setAc_is_deleted( Origen.getAc_is_deleted() ); // is_deleted
 	setAc_author( Origen.getAc_author() ); // author
 	setAc_serial( Origen.getAc_serial() ); // serial
+	setAc_location_id( Origen.getAc_location_id() ); // location_id
+	setAc_LO_name( Origen.getAc_LO_name() ); // LO_name
 	setAc_computername( Origen.getAc_computername() ); // computername
 	setAc_filename( Origen.getAc_filename() ); // filename
 	setAc_content( Origen.getAc_content() ); // content
@@ -101,6 +109,7 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	setAc_aaaa_mm( Origen.getAc_aaaa_mm() ); // aaaa_mm
 	setAc_aaaa_mm_dd( Origen.getAc_aaaa_mm_dd() ); // aaaa_mm_dd
 	setAc_aaaa_mm_dd_hh( Origen.getAc_aaaa_mm_dd_hh() ); // aaaa_mm_dd_hh
+	setAc_aaaa_mm_dd_hh_m0( Origen.getAc_aaaa_mm_dd_hh_m0() ); // aaaa_mm_dd_hh_m0
 	setAc_aaaa_mm_dd_hh_mm( Origen.getAc_aaaa_mm_dd_hh_mm() ); // aaaa_mm_dd_hh_mm
 	setAc_aaaa_mm_dd_hh_mm_ss( Origen.getAc_aaaa_mm_dd_hh_mm_ss() ); // aaaa_mm_dd_hh_mm_ss
     }
@@ -126,6 +135,8 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	setAc_is_deleted( Origen.getAc_is_deleted() ); // is_deleted
 	setAc_author( Origen.getAc_author() ); // author
 	setAc_serial( Origen.getAc_serial() ); // serial
+	setAc_location_id( Origen.getAc_location_id() ); // location_id
+	setAc_LO_name( Origen.getAc_LO_name() ); // LO_name
 	setAc_computername( Origen.getAc_computername() ); // computername
 	setAc_filename( Origen.getAc_filename() ); // filename
 	setAc_content( Origen.getAc_content() ); // content
@@ -133,6 +144,7 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	setAc_aaaa_mm( Origen.getAc_aaaa_mm() ); // aaaa_mm
 	setAc_aaaa_mm_dd( Origen.getAc_aaaa_mm_dd() ); // aaaa_mm_dd
 	setAc_aaaa_mm_dd_hh( Origen.getAc_aaaa_mm_dd_hh() ); // aaaa_mm_dd_hh
+	setAc_aaaa_mm_dd_hh_m0( Origen.getAc_aaaa_mm_dd_hh_m0() ); // aaaa_mm_dd_hh_m0
 	setAc_aaaa_mm_dd_hh_mm( Origen.getAc_aaaa_mm_dd_hh_mm() ); // aaaa_mm_dd_hh_mm
 	setAc_aaaa_mm_dd_hh_mm_ss( Origen.getAc_aaaa_mm_dd_hh_mm_ss() ); // aaaa_mm_dd_hh_mm_ss
     }
@@ -220,6 +232,16 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	/** Set serial*/
 	public void setAc_serial(long ac_serial) {this.ac_serial = ac_serial;}
 
+	/** Get location_id*/
+	public String getAc_location_id() {return ac_location_id;}
+	/** Set location_id*/
+	public void setAc_location_id(String ac_location_id) {this.ac_location_id = ac_location_id;}
+
+	/** Get LO_name*/
+	public String getAc_LO_name() {return ac_LO_name;}
+	/** Set LO_name*/
+	public void setAc_LO_name(String ac_LO_name) {this.ac_LO_name = ac_LO_name;}
+
 	/** Get computername*/
 	public String getAc_computername() {return ac_computername;}
 	/** Set computername*/
@@ -254,6 +276,11 @@ public class AcRCD_AF extends org.apache.struts.action.ActionForm {
 	public String getAc_aaaa_mm_dd_hh() {return ac_aaaa_mm_dd_hh;}
 	/** Set aaaa_mm_dd_hh*/
 	public void setAc_aaaa_mm_dd_hh(String ac_aaaa_mm_dd_hh) {this.ac_aaaa_mm_dd_hh = ac_aaaa_mm_dd_hh;}
+
+	/** Get aaaa_mm_dd_hh_m0*/
+	public String getAc_aaaa_mm_dd_hh_m0() {return ac_aaaa_mm_dd_hh_m0;}
+	/** Set aaaa_mm_dd_hh_m0*/
+	public void setAc_aaaa_mm_dd_hh_m0(String ac_aaaa_mm_dd_hh_m0) {this.ac_aaaa_mm_dd_hh_m0 = ac_aaaa_mm_dd_hh_m0;}
 
 	/** Get aaaa_mm_dd_hh_mm*/
 	public String getAc_aaaa_mm_dd_hh_mm() {return ac_aaaa_mm_dd_hh_mm;}

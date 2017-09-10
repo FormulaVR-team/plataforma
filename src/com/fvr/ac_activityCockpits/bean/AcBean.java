@@ -11,6 +11,8 @@ public class AcBean extends StBean {
 	public String ac_is_deleted; // is_deleted
 	public String ac_author; // author
 	public long   ac_serial; // serial
+	public String ac_location_id; // location_id
+	public String ac_LO_name; // LO_name
 	public String ac_computername; // computername
 	public String ac_filename; // filename
 	public String ac_content; // content
@@ -18,6 +20,7 @@ public class AcBean extends StBean {
 	public String ac_aaaa_mm; // aaaa_mm
 	public String ac_aaaa_mm_dd; // aaaa_mm_dd
 	public String ac_aaaa_mm_dd_hh; // aaaa_mm_dd_hh
+	public String ac_aaaa_mm_dd_hh_m0; // aaaa_mm_dd_hh_m0
 	public String ac_aaaa_mm_dd_hh_mm; // aaaa_mm_dd_hh_mm
 	public String ac_aaaa_mm_dd_hh_mm_ss; // aaaa_mm_dd_hh_mm_ss
     
@@ -35,6 +38,8 @@ public class AcBean extends StBean {
 	this.setAc_is_deleted( "" ); // is_deleted
 	this.setAc_author( "" ); // author
 	this.setAc_serial( 0 ); // serial
+	this.setAc_location_id( "" ); // location_id
+	this.setAc_LO_name( "" ); // LO_name
 	this.setAc_computername( "" ); // computername
 	this.setAc_filename( "" ); // filename
 	this.setAc_content( "" ); // content
@@ -42,6 +47,7 @@ public class AcBean extends StBean {
 	this.setAc_aaaa_mm( "" ); // aaaa_mm
 	this.setAc_aaaa_mm_dd( "" ); // aaaa_mm_dd
 	this.setAc_aaaa_mm_dd_hh( "" ); // aaaa_mm_dd_hh
+	this.setAc_aaaa_mm_dd_hh_m0( "" ); // aaaa_mm_dd_hh_m0
 	this.setAc_aaaa_mm_dd_hh_mm( "" ); // aaaa_mm_dd_hh_mm
 	this.setAc_aaaa_mm_dd_hh_mm_ss( "" ); // aaaa_mm_dd_hh_mm_ss
     } 
@@ -54,6 +60,8 @@ public class AcBean extends StBean {
 	Destino.setAc_is_deleted( getAc_is_deleted() ); // is_deleted
 	Destino.setAc_author( getAc_author() ); // author
 	Destino.setAc_serial( getAc_serial() ); // serial
+	Destino.setAc_location_id( getAc_location_id() ); // location_id
+	Destino.setAc_LO_name( getAc_LO_name() ); // LO_name
 	Destino.setAc_computername( getAc_computername() ); // computername
 	Destino.setAc_filename( getAc_filename() ); // filename
 	Destino.setAc_content( getAc_content() ); // content
@@ -61,6 +69,7 @@ public class AcBean extends StBean {
 	Destino.setAc_aaaa_mm( getAc_aaaa_mm() ); // aaaa_mm
 	Destino.setAc_aaaa_mm_dd( getAc_aaaa_mm_dd() ); // aaaa_mm_dd
 	Destino.setAc_aaaa_mm_dd_hh( getAc_aaaa_mm_dd_hh() ); // aaaa_mm_dd_hh
+	Destino.setAc_aaaa_mm_dd_hh_m0( getAc_aaaa_mm_dd_hh_m0() ); // aaaa_mm_dd_hh_m0
 	Destino.setAc_aaaa_mm_dd_hh_mm( getAc_aaaa_mm_dd_hh_mm() ); // aaaa_mm_dd_hh_mm
 	Destino.setAc_aaaa_mm_dd_hh_mm_ss( getAc_aaaa_mm_dd_hh_mm_ss() ); // aaaa_mm_dd_hh_mm_ss
     }
@@ -73,6 +82,8 @@ public class AcBean extends StBean {
 	setAc_is_deleted( Origen.getAc_is_deleted() ); // is_deleted
 	setAc_author( Origen.getAc_author() ); // author
 	setAc_serial( Origen.getAc_serial() ); // serial
+	setAc_location_id( Origen.getAc_location_id() ); // location_id
+	setAc_LO_name( Origen.getAc_LO_name() ); // LO_name
 	setAc_computername( Origen.getAc_computername() ); // computername
 	setAc_filename( Origen.getAc_filename() ); // filename
 	setAc_content( Origen.getAc_content() ); // content
@@ -80,6 +91,7 @@ public class AcBean extends StBean {
 	setAc_aaaa_mm( Origen.getAc_aaaa_mm() ); // aaaa_mm
 	setAc_aaaa_mm_dd( Origen.getAc_aaaa_mm_dd() ); // aaaa_mm_dd
 	setAc_aaaa_mm_dd_hh( Origen.getAc_aaaa_mm_dd_hh() ); // aaaa_mm_dd_hh
+	setAc_aaaa_mm_dd_hh_m0( Origen.getAc_aaaa_mm_dd_hh_m0() ); // aaaa_mm_dd_hh_m0
 	setAc_aaaa_mm_dd_hh_mm( Origen.getAc_aaaa_mm_dd_hh_mm() ); // aaaa_mm_dd_hh_mm
 	setAc_aaaa_mm_dd_hh_mm_ss( Origen.getAc_aaaa_mm_dd_hh_mm_ss() ); // aaaa_mm_dd_hh_mm_ss
     }
@@ -110,6 +122,16 @@ public class AcBean extends StBean {
 	public long getAc_serial() {return ac_serial;}
 	/** Set serial*/
 	public void setAc_serial(long ac_serial) {this.ac_serial = ac_serial;}
+
+	/** Get location_id*/
+	public String getAc_location_id() {return ac_location_id;}
+	/** Set location_id*/
+	public void setAc_location_id(String ac_location_id) {this.ac_location_id = ac_location_id;}
+
+	/** Get LO_name*/
+	public String getAc_LO_name() {return ac_LO_name;}
+	/** Set LO_name*/
+	public void setAc_LO_name(String ac_LO_name) {this.ac_LO_name = ac_LO_name;}
 
 	/** Get computername*/
 	public String getAc_computername() {return ac_computername;}
@@ -146,6 +168,11 @@ public class AcBean extends StBean {
 	/** Set aaaa_mm_dd_hh*/
 	public void setAc_aaaa_mm_dd_hh(String ac_aaaa_mm_dd_hh) {this.ac_aaaa_mm_dd_hh = ac_aaaa_mm_dd_hh;}
 
+	/** Get aaaa_mm_dd_hh_m0*/
+	public String getAc_aaaa_mm_dd_hh_m0() {return ac_aaaa_mm_dd_hh_m0;}
+	/** Set aaaa_mm_dd_hh_m0*/
+	public void setAc_aaaa_mm_dd_hh_m0(String ac_aaaa_mm_dd_hh_m0) {this.ac_aaaa_mm_dd_hh_m0 = ac_aaaa_mm_dd_hh_m0;}
+
 	/** Get aaaa_mm_dd_hh_mm*/
 	public String getAc_aaaa_mm_dd_hh_mm() {return ac_aaaa_mm_dd_hh_mm;}
 	/** Set aaaa_mm_dd_hh_mm*/
@@ -174,6 +201,8 @@ public class AcBean extends StBean {
 		out.append( _K.sepFld ); out.append( this.getAc_is_deleted()==null?"":this.getAc_is_deleted() ); // is_deleted
 		out.append( _K.sepFld ); out.append( this.getAc_author()==null?"":this.getAc_author() ); // author
 		out.append( _K.sepFld ); out.append( this.getAc_serial() ); // serial
+		out.append( _K.sepFld ); out.append( this.getAc_location_id()==null?"":this.getAc_location_id() ); // location_id
+		out.append( _K.sepFld ); out.append( this.getAc_LO_name()==null?"":this.getAc_LO_name() ); // LO_name
 		out.append( _K.sepFld ); out.append( this.getAc_computername()==null?"":this.getAc_computername() ); // computername
 		out.append( _K.sepFld ); out.append( this.getAc_filename()==null?"":this.getAc_filename() ); // filename
 		out.append( _K.sepFld ); out.append( this.getAc_content()==null?"":this.getAc_content() ); // content
@@ -181,6 +210,7 @@ public class AcBean extends StBean {
 		out.append( _K.sepFld ); out.append( this.getAc_aaaa_mm()==null?"":this.getAc_aaaa_mm() ); // aaaa_mm
 		out.append( _K.sepFld ); out.append( this.getAc_aaaa_mm_dd()==null?"":this.getAc_aaaa_mm_dd() ); // aaaa_mm_dd
 		out.append( _K.sepFld ); out.append( this.getAc_aaaa_mm_dd_hh()==null?"":this.getAc_aaaa_mm_dd_hh() ); // aaaa_mm_dd_hh
+		out.append( _K.sepFld ); out.append( this.getAc_aaaa_mm_dd_hh_m0()==null?"":this.getAc_aaaa_mm_dd_hh_m0() ); // aaaa_mm_dd_hh_m0
 		out.append( _K.sepFld ); out.append( this.getAc_aaaa_mm_dd_hh_mm()==null?"":this.getAc_aaaa_mm_dd_hh_mm() ); // aaaa_mm_dd_hh_mm
 		out.append( _K.sepFld ); out.append( this.getAc_aaaa_mm_dd_hh_mm_ss()==null?"":this.getAc_aaaa_mm_dd_hh_mm_ss() ); // aaaa_mm_dd_hh_mm_ss
 
@@ -202,15 +232,18 @@ public class AcBean extends StBean {
 			try { this.setAc_is_deleted( trozos[2] ); } catch (Exception e) {;} // is_deleted
 			try { this.setAc_author( trozos[3] ); } catch (Exception e) {;} // author
 			try { this.setAc_serial( Subrutinas.parse_long( trozos[4] )); } catch (Exception e) {;} // serial
-			try { this.setAc_computername( trozos[5] ); } catch (Exception e) {;} // computername
-			try { this.setAc_filename( trozos[6] ); } catch (Exception e) {;} // filename
-			try { this.setAc_content( trozos[7] ); } catch (Exception e) {;} // content
-			try { this.setAc_json( trozos[8] ); } catch (Exception e) {;} // json
-			try { this.setAc_aaaa_mm( trozos[9] ); } catch (Exception e) {;} // aaaa_mm
-			try { this.setAc_aaaa_mm_dd( trozos[10] ); } catch (Exception e) {;} // aaaa_mm_dd
-			try { this.setAc_aaaa_mm_dd_hh( trozos[11] ); } catch (Exception e) {;} // aaaa_mm_dd_hh
-			try { this.setAc_aaaa_mm_dd_hh_mm( trozos[12] ); } catch (Exception e) {;} // aaaa_mm_dd_hh_mm
-			try { this.setAc_aaaa_mm_dd_hh_mm_ss( trozos[13] ); } catch (Exception e) {;} // aaaa_mm_dd_hh_mm_ss
+			try { this.setAc_location_id( trozos[5] ); } catch (Exception e) {;} // location_id
+			try { this.setAc_LO_name( trozos[6] ); } catch (Exception e) {;} // LO_name
+			try { this.setAc_computername( trozos[7] ); } catch (Exception e) {;} // computername
+			try { this.setAc_filename( trozos[8] ); } catch (Exception e) {;} // filename
+			try { this.setAc_content( trozos[9] ); } catch (Exception e) {;} // content
+			try { this.setAc_json( trozos[10] ); } catch (Exception e) {;} // json
+			try { this.setAc_aaaa_mm( trozos[11] ); } catch (Exception e) {;} // aaaa_mm
+			try { this.setAc_aaaa_mm_dd( trozos[12] ); } catch (Exception e) {;} // aaaa_mm_dd
+			try { this.setAc_aaaa_mm_dd_hh( trozos[13] ); } catch (Exception e) {;} // aaaa_mm_dd_hh
+			try { this.setAc_aaaa_mm_dd_hh_m0( trozos[14] ); } catch (Exception e) {;} // aaaa_mm_dd_hh_m0
+			try { this.setAc_aaaa_mm_dd_hh_mm( trozos[15] ); } catch (Exception e) {;} // aaaa_mm_dd_hh_mm
+			try { this.setAc_aaaa_mm_dd_hh_mm_ss( trozos[16] ); } catch (Exception e) {;} // aaaa_mm_dd_hh_mm_ss
 			
 		}
 	}

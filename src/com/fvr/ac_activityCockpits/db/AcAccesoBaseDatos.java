@@ -96,6 +96,7 @@ public class AcAccesoBaseDatos {
 		", \"is_deleted\"" + // is_deleted
 		", \"author\"" + // author
 //		", \"serial\"" + // serial
+		", \"location_id\"" + // location_id
 		", \"computername\"" + // computername
 		", \"filename\"" + // filename
 		", \"content\"" + // content
@@ -106,6 +107,7 @@ public class AcAccesoBaseDatos {
 		", '"  + registro.getAc_is_deleted() + "'" + // is_deleted
 		", '"  + registro.getAc_author() + "'" + // author
 //		", "  + registro.getAc_serial() + "" + // serial
+		", '"  + registro.getAc_location_id() + "'" + // location_id
 		", '"  + registro.getAc_computername() + "'" + // computername
 		", '"  + registro.getAc_filename() + "'" + // filename
 		", '"  + registro.getAc_content() + "'" + // content
@@ -146,6 +148,7 @@ public class AcAccesoBaseDatos {
 		", \"is_deleted\" = '"  + registro.getAc_is_deleted() + "'" + // is_deleted
 		", \"author\" = '"  + registro.getAc_author() + "'" + // author
 		", \"serial\" = "  + registro.getAc_serial() + "" + // serial
+		", \"location_id\" = '"  + registro.getAc_location_id() + "'" + // location_id
 		", \"computername\" = '"  + registro.getAc_computername() + "'" + // computername
 		", \"filename\" = '"  + registro.getAc_filename() + "'" + // filename
 		", \"content\" = '"  + registro.getAc_content() + "'" + // content
@@ -233,6 +236,8 @@ public class AcAccesoBaseDatos {
 		regRead.setAc_is_deleted( rs.getString("is_deleted") ); regRead.setAc_is_deleted( (regRead.getAc_is_deleted() == null)?"":regRead.getAc_is_deleted().trim() ); // is_deleted
 		regRead.setAc_author( rs.getString("author") ); regRead.setAc_author( (regRead.getAc_author() == null)?"":regRead.getAc_author().trim() ); // author
 		regRead.setAc_serial( rs.getLong("serial") );  // serial
+		regRead.setAc_location_id( rs.getString("location_id") ); regRead.setAc_location_id( (regRead.getAc_location_id() == null)?"":regRead.getAc_location_id().trim() ); // location_id
+		regRead.setAc_LO_name( rs.getString("LO_name") ); regRead.setAc_LO_name( (regRead.getAc_LO_name() == null)?"":regRead.getAc_LO_name().trim() ); // LO_name
 		regRead.setAc_computername( rs.getString("computername") ); regRead.setAc_computername( (regRead.getAc_computername() == null)?"":regRead.getAc_computername().trim() ); // computername
 		regRead.setAc_filename( rs.getString("filename") ); regRead.setAc_filename( (regRead.getAc_filename() == null)?"":regRead.getAc_filename().trim() ); // filename
 		regRead.setAc_content( rs.getString("content") ); regRead.setAc_content( (regRead.getAc_content() == null)?"":regRead.getAc_content().trim() ); // content
@@ -240,6 +245,7 @@ public class AcAccesoBaseDatos {
 		regRead.setAc_aaaa_mm( rs.getString("aaaa_mm") ); regRead.setAc_aaaa_mm( (regRead.getAc_aaaa_mm() == null)?"":regRead.getAc_aaaa_mm().trim() ); // aaaa_mm
 		regRead.setAc_aaaa_mm_dd( rs.getString("aaaa_mm_dd") ); regRead.setAc_aaaa_mm_dd( (regRead.getAc_aaaa_mm_dd() == null)?"":regRead.getAc_aaaa_mm_dd().trim() ); // aaaa_mm_dd
 		regRead.setAc_aaaa_mm_dd_hh( rs.getString("aaaa_mm_dd_hh") ); regRead.setAc_aaaa_mm_dd_hh( (regRead.getAc_aaaa_mm_dd_hh() == null)?"":regRead.getAc_aaaa_mm_dd_hh().trim() ); // aaaa_mm_dd_hh
+		regRead.setAc_aaaa_mm_dd_hh_m0( rs.getString("aaaa_mm_dd_hh_m0") ); regRead.setAc_aaaa_mm_dd_hh_m0( (regRead.getAc_aaaa_mm_dd_hh_m0() == null)?"":regRead.getAc_aaaa_mm_dd_hh_m0().trim() ); // aaaa_mm_dd_hh_m0
 		regRead.setAc_aaaa_mm_dd_hh_mm( rs.getString("aaaa_mm_dd_hh_mm") ); regRead.setAc_aaaa_mm_dd_hh_mm( (regRead.getAc_aaaa_mm_dd_hh_mm() == null)?"":regRead.getAc_aaaa_mm_dd_hh_mm().trim() ); // aaaa_mm_dd_hh_mm
 		regRead.setAc_aaaa_mm_dd_hh_mm_ss( rs.getString("aaaa_mm_dd_hh_mm_ss") ); regRead.setAc_aaaa_mm_dd_hh_mm_ss( (regRead.getAc_aaaa_mm_dd_hh_mm_ss() == null)?"":regRead.getAc_aaaa_mm_dd_hh_mm_ss().trim() ); // aaaa_mm_dd_hh_mm_ss
             }
@@ -302,6 +308,8 @@ public class AcAccesoBaseDatos {
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_is_deleted(),"is_deleted",sqlWhere);   // is_deleted
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_author(),"author",sqlWhere);   // author
 	sqlWhere = fltOper.getNUM_EQ(rst.getAc_serial(),"serial",sqlWhere);   // serial
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_location_id(),"location_id",sqlWhere);   // location_id
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_LO_name(),"LO_name",sqlWhere);   // LO_name
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_computername(),"computername",sqlWhere);   // computername
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_filename(),"filename",sqlWhere);   // filename
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_content(),"content",sqlWhere);   // content
@@ -309,6 +317,7 @@ public class AcAccesoBaseDatos {
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm(),"aaaa_mm",sqlWhere);   // aaaa_mm
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd(),"aaaa_mm_dd",sqlWhere);   // aaaa_mm_dd
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd_hh(),"aaaa_mm_dd_hh",sqlWhere);   // aaaa_mm_dd_hh
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd_hh_m0(),"aaaa_mm_dd_hh_m0",sqlWhere);   // aaaa_mm_dd_hh_m0
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd_hh_mm(),"aaaa_mm_dd_hh_mm",sqlWhere);   // aaaa_mm_dd_hh_mm
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd_hh_mm_ss(),"aaaa_mm_dd_hh_mm_ss",sqlWhere);   // aaaa_mm_dd_hh_mm_ss
         //////////////////////////////////////////////////////
@@ -360,6 +369,8 @@ public class AcAccesoBaseDatos {
 		regRead.setAc_is_deleted( rs.getString("is_deleted") ); regRead.setAc_is_deleted( (regRead.getAc_is_deleted() == null)?"":regRead.getAc_is_deleted().trim() ); // is_deleted
 		regRead.setAc_author( rs.getString("author") ); regRead.setAc_author( (regRead.getAc_author() == null)?"":regRead.getAc_author().trim() ); // author
 		regRead.setAc_serial( rs.getLong("serial") );  // serial
+		regRead.setAc_location_id( rs.getString("location_id") ); regRead.setAc_location_id( (regRead.getAc_location_id() == null)?"":regRead.getAc_location_id().trim() ); // location_id
+		regRead.setAc_LO_name( rs.getString("LO_name") ); regRead.setAc_LO_name( (regRead.getAc_LO_name() == null)?"":regRead.getAc_LO_name().trim() ); // LO_name
 		regRead.setAc_computername( rs.getString("computername") ); regRead.setAc_computername( (regRead.getAc_computername() == null)?"":regRead.getAc_computername().trim() ); // computername
 		regRead.setAc_filename( rs.getString("filename") ); regRead.setAc_filename( (regRead.getAc_filename() == null)?"":regRead.getAc_filename().trim() ); // filename
 		regRead.setAc_content( rs.getString("content") ); regRead.setAc_content( (regRead.getAc_content() == null)?"":regRead.getAc_content().trim() ); // content
@@ -367,6 +378,7 @@ public class AcAccesoBaseDatos {
 		regRead.setAc_aaaa_mm( rs.getString("aaaa_mm") ); regRead.setAc_aaaa_mm( (regRead.getAc_aaaa_mm() == null)?"":regRead.getAc_aaaa_mm().trim() ); // aaaa_mm
 		regRead.setAc_aaaa_mm_dd( rs.getString("aaaa_mm_dd") ); regRead.setAc_aaaa_mm_dd( (regRead.getAc_aaaa_mm_dd() == null)?"":regRead.getAc_aaaa_mm_dd().trim() ); // aaaa_mm_dd
 		regRead.setAc_aaaa_mm_dd_hh( rs.getString("aaaa_mm_dd_hh") ); regRead.setAc_aaaa_mm_dd_hh( (regRead.getAc_aaaa_mm_dd_hh() == null)?"":regRead.getAc_aaaa_mm_dd_hh().trim() ); // aaaa_mm_dd_hh
+		regRead.setAc_aaaa_mm_dd_hh_m0( rs.getString("aaaa_mm_dd_hh_m0") ); regRead.setAc_aaaa_mm_dd_hh_m0( (regRead.getAc_aaaa_mm_dd_hh_m0() == null)?"":regRead.getAc_aaaa_mm_dd_hh_m0().trim() ); // aaaa_mm_dd_hh_m0
 		regRead.setAc_aaaa_mm_dd_hh_mm( rs.getString("aaaa_mm_dd_hh_mm") ); regRead.setAc_aaaa_mm_dd_hh_mm( (regRead.getAc_aaaa_mm_dd_hh_mm() == null)?"":regRead.getAc_aaaa_mm_dd_hh_mm().trim() ); // aaaa_mm_dd_hh_mm
 		regRead.setAc_aaaa_mm_dd_hh_mm_ss( rs.getString("aaaa_mm_dd_hh_mm_ss") ); regRead.setAc_aaaa_mm_dd_hh_mm_ss( (regRead.getAc_aaaa_mm_dd_hh_mm_ss() == null)?"":regRead.getAc_aaaa_mm_dd_hh_mm_ss().trim() ); // aaaa_mm_dd_hh_mm_ss
                         
@@ -421,6 +433,8 @@ public class AcAccesoBaseDatos {
 				s += "<td><strong style='color:darkblue;'>" + "is_deleted" + "</strong></td>";  // is_deleted
 				s += "<td><strong style='color:darkblue;'>" + "author" + "</strong></td>";  // author
 				s += "<td><strong style='color:darkblue;'>" + "serial" + "</strong></td>";  // serial
+				s += "<td><strong style='color:darkblue;'>" + "location_id" + "</strong></td>";  // location_id
+				s += "<td><strong style='color:darkblue;'>" + "LO_name" + "</strong></td>";  // LO_name
 				s += "<td><strong style='color:darkblue;'>" + "computername" + "</strong></td>";  // computername
 				s += "<td><strong style='color:darkblue;'>" + "filename" + "</strong></td>";  // filename
 				s += "<td><strong style='color:darkblue;'>" + "content" + "</strong></td>";  // content
@@ -428,6 +442,7 @@ public class AcAccesoBaseDatos {
 				s += "<td><strong style='color:darkblue;'>" + "aaaa_mm" + "</strong></td>";  // aaaa_mm
 				s += "<td><strong style='color:darkblue;'>" + "aaaa_mm_dd" + "</strong></td>";  // aaaa_mm_dd
 				s += "<td><strong style='color:darkblue;'>" + "aaaa_mm_dd_hh" + "</strong></td>";  // aaaa_mm_dd_hh
+				s += "<td><strong style='color:darkblue;'>" + "aaaa_mm_dd_hh_m0" + "</strong></td>";  // aaaa_mm_dd_hh_m0
 				s += "<td><strong style='color:darkblue;'>" + "aaaa_mm_dd_hh_mm" + "</strong></td>";  // aaaa_mm_dd_hh_mm
 				s += "<td><strong style='color:darkblue;'>" + "aaaa_mm_dd_hh_mm_ss" + "</strong></td>";  // aaaa_mm_dd_hh_mm_ss
 				s += "</tr>\r\n";
@@ -458,6 +473,12 @@ public class AcAccesoBaseDatos {
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // author
 				s += "<td>" + new Long(registro.getAc_serial()).toString() + "</td>";  // serial
+				tmp = registro.getAc_location_id();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // location_id
+				tmp = registro.getAc_LO_name();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // LO_name
 				tmp = registro.getAc_computername();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // computername
@@ -479,6 +500,9 @@ public class AcAccesoBaseDatos {
 				tmp = registro.getAc_aaaa_mm_dd_hh();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // aaaa_mm_dd_hh
+				tmp = registro.getAc_aaaa_mm_dd_hh_m0();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // aaaa_mm_dd_hh_m0
 				tmp = registro.getAc_aaaa_mm_dd_hh_mm();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // aaaa_mm_dd_hh_mm
@@ -652,15 +676,18 @@ public class AcAccesoBaseDatos {
 				registro.setAc_is_deleted( jsonReg.getString(2) );	// is_deleted
 				registro.setAc_author( jsonReg.getString(3) );	// author
 				registro.setAc_serial( jsonReg.getLong(4) );	// serial
-				registro.setAc_computername( jsonReg.getString(5) );	// computername
-				registro.setAc_filename( jsonReg.getString(6) );	// filename
-				registro.setAc_content( jsonReg.getString(7) );	// content
-				registro.setAc_json( jsonReg.getString(8) );	// json
-				registro.setAc_aaaa_mm( jsonReg.getString(9) );	// aaaa_mm
-				registro.setAc_aaaa_mm_dd( jsonReg.getString(10) );	// aaaa_mm_dd
-				registro.setAc_aaaa_mm_dd_hh( jsonReg.getString(11) );	// aaaa_mm_dd_hh
-				registro.setAc_aaaa_mm_dd_hh_mm( jsonReg.getString(12) );	// aaaa_mm_dd_hh_mm
-				registro.setAc_aaaa_mm_dd_hh_mm_ss( jsonReg.getString(13) );	// aaaa_mm_dd_hh_mm_ss
+				registro.setAc_location_id( jsonReg.getString(5) );	// location_id
+				registro.setAc_LO_name( jsonReg.getString(6) );	// LO_name
+				registro.setAc_computername( jsonReg.getString(7) );	// computername
+				registro.setAc_filename( jsonReg.getString(8) );	// filename
+				registro.setAc_content( jsonReg.getString(9) );	// content
+				registro.setAc_json( jsonReg.getString(10) );	// json
+				registro.setAc_aaaa_mm( jsonReg.getString(11) );	// aaaa_mm
+				registro.setAc_aaaa_mm_dd( jsonReg.getString(12) );	// aaaa_mm_dd
+				registro.setAc_aaaa_mm_dd_hh( jsonReg.getString(13) );	// aaaa_mm_dd_hh
+				registro.setAc_aaaa_mm_dd_hh_m0( jsonReg.getString(14) );	// aaaa_mm_dd_hh_m0
+				registro.setAc_aaaa_mm_dd_hh_mm( jsonReg.getString(15) );	// aaaa_mm_dd_hh_mm
+				registro.setAc_aaaa_mm_dd_hh_mm_ss( jsonReg.getString(16) );	// aaaa_mm_dd_hh_mm_ss
 					
 					arrayTmp.add(registro);
 				} catch (Exception e) {;}
