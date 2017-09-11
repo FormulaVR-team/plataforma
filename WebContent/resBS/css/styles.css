@@ -785,6 +785,32 @@ ul.nav, ol.nav {
 .nav-collapsed .app-sidebar:hover .sidebar-footer .nav li a .nav-text{
     display: inline-block;
 }
+
+
+.modal.modal-full-width {
+    background-color: rgba(255, 255, 255, 0.97);
+}
+.modal.modal-full-width .modal-dialog {
+    margin: 0px auto;
+    width: 80%;
+    background-color: transparent;
+}
+.modal.modal-full-width .modal-content {
+    box-shadow: 0 0px 0px rgba(0,0,0,.5);
+    border: 0px solid rgba(0,0,0,.2);
+    background-color: transparent;
+}
+.modal.modal-full-width  .mfw-icon {
+    font-size: 40px;
+}
+.modal.modal-full-width .modal-header {
+    border: 0px;
+}
+.btn-mfw {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    width: 100% !important;
+}
 /* Small devices (tablet, 767px and down) */
 @media (max-width: 767px) {
     .hidden-xs-down {

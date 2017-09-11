@@ -297,21 +297,19 @@
 <!-- Panel EDTRCD inicio -->	
 <div class="container">
   <!-- Modal -->
-  <div class="modal fade" id="cpDSPFIL_EDTRCD_modal" role="dialog" data-backdrop="false">
+  <div class="modal fade modal-full-width" id="cpDSPFIL_EDTRCD_modal" role="dialog" data-backdrop="false">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modificar: cockpits</h4>
+          <button type="button" class="close" data-dismiss="modal">
+          	<i class="mfw-icon material-icons">clear</i>
+          </button>
+          <h2 class="modal-title">Modificar: cockpits</h2>
         </div>
         <div class="modal-body">
 			<span ng-include="'ng/cp_cockpits/views/CpEDTRCD_view_basic.jsp'" />
-        </div>
- 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         </div>
 
       </div>
