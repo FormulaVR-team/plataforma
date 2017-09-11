@@ -194,7 +194,7 @@
 			
 			<div id="container" class="full-height fixed-header sidebar">
 
-				<aside ui-view="rgnNavBar"></aside>
+				<div ui-view="rgnNavBar"></div>
 				<%@include file="/inc/sidebar/sidebarA.jsp"%>
 
 				<section class="app-page-container" style="border-top: 3px solid #CE1417;">
@@ -218,7 +218,7 @@
 
 			<div id="container" class="full-height sidebar">
 
-				<aside ui-view="rgnNavBar"></aside>
+				<div ui-view="rgnNavBar"></div>
 				<%@include file="/inc/sidebar/sidebarF.jsp"%>
 
 				<section class="app-page-container" style="border-top: 3px solid #CE1417;">
@@ -242,7 +242,7 @@
 
 			<div id="container" class="full-height no-sidebar fixed-header">
 
-				<aside ui-view="rgnNavBar"></aside>
+				<div ui-view="rgnNavBar"></div>
 
 				<section class="app-page-container" style="border-top: 3px solid #CE1417;">
 					<div class="app-header" ui-view="rgnHeader" ></div>
