@@ -43,6 +43,10 @@
 				<md-button class="md-icon-button md-accent md-button md-ink-ripple margin-0" ng-click="marcados_suprimir()">
 					<md-tooltip>Suprimir marcados</md-tooltip>
 					<md-icon> delete </md-icon></md-button>
+				&nbsp;&nbsp;
+				<md-button class="md-button md-fab md-mini" data-toggle="modal" data-target="#chart_panel">
+					<md-tooltip>Gráficos</md-tooltip>
+					<md-icon> timeline </md-icon></md-button>
 
 			</div>
 			<%-- Botones final --%>

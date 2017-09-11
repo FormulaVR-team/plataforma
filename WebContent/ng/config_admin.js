@@ -125,6 +125,10 @@ $mdThemingProvider
 			"rgnFooter": {
 				templateUrl: "./ng/_commonTemplates/footer.html?version=fake7"
 			},
+			"rgnChart": {
+				templateUrl: "./ng/_commonTemplates/chart_view.html",
+				controller: "chart_controller"
+			},
 			"rgnMain": {
 				templateUrl: "./ng/ac_activityCockpits/views/AcDSPFIL_view_basic.jsp?version=fake7",
 				controller: "AcDSPFIL_Ctrl_basic"
