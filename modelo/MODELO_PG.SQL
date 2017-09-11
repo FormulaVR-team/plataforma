@@ -1,6 +1,6 @@
 ﻿/*
 Created: 01/05/2017
-Modified: 10/09/2017
+Modified: 11/09/2017
 Model: FormulaVR_V10_PostgreSQL
 Database: PostgreSQL 9.2
 */
@@ -84,6 +84,10 @@ DROP INDEX "FormulaVR"."idx_rs_pkDescend"
 
 -- Drop views section --------------------------------------------------- 
 
+DROP VIEW "FormulaVR"."V_AC_RTV_group20"
+;
+DROP VIEW "FormulaVR"."V_AC_RTV_group10"
+;
 DROP VIEW "FormulaVR"."V_TJ_RTV_tarjetasPrepago"
 ;
 DROP VIEW "FormulaVR"."V_CD_RTV_LocationClosedDays"
@@ -947,6 +951,47 @@ FROM
 -- COD.AUTOGENERADO. Para fijarlo copiar en el apartado 'Notes'...
 
  "FormulaVR"."T_TJ_tarjetasPrepago" "a"
+;
+
+CREATE VIEW "FormulaVR"."V_AC_RTV_group10"
+ AS 
+SELECT 
+      a.location_id
+    , a.computername
+    , a.aaaa_mm_dd AS start_date
+    , substring(aaaa_mm_dd_hh_m0,12,2) || Right(aaaa_mm_dd_hh_m0,2) AS start_time
+
+FROM "FormulaVR"."V_AC_RTV_activityCockpits" as a
+WHERE a.location_id != ''
+GROUP BY 
+      a.location_id
+    , a.computername
+    , a.aaaa_mm_dd
+    , substring(aaaa_mm_dd_hh_m0,12,2) || Right(aaaa_mm_dd_hh_m0,2)
+ORDER BY 
+      a.location_id
+    , a.computername
+    , a.aaaa_mm_dd
+    , substring(aaaa_mm_dd_hh_m0,12,2) || Right(aaaa_mm_dd_hh_m0,2)
+
+;
+
+CREATE VIEW "FormulaVR"."V_AC_RTV_group20"
+ AS 
+SELECT 
+      a.location_id
+    , a.start_date
+    , a.start_time
+    , Count(a.computername) AS ncp
+FROM "FormulaVR"."V_AC_RTV_group10" as a
+GROUP BY 
+      a.location_id
+    , a.start_date
+    , a.start_time
+ORDER BY 
+      a.location_id
+    , a.start_date
+    , a.start_time
 ;
 
 
