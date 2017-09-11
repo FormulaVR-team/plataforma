@@ -1,4 +1,4 @@
-angular.module('laAplicacion', ['ui.router', 'commonServices_module', 'ngMaterial', 'ngMessages', 'angular-md5', 'ngSanitize', 'chart.js'])
+angular.module('laAplicacion', ['ui.router', 'commonServices_module', 'ngMaterial', 'ngMessages', 'angular-md5', 'ngSanitize', 'chart.js', 'ngSlimScroll'])
 .config(function ($stateProvider, $urlRouterProvider, $mdThemingProvider, $mdDateLocaleProvider) {
 	var fvrRedMap = $mdThemingProvider.extendPalette('red', {
 			'500': '#CE1417',
@@ -12,7 +12,7 @@ angular.module('laAplicacion', ['ui.router', 'commonServices_module', 'ngMateria
 $mdThemingProvider
 	.theme('default')
 	.primaryPalette('fvrRed',{'default': '500'})
-	.accentPalette('light-blue',{'default': '500'})
+	.accentPalette('blue-grey',{'default': '900'})
 	.warnPalette('orange',{'default': '500'})
 	.backgroundPalette('grey')
 	;

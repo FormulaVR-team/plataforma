@@ -9,16 +9,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 
 <div name="RsDSPFIL_form">
-	<div class="row">
-		<div class="col-xs-12" style="padding: 0px; min-height: 40px;">
-
-		<div dynamic="adminMenu"></div>
-
-		</div>
-	</div>
-
-
-	<div class="row">
+	<div class="row" style="margin-top: 25px;">
 
 		<div class="col-xs-12 col-sm-6">
 			<!-- <h3 style="margin-top: 10px;">Mis reservas</h3> -->
@@ -27,9 +18,9 @@
 		<div class="col-xs-12 col-sm-6" style="text-align: right">
 			<span dynamic="exportLink" style="display: inline-block"></span>
 			<span> <!-- class="{{ actionForm.rs_US_is_admin === 'A' ? '' : 'hide' }}" -->
-			<md-button class="md-raised md-primary" ng-click="gamingModule()" title="Resultados"><md-icon> extension </md-icon> Resultados </md-button>
+			<md-button class="md-raised md-accent padding-10" ng-click="gamingModule()" title="Resultados"><md-icon> extension </md-icon> Resultados </md-button>
 			</span>
-			<md-button class="md-raised md-accent" ng-click="initReg()" data-toggle="modal" data-target="#rsDSPFIL_ADDRCD_modal" title="<bean:message key="common.client.nuevo"/>"><md-icon> add </md-icon> Nueva reserva </md-button>
+			<md-button class="md-raised md-primary padding-10" ng-click="initReg()" data-toggle="modal" data-target="#rsDSPFIL_ADDRCD_modal" title="<bean:message key="common.client.nuevo"/>"><md-icon> add </md-icon> Nueva reserva </md-button>
 		</div>
 
 	</div>

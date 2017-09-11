@@ -159,7 +159,7 @@
 									Siguiente
 								</md-button>
 								<md-button class="md-primary btn-lnk" ng-click="forgotPass()" style="float: left;font-size: 12px;">
-								¿Has olvidado tu contraseña?
+								Obtener contraseña
 								</md-button>
 							</md-card-actions>
 
