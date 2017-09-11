@@ -414,6 +414,11 @@ public class FvrServlet extends HttpServlet {
         com.fvr.ts_timeSlices.bean.TsBeanFiltro flt_ts = new com.fvr.ts_timeSlices.bean.TsBeanFiltro();
         com.fvr.ts_timeSlices.bean.TsBean[] rgs_ts = null;
         
+        // TIENE TRUCO!!!
+        com.fvr.ac_activityCockpits.db.AcAccesoBaseDatos dao_ac = new com.fvr.ac_activityCockpits.db.AcAccesoBaseDatos();
+        com.fvr.ts_timeSlices.bean.TsBeanFiltro          flt_ac = new com.fvr.ts_timeSlices.bean.TsBeanFiltro();
+        com.fvr.ts_timeSlices.bean.TsBean[]              rgs_ac = null;	
+        
         com.fvr.tt_timeTableReference.db.TtAccesoBaseDatos dao_tt = new com.fvr.tt_timeTableReference.db.TtAccesoBaseDatos();
 		com.fvr.tt_timeTableReference.bean.TtBeanFiltro flt_tt = new com.fvr.tt_timeTableReference.bean.TtBeanFiltro();
         com.fvr.tt_timeTableReference.bean.TtBean[] rgs_tt = null;
@@ -427,15 +432,22 @@ public class FvrServlet extends HttpServlet {
 			flt_tt.setTt_location_id(location_id);
 			flt_tt.setTt_day_type("NORMAL");
 			rgs_tt = dao_tt.tt_getSeq(dataBase, new ConfigPantalla(Integer.MAX_VALUE), flt_tt );
+			
+	        flt_ac.setTs_RS_location_id(location_id);
+	        flt_ac.setTs_start_date(start_date);
+			flt_ac.setTs_start_time(start_time);
+	        rgs_ac = dao_ac.ac_getSeq_SumLocFecHor(dataBase, new ConfigPantalla(Integer.MAX_VALUE), flt_ac);
 
 		} catch (StExcepcion e) {
 			responder(request, response, false, e.getMessage());
 			return;
 		}
 
+        String actividad = dao_ts.beanArray2json(rgs_ac).toString();
         String ocupacion = dao_ts.beanArray2json(rgs_ts).toString();
         String horario = dao_tt.beanArray2json(rgs_tt).toString();
         JSONObject json = new JSONObject();
+        json.put("actividad", actividad);
         json.put("ocupacion", ocupacion);
         json.put("horario", horario);
 

@@ -47,8 +47,8 @@ angular
 					///////////////////////////////////////////////////////////////////////
 					// Funciones internas:
 
-					function load_chart( lst_ocupacion, lst_horario ) {
-						var cols = lst_horario.registros.length, reservas = [], plazas = [], columnas = [];
+					function load_chart( lst_horario, lst_ocupacion, lst_actividad ) {
+						var cols = lst_horario.registros.length, reservas = [], plazas = [], actividad = [], columnas = [];
 						for ( var col = 0; col < cols; col++ ) {
 							
 if ( lst_horario.registros[col].tt_start_time >= "0900" && lst_horario.registros[col].tt_start_time <= "2200" ) {
@@ -64,7 +64,17 @@ if ( lst_horario.registros[col].tt_start_time >= "0900" && lst_horario.registros
 										nPlazas   += parseInt( lst_ocupacion.registros[i].ts_RS_places );
 									}
 								}
-								// Valor de cada columna:
+								
+								var isDistintoDeCeroActividad = false;
+								var nActividad = 0;
+								for ( var i = 0; i< lst_actividad.registros.length; i++ ) {
+									if ( lst_actividad.registros[i].ts_start_time === columnas[ columnas.length-1 ]  ) {
+										isDistintoDeCeroActividad = true;
+										nActividad += parseInt( lst_actividad.registros[i].ts_RS_quantity );
+									}
+								}
+								
+								// Valores de cada columna:
 								if ( isDistintoDeCero  ) {
 									reservas[ reservas.length ] = nReservas;
 									plazas[ plazas.length ] = nPlazas;
@@ -72,14 +82,19 @@ if ( lst_horario.registros[col].tt_start_time >= "0900" && lst_horario.registros
 									reservas[ reservas.length ] = 0;
 									plazas[ plazas.length ] = 0;
 								}
+								if ( isDistintoDeCeroActividad  ) {
+									actividad[ actividad.length ] = nActividad;
+								} else {
+									actividad[ actividad.length ] = 0;
+								}
 								////////////
 
 }
 
 						}
 						$scope.labels = columnas;
-						$scope.series = ['Reservas','Plazas'];
-						$scope.data = [reservas,plazas];
+						$scope.series = ['Reservas','Plazas','Actividad'];
+						$scope.data = [reservas,plazas,actividad];
 						
 						///////////////////////////////////////////////////////////////////////
 						  //$scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
@@ -100,7 +115,7 @@ if ( lst_horario.registros[col].tt_start_time >= "0900" && lst_horario.registros
 							.then( 
 								function(response) {
 									if (response.rc === 'OK') { 
-										load_chart( response.text.ocupacion, response.text.horario );
+										load_chart( response.text.horario, response.text.ocupacion, response.text.actividad );
 									} else { 
 										alert( "ERROR: " + response.text); }
 									}

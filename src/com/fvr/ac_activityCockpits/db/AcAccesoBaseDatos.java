@@ -1,14 +1,5 @@
 ﻿package com.fvr.ac_activityCockpits.db;
 
-import com.fvr.FuentesDeDatos.BDConexion;
-import com.fvr._comun.ConfigPantalla;
-import com.fvr._comun.StExcepcion;
-import com.fvr._comun.Subrutinas;
-import com.fvr._comun._K;
-import com.fvr._comun.RstAplicar;
-import com.fvr._comun.StBean;
-import com.fvr.ac_activityCockpits.bean.AcBean;
-import com.fvr.ac_activityCockpits.bean.AcBeanFiltro;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,6 +10,19 @@ import java.io.UnsupportedEncodingException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import com.fvr.FuentesDeDatos.BDConexion;
+import com.fvr._comun.ConfigPantalla;
+import com.fvr._comun.RstAplicar;
+import com.fvr._comun.StBean;
+import com.fvr._comun.StExcepcion;
+import com.fvr._comun.Subrutinas;
+import com.fvr._comun._K;
+import com.fvr.ac_activityCockpits.bean.AcBean;
+import com.fvr.ac_activityCockpits.bean.AcBeanFiltro;
+import com.fvr.ts_timeSlices.bean.TsBean;
+import com.fvr.ts_timeSlices.bean.TsBeanFiltro;
+
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -27,6 +31,7 @@ public class AcAccesoBaseDatos {
     public String tabla   = "T_AC_activityCockpits";
     public String lf_UPD  = "T_AC_activityCockpits";
     public String lf_RTV  = "V_AC_RTV_activityCockpits";
+    public String lf_RTV_group20 = "V_AC_RTV_group20";
 
     ////////////////////////////////////////////////////////////////////
     // Opcionalmente se pueden conectar las funciones CRUD+getRcd+getSeq
@@ -703,4 +708,84 @@ public class AcAccesoBaseDatos {
 
 	}
 /////////////////////////////////////////////////
+
+    public TsBean[] ac_getSeq_SumLocFecHor(BDConexion dataBase, ConfigPantalla extCfg, TsBeanFiltro rst ) throws StExcepcion {
+        TsBean[] filasRecuperadas = null;
+        ///////////////////////////////////////////////////////
+        ConfigPantalla cfg = (extCfg!=null)?extCfg:new ConfigPantalla();
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////
+        if (dataBase==null) dataBase= new BDConexion();
+        ///////////////////////////////////////////////////////
+        String sql =
+                "SELECT \"A\".*" +
+                " FROM \"" + Subrutinas.getG_DB_LIBDAT(dataBase.getCurrentDb()) + "\".\""  + this.lf_RTV_group20 + "\" \"A\""
+                ;
+        String sqlWhere = "";
+        ///////////////////////////////////////////////////////
+        // Filtros de la lista:
+        RstAplicar fltOper = new RstAplicar(dataBase.getRwUpperCase(),dataBase.getRwLike(),dataBase.getRwAnyString());
+	
+    	sqlWhere = fltOper.getCHAR_EQ(rst.getTs_RS_location_id(),"location_id",sqlWhere);   // RS_location_id
+    	sqlWhere = fltOper.getCHAR_EQ(rst.getTs_start_date(),"start_date",sqlWhere);   // start_date
+    	sqlWhere = fltOper.getCHAR_EQ(rst.getTs_start_time(),"start_time",sqlWhere);   // start_time
+        //////////////////////////////////////////////////////
+
+        //////////////////////////////////////////////////////
+        sql += sqlWhere;
+        // Campos de ordenación:
+//        sql += " ORDER BY \"location_id\" ASC, \"start_date\" ASC, \"start_time\" ASC";
+        //////////////////////////////////////////////////////
+        ResultSet rs = null;
+        TsBean regRead = null;
+        ArrayList<TsBean> arrayTmp = new ArrayList<TsBean>();
+        //////////////////////////////////////////////
+        try {
+
+			// Código para postgres
+            sql += " LIMIT "  + cfg.getFilasGrid();
+            sql += " OFFSET " + (cfg.getFilaInicioGrid()-1);
+            rs = dataBase.executeQuery(sql);
+            if ( rs != null ) {
+                int filas = 0;
+                  if ( rs.next() ) {
+                    do {
+                        regRead = new TsBean();
+
+        // REUTILIZAMOS estos campos para no tener que hacer otro bean específico. CUIDADO!!
+		regRead.setTs_RS_location_id( rs.getString("location_id") ); regRead.setTs_RS_location_id( (regRead.getTs_RS_location_id() == null)?"":regRead.getTs_RS_location_id().trim() ); // RS_location_id
+		regRead.setTs_start_date( rs.getString("start_date") ); regRead.setTs_start_date( (regRead.getTs_start_date() == null)?"":regRead.getTs_start_date().trim() ); // start_date
+		regRead.setTs_start_time( rs.getString("start_time") ); regRead.setTs_start_time( (regRead.getTs_start_time() == null)?"":regRead.getTs_start_time().trim() ); // start_time
+		regRead.setTs_RS_quantity( rs.getLong("ncp") );  // ncp
+
+                        arrayTmp.add( regRead );
+
+                        filas++;
+                    } while( rs.next() && filas < (  (cfg!=null)?cfg.getFilasGrid():(new ConfigPantalla()).getFilasGrid() ) );
+                }
+            }
+        } catch (SQLException ex0) {
+            throw new StExcepcion(ex0.getMessage());
+        } catch (StExcepcion ex1) {
+            throw new StExcepcion(ex1.getMessage());
+        } finally {
+            try {
+                if ( rs != null ) { BDConexion.rsClose( dataBase, rs ); }
+            } catch (SQLException ex2) {
+                throw new StExcepcion(ex2.getMessage());
+            }
+        }
+        //////////////////////////////////////////////
+        if ( cfg.isExportar() ) {
+            getSeq_Sub_ExportFin();
+        }
+        //////////////////////////////////////////////
+        filasRecuperadas = new TsBean[arrayTmp.size()];
+        filasRecuperadas = arrayTmp.toArray(filasRecuperadas);
+        return filasRecuperadas;
+    }
+
 }
