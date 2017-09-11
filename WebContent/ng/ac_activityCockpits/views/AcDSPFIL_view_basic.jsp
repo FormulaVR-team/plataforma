@@ -190,8 +190,9 @@
 		<table class="table table-striped table-hover">
 			<thead>
 				<tr>
-					<th>location_id</th>
-					<th>LO_name</th>
+					<th>&nbsp;<!-- {{actionForm.filasMarcadas}}&nbsp;{{actionForm.clavesMarcadas}} --></th>
+					<!-- <th>location_id</th> -->
+					<th>location</th>
 					<th>computername</th>
 					<%-- <th>filename</th>
 					<th>aaaa_mm</th>
@@ -206,7 +207,8 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="reg in actionForm.grid" ng-click="putRecordAsTheCurrent(reg)" data-toggle="modal" data-target="#acDSPFIL_EDTRCD_modal">
-					<td>{{reg.ac_location_id}}&nbsp;</td>
+					<td><input type="checkbox" onclick="event.stopPropagation();" ng-model="actionForm.filasMarcadas[$index]" ng-click="setClaveMarcada( this.reg.key, $index );"/></td>
+					<!-- <td>{{reg.ac_location_id}}&nbsp;</td> -->
 					<td>{{reg.ac_LO_name}}&nbsp;</td>
 					<td>{{reg.ac_computername}}&nbsp;</td>
 					<%-- <td>{{reg.ac_filename}}&nbsp;</td>
