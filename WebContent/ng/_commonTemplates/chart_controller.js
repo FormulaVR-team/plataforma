@@ -47,46 +47,33 @@ angular
 					///////////////////////////////////////////////////////////////////////
 					// Funciones internas:
 
-					function load_chart( lst_horario, lst_ocupacion, lst_actividad ) {
+					function load_chart( lst_horario, lst_ocupacion, lst_actividad, min_startdate, max_startdate ) {
 						var cols = lst_horario.registros.length, reservas = [], plazas = [], actividad = [], columnas = [];
 						for ( var col = 0; col < cols; col++ ) {
 							
-if ( lst_horario.registros[col].tt_start_time >= "0900" && lst_horario.registros[col].tt_start_time <= "2200" ) {
+if ( lst_horario.registros[col].tt_start_time >= min_startdate && lst_horario.registros[col].tt_start_time <= max_startdate ) {
 
 								////////////
 								columnas[ columnas.length ] = lst_horario.registros[col].tt_start_time; // padLeft(col,2);
-								var isDistintoDeCero = false;
-								var nReservas = 0, nPlazas = 0;
+								var nReservas = 0, nPlazas = 0, nActividad = 0;
 								for ( var i = 0; i< lst_ocupacion.registros.length; i++ ) {
 									if ( lst_ocupacion.registros[i].ts_start_time === columnas[ columnas.length-1 ]  ) {
-										isDistintoDeCero = true;
 										nReservas += parseInt( lst_ocupacion.registros[i].ts_RS_quantity );
 										nPlazas   += parseInt( lst_ocupacion.registros[i].ts_RS_places );
+										break;
 									}
 								}
-								
-								var isDistintoDeCeroActividad = false;
-								var nActividad = 0;
 								for ( var i = 0; i< lst_actividad.registros.length; i++ ) {
 									if ( lst_actividad.registros[i].ts_start_time === columnas[ columnas.length-1 ]  ) {
-										isDistintoDeCeroActividad = true;
 										nActividad += parseInt( lst_actividad.registros[i].ts_RS_quantity );
+										break;
 									}
 								}
-								
+
 								// Valores de cada columna:
-								if ( isDistintoDeCero  ) {
-									reservas[ reservas.length ] = nReservas;
-									plazas[ plazas.length ] = nPlazas;
-								} else {
-									reservas[ reservas.length ] = 0;
-									plazas[ plazas.length ] = 0;
-								}
-								if ( isDistintoDeCeroActividad  ) {
-									actividad[ actividad.length ] = nActividad;
-								} else {
-									actividad[ actividad.length ] = 0;
-								}
+								reservas[ reservas.length ] = nReservas;
+								plazas[ plazas.length ] = nPlazas;
+								actividad[ actividad.length ] = nActividad;
 								////////////
 
 }
@@ -115,7 +102,7 @@ if ( lst_horario.registros[col].tt_start_time >= "0900" && lst_horario.registros
 							.then( 
 								function(response) {
 									if (response.rc === 'OK') { 
-										load_chart( response.text.horario, response.text.ocupacion, response.text.actividad );
+										load_chart( response.text.horario, response.text.ocupacion, response.text.actividad, response.text.chart_min_startdate, response.text.chart_max_startdate );
 									} else { 
 										alert( "ERROR: " + response.text); }
 									}

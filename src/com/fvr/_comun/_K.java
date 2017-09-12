@@ -42,6 +42,11 @@ public class _K {
 	public static final String ROL_FRANQUICIA = "F";
 	public static final String ROL_USER = "U";
 	public static final String PWD_EN_BLANCO = "d41d8cd98f00b204e9800998ecf8427e";
+	
+	public static final String CHART_min_startdate_REF = "0900";	// Mínimo por defecto para escala de gráfico horario.
+	public static final String CHART_max_startdate_REF = "2200";	// Máximo por defecto para escala de gráfico horario.
+	public static final String PA_CHART_min_startdate = "chart_min_startdate";	// Mínimo para escala de gráfico horario.
+	public static final String PA_CHART_max_startdate = "chart_max_startdate";	// Máximo para escala de gráfico horario.
 
 	public static final String PA_KEY_VERSION = "VERSION";											// Fecha juliana: 17148
 	

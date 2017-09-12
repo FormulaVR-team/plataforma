@@ -408,7 +408,10 @@ public class FvrServlet extends HttpServlet {
 		
 		BDConexion dataBase = new Subrutinas().getBDConexion(request);
 
-		// Devuelve el número de reservas pagadas de una location para OPCIONALMENTE una fecha y una hora
+        String chart_min_startdate = Subrutinas.getDBValueFromKey(dataBase, location_id, _K.PA_CHART_min_startdate);
+        String chart_max_startdate = Subrutinas.getDBValueFromKey(dataBase, location_id, _K.PA_CHART_max_startdate);
+
+        // Devuelve el número de reservas pagadas de una location para OPCIONALMENTE una fecha y una hora
 
 		com.fvr.ts_timeSlices.db.TsAccesoBaseDatos dao_ts = new com.fvr.ts_timeSlices.db.TsAccesoBaseDatos();
         com.fvr.ts_timeSlices.bean.TsBeanFiltro flt_ts = new com.fvr.ts_timeSlices.bean.TsBeanFiltro();
@@ -450,6 +453,8 @@ public class FvrServlet extends HttpServlet {
         json.put("actividad", actividad);
         json.put("ocupacion", ocupacion);
         json.put("horario", horario);
+        json.put("chart_min_startdate", chart_min_startdate==null?_K.CHART_min_startdate_REF:chart_min_startdate);
+        json.put("chart_max_startdate", chart_max_startdate==null?_K.CHART_max_startdate_REF:chart_max_startdate);
 
 		responder(request, response, true, json.toString());
 	}

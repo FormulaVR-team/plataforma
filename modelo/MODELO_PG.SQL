@@ -1,6 +1,6 @@
 ﻿/*
 Created: 01/05/2017
-Modified: 11/09/2017
+Modified: 12/09/2017
 Model: FormulaVR_V10_PostgreSQL
 Database: PostgreSQL 9.2
 */
@@ -1485,6 +1485,8 @@ INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'S
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'MG_URL', 'https://driver.formulavr.net/');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'RS_LAST_KEY', '11840001');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'CENTRAL', 'SYS', 'RS_MIN_FEC', '2000-12-31');
+INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'CENTRAL', 'SYS', 'chart_min_startdate', '0900');
+INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'CENTRAL', 'SYS', 'chart_max_startdate', '2200');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'DOMAIN', 'formulavr.net');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'URL_WEB_PAGE', 'https://www.formulavr.net');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'SMTP_HOST_NAME', 'smtp.formulavr.net');
