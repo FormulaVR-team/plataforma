@@ -85,7 +85,7 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<%-- Caja de filtros inicio --%>
-			<div id="acFilterBox" class="box" style="display:none;">
+			<div id="tsFilterBox" class="box" style="display:none;">
 				<div class="row row-filter">
 
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
