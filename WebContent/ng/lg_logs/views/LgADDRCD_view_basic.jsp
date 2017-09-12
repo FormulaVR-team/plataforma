@@ -9,36 +9,45 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 
 <div name="LgADDRCD_form">
-    <div class="modal-header">
-		<ul>
-			<li>logon_USR &nbsp; {{actionForm.logon_USR}}</li>
-		</ul>
+		<div class="row margin-0">
 
-			<md-input-container>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>serial</label>
 				<input type="text" ng-model="actionForm.lg_serial" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>text_1</label>
 				<input type="text" ng-model="actionForm.lg_text_1" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+			<md-input-container class="md-block">
 				<label>text_2</label>
 				<input type="text" ng-model="actionForm.lg_text_2" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>text_3</label>
 				<input type="text" ng-model="actionForm.lg_text_3" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<md-input-container class="md-block">
 				<label>json</label>
 				<input type="text" ng-model="actionForm.lg_json" />
 			</md-input-container>
+			</div>
 
 
-    </div>
-    <div class="modal-footer">
-        <input type="button" class="btn btn-primary" value="Aceptar" ng-click="agregar()"/>
-    </div>
+	</div>
+	<div class="row margin-0">
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2 pull-right">
+				<md-button class="md-raised md-primary btn-mfw" ng-click="agregar()">Aceptar</md-button>
+			</div>
+		</div>
 </div>
 

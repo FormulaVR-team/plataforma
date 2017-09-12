@@ -156,25 +156,19 @@
 <!-- Panel ADDRCD inicio -->	
 <div class="container">
   <!-- Modal -->
-  <div class="modal fade" id="cdDSPFIL_ADDRCD_modal" role="dialog" data-backdrop="false">
+  <div class="modal fade modal-full-width" id="cdDSPFIL_ADDRCD_modal" role="dialog" data-backdrop="false">
     <div class="modal-dialog">
-    
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Agregar: LocationClosedDays</h4>
+          <button type="button" class="close" data-dismiss="modal">
+							<i class="mfw-icon material-icons">clear</i>
+					</button>
+          <h2 class="modal-title">Agregar: LocationClosedDays</h2>
         </div>
         <div class="modal-body">
 			<span ng-include="'ng/cd_LocationClosedDays/views/CdADDRCD_view_basic.jsp'" />
         </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        </div>
-
-      </div>
-      
+      </div>      
     </div>
   </div>
 </div>
@@ -183,25 +177,19 @@
 <!-- Panel EDTRCD inicio -->	
 <div class="container">
   <!-- Modal -->
-  <div class="modal fade" id="cdDSPFIL_EDTRCD_modal" role="dialog" data-backdrop="false">
+  <div class="modal fade modal-full-width" id="cdDSPFIL_EDTRCD_modal" role="dialog" data-backdrop="false">
     <div class="modal-dialog">
-    
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modificar: LocationClosedDays</h4>
+          <button type="button" class="close" data-dismiss="modal">
+							<i class="mfw-icon material-icons">clear</i>
+					</button>
+          <h2 class="modal-title">Modificar: LocationClosedDays</h2>
         </div>
         <div class="modal-body">
 			<span ng-include="'ng/cd_LocationClosedDays/views/CdEDTRCD_view_basic.jsp'" />
         </div>
- 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        </div>
-
-      </div>
-      
+      </div> 
     </div>
   </div>
 </div>
