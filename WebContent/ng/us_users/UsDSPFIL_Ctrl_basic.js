@@ -428,6 +428,7 @@ angular
 	// Panel empotrado de "EDTRCD" (por si no se quiere tener esta función en una vista independiente)
 					$scope.copiar = function() {
 						$scope.initKey();
+						$('#usDSPFIL_EDTRCD_modal').modal('hide');
 						$('#usDSPFIL_ADDRCD_modal').modal('show');
 					};
 					$scope.cambiar = function() {
@@ -445,6 +446,7 @@ angular
 									function(response) {
 
 										if (response.data.rc === 'OK') {
+											$('#usDSPFIL_EDTRCD_modal').modal('hide');
 											$mdToast.showSimple( "Registro cambiado" );
 											// $('.modal-backdrop').remove();
 											// $state.reload();
@@ -473,6 +475,7 @@ angular
 									function(response) {
 
 										if (response.data.rc === 'OK') {
+											$('#usDSPFIL_EDTRCD_modal').modal('hide');
 											$mdToast.showSimple( "Registro suprimido" );
 											// $('.modal-backdrop').remove();
 											// $state.reload();
