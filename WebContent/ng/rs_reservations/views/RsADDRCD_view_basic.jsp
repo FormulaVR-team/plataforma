@@ -134,7 +134,7 @@
 	
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
 			     		<md-input-container class="md-block input-md">
-							<label>Notas o comentario (opcional)</label>
+							<label>Comentario (opcional)</label>
 							<md-icon> message </md-icon>
 							<textarea name="rs_note" md-maxlength="200" cols="100" rows="1" ng-model="actionForm.rs_note"></textarea>
 						    <div ng-messages="RsADDRCD_form.rs_note.$error" ng-show="RsADDRCD_form.rs_note.$dirty">
@@ -145,9 +145,9 @@
 	
 		     		<div class="col-xs-12 col-sm-6 col-md-4">
 						<md-input-container class="md-block input-md">
-							<label>Cupón promocional (opcional)</label>
+							<label>Cupón promo. (opcional)</label>
 							<md-icon> card_giftcard </md-icon>
-							<input type="text" ng-model="actionForm.rs_coupon_id" ng-change="//getprice();"/>
+							<input type="text" ng-model="actionForm.rs_coupon_id" ng-change="//getprice();" style="background-color: rgb(195,250,10);"/>
 						</md-input-container>
 		     		</div>
 	
