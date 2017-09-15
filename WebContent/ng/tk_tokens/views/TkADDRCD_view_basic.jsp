@@ -9,41 +9,52 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 
 <div name="TkADDRCD_form">
-    <div class="modal-header">
-		<ul>
-			<li>logon_USR &nbsp; {{actionForm.logon_USR}}</li>
-		</ul>
+	<div class="row margin-0">
+		
 
-
-			<md-input-container>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>sincro</label>
 				<input type="text" ng-model="actionForm.tk_sincro" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>mark</label>
 				<input type="text" ng-model="actionForm.tk_mark" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>is_deleted</label>
 				<input type="text" ng-model="actionForm.tk_is_deleted" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>author</label>
 				<input type="text" ng-model="actionForm.tk_author" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>token_id</label>
 				<input type="text" ng-model="actionForm.tk_token_id" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>json</label>
 				<input type="text" ng-model="actionForm.tk_json" />
 			</md-input-container>
+			</div>
 
 
     </div>
-    <div class="modal-footer">
-        <input type="button" class="btn btn-primary" value="Aceptar" ng-click="agregar()"/>
-    </div>
+	<div class="row margin-0">
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2 pull-right">
+			<md-button class="md-raised md-primary btn-mfw" ng-click="agregar()">Aceptar</md-button>
+		</div>
+	</div>
 </div>
 

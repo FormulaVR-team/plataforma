@@ -9,26 +9,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 
 <div name="UsADDRCD_form">
-	<div class="row">
-		<div class="col-xs-12" style="padding: 0px; min-height: 50px;">
-
-		<div dynamic="adminMenu"></div>
-
-		</div>
-	</div>
-<!-- 
-	<div class="row">
-		<div class="col-xs-12">
-			<h3>Mis datos</h3>
-		</div>
-	</div>
- -->
-	<div class="row">
+		<div class="row margin-0">
 		
 		<div class="col-xs-12 col-sm-8" style="margin-top: 10px;">
 
 			<div class="row" style="margin: 15px 0px">
-     				<div class="col-xs-12 box" style="padding: 15px 15px 25px;">
+     				<div class="col-xs-12" style="padding: 15px 15px 25px;">
      				<div class="row">
      			<div class="col-xs-12 col-sm-6 col-md-4">
      				<md-input-container class="md-block">

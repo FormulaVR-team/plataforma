@@ -9,53 +9,70 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 
 <div name="TjADDRCD_form">
-    <div class="modal-header">
-		<ul>
-			<li>logon_USR &nbsp; {{actionForm.logon_USR}}</li>
-		</ul>
+		<div class="row margin-0">
 
 
-			<md-input-container>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>sincro</label>
 				<input type="text" ng-model="actionForm.tj_sincro" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>mark</label>
 				<input type="text" ng-model="actionForm.tj_mark" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>is_deleted</label>
 				<input type="text" ng-model="actionForm.tj_is_deleted" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>author</label>
 				<input type="text" ng-model="actionForm.tj_author" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>card_id</label>
 				<input type="text" ng-model="actionForm.tj_card_id" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>balance_initial</label>
 				<input type="text" ng-model="actionForm.tj_balance_initial" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>balance_current</label>
 				<input type="text" ng-model="actionForm.tj_balance_current" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>last_sale_amount</label>
 				<input type="text" ng-model="actionForm.tj_last_sale_amount" />
 			</md-input-container>
-			<md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container class="md-block">
 				<label>last_sale_moment</label>
 				<input type="text" ng-model="actionForm.tj_last_sale_moment" />
 			</md-input-container>
+			</div>
 
 
     </div>
-    <div class="modal-footer">
-        <input type="button" class="btn btn-primary" value="Aceptar" ng-click="agregar()"/>
-    </div>
+	<div class="row margin-0">
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2 pull-right">
+			<md-button class="md-raised md-primary btn-mfw" ng-click="agregar()">Aceptar</md-button>
+		</div>
+	</div>
 </div>
 

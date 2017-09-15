@@ -196,25 +196,19 @@
 <!-- Panel ADDRCD inicio -->	
 <div class="container">
   <!-- Modal -->
-  <div class="modal fade" id="ttDSPFIL_ADDRCD_modal" role="dialog" data-backdrop="false">
+  <div class="modal fade modal-full-width" id="ttDSPFIL_ADDRCD_modal" role="dialog" data-backdrop="false">
     <div class="modal-dialog">
-    
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Agregar: timeTableReference</h4>
+          <button type="button" class="close" data-dismiss="modal">
+			<i class="mfw-icon material-icons">clear</i>
+		  </button>
+          <h2 class="modal-title">Agregar: timeTableReference</h2>
         </div>
         <div class="modal-body">
 			<span ng-include="'ng/tt_timeTableReference/views/TtADDRCD_view_basic.jsp'" />
         </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        </div>
-
-      </div>
-      
+      </div>      
     </div>
   </div>
 </div>
@@ -223,25 +217,19 @@
 <!-- Panel EDTRCD inicio -->	
 <div class="container">
   <!-- Modal -->
-  <div class="modal fade" id="ttDSPFIL_EDTRCD_modal" role="dialog" data-backdrop="false">
+  <div class="modal fade modal-full-width" id="ttDSPFIL_EDTRCD_modal" role="dialog" data-backdrop="false">
     <div class="modal-dialog">
-    
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modificar: timeTableReference</h4>
+          <button type="button" class="close" data-dismiss="modal">
+			<i class="mfw-icon material-icons">clear</i>
+		  </button>
+          <h2 class="modal-title">Modificar: timeTableReference</h2>
         </div>
         <div class="modal-body">
 			<span ng-include="'ng/tt_timeTableReference/views/TtEDTRCD_view_basic.jsp'" />
         </div>
- 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        </div>
-
-      </div>
-      
+      </div>      
     </div>
   </div>
 </div>
