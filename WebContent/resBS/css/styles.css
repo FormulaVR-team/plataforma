@@ -316,7 +316,9 @@ h1.page-title {
 }
 .app-sidebar .sidebar-content .nav-text {
     display: inline;
-}.md-button .md-ripple-container {
+    text-transform: uppercase;
+}
+.md-button .md-ripple-container {
     border-radius: 2px;
     background-clip: padding-box;
     overflow: hidden;
