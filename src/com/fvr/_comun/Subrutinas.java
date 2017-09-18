@@ -172,7 +172,7 @@ public class Subrutinas {
 		///////////////////////////////////////////////////
 		return resultado;
 	}
-	public void Autenticacion_FS() {
+	public void Autenticacion_FS(String camino_red, String usr_red, String pwd_red) {
 		/////////////////////////////////////////
 		// En OR: 2012/05/25 Se sospecha que esto provoca "cuelgues" e impide el resto del proceso.
 		// La solución ha sido incluirlo en un servlet de "startup". 
@@ -198,13 +198,16 @@ public class Subrutinas {
 
 		System.out.println("**** Autenticacion_FS() >>>>>>");
 		/////////////////////
+		if ( camino_red == null || camino_red.trim().length() < 1 ) { return; }
+		if ( usr_red == null || usr_red.trim().length() < 1 ) { return; }
+		if ( pwd_red == null || pwd_red.trim().length() < 1 ) { return; }
 		BDConexion bd = null;
 		try {
 			bd = new BDConexion();
 			if ( bd != null ) {
-				String camino_red = getDBValueFromKey( bd, "SEG_pathDocs_NETUSE" );
-				String usr_red    = getDBValueFromKey( bd, "SEG_pathDocs_USR");
-				String pwd_red    = getDBValueFromKey( bd, "SEG_pathDocs_PWD");
+//				String camino_red = getDBValueFromKey( bd, "SEG_pathDocs_NETUSE" );
+//				String usr_red    = getDBValueFromKey( bd, "SEG_pathDocs_USR");
+//				String pwd_red    = getDBValueFromKey( bd, "SEG_pathDocs_PWD");
 				String strError   = "";
 				try {
 					System.out.println( "Aportando credenciales para " + camino_red );
