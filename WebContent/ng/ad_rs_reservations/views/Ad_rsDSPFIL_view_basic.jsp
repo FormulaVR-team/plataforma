@@ -416,6 +416,11 @@
 					<!-- <th>LO_name</th> -->
 					<th>avtr</th>
 					<th>flag</th>
+					<th>date time minutes</th>
+					<!-- <th>start_time</th> -->
+					<!-- <th>duration_minutes</th> -->
+					<th>places</th>
+					<th>amount</th>
 					<th>nick</th>
 					<th>mail</th>
 					<!-- <th>US_is_admin</th> -->
@@ -439,13 +444,8 @@
 					<!-- <th>PT_isPercent3</th> -->
 					<!-- <th>PT_amount3</th> -->
 					<th>coupon</th>
-					<th>amount</th>
 					<!-- <th>currency</th> -->
 					<th>phone</th>
-					<th>date time minutes</th>
-					<!-- <th>start_time</th> -->
-					<!-- <th>duration_minutes</th> -->
-					<th>places</th>
 					<!-- <th>note</th> -->
 					<!-- <th>comment</th> -->
 					<!-- <th>json</th> -->
@@ -469,13 +469,16 @@
 					<!-- <td>{{reg.ad_rs_LO_name}}&nbsp;</td> -->
 					<td style="padding:0;"><img src="./FvrServlet?ACC=getUsrImg&BIN&USR={{reg.ad_rs_user_id}}" ></img></td>
 					<td style="padding:0;"><img src="./FvrServlet?ACC=getFlgImg&KPS={{reg.ad_rs_US_country_id}}" ></img></td>
+					<td>{{reg.ad_rs_start_date}}&nbsp;{{reg.ad_rs_start_time}}&nbsp;{{reg.ad_rs_PT_duration_minutes}}&nbsp;</td>
+					<td>{{reg.ad_rs_places}}&nbsp;</td>
+					<th style="text-align: right;"><h3 style="margin:0;">{{ reg.ad_rs_amount === 0 ? '' : reg.ad_rs_amount }}</h3></th>
 					<td>{{reg.ad_rs_US_nick | limitTo:'10'}}&nbsp;</td>
 					<td>{{reg.ad_rs_user_id}}&nbsp;</td>
 					<!-- <td>{{reg.ad_rs_US_is_admin}}&nbsp;</td> -->
 					<!-- <td>{{reg.ad_rs_US_first_name}}&nbsp;</td> -->
 					<!-- <td>{{reg.ad_rs_US_last_name}}&nbsp;</td> -->
 					<!-- <td>{{reg.ad_rs_product_id}}&nbsp;</td> -->
-					<td title="{{reg.ad_rs_product_id}}">{{reg.ad_rs_PT_name}}&nbsp;</td>
+					<td title="{{reg.ad_rs_product_id}} {{reg.ad_rs_PT_name}}">{{reg.ad_rs_PT_name | limitTo:'10'}}&nbsp;</td>
 					<!-- <td>{{reg.ad_rs_PT_deadline}}&nbsp;</td> -->
 					<!-- <td>{{reg.ad_rs_PT_isPercent}}&nbsp;</td> -->
 					<!-- <td>{{reg.ad_rs_PT_amount}}&nbsp;</td> -->
@@ -492,11 +495,8 @@
 					<!-- <td>{{reg.ad_rs_PT_isPercent3}}&nbsp;</td> -->
 					<!-- <td>{{reg.ad_rs_PT_amount3}}&nbsp;</td> -->
 					<td title="{{reg.ad_rs_coupon_id}}">{{reg.ad_rs_coupon_id | limitTo:'10'}}&nbsp;</td>
-					<th style="text-align: right;">{{ reg.ad_rs_amount === 0 ? '' : reg.ad_rs_amount }}&nbsp;</th>
 					<!-- <td>{{reg.ad_rs_currency}}&nbsp;</td> -->
 					<td>{{reg.ad_rs_phone}}&nbsp;</td>
-					<td>{{reg.ad_rs_start_date}}&nbsp;{{reg.ad_rs_start_time}}&nbsp;{{reg.ad_rs_PT_duration_minutes}}&nbsp;</td>
-					<td>{{reg.ad_rs_places}}&nbsp;</td>
 					<!-- <td>{{reg.ad_rs_note}}&nbsp;</td> -->
 					<!-- <td>{{reg.ad_rs_comment}}&nbsp;</td> -->
 					<!-- <td>{{reg.ad_rs_json}}&nbsp;</td> -->
