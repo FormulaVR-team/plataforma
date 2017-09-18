@@ -60,6 +60,7 @@ public class CpRCD_AF extends org.apache.struts.action.ActionForm {
 	public String cp_observation; // observation
 	public String cp_warning; // warning
 	public String cp_contact_service; // contact_service
+	public String cp_json; // json
     
 
     public CpRCD_AF() {
@@ -104,6 +105,7 @@ public class CpRCD_AF extends org.apache.struts.action.ActionForm {
 	Destino.setCp_observation( getCp_observation() ); // observation
 	Destino.setCp_warning( getCp_warning() ); // warning
 	Destino.setCp_contact_service( getCp_contact_service() ); // contact_service
+	Destino.setCp_json( getCp_json() ); // json
     }
     
     public void copyFrom(StBean beanOrigen) {
@@ -133,6 +135,7 @@ public class CpRCD_AF extends org.apache.struts.action.ActionForm {
 	setCp_observation( Origen.getCp_observation() ); // observation
 	setCp_warning( Origen.getCp_warning() ); // warning
 	setCp_contact_service( Origen.getCp_contact_service() ); // contact_service
+	setCp_json( Origen.getCp_json() ); // json
     }
     
     public void copyFrom(CpRCD_AF beanOrigen) {
@@ -175,6 +178,7 @@ public class CpRCD_AF extends org.apache.struts.action.ActionForm {
 	setCp_observation( Origen.getCp_observation() ); // observation
 	setCp_warning( Origen.getCp_warning() ); // warning
 	setCp_contact_service( Origen.getCp_contact_service() ); // contact_service
+	setCp_json( Origen.getCp_json() ); // json
     }
     
     public CpBeanFiltro getCp_filtro() { return cp_filtro; }
@@ -354,5 +358,10 @@ public class CpRCD_AF extends org.apache.struts.action.ActionForm {
 	public String getCp_contact_service() {return cp_contact_service;}
 	/** Set contact_service*/
 	public void setCp_contact_service(String cp_contact_service) {this.cp_contact_service = cp_contact_service;}
+
+	/** Get json*/
+	public String getCp_json() {return cp_json;}
+	/** Set json*/
+	public void setCp_json(String cp_json) {this.cp_json = cp_json;}
 
 }

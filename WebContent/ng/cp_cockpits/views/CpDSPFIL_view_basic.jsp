@@ -143,6 +143,12 @@
 							</md-select>
 						</md-input-container>
 					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+						<md-input-container>
+							<label>json</label>
+							<input type="text" ng-model="actionForm.cp_filtro.cp_json" />
+						</md-input-container>
+					</div>
 <!-- 
 					<md-input-container>
 						<label>asignation_order</label>
@@ -225,6 +231,7 @@
 	<!--
 	 				<th>contact_service</th>
 	 -->
+					<th>json</th>
 	 			</tr>
   		</thead>
   		<tbody>
@@ -261,6 +268,7 @@
 	<!--
 	 				<td>{{reg.cp_contact_service}}&nbsp;</td>
 	 -->
+					<td>{{reg.cp_json}}&nbsp;</td>
 	 			</tr>
   		</tbody>
   	</table>

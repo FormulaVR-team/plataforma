@@ -30,6 +30,7 @@ public class CpBean extends StBean {
 	public String cp_observation; // observation
 	public String cp_warning; // warning
 	public String cp_contact_service; // contact_service
+	public String cp_json; // json
     
     public CpBean() {
         super();
@@ -64,6 +65,7 @@ public class CpBean extends StBean {
 	this.setCp_observation( "" ); // observation
 	this.setCp_warning( "" ); // warning
 	this.setCp_contact_service( "" ); // contact_service
+	this.setCp_json( "" ); // json
     } 
  /*
     public void copyTo(StBean beanDestino) {
@@ -93,6 +95,7 @@ public class CpBean extends StBean {
 	Destino.setCp_observation( getCp_observation() ); // observation
 	Destino.setCp_warning( getCp_warning() ); // warning
 	Destino.setCp_contact_service( getCp_contact_service() ); // contact_service
+	Destino.setCp_json( getCp_json() ); // json
     }
     
     public void copyFrom(StBean beanOrigen) {
@@ -122,6 +125,7 @@ public class CpBean extends StBean {
 	setCp_observation( Origen.getCp_observation() ); // observation
 	setCp_warning( Origen.getCp_warning() ); // warning
 	setCp_contact_service( Origen.getCp_contact_service() ); // contact_service
+	setCp_json( Origen.getCp_json() ); // json
     }
 */
 
@@ -246,6 +250,11 @@ public class CpBean extends StBean {
 	/** Set contact_service*/
 	public void setCp_contact_service(String cp_contact_service) {this.cp_contact_service = cp_contact_service;}
 
+	/** Get json*/
+	public String getCp_json() {return cp_json;}
+	/** Set json*/
+	public void setCp_json(String cp_json) {this.cp_json = cp_json;}
+
 
 	////////////////////////////////////////////////////////////
     public String getKey(){
@@ -285,6 +294,7 @@ public class CpBean extends StBean {
 		out.append( _K.sepFld ); out.append( this.getCp_observation()==null?"":this.getCp_observation() ); // observation
 		out.append( _K.sepFld ); out.append( this.getCp_warning()==null?"":this.getCp_warning() ); // warning
 		out.append( _K.sepFld ); out.append( this.getCp_contact_service()==null?"":this.getCp_contact_service() ); // contact_service
+		out.append( _K.sepFld ); out.append( this.getCp_json()==null?"":this.getCp_json() ); // json
 
 		out.append( _K.sepReg );
 		
@@ -323,6 +333,7 @@ public class CpBean extends StBean {
 			try { this.setCp_observation( trozos[21] ); } catch (Exception e) {;} // observation
 			try { this.setCp_warning( trozos[22] ); } catch (Exception e) {;} // warning
 			try { this.setCp_contact_service( trozos[23] ); } catch (Exception e) {;} // contact_service
+			try { this.setCp_json( trozos[24] ); } catch (Exception e) {;} // json
 			
 		}
 	}

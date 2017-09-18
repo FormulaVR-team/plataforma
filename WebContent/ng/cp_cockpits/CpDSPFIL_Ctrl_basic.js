@@ -75,7 +75,8 @@ angular
 								, cp_comment: "" // comment
 								, cp_observation: "" // observation
 								, cp_warning: "" // warning
-								, cp_contact_service: "" // contact_service						
+								, cp_contact_service: "" // contact_service
+								, cp_json: "" // json						
 							}
 						    // Datos calculados, no de BD:
 						    // Formato de registro:
@@ -102,7 +103,8 @@ angular
 								, cp_comment: "" // comment
 								, cp_observation: "" // observation
 								, cp_warning: "" // warning
-								, cp_contact_service: "" // contact_service						
+								, cp_contact_service: "" // contact_service
+								, cp_json: "" // json						
 							/////////////////////////////////////////////////
 					};
 					
@@ -354,6 +356,7 @@ angular
 						$scope.actionForm.cp_observation = reg.cp_observation; // observation
 						$scope.actionForm.cp_warning = reg.cp_warning; // warning
 						$scope.actionForm.cp_contact_service = reg.cp_contact_service; // contact_service						
+						$scope.actionForm.cp_json = reg.cp_json; // json						
 
 					    // Combos y auxiliares para componentes de presentación:
 						$scope.aux_cp_location_id = {value: $scope.actionForm.cp_location_id, 	displayName: ""};
@@ -391,6 +394,7 @@ angular
 						$scope.actionForm.cp_observation = ""; // observation
 						$scope.actionForm.cp_warning = ""; // warning
 						$scope.actionForm.cp_contact_service = ""; // contact_service						
+						$scope.actionForm.cp_json = ""; // json						
 
 					    // Combos y auxiliares para componentes de presentación:
 						$scope.aux_cp_location_id	= {value: "", displayName: ""};

@@ -406,6 +406,7 @@ public class CpDSPFIL_A extends org.apache.struts.action.Action {
 		if ( accion.trim().equalsIgnoreCase("colectivo_observation") ) { reg.setCp_observation( pantalla.getCp_observation() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_warning") ) { reg.setCp_warning( pantalla.getCp_warning() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_contact_service") ) { reg.setCp_contact_service( pantalla.getCp_contact_service() ); }
+		if ( accion.trim().equalsIgnoreCase("colectivo_json") ) { reg.setCp_json( pantalla.getCp_json() ); }
                     ///////////////////////////////////
                     db.cp_chgObj( database, reg );
                 }

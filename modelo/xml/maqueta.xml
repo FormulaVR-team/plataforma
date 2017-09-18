@@ -52,6 +52,7 @@
 		<CAM nombre="observation" descripcion="observation" descripcionCorta="observation" longitud="100" tipo="CHAR" />
 		<CAM nombre="warning" descripcion="warning" descripcionCorta="warning" longitud="100" tipo="CHAR" />
 		<CAM nombre="contact_service" descripcion="contact_service" descripcionCorta="contact_service" longitud="100" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
 
 		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
 		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
@@ -392,6 +393,7 @@
 			<CAM nombre="observation" />
 			<CAM nombre="warning" />
 			<CAM nombre="contact_service" />
+			<CAM nombre="json" />
 		</FMT>
 		<FMT archivo="T_CP_cockpits" nombre="Actualizacion" tipo="UPD">
 			<CAM nombre="sincro" />
@@ -412,6 +414,7 @@
 			<CAM nombre="observation" />
 			<CAM nombre="warning" />
 			<CAM nombre="contact_service" />
+			<CAM nombre="json" />
 			<KEY nombre="cockpit_id" orden="ASC" secuencia="1" />
 			<KEY nombre="location_id" orden="ASC" secuencia="2" />
 		</FMT>
@@ -440,6 +443,7 @@
 			<CAM nombre="observation" />
 			<CAM nombre="warning" />
 			<CAM nombre="contact_service" />
+			<CAM nombre="json" />
 			<KEY nombre="cockpit_id" orden="ASC" secuencia="1" />
 			<KEY nombre="location_id" orden="ASC" secuencia="2" />
 		</FMT>

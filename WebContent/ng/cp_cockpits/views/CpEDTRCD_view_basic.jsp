@@ -129,6 +129,12 @@
 				<input type="text" ng-model="actionForm.cp_contact_service" />
 			</md-input-container>
 			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container>
+				<label>json</label>
+				<input type="text" ng-model="actionForm.cp_json" />
+			</md-input-container>
+			</div>
 
 
   </div>

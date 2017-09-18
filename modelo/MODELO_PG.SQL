@@ -1,6 +1,6 @@
 ﻿/*
 Created: 01/05/2017
-Modified: 12/09/2017
+Modified: 18/09/2017
 Model: FormulaVR_V10_PostgreSQL
 Database: PostgreSQL 9.2
 */
@@ -370,7 +370,8 @@ CREATE TABLE "FormulaVR"."T_CP_cockpits"(
  "comment" Text DEFAULT '' NOT NULL,
  "observation" Text DEFAULT '' NOT NULL,
  "warning" Text DEFAULT '' NOT NULL,
- "contact_service" Text DEFAULT '' NOT NULL
+ "contact_service" Text DEFAULT '' NOT NULL,
+ "json" Text
 )
 WITH (OIDS=FALSE)
 ;
@@ -778,7 +779,7 @@ ORDER BY "a"."serial" DESC
 ;
 
 CREATE VIEW "FormulaVR"."V_CP_RTV_cockpits" AS
-SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."location_id", "b"."name" AS "LO_name", "b"."address" AS "LO_address", "b"."city" AS "LO_city", "b"."postal_code" AS "LO_postal_code", "b"."lat" AS "LO_lat", "b"."lon" AS "LO_lon", "a"."cockpit_id", "a"."serial_number", "a"."name", "a"."isBlocked", "a"."asignation_order", "a"."install_date", "a"."reset_date_used", "a"."hours_used", "a"."note", "a"."comment", "a"."observation", "a"."warning", "a"."contact_service"
+SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."location_id", "b"."name" AS "LO_name", "b"."address" AS "LO_address", "b"."city" AS "LO_city", "b"."postal_code" AS "LO_postal_code", "b"."lat" AS "LO_lat", "b"."lon" AS "LO_lon", "a"."cockpit_id", "a"."serial_number", "a"."name", "a"."isBlocked", "a"."asignation_order", "a"."install_date", "a"."reset_date_used", "a"."hours_used", "a"."note", "a"."comment", "a"."observation", "a"."warning", "a"."contact_service", "a"."json"
 FROM 
 
 

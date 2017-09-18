@@ -135,6 +135,7 @@
 <th style="text-align: left;">observation</th>
 <th style="text-align: left;">warning</th>
 <th style="text-align: left;">contact_service</th>
+<th style="text-align: left;">json</th>
                 </tr>
                 <tr>
 			<td><html:text styleClass="form-control input-sm" property="cp_filtro.cp_sincro" maxlength="20" style="width: 140px; text-align: left;" onclick="this.select();" />
@@ -185,6 +186,8 @@
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="cp_filtro.cp_contact_service" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
+			<td><html:text styleClass="form-control input-sm" property="cp_filtro.cp_json" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
                 </tr>
                 <logic:iterate indexId="gridIdx" id="grid" name="CpRCD_AF" property="grid">
                     <tr id="laFila${gridIdx}">
@@ -213,6 +216,7 @@
 <td class="tbceldadetalle"><bean:write name="grid" property="cp_observation"/><br/></td>   <!-- observation -->
 <td class="tbceldadetalle"><bean:write name="grid" property="cp_warning"/><br/></td>   <!-- warning -->
 <td class="tbceldadetalle"><bean:write name="grid" property="cp_contact_service"/><br/></td>   <!-- contact_service -->
+<td class="tbceldadetalle"><bean:write name="grid" property="cp_json"/><br/></td>   <!-- json -->
                     </tr>
                 </logic:iterate>
             </table>

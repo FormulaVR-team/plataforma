@@ -109,6 +109,7 @@ public class CpAccesoBaseDatos {
 		", \"observation\"" + // observation
 		", \"warning\"" + // warning
 		", \"contact_service\"" + // contact_service
+		", \"json\"" + // json
                 "  ) VALUES ( " + 
 		"  '"  + registro.getCp_sincro() + "'" + // sincro
 		", '"  + registro.getCp_mark() + "'" + // mark
@@ -127,7 +128,8 @@ public class CpAccesoBaseDatos {
 		", '"  + registro.getCp_comment() + "'" + // comment
 		", '"  + registro.getCp_observation() + "'" + // observation
 		", '"  + registro.getCp_warning() + "'" + // warning
-		", '"  + registro.getCp_contact_service() + "'" + // contact_service 
+		", '"  + registro.getCp_contact_service() + "'" + // contact_service
+		", '"  + registro.getCp_json() + "'" + // json 
                 ")"
                 ;
         //////////////////////////////////////////////
@@ -177,6 +179,7 @@ public class CpAccesoBaseDatos {
 		", \"observation\" = '"  + registro.getCp_observation() + "'" + // observation
 		", \"warning\" = '"  + registro.getCp_warning() + "'" + // warning
 		", \"contact_service\" = '"  + registro.getCp_contact_service() + "'" + // contact_service
+		", \"json\" = '"  + registro.getCp_json() + "'" + // json
                 " WHERE " + 
 		"  \"cockpit_id\" = '" + registro.getCp_cockpit_id() + "'" + // cockpit_id
 		"  AND \"location_id\" = '" + registro.getCp_location_id() + "'" + // location_id
@@ -282,6 +285,7 @@ public class CpAccesoBaseDatos {
 		regRead.setCp_observation( rs.getString("observation") ); regRead.setCp_observation( (regRead.getCp_observation() == null)?"":regRead.getCp_observation().trim() ); // observation
 		regRead.setCp_warning( rs.getString("warning") ); regRead.setCp_warning( (regRead.getCp_warning() == null)?"":regRead.getCp_warning().trim() ); // warning
 		regRead.setCp_contact_service( rs.getString("contact_service") ); regRead.setCp_contact_service( (regRead.getCp_contact_service() == null)?"":regRead.getCp_contact_service().trim() ); // contact_service
+		regRead.setCp_json( rs.getString("json") ); regRead.setCp_json( (regRead.getCp_json() == null)?"":regRead.getCp_json().trim() ); // json
             }
         } catch (SQLException ex0) {
             throw new StExcepcion(ex0.getMessage());
@@ -364,6 +368,7 @@ public class CpAccesoBaseDatos {
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getCp_observation(),"observation",sqlWhere);   // observation
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getCp_warning(),"warning",sqlWhere);   // warning
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getCp_contact_service(),"contact_service",sqlWhere);   // contact_service
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getCp_json(),"json",sqlWhere);   // json
         //////////////////////////////////////////////////////
 	
 	// Valores: 'S', 'N' o todos.
@@ -438,6 +443,7 @@ public class CpAccesoBaseDatos {
 		regRead.setCp_observation( rs.getString("observation") ); regRead.setCp_observation( (regRead.getCp_observation() == null)?"":regRead.getCp_observation().trim() ); // observation
 		regRead.setCp_warning( rs.getString("warning") ); regRead.setCp_warning( (regRead.getCp_warning() == null)?"":regRead.getCp_warning().trim() ); // warning
 		regRead.setCp_contact_service( rs.getString("contact_service") ); regRead.setCp_contact_service( (regRead.getCp_contact_service() == null)?"":regRead.getCp_contact_service().trim() ); // contact_service
+		regRead.setCp_json( rs.getString("json") ); regRead.setCp_json( (regRead.getCp_json() == null)?"":regRead.getCp_json().trim() ); // json
                         
                         if ( cfg.isExportar() ) getSeq_Sub_ExportMid( regRead );
                         else                    arrayTmp.add( regRead );
@@ -509,6 +515,7 @@ public class CpAccesoBaseDatos {
 				s += "<td><strong style='color:darkblue;'>" + "observation" + "</strong></td>";  // observation
 				s += "<td><strong style='color:darkblue;'>" + "warning" + "</strong></td>";  // warning
 				s += "<td><strong style='color:darkblue;'>" + "contact_service" + "</strong></td>";  // contact_service
+				s += "<td><strong style='color:darkblue;'>" + "json" + "</strong></td>";  // json
 				s += "</tr>\r\n";
                 dout.write(s);
             }
@@ -588,6 +595,9 @@ public class CpAccesoBaseDatos {
 				tmp = registro.getCp_contact_service();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // contact_service
+				tmp = registro.getCp_json();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // json
 		s += "</tr>\r\n";
 
         // Grabar en el archivo de salida:
@@ -774,6 +784,7 @@ public class CpAccesoBaseDatos {
 				registro.setCp_observation( jsonReg.getString(21) );	// observation
 				registro.setCp_warning( jsonReg.getString(22) );	// warning
 				registro.setCp_contact_service( jsonReg.getString(23) );	// contact_service
+				registro.setCp_json( jsonReg.getString(24) );	// json
 					
 					arrayTmp.add(registro);
 				} catch (Exception e) {;}

@@ -108,6 +108,7 @@
 <th style="text-align: left;">observation</th>
 <th style="text-align: left;">warning</th>
 <th style="text-align: left;">contact_service</th>
+<th style="text-align: left;">json</th>
 			</tr>
 			<tr>
 				<td><br /></td>
@@ -159,6 +160,8 @@
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="cp_filtro.cp_contact_service" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
+			<td><html:text styleClass="form-control input-sm" property="cp_filtro.cp_json" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
 			</tr>
 			<!-- -----------------------------------------------------------------------------------------  -->
 			<!-- Para hacer editable cualquier campo del grid, cambiar su "html:hidden" por "html:text"     -->
@@ -204,6 +207,7 @@
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="cp_observation"/>',30));</script><html:hidden name="grid" property="cp_observation" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.cp_cockpit_id}^${grid.cp_location_id}';" />&nbsp;</td>   <!-- observation -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="cp_warning"/>',30));</script><html:hidden name="grid" property="cp_warning" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.cp_cockpit_id}^${grid.cp_location_id}';" />&nbsp;</td>   <!-- warning -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="cp_contact_service"/>',30));</script><html:hidden name="grid" property="cp_contact_service" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.cp_cockpit_id}^${grid.cp_location_id}';" />&nbsp;</td>   <!-- contact_service -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="cp_json"/>',30));</script><html:hidden name="grid" property="cp_json" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.cp_cockpit_id}^${grid.cp_location_id}';" />&nbsp;</td>   <!-- json -->
 				</tr>
 			</logic:iterate>
 		</table>

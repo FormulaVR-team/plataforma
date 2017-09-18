@@ -203,6 +203,12 @@
 				<html:text maxlength="100" styleClass="form-control" property="cp_contact_service"  style="width: 700px;"/>
 			</div>
 		</div>
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">json&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleClass="form-control" property="cp_json"  style="width: 700px;"/>
+			</div>
+		</div>
 
 					<div class="form-group">
 						<div class="col-sm-9 col-sm-offset-3">
@@ -242,6 +248,7 @@
 		<!-- <html:hidden property="cp_observation"/> observation -->
 		<!-- <html:hidden property="cp_warning"/> warning -->
 		<!-- <html:hidden property="cp_contact_service"/> contact_service -->
+		<!-- <html:hidden property="cp_json"/> json -->
 
 	<!-- external javascript for ui-->       
 	<!-- bootstrap -->
