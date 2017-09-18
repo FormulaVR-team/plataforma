@@ -268,7 +268,7 @@
 	<!--
 	 				<td>{{reg.cp_contact_service}}&nbsp;</td>
 	 -->
-					<td>{{reg.cp_json}}&nbsp;</td>
+					<td title="{{reg.cp_json}}">{{reg.cp_json.net_user}}</td>
 	 			</tr>
   		</tbody>
   	</table>

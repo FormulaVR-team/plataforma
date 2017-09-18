@@ -131,10 +131,18 @@
 			</md-input-container>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-			<md-input-container>
-				<label>json</label>
-				<input type="text" ng-model="actionForm.cp_json" />
-			</md-input-container>
+				<md-input-container>
+					<label>net_user</label>
+					<input type="text" ng-model="actionForm.cp_json.net_user" />
+				</md-input-container>
+				<md-input-container>
+					<label>net_pass</label>
+					<input type="text" ng-model="actionForm.cp_json.net_pass" />
+				</md-input-container>
+				<md-input-container>
+					<label>net_path</label>
+					<input type="text" ng-model="actionForm.cp_json.net_path" />
+				</md-input-container>
 			</div>
 
 	</div>
