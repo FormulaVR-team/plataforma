@@ -9,7 +9,11 @@ import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.TimeZone;
 
 import com.fvr.FuentesDeDatos.BDConexion;
 import com.fvr._comun.ConfigPantalla;
@@ -17,6 +21,7 @@ import com.fvr._comun.RstAplicar;
 import com.fvr._comun.StBean;
 import com.fvr._comun.StExcepcion;
 import com.fvr._comun.Subrutinas;
+import com.fvr._comun.TIME_Utility;
 import com.fvr._comun._K;
 import com.fvr.ac_activityCockpits.bean.AcBean;
 import com.fvr.ac_activityCockpits.bean.AcBeanFiltro;
@@ -709,7 +714,7 @@ public class AcAccesoBaseDatos {
 	}
 /////////////////////////////////////////////////
 
-    public TsBean[] ac_getSeq_SumLocFecHor(BDConexion dataBase, ConfigPantalla extCfg, TsBeanFiltro rst ) throws StExcepcion {
+    public TsBean[] ac_getSeq_SumLocFecHor(BDConexion dataBase, ConfigPantalla extCfg, TsBeanFiltro rst, boolean isConvertLocalTime ) throws StExcepcion {
         TsBean[] filasRecuperadas = null;
         ///////////////////////////////////////////////////////
         ConfigPantalla cfg = (extCfg!=null)?extCfg:new ConfigPantalla();
@@ -760,6 +765,17 @@ public class AcAccesoBaseDatos {
 		regRead.setTs_start_date( rs.getString("start_date") ); regRead.setTs_start_date( (regRead.getTs_start_date() == null)?"":regRead.getTs_start_date().trim() ); // start_date
 		regRead.setTs_start_time( rs.getString("start_time") ); regRead.setTs_start_time( (regRead.getTs_start_time() == null)?"":regRead.getTs_start_time().trim() ); // start_time
 		regRead.setTs_RS_quantity( rs.getLong("ncp") );  // ncp
+		
+		if ( isConvertLocalTime ) {
+			try {
+				TimeZone to = TimeZone.getDefault();
+				Date date = new SimpleDateFormat("yyyy-MM-dd HHmm").parse( regRead.getTs_start_date() + " " + regRead.getTs_start_time() );
+				date = Subrutinas.cvtFec_mills__date( TIME_Utility.toLocalTime(date.getTime(), to) );
+//				System.out.println( regRead.getTs_start_date() + " " + regRead.getTs_start_time() + " --> " + date.toString() );
+				regRead.setTs_start_date( Subrutinas.getFecha_aaaa_mm_dd(date) );
+				regRead.setTs_start_time( Subrutinas.getHora_HHMMSS(date).substring(0,4) );
+			} catch (ParseException e) {;}
+		}
 
                         arrayTmp.add( regRead );
 

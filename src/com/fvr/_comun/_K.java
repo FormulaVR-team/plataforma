@@ -54,6 +54,9 @@ public class _K {
 	public static final String PA_KEY_RS_MIN_FEC = "RS_MIN_FEC";									// Fecha ISO: 2017-09-01
 	
 	public static final String PA_KEY_URL_WEB_PAGE = "URL_WEB_PAGE";								// Url de la página web: https:www.formulavr.net
+	
+	public static final String PA_KEY_COCKPIT_CONFIG_MASTER_FILE_NAME = "COCKPIT_CONFIG_MASTER_FILE_NAME";	// Fichero para inyectar en el cockpit cuando se ejecuta una reserva.
+	public static final String PA_KEY_COCKPIT_CONFIG_MASTER_FILE_CONTENT = "COCKPIT_CONFIG_MASTER_FILE_CONTENT";	// Fichero para inyectar en el cockpit cuando se ejecuta una reserva.
 
 	// SMTP:
 	public static final String PA_KEY_DOMAIN = "DOMAIN";											// no-reply@formulavr.net

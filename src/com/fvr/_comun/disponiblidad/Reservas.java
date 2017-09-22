@@ -5,12 +5,20 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.http.NameValuePair;
+import org.json.JSONObject;
 
 import com.fvr.FuentesDeDatos.BDConexion;
 import com.fvr._comun.ConfigPantalla;
 import com.fvr._comun.StExcepcion;
 import com.fvr._comun.Subrutinas;
 import com.fvr._comun._K;
+import com.fvr._comun.http.client.IHttpMethods;
+import com.fvr._comun.http.client.ProxyHttpMethods;
 import com.fvr.cd_LocationClosedDays.bean.CdBean;
 import com.fvr.pm_promosManuales.bean.PmBean;
 import com.fvr.pt_products.bean.PtBean;
@@ -22,6 +30,8 @@ import com.fvr.us_users.bean.UsBean;
 public class Reservas implements Serializable{
 
 	private static final long serialVersionUID = -2140368358063952095L;
+	
+	private static final String patron_sustitucion_nick = "/@NICK@/";
 	
 	public Reservas() { super(); }
 
@@ -405,6 +415,55 @@ public class Reservas implements Serializable{
 				errores.add("Tarjeta '" + card_id + "' no hallada");
 			}
 			
+		}
+		
+		return resultado;
+	}
+
+	public static synchronized boolean sendCockpitConfig( BDConexion dataBase, String usr_nick, String net_user, String net_pass, String net_path ) {
+		boolean resultado = false;
+		
+		String filename = Subrutinas.getDBValueFromKey(dataBase, _K.PA_KEY_COCKPIT_CONFIG_MASTER_FILE_NAME);
+		String filecontent = Subrutinas.getDBValueFromKey(dataBase, _K.PA_KEY_COCKPIT_CONFIG_MASTER_FILE_CONTENT);
+
+		if ( filecontent != null ) {
+			filecontent = Subrutinas.macroSustituye(filecontent, patron_sustitucion_nick, usr_nick);
+			
+			///////////////////////
+			String url = "http://localhost:47001";
+			
+			JSONObject json = new JSONObject();
+			
+			json.put("filename", filename);
+			json.put("filecontent", filecontent);
+			
+			String charset = "UTF-8";
+			Map<String,String> headers = new HashMap<String, String>();
+			List<NameValuePair> params = new ArrayList<NameValuePair>();
+			String payload = json.toString();
+			String resp = "";
+			
+//			headers.put("secretkey", secretKey);
+			
+			IHttpMethods httpMethods = new ProxyHttpMethods(charset);
+			try {
+				resp = httpMethods.doPost(url,params,headers, payload);
+			} catch (StExcepcion e) {
+				System.err.println( e.getMessage() );
+			}
+			httpMethods = null;
+			System.out.println(resp);
+			
+			String[] resParts = resp.split("\\^");
+			
+			if (resParts!=null && resParts.length>1) {
+				if ( "200".equalsIgnoreCase( resParts[0] ) ) {
+					resultado = true;
+				}
+//				return resParts[1];
+			} 
+			///////////////////////
+
 		}
 		
 		return resultado;

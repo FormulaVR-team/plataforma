@@ -439,7 +439,7 @@ public class FvrServlet extends HttpServlet {
 	        flt_ac.setTs_RS_location_id(location_id);
 	        flt_ac.setTs_start_date(start_date);
 			flt_ac.setTs_start_time(start_time);
-	        rgs_ac = dao_ac.ac_getSeq_SumLocFecHor(dataBase, new ConfigPantalla(Integer.MAX_VALUE), flt_ac);
+	        rgs_ac = dao_ac.ac_getSeq_SumLocFecHor(dataBase, new ConfigPantalla(Integer.MAX_VALUE), flt_ac, true);
 
 		} catch (StExcepcion e) {
 			responder(request, response, false, e.getMessage());
