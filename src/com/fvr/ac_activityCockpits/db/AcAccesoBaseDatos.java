@@ -36,6 +36,7 @@ public class AcAccesoBaseDatos {
     public String tabla   = "T_AC_activityCockpits";
     public String lf_UPD  = "T_AC_activityCockpits";
     public String lf_RTV  = "V_AC_RTV_activityCockpits";
+    public String lf_RTV_group10 = "V_AC_RTV_group10";
     public String lf_RTV_group20 = "V_AC_RTV_group20";
 
     ////////////////////////////////////////////////////////////////////
@@ -713,6 +714,145 @@ public class AcAccesoBaseDatos {
 
 	}
 /////////////////////////////////////////////////
+
+    public AcBean[] ac_getSeq_group10(BDConexion dataBase, ConfigPantalla extCfg, AcBeanFiltro rst ) throws StExcepcion {
+        AcBean[] filasRecuperadas = null;
+        ///////////////////////////////////////////////////////
+        ConfigPantalla cfg = (extCfg!=null)?extCfg:new ConfigPantalla();
+        if ( cfg.isExportar() ) {
+            cfg.setFilaInicioGrid(1);
+            cfg.setFilasGrid(Integer.MAX_VALUE);
+            cfg.setFilasTotales(0);
+            getSeq_Sub_ExportIni( cfg.getTituloPantalla() );
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        // Variante para versión de paso de parámetros por FileSystem:
+        if (isParmViaFS) {
+	    	final String idOp = Integer.toHexString(hashCode()).toUpperCase() + "_ac_GETSEQ";
+	        //////////////////////////////////////////////
+	        // 1.grabar parámetros, 
+            ac_putParFS_GETSEQ( idOp, cfg, rst );
+	        // 2.Invocar Sistema Externo SÍNCRONO!
+	        callSistemaExterno( idOp );
+	        // 3.Leer resultados
+            return ac_getParFS_GETSEQ( idOp, cfg );
+        }
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        
+        //////////////////////////////////////////////
+        if (dataBase==null) dataBase= new BDConexion();
+        ///////////////////////////////////////////////////////
+        String sql =
+                "SELECT \"A\".*" +
+                " FROM \"" + Subrutinas.getG_DB_LIBDAT(dataBase.getCurrentDb()) + "\".\""  + this.lf_RTV_group10 + "\" \"A\""
+                ;
+        String sqlWhere = "";
+        ///////////////////////////////////////////////////////
+        // Filtros de la lista:
+        RstAplicar fltOper = new RstAplicar(dataBase.getRwUpperCase(),dataBase.getRwLike(),dataBase.getRwAnyString());
+	
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_sincro(),"sincro",sqlWhere);   // sincro
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_mark(),"mark",sqlWhere);   // mark
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_is_deleted(),"is_deleted",sqlWhere);   // is_deleted
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_author(),"author",sqlWhere);   // author
+//	sqlWhere = fltOper.getNUM_EQ(rst.getAc_serial(),"serial",sqlWhere);   // serial
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_location_id(),"location_id",sqlWhere);   // location_id
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_LO_name(),"LO_name",sqlWhere);   // LO_name
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_computername(),"computername",sqlWhere);   // computername
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_filename(),"filename",sqlWhere);   // filename
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_content(),"content",sqlWhere);   // content
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_json(),"json",sqlWhere);   // json
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm(),"aaaa_mm",sqlWhere);   // aaaa_mm
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd(),"aaaa_mm_dd",sqlWhere);   // aaaa_mm_dd
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd_hh(),"aaaa_mm_dd_hh",sqlWhere);   // aaaa_mm_dd_hh
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd_hh_m0(),"aaaa_mm_dd_hh_m0",sqlWhere);   // aaaa_mm_dd_hh_m0
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd_hh_mm(),"aaaa_mm_dd_hh_mm",sqlWhere);   // aaaa_mm_dd_hh_mm
+//	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd_hh_mm_ss(),"aaaa_mm_dd_hh_mm_ss",sqlWhere);   // aaaa_mm_dd_hh_mm_ss
+
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getAc_aaaa_mm_dd(),"start_date",sqlWhere);   // aaaa_mm_dd
+
+		//////////////////////////////////////////////////////
+        
+	   
+
+        //////////////////////////////////////////////////////
+        sql += sqlWhere;
+        // Campos de ordenación:
+        sql += " ORDER BY \"location_id\" ASC";
+        //////////////////////////////////////////////////////
+        ResultSet rs = null;
+        AcBean regRead = null;
+        ArrayList<AcBean> arrayTmp = new ArrayList<AcBean>();
+        //////////////////////////////////////////////
+        //if (dataBase==null) dataBase = new BDConexion();
+        try {
+            ///////////////////////////////////////
+            // Configuración del DSPFIL (NumFilas, NumPantallas...)
+            if (cfg != null) {
+                String sqlCount = "SELECT COUNT(*) AS nFilas FROM \"" + Subrutinas.getG_DB_LIBDAT(dataBase.getCurrentDb()) + "\".\""  + lf_RTV_group10 + "\" \"A\"";
+                sqlCount += sqlWhere;
+                rs = dataBase.executeQuery(sqlCount);
+                cfg.setFilasTotales(0);
+                if ( rs.next() ) cfg.setFilasTotales( rs.getInt("nFilas") );
+                if ( rs != null ) { BDConexion.rsClose( dataBase, rs ); }
+                ///////////////////////////////////////
+                if ( cfg.isExportar() ) {
+                    if ( cfg.getFilasTotales() > 5000 ) {
+                        getSeq_Sub_ExportFin();
+                        throw new StExcepcion("Se permiten exportar hasta 5000 filas.\r\nPor favor aplique una selección mas restrictiva.");
+                    }
+                }
+            }
+            ///////////////////////////////////////
+
+			// Código para postgres
+            sql += " LIMIT "  + cfg.getFilasGrid();
+            sql += " OFFSET " + (cfg.getFilaInicioGrid()-1);
+            rs = dataBase.executeQuery(sql);
+            if ( rs != null ) {
+                int filas = 0;
+                  if ( rs.next() ) {
+                    do {
+                        regRead = new AcBean();
+                        
+		regRead.setAc_location_id( rs.getString("location_id") ); regRead.setAc_location_id( (regRead.getAc_location_id() == null)?"":regRead.getAc_location_id().trim() ); // location_id
+//		regRead.setAc_LO_name( rs.getString("LO_name") ); regRead.setAc_LO_name( (regRead.getAc_LO_name() == null)?"":regRead.getAc_LO_name().trim() ); // LO_name
+		regRead.setAc_computername( rs.getString("computername") ); regRead.setAc_computername( (regRead.getAc_computername() == null)?"":regRead.getAc_computername().trim() ); // computername
+
+		regRead.setAc_aaaa_mm_dd( rs.getString("start_date") ); regRead.setAc_aaaa_mm_dd( (regRead.getAc_aaaa_mm_dd() == null)?"":regRead.getAc_aaaa_mm_dd().trim() ); // aaaa_mm_dd
+		regRead.setAc_aaaa_mm_dd_hh_m0( regRead.getAc_aaaa_mm_dd() + " " + rs.getString("start_time") ); regRead.setAc_aaaa_mm_dd( (regRead.getAc_aaaa_mm_dd() == null)?"":regRead.getAc_aaaa_mm_dd().trim() ); // aaaa_mm_dd
+
+		
+                        if ( cfg.isExportar() ) getSeq_Sub_ExportMid( regRead );
+                        else                    arrayTmp.add( regRead );
+
+                        filas++;
+                    } while( rs.next() && filas < (  (cfg!=null)?cfg.getFilasGrid():(new ConfigPantalla()).getFilasGrid() ) );
+                }
+            }
+        } catch (SQLException ex0) {
+            throw new StExcepcion(ex0.getMessage());
+        } catch (StExcepcion ex1) {
+            throw new StExcepcion(ex1.getMessage());
+        } finally {
+            try {
+                if ( rs != null ) { BDConexion.rsClose( dataBase, rs ); }
+            } catch (SQLException ex2) {
+                throw new StExcepcion(ex2.getMessage());
+            }
+        }
+        //////////////////////////////////////////////
+        if ( cfg.isExportar() ) {
+            getSeq_Sub_ExportFin();
+        }
+        //////////////////////////////////////////////
+        filasRecuperadas = new AcBean[arrayTmp.size()];
+        filasRecuperadas = arrayTmp.toArray(filasRecuperadas);
+        return filasRecuperadas;
+    }
 
     public TsBean[] ac_getSeq_SumLocFecHor(BDConexion dataBase, ConfigPantalla extCfg, TsBeanFiltro rst, boolean isConvertLocalTime ) throws StExcepcion {
         TsBean[] filasRecuperadas = null;

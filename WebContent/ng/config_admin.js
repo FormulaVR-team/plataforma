@@ -129,9 +129,13 @@ $mdThemingProvider
 				templateUrl: "./ng/_commonTemplates/chart_view.html",
 				controller: "chart_controller"
 			},
-			"rgnMain": {
-				templateUrl: "./ng/ac_activityCockpits/views/AcDSPFIL_view_basic.jsp?version=fake7",
+			"rgnZoom": {
+				templateUrl: "./ng/ac_activityCockpits/views/AcDSPFIL_view_zoom.jsp?version=fake7",
 				controller: "AcDSPFIL_Ctrl_basic"
+			},
+			"rgnMain": {
+				templateUrl: "./ng/ac_activityCockpits/views/AcDSPFIL_view_group10.jsp?version=fake7",
+				controller: "AcDSPFIL_Ctrl_group10"
 			}
 		}
 	})
