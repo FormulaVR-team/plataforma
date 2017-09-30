@@ -101,7 +101,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="reg in actionForm.grid" ng-click="putRecordAsTheCurrent(reg)" data-toggle="modal" data-target="#AcZomm_panel">
+				<tr ng-repeat="reg in actionForm.grid" data-toggle="modal" data-target="#AcZomm_panel">
 					<td>{{reg.ac_location_id}}&nbsp;</td>
 					<td>{{reg.ac_computername}}&nbsp;</td>
 					<td>{{reg.ac_aaaa_mm_dd_hh_m0}}&nbsp;</td>
