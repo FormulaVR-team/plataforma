@@ -51,10 +51,13 @@
 								<label>url del sistema</label>
 								<input type="text" size="80" ng-model="system_url" required />
 							</md-input-container>
-							<md-input-container>
-								<label>Usuario</label>
-								<input type="text" size="80" ng-model="formData.USR" required />
-							</md-input-container>
+							<span>
+								<md-input-container>
+									<label>Usuario</label>
+									<input type="text" size="66" ng-model="formData.USR" required />
+								</md-input-container>
+								<md-button class="md-raised md-accent" aria-label="NUEVO" ng-click="registroDirecto()">CREARLO</md-button> 
+							</span>
 							<md-input-container>
 								<label>Password</label>
 								<input type="password" size="80" ng-model="formData.PWD" required/>
@@ -67,15 +70,15 @@
 							<div id="menuBox" style="display:none; border: black solid 1px;">
 								<div class="alert alert-default fade in" style="display: block; padding: 0; margin: 0;">
 								
-								<div class="modal-header">
-									<h4 class="modal-title" style="margin-top: 4px;" layout="row" layout-align="space-between none">
-										<picture>
-											<img class="brand-img hidden-xs" style="width: 250px;margin-left: 20px;" src="./resBS/img/formulavr.png" alt="Formula VR" onclick="window.location ='./index.jsp';"/>
-											<img class="brand-img show-xs" style="width: 200px;margin-left: 20px;" src="./resBS/img/formulavr.png" alt="Formula VR" onclick="window.location ='./index.jsp';"/>
-										</picture>
-										<button type="button" onclick="$('#menuBox').slideUp();">&times;</button>
-									</h4>
-								</div>
+									<div class="modal-header">
+										<h4 class="modal-title" style="margin-top: 4px;" layout="row" layout-align="space-between none">
+											<picture>
+												<img class="brand-img hidden-xs" style="width: 250px;margin-left: 20px;" src="./resBS/img/formulavr.png" alt="Formula VR" onclick="window.location ='./index.jsp';"/>
+												<img class="brand-img show-xs" style="width: 200px;margin-left: 20px;" src="./resBS/img/formulavr.png" alt="Formula VR" onclick="window.location ='./index.jsp';"/>
+											</picture>
+											<button type="button" onclick="$('#menuBox').slideUp();">&times;</button>
+										</h4>
+									</div>
 
 									<div layout="column" layout-align="center start">
 										<md-input-container>
@@ -183,7 +186,18 @@
 							window.open( url ); 
 						}
 						/////////////////////////////
-	
+
+						/////////////////////////////
+						$scope.registroDirecto = function () {
+							var accion = "usAdd";
+							var data = {
+									  USR : $scope.formData.USR
+							};
+					        var url = $scope.system_url + "/FvrServlet?ACC=" + accion + "&USR=" + data.USR;
+							window.open( url ); 
+						}
+						/////////////////////////////
+						
 						/////////////////////////////
 						$scope.gaming = function() {
 							// Dos llamadas:

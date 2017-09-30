@@ -169,6 +169,11 @@ angular
 
 				    // Combos y auxiliares para componentes de presentación:
 					// app_services.ps_lst( $scope.actionForm.logon_USR, $scope.actionForm.logon_HSH,true).then( function(response) {if (response.rc === 'OK') { $scope.lst_ps = response.text; } else { app_services.showAlert( "ERROR: " + response.text); } },function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+					
+					if ( (""+window.location).includes( "CHGPWD_MAIL_SENDED=true" ) ) {
+						app_services.errorComun( "<h3>Revisa tu correo para obtener una contraseña</h3><br/>" + $scope.actionForm.logon_USR );
+					}
+					
 					///////////////////////////////////////////////////////////////////////
 					// Acciones del controlador:
 					///////////////////////////////////////////////////////////////////////

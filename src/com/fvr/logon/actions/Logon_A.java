@@ -243,32 +243,7 @@ public class Logon_A extends Action {
         
         /////////////////////////////////////////////////////////////////////
         // Improvisar el usuario:
-        try {
-            com.fvr.us_users.bean.UsBean reg_us = new com.fvr.us_users.bean.UsBean(); 
-            // PK:
-        	reg_us.setUs_user_id( user_id ); // user_id
-        	// Resto:
-//        	reg_us.setUs_sincro( "" ); // sincro
-//        	reg_us.setUs_mark( "" ); // mark
-//        	reg_us.setUs_is_deleted( "" ); // is_deleted
-        	reg_us.setUs_author(  _K.USER_DEFAULT_author ); // author
-//        	reg_us.setUs_user_id( user_id ); // user_id
-        	reg_us.setUs_role_id( _K.ROL_USER ); // role_id
-        	reg_us.setUs_hash_code( "" ); // hash_code
-        	reg_us.setUs_nick( _K.USER_DEFAULT_nick ); // nick
-        	reg_us.setUs_password( "" ); // password
-        	reg_us.setUs_first_name( _K.USER_DEFAULT_first_name ); // first_name
-        	reg_us.setUs_last_name( _K.USER_DEFAULT_last_name ); // last_name
-        	reg_us.setUs_phone( "" ); // phone
-        	reg_us.setUs_gender( _K.USER_DEFAULT_gender ); // gender
-        	reg_us.setUs_birth_day( _K.USER_DEFAULT_birth_day ); // birth_day
-        	reg_us.setUs_avatar( _K.USER_DEFAULT_avatar ); // avatar
-        	reg_us.setUs_json( "" ); // json
-
-			new com.fvr.us_users.db.UsAccesoBaseDatos().us_crtObj(dataBase, reg_us);
-
-        } catch (StExcepcion e) {
-            errores.add("error", new ActionMessage( "errors.detail", e.getMessage() ));
+        if ( ! Subrutinas.improvisarUsuario(dataBase, user_id, errores) ) {
             saveErrors(request,errores);
             return null;
 		}

@@ -439,6 +439,43 @@ public class Subrutinas {
 		}
 		return false;
 	}
+	public static boolean improvisarUsuario(BDConexion dataBase, String user_id, ActionMessages errores_o_null) {
+		boolean resultado = false;
+		
+        try {
+            com.fvr.us_users.bean.UsBean reg_us = new com.fvr.us_users.bean.UsBean(); 
+            // PK:
+        	reg_us.setUs_user_id( user_id ); // user_id
+        	// Resto:
+//        	reg_us.setUs_sincro( "" ); // sincro
+//        	reg_us.setUs_mark( "" ); // mark
+//        	reg_us.setUs_is_deleted( "" ); // is_deleted
+        	reg_us.setUs_author(  _K.USER_DEFAULT_author ); // author
+//        	reg_us.setUs_user_id( user_id ); // user_id
+        	reg_us.setUs_role_id( _K.ROL_USER ); // role_id
+        	reg_us.setUs_hash_code( "" ); // hash_code
+        	reg_us.setUs_nick( _K.USER_DEFAULT_nick ); // nick
+        	reg_us.setUs_password( "" ); // password
+        	reg_us.setUs_first_name( _K.USER_DEFAULT_first_name ); // first_name
+        	reg_us.setUs_last_name( _K.USER_DEFAULT_last_name ); // last_name
+        	reg_us.setUs_phone( "" ); // phone
+        	reg_us.setUs_gender( _K.USER_DEFAULT_gender ); // gender
+        	reg_us.setUs_birth_day( _K.USER_DEFAULT_birth_day ); // birth_day
+        	reg_us.setUs_avatar( _K.USER_DEFAULT_avatar ); // avatar
+        	reg_us.setUs_json( "" ); // json
+
+			new com.fvr.us_users.db.UsAccesoBaseDatos().us_crtObj(dataBase, reg_us);
+			
+			resultado = true;
+
+        } catch (StExcepcion e) {
+        	if ( errores_o_null != null ) {
+                errores_o_null.add("error", new ActionMessage( "errors.detail", e.getMessage() ));
+        	}
+		}
+		
+		return resultado;
+	}
 	////////////////////////
 	public static int getG_filas_DSPFIL() {
 		return g_filas_DSPFIL;

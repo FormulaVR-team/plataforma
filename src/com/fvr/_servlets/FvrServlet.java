@@ -127,6 +127,8 @@ public class FvrServlet extends HttpServlet {
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=rsAdd&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215
     private static final String usEdt = "usEdt";  // Llamada externa para "Editar mis datos de usuario"
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=usEdt&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215
+    private static final String usAdd = "usAdd";  // Llamada externa para "Registrar un nuevo usuario"
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=usAdd&USR=eestecha@gmail.com
     private static final String FVRMonitor = "FVRMonitor";  // Llamada externa para "Editar mis datos de usuario"
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=FVRMonitor
     private static final String getRsFecMin = "getRsFecMin";  // Devuelve la fecha ISO mínima posible para reservar
@@ -284,6 +286,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_rsAdd(request, response, usr, key);
     	} else if (usEdt.equalsIgnoreCase( acc )) {
     		cmd_usEdt(request, response, usr, key);
+    	} else if (usAdd.equalsIgnoreCase( acc )) {
+    		cmd_usAdd(request, response, usr);
     	} else if (FVRMonitor.equalsIgnoreCase( acc )) {
     		cmd_FVRMonitor(request, response, payload);
     	} else if (getRsFecMin.equalsIgnoreCase( acc )) {
@@ -1023,10 +1027,60 @@ public class FvrServlet extends HttpServlet {
 
 //		request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
 		///////////////////
-	
-	
-	
-	
+	}
+
+	private void cmd_usAdd(HttpServletRequest request, HttpServletResponse response, String usr) throws IOException {
+		if ( usr == null || usr.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		BDConexion dataBase = new Subrutinas().getBDConexion(request);
+		com.fvr.us_users.bean.UsBean reg_us = new com.fvr.us_users.bean.UsBean();
+		
+		reg_us = Subrutinas.getUsFromId(dataBase, usr);
+		
+		if ( reg_us != null && reg_us.getUs_sincro() != null && reg_us.getUs_sincro().trim().length() > 0 ) {
+			responder(request, response, false, "User exists!!"); return;
+		};
+
+        /////////////////////////////////////////////////////////////////////
+        // Improvisar el usuario:
+        if ( ! Subrutinas.improvisarUsuario(dataBase, usr, null) ) {
+			responder(request, response, false, "Error trying user creation"); return;
+		}
+        /////////////////////////////////////////////////////////////////////
+        
+        String laClave = Subrutinas.getHashFromRandomCode();
+		Subrutinas.setUsr_newHash(dataBase, usr, laClave);
+
+
+		//////////////////
+		// Correo para que meta su contraseña:
+		List<String> lstErrores = new ArrayList<String>();
+		String htmlDoc = SendMail.send_CambiarPassword(dataBase, Subrutinas.get_urlBase(request), usr.trim(), lstErrores, true);
+		if ( lstErrores.isEmpty() ) {
+			Subrutinas.addLog(dataBase, _K.SYS, usr, "Enviado correo para cambio password.", htmlDoc);
+//            errores.add("error", new ActionMessage( "errors.detail", "Por favor consulta tu correo para continuar el proceso de asignación de una nueva contraseña." ));
+		} else {
+			Subrutinas.addLog(dataBase, _K.SYS, usr, "ERROR en envío correo para cambio de contraseña.", lstErrores.get(0).toString() );
+//            errores.add("error", new ActionMessage( "errors.detail", "Ha fallado la operación..." ));
+		}
+		//////////////////
+
+
+		///////////////////
+		// Reentrada en el sistema:
+		String link = Subrutinas.get_urlBase(request);
+
+       	request.getSession(true).setAttribute( "logon_USR", reg_us.getUs_user_id() );
+        request.getSession(true).setAttribute( "logon_HSH", laClave );
+		request.getSession(true).setAttribute( "roleKey", reg_us.getUs_role_id() );
+
+		link +=  "/Index_A.do#/rsUsEDTRCD";
+		link += "?CHGPWD_MAIL_SENDED=true";
+
+		response.sendRedirect( link );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+//		request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
+		///////////////////
 	}
 
 	private void cmd_FVRMonitor(HttpServletRequest request, HttpServletResponse response, JSONObject payload) throws IOException {
