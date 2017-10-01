@@ -337,6 +337,11 @@
 			<forward name="ADDRCD" path="/AcADDRCD_A.do" redirect="yes"/>
 			<forward name="EDTRCD" path="/AcEDTRCD_A.do"/>
 		</action>
+		<action input="/jsp/AcDSPFIL.jsp" name="AcRCD_AF" path="/AcDSPFIL_group10_A" scope="request" type="com.fvr.ac_activityCockpits.actions.AcDSPFIL_group10_A" validate="false">
+			<forward name="OK" path="/jsp/AcDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/AcADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/AcEDTRCD_A.do"/>
+		</action>
 		<action input="/jsp/AcSELRCD.jsp" name="AcRCD_AF" path="/AcSELRCD_A" scope="request" type="com.fvr.ac_activityCockpits.actions.AcSELRCD_A" validate="false">
 			<forward name="OK" path="/jsp/AcSELRCD.jsp"/>
 		</action>
