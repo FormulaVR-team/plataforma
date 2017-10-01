@@ -141,7 +141,7 @@ angular
 					///////////////////////////////////////////////////////////////////////
 					// Inicializar pantalla:
 					AcDSPFIL_service
-						.reload($scope.actionForm)
+						.reload_group10($scope.actionForm)
 						.then(
 							function(response) {
 
@@ -180,7 +180,7 @@ angular
 						$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
 					    $scope.actionForm.filasGrid = $scope.aux_filasGrid.value;
 						AcDSPFIL_service
-						.filtrar($scope.actionForm)
+						.filtrar_group10($scope.actionForm)
 						.then(
 							function(response) {
 
@@ -201,7 +201,7 @@ angular
 						$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
 					    $scope.actionForm.filasGrid = $scope.aux_filasGrid.value;
 						AcDSPFIL_service
-						.exportar($scope.actionForm)
+						.exportar_group10($scope.actionForm)
 						.then(
 							function(response) {
 
@@ -221,7 +221,7 @@ angular
 					$scope.avPg = function() {
 						$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
 						AcDSPFIL_service
-						.avPg($scope.actionForm)
+						.avPg_group10($scope.actionForm)
 						.then(
 							function(response) {
 
@@ -241,7 +241,7 @@ angular
 					$scope.rtPg = function() {
 						$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
 						AcDSPFIL_service
-						.rtPg($scope.actionForm)
+						.rtPg_group10($scope.actionForm)
 						.then(
 							function(response) {
 
@@ -262,7 +262,7 @@ angular
 						$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
 						$scope.actionForm.filaInicioGrid = nFila;
 						AcDSPFIL_service
-						.reload($scope.actionForm)
+						.reload_group10($scope.actionForm)
 						.then(
 							function(response) {
 
@@ -345,7 +345,7 @@ angular
 						$scope.actionForm.filasGrid = $scope.aux_filasGrid.value;
 
 						AcDSPFIL_service
-						.marcarTodo($scope.actionForm)
+						.marcarTodo_group10($scope.actionForm)
 						.then(
 							function(response) {
 
@@ -376,7 +376,7 @@ angular
 						$scope.actionForm.filasGrid = $scope.aux_filasGrid.value;
 
 						AcDSPFIL_service
-						.marcados_suprimir($scope.actionForm)
+						.marcados_suprimir_group10($scope.actionForm)
 						.then(
 							function(response) {
 
@@ -457,6 +457,8 @@ angular
 
 //						}
 					};
+
+/////////////
 					$scope.suprimir = function() {
 						
 //						if (validationService.validarEmail($scope.actionForm.logon_USR)) {
@@ -486,6 +488,15 @@ angular
 
 //						}
 					};
+
+/////////////
+					$scope.setParms2Zoom = function(reg) {
+//						$scope.putRecordAsTheCurrent(reg);
+//						$scope.actionForm.ac_filtro.ac_location_id = reg.ac_location_id; // location_id
+//						$scope.actionForm.ac_filtro.ac_computername = reg.ac_computername; // computername
+//						$scope.actionForm.ac_filtro.ac_aaaa_mm_dd = reg.ac_aaaa_mm_dd; // aaaa_mm_dd
+//						$scope.filtrar();
+					}
 	/////////////
 	/////////////
 

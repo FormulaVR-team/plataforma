@@ -59,7 +59,7 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<%-- Caja de filtros inicio --%>
-			<div class="box" style="/* display:none; */">
+			<div>
 				<div class="row row-filter" style="padding: 10px 0 0 0; margin: 0px 0px 10px 0px;">
 					
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
@@ -101,7 +101,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="reg in actionForm.grid" data-toggle="modal" data-target="#AcZomm_panel">
+				<tr ng-repeat="reg in actionForm.grid" ng-click="setParms2Zoom(reg)" data-toggle="modal" data-target="#AcZomm_panel">
 					<td>{{reg.ac_location_id}}&nbsp;</td>
 					<td>{{reg.ac_computername}}&nbsp;</td>
 					<td>{{reg.ac_aaaa_mm_dd_hh_m0}}&nbsp;</td>

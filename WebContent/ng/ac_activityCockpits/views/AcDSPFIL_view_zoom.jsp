@@ -9,7 +9,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="AcZomm_panel" role="dialog" data-backdrop="false">
+<div class="modal fade" id="AcZomm_panel" role="dialog" data-backdrop="true">
     <div class="modal-dialog" style="width: 68%;">
     
       <!-- Modal content-->
@@ -23,8 +23,8 @@
 						
 				<h1 class="page-title">Activity Cockpits</h1>
 			
-				<div class="row">
-					<div class="col-xs-12 col-sm-6">
+				<div layout="row" layout-align="space-between stretch">
+					<div>
 						<%-- Botones inicio --%>
 						<div class="btn-group" style="margin-top: 15px;margin-bottom: 10px;">
 							<md-button class="md-icon-button md-accent md-button md-ink-ripple margin-0" ng-click="filtrar()">
@@ -45,7 +45,7 @@
 							<md-button class="md-icon-button md-accent md-button md-ink-ripple margin-0" ng-click="exportar()">
 								<md-tooltip><bean:message key="common.client.exportar"/></md-tooltip>
 								<md-icon> file_download </md-icon></md-button>
-							&nbsp;&nbsp;
+
 							<md-button class="md-icon-button md-accent md-button md-ink-ripple margin-0" ng-click="desMarcarTodo()">
 								<md-tooltip>desmarcar todo</md-tooltip>
 								<md-icon> clear </md-icon></md-button>
@@ -60,7 +60,7 @@
 						<%-- Botones final --%>
 					</div>
 			
-					<div class="col-xs-12 col-sm-6 text-right">
+					<div>
 						<%-- Paginador inicio --%>
 						<div>
 							<span dynamic="exportLink"></span>
