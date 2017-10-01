@@ -97,7 +97,7 @@
 				<tr>
 					<th>location_id</th>
 					<th>name</th>
-					<th>Time segment</th>
+					<th>UTC Time segment</th>
 				</tr>
 			</thead>
 			<tbody>
