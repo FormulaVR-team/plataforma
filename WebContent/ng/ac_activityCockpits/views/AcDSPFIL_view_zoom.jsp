@@ -21,7 +21,7 @@
 
 			<div name="AcDSPFIL_form">
 						
-				<h1 class="page-title">Activity Cockpits</h1>
+				<h1 class="page-title">Activity Cockpits : LOG FILES</h1>
 			
 				<div layout="row" layout-align="space-between stretch">
 					<div>
