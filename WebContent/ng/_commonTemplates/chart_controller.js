@@ -34,6 +34,8 @@ angular
 					$scope.location_id;
 					$scope.start_date;
 					$scope.start_time;
+					
+					$scope.minutos_actividad_total;
 
 					/////
 					// Combos y auxiliares para componentes de presentación:
@@ -49,6 +51,7 @@ angular
 
 					function load_chart( lst_horario, lst_ocupacion, lst_actividad, min_startdate, max_startdate ) {
 						var cols = lst_horario.registros.length, reservas = [], plazas = [], actividad = [], columnas = [];
+						var actividad_total = 0;
 						for ( var col = 0; col < cols; col++ ) {
 							
 if ( lst_horario.registros[col].tt_start_time >= min_startdate && lst_horario.registros[col].tt_start_time <= max_startdate ) {
@@ -74,14 +77,16 @@ if ( lst_horario.registros[col].tt_start_time >= min_startdate && lst_horario.re
 								reservas[ reservas.length ] = nReservas;
 								plazas[ plazas.length ] = nPlazas;
 								actividad[ actividad.length ] = nActividad;
+								actividad_total += nActividad;
 								////////////
-
 }
 
 						}
 						$scope.labels = columnas;
 						$scope.series = ['Reservas','Plazas','Actividad'];
 						$scope.data = [reservas,plazas,actividad];
+						
+						$scope.minutos_actividad_total = actividad_total * 10;
 						
 						///////////////////////////////////////////////////////////////////////
 						  //$scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];

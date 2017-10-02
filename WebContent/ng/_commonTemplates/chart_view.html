@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div class="modal fade" id="chart_panel" role="dialog" data-backdrop="true">
-    <div class="modal-dialog" style="width: 68%;">
+    <div class="modal-dialog" style="width: 70%;">
     
       <!-- Modal content-->
       <div class="modal-content">
@@ -9,22 +9,24 @@
 			<button type="button" class="close" data-dismiss="modal">&times;</button>
         
         	<div layout="row" layout-align="space-between center">
-				
-				<h4 class="modal-title" style="margin: 0px 0px 24px 0px;">Reservas / Plazas / Actividad monitorizada</h4>
 
 				<md-input-container style="margin: 0px 0px 24px 10px;">
-					<label>Local</label>
+					<label>Location</label>
 					<md-select placeholder="Local" ng-model="aux_rs_location_id" md-on-close="filtrar()" ng-model-options="{trackBy: '$value.value'}">
-						<md-optgroup label="Local">
+						<md-optgroup label="Location">
 							<md-option ng-value="item" ng-repeat="item in lst_lo">{{ item.displayName }}</md-option>
 						</md-optgroup>			
 					</md-select>
 				</md-input-container>
 
 				<md-input-container style="margin: 10px 10px 0px 10px;">
-					<label>Fecha</label>
+					<label>Date</label>
 					<md-datepicker ng-model="aux_rs_start_date" md-hide-icons="calendar"ng-change="filtrar()"></md-datepicker>
 				</md-input-container>
+
+				<h5 class="modal-title" style="margin: 0px 0px 24px 0px;">Reservations / Places / Monitor</h5>
+
+				<h5 class="modal-title" style="margin: 0px 0px 24px 0px; color: blue;">Real activity: {{ minutos_actividad_total }}' (Minimum)</h5>
         	
         	</div>
 
