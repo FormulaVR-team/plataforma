@@ -27,8 +27,9 @@ angular
 				'validationService',
 				'app_services',
 				'AcDSPFIL_service',
+				'$rootScope',
 
-				function($scope, $state, $stateParams, $window, $timeout, $mdToast, validationService, app_services, AcDSPFIL_service) {
+				function($scope, $state, $stateParams, $window, $timeout, $mdToast, validationService, app_services, AcDSPFIL_service, $rootScope) {
 					///////////////////////////////////////////////////////////////////////
 					///////////////////////////////////////////////////////////////////////
 					$scope.actionForm = {
@@ -491,11 +492,8 @@ angular
 
 /////////////
 					$scope.setParms2Zoom = function(reg) {
-//						$scope.putRecordAsTheCurrent(reg);
-//						$scope.actionForm.ac_filtro.ac_location_id = reg.ac_location_id; // location_id
-//						$scope.actionForm.ac_filtro.ac_computername = reg.ac_computername; // computername
-//						$scope.actionForm.ac_filtro.ac_aaaa_mm_dd = reg.ac_aaaa_mm_dd; // aaaa_mm_dd
-//						$scope.filtrar();
+						// Actualizar el formulario de zoom:
+						$rootScope.$emit('group10_refreshEvent', [reg.ac_location_id, reg.ac_computername, reg.ac_aaaa_mm_dd]);
 					}
 	/////////////
 	/////////////

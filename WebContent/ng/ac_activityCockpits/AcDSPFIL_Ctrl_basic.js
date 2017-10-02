@@ -27,9 +27,20 @@ angular
 				'validationService',
 				'app_services',
 				'AcDSPFIL_service',
+				'$rootScope',
 
-				function($scope, $state, $stateParams, $window, $timeout, $mdToast, validationService, app_services, AcDSPFIL_service) {
-					///////////////////////////////////////////////////////////////////////
+				function($scope, $state, $stateParams, $window, $timeout, $mdToast, validationService, app_services, AcDSPFIL_service, $rootScope) {
+
+		            $rootScope.$on('group10_refreshEvent', 
+		            		function(event, data) { 
+		            			$scope.actionForm.ac_filtro.ac_location_id = data[0];
+		            			$scope.actionForm.ac_filtro.ac_computername = data[1];
+		            			$scope.actionForm.ac_filtro.ac_aaaa_mm_dd = data[2];
+		            			$scope.filtrar();
+			            	}
+		            );
+
+		            ///////////////////////////////////////////////////////////////////////
 					///////////////////////////////////////////////////////////////////////
 					$scope.actionForm = {
 							/////////////////////////////////////////////////
