@@ -47,6 +47,7 @@
 				<label>filename</label>
 				<input type="text" ng-model="actionForm.ac_filename" />
 			</md-input-container>
+<%--
 			<md-input-container>
 				<label>json</label>
 				<input type="text" ng-model="actionForm.ac_json" />
@@ -75,9 +76,10 @@
 				<label>aaaa_mm_dd_hh_mm_ss</label>
 				<input type="text" ng-model="actionForm.ac_aaaa_mm_dd_hh_mm_ss" disabled="disabled" />
 			</md-input-container>
+--%>
 			<md-input-container>
 				<label>content</label>
-				<textarea rows="5" max-rows="5" style="width: 600px; background-color: silver;" ng-model="actionForm.ac_content" />
+				<textarea rows="5" max-rows="5" style="width: 600px; background-color: silver;" ng-model="actionForm.ac_content" ></textarea>
 			</md-input-container>
 
     </div>
