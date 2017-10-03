@@ -24,12 +24,13 @@ angular
 				'$window',
 				'$timeout',
 				'$mdToast',
+				'$filter',
 				'validationService',
 				'app_services',
 				'AcDSPFIL_service',
 				'$rootScope',
 
-				function($scope, $state, $stateParams, $window, $timeout, $mdToast, validationService, app_services, AcDSPFIL_service, $rootScope) {
+				function($scope, $state, $stateParams, $window, $timeout, $mdToast, $filter, validationService, app_services, AcDSPFIL_service, $rootScope) {
 					///////////////////////////////////////////////////////////////////////
 					///////////////////////////////////////////////////////////////////////
 					$scope.actionForm = {
@@ -106,6 +107,9 @@ angular
 				    $scope.aux_filasGrid = {value: 0};
 				    $scope.aux_filasGrid.value = $scope.actionForm.filasGrid;
 
+					// Combos y auxiliares para componentes de presentación:
+				    $scope.aux_FLT_ac_aaaa_mm_dd = new Date();	// Panel de filtros
+
 				    $scope.exportLink = "<span></span>";	// Recoge el link al fichero para exportar.
 					///////////////////////////////////////////////////////////////////////
 					// Parametros de entrada:
@@ -120,6 +124,9 @@ angular
 					///////////////////////////////////////////////////////////////////////
 					// Aplicar su filtro persistente:
 					$scope.actionForm.ac_filtro = angular.fromJson( $window.sessionStorage.getItem("AcDSPFIL.ac_filtro") );
+					if ( $scope.actionForm.ac_filtro.ac_aaaa_mm_dd != undefined && $scope.actionForm.ac_filtro.ac_aaaa_mm_dd != null && $scope.actionForm.ac_filtro.ac_aaaa_mm_dd != "" ) {
+						$scope.aux_FLT_ac_aaaa_mm_dd = new Date( $scope.actionForm.ac_filtro.ac_aaaa_mm_dd );
+					}
 					///////////////////////////////////////////////////////////////////////
 					// Funciones internas:
 					function moveModelToView( scope, model ) {
@@ -180,7 +187,16 @@ angular
 					$scope.filtrar = function() {
 						$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
 					    $scope.actionForm.filasGrid = $scope.aux_filasGrid.value;
-						AcDSPFIL_service
+
+					    // Combos y auxiliares para componentes de presentación:
+						// Recoger valores de los combos:
+					    if ( null == $scope.aux_FLT_ac_aaaa_mm_dd ) {
+						    $scope.actionForm.ac_filtro.ac_aaaa_mm_dd = '';
+					    } else {
+						    $scope.actionForm.ac_filtro.ac_aaaa_mm_dd = $filter('date')($scope.aux_FLT_ac_aaaa_mm_dd, 'yyyy-MM-dd');
+					    }
+
+					    AcDSPFIL_service
 						.filtrar_group10($scope.actionForm)
 						.then(
 							function(response) {

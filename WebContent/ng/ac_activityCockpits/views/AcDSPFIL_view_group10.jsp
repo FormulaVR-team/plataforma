@@ -65,19 +65,23 @@
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 						<md-input-container class="md-block">
 							<label>location_id</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_location_id" />
+							<input type="text" ng-model="actionForm.ac_filtro.ac_location_id" onclick="this.select();" />
 						</md-input-container>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 						<md-input-container class="md-block">
 							<label>computername</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_computername" />
+							<input type="text" ng-model="actionForm.ac_filtro.ac_computername" onclick="this.select();" />
 						</md-input-container>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-						<md-input-container class="md-block">
+		     			<md-input-container class="md-block input-md">
 							<label>aaaa_mm_dd</label>
-							<input type="text" ng-model="actionForm.ac_filtro.ac_aaaa_mm_dd" />
+							<md-datepicker 
+									ng-model="aux_FLT_ac_aaaa_mm_dd" 
+									md-hide-icons="calendar"
+									md-open-on-focus="true"
+							></md-datepicker>
 						</md-input-container>
 					</div>
 
