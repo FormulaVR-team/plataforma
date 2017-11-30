@@ -49,6 +49,7 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	public String es_phone; // phone
 	public double es_amount; // amount
 	public String es_currency; // currency
+	public String es_tpv_order; // tpv_order
 	public String es_pay_status; // pay_status
 	public String es_json; // json
     
@@ -84,6 +85,7 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	Destino.setEs_phone( getEs_phone() ); // phone
 	Destino.setEs_amount( getEs_amount() ); // amount
 	Destino.setEs_currency( getEs_currency() ); // currency
+	Destino.setEs_tpv_order( getEs_tpv_order() ); // tpv_order
 	Destino.setEs_pay_status( getEs_pay_status() ); // pay_status
 	Destino.setEs_json( getEs_json() ); // json
     }
@@ -104,6 +106,7 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	setEs_phone( Origen.getEs_phone() ); // phone
 	setEs_amount( Origen.getEs_amount() ); // amount
 	setEs_currency( Origen.getEs_currency() ); // currency
+	setEs_tpv_order( Origen.getEs_tpv_order() ); // tpv_order
 	setEs_pay_status( Origen.getEs_pay_status() ); // pay_status
 	setEs_json( Origen.getEs_json() ); // json
     }
@@ -137,6 +140,7 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	setEs_phone( Origen.getEs_phone() ); // phone
 	setEs_amount( Origen.getEs_amount() ); // amount
 	setEs_currency( Origen.getEs_currency() ); // currency
+	setEs_tpv_order( Origen.getEs_tpv_order() ); // tpv_order
 	setEs_pay_status( Origen.getEs_pay_status() ); // pay_status
 	setEs_json( Origen.getEs_json() ); // json
     }
@@ -263,6 +267,11 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	public String getEs_currency() {return es_currency;}
 	/** Set currency*/
 	public void setEs_currency(String es_currency) {this.es_currency = es_currency;}
+
+	/** Get tpv_order*/
+	public String getEs_tpv_order() {return es_tpv_order;}
+	/** Set tpv_order*/
+	public void setEs_tpv_order(String es_tpv_order) {this.es_tpv_order = es_tpv_order;}
 
 	/** Get pay_status*/
 	public String getEs_pay_status() {return es_pay_status;}

@@ -97,6 +97,7 @@
 <th style="text-align: left;">phone</th>
 <th style="text-align: right;">amount</th>
 <th style="text-align: left;">currency</th>
+<th style="text-align: left;">tpv_order</th>
 <th style="text-align: left;">pay_status</th>
 <th style="text-align: left;">json</th>
 			</tr>
@@ -127,6 +128,8 @@
 			<td><br />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_currency" maxlength="10" style="width: 70px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_tpv_order" maxlength="20" style="width: 140px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_pay_status" maxlength="10" style="width: 70px; text-align: left;" onclick="this.select();" />
 			</td>
@@ -166,6 +169,7 @@
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="es_phone"/>',30));</script><html:hidden name="grid" property="es_phone" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.es_event_id}^${grid.es_inscription_user_id}';" />&nbsp;</td>   <!-- phone -->
 <td style="text-align: right;">&nbsp;<bean:write name="grid" property="es_amount"/><html:hidden name="grid" property="es_amount" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.es_event_id}^${grid.es_inscription_user_id}';" />&nbsp;</td>   <!-- amount -->
 <td>&nbsp;<bean:write name="grid" property="es_currency"/><html:hidden name="grid" property="es_currency" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.es_event_id}^${grid.es_inscription_user_id}';" />&nbsp;</td>   <!-- currency -->
+<td>&nbsp;<bean:write name="grid" property="es_tpv_order"/><html:hidden name="grid" property="es_tpv_order" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.es_event_id}^${grid.es_inscription_user_id}';" />&nbsp;</td>   <!-- tpv_order -->
 <td>&nbsp;<bean:write name="grid" property="es_pay_status"/><html:hidden name="grid" property="es_pay_status" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.es_event_id}^${grid.es_inscription_user_id}';" />&nbsp;</td>   <!-- pay_status -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="es_json"/>',30));</script><html:hidden name="grid" property="es_json" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.es_event_id}^${grid.es_inscription_user_id}';" />&nbsp;</td>   <!-- json -->
 				</tr>

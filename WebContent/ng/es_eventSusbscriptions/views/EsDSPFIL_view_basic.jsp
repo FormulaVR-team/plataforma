@@ -123,6 +123,10 @@
 						<input type="text" ng-model="actionForm.es_filtro.es_currency" />
 					</md-input-container>
 					<md-input-container>
+						<label>tpv_order</label>
+						<input type="text" ng-model="actionForm.es_filtro.es_tpv_order" />
+					</md-input-container>
+					<md-input-container>
 						<label>pay_status</label>
 						<input type="text" ng-model="actionForm.es_filtro.es_pay_status" />
 					</md-input-container>
@@ -156,6 +160,7 @@
 				<th>phone</th>
 				<th>amount</th>
 				<th>currency</th>
+				<th>tpv_order</th>
 				<th>pay_status</th>
 				<th>json</th>
 			</tr>
@@ -175,6 +180,7 @@
 				<td>{{reg.es_phone}}&nbsp;</td>
 				<td>{{reg.es_amount}}&nbsp;</td>
 				<td>{{reg.es_currency}}&nbsp;</td>
+				<td>{{reg.es_tpv_order}}&nbsp;</td>
 				<td>{{reg.es_pay_status}}&nbsp;</td>
 				<td>{{reg.es_json}}&nbsp;</td>
 			</tr>

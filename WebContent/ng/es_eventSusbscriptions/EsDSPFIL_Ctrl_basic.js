@@ -65,6 +65,7 @@ angular
 								, es_phone: "" // phone
 								, es_amount: "" // amount
 								, es_currency: "" // currency
+								, es_tpv_order: "" // tpv_order
 								, es_pay_status: "" // pay_status
 								, es_json: "" // json						
 							}
@@ -83,6 +84,7 @@ angular
 								, es_phone: "" // phone
 								, es_amount: "" // amount
 								, es_currency: "" // currency
+								, es_tpv_order: "" // tpv_order
 								, es_pay_status: "" // pay_status
 								, es_json: "" // json						
 							/////////////////////////////////////////////////
@@ -303,6 +305,7 @@ angular
 						$scope.actionForm.es_phone = reg.es_phone; // phone
 						$scope.actionForm.es_amount = reg.es_amount; // amount
 						$scope.actionForm.es_currency = reg.es_currency; // currency
+						$scope.actionForm.es_tpv_order = reg.es_tpv_order; // tpv_order
 						$scope.actionForm.es_pay_status = reg.es_pay_status; // pay_status
 						$scope.actionForm.es_json = reg.es_json; // json						
 					};
@@ -328,6 +331,7 @@ angular
 						$scope.actionForm.es_phone = ""; // phone
 						$scope.actionForm.es_amount = ""; // amount
 						$scope.actionForm.es_currency = ""; // currency
+						$scope.actionForm.es_tpv_order = ""; // tpv_order
 						$scope.actionForm.es_pay_status = ""; // pay_status
 						$scope.actionForm.es_json = ""; // json						
 					};

@@ -18,6 +18,7 @@ public class EsBeanFiltro extends StBean {
 	public String es_phone; // phone
 	public String es_amount; // amount
 	public String es_currency; // currency
+	public String es_tpv_order; // tpv_order
 	public String es_pay_status; // pay_status
 	public String es_json; // json
     
@@ -43,6 +44,7 @@ public class EsBeanFiltro extends StBean {
 	this.setEs_phone( "" ); // phone
 	this.setEs_amount( "" ); // amount
 	this.setEs_currency( "" ); // currency
+	this.setEs_tpv_order( "" ); // tpv_order
 	this.setEs_pay_status( "" ); // pay_status
 	this.setEs_json( "" ); // json
     } 
@@ -63,6 +65,7 @@ public class EsBeanFiltro extends StBean {
 		r.setEs_phone( (pri.getEs_phone()==null)?sec.getEs_phone():pri.getEs_phone() );	// phone
 		r.setEs_amount( (pri.getEs_amount()==null)?sec.getEs_amount():pri.getEs_amount() );	// amount
 		r.setEs_currency( (pri.getEs_currency()==null)?sec.getEs_currency():pri.getEs_currency() );	// currency
+		r.setEs_tpv_order( (pri.getEs_tpv_order()==null)?sec.getEs_tpv_order():pri.getEs_tpv_order() );	// tpv_order
 		r.setEs_pay_status( (pri.getEs_pay_status()==null)?sec.getEs_pay_status():pri.getEs_pay_status() );	// pay_status
 		r.setEs_json( (pri.getEs_json()==null)?sec.getEs_json():pri.getEs_json() );	// json
         }
@@ -83,6 +86,7 @@ public class EsBeanFiltro extends StBean {
 	Destino.setEs_phone( getEs_phone() ); // phone
 	Destino.setEs_amount( getEs_amount() ); // amount
 	Destino.setEs_currency( getEs_currency() ); // currency
+	Destino.setEs_tpv_order( getEs_tpv_order() ); // tpv_order
 	Destino.setEs_pay_status( getEs_pay_status() ); // pay_status
 	Destino.setEs_json( getEs_json() ); // json
     }
@@ -101,6 +105,7 @@ public class EsBeanFiltro extends StBean {
 	setEs_phone( Origen.getEs_phone() ); // phone
 	setEs_amount( Origen.getEs_amount() ); // amount
 	setEs_currency( Origen.getEs_currency() ); // currency
+	setEs_tpv_order( Origen.getEs_tpv_order() ); // tpv_order
 	setEs_pay_status( Origen.getEs_pay_status() ); // pay_status
 	setEs_json( Origen.getEs_json() ); // json
     }
@@ -121,6 +126,7 @@ public class EsBeanFiltro extends StBean {
 		out.append( _K.sepFld ); out.append( this.getEs_phone()==null?"":this.getEs_phone() ); // phone
 		out.append( _K.sepFld ); out.append( this.getEs_amount()==null?"":this.getEs_amount() ); // amount
 		out.append( _K.sepFld ); out.append( this.getEs_currency()==null?"":this.getEs_currency() ); // currency
+		out.append( _K.sepFld ); out.append( this.getEs_tpv_order()==null?"":this.getEs_tpv_order() ); // tpv_order
 		out.append( _K.sepFld ); out.append( this.getEs_pay_status()==null?"":this.getEs_pay_status() ); // pay_status
 		out.append( _K.sepFld ); out.append( this.getEs_json()==null?"":this.getEs_json() ); // json
 
@@ -151,8 +157,9 @@ public class EsBeanFiltro extends StBean {
 			try { this.setEs_phone( trozos[10] ); } catch (Exception e) {;} // phone
 			try { this.setEs_amount( trozos[11] ); } catch (Exception e) {;} // amount
 			try { this.setEs_currency( trozos[12] ); } catch (Exception e) {;} // currency
-			try { this.setEs_pay_status( trozos[13] ); } catch (Exception e) {;} // pay_status
-			try { this.setEs_json( trozos[14] ); } catch (Exception e) {;} // json
+			try { this.setEs_tpv_order( trozos[13] ); } catch (Exception e) {;} // tpv_order
+			try { this.setEs_pay_status( trozos[14] ); } catch (Exception e) {;} // pay_status
+			try { this.setEs_json( trozos[15] ); } catch (Exception e) {;} // json
 			
 		}
 	}
@@ -222,6 +229,11 @@ public class EsBeanFiltro extends StBean {
 	public String getEs_currency() {return es_currency;}
 	/** Set currency*/
 	public void setEs_currency(String es_currency) {this.es_currency = es_currency;}
+
+	/** Get tpv_order*/
+	public String getEs_tpv_order() {return es_tpv_order;}
+	/** Set tpv_order*/
+	public void setEs_tpv_order(String es_tpv_order) {this.es_tpv_order = es_tpv_order;}
 
 	/** Get pay_status*/
 	public String getEs_pay_status() {return es_pay_status;}

@@ -77,6 +77,7 @@
 		<CAM nombre="phone" descripcion="phone" descripcionCorta="phone" longitud="100" tipo="CHAR" />
 		<CAM nombre="amount" descripcion="amount" descripcionCorta="amount" longitud="12" tipo="DEC" />
 		<CAM nombre="currency" descripcion="currency" descripcionCorta="currency" longitud="10" tipo="CHAR" />
+		<CAM nombre="tpv_order" descripcion="tpv_order" descripcionCorta="tpv_order" longitud="20" tipo="CHAR" />
 		<CAM nombre="pay_status" descripcion="pay_status" descripcionCorta="pay_status" longitud="10" tipo="CHAR" />
 		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
 
@@ -536,6 +537,7 @@
 			<CAM nombre="phone" />
 			<CAM nombre="amount" />
 			<CAM nombre="currency" />
+			<CAM nombre="tpv_order" />
 			<CAM nombre="pay_status" />
 			<CAM nombre="json" />
 		</FMT>
@@ -551,6 +553,7 @@
 			<CAM nombre="phone" />
 			<CAM nombre="amount" />
 			<CAM nombre="currency" />
+			<CAM nombre="tpv_order" />
 			<CAM nombre="pay_status" />
 			<CAM nombre="json" />
 			<KEY nombre="event_id" orden="ASC" secuencia="1" />
@@ -570,6 +573,7 @@
 			<CAM nombre="phone" />
 			<CAM nombre="amount" />
 			<CAM nombre="currency" />
+			<CAM nombre="tpv_order" />
 			<CAM nombre="pay_status" />
 			<CAM nombre="json" />
 			<KEY nombre="event_id" orden="ASC" secuencia="1" />

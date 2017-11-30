@@ -140,6 +140,13 @@
 		</div>
 
 		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">tpv_order&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="20" styleId="textinput" styleClass="form-control" property="es_tpv_order"  style="width: 140px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
 			<label class="col-sm-3 control-label" for="textinput">pay_status&nbsp;</label>
 			<div class="col-sm-9">
 				<html:text maxlength="10" styleId="textinput" styleClass="form-control" property="es_pay_status"  style="width: 70px;"/>
@@ -189,6 +196,7 @@
 	<!-- <html:hidden property="es_phone"/> phone -->
 	<!-- <html:hidden property="es_amount"/> amount -->
 	<!-- <html:hidden property="es_currency"/> currency -->
+	<!-- <html:hidden property="es_tpv_order"/> tpv_order -->
 	<!-- <html:hidden property="es_pay_status"/> pay_status -->
 	<!-- <html:hidden property="es_json"/> json -->
 

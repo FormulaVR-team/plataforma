@@ -399,6 +399,7 @@ public class EsDSPFIL_A extends org.apache.struts.action.Action {
 		if ( accion.trim().equalsIgnoreCase("colectivo_phone") ) { reg.setEs_phone( pantalla.getEs_phone() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_amount") ) { reg.setEs_amount( pantalla.getEs_amount() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_currency") ) { reg.setEs_currency( pantalla.getEs_currency() ); }
+		if ( accion.trim().equalsIgnoreCase("colectivo_tpv_order") ) { reg.setEs_tpv_order( pantalla.getEs_tpv_order() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_pay_status") ) { reg.setEs_pay_status( pantalla.getEs_pay_status() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_json") ) { reg.setEs_json( pantalla.getEs_json() ); }
                     ///////////////////////////////////

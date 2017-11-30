@@ -124,6 +124,7 @@
 <th style="text-align: left;">phone</th>
 <th style="text-align: right;">amount</th>
 <th style="text-align: left;">currency</th>
+<th style="text-align: left;">tpv_order</th>
 <th style="text-align: left;">pay_status</th>
 <th style="text-align: left;">json</th>
                 </tr>
@@ -154,6 +155,8 @@
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_currency" maxlength="10" style="width: 70px; text-align: left;" onclick="this.select();" />
 			</td>
+			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_tpv_order" maxlength="20" style="width: 140px; text-align: left;" onclick="this.select();" />
+			</td>
 			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_pay_status" maxlength="10" style="width: 70px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_json" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
@@ -175,6 +178,7 @@
 <td class="tbceldadetalle"><bean:write name="grid" property="es_phone"/><br/></td>   <!-- phone -->
 <td class="tbceldadetalle" style="text-align: right;"><bean:write name="grid" property="es_amount"/><br/></td>   <!-- amount -->
 <td class="tbceldadetalle"><bean:write name="grid" property="es_currency"/><br/></td>   <!-- currency -->
+<td class="tbceldadetalle"><bean:write name="grid" property="es_tpv_order"/><br/></td>   <!-- tpv_order -->
 <td class="tbceldadetalle"><bean:write name="grid" property="es_pay_status"/><br/></td>   <!-- pay_status -->
 <td class="tbceldadetalle"><bean:write name="grid" property="es_json"/><br/></td>   <!-- json -->
                     </tr>

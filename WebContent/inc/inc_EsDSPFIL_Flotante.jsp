@@ -114,6 +114,15 @@
 		<tr>
 			<td>&nbsp;</td>
 			<td>
+				<button type="button" class="btn btn-info pull-right" style="width:70%;" onclick="if ( confirmar('<bean:message key="common.client.pregunta_modificar_marcados"/>',this)==true ) setOpcion('EsRCD_AF','colectivo_tpv_order', null);"><span class="glyphicon glyphicon-ok pull-left"></span>
+				&nbsp;tpv_order
+				</button>
+			</td>
+			<td><html:text maxlength="20" styleClass="form-control" property="es_tpv_order"  style="width: 105px;"/></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
 				<button type="button" class="btn btn-info pull-right" style="width:70%;" onclick="if ( confirmar('<bean:message key="common.client.pregunta_modificar_marcados"/>',this)==true ) setOpcion('EsRCD_AF','colectivo_pay_status', null);"><span class="glyphicon glyphicon-ok pull-left"></span>
 				&nbsp;pay_status
 				</button>

@@ -68,6 +68,10 @@
 				<input type="text" ng-model="actionForm.es_currency" />
 			</md-input-container>
 			<md-input-container>
+				<label>tpv_order</label>
+				<input type="text" ng-model="actionForm.es_tpv_order" />
+			</md-input-container>
+			<md-input-container>
 				<label>pay_status</label>
 				<input type="text" ng-model="actionForm.es_pay_status" />
 			</md-input-container>

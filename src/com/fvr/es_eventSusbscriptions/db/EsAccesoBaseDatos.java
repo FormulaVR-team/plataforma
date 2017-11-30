@@ -102,6 +102,7 @@ public class EsAccesoBaseDatos {
 		", \"phone\"" + // phone
 		", \"amount\"" + // amount
 		", \"currency\"" + // currency
+		", \"tpv_order\"" + // tpv_order
 		", \"pay_status\"" + // pay_status
 		", \"json\"" + // json
                 "  ) VALUES ( " + 
@@ -116,6 +117,7 @@ public class EsAccesoBaseDatos {
 		", '"  + registro.getEs_phone() + "'" + // phone
 		", "  + registro.getEs_amount() + "" + // amount
 		", '"  + registro.getEs_currency() + "'" + // currency
+		", '"  + registro.getEs_tpv_order() + "'" + // tpv_order
 		", '"  + registro.getEs_pay_status() + "'" + // pay_status
 		", '"  + registro.getEs_json() + "'" + // json 
                 ")"
@@ -160,6 +162,7 @@ public class EsAccesoBaseDatos {
 		", \"phone\" = '"  + registro.getEs_phone() + "'" + // phone
 		", \"amount\" = "  + registro.getEs_amount() + "" + // amount
 		", \"currency\" = '"  + registro.getEs_currency() + "'" + // currency
+		", \"tpv_order\" = '"  + registro.getEs_tpv_order() + "'" + // tpv_order
 		", \"pay_status\" = '"  + registro.getEs_pay_status() + "'" + // pay_status
 		", \"json\" = '"  + registro.getEs_json() + "'" + // json
                 " WHERE " + 
@@ -256,6 +259,7 @@ public class EsAccesoBaseDatos {
 		regRead.setEs_phone( rs.getString("phone") ); regRead.setEs_phone( (regRead.getEs_phone() == null)?"":regRead.getEs_phone().trim() ); // phone
 		regRead.setEs_amount( rs.getDouble("amount") );  // amount
 		regRead.setEs_currency( rs.getString("currency") ); regRead.setEs_currency( (regRead.getEs_currency() == null)?"":regRead.getEs_currency().trim() ); // currency
+		regRead.setEs_tpv_order( rs.getString("tpv_order") ); regRead.setEs_tpv_order( (regRead.getEs_tpv_order() == null)?"":regRead.getEs_tpv_order().trim() ); // tpv_order
 		regRead.setEs_pay_status( rs.getString("pay_status") ); regRead.setEs_pay_status( (regRead.getEs_pay_status() == null)?"":regRead.getEs_pay_status().trim() ); // pay_status
 		regRead.setEs_json( rs.getString("json") ); regRead.setEs_json( (regRead.getEs_json() == null)?"":regRead.getEs_json().trim() ); // json
             }
@@ -325,6 +329,7 @@ public class EsAccesoBaseDatos {
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_last_name(),"last_name",sqlWhere);   // last_name
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_phone(),"phone",sqlWhere);   // phone
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_currency(),"currency",sqlWhere);   // currency
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_tpv_order(),"tpv_order",sqlWhere);   // tpv_order
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_pay_status(),"pay_status",sqlWhere);   // pay_status
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_json(),"json",sqlWhere);   // json
         //////////////////////////////////////////////////////
@@ -384,6 +389,7 @@ public class EsAccesoBaseDatos {
 		regRead.setEs_phone( rs.getString("phone") ); regRead.setEs_phone( (regRead.getEs_phone() == null)?"":regRead.getEs_phone().trim() ); // phone
 		regRead.setEs_amount( rs.getDouble("amount") );  // amount
 		regRead.setEs_currency( rs.getString("currency") ); regRead.setEs_currency( (regRead.getEs_currency() == null)?"":regRead.getEs_currency().trim() ); // currency
+		regRead.setEs_tpv_order( rs.getString("tpv_order") ); regRead.setEs_tpv_order( (regRead.getEs_tpv_order() == null)?"":regRead.getEs_tpv_order().trim() ); // tpv_order
 		regRead.setEs_pay_status( rs.getString("pay_status") ); regRead.setEs_pay_status( (regRead.getEs_pay_status() == null)?"":regRead.getEs_pay_status().trim() ); // pay_status
 		regRead.setEs_json( rs.getString("json") ); regRead.setEs_json( (regRead.getEs_json() == null)?"":regRead.getEs_json().trim() ); // json
                         
@@ -446,6 +452,7 @@ public class EsAccesoBaseDatos {
 				s += "<td><strong style='color:darkblue;'>" + "phone" + "</strong></td>";  // phone
 				s += "<td><strong style='color:darkblue;'>" + "amount" + "</strong></td>";  // amount
 				s += "<td><strong style='color:darkblue;'>" + "currency" + "</strong></td>";  // currency
+				s += "<td><strong style='color:darkblue;'>" + "tpv_order" + "</strong></td>";  // tpv_order
 				s += "<td><strong style='color:darkblue;'>" + "pay_status" + "</strong></td>";  // pay_status
 				s += "<td><strong style='color:darkblue;'>" + "json" + "</strong></td>";  // json
 				s += "</tr>\r\n";
@@ -500,6 +507,9 @@ public class EsAccesoBaseDatos {
 				tmp = registro.getEs_currency();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // currency
+				tmp = registro.getEs_tpv_order();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // tpv_order
 				tmp = registro.getEs_pay_status();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // pay_status
@@ -681,8 +691,9 @@ public class EsAccesoBaseDatos {
 				registro.setEs_phone( jsonReg.getString(10) );	// phone
 				registro.setEs_amount( jsonReg.getDouble(11) );	// amount
 				registro.setEs_currency( jsonReg.getString(12) );	// currency
-				registro.setEs_pay_status( jsonReg.getString(13) );	// pay_status
-				registro.setEs_json( jsonReg.getString(14) );	// json
+				registro.setEs_tpv_order( jsonReg.getString(13) );	// tpv_order
+				registro.setEs_pay_status( jsonReg.getString(14) );	// pay_status
+				registro.setEs_json( jsonReg.getString(15) );	// json
 					
 					arrayTmp.add(registro);
 				} catch (Exception e) {;}
