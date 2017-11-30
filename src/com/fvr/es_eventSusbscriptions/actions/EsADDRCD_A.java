@@ -1,23 +1,32 @@
 ﻿package com.fvr.es_eventSusbscriptions.actions;
 
 
-import com.fvr._comun.ConfigPantalla;
-import com.fvr._comun.StExcepcion;
-import com.fvr._comun.Subrutinas;
-import com.fvr.es_eventSusbscriptions.bean.EsBean;
-import com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos;
-import com.fvr.es_eventSusbscriptions.forms.EsRCD_AF;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.sf.json.JSONObject;
-
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
+
+import com.fvr.FuentesDeDatos.BDConexion;
+import com.fvr._comun.ConfigPantalla;
+import com.fvr._comun.StExcepcion;
+import com.fvr._comun.Subrutinas;
+import com.fvr._comun.TPV_LaCaixa.TPV_API;
+import com.fvr._comun.TPV_LaCaixa.TPV_API.FormStruct;
+import com.fvr.es_eventSusbscriptions.bean.EsBean;
+import com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos;
+import com.fvr.es_eventSusbscriptions.forms.EsRCD_AF;
+
+import net.sf.json.JSONObject;
 
 public class EsADDRCD_A extends Action {
     
@@ -68,7 +77,7 @@ public class EsADDRCD_A extends Action {
             } else if ( opcion.trim().equalsIgnoreCase("LeerReg") ) {
                 resultado = this.cargarPantalla( request, pantalla );
             } else if ( opcion.trim().equalsIgnoreCase("NuevoReg") ) {
-                resultado = opcion_NuevoReg(request,form);
+                resultado = opcion_NuevoReg(request,response,form);
             } else if ( opcion.trim().equalsIgnoreCase("Cerrar") ) {
                 resultado = opcion_Cerrar(request,form);
             } else if (opcion.trim().equalsIgnoreCase("retornoSelect")) {
@@ -140,7 +149,7 @@ public class EsADDRCD_A extends Action {
         ///////////////////////////////////////////
     }
     
-    private String opcion_NuevoReg(HttpServletRequest request, ActionForm  form) {
+    private String opcion_NuevoReg(HttpServletRequest request, HttpServletResponse response, ActionForm  form) {
         String resultado = "OK";
         ///////////////////////////////////////////
         EsRCD_AF pantalla = (EsRCD_AF)form;
@@ -150,7 +159,13 @@ public class EsADDRCD_A extends Action {
         if (resultado.equalsIgnoreCase("OK"))
             resultado = this.crtRcd( request, pantalla );
         if (resultado.equalsIgnoreCase("OK"))
-            resultado = "CERRAR";
+            if (resultado.equalsIgnoreCase("OK")) {
+
+            	if ( pantalla.getEs_amount() > 0L ) {
+                	resultado = pagarInscripcion_tpv(request, response, form);
+            	}
+
+            }
         ///////////////////////////////////////////
         return resultado;
     }
@@ -245,5 +260,103 @@ public class EsADDRCD_A extends Action {
         ///////////////////////////////////////////
         return resultado;
     }
-    
+
+    private String pagarInscripcion_tpv(HttpServletRequest request, HttpServletResponse response, ActionForm form) {
+        String resultado = "OK";
+        ///////////////////////////////////////////
+        EsRCD_AF pantalla = (EsRCD_AF)form;
+        ActionMessages errores = new ActionMessages();
+    	BDConexion dataBase = new Subrutinas().getBDConexion(request);
+
+    	///////////////////////////////////////////
+        if (resultado.equalsIgnoreCase("OK")) { 
+
+        	TPV_API tpv = new TPV_API(dataBase); 
+        	
+			List<String> lstErrores = new ArrayList<String>();
+
+			String url_base = Subrutinas.get_urlBase(request);
+			FormStruct out_formData = tpv.new FormStruct();
+			String order = pantalla.getEs_inscription_user_id();
+			double amount = pantalla.getEs_amount();
+			String location_id = pantalla.getEs_EV_locaition_id();
+			String author = pantalla.getLogon_USR();
+
+			///////////////////////
+			// TOKEN. Conseguir una clave única para el callback:
+			com.fvr.tk_tokens.bean.TkBean reg_tk = new com.fvr.tk_tokens.bean.TkBean();
+			String token_id = Subrutinas.getHashFromRandomCode();
+			while ( ! "".equalsIgnoreCase( Subrutinas.getTkFromId(dataBase, token_id).getTk_sincro() ) ) {
+				// Si tiene "Sincro" es que ya existía...
+				token_id = Subrutinas.getHashFromRandomCode();
+			}
+			///////////////////////
+			
+			String link_redireccion = tpv.prepareFormData( url_base, out_formData, order, amount, token_id, location_id, lstErrores );
+			
+			if ( link_redireccion != null ) {
+				System.out.println( "TPV LINK REDIRECCION: " + link_redireccion );
+				JSONObject jsonData = new JSONObject(); 
+				jsonData.put("url_redirect", link_redireccion);
+				jsonData.put("ds_SignatureVersion", out_formData.ds_SignatureVersion);
+				jsonData.put("ds_MerchantParameters", out_formData.ds_MerchantParameters);
+				jsonData.put("ds_Signature", out_formData.ds_Signature);
+
+				///////////////////////
+				// TOKEN. Conseguir una clave única para el callback:
+				try {
+					JSONObject json = new JSONObject();
+					json.put("acc", "TPV_PAGO_EVENTO_LaCaixa");
+					json.put("reservation_id", order);
+					json.put("url_redirect", link_redireccion);
+					json.put("ds_Signature", out_formData.ds_Signature);
+					json.put("ds_MerchantParameters", out_formData.ds_MerchantParameters);
+					reg_tk.setTk_token_id( token_id );
+					reg_tk.setTk_author( author );
+					reg_tk.setTk_json( json.toString() );
+
+					new com.fvr.tk_tokens.db.TkAccesoBaseDatos().tk_crtObj(dataBase, reg_tk);
+				} catch (StExcepcion e) {;}
+				///////////////////////
+
+				///////////////
+				PrintWriter out = null;
+				try {
+					response.setContentType("application/json");
+					out = response.getWriter();
+					JSONObject json = new JSONObject();
+
+					json.put( "server", Subrutinas.getComputername() );
+					json.put( "class",  this.getClass().getSimpleName() );
+					json.put( "rc",     "OK" );
+					json.put( "text",   jsonData.toString() );
+
+					out.print( json.toString() );
+					
+					resultado = "CERRAR";
+
+				} catch (IOException e) {
+					lstErrores.add(e.getMessage());
+//					e.printStackTrace();
+				} finally {
+					if ( out != null) {
+						out.close();
+					}
+				}
+				///////////////
+			}
+    		if ( lstErrores.size() > 0 ) {
+    			for ( String item : lstErrores ) { errores.add("error", new ActionMessage( "errors.detail", item )); }
+    		}
+
+        }
+    	///////////////////////////////////////////
+
+        if ( errores.size() > 0 ) { 
+        	saveErrors(request,errores);
+        }
+
+        return resultado;
+	}
+
 }
