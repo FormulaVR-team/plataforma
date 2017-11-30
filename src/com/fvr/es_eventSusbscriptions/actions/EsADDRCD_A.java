@@ -279,7 +279,7 @@ public class EsADDRCD_A extends Action {
 			FormStruct out_formData = tpv.new FormStruct();
 			String order = pantalla.getEs_inscription_user_id();
 			double amount = pantalla.getEs_amount();
-			String location_id = pantalla.getEs_EV_locaition_id();
+			String location_id = pantalla.getEs_EV_location_id();
 			String author = pantalla.getLogon_USR();
 
 			///////////////////////

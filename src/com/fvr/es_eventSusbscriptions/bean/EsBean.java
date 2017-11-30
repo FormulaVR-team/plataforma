@@ -11,7 +11,7 @@ public class EsBean extends StBean {
 	public String es_is_deleted; // is_deleted
 	public String es_author; // author
 	public String es_event_id; // event_id
-	public String es_EV_locaition_id; // EV_locaition_id
+	public String es_EV_location_id; // EV_location_id
 	public String es_LO_name; // LO_name
 	public String es_inscription_user_id; // inscription_user_id
 	public String es_first_name; // first_name
@@ -36,7 +36,7 @@ public class EsBean extends StBean {
 	this.setEs_is_deleted( "" ); // is_deleted
 	this.setEs_author( "" ); // author
 	this.setEs_event_id( "" ); // event_id
-	this.setEs_EV_locaition_id( "" ); // EV_locaition_id
+	this.setEs_EV_location_id( "" ); // EV_location_id
 	this.setEs_LO_name( "" ); // LO_name
 	this.setEs_inscription_user_id( "" ); // inscription_user_id
 	this.setEs_first_name( "" ); // first_name
@@ -56,7 +56,7 @@ public class EsBean extends StBean {
 	Destino.setEs_is_deleted( getEs_is_deleted() ); // is_deleted
 	Destino.setEs_author( getEs_author() ); // author
 	Destino.setEs_event_id( getEs_event_id() ); // event_id
-	Destino.setEs_EV_locaition_id( getEs_EV_locaition_id() ); // EV_locaition_id
+	Destino.setEs_EV_location_id( getEs_EV_location_id() ); // EV_location_id
 	Destino.setEs_LO_name( getEs_LO_name() ); // LO_name
 	Destino.setEs_inscription_user_id( getEs_inscription_user_id() ); // inscription_user_id
 	Destino.setEs_first_name( getEs_first_name() ); // first_name
@@ -76,7 +76,7 @@ public class EsBean extends StBean {
 	setEs_is_deleted( Origen.getEs_is_deleted() ); // is_deleted
 	setEs_author( Origen.getEs_author() ); // author
 	setEs_event_id( Origen.getEs_event_id() ); // event_id
-	setEs_EV_locaition_id( Origen.getEs_EV_locaition_id() ); // EV_locaition_id
+	setEs_EV_location_id( Origen.getEs_EV_location_id() ); // EV_location_id
 	setEs_LO_name( Origen.getEs_LO_name() ); // LO_name
 	setEs_inscription_user_id( Origen.getEs_inscription_user_id() ); // inscription_user_id
 	setEs_first_name( Origen.getEs_first_name() ); // first_name
@@ -115,10 +115,10 @@ public class EsBean extends StBean {
 	/** Set event_id*/
 	public void setEs_event_id(String es_event_id) {this.es_event_id = es_event_id;}
 
-	/** Get EV_locaition_id*/
-	public String getEs_EV_locaition_id() {return es_EV_locaition_id;}
-	/** Set EV_locaition_id*/
-	public void setEs_EV_locaition_id(String es_EV_locaition_id) {this.es_EV_locaition_id = es_EV_locaition_id;}
+	/** Get EV_location_id*/
+	public String getEs_EV_location_id() {return es_EV_location_id;}
+	/** Set EV_location_id*/
+	public void setEs_EV_location_id(String es_EV_location_id) {this.es_EV_location_id = es_EV_location_id;}
 
 	/** Get LO_name*/
 	public String getEs_LO_name() {return es_LO_name;}
@@ -185,7 +185,7 @@ public class EsBean extends StBean {
 		out.append( _K.sepFld ); out.append( this.getEs_is_deleted()==null?"":this.getEs_is_deleted() ); // is_deleted
 		out.append( _K.sepFld ); out.append( this.getEs_author()==null?"":this.getEs_author() ); // author
 		out.append( _K.sepFld ); out.append( this.getEs_event_id()==null?"":this.getEs_event_id() ); // event_id
-		out.append( _K.sepFld ); out.append( this.getEs_EV_locaition_id()==null?"":this.getEs_EV_locaition_id() ); // EV_locaition_id
+		out.append( _K.sepFld ); out.append( this.getEs_EV_location_id()==null?"":this.getEs_EV_location_id() ); // EV_location_id
 		out.append( _K.sepFld ); out.append( this.getEs_LO_name()==null?"":this.getEs_LO_name() ); // LO_name
 		out.append( _K.sepFld ); out.append( this.getEs_inscription_user_id()==null?"":this.getEs_inscription_user_id() ); // inscription_user_id
 		out.append( _K.sepFld ); out.append( this.getEs_first_name()==null?"":this.getEs_first_name() ); // first_name
@@ -214,7 +214,7 @@ public class EsBean extends StBean {
 			try { this.setEs_is_deleted( trozos[2] ); } catch (Exception e) {;} // is_deleted
 			try { this.setEs_author( trozos[3] ); } catch (Exception e) {;} // author
 			try { this.setEs_event_id( trozos[4] ); } catch (Exception e) {;} // event_id
-			try { this.setEs_EV_locaition_id( trozos[5] ); } catch (Exception e) {;} // EV_locaition_id
+			try { this.setEs_EV_location_id( trozos[5] ); } catch (Exception e) {;} // EV_location_id
 			try { this.setEs_LO_name( trozos[6] ); } catch (Exception e) {;} // LO_name
 			try { this.setEs_inscription_user_id( trozos[7] ); } catch (Exception e) {;} // inscription_user_id
 			try { this.setEs_first_name( trozos[8] ); } catch (Exception e) {;} // first_name

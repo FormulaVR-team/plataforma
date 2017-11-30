@@ -41,7 +41,7 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	public String es_is_deleted; // is_deleted
 	public String es_author; // author
 	public String es_event_id; // event_id
-	public String es_EV_locaition_id; // EV_locaition_id
+	public String es_EV_location_id; // EV_location_id
 	public String es_LO_name; // LO_name
 	public String es_inscription_user_id; // inscription_user_id
 	public String es_first_name; // first_name
@@ -76,7 +76,7 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	Destino.setEs_is_deleted( getEs_is_deleted() ); // is_deleted
 	Destino.setEs_author( getEs_author() ); // author
 	Destino.setEs_event_id( getEs_event_id() ); // event_id
-	Destino.setEs_EV_locaition_id( getEs_EV_locaition_id() ); // EV_locaition_id
+	Destino.setEs_EV_location_id( getEs_EV_location_id() ); // EV_location_id
 	Destino.setEs_LO_name( getEs_LO_name() ); // LO_name
 	Destino.setEs_inscription_user_id( getEs_inscription_user_id() ); // inscription_user_id
 	Destino.setEs_first_name( getEs_first_name() ); // first_name
@@ -96,7 +96,7 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	setEs_is_deleted( Origen.getEs_is_deleted() ); // is_deleted
 	setEs_author( Origen.getEs_author() ); // author
 	setEs_event_id( Origen.getEs_event_id() ); // event_id
-	setEs_EV_locaition_id( Origen.getEs_EV_locaition_id() ); // EV_locaition_id
+	setEs_EV_location_id( Origen.getEs_EV_location_id() ); // EV_location_id
 	setEs_LO_name( Origen.getEs_LO_name() ); // LO_name
 	setEs_inscription_user_id( Origen.getEs_inscription_user_id() ); // inscription_user_id
 	setEs_first_name( Origen.getEs_first_name() ); // first_name
@@ -129,7 +129,7 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	setEs_is_deleted( Origen.getEs_is_deleted() ); // is_deleted
 	setEs_author( Origen.getEs_author() ); // author
 	setEs_event_id( Origen.getEs_event_id() ); // event_id
-	setEs_EV_locaition_id( Origen.getEs_EV_locaition_id() ); // EV_locaition_id
+	setEs_EV_location_id( Origen.getEs_EV_location_id() ); // EV_location_id
 	setEs_LO_name( Origen.getEs_LO_name() ); // LO_name
 	setEs_inscription_user_id( Origen.getEs_inscription_user_id() ); // inscription_user_id
 	setEs_first_name( Origen.getEs_first_name() ); // first_name
@@ -224,10 +224,10 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	/** Set event_id*/
 	public void setEs_event_id(String es_event_id) {this.es_event_id = es_event_id;}
 
-	/** Get EV_locaition_id*/
-	public String getEs_EV_locaition_id() {return es_EV_locaition_id;}
-	/** Set EV_locaition_id*/
-	public void setEs_EV_locaition_id(String es_EV_locaition_id) {this.es_EV_locaition_id = es_EV_locaition_id;}
+	/** Get EV_location_id*/
+	public String getEs_EV_location_id() {return es_EV_location_id;}
+	/** Set EV_location_id*/
+	public void setEs_EV_location_id(String es_EV_location_id) {this.es_EV_location_id = es_EV_location_id;}
 
 	/** Get LO_name*/
 	public String getEs_LO_name() {return es_LO_name;}

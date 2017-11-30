@@ -116,7 +116,7 @@
 <th style="text-align: left;">is_deleted</th>
 <th style="text-align: left;">author</th>
 <th style="text-align: left;">event_id</th>
-<th style="text-align: left;">EV_locaition_id</th>
+<th style="text-align: left;">EV_location_id</th>
 <th style="text-align: left;">LO_name</th>
 <th style="text-align: left;">inscription_user_id</th>
 <th style="text-align: left;">first_name</th>
@@ -138,7 +138,7 @@
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_event_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
-			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_EV_locaition_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
+			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_EV_location_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_LO_name" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
@@ -167,7 +167,7 @@
 <td class="tbceldadetalle"><bean:write name="grid" property="es_is_deleted"/><br/></td>   <!-- is_deleted -->
 <td class="tbceldadetalle"><bean:write name="grid" property="es_author"/><br/></td>   <!-- author -->
 <td class="tbceldadetalle" onmouseover="onTdOver(this);" onmouseout="onTdOut(this);" onclick="javascript:setRetorno( '<bean:write name="grid" property="es_event_id"/>' );"><bean:write name="grid" property="es_event_id"/><br/></td>   <!-- event_id -->
-<td class="tbceldadetalle"><bean:write name="grid" property="es_EV_locaition_id"/><br/></td>   <!-- EV_locaition_id -->
+<td class="tbceldadetalle"><bean:write name="grid" property="es_EV_location_id"/><br/></td>   <!-- EV_location_id -->
 <td class="tbceldadetalle"><bean:write name="grid" property="es_LO_name"/><br/></td>   <!-- LO_name -->
 <td class="tbceldadetalle" onmouseover="onTdOver(this);" onmouseout="onTdOut(this);" onclick="javascript:setRetorno( '<bean:write name="grid" property="es_inscription_user_id"/>' );"><bean:write name="grid" property="es_inscription_user_id"/><br/></td>   <!-- inscription_user_id -->
 <td class="tbceldadetalle"><bean:write name="grid" property="es_first_name"/><br/></td>   <!-- first_name -->

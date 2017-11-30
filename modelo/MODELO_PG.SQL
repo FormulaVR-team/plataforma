@@ -1083,7 +1083,7 @@ FROM
 ;
 
 CREATE VIEW "FormulaVR"."V_ES_RTV_eventSusbscriptions" AS
-SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."event_id", "b"."location_id" AS "EV_locaition_id", "c"."name" AS "LO_name", "a"."inscription_user_id", "a"."first_name", "a"."last_name", "a"."phone", "a"."amount", "a"."currency", "a"."pay_status", "a"."json"
+SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."event_id", "b"."location_id" AS "EV_location_id", "c"."name" AS "LO_name", "a"."inscription_user_id", "a"."first_name", "a"."last_name", "a"."phone", "a"."amount", "a"."currency", "a"."pay_status", "a"."json"
 FROM 
 
 

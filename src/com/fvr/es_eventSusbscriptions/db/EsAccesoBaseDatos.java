@@ -248,7 +248,7 @@ public class EsAccesoBaseDatos {
 		regRead.setEs_is_deleted( rs.getString("is_deleted") ); regRead.setEs_is_deleted( (regRead.getEs_is_deleted() == null)?"":regRead.getEs_is_deleted().trim() ); // is_deleted
 		regRead.setEs_author( rs.getString("author") ); regRead.setEs_author( (regRead.getEs_author() == null)?"":regRead.getEs_author().trim() ); // author
 		regRead.setEs_event_id( rs.getString("event_id") ); regRead.setEs_event_id( (regRead.getEs_event_id() == null)?"":regRead.getEs_event_id().trim() ); // event_id
-		regRead.setEs_EV_locaition_id( rs.getString("EV_locaition_id") ); regRead.setEs_EV_locaition_id( (regRead.getEs_EV_locaition_id() == null)?"":regRead.getEs_EV_locaition_id().trim() ); // EV_locaition_id
+		regRead.setEs_EV_location_id( rs.getString("EV_location_id") ); regRead.setEs_EV_location_id( (regRead.getEs_EV_location_id() == null)?"":regRead.getEs_EV_location_id().trim() ); // EV_location_id
 		regRead.setEs_LO_name( rs.getString("LO_name") ); regRead.setEs_LO_name( (regRead.getEs_LO_name() == null)?"":regRead.getEs_LO_name().trim() ); // LO_name
 		regRead.setEs_inscription_user_id( rs.getString("inscription_user_id") ); regRead.setEs_inscription_user_id( (regRead.getEs_inscription_user_id() == null)?"":regRead.getEs_inscription_user_id().trim() ); // inscription_user_id
 		regRead.setEs_first_name( rs.getString("first_name") ); regRead.setEs_first_name( (regRead.getEs_first_name() == null)?"":regRead.getEs_first_name().trim() ); // first_name
@@ -318,7 +318,7 @@ public class EsAccesoBaseDatos {
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_is_deleted(),"is_deleted",sqlWhere);   // is_deleted
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_author(),"author",sqlWhere);   // author
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_event_id(),"event_id",sqlWhere);   // event_id
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_EV_locaition_id(),"EV_locaition_id",sqlWhere);   // EV_locaition_id
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_EV_location_id(),"EV_location_id",sqlWhere);   // EV_location_id
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_LO_name(),"LO_name",sqlWhere);   // LO_name
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_inscription_user_id(),"inscription_user_id",sqlWhere);   // inscription_user_id
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_first_name(),"first_name",sqlWhere);   // first_name
@@ -376,7 +376,7 @@ public class EsAccesoBaseDatos {
 		regRead.setEs_is_deleted( rs.getString("is_deleted") ); regRead.setEs_is_deleted( (regRead.getEs_is_deleted() == null)?"":regRead.getEs_is_deleted().trim() ); // is_deleted
 		regRead.setEs_author( rs.getString("author") ); regRead.setEs_author( (regRead.getEs_author() == null)?"":regRead.getEs_author().trim() ); // author
 		regRead.setEs_event_id( rs.getString("event_id") ); regRead.setEs_event_id( (regRead.getEs_event_id() == null)?"":regRead.getEs_event_id().trim() ); // event_id
-		regRead.setEs_EV_locaition_id( rs.getString("EV_locaition_id") ); regRead.setEs_EV_locaition_id( (regRead.getEs_EV_locaition_id() == null)?"":regRead.getEs_EV_locaition_id().trim() ); // EV_locaition_id
+		regRead.setEs_EV_location_id( rs.getString("EV_location_id") ); regRead.setEs_EV_location_id( (regRead.getEs_EV_location_id() == null)?"":regRead.getEs_EV_location_id().trim() ); // EV_location_id
 		regRead.setEs_LO_name( rs.getString("LO_name") ); regRead.setEs_LO_name( (regRead.getEs_LO_name() == null)?"":regRead.getEs_LO_name().trim() ); // LO_name
 		regRead.setEs_inscription_user_id( rs.getString("inscription_user_id") ); regRead.setEs_inscription_user_id( (regRead.getEs_inscription_user_id() == null)?"":regRead.getEs_inscription_user_id().trim() ); // inscription_user_id
 		regRead.setEs_first_name( rs.getString("first_name") ); regRead.setEs_first_name( (regRead.getEs_first_name() == null)?"":regRead.getEs_first_name().trim() ); // first_name
@@ -438,7 +438,7 @@ public class EsAccesoBaseDatos {
 				s += "<td><strong style='color:darkblue;'>" + "is_deleted" + "</strong></td>";  // is_deleted
 				s += "<td><strong style='color:darkblue;'>" + "author" + "</strong></td>";  // author
 				s += "<td><strong style='color:darkblue;'>" + "event_id" + "</strong></td>";  // event_id
-				s += "<td><strong style='color:darkblue;'>" + "EV_locaition_id" + "</strong></td>";  // EV_locaition_id
+				s += "<td><strong style='color:darkblue;'>" + "EV_location_id" + "</strong></td>";  // EV_location_id
 				s += "<td><strong style='color:darkblue;'>" + "LO_name" + "</strong></td>";  // LO_name
 				s += "<td><strong style='color:darkblue;'>" + "inscription_user_id" + "</strong></td>";  // inscription_user_id
 				s += "<td><strong style='color:darkblue;'>" + "first_name" + "</strong></td>";  // first_name
@@ -478,9 +478,9 @@ public class EsAccesoBaseDatos {
 				tmp = registro.getEs_event_id();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // event_id
-				tmp = registro.getEs_EV_locaition_id();
+				tmp = registro.getEs_EV_location_id();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
-				s += "<td>" + tmp + "</td>";  // EV_locaition_id
+				s += "<td>" + tmp + "</td>";  // EV_location_id
 				tmp = registro.getEs_LO_name();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // LO_name
@@ -673,7 +673,7 @@ public class EsAccesoBaseDatos {
 				registro.setEs_is_deleted( jsonReg.getString(2) );	// is_deleted
 				registro.setEs_author( jsonReg.getString(3) );	// author
 				registro.setEs_event_id( jsonReg.getString(4) );	// event_id
-				registro.setEs_EV_locaition_id( jsonReg.getString(5) );	// EV_locaition_id
+				registro.setEs_EV_location_id( jsonReg.getString(5) );	// EV_location_id
 				registro.setEs_LO_name( jsonReg.getString(6) );	// LO_name
 				registro.setEs_inscription_user_id( jsonReg.getString(7) );	// inscription_user_id
 				registro.setEs_first_name( jsonReg.getString(8) );	// first_name

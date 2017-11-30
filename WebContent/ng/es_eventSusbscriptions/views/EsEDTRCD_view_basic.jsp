@@ -36,8 +36,8 @@
 				<input type="text" ng-model="actionForm.es_event_id" />
 			</md-input-container>
 			<md-input-container>
-				<label>EV_locaition_id</label>
-				<input type="text" ng-model="actionForm.es_EV_locaition_id" disabled="disabled" />
+				<label>EV_location_id</label>
+				<input type="text" ng-model="actionForm.es_EV_location_id" disabled="disabled" />
 			</md-input-container>
 			<md-input-container>
 				<label>LO_name</label>
