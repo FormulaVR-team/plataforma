@@ -534,6 +534,7 @@ public class RsADDRCD_A extends Action {
 			String order = pantalla.getRs_reservation_id();
 			double amount = pantalla.getRs_amount();
 			String location_id = pantalla.getRs_location_id();
+			String author = pantalla.getLogon_USR();
 
 			///////////////////////
 			// TOKEN. Conseguir una clave única para el callback:
@@ -565,7 +566,7 @@ public class RsADDRCD_A extends Action {
 					json.put("ds_Signature", out_formData.ds_Signature);
 					json.put("ds_MerchantParameters", out_formData.ds_MerchantParameters);
 					reg_tk.setTk_token_id( token_id );
-					reg_tk.setTk_author( pantalla.getLogon_USR() );
+					reg_tk.setTk_author( author );
 					reg_tk.setTk_json( json.toString() );
 
 					new com.fvr.tk_tokens.db.TkAccesoBaseDatos().tk_crtObj(dataBase, reg_tk);
