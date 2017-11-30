@@ -55,6 +55,7 @@ import org.apache.struts.action.ActionMessages;
 import com.fvr.FuentesDeDatos.BDConexion;
 import com.fvr._comun.disponiblidad.Reservas;
 import com.fvr.cd_LocationClosedDays.bean.CdBean;
+import com.fvr.ev_events.bean.EvBean;
 import com.fvr.lo_location.bean.LoBean;
 import com.fvr.pa_systemParameters.bean.PaBean;
 import com.fvr.pm_promosManuales.bean.PmBean;
@@ -1989,7 +1990,24 @@ public class Subrutinas {
 		}
 		return resultado;
 	}
-
+	public static EvBean getEvFromId(BDConexion dataBase, String event_id) {
+		EvBean key = new EvBean();
+		key.setEv_event_id( event_id );
+		return getEvFromId(dataBase,key);
+	}
+	public static EvBean getEvFromId(BDConexion dataBase, EvBean key) {
+		EvBean resultado = null;
+		try {
+			resultado = new com.fvr.ev_events.db.EvAccesoBaseDatos().ev_getRcd(dataBase, key);
+		} catch (StExcepcion e) {;}
+		finally {
+			if ( resultado == null ) {
+				resultado = key;
+			}
+		}
+		return resultado;
+	}
+	
 	//////////////////////
 
 }
