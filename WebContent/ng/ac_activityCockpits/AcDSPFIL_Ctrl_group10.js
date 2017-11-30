@@ -124,7 +124,7 @@ angular
 					///////////////////////////////////////////////////////////////////////
 					// Aplicar su filtro persistente:
 					$scope.actionForm.ac_filtro = angular.fromJson( $window.sessionStorage.getItem("AcDSPFIL.ac_filtro") );
-					if ( $scope.actionForm.ac_filtro.ac_aaaa_mm_dd != undefined && $scope.actionForm.ac_filtro.ac_aaaa_mm_dd != null && $scope.actionForm.ac_filtro.ac_aaaa_mm_dd != "" ) {
+					if ( $scope.actionForm.ac_filtro != null && $scope.actionForm.ac_filtro.ac_aaaa_mm_dd != undefined && $scope.actionForm.ac_filtro.ac_aaaa_mm_dd != null && $scope.actionForm.ac_filtro.ac_aaaa_mm_dd != "" ) {
 						$scope.aux_FLT_ac_aaaa_mm_dd = new Date( $scope.actionForm.ac_filtro.ac_aaaa_mm_dd );
 					}
 					///////////////////////////////////////////////////////////////////////
