@@ -769,12 +769,15 @@ CREATE TABLE "FormulaVR"."T_ES_eventSusbscriptions"(
  "phone" Character varying(100) DEFAULT '' NOT NULL,
  "amount" Numeric(12,3) DEFAULT 0.0 NOT NULL,
  "currency" Character varying(10) DEFAULT '' NOT NULL,
+ "tpv_order" Character varying(20) DEFAULT '' NOT NULL,
  "pay_status" Character varying(10) DEFAULT '' NOT NULL,
  "json" Text NOT NULL
 )
 WITH (OIDS=FALSE)
 ;
 COMMENT ON COLUMN "FormulaVR"."T_ES_eventSusbscriptions"."sincro" IS 'Momento inserción: aammddhhMMssDDD'
+;
+COMMENT ON COLUMN "FormulaVR"."T_ES_eventSusbscriptions"."tpv_order" IS '#pedido TPV LaCaixa: mín:4 max:12. 4 primeros numericos y resto alfanumericos.'
 ;
 COMMENT ON COLUMN "FormulaVR"."T_ES_eventSusbscriptions"."pay_status" IS 'CP:Cobro pdte confirm, C:Cobro confirmado'
 ;
@@ -1083,7 +1086,7 @@ FROM
 ;
 
 CREATE VIEW "FormulaVR"."V_ES_RTV_eventSusbscriptions" AS
-SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."event_id", "b"."location_id" AS "EV_location_id", "c"."name" AS "LO_name", "a"."inscription_user_id", "a"."first_name", "a"."last_name", "a"."phone", "a"."amount", "a"."currency", "a"."pay_status", "a"."json"
+SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."event_id", "b"."location_id" AS "EV_location_id", "c"."name" AS "LO_name", "a"."inscription_user_id", "a"."first_name", "a"."last_name", "a"."phone", "a"."amount", "a"."currency", "a"."tpv_order", "a"."pay_status", "a"."json"
 FROM 
 
 

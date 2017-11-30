@@ -25,6 +25,7 @@ import com.fvr._comun.TPV_LaCaixa.TPV_API.FormStruct;
 import com.fvr.es_eventSusbscriptions.bean.EsBean;
 import com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos;
 import com.fvr.es_eventSusbscriptions.forms.EsRCD_AF;
+import com.fvr.ev_events.bean.EvBean;
 
 import net.sf.json.JSONObject;
 
@@ -158,14 +159,11 @@ public class EsADDRCD_A extends Action {
         // Altero imagen WRK en disco:
         if (resultado.equalsIgnoreCase("OK"))
             resultado = this.crtRcd( request, pantalla );
-        if (resultado.equalsIgnoreCase("OK"))
-            if (resultado.equalsIgnoreCase("OK")) {
-
-            	if ( pantalla.getEs_amount() > 0L ) {
-                	resultado = pagarInscripcion_tpv(request, response, form);
-            	}
-
-            }
+        if (resultado.equalsIgnoreCase("OK")) {
+        	if ( pantalla.getEs_amount() > 0L ) {
+            	resultado = pagarInscripcion_tpv(request, response, form);
+        	}
+        }
         ///////////////////////////////////////////
         return resultado;
     }
@@ -195,15 +193,24 @@ public class EsADDRCD_A extends Action {
         String resultado = "OK";
         ///////////////////////////////////////////
         EsRCD_AF pantalla = (EsRCD_AF)form;
+    	BDConexion dataBase = new Subrutinas().getBDConexion(request);
         ///////////////////////////////////////////
         // Inicializar campos:
-        
+
         pantalla.setEs_author( pantalla.getLogon_USR() );
+        pantalla.setEs_inscription_user_id( pantalla.getLogon_USR() );
 
         ///////////////////////////////////////////
         // Campos deducidos:
         ///////////////////////////////////////////
 
+        if (pantalla.getEs_event_id() != null && pantalla.getEs_event_id().trim().length() > 0) {
+        	EvBean evBean = Subrutinas.getEvFromId(dataBase, pantalla.getEs_event_id());
+        	if (evBean.getEv_sincro() != null && evBean.getEv_sincro().trim().length()> 0) {
+        		pantalla.setEs_EV_location_id(evBean.getEv_location_id());
+        		pantalla.setEs_LO_name(evBean.getEv_LO_name());
+        	}
+        }
         
         ///////////////////////////////////////////
         return resultado;
@@ -228,6 +235,12 @@ public class EsADDRCD_A extends Action {
 
         ///////////////////////////////////////////
 
+        if (
+		   pantalla.getEs_EV_location_id() == null || pantalla.getEs_EV_location_id().trim().length() < 1
+                ) {
+            resultado = "NOVALE";
+            errores.add("error", new ActionMessage( "errors.detail", "Valore para LOCATION_ID obligatorio." ));
+        }
         
 	
         ///////////////////////////////////////////
@@ -277,10 +290,15 @@ public class EsADDRCD_A extends Action {
 
 			String url_base = Subrutinas.get_urlBase(request);
 			FormStruct out_formData = tpv.new FormStruct();
-			String order = pantalla.getEs_inscription_user_id();
 			double amount = pantalla.getEs_amount();
 			String location_id = pantalla.getEs_EV_location_id();
 			String author = pantalla.getLogon_USR();
+
+// El n.º de pedido generado por su plataforma para el parámetro Ds_Merchant_Order cumpla las siguientes reglas:
+//			• Tiene un mínimo de 4 dígitos y un máximo de 12.
+//			• Los 4 primeros dígitos son numéricos.
+//			• Sólo se utilizan dígitos alfanuméricos (A-Z, a-z, 0-9).
+			String order =  pantalla.getEs_event_id().trim() + "^" + pantalla.getEs_inscription_user_id().trim();
 
 			///////////////////////
 			// TOKEN. Conseguir una clave única para el callback:
