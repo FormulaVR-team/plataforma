@@ -72,6 +72,12 @@
 
 		<script src="ng/cp_cockpits/CpDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
 		<script src="ng/cp_cockpits/CpDSPFIL_service.js?fvrVer=${miVersion}"></script>
+
+		<script src="ng/es_eventSusbscriptions/EsDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
+		<script src="ng/es_eventSusbscriptions/EsDSPFIL_service.js?fvrVer=${miVersion}"></script>
+
+		<script src="ng/ev_events/EvDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
+		<script src="ng/ev_events/EvDSPFIL_service.js?fvrVer=${miVersion}"></script>
 	
 		<script src="ng/lg_logs/LgDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
 		<script src="ng/lg_logs/LgDSPFIL_service.js?fvrVer=${miVersion}"></script>

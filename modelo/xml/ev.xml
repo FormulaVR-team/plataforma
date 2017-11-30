@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mga>
+	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
+	<CAMPOS>
+		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
+		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
+		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
+		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
+		<CAM nombre="event_id" descripcion="event_id" descripcionCorta="event_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="location_id" descripcion="location_id" descripcionCorta="location_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="LO_name" descripcion="LO_name" descripcionCorta="LO_name" longitud="100" tipo="CHAR" />
+		<CAM nombre="name" descripcion="name" descripcionCorta="name" longitud="100" tipo="CHAR" />
+		<CAM nombre="max_inscriptions" descripcion="max_inscriptions" descripcionCorta="max_inscriptions" longitud="5" tipo="NUM" />
+		<CAM nombre="amount" descripcion="amount" descripcionCorta="amount" longitud="12" tipo="DEC" />
+		<CAM nombre="currency" descripcion="currency" descripcionCorta="currency" longitud="10" tipo="CHAR" />
+		<CAM nombre="deadline" descripcion="deadline" descripcionCorta="deadline" longitud="10" tipo="CHAR" />
+		<CAM nombre="comment" descripcion="comment" descripcionCorta="comment" longitud="100" tipo="CHAR" />
+		<CAM nombre="date1" descripcion="date1" descripcionCorta="date1" longitud="10" tipo="CHAR" />
+		<CAM nombre="date2" descripcion="date2" descripcionCorta="date2" longitud="10" tipo="CHAR" />
+		<CAM nombre="date3" descripcion="date3" descripcionCorta="date3" longitud="10" tipo="CHAR" />
+		<CAM nombre="date4" descripcion="date4" descripcionCorta="date4" longitud="10" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
+	</CAMPOS>
+	<ENTIDADES>
+	<!-- EV events -->
+	<ENT nombre="events" descripcion="events" prefijo="ev">
+		<FMT archivo="T_EV_events" nombre="Fisico" tipo="PHY">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="event_id" />
+			<CAM nombre="location_id" />
+			<CAM nombre="name" />
+			<CAM nombre="amount" />
+			<CAM nombre="currency" />
+			<CAM nombre="deadline" />
+			<CAM nombre="max_inscriptions" />
+			<CAM nombre="comment" />
+			<CAM nombre="date1" />
+			<CAM nombre="date2" />
+			<CAM nombre="date3" />
+			<CAM nombre="date4" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_EV_events" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="event_id" />
+			<CAM nombre="location_id" />
+			<CAM nombre="name" />
+			<CAM nombre="amount" />
+			<CAM nombre="currency" />
+			<CAM nombre="deadline" />
+			<CAM nombre="max_inscriptions" />
+			<CAM nombre="comment" />
+			<CAM nombre="date1" />
+			<CAM nombre="date2" />
+			<CAM nombre="date3" />
+			<CAM nombre="date4" />
+			<CAM nombre="json" />
+			<KEY nombre="event_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_EV_RTV_events" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="sincro" />
+			<CAM nombre="mark" />
+			<CAM nombre="is_deleted" />
+			<CAM nombre="author" />
+			<CAM nombre="event_id" />
+			<CAM nombre="location_id" />
+			<CAM nombre="LO_name" />
+			<CAM nombre="name" />
+			<CAM nombre="max_inscriptions" />
+			<CAM nombre="amount" />
+			<CAM nombre="currency" />
+			<CAM nombre="deadline" />
+			<CAM nombre="comment" />
+			<CAM nombre="date1" />
+			<CAM nombre="date2" />
+			<CAM nombre="date3" />
+			<CAM nombre="date4" />
+			<CAM nombre="json" />
+			<KEY nombre="event_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	</ENTIDADES>
+
+	</MODELO>
+</mga>

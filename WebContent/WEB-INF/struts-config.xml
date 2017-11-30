@@ -23,6 +23,8 @@
 		<form-bean name="AcRCD_AF" type="com.fvr.ac_activityCockpits.forms.AcRCD_AF"/>
 		<form-bean name="CdRCD_AF" type="com.fvr.cd_LocationClosedDays.forms.CdRCD_AF"/>
 		<form-bean name="TjRCD_AF" type="com.fvr.tj_tarjetasPrepago.forms.TjRCD_AF"/>
+		<form-bean name="EvRCD_AF" type="com.fvr.ev_events.forms.EvRCD_AF"/>
+		<form-bean name="EsRCD_AF" type="com.fvr.es_eventSusbscriptions.forms.EsRCD_AF"/>
 	</form-beans>
 	<global-exceptions>
 	</global-exceptions>
@@ -67,6 +69,8 @@
 			<forward name="AcDSPFIL_A" path="/AcDSPFIL_A.do"/>
 			<forward name="CdDSPFIL_A" path="/CdDSPFIL_A.do"/>
 			<forward name="TjDSPFIL_A" path="/TjDSPFIL_A.do"/>
+			<forward name="EvDSPFIL_A" path="/EvDSPFIL_A.do"/>
+			<forward name="EsDSPFIL_A" path="/EsDSPFIL_A.do"/>
 		</action>
 		<!-- ::::::::::::::::::::::::::::::::::::: -->
 		<!-- ::::::::::::::::::::::::::::::::::::: -->
@@ -384,6 +388,38 @@
 		<action input="/jsp/TjEDTRCD.jsp" name="TjRCD_AF" path="/TjEDTRCD_A" scope="request" type="com.fvr.tj_tarjetasPrepago.actions.TjEDTRCD_A" validate="false">
 			<forward name="OK" path="/jsp/TjEDTRCD.jsp"/>
 			<forward name="CERRAR" path="/TjDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/EvDSPFIL.jsp" name="EvRCD_AF" path="/EvDSPFIL_A" scope="request" type="com.fvr.ev_events.actions.EvDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/EvDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/EvADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/EvEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/EvSELRCD.jsp" name="EvRCD_AF" path="/EvSELRCD_A" scope="request" type="com.fvr.ev_events.actions.EvSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/EvSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/EvADDRCD.jsp" name="EvRCD_AF" path="/EvADDRCD_A" scope="request" type="com.fvr.ev_events.actions.EvADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/EvADDRCD.jsp"/>
+			<forward name="CERRAR" path="/EvDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/EvEDTRCD.jsp" name="EvRCD_AF" path="/EvEDTRCD_A" scope="request" type="com.fvr.ev_events.actions.EvEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/EvEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/EvDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/EsDSPFIL.jsp" name="EsRCD_AF" path="/EsDSPFIL_A" scope="request" type="com.fvr.es_eventSusbscriptions.actions.EsDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/EsDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/EsADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/EsEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/EsSELRCD.jsp" name="EsRCD_AF" path="/EsSELRCD_A" scope="request" type="com.fvr.es_eventSusbscriptions.actions.EsSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/EsSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/EsADDRCD.jsp" name="EsRCD_AF" path="/EsADDRCD_A" scope="request" type="com.fvr.es_eventSusbscriptions.actions.EsADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/EsADDRCD.jsp"/>
+			<forward name="CERRAR" path="/EsDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/EsEDTRCD.jsp" name="EsRCD_AF" path="/EsEDTRCD_A" scope="request" type="com.fvr.es_eventSusbscriptions.actions.EsEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/EsEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/EsDSPFIL_A.do"/>
 		</action>
 	</action-mappings>
 	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>

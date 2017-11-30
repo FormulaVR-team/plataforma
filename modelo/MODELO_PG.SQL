@@ -1,6 +1,6 @@
 ﻿/*
 Created: 01/05/2017
-Modified: 20/09/2017
+Modified: 30/11/2017
 Model: FormulaVR_V10_PostgreSQL
 Database: PostgreSQL 9.2
 */
@@ -39,6 +39,10 @@ Database: PostgreSQL 9.2
 
 -- Drop keys for tables section -------------------------------------------------
 
+ALTER TABLE "FormulaVR"."T_ES_eventSusbscriptions" DROP CONSTRAINT "PK_T_ES_eventSusbscriptions"
+;
+ALTER TABLE "FormulaVR"."T_EV_events" DROP CONSTRAINT "PK_T_EV_events"
+;
 ALTER TABLE "FormulaVR"."T_TJ_tarjetasPrepago" DROP CONSTRAINT "PK_T_TJ_tarjetasPrepago"
 ;
 ALTER TABLE "FormulaVR"."T_CD_LocationClosedDays" DROP CONSTRAINT "PK_T_CD_LocationClosedDays"
@@ -84,6 +88,10 @@ DROP INDEX "FormulaVR"."idx_rs_pkDescend"
 
 -- Drop views section --------------------------------------------------- 
 
+DROP VIEW "FormulaVR"."V_ES_RTV_eventSusbscriptions"
+;
+DROP VIEW "FormulaVR"."V_EV_RTV_events"
+;
 DROP VIEW "FormulaVR"."V_AC_RTV_group20"
 ;
 DROP VIEW "FormulaVR"."V_AC_RTV_group10"
@@ -129,6 +137,10 @@ DROP VIEW "FormulaVR"."V_US_RTV_users"
 
 -- Drop tables section ---------------------------------------------------
 
+DROP TABLE "FormulaVR"."T_ES_eventSusbscriptions"
+;
+DROP TABLE "FormulaVR"."T_EV_events"
+;
 DROP TABLE "FormulaVR"."T_TJ_tarjetasPrepago"
 ;
 DROP TABLE "FormulaVR"."T_CD_LocationClosedDays"
@@ -710,6 +722,68 @@ COMMENT ON COLUMN "FormulaVR"."T_TJ_tarjetasPrepago"."last_sale_moment" IS 'aamm
 ALTER TABLE "FormulaVR"."T_TJ_tarjetasPrepago" ADD CONSTRAINT "PK_T_TJ_tarjetasPrepago" PRIMARY KEY ("card_id")
 ;
 
+-- Table FormulaVR.T_EV_events
+
+CREATE TABLE "FormulaVR"."T_EV_events"(
+ "sincro" Character varying(20) DEFAULT '' NOT NULL,
+ "mark" Character(1) DEFAULT '' NOT NULL,
+ "is_deleted" Character(1) DEFAULT '' NOT NULL,
+ "author" Character varying(50) DEFAULT '' NOT NULL,
+ "event_id" Character varying(50) DEFAULT '' NOT NULL,
+ "location_id" Character varying(50) DEFAULT '' NOT NULL,
+ "name" Text NOT NULL,
+ "amount" Numeric(12,3) DEFAULT 0.0 NOT NULL,
+ "currency" Character varying(10) DEFAULT '' NOT NULL,
+ "deadline" Character(10) DEFAULT '2099-12-31' NOT NULL,
+ "max_inscriptions" Integer NOT NULL,
+ "comment" Text NOT NULL,
+ "date1" Character(10) DEFAULT '2099-12-31' NOT NULL,
+ "date2" Character(10) DEFAULT '2099-12-31' NOT NULL,
+ "date3" Character(10) DEFAULT '2099-12-31' NOT NULL,
+ "date4" Character(10) DEFAULT '2099-12-31' NOT NULL,
+ "json" Text NOT NULL
+)
+WITH (OIDS=FALSE)
+;
+COMMENT ON COLUMN "FormulaVR"."T_EV_events"."sincro" IS 'Momento inserción: aammddhhMMssDDD'
+;
+COMMENT ON COLUMN "FormulaVR"."T_EV_events"."deadline" IS 'Límite para inscripciones'
+;
+
+-- Add keys for table FormulaVR.T_EV_events
+
+ALTER TABLE "FormulaVR"."T_EV_events" ADD CONSTRAINT "PK_T_EV_events" PRIMARY KEY ("event_id")
+;
+
+-- Table FormulaVR.T_ES_eventSusbscriptions
+
+CREATE TABLE "FormulaVR"."T_ES_eventSusbscriptions"(
+ "sincro" Character varying(20) DEFAULT '' NOT NULL,
+ "mark" Character(1) DEFAULT '' NOT NULL,
+ "is_deleted" Character(1) DEFAULT '' NOT NULL,
+ "author" Character varying(50) DEFAULT '' NOT NULL,
+ "event_id" Character varying(50) DEFAULT '' NOT NULL,
+ "inscription_user_id" Character varying(50) DEFAULT '' NOT NULL,
+ "first_name" Text NOT NULL,
+ "last_name" Text NOT NULL,
+ "phone" Character varying(100) DEFAULT '' NOT NULL,
+ "amount" Numeric(12,3) DEFAULT 0.0 NOT NULL,
+ "currency" Character varying(10) DEFAULT '' NOT NULL,
+ "pay_status" Character varying(10) DEFAULT '' NOT NULL,
+ "json" Text NOT NULL
+)
+WITH (OIDS=FALSE)
+;
+COMMENT ON COLUMN "FormulaVR"."T_ES_eventSusbscriptions"."sincro" IS 'Momento inserción: aammddhhMMssDDD'
+;
+COMMENT ON COLUMN "FormulaVR"."T_ES_eventSusbscriptions"."pay_status" IS 'CP:Cobro pdte confirm, C:Cobro confirmado'
+;
+
+-- Add keys for table FormulaVR.T_ES_eventSusbscriptions
+
+ALTER TABLE "FormulaVR"."T_ES_eventSusbscriptions" ADD CONSTRAINT "PK_T_ES_eventSusbscriptions" PRIMARY KEY ("event_id","inscription_user_id")
+;
+
 -- Create views section -------------------------------------------------
 
 CREATE VIEW "FormulaVR"."V_US_RTV_users" AS
@@ -995,6 +1069,35 @@ ORDER BY
     , a.start_time
 ;
 
+CREATE VIEW "FormulaVR"."V_EV_RTV_events" AS
+SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."event_id", "a"."location_id", "b"."name" AS "LO_name", "a"."name", "a"."max_inscriptions", "a"."amount", "a"."currency", "a"."deadline", "a"."comment", "a"."date1", "a"."date2", "a"."date3", "a"."date4", "a"."json"
+FROM 
+
+
+-- COD.AUTOGENERADO. Para fijarlo copiar en el apartado 'Notes'...
+
+ "FormulaVR"."T_EV_events" "a"
+
+ LEFT JOIN "FormulaVR"."T_LO_location" "b"
+        ON "b"."location_id" = "a"."location_id"
+;
+
+CREATE VIEW "FormulaVR"."V_ES_RTV_eventSusbscriptions" AS
+SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."event_id", "b"."location_id" AS "EV_locaition_id", "c"."name" AS "LO_name", "a"."inscription_user_id", "a"."first_name", "a"."last_name", "a"."phone", "a"."amount", "a"."currency", "a"."pay_status", "a"."json"
+FROM 
+
+
+-- COD.AUTOGENERADO. Para fijarlo copiar en el apartado 'Notes'...
+
+ "FormulaVR"."T_ES_eventSusbscriptions" "a"
+
+ LEFT JOIN "FormulaVR"."T_EV_events" "b"
+        ON "b"."event_id" = "a"."event_id"
+
+ LEFT JOIN "FormulaVR"."T_LO_location" "c"
+        ON "c"."location_id" = "b"."location_id"
+;
+
 
 
 
@@ -1003,6 +1106,8 @@ GRANT USAGE ON SCHEMA "FormulaVR" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_AC_activityCockpits" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_CD_LocationClosedDays" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_CP_cockpits" TO public;
+GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_EV_events" TO public;
+GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_ES_eventSusbscriptions" TO public;
 GRANT ALL                ON TABLE "FormulaVR"."T_LG_logs" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_LO_location" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_PA_systemParameters" TO public;
@@ -1022,6 +1127,8 @@ GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."T_US_users" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_AC_RTV_activityCockpits" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_CD_RTV_LocationClosedDays" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_CP_RTV_cockpits" TO public;
+GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_EV_RTV_events" TO public;
+GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_ES_RTV_eventSusbscriptions" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_LG_RTV_logs" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_LO_RTV_location" TO public;
 GRANT SELECT, REFERENCES ON TABLE "FormulaVR"."V_PA_RTV_systemParameters" TO public;
