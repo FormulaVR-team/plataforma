@@ -122,6 +122,7 @@ public class _K {
 	// Eventos de pago:
 	public static final String EV_PAYPAL_PAGO_OK = "Pago con Paypal OK";
 	public static final String EV_TPV_PAGO_OK = "Pago con TPV OK";
+	public static final String EV_TPV_PAGO_EVENTO_OK = "Pago EVENTO TPV OK";
 
 	////////////////////
 	// TPV LaCaixa

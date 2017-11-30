@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.CRC32;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -209,6 +210,18 @@ public class EsADDRCD_A extends Action {
         	if (evBean.getEv_sincro() != null && evBean.getEv_sincro().trim().length()> 0) {
         		pantalla.setEs_EV_location_id(evBean.getEv_location_id());
         		pantalla.setEs_LO_name(evBean.getEv_LO_name());
+        		
+    			////////////
+    			String order_AUX =  Subrutinas.getDateAuditoria() + pantalla.getEs_event_id().trim() + pantalla.getEs_inscription_user_id().trim();
+    			java.util.zip.CRC32 order_checkSum = new java.util.zip.CRC32();
+    			order_checkSum.update( order_AUX.getBytes() );
+    			String order = Long.toHexString( order_checkSum.getValue() );
+    			
+    			order = Subrutinas.getDateAuditoria().substring(2,6) + order.toUpperCase();
+
+    			pantalla.setEs_tpv_order( order );
+    			////////////
+
         	}
         }
         
@@ -293,12 +306,11 @@ public class EsADDRCD_A extends Action {
 			double amount = pantalla.getEs_amount();
 			String location_id = pantalla.getEs_EV_location_id();
 			String author = pantalla.getLogon_USR();
-
 // El n.º de pedido generado por su plataforma para el parámetro Ds_Merchant_Order cumpla las siguientes reglas:
 //			• Tiene un mínimo de 4 dígitos y un máximo de 12.
 //			• Los 4 primeros dígitos son numéricos.
 //			• Sólo se utilizan dígitos alfanuméricos (A-Z, a-z, 0-9).
-			String order =  pantalla.getEs_event_id().trim() + "^" + pantalla.getEs_inscription_user_id().trim();
+			String order = pantalla.getEs_tpv_order();
 
 			///////////////////////
 			// TOKEN. Conseguir una clave única para el callback:
@@ -309,9 +321,9 @@ public class EsADDRCD_A extends Action {
 				token_id = Subrutinas.getHashFromRandomCode();
 			}
 			///////////////////////
-			
+
 			String link_redireccion = tpv.prepareFormData( url_base, out_formData, order, amount, token_id, location_id, lstErrores );
-			
+
 			if ( link_redireccion != null ) {
 				System.out.println( "TPV LINK REDIRECCION: " + link_redireccion );
 				JSONObject jsonData = new JSONObject(); 
@@ -326,6 +338,8 @@ public class EsADDRCD_A extends Action {
 					JSONObject json = new JSONObject();
 					json.put("acc", "TPV_PAGO_EVENTO_LaCaixa");
 					json.put("reservation_id", order);
+					json.put("event_id", pantalla.getEs_event_id());
+					json.put("inscription_user_id", pantalla.getEs_inscription_user_id());
 					json.put("url_redirect", link_redireccion);
 					json.put("ds_Signature", out_formData.ds_Signature);
 					json.put("ds_MerchantParameters", out_formData.ds_MerchantParameters);

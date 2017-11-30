@@ -41,6 +41,7 @@ import com.fvr._comun.paypal.classes.APICredentials;
 import com.fvr._comun.paypal.classes.PaypalCredentials;
 import com.fvr.cd_LocationClosedDays.bean.CdBean;
 import com.fvr.cp_cockpits.bean.CpBean;
+import com.fvr.es_eventSusbscriptions.bean.EsBean;
 import com.fvr.lo_location.bean.LoBean;
 import com.fvr.ps_countries.bean.PsBean;
 import com.fvr.pt_products.bean.PtBean;
@@ -536,50 +537,118 @@ public class FvrServlet extends HttpServlet {
 			JSONObject json = null;
 			try { json = JSONObject.fromObject( reg_tk.getTk_json() ); } catch (Exception e) {;} 
 			if ( json != null ) {
-				String reservation_id = null;
-				try { reservation_id = json.getString("reservation_id"); } catch (Exception e) {;}
-				if ( reservation_id != null && reservation_id.trim().length() > 0 ) {
-					RsBean reg_rs = Subrutinas.getRsFromId(dataBase, reservation_id);
-					if ( isOk ) {
-						reg_rs.setRs_pay_status( _K.PAY_STS_TPV_Completado );
-					} else {
-						reg_rs.setRs_pay_status( _K.PAY_STS_TPV_Fallido );
-					}
-					 try {
-						new com.fvr.rs_reservations.db.RsAccesoBaseDatos().rs_chgObj(dataBase, reg_rs);
-
-						if ( _K.PAY_STS_TPV_Completado.equalsIgnoreCase( reg_rs.getRs_pay_status() ) ) {
-							List<String> errores = new ArrayList<String>();
-							String url_base = Subrutinas.get_urlBase(request);
-							SendMail.send_comprobanteReserva(dataBase, url_base, reg_rs.getRs_user_id(), reg_rs.getRs_reservation_id(), errores, true);
-							Subrutinas.addLog(dataBase, _K.SYS, _K.EV_TPV_PAGO_OK, reservation_id, "api_doExpressCheckout()" );
-						}
-
-						///////////////////
-						// Reentrada en el sistema:
-						String link = Subrutinas.get_urlBase(request) + "/";
-						String user_id = reg_tk.getTk_author();
-						if ( user_id != null && user_id.trim().length() > 0 ) {
-							UsBean reg_us = Subrutinas.getUsFromId(dataBase, user_id);
-					       	request.getSession(true).setAttribute( "logon_USR", reg_us.getUs_user_id() );
-					        request.getSession(true).setAttribute( "logon_HSH", reg_us.getUs_hash_code() );
-							request.getSession(true).setAttribute( "roleKey", reg_us.getUs_role_id() );
-							link +=  "Index_A.do#/RsDSPFIL/";
-						}
-						response.sendRedirect( link );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//						request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
-						///////////////////
-						
-						
-						return;
-					} catch (StExcepcion e) {
-						responder(request, response, false, e.getMessage());
-						return;
-					}
+				
+				String acc = null;
+				try { acc = json.getString("acc"); } catch (Exception e) {;}
+				if ( acc != null && acc.trim().equalsIgnoreCase("TPV_PAGO_EVENTO_LaCaixa") ) {
+					// PAGO DE INSCRIPCIÓN A EVENTO:
+					cmd_tpv_callback_Evento(dataBase, request, response, isOk, reg_tk, json);
+				} else {
+					// PAGO DE RESERVA:
+					cmd_tpv_callback_Reserva(dataBase, request, response, isOk, reg_tk, json);
 				}
+
 			}
 		}
 		responder(request, response, false, "No se procesó la petición tpv_callback para " + token_id );
+	}
+	private void cmd_tpv_callback_Reserva(BDConexion dataBase, HttpServletRequest request, HttpServletResponse response, boolean isOk, TkBean reg_tk, JSONObject json) throws IOException {
+		String reservation_id = null;
+		try { reservation_id = json.getString("reservation_id"); } catch (Exception e) {;}
+		if ( reservation_id != null && reservation_id.trim().length() > 0 ) {
+			RsBean reg_rs = Subrutinas.getRsFromId(dataBase, reservation_id);
+			if ( reg_rs != null && reg_rs.getRs_sincro() != null && reg_rs.getRs_sincro().trim().length() > 0 ) {
+				if ( isOk ) {
+					reg_rs.setRs_pay_status( _K.PAY_STS_TPV_Completado );
+				} else {
+					reg_rs.setRs_pay_status( _K.PAY_STS_TPV_Fallido );
+				}
+				 try {
+					new com.fvr.rs_reservations.db.RsAccesoBaseDatos().rs_chgObj(dataBase, reg_rs);
+
+					if ( _K.PAY_STS_TPV_Completado.equalsIgnoreCase( reg_rs.getRs_pay_status() ) ) {
+						List<String> errores = new ArrayList<String>();
+						String url_base = Subrutinas.get_urlBase(request);
+						SendMail.send_comprobanteReserva(dataBase, url_base, reg_rs.getRs_user_id(), reg_rs.getRs_reservation_id(), errores, true);
+						Subrutinas.addLog(dataBase, _K.SYS, _K.EV_TPV_PAGO_OK, reservation_id, "api_doExpressCheckout()" );
+					}
+
+					///////////////////
+					// Reentrada en el sistema:
+					String link = Subrutinas.get_urlBase(request) + "/";
+					String user_id = reg_tk.getTk_author();
+					if ( user_id != null && user_id.trim().length() > 0 ) {
+						UsBean reg_us = Subrutinas.getUsFromId(dataBase, user_id);
+				       	request.getSession(true).setAttribute( "logon_USR", reg_us.getUs_user_id() );
+				        request.getSession(true).setAttribute( "logon_HSH", reg_us.getUs_hash_code() );
+						request.getSession(true).setAttribute( "roleKey", reg_us.getUs_role_id() );
+						link +=  "Index_A.do#/RsDSPFIL/";
+					}
+					response.sendRedirect( link );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//					request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
+					///////////////////
+					
+					
+					return;
+				} catch (StExcepcion e) {
+					responder(request, response, false, e.getMessage());
+					return;
+				}
+			}
+		}
+	}
+	private void cmd_tpv_callback_Evento(BDConexion dataBase, HttpServletRequest request, HttpServletResponse response, boolean isOk, TkBean reg_tk, JSONObject json) throws IOException {
+		String event_id = null;
+		String inscription_user_id = null;
+		try { event_id = json.getString("event_id"); } catch (Exception e) {;}
+		try { inscription_user_id = json.getString("inscription_user_id"); } catch (Exception e) {;}
+		if ( event_id != null && event_id.trim().length() > 0
+			  &&
+			 inscription_user_id != null && inscription_user_id.trim().length() > 0 
+				) {
+			EsBean reg_es = new EsBean();
+			reg_es.setEs_event_id(event_id);
+			reg_es.setEs_inscription_user_id(inscription_user_id);
+			reg_es = Subrutinas.getEsFromId(dataBase, reg_es);
+			if ( reg_es != null && reg_es.getEs_sincro() != null && reg_es.getEs_sincro().trim().length() > 0 ) {
+				if ( isOk ) {
+					reg_es.setEs_pay_status( _K.PAY_STS_TPV_Completado );
+				} else {
+					reg_es.setEs_pay_status( _K.PAY_STS_TPV_Fallido );
+				}
+				 try {
+					new com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos().es_chgObj(dataBase, reg_es);
+
+					if ( _K.PAY_STS_TPV_Completado.equalsIgnoreCase( reg_es.getEs_pay_status() ) ) {
+						List<String> errores = new ArrayList<String>();
+						String url_base = Subrutinas.get_urlBase(request);
+//						SendMail.send_comprobanteReserva(dataBase, url_base, reg_es.getEs_inscription_user_id(), reg_es.getEs_event_id(), errores, true);
+						Subrutinas.addLog(dataBase, _K.SYS, _K.EV_TPV_PAGO_EVENTO_OK, reg_es.getKey(), "api_doExpressCheckout()" );
+					}
+
+					///////////////////
+					// Reentrada en el sistema:
+					String link = Subrutinas.get_urlBase(request) + "/";
+					String user_id = reg_tk.getTk_author();
+					if ( user_id != null && user_id.trim().length() > 0 ) {
+						UsBean reg_us = Subrutinas.getUsFromId(dataBase, user_id);
+				       	request.getSession(true).setAttribute( "logon_USR", reg_us.getUs_user_id() );
+				        request.getSession(true).setAttribute( "logon_HSH", reg_us.getUs_hash_code() );
+						request.getSession(true).setAttribute( "roleKey", reg_us.getUs_role_id() );
+						link +=  "Index_A.do#/RsDSPFIL/";
+					}
+					response.sendRedirect( link );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//					request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
+					///////////////////
+					
+					
+					return;
+				} catch (StExcepcion e) {
+					responder(request, response, false, e.getMessage());
+					return;
+				}
+			}
+		}
 	}
 
 	private void cmd_lo_lst(HttpServletRequest request, HttpServletResponse response) throws IOException {

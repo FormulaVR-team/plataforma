@@ -136,6 +136,37 @@ angular
 							new paginador( model.filasTotales, model.filasGrid, model.filaInicioGrid )
 								.getPaginado_innerHTML(); 
 					};
+					function tpv_submitForm(campos_tpv) {
+						// Submitir formulario "TPV_form":
+					    var f = document.createElement("FORM");
+					    f.enctype = "application/x-www-form-urlencoded";
+					    f.method = "post";
+					    f.acceptCharset = "UTF-8";
+					    f.action = campos_tpv.url_redirect;
+					    f.setAttribute("id", "TPV_form");
+					    document.body.appendChild(f);
+
+					    var x = document.createElement("INPUT");
+					    x.setAttribute("type", "hidden");
+					    x.setAttribute("name", "ds_SignatureVersion");
+					    x.setAttribute("value", campos_tpv.ds_SignatureVersion);
+					    document.getElementById("TPV_form").appendChild(x);
+
+					    var y = document.createElement("INPUT");
+					    y.setAttribute("type", "hidden");
+					    y.setAttribute("name", "ds_MerchantParameters");
+					    y.setAttribute("value", campos_tpv.ds_MerchantParameters);
+					    document.getElementById("TPV_form").appendChild(y);
+
+					    var z = document.createElement("INPUT");
+					    z.setAttribute("type", "hidden");
+					    z.setAttribute("name", "ds_Signature");
+					    z.setAttribute("value", campos_tpv.ds_Signature);
+					    document.getElementById("TPV_form").appendChild(z);
+					    
+					    f.submit();
+					
+					};
 					///////////////////////////////////////////////////////////////////////
 					// Inicializar pantalla:
 					EsDSPFIL_service
@@ -406,9 +437,13 @@ angular
 									function(response) {
 	
 										if (response.data.rc === 'OK') {
-											$mdToast.showSimple( "Registro agregado" );
-											$('.modal-backdrop').remove();
-											$state.reload();
+//											$mdToast.showSimple( "Registro agregado" );
+//											$('.modal-backdrop').remove();
+//											$state.reload();
+											/////////////
+											// TPV virtual:
+											tpv_submitForm( response.data.text );
+											/////////////
 										} else {
 											app_services.errorComun(response.data.text);
 										}
