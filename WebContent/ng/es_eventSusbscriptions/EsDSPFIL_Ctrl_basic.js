@@ -456,7 +456,9 @@ angular
 					$scope.agregar = function() {
 						
 //						if (validationService.validarEmail($scope.actionForm.logon_USR)) {
-
+						
+						if ( ! confirmar('¿Pagar la inscripción?',this) ) { return; }
+						
 					    // Combos y auxiliares para componentes de presentación:
 						// Recoger valores de los combos:
 						$scope.actionForm.es_EV_location_id = $scope.aux_es_EV_location_id.value;

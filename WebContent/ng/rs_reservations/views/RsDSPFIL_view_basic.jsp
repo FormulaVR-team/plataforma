@@ -21,6 +21,7 @@
 			<md-button class="md-raised md-accent padding-10" ng-click="gamingModule()" title="Resultados"><md-icon> extension </md-icon> Resultados </md-button>
 			</span>
 			<md-button class="md-raised md-primary padding-10" ng-click="initReg()" data-toggle="modal" data-target="#rsDSPFIL_ADDRCD_modal" title="<bean:message key="common.client.nuevo"/>"><md-icon> add </md-icon> Nueva reserva </md-button>
+			<md-button class="md-raised md-primary padding-10" ng-click="go_misEventos()"><md-icon>event_available</md-icon> Inscripciones </md-button>
 		</div>
 
 	</div>

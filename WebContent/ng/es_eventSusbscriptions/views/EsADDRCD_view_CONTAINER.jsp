@@ -10,7 +10,7 @@
 
 <div name="EsDSPFIL_form">
 
-	<h1 class="page-title">Mis Eventos ( {{actionForm.es_filtro.es_inscription_user_id}} )</h1>
+	<h1 class="page-title">Mis inscripciones ( {{actionForm.es_filtro.es_inscription_user_id}} )</h1>
 	
 	<script>
 	$('#esDSPFIL_ADDRCD_modal').modal("show");
@@ -58,7 +58,7 @@
 		<table class="table table-striped table-hover">
 			<thead>
 				<tr>
-					<th><!-- {{actionForm.filasMarcadas}}&nbsp;{{actionForm.clavesMarcadas}} --></th>
+					<!-- <th>{{actionForm.filasMarcadas}}&nbsp;{{actionForm.clavesMarcadas}}</th> -->
 					<!-- <th>sincro</th> -->
 					<!-- <th>mark</th> -->
 					<!-- <th>is_deleted</th> -->
@@ -79,7 +79,7 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="reg in actionForm.grid" ng-click="putRecordAsTheCurrent(reg)" data-toggle="modal" data-target="#esDSPFIL_EDTRCD_modal">
-					<td><input type="checkbox" onclick="event.stopPropagation();" ng-model="actionForm.filasMarcadas[$index]" ng-click="setClaveMarcada( this.reg.key, $index );"/></td>
+					<!-- <td><input type="checkbox" onclick="event.stopPropagation();" ng-model="actionForm.filasMarcadas[$index]" ng-click="setClaveMarcada( this.reg.key, $index );"/></td> -->
 					<!-- <td>{{reg.es_sincro}}&nbsp;</td> -->
 					<!-- <td>{{reg.es_mark}}&nbsp;</td> -->
 					<!-- <td>{{reg.es_is_deleted}}&nbsp;</td> -->

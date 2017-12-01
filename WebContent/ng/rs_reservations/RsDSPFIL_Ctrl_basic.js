@@ -1002,6 +1002,10 @@ angular
 					}
 
 					//////////////
+					$scope.go_misEventos = function() {
+						$state.go( "EsADDRCD" );	
+					}
+
 /////////////
 /////////////
 
