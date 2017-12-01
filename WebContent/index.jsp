@@ -145,6 +145,9 @@
 
 		<script src="ng/rs_reservations/RsDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
 		<script src="ng/rs_reservations/RsDSPFIL_service.js?fvrVer=${miVersion}"></script>
+
+		<script src="ng/es_eventSusbscriptions/EsDSPFIL_Ctrl_basic.js?fvrVer=${miVersion}"></script>
+		<script src="ng/es_eventSusbscriptions/EsDSPFIL_service.js?fvrVer=${miVersion}"></script>
 	</logic:equal>
 	<!-- ng-slim-scroll -->
 	<script src="ng/_lib/ng/ng-slim-scroll.js"></script>

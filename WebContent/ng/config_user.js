@@ -158,6 +158,37 @@ $mdThemingProvider
 			}
 		}
 	})
+	.state('EsADDRCD', {
+		url: "/EsADDRCD",
+		params: {
+			logon_USR: {
+				value: null
+			},
+			logon_HSH: {
+				value: null
+			}
+		},
+		resolve: {
+			greeting: function ($q, $timeout) {}
+		},
+		views: {
+			"rgnNavBar": {
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				controller: "nav_bar_controller"
+			},
+			"rgnHeader": {
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				controller: "header_controller"
+			},
+			"rgnFooter": {
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+			},
+			"rgnMain": {
+				templateUrl: "./ng/es_eventSusbscriptions/views/EsADDRCD_view_CONTAINER.jsp?version=fake1",
+				controller: "EsDSPFIL_Ctrl_basic"
+			}
+		}
+	})
 	.state("signoff", {
 		url: "/",
 		views: {
