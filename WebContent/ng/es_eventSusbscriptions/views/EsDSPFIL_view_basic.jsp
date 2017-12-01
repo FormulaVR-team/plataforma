@@ -201,7 +201,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Agregar: eventSusbscriptions</h4>
+          <h4 class="modal-title">{{actionForm.logon_USR}}</h4>
         </div>
         <div class="modal-body">
 			<span ng-include="'ng/es_eventSusbscriptions/views/EsADDRCD_view_basic.jsp'" />
