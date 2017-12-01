@@ -159,46 +159,46 @@
 				<tr>
 					<th><!-- {{actionForm.filasMarcadas}}&nbsp;{{actionForm.clavesMarcadas}} --></th>
 					<th>sincro</th>
-					<th>mark</th>
-					<th>is_deleted</th>
-					<th>author</th>
+					<!-- <th>mark</th> -->
+					<!-- <th>is_deleted</th> -->
+					<!-- <th>author</th> -->
 					<th>event_id</th>
-					<th>location_id</th>
-					<th>LO_name</th>
+					<!-- <th>location_id</th> -->
+					<th>location</th>
 					<th>name</th>
-					<th>max_inscriptions</th>
-					<th>amount</th>
-					<th>currency</th>
+					<th style="text-align:right;">max_inscriptions</th>
+					<th style="text-align:right;">amount</th>
+					<!-- <th>currency</th> -->
 					<th>deadline</th>
-					<th>comment</th>
-					<th>date1</th>
-					<th>date2</th>
-					<th>date3</th>
-					<th>date4</th>
-					<th>json</th>
+					<!-- <th>comment</th> -->
+					<!-- <th>date1</th> -->
+					<!-- <th>date2</th> -->
+					<!-- <th>date3</th> -->
+					<!-- <th>date4</th> -->
+					<!-- <th>json</th> -->
 				</tr>
 			</thead>
 			<tbody>
 				<tr ng-repeat="reg in actionForm.grid" ng-click="putRecordAsTheCurrent(reg)" data-toggle="modal" data-target="#evDSPFIL_EDTRCD_modal">
 					<td><input type="checkbox" onclick="event.stopPropagation();" ng-model="actionForm.filasMarcadas[$index]" ng-click="setClaveMarcada( this.reg.key, $index );"/></td>
 					<td>{{reg.ev_sincro}}&nbsp;</td>
-					<td>{{reg.ev_mark}}&nbsp;</td>
-					<td>{{reg.ev_is_deleted}}&nbsp;</td>
-					<td>{{reg.ev_author}}&nbsp;</td>
+					<!-- <td>{{reg.ev_mark}}&nbsp;</td> -->
+					<!-- <td>{{reg.ev_is_deleted}}&nbsp;</td> -->
+					<!-- <td>{{reg.ev_author}}&nbsp;</td> -->
 					<td>{{reg.ev_event_id}}&nbsp;</td>
-					<td>{{reg.ev_location_id}}&nbsp;</td>
+					<!-- <td>{{reg.ev_location_id}}&nbsp;</td> -->
 					<td>{{reg.ev_LO_name}}&nbsp;</td>
 					<td>{{reg.ev_name}}&nbsp;</td>
-					<td>{{reg.ev_max_inscriptions}}&nbsp;</td>
-					<td>{{reg.ev_amount}}&nbsp;</td>
-					<td>{{reg.ev_currency}}&nbsp;</td>
-					<td>{{reg.ev_deadline}}&nbsp;</td>
-					<td>{{reg.ev_comment}}&nbsp;</td>
-					<td>{{reg.ev_date1}}&nbsp;</td>
-					<td>{{reg.ev_date2}}&nbsp;</td>
-					<td>{{reg.ev_date3}}&nbsp;</td>
-					<td>{{reg.ev_date4}}&nbsp;</td>
-					<td>{{reg.ev_json}}&nbsp;</td>
+					<td style="text-align:right;">{{reg.ev_max_inscriptions}}&nbsp;</td>
+					<td style="text-align:right;">{{reg.ev_amount}}&nbsp;{{reg.ev_currency}}</td>
+					<!-- <td>{{reg.ev_currency}}&nbsp;</td> -->
+					 <td>{{reg.ev_deadline}}&nbsp;</td>
+					<!-- <td>{{reg.ev_comment}}&nbsp;</td> -->
+					<!-- <td>{{reg.ev_date1}}&nbsp;</td> -->
+					<!-- <td>{{reg.ev_date2}}&nbsp;</td> -->
+					<!-- <td>{{reg.ev_date3}}&nbsp;</td> -->
+					<!-- <td>{{reg.ev_date4}}&nbsp;</td> -->
+					<!-- <td>{{reg.ev_json}}&nbsp;</td> -->
 				</tr>
 			</tbody>
 		</table>
