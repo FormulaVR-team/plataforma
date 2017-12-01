@@ -12,8 +12,8 @@
 
 	<h1 class="page-title">Inscripciones Eventos</h1>
 	
-	<div class="row">
-		<div class="col-xs-12 col-sm-5" style="margin-top: 15px ;margin-bottom: 10px;">
+	<div layout="row" layout-align="space-between center">
+		<div>
 			<!-- Botones inicio -->
 			<div class="btn-group">
 				<md-button class="md-icon-button md-accent md-button md-ink-ripple margin-0" ng-click="filtrar()">
@@ -47,7 +47,15 @@
 			</div>
 			<!-- Botones final -->
 		</div>
-		<div class="col-xs-12 col-sm-5 text-right">
+		
+		<div>
+			<md-input-container>
+				<label>inscription_user_id</label>
+				<input type="text" ng-model="actionForm.es_filtro.es_inscription_user_id" />
+			</md-input-container>
+		</div>
+
+		<div>
 			<!-- Paginador inicio -->
 			<div>
 				<span dynamic="exportLink"></span>
@@ -100,10 +108,6 @@
 				<md-input-container>
 					<label>LO_name</label>
 					<input type="text" ng-model="actionForm.es_filtro.es_LO_name" />
-				</md-input-container>
-				<md-input-container>
-					<label>inscription_user_id</label>
-					<input type="text" ng-model="actionForm.es_filtro.es_inscription_user_id" />
 				</md-input-container>
 				<md-input-container>
 					<label>first_name</label>
@@ -174,8 +178,8 @@
 					<!-- <td>{{reg.es_mark}}&nbsp;</td> -->
 					<!-- <td>{{reg.es_is_deleted}}&nbsp;</td> -->
 					<!-- <td>{{reg.es_author}}&nbsp;</td> -->
-					<!-- <td>{{reg.es_event_id}}&nbsp;</td> -->
-					<td>{{reg.es_EV_location_id}}&nbsp;</td>
+					<td>{{reg.es_event_id}}&nbsp;</td>
+					<!-- <td>{{reg.es_EV_location_id}}&nbsp;</td> -->
 					<td>{{reg.es_LO_name}}&nbsp;</td>
 					<td>{{reg.es_inscription_user_id}}&nbsp;</td>
 					<!-- <td>{{reg.es_first_name}}&nbsp;</td> -->

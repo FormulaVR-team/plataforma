@@ -126,7 +126,12 @@ angular
 					}
 					///////////////////////////////////////////////////////////////////////
 					// Aplicar su filtro persistente:
-					$scope.actionForm.es_filtro = angular.fromJson( $window.sessionStorage.getItem("EsDSPFIL.es_filtro") );
+					if ( $state.current.name == 'EsADDRCD' ) {
+						// Restringir al usuario de logon:
+						$scope.actionForm.es_filtro.es_inscription_user_id = $scope.$parent.$root.varGlobal.logon_USR;
+					} else {
+						$scope.actionForm.es_filtro = angular.fromJson( $window.sessionStorage.getItem("EsDSPFIL.es_filtro") );
+					}
 					///////////////////////////////////////////////////////////////////////
 					// Funciones internas:
 					function moveModelToView( scope, model ) {

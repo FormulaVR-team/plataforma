@@ -318,13 +318,13 @@ public class EsAccesoBaseDatos {
         RstAplicar fltOper = new RstAplicar(dataBase.getRwUpperCase(),dataBase.getRwLike(),dataBase.getRwAnyString());
 	
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_sincro(),"sincro",sqlWhere);   // sincro
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_mark(),"mark",sqlWhere);   // mark
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_is_deleted(),"is_deleted",sqlWhere);   // is_deleted
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_author(),"author",sqlWhere);   // author
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_event_id(),"event_id",sqlWhere);   // event_id
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_EV_location_id(),"EV_location_id",sqlWhere);   // EV_location_id
+	sqlWhere = fltOper.getCHAR_EQ(rst.getEs_mark(),"mark",sqlWhere);   // mark
+	sqlWhere = fltOper.getCHAR_EQ(rst.getEs_is_deleted(),"is_deleted",sqlWhere);   // is_deleted
+	sqlWhere = fltOper.getCHAR_EQ(rst.getEs_author(),"author",sqlWhere);   // author
+	sqlWhere = fltOper.getCHAR_EQ(rst.getEs_event_id(),"event_id",sqlWhere);   // event_id
+	sqlWhere = fltOper.getCHAR_EQ(rst.getEs_EV_location_id(),"EV_location_id",sqlWhere);   // EV_location_id
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_LO_name(),"LO_name",sqlWhere);   // LO_name
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_inscription_user_id(),"inscription_user_id",sqlWhere);   // inscription_user_id
+	sqlWhere = fltOper.getCHAR_EQ(rst.getEs_inscription_user_id(),"inscription_user_id",sqlWhere);   // inscription_user_id
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_first_name(),"first_name",sqlWhere);   // first_name
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_last_name(),"last_name",sqlWhere);   // last_name
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_phone(),"phone",sqlWhere);   // phone
