@@ -223,6 +223,7 @@ public class EsADDRCD_A extends Action {
 
     			pantalla.setEs_tpv_order( order );
     	        pantalla.setEs_amount( evBean.getEv_amount() );
+    	        pantalla.setEs_currency( evBean.getEv_currency() );
     			////////////
 
         	}

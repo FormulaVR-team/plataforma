@@ -9,6 +9,9 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 
 <div name="EvDSPFIL_form">
+
+	<h1 class="page-title">Eventos</h1>
+
     <div class="modal-header">
 
 		<div class="row">
