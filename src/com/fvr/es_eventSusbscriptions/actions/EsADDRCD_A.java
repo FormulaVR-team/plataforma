@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.CRC32;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -24,6 +23,7 @@ import com.fvr._comun.Subrutinas;
 import com.fvr._comun.TPV_LaCaixa.TPV_API;
 import com.fvr._comun.TPV_LaCaixa.TPV_API.FormStruct;
 import com.fvr.es_eventSusbscriptions.bean.EsBean;
+import com.fvr.es_eventSusbscriptions.bean.EsBeanFiltro;
 import com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos;
 import com.fvr.es_eventSusbscriptions.forms.EsRCD_AF;
 import com.fvr.ev_events.bean.EvBean;
@@ -161,7 +161,7 @@ public class EsADDRCD_A extends Action {
         if (resultado.equalsIgnoreCase("OK"))
             resultado = this.crtRcd( request, pantalla );
         if (resultado.equalsIgnoreCase("OK")) {
-        	if ( pantalla.getEs_amount() > 0L ) {
+        	if ( pantalla.getEs_amount() > 0.0 ) {
             	resultado = pagarInscripcion_tpv(request, response, form);
         	}
         }
@@ -205,6 +205,8 @@ public class EsADDRCD_A extends Action {
         // Campos deducidos:
         ///////////////////////////////////////////
 
+		pantalla.setEs_tpv_order( "" );
+        pantalla.setEs_amount( 0.0 );
         if (pantalla.getEs_event_id() != null && pantalla.getEs_event_id().trim().length() > 0) {
         	EvBean evBean = Subrutinas.getEvFromId(dataBase, pantalla.getEs_event_id());
         	if (evBean.getEv_sincro() != null && evBean.getEv_sincro().trim().length()> 0) {
@@ -220,6 +222,7 @@ public class EsADDRCD_A extends Action {
     			order = Subrutinas.getDateAuditoria().substring(2,6) + order.toUpperCase();
 
     			pantalla.setEs_tpv_order( order );
+    	        pantalla.setEs_amount( evBean.getEv_amount() );
     			////////////
 
         	}
@@ -233,6 +236,7 @@ public class EsADDRCD_A extends Action {
         String resultado = "OK";
         ///////////////////////////////////////////
         EsRCD_AF pantalla = (EsRCD_AF)form;
+        BDConexion dataBase = new Subrutinas().getBDConexion(request);
         ///////////////////////////////////////////
         CamposCalculados(request,pantalla);
         ///////////////////////////////////////////
@@ -252,9 +256,43 @@ public class EsADDRCD_A extends Action {
 		   pantalla.getEs_EV_location_id() == null || pantalla.getEs_EV_location_id().trim().length() < 1
                 ) {
             resultado = "NOVALE";
-            errores.add("error", new ActionMessage( "errors.detail", "Valore para LOCATION_ID obligatorio." ));
+            errores.add("error", new ActionMessage( "errors.detail", "Valor para LOCATION obligatorio." ));
         }
         
+        if ( resultado.equalsIgnoreCase("OK") ) {
+            EsBean reg_es = new EsBean();
+            reg_es.setEs_event_id(pantalla.getEs_event_id());
+            reg_es.setEs_inscription_user_id(pantalla.getEs_inscription_user_id());
+            reg_es = Subrutinas.getEsFromId(dataBase, reg_es);
+            if ( reg_es.getEs_sincro() != null && reg_es.getEs_sincro().trim().length() > 0) {
+                resultado = "NOVALE";
+                errores.add("error", new ActionMessage( "errors.detail", 
+                		"El usuario " 
+                		+ reg_es.getEs_inscription_user_id()
+                		+ ", ya esta inscrito en "
+                		+ reg_es.getEs_event_id()
+                		));
+            }
+        }
+        
+        if ( resultado.equalsIgnoreCase("OK") ) {
+            try {
+                EsBeanFiltro flt_es = new EsBeanFiltro();
+                flt_es.setEs_event_id(pantalla.getEs_event_id());
+				EsBean[] rgs_es = new EsAccesoBaseDatos().es_getSeq(dataBase, new ConfigPantalla(Integer.MAX_VALUE), flt_es);
+	        	EvBean evBean = Subrutinas.getEvFromId(dataBase, pantalla.getEs_event_id());
+	        	if (evBean.getEv_sincro() != null && evBean.getEv_sincro().trim().length()> 0) {
+	        		if ( (1 + rgs_es.length) > evBean.getEv_max_inscriptions() ) {
+	    	            resultado = "NOVALE";
+	    	            errores.add("error", new ActionMessage( "errors.detail", "No quedan plazas disponibles para el evento " ));
+	        		}
+	        	}
+			} catch (StExcepcion e) {
+	            resultado = "NOVALE";
+	            errores.add("error", new ActionMessage( "errors.detail", e.getMessage() ));
+			}
+        	
+        }
 	
         ///////////////////////////////////////////
         if ( errores.size() > 0 )

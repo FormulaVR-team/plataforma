@@ -14,76 +14,37 @@
 			<li>logon_USR &nbsp; {{actionForm.logon_USR}}</li>
 		</ul>
 
-
 			<md-input-container>
-				<label>sincro</label>
-				<input type="text" ng-model="actionForm.es_sincro" />
-			</md-input-container>
-			<md-input-container>
-				<label>mark</label>
-				<input type="text" ng-model="actionForm.es_mark" />
-			</md-input-container>
-			<md-input-container>
-				<label>is_deleted</label>
-				<input type="text" ng-model="actionForm.es_is_deleted" />
-			</md-input-container>
-			<md-input-container>
-				<label>author</label>
-				<input type="text" ng-model="actionForm.es_author" />
-			</md-input-container>
-			<md-input-container>
-				<label>event_id</label>
-				<input type="text" ng-model="actionForm.es_event_id" />
-			</md-input-container>
-			<md-input-container>
-				<label>EV_location_id</label>
-				<input type="text" ng-model="actionForm.es_EV_location_id" disabled="disabled" />
-			</md-input-container>
-			<md-input-container>
-				<label>LO_name</label>
-				<input type="text" ng-model="actionForm.es_LO_name" disabled="disabled" />
-			</md-input-container>
-			<md-input-container>
-				<label>inscription_user_id</label>
-				<input type="text" ng-model="actionForm.es_inscription_user_id" />
-			</md-input-container>
-			<md-input-container>
-				<label>first_name</label>
-				<input type="text" ng-model="actionForm.es_first_name" />
-			</md-input-container>
-			<md-input-container>
-				<label>last_name</label>
-				<input type="text" ng-model="actionForm.es_last_name" />
-			</md-input-container>
-			<md-input-container>
-				<label>phone</label>
-				<input type="text" ng-model="actionForm.es_phone" />
-			</md-input-container>
-			<md-input-container>
-				<label>amount</label>
-				<input type="text" ng-model="actionForm.es_amount" />
-			</md-input-container>
-			<md-input-container>
-				<label>currency</label>
-				<input type="text" ng-model="actionForm.es_currency" />
-			</md-input-container>
-			<md-input-container>
-				<label>tpv_order</label>
-				<input type="text" ng-model="actionForm.es_tpv_order" />
-			</md-input-container>
-			<md-input-container>
-				<label>pay_status</label>
-				<input type="text" ng-model="actionForm.es_pay_status" />
-			</md-input-container>
-			<md-input-container>
-				<label>json</label>
-				<input type="text" ng-model="actionForm.es_json" />
+				<!-- Selector CENTRO -->
+				<md-input-container class="md-block input-md">
+					<label>Establecimiento</label>
+					<!-- <md-icon>place</md-icon> -->
+					<md-select placeholder="Seleccione Local" ng-model="$parent.aux_es_EV_location_id" md-on-open="location_id_onOpen()" md-on-close="location_id_onClose()" ng-change="location_id_onChange()" ng-model-options="{trackBy: '$value.value'}" required>
+						<!-- <md-optgroup label="Local"> -->
+							<md-option ng-value="item" ng-repeat="item in $parent.lst_lo">{{item.displayName}}</md-option>
+						<!-- </md-optgroup> -->			
+					</md-select>
+	    		</md-input-container>
+	    		<!-- Selector CENTRO fin -->
 			</md-input-container>
 
+			<md-input-container>
+				<!-- Selector EVENTO -->
+				<md-input-container class="md-block input-md">
+					<label>Evento</label>
+					<!-- <md-icon>place</md-icon> -->
+					<md-select placeholder="Seleccione Evento" ng-model="$parent.aux_es_event_id" ng-model-options="{trackBy: '$value.value'}" required>
+						<!-- <md-optgroup label="Evento"> -->
+							<md-option ng-value="item" ng-repeat="item in $parent.lst_ev">{{item.displayName}}</md-option>
+						<!-- </md-optgroup> -->			
+					</md-select>
+	    		</md-input-container>
+	    		<!-- Selector EVENTO fin -->
+			</md-input-container>
 
     </div>
     <div class="modal-footer">
-        <input type="button" class="btn btn-primary" value="Aceptar" ng-click="agregar()"/>
+        <input type="button" class="btn btn-primary" value="PAGAR" ng-click="agregar()"/>
     </div>
 </div>
 

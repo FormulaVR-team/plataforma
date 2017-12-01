@@ -42,6 +42,7 @@ import com.fvr._comun.paypal.classes.PaypalCredentials;
 import com.fvr.cd_LocationClosedDays.bean.CdBean;
 import com.fvr.cp_cockpits.bean.CpBean;
 import com.fvr.es_eventSusbscriptions.bean.EsBean;
+import com.fvr.ev_events.bean.EvBean;
 import com.fvr.lo_location.bean.LoBean;
 import com.fvr.ps_countries.bean.PsBean;
 import com.fvr.pt_products.bean.PtBean;
@@ -103,6 +104,8 @@ public class FvrServlet extends HttpServlet {
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=cd_lst&LOC=CENTRAL
     private static final String cp_lst = "cp_lst";  // Retorna lista de cockpits de la instalación (opcionalmente también los bloqueados)
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=cp_lst&LOC=CENTRAL [&BLK=S]
+    private static final String ev_lst = "ev_lst";  // Retorna lista de eventos de la instalación
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=ev_lst&LOC=CENTRAL
     private static final String tt_lst = "tt_lst";  // Retorna lista de sesiones
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=tt_lst&LOC=CENTRAL&TYP=NORMAL [&BLK=S]
     private static final String pt_lst = "pt_lst";  // Retorna lista de Productos
@@ -263,6 +266,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_cd_lst(request, response, loc);
     	} else if (cp_lst.equalsIgnoreCase( acc )) {
     		cmd_cp_lst(request, response, loc, blk);
+    	} else if (ev_lst.equalsIgnoreCase( acc )) {
+    		cmd_ev_lst(request, response, loc);
     	} else if (tt_lst.equalsIgnoreCase( acc )) {
     		cmd_tt_lst(request, response, loc, typ, blk);
     	} else if (pt_lst.equalsIgnoreCase( acc )) {
@@ -611,42 +616,42 @@ public class FvrServlet extends HttpServlet {
 			reg_es.setEs_inscription_user_id(inscription_user_id);
 			reg_es = Subrutinas.getEsFromId(dataBase, reg_es);
 			if ( reg_es != null && reg_es.getEs_sincro() != null && reg_es.getEs_sincro().trim().length() > 0 ) {
-				if ( isOk ) {
-					reg_es.setEs_pay_status( _K.PAY_STS_TPV_Completado );
-				} else {
-					reg_es.setEs_pay_status( _K.PAY_STS_TPV_Fallido );
-				}
-				 try {
-					new com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos().es_chgObj(dataBase, reg_es);
-
-					if ( _K.PAY_STS_TPV_Completado.equalsIgnoreCase( reg_es.getEs_pay_status() ) ) {
-						List<String> errores = new ArrayList<String>();
-						String url_base = Subrutinas.get_urlBase(request);
-//						SendMail.send_comprobanteReserva(dataBase, url_base, reg_es.getEs_inscription_user_id(), reg_es.getEs_event_id(), errores, true);
-						Subrutinas.addLog(dataBase, _K.SYS, _K.EV_TPV_PAGO_EVENTO_OK, reg_es.getKey(), "api_doExpressCheckout()" );
+				try {
+					if ( isOk ) {
+							reg_es.setEs_pay_status( _K.PAY_STS_TPV_Completado );
+							// Actualizar estado del pago en su registro....
+							new com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos().es_chgObj(dataBase, reg_es);
+	
+							List<String> errores = new ArrayList<String>();
+							String url_base = Subrutinas.get_urlBase(request);
+	//						SendMail.send_comprobanteReserva(dataBase, url_base, reg_es.getEs_inscription_user_id(), reg_es.getEs_event_id(), errores, true);
+							Subrutinas.addLog(dataBase, _K.SYS, _K.EV_TPV_PAGO_EVENTO_OK, reg_es.getKey(), "api_doExpressCheckout()" );
+	
+					} else {
+							reg_es.setEs_pay_status( _K.PAY_STS_TPV_Fallido );
+							// Eliminar su registro....
+							new com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos().es_dltObj(dataBase, reg_es);
 					}
-
-					///////////////////
-					// Reentrada en el sistema:
-					String link = Subrutinas.get_urlBase(request) + "/";
-					String user_id = reg_tk.getTk_author();
-					if ( user_id != null && user_id.trim().length() > 0 ) {
-						UsBean reg_us = Subrutinas.getUsFromId(dataBase, user_id);
-				       	request.getSession(true).setAttribute( "logon_USR", reg_us.getUs_user_id() );
-				        request.getSession(true).setAttribute( "logon_HSH", reg_us.getUs_hash_code() );
-						request.getSession(true).setAttribute( "roleKey", reg_us.getUs_role_id() );
-						link +=  "Index_A.do#/RsDSPFIL/";
-					}
-					response.sendRedirect( link );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//					request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
-					///////////////////
-					
-					
-					return;
 				} catch (StExcepcion e) {
 					responder(request, response, false, e.getMessage());
 					return;
 				}
+
+				///////////////////
+				// Reentrada en el sistema:
+				String link = Subrutinas.get_urlBase(request) + "/";
+				String user_id = reg_tk.getTk_author();
+				if ( user_id != null && user_id.trim().length() > 0 ) {
+					UsBean reg_us = Subrutinas.getUsFromId(dataBase, user_id);
+				   	request.getSession(true).setAttribute( "logon_USR", reg_us.getUs_user_id() );
+					request.getSession(true).setAttribute( "logon_HSH", reg_us.getUs_hash_code() );
+					request.getSession(true).setAttribute( "roleKey", reg_us.getUs_role_id() );
+					link +=  "Index_A.do#/RsDSPFIL/";
+				}
+				response.sendRedirect( link );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+				//					request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
+				///////////////////
+
 			}
 		}
 	}
@@ -776,6 +781,43 @@ public class FvrServlet extends HttpServlet {
 //		System.out.println( "cmd_de_lst() " + jsonArray.toString() );
 
 		responder(request, response, true, lista.toString() );
+		return;
+	}
+
+	private void cmd_ev_lst(HttpServletRequest request, HttpServletResponse response, String location_id) throws IOException {
+//		if ( location_id == null || location_id.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		JSONArray jsonArray = new JSONArray();
+		jsonArray.add( JSONObject.fromObject("{value:'',displayName:'...'}") );
+		
+		if ( location_id != null && location_id.trim().length() > 0 ) {
+			try {
+				BDConexion dataBase = new Subrutinas().getBDConexion(request);
+
+				com.fvr.ev_events.db.EvAccesoBaseDatos dao = new com.fvr.ev_events.db.EvAccesoBaseDatos();
+				com.fvr.ev_events.bean.EvBeanFiltro    flt = new com.fvr.ev_events.bean.EvBeanFiltro();
+				com.fvr.ev_events.bean.EvBean[]        rgs = null;
+				
+				flt.setEv_location_id( location_id );
+				
+				rgs = dao.ev_getSeq(dataBase, new ConfigPantalla( Integer.MAX_VALUE ), flt);
+
+				if ( rgs != null ) {
+					JSONObject json = null;
+					for ( EvBean item : rgs ) {
+						json = new JSONObject();
+						json.put("value", item.getEv_event_id() );
+						json.put("displayName", item.getEv_name() + " ( " + item.getEv_amount() + " " + item.getEv_currency() + " )" );
+						jsonArray.add( json );
+					}
+				}
+			} catch (StExcepcion e) {
+				responder(request, response, false, e.getMessage());
+				return;
+			}
+		}
+
+		responder(request, response, true, jsonArray.toString() );
 		return;
 	}
 

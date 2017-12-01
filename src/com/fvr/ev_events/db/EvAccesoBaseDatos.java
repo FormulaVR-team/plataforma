@@ -326,15 +326,15 @@ public class EvAccesoBaseDatos {
         RstAplicar fltOper = new RstAplicar(dataBase.getRwUpperCase(),dataBase.getRwLike(),dataBase.getRwAnyString());
 	
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEv_sincro(),"sincro",sqlWhere);   // sincro
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getEv_mark(),"mark",sqlWhere);   // mark
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getEv_is_deleted(),"is_deleted",sqlWhere);   // is_deleted
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getEv_author(),"author",sqlWhere);   // author
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getEv_event_id(),"event_id",sqlWhere);   // event_id
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getEv_location_id(),"location_id",sqlWhere);   // location_id
+	sqlWhere = fltOper.getCHAR_EQ(rst.getEv_mark(),"mark",sqlWhere);   // mark
+	sqlWhere = fltOper.getCHAR_EQ(rst.getEv_is_deleted(),"is_deleted",sqlWhere);   // is_deleted
+	sqlWhere = fltOper.getCHAR_EQ(rst.getEv_author(),"author",sqlWhere);   // author
+	sqlWhere = fltOper.getCHAR_EQ(rst.getEv_event_id(),"event_id",sqlWhere);   // event_id
+	sqlWhere = fltOper.getCHAR_EQ(rst.getEv_location_id(),"location_id",sqlWhere);   // location_id
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEv_LO_name(),"LO_name",sqlWhere);   // LO_name
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEv_name(),"name",sqlWhere);   // name
 	sqlWhere = fltOper.getNUM_EQ(rst.getEv_max_inscriptions(),"max_inscriptions",sqlWhere);   // max_inscriptions
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getEv_currency(),"currency",sqlWhere);   // currency
+	sqlWhere = fltOper.getCHAR_EQ(rst.getEv_currency(),"currency",sqlWhere);   // currency
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEv_deadline(),"deadline",sqlWhere);   // deadline
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEv_comment(),"comment",sqlWhere);   // comment
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEv_date1(),"date1",sqlWhere);   // date1

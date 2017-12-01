@@ -103,6 +103,16 @@ angular
 				    $scope.aux_filasGrid = {value: 0};
 				    $scope.aux_filasGrid.value = $scope.actionForm.filasGrid;
 
+				    /////
+				    /////
+				    // Combos y auxiliares para componentes de presentación:
+				    $scope.lst_lo = null; // [ {value: "10", displayName: 'Diez'}, {value: "20", displayName: 'Veinte'} ];
+				    $scope.aux_es_EV_location_id = "";
+				    $scope.lst_ev = null; // [ {value: "10", displayName: 'Diez'}, {value: "20", displayName: 'Veinte'} ];
+				    $scope.aux_es_event_id = "";
+				    /////
+				    /////
+
 				    $scope.exportLink = "<span></span>";	// Recoge el link al fichero para exportar.
 					///////////////////////////////////////////////////////////////////////
 					// Parametros de entrada:
@@ -185,6 +195,10 @@ angular
 							function(response) {
 								console.error("Ha sucedido un error: " + response.statusText);
 							});
+
+				    // Combos y auxiliares para componentes de presentación:
+					app_services.lo_lst().then( function(response) {if (response.rc === 'OK') { $scope.lst_lo = response.text;} else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+
 					///////////////////////////////////////////////////////////////////////
 					///////////////////////////////////////////////////////////////////////
 					///////////////////////////////////////////////////////////////////////
@@ -339,6 +353,10 @@ angular
 						$scope.actionForm.es_tpv_order = reg.es_tpv_order; // tpv_order
 						$scope.actionForm.es_pay_status = reg.es_pay_status; // pay_status
 						$scope.actionForm.es_json = reg.es_json; // json						
+
+					    // Combos y auxiliares para componentes de presentación:
+						$scope.aux_es_EV_location_id = {value: $scope.actionForm.es_EV_location_id, displayName: $scope.actionForm.es_LO_name};
+						$scope.aux_es_event_id = {value: $scope.actionForm.es_event_id, displayName: ""};
 					};
 
 					$scope.initKey = function() {
@@ -365,6 +383,10 @@ angular
 						$scope.actionForm.es_tpv_order = ""; // tpv_order
 						$scope.actionForm.es_pay_status = ""; // pay_status
 						$scope.actionForm.es_json = ""; // json						
+
+					    // Combos y auxiliares para componentes de presentación:
+						$scope.aux_es_EV_location_id = {value: "", displayName: ""};
+						$scope.aux_es_event_id = {value: "", displayName: ""};
 					};
 
 					$scope.marcarTodo = function() {
@@ -430,6 +452,11 @@ angular
 						
 //						if (validationService.validarEmail($scope.actionForm.logon_USR)) {
 
+					    // Combos y auxiliares para componentes de presentación:
+						// Recoger valores de los combos:
+						$scope.actionForm.es_EV_location_id = $scope.aux_es_EV_location_id.value;
+						$scope.actionForm.es_event_id = $scope.aux_es_event_id.value;
+
 						//llamo a su servicio pasandole el actionForm de entidad
 						EsDSPFIL_service
 								.add($scope.actionForm)
@@ -440,10 +467,14 @@ angular
 //											$mdToast.showSimple( "Registro agregado" );
 //											$('.modal-backdrop').remove();
 //											$state.reload();
-											/////////////
-											// TPV virtual:
-											tpv_submitForm( response.data.text );
-											/////////////
+											if ( response.data.text.url_redirect != undefined ) {
+												/////////////
+												// TPV virtual:
+												tpv_submitForm( response.data.text );
+												/////////////
+											} else {
+												$state.reload();
+											}
 										} else {
 											app_services.errorComun(response.data.text);
 										}
@@ -465,6 +496,11 @@ angular
 					$scope.cambiar = function() {
 						
 //						if (validationService.validarEmail($scope.actionForm.logon_USR)) {
+
+					    // Combos y auxiliares para componentes de presentación:
+						// Recoger valores de los combos:
+						$scope.actionForm.es_EV_location_id = $scope.aux_es_EV_location_id.value;
+						$scope.actionForm.es_event_id = $scope.aux_es_event_id.value;
 
 						//llamo a su servicio pasandole el actionForm de entidad
 						EsDSPFIL_service
@@ -495,6 +531,11 @@ angular
 
 						if ( ! confirmar('Suprimir el registro, ¿está seguro?',this) ) { return; }
 
+					    // Combos y auxiliares para componentes de presentación:
+						// Recoger valores de los combos:
+						$scope.actionForm.es_EV_location_id = $scope.aux_es_EV_location_id.value;
+						$scope.actionForm.es_event_id = $scope.aux_es_event_id.value;
+
 						//llamo a su servicio pasandole el actionForm de entidad
 						EsDSPFIL_service
 								.dlt($scope.actionForm)
@@ -520,5 +561,22 @@ angular
 					};
 	/////////////
 	/////////////
+					//////////////
+					// Eventos de "location_id":
+					$scope.location_id_onOpen = function() {
+						$scope.lst_lo = null;
+						app_services.lo_lst().then( function(response) {if (response.rc === 'OK') { $scope.lst_lo = response.text;} else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+					}
+					$scope.location_id_onChange = function() {
+						$scope.aux_es_event_id = {value: "", displayName: ""};
+						$scope.actionForm.es_event_id = $scope.aux_es_event_id.value;
+						$scope.lst_ev = null;
+						app_services.ev_lst( $scope.aux_es_EV_location_id.value ).then( function(response) {if (response.rc === 'OK') { $scope.lst_ev = response.text;} else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+					}
+//					$scope.location_id_onClose = function() {
+//						$scope.lst_ev = null;
+//						app_services.ev_lst( $scope.aux_es_EV_location_id.value ).then( function(response) {if (response.rc === 'OK') { $scope.lst_ev = response.text;} else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+//					}
+					//////////////
 
 				} ]);
