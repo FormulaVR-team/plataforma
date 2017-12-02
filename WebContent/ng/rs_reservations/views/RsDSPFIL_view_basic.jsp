@@ -17,11 +17,13 @@
 
 		<div class="col-xs-12 col-sm-6" style="text-align: right">
 			<span dynamic="exportLink" style="display: inline-block"></span>
-			<span> <!-- class="{{ actionForm.rs_US_is_admin === 'A' ? '' : 'hide' }}" -->
+			
 			<md-button class="md-raised md-accent padding-10" ng-click="gamingModule()" title="Resultados"><md-icon> extension </md-icon> Resultados </md-button>
+			<span class="{{ actionForm.rs_US_is_admin === 'A' ? '' : 'hide' }}">
+				<md-button class="md-raised md-primary padding-10" ng-click="go_misEventos()"><md-icon>event_available</md-icon> Inscripciones </md-button>
 			</span>
 			<md-button class="md-raised md-primary padding-10" ng-click="initReg()" data-toggle="modal" data-target="#rsDSPFIL_ADDRCD_modal" title="<bean:message key="common.client.nuevo"/>"><md-icon> add </md-icon> Nueva reserva </md-button>
-			<md-button class="md-raised md-primary padding-10" ng-click="go_misEventos()"><md-icon>event_available</md-icon> Inscripciones </md-button>
+
 		</div>
 
 	</div>
