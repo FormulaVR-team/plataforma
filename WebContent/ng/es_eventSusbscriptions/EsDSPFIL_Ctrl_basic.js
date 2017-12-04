@@ -57,6 +57,7 @@ angular
 								, es_is_deleted: "" // is_deleted
 								, es_author: "" // author
 								, es_event_id: "" // event_id
+								, es_EV_name: "" // EV_name
 								, es_EV_location_id: "" // EV_location_id
 								, es_LO_name: "" // LO_name
 								, es_inscription_user_id: "" // inscription_user_id
@@ -76,6 +77,7 @@ angular
 								, es_is_deleted: "" // is_deleted
 								, es_author: "" // author
 								, es_event_id: "" // event_id
+								, es_EV_name: "" // EV_name
 								, es_EV_location_id: "" // EV_location_id
 								, es_LO_name: "" // LO_name
 								, es_inscription_user_id: "" // inscription_user_id
@@ -347,6 +349,7 @@ angular
 						$scope.actionForm.es_is_deleted = reg.es_is_deleted; // is_deleted
 						$scope.actionForm.es_author = reg.es_author; // author
 						$scope.actionForm.es_event_id = reg.es_event_id; // event_id
+						$scope.actionForm.es_EV_name = reg.es_EV_name; // EV_name
 						$scope.actionForm.es_EV_location_id = reg.es_EV_location_id; // EV_location_id
 						$scope.actionForm.es_LO_name = reg.es_LO_name; // LO_name
 						$scope.actionForm.es_inscription_user_id = reg.es_inscription_user_id; // inscription_user_id
@@ -377,6 +380,7 @@ angular
 						$scope.actionForm.es_is_deleted = ""; // is_deleted
 						$scope.actionForm.es_author = ""; // author
 						$scope.actionForm.es_event_id = ""; // event_id
+						$scope.actionForm.es_EV_name = ""; // EV_name
 						$scope.actionForm.es_EV_location_id = ""; // EV_location_id
 						$scope.actionForm.es_LO_name = ""; // LO_name
 						$scope.actionForm.es_inscription_user_id = ""; // inscription_user_id

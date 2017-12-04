@@ -174,6 +174,15 @@
 			</td>
 			<td><html:text maxlength="100" styleClass="form-control" property="cp_contact_service"  style="width: 105px;"/></td>
 		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<button type="button" class="btn btn-info pull-right" style="width:70%;" onclick="if ( confirmar('<bean:message key="common.client.pregunta_modificar_marcados"/>',this)==true ) setOpcion('CpRCD_AF','colectivo_json', null);"><span class="glyphicon glyphicon-ok pull-left"></span>
+				&nbsp;json
+				</button>
+			</td>
+			<td><html:text maxlength="100" styleClass="form-control" property="cp_json"  style="width: 105px;"/></td>
+		</tr>
 		    <tr><td colspan="3"><br/></tr>
     </table>
 	<!-- MonoRegistro FINAL -->

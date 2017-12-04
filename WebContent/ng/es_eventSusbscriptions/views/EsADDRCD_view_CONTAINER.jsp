@@ -90,7 +90,8 @@
 					<%-- <td>{{reg.es_author}}&nbsp;</td> --%>
 					<%-- <td>{{reg.es_EV_location_id}}&nbsp;</td> --%>
 					<%-- <td>{{reg.es_LO_name}}&nbsp;</td> --%>
-					<td>{{reg.es_event_id}}&nbsp;</td>
+					<!-- <td>{{reg.es_event_id}}&nbsp;</td> -->
+					<td>{{reg.es_EV_name}}&nbsp;</td>
 					<%-- <td>{{reg.es_inscription_user_id}}&nbsp;</td> --%>
 					<%-- <td>{{reg.es_first_name}}&nbsp;</td> --%>
 					<%-- <td>{{reg.es_last_name}}&nbsp;</td> --%>

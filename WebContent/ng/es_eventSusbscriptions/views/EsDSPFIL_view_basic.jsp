@@ -102,6 +102,10 @@
 					<input type="text" ng-model="actionForm.es_filtro.es_event_id" />
 				</md-input-container>
 				<md-input-container>
+					<label>EV_name</label>
+					<input type="text" ng-model="actionForm.es_filtro.es_EV_name" />
+				</md-input-container>
+				<md-input-container>
 					<label>EV_location_id</label>
 					<input type="text" ng-model="actionForm.es_filtro.es_EV_location_id" />
 				</md-input-container>
@@ -158,6 +162,7 @@
 					<!-- <th>is_deleted</th> -->
 					<!-- <th>author</th> -->
 					<th>event_id</th>
+					<th>EV_name</th>
 					<!-- <th>location_id</th> -->
 					<th>location</th>
 					<th>user_id</th>
@@ -179,6 +184,7 @@
 					<!-- <td>{{reg.es_is_deleted}}&nbsp;</td> -->
 					<!-- <td>{{reg.es_author}}&nbsp;</td> -->
 					<td>{{reg.es_event_id}}&nbsp;</td>
+					<td>{{reg.es_EV_name}}&nbsp;</td>
 					<!-- <td>{{reg.es_EV_location_id}}&nbsp;</td> -->
 					<td>{{reg.es_LO_name}}&nbsp;</td>
 					<td>{{reg.es_inscription_user_id}}&nbsp;</td>

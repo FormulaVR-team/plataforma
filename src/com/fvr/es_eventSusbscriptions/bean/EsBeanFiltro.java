@@ -10,6 +10,7 @@ public class EsBeanFiltro extends StBean {
 	public String es_is_deleted; // is_deleted
 	public String es_author; // author
 	public String es_event_id; // event_id
+	public String es_EV_name; // EV_name
 	public String es_EV_location_id; // EV_location_id
 	public String es_LO_name; // LO_name
 	public String es_inscription_user_id; // inscription_user_id
@@ -36,6 +37,7 @@ public class EsBeanFiltro extends StBean {
 	this.setEs_is_deleted( "" ); // is_deleted
 	this.setEs_author( "" ); // author
 	this.setEs_event_id( "" ); // event_id
+	this.setEs_EV_name( "" ); // EV_name
 	this.setEs_EV_location_id( "" ); // EV_location_id
 	this.setEs_LO_name( "" ); // LO_name
 	this.setEs_inscription_user_id( "" ); // inscription_user_id
@@ -57,6 +59,7 @@ public class EsBeanFiltro extends StBean {
 		r.setEs_is_deleted( (pri.getEs_is_deleted()==null)?sec.getEs_is_deleted():pri.getEs_is_deleted() );	// is_deleted
 		r.setEs_author( (pri.getEs_author()==null)?sec.getEs_author():pri.getEs_author() );	// author
 		r.setEs_event_id( (pri.getEs_event_id()==null)?sec.getEs_event_id():pri.getEs_event_id() );	// event_id
+		r.setEs_EV_name( (pri.getEs_EV_name()==null)?sec.getEs_EV_name():pri.getEs_EV_name() );	// EV_name
 		r.setEs_EV_location_id( (pri.getEs_EV_location_id()==null)?sec.getEs_EV_location_id():pri.getEs_EV_location_id() );	// EV_location_id
 		r.setEs_LO_name( (pri.getEs_LO_name()==null)?sec.getEs_LO_name():pri.getEs_LO_name() );	// LO_name
 		r.setEs_inscription_user_id( (pri.getEs_inscription_user_id()==null)?sec.getEs_inscription_user_id():pri.getEs_inscription_user_id() );	// inscription_user_id
@@ -78,6 +81,7 @@ public class EsBeanFiltro extends StBean {
 	Destino.setEs_is_deleted( getEs_is_deleted() ); // is_deleted
 	Destino.setEs_author( getEs_author() ); // author
 	Destino.setEs_event_id( getEs_event_id() ); // event_id
+	Destino.setEs_EV_name( getEs_EV_name() ); // EV_name
 	Destino.setEs_EV_location_id( getEs_EV_location_id() ); // EV_location_id
 	Destino.setEs_LO_name( getEs_LO_name() ); // LO_name
 	Destino.setEs_inscription_user_id( getEs_inscription_user_id() ); // inscription_user_id
@@ -97,6 +101,7 @@ public class EsBeanFiltro extends StBean {
 	setEs_is_deleted( Origen.getEs_is_deleted() ); // is_deleted
 	setEs_author( Origen.getEs_author() ); // author
 	setEs_event_id( Origen.getEs_event_id() ); // event_id
+	setEs_EV_name( Origen.getEs_EV_name() ); // EV_name
 	setEs_EV_location_id( Origen.getEs_EV_location_id() ); // EV_location_id
 	setEs_LO_name( Origen.getEs_LO_name() ); // LO_name
 	setEs_inscription_user_id( Origen.getEs_inscription_user_id() ); // inscription_user_id
@@ -118,6 +123,7 @@ public class EsBeanFiltro extends StBean {
 		out.append( _K.sepFld ); out.append( this.getEs_is_deleted()==null?"":this.getEs_is_deleted() ); // is_deleted
 		out.append( _K.sepFld ); out.append( this.getEs_author()==null?"":this.getEs_author() ); // author
 		out.append( _K.sepFld ); out.append( this.getEs_event_id()==null?"":this.getEs_event_id() ); // event_id
+		out.append( _K.sepFld ); out.append( this.getEs_EV_name()==null?"":this.getEs_EV_name() ); // EV_name
 		out.append( _K.sepFld ); out.append( this.getEs_EV_location_id()==null?"":this.getEs_EV_location_id() ); // EV_location_id
 		out.append( _K.sepFld ); out.append( this.getEs_LO_name()==null?"":this.getEs_LO_name() ); // LO_name
 		out.append( _K.sepFld ); out.append( this.getEs_inscription_user_id()==null?"":this.getEs_inscription_user_id() ); // inscription_user_id
@@ -149,17 +155,18 @@ public class EsBeanFiltro extends StBean {
 			try { this.setEs_is_deleted( trozos[2] ); } catch (Exception e) {;} // is_deleted
 			try { this.setEs_author( trozos[3] ); } catch (Exception e) {;} // author
 			try { this.setEs_event_id( trozos[4] ); } catch (Exception e) {;} // event_id
-			try { this.setEs_EV_location_id( trozos[5] ); } catch (Exception e) {;} // EV_location_id
-			try { this.setEs_LO_name( trozos[6] ); } catch (Exception e) {;} // LO_name
-			try { this.setEs_inscription_user_id( trozos[7] ); } catch (Exception e) {;} // inscription_user_id
-			try { this.setEs_first_name( trozos[8] ); } catch (Exception e) {;} // first_name
-			try { this.setEs_last_name( trozos[9] ); } catch (Exception e) {;} // last_name
-			try { this.setEs_phone( trozos[10] ); } catch (Exception e) {;} // phone
-			try { this.setEs_amount( trozos[11] ); } catch (Exception e) {;} // amount
-			try { this.setEs_currency( trozos[12] ); } catch (Exception e) {;} // currency
-			try { this.setEs_tpv_order( trozos[13] ); } catch (Exception e) {;} // tpv_order
-			try { this.setEs_pay_status( trozos[14] ); } catch (Exception e) {;} // pay_status
-			try { this.setEs_json( trozos[15] ); } catch (Exception e) {;} // json
+			try { this.setEs_EV_name( trozos[5] ); } catch (Exception e) {;} // EV_name
+			try { this.setEs_EV_location_id( trozos[6] ); } catch (Exception e) {;} // EV_location_id
+			try { this.setEs_LO_name( trozos[7] ); } catch (Exception e) {;} // LO_name
+			try { this.setEs_inscription_user_id( trozos[8] ); } catch (Exception e) {;} // inscription_user_id
+			try { this.setEs_first_name( trozos[9] ); } catch (Exception e) {;} // first_name
+			try { this.setEs_last_name( trozos[10] ); } catch (Exception e) {;} // last_name
+			try { this.setEs_phone( trozos[11] ); } catch (Exception e) {;} // phone
+			try { this.setEs_amount( trozos[12] ); } catch (Exception e) {;} // amount
+			try { this.setEs_currency( trozos[13] ); } catch (Exception e) {;} // currency
+			try { this.setEs_tpv_order( trozos[14] ); } catch (Exception e) {;} // tpv_order
+			try { this.setEs_pay_status( trozos[15] ); } catch (Exception e) {;} // pay_status
+			try { this.setEs_json( trozos[16] ); } catch (Exception e) {;} // json
 			
 		}
 	}
@@ -189,6 +196,11 @@ public class EsBeanFiltro extends StBean {
 	public String getEs_event_id() {return es_event_id;}
 	/** Set event_id*/
 	public void setEs_event_id(String es_event_id) {this.es_event_id = es_event_id;}
+
+	/** Get EV_name*/
+	public String getEs_EV_name() {return es_EV_name;}
+	/** Set EV_name*/
+	public void setEs_EV_name(String es_EV_name) {this.es_EV_name = es_EV_name;}
 
 	/** Get EV_location_id*/
 	public String getEs_EV_location_id() {return es_EV_location_id;}

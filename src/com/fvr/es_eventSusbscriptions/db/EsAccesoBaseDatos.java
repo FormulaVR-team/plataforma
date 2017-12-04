@@ -251,6 +251,7 @@ public class EsAccesoBaseDatos {
 		regRead.setEs_is_deleted( rs.getString("is_deleted") ); regRead.setEs_is_deleted( (regRead.getEs_is_deleted() == null)?"":regRead.getEs_is_deleted().trim() ); // is_deleted
 		regRead.setEs_author( rs.getString("author") ); regRead.setEs_author( (regRead.getEs_author() == null)?"":regRead.getEs_author().trim() ); // author
 		regRead.setEs_event_id( rs.getString("event_id") ); regRead.setEs_event_id( (regRead.getEs_event_id() == null)?"":regRead.getEs_event_id().trim() ); // event_id
+		regRead.setEs_EV_name( rs.getString("EV_name") ); regRead.setEs_EV_name( (regRead.getEs_EV_name() == null)?"":regRead.getEs_EV_name().trim() ); // EV_name
 		regRead.setEs_EV_location_id( rs.getString("EV_location_id") ); regRead.setEs_EV_location_id( (regRead.getEs_EV_location_id() == null)?"":regRead.getEs_EV_location_id().trim() ); // EV_location_id
 		regRead.setEs_LO_name( rs.getString("LO_name") ); regRead.setEs_LO_name( (regRead.getEs_LO_name() == null)?"":regRead.getEs_LO_name().trim() ); // LO_name
 		regRead.setEs_inscription_user_id( rs.getString("inscription_user_id") ); regRead.setEs_inscription_user_id( (regRead.getEs_inscription_user_id() == null)?"":regRead.getEs_inscription_user_id().trim() ); // inscription_user_id
@@ -322,6 +323,7 @@ public class EsAccesoBaseDatos {
 	sqlWhere = fltOper.getCHAR_EQ(rst.getEs_is_deleted(),"is_deleted",sqlWhere);   // is_deleted
 	sqlWhere = fltOper.getCHAR_EQ(rst.getEs_author(),"author",sqlWhere);   // author
 	sqlWhere = fltOper.getCHAR_EQ(rst.getEs_event_id(),"event_id",sqlWhere);   // event_id
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_EV_name(),"EV_name",sqlWhere);   // EV_name
 	sqlWhere = fltOper.getCHAR_EQ(rst.getEs_EV_location_id(),"EV_location_id",sqlWhere);   // EV_location_id
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getEs_LO_name(),"LO_name",sqlWhere);   // LO_name
 	sqlWhere = fltOper.getCHAR_EQ(rst.getEs_inscription_user_id(),"inscription_user_id",sqlWhere);   // inscription_user_id
@@ -381,6 +383,7 @@ public class EsAccesoBaseDatos {
 		regRead.setEs_is_deleted( rs.getString("is_deleted") ); regRead.setEs_is_deleted( (regRead.getEs_is_deleted() == null)?"":regRead.getEs_is_deleted().trim() ); // is_deleted
 		regRead.setEs_author( rs.getString("author") ); regRead.setEs_author( (regRead.getEs_author() == null)?"":regRead.getEs_author().trim() ); // author
 		regRead.setEs_event_id( rs.getString("event_id") ); regRead.setEs_event_id( (regRead.getEs_event_id() == null)?"":regRead.getEs_event_id().trim() ); // event_id
+		regRead.setEs_EV_name( rs.getString("EV_name") ); regRead.setEs_EV_name( (regRead.getEs_EV_name() == null)?"":regRead.getEs_EV_name().trim() ); // EV_name
 		regRead.setEs_EV_location_id( rs.getString("EV_location_id") ); regRead.setEs_EV_location_id( (regRead.getEs_EV_location_id() == null)?"":regRead.getEs_EV_location_id().trim() ); // EV_location_id
 		regRead.setEs_LO_name( rs.getString("LO_name") ); regRead.setEs_LO_name( (regRead.getEs_LO_name() == null)?"":regRead.getEs_LO_name().trim() ); // LO_name
 		regRead.setEs_inscription_user_id( rs.getString("inscription_user_id") ); regRead.setEs_inscription_user_id( (regRead.getEs_inscription_user_id() == null)?"":regRead.getEs_inscription_user_id().trim() ); // inscription_user_id
@@ -444,6 +447,7 @@ public class EsAccesoBaseDatos {
 				s += "<td><strong style='color:darkblue;'>" + "is_deleted" + "</strong></td>";  // is_deleted
 				s += "<td><strong style='color:darkblue;'>" + "author" + "</strong></td>";  // author
 				s += "<td><strong style='color:darkblue;'>" + "event_id" + "</strong></td>";  // event_id
+				s += "<td><strong style='color:darkblue;'>" + "EV_name" + "</strong></td>";  // EV_name
 				s += "<td><strong style='color:darkblue;'>" + "EV_location_id" + "</strong></td>";  // EV_location_id
 				s += "<td><strong style='color:darkblue;'>" + "LO_name" + "</strong></td>";  // LO_name
 				s += "<td><strong style='color:darkblue;'>" + "inscription_user_id" + "</strong></td>";  // inscription_user_id
@@ -485,6 +489,9 @@ public class EsAccesoBaseDatos {
 				tmp = registro.getEs_event_id();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // event_id
+				tmp = registro.getEs_EV_name();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // EV_name
 				tmp = registro.getEs_EV_location_id();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // EV_location_id
@@ -683,17 +690,18 @@ public class EsAccesoBaseDatos {
 				registro.setEs_is_deleted( jsonReg.getString(2) );	// is_deleted
 				registro.setEs_author( jsonReg.getString(3) );	// author
 				registro.setEs_event_id( jsonReg.getString(4) );	// event_id
-				registro.setEs_EV_location_id( jsonReg.getString(5) );	// EV_location_id
-				registro.setEs_LO_name( jsonReg.getString(6) );	// LO_name
-				registro.setEs_inscription_user_id( jsonReg.getString(7) );	// inscription_user_id
-				registro.setEs_first_name( jsonReg.getString(8) );	// first_name
-				registro.setEs_last_name( jsonReg.getString(9) );	// last_name
-				registro.setEs_phone( jsonReg.getString(10) );	// phone
-				registro.setEs_amount( jsonReg.getDouble(11) );	// amount
-				registro.setEs_currency( jsonReg.getString(12) );	// currency
-				registro.setEs_tpv_order( jsonReg.getString(13) );	// tpv_order
-				registro.setEs_pay_status( jsonReg.getString(14) );	// pay_status
-				registro.setEs_json( jsonReg.getString(15) );	// json
+				registro.setEs_EV_name( jsonReg.getString(5) );	// EV_name
+				registro.setEs_EV_location_id( jsonReg.getString(6) );	// EV_location_id
+				registro.setEs_LO_name( jsonReg.getString(7) );	// LO_name
+				registro.setEs_inscription_user_id( jsonReg.getString(8) );	// inscription_user_id
+				registro.setEs_first_name( jsonReg.getString(9) );	// first_name
+				registro.setEs_last_name( jsonReg.getString(10) );	// last_name
+				registro.setEs_phone( jsonReg.getString(11) );	// phone
+				registro.setEs_amount( jsonReg.getDouble(12) );	// amount
+				registro.setEs_currency( jsonReg.getString(13) );	// currency
+				registro.setEs_tpv_order( jsonReg.getString(14) );	// tpv_order
+				registro.setEs_pay_status( jsonReg.getString(15) );	// pay_status
+				registro.setEs_json( jsonReg.getString(16) );	// json
 					
 					arrayTmp.add(registro);
 				} catch (Exception e) {;}

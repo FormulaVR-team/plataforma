@@ -41,6 +41,7 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	public String es_is_deleted; // is_deleted
 	public String es_author; // author
 	public String es_event_id; // event_id
+	public String es_EV_name; // EV_name
 	public String es_EV_location_id; // EV_location_id
 	public String es_LO_name; // LO_name
 	public String es_inscription_user_id; // inscription_user_id
@@ -77,6 +78,7 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	Destino.setEs_is_deleted( getEs_is_deleted() ); // is_deleted
 	Destino.setEs_author( getEs_author() ); // author
 	Destino.setEs_event_id( getEs_event_id() ); // event_id
+	Destino.setEs_EV_name( getEs_EV_name() ); // EV_name
 	Destino.setEs_EV_location_id( getEs_EV_location_id() ); // EV_location_id
 	Destino.setEs_LO_name( getEs_LO_name() ); // LO_name
 	Destino.setEs_inscription_user_id( getEs_inscription_user_id() ); // inscription_user_id
@@ -98,6 +100,7 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	setEs_is_deleted( Origen.getEs_is_deleted() ); // is_deleted
 	setEs_author( Origen.getEs_author() ); // author
 	setEs_event_id( Origen.getEs_event_id() ); // event_id
+	setEs_EV_name( Origen.getEs_EV_name() ); // EV_name
 	setEs_EV_location_id( Origen.getEs_EV_location_id() ); // EV_location_id
 	setEs_LO_name( Origen.getEs_LO_name() ); // LO_name
 	setEs_inscription_user_id( Origen.getEs_inscription_user_id() ); // inscription_user_id
@@ -132,6 +135,7 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	setEs_is_deleted( Origen.getEs_is_deleted() ); // is_deleted
 	setEs_author( Origen.getEs_author() ); // author
 	setEs_event_id( Origen.getEs_event_id() ); // event_id
+	setEs_EV_name( Origen.getEs_EV_name() ); // EV_name
 	setEs_EV_location_id( Origen.getEs_EV_location_id() ); // EV_location_id
 	setEs_LO_name( Origen.getEs_LO_name() ); // LO_name
 	setEs_inscription_user_id( Origen.getEs_inscription_user_id() ); // inscription_user_id
@@ -227,6 +231,11 @@ public class EsRCD_AF extends org.apache.struts.action.ActionForm {
 	public String getEs_event_id() {return es_event_id;}
 	/** Set event_id*/
 	public void setEs_event_id(String es_event_id) {this.es_event_id = es_event_id;}
+
+	/** Get EV_name*/
+	public String getEs_EV_name() {return es_EV_name;}
+	/** Set EV_name*/
+	public void setEs_EV_name(String es_EV_name) {this.es_EV_name = es_EV_name;}
 
 	/** Get EV_location_id*/
 	public String getEs_EV_location_id() {return es_EV_location_id;}

@@ -79,6 +79,14 @@
 		</div>
 <!-- CAMPO VIRTUAL
 		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">EV_name&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleClass="form-control" property="es_EV_name"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+-->
+<!-- CAMPO VIRTUAL
+		<div class='form-group'>
 			<label class="col-sm-3 control-label" for="textinput">EV_location_id&nbsp;</label>
 			<div class="col-sm-9">
 				<html:text maxlength="50" styleClass="form-control" property="es_EV_location_id"  disabled="true" style="width: 350px;"/>

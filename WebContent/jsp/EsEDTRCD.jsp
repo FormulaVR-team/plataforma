@@ -84,6 +84,13 @@
 		</div>
 
 		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">EV_name&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="es_EV_name"  disabled="true" style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
 			<label class="col-sm-3 control-label" for="textinput">EV_location_id&nbsp;</label>
 			<div class="col-sm-9">
 				<html:text maxlength="50" styleId="textinput" styleClass="form-control" property="es_EV_location_id"  disabled="true" style="width: 350px;"/>
@@ -188,6 +195,7 @@
 	<!-- <html:hidden property="es_is_deleted"/> is_deleted -->
 	<!-- <html:hidden property="es_author"/> author -->
 	     <html:hidden property="es_event_id"/> <!-- event_id -->
+	     <html:hidden property="es_EV_name"/> <!-- EV_name -->
 	     <html:hidden property="es_EV_location_id"/> <!-- EV_location_id -->
 	     <html:hidden property="es_LO_name"/> <!-- LO_name -->
 	     <html:hidden property="es_inscription_user_id"/> <!-- inscription_user_id -->

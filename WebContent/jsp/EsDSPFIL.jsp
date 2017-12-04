@@ -89,6 +89,7 @@
 <th style="text-align: left;">is_deleted</th>
 <th style="text-align: left;">author</th>
 <th style="text-align: left;">event_id</th>
+<th style="text-align: left;">EV_name</th>
 <th style="text-align: left;">EV_location_id</th>
 <th style="text-align: left;">LO_name</th>
 <th style="text-align: left;">inscription_user_id</th>
@@ -112,6 +113,8 @@
 			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_author" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_event_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_EV_name" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="es_filtro.es_EV_location_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
@@ -161,6 +164,7 @@
 <td>&nbsp;<bean:write name="grid" property="es_is_deleted"/><html:hidden name="grid" property="es_is_deleted" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.es_event_id}^${grid.es_inscription_user_id}';" />&nbsp;</td>   <!-- is_deleted -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="es_author"/>',30));</script><html:hidden name="grid" property="es_author" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.es_event_id}^${grid.es_inscription_user_id}';" />&nbsp;</td>   <!-- author -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="es_event_id"/>',30));</script><html:hidden name="grid" property="es_event_id" indexed="true" />&nbsp;</td>   <!-- event_id -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="es_EV_name"/>',30));</script><html:hidden name="grid" property="es_EV_name" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.es_event_id}^${grid.es_inscription_user_id}';" />&nbsp;</td>   <!-- EV_name -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="es_EV_location_id"/>',30));</script><html:hidden name="grid" property="es_EV_location_id" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.es_event_id}^${grid.es_inscription_user_id}';" />&nbsp;</td>   <!-- EV_location_id -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="es_LO_name"/>',30));</script><html:hidden name="grid" property="es_LO_name" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.es_event_id}^${grid.es_inscription_user_id}';" />&nbsp;</td>   <!-- LO_name -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="es_inscription_user_id"/>',30));</script><html:hidden name="grid" property="es_inscription_user_id" indexed="true" />&nbsp;</td>   <!-- inscription_user_id -->
