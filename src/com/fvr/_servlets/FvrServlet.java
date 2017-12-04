@@ -142,7 +142,7 @@ public class FvrServlet extends HttpServlet {
     private static final String getPaymentMethods = "getPaymentMethods";  // Retorna los medios de pago de un location_id
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=getPaymentMethods&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215&DAT=CENTRAL
     private static final String esAdd = "esAdd";  // Llamada externa para "Inscribir un usuario en un evento"
-    // http://localhost:8080/FormulaVR/FvrServlet?ACC=esAdd&DAT={"location_id":"CENTRAL","event_id":"1712COPAPORSCHE","inscription_user_id":"eestecha@gmail.com","first_name":"","last_name":"","phone":""} 
+    // localhost:8080/FormulaVR/FvrServlet?ACC=esAdd&DAT={"location_id":"CENTRAL","event_id":"1712COPAPORSCHE","inscription_user_id":"iurkullu@gmail.com","first_name":"Iñigo","last_name":"Urkullú+Sánchez+Ferlosío","phone":"677935300"} 
 
 //	/////////////////////////////////
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -1342,32 +1342,30 @@ public class FvrServlet extends HttpServlet {
 		JSONObject json = null;
 		String elem = null;
 		
-		try { json = JSONObject.fromObject(dat); } catch (Exception e) {
-			System.out.println( e.getMessage() );
-		}
+		try { json = JSONObject.fromObject(dat); } catch (Exception e) { System.out.println( e.getMessage() ); }
 		
 		if ( json != null ) {
 			BDConexion dataBase = new Subrutinas().getBDConexion(request);
 			EsBean reg_es = new EsBean();
 
 			try { elem = null; elem = json.getString("location_id"); } catch (Exception e) {;}
-			if ( elem != null ) { reg_es.setEs_EV_location_id(elem); }
+			if ( elem != null ) { reg_es.setEs_EV_location_id( new String( URLDecoder.decode(elem, "UTF-8").getBytes(), "UTF-8" ) ); }
 
 			try { elem = null; elem = json.getString("event_id"); } catch (Exception e) {;}
-			if ( elem != null ) { reg_es.setEs_event_id(elem); }
+			if ( elem != null ) { reg_es.setEs_event_id( new String( URLDecoder.decode(elem, "UTF-8").getBytes(), "UTF-8" ) ); }
 
 			try { elem = null; elem = json.getString("inscription_user_id"); } catch (Exception e) {;}
-			if ( elem != null ) { reg_es.setEs_inscription_user_id(elem); }
+			if ( elem != null ) { reg_es.setEs_inscription_user_id( new String( URLDecoder.decode(elem, "UTF-8").getBytes(), "UTF-8" ) ); }
 
 			try { elem = null; elem = json.getString("first_name"); } catch (Exception e) {;}
-			if ( elem != null ) { reg_es.setEs_first_name(elem); }
+			if ( elem != null ) { reg_es.setEs_first_name( new String( URLDecoder.decode(elem, "UTF-8").getBytes(), "UTF-8" ) ); }
 
 			try { elem = null; elem = json.getString("last_name"); } catch (Exception e) {;}
-			if ( elem != null ) { reg_es.setEs_last_name(elem); }
+			if ( elem != null ) { reg_es.setEs_last_name( new String( URLDecoder.decode(elem, "UTF-8").getBytes(), "UTF-8" ) ); }
 
 			try { elem = null; elem = json.getString("phone"); } catch (Exception e) {;}
-			if ( elem != null ) { reg_es.setEs_phone(elem); }
-			
+			if ( elem != null ) { reg_es.setEs_phone( new String( URLDecoder.decode(elem, "UTF-8").getBytes(), "UTF-8" ) ); }
+
 			// Datos obligatorios:
 			if (    reg_es.getEs_event_id() == null || reg_es.getEs_event_id().trim().length() > 0  
 				&&  reg_es.getEs_inscription_user_id() == null || reg_es.getEs_inscription_user_id().trim().length() > 0 
