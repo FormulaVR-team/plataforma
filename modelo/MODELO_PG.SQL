@@ -1,6 +1,6 @@
 ﻿/*
 Created: 01/05/2017
-Modified: 01/12/2017
+Modified: 04/12/2017
 Model: FormulaVR_V10_PostgreSQL
 Database: PostgreSQL 9.2
 */
@@ -1086,7 +1086,7 @@ FROM
 ;
 
 CREATE VIEW "FormulaVR"."V_ES_RTV_eventSusbscriptions" AS
-SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."event_id", "b"."location_id" AS "EV_location_id", "c"."name" AS "LO_name", "a"."inscription_user_id", "a"."first_name", "a"."last_name", "a"."phone", "a"."amount", "a"."currency", "a"."tpv_order", "a"."pay_status", "a"."json"
+SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."event_id", "b"."name" AS "EV_name", "b"."location_id" AS "EV_location_id", "c"."name" AS "LO_name", "a"."inscription_user_id", "a"."first_name", "a"."last_name", "a"."phone", "a"."amount", "a"."currency", "a"."tpv_order", "a"."pay_status", "a"."json"
 FROM 
 
 
