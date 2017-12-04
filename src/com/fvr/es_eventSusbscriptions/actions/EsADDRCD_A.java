@@ -204,30 +204,38 @@ public class EsADDRCD_A extends Action {
         ///////////////////////////////////////////
         // Campos deducidos:
         ///////////////////////////////////////////
+        
+        EsBean reg_es = new EsBean();
+        
+        pantalla.copyTo(reg_es);
+        
+		Subrutinas.derivarCamposRegistro(dataBase, reg_es, Subrutinas.getEvFromId(dataBase, pantalla.getEs_event_id()) );
 
-		pantalla.setEs_tpv_order( "" );
-        pantalla.setEs_amount( 0.0 );
-        if (pantalla.getEs_event_id() != null && pantalla.getEs_event_id().trim().length() > 0) {
-        	EvBean evBean = Subrutinas.getEvFromId(dataBase, pantalla.getEs_event_id());
-        	if (evBean.getEv_sincro() != null && evBean.getEv_sincro().trim().length()> 0) {
-        		pantalla.setEs_EV_location_id(evBean.getEv_location_id());
-        		pantalla.setEs_LO_name(evBean.getEv_LO_name());
-        		
-    			////////////
-    			String order_AUX =  Subrutinas.getDateAuditoria() + pantalla.getEs_event_id().trim() + pantalla.getEs_inscription_user_id().trim();
-    			java.util.zip.CRC32 order_checkSum = new java.util.zip.CRC32();
-    			order_checkSum.update( order_AUX.getBytes() );
-    			String order = Long.toHexString( order_checkSum.getValue() );
-    			
-    			order = Subrutinas.getDateAuditoria().substring(2,6) + order.toUpperCase();
+        pantalla.copyFrom(reg_es);
 
-    			pantalla.setEs_tpv_order( order );
-    	        pantalla.setEs_amount( evBean.getEv_amount() );
-    	        pantalla.setEs_currency( evBean.getEv_currency() );
-    			////////////
-
-        	}
-        }
+//		pantalla.setEs_tpv_order( "" );
+//        pantalla.setEs_amount( 0.0 );
+//        if (pantalla.getEs_event_id() != null && pantalla.getEs_event_id().trim().length() > 0) {
+//        	EvBean evBean = Subrutinas.getEvFromId(dataBase, pantalla.getEs_event_id());
+//        	if (evBean.getEv_sincro() != null && evBean.getEv_sincro().trim().length()> 0) {
+//        		pantalla.setEs_EV_location_id(evBean.getEv_location_id());
+//        		pantalla.setEs_LO_name(evBean.getEv_LO_name());
+//        		
+//    			////////////
+//    			String order_AUX =  Subrutinas.getDateAuditoria() + pantalla.getEs_event_id().trim() + pantalla.getEs_inscription_user_id().trim();
+//    			java.util.zip.CRC32 order_checkSum = new java.util.zip.CRC32();
+//    			order_checkSum.update( order_AUX.getBytes() );
+//    			String order = Long.toHexString( order_checkSum.getValue() );
+//    			
+//    			order = Subrutinas.getDateAuditoria().substring(2,6) + order.toUpperCase();
+//
+//    			pantalla.setEs_tpv_order( order );
+//    	        pantalla.setEs_amount( evBean.getEv_amount() );
+//    	        pantalla.setEs_currency( evBean.getEv_currency() );
+//    			////////////
+//
+//        	}
+//        }
         
         ///////////////////////////////////////////
         return resultado;

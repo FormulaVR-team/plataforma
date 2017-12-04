@@ -142,7 +142,7 @@ public class FvrServlet extends HttpServlet {
     private static final String getPaymentMethods = "getPaymentMethods";  // Retorna los medios de pago de un location_id
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=getPaymentMethods&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215&DAT=CENTRAL
     private static final String esAdd = "esAdd";  // Llamada externa para "Inscribir un usuario en un evento"
-    // http://localhost:8080/FormulaVR/FvrServlet?ACC=esAdd&USR=eestecha@gmail.com
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=esAdd&DAT={"location_id":"CENTRAL","event_id":"1712COPAPORSCHE","inscription_user_id":"eestecha@gmail.com","first_name":"","last_name":"","phone":""} 
 
 //	/////////////////////////////////
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -304,6 +304,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_sndMail_forgotPass(request, response, usr);
     	} else if (getPaymentMethods.equalsIgnoreCase( acc )) {
     		cmd_getPaymentMethods(request, response, usr, key, dat);
+    	} else if (esAdd.equalsIgnoreCase( acc )) {
+    		cmd_esAdd(request, response, dat);
     	} else {
     		responder(request, response, false, "Servicio no contemplado " + acc );
     	}
@@ -1332,6 +1334,199 @@ public class FvrServlet extends HttpServlet {
 		}
 
 		responder(request, response, true, resultado.trim() );
+	}
+
+	private void cmd_esAdd(HttpServletRequest request, HttpServletResponse response, String dat) throws IOException {
+		if ( dat == null || dat.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		JSONObject json = null;
+		String elem = null;
+		
+		try { json = JSONObject.fromObject(dat); } catch (Exception e) {
+			System.out.println( e.getMessage() );
+		}
+		
+		if ( json != null ) {
+			BDConexion dataBase = new Subrutinas().getBDConexion(request);
+			EsBean reg_es = new EsBean();
+
+			try { elem = null; elem = json.getString("location_id"); } catch (Exception e) {;}
+			if ( elem != null ) { reg_es.setEs_EV_location_id(elem); }
+
+			try { elem = null; elem = json.getString("event_id"); } catch (Exception e) {;}
+			if ( elem != null ) { reg_es.setEs_event_id(elem); }
+
+			try { elem = null; elem = json.getString("inscription_user_id"); } catch (Exception e) {;}
+			if ( elem != null ) { reg_es.setEs_inscription_user_id(elem); }
+
+			try { elem = null; elem = json.getString("first_name"); } catch (Exception e) {;}
+			if ( elem != null ) { reg_es.setEs_first_name(elem); }
+
+			try { elem = null; elem = json.getString("last_name"); } catch (Exception e) {;}
+			if ( elem != null ) { reg_es.setEs_last_name(elem); }
+
+			try { elem = null; elem = json.getString("phone"); } catch (Exception e) {;}
+			if ( elem != null ) { reg_es.setEs_phone(elem); }
+			
+			// Datos obligatorios:
+			if (    reg_es.getEs_event_id() == null || reg_es.getEs_event_id().trim().length() > 0  
+				&&  reg_es.getEs_inscription_user_id() == null || reg_es.getEs_inscription_user_id().trim().length() > 0 
+				&&  reg_es.getEs_EV_location_id() == null || reg_es.getEs_EV_location_id().trim().length() > 0 
+				) {
+				// Resto:
+				
+				if ( !Subrutinas.isEmailCreible(reg_es.getEs_inscription_user_id()) ) {
+					responder(request, response, false, "Email " + reg_es.getEs_inscription_user_id() + " isn't procesable by application");
+					return;
+				};
+
+	        	EvBean evBean = Subrutinas.getEvFromId(dataBase, reg_es.getEs_event_id());
+	        	if (evBean.getEv_sincro() == null || evBean.getEv_sincro().trim().length() < 1) {
+					responder(request, response, false, "Evento " + reg_es.getEs_event_id() + " no hallado."); 
+					return;
+	        	}
+
+					EsBean aux_es = Subrutinas.getEsFromId(dataBase, reg_es);
+					if ( aux_es != null && aux_es.getEs_sincro().trim().length() > 0 ) {
+						// Inscripción ya existía antes:
+						responder(request, response, false, "Usuario " + aux_es.getEs_inscription_user_id() + " ya estaba inscrito en evento: " + aux_es.getEs_EV_name());
+						return;
+					} 
+
+					try {
+						
+				        /////////////////////////////////////////////////////////////////////
+						// CREAR USUARIO SI NO EXISTE Y LANZARLE CORREO DE CAMBIO DE PASSWORD:
+						String usr_id = reg_es.getEs_inscription_user_id();
+						UsBean reg_us = Subrutinas.getUsFromId(dataBase, usr_id);
+						if ( reg_us != null && reg_us.getUs_sincro().trim().length() < 1 ) {
+
+							//////////////////
+					        // Improvisar el usuario:
+					        if ( ! Subrutinas.improvisarUsuario(dataBase, usr_id, reg_es.getEs_first_name(), reg_es.getEs_last_name(), reg_es.getEs_phone(), null) ) {
+								responder(request, response, false, "Error trying user creation"); 
+								return;
+							}
+							//////////////////
+
+					        String laClave = Subrutinas.getHashFromRandomCode();
+							Subrutinas.setUsr_newHash(dataBase, usr_id, laClave);
+
+							//////////////////
+							// Correo para que meta su contraseña:
+							List<String> lstErrores = new ArrayList<String>();
+							String htmlDoc = SendMail.send_CambiarPassword(dataBase, Subrutinas.get_urlBase(request), usr_id.trim(), lstErrores, true);
+							if ( lstErrores.isEmpty() ) {
+								Subrutinas.addLog(dataBase, _K.SYS, usr_id, "Enviado correo para cambio password.", htmlDoc);
+//						            errores.add("error", new ActionMessage( "errors.detail", "Por favor consulta tu correo para continuar el proceso de asignación de una nueva contraseña." ));
+							} else {
+								Subrutinas.addLog(dataBase, _K.SYS, usr_id, "ERROR en envío correo para cambio de contraseña.", lstErrores.get(0).toString() );
+//						            errores.add("error", new ActionMessage( "errors.detail", "Ha fallado la operación..." ));
+							}
+							//////////////////
+						}
+				        /////////////////////////////////////////////////////////////////////
+
+
+				        /////////////////////////////////////////////////////////////////////
+						// CREAR INSCRIPCIÓN Y DERIVAR AL PAGO:
+						
+				        // Deducir algunos campos del formato:
+						reg_es = Subrutinas.derivarCamposRegistro(dataBase, reg_es, evBean);
+						// Crear registro de inscripción pendiente de cobro:
+						new com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos().es_crtObj(dataBase, reg_es);
+						
+						// Gestión del cobro por TVP virtual:
+						
+						///////////////////////
+						// TOKEN. Conseguir una clave única para el callback:
+						com.fvr.tk_tokens.bean.TkBean reg_tk = new com.fvr.tk_tokens.bean.TkBean();
+						String token_id = Subrutinas.getHashFromRandomCode();
+						while ( ! "".equalsIgnoreCase( Subrutinas.getTkFromId(dataBase, token_id).getTk_sincro() ) ) {
+							// Si tiene "Sincro" es que ya existía...
+							token_id = Subrutinas.getHashFromRandomCode();
+						}
+						///////////////////////
+
+						
+			        	TPV_API tpv = new TPV_API(dataBase); 
+						List<String> lstErrores = new ArrayList<String>();
+						String url_base = Subrutinas.get_urlBase(request);
+						FormStruct out_formData = tpv.new FormStruct();
+
+						String link_redireccion = 
+								tpv.prepareFormData(  url_base
+													, out_formData
+													, reg_es.getEs_tpv_order()
+													, reg_es.getEs_amount()
+													, token_id
+													, reg_es.getEs_EV_location_id()
+													, lstErrores 
+													);
+						
+						// PREPARAR REENTRADA EN EL SISTEMA TRAS EL COBRO:
+						///////////////////////
+						// TOKEN. Conseguir una clave única para el callback:
+						try {
+							JSONObject jsonToken = new JSONObject();
+							jsonToken.put("acc", "TPV_PAGO_EVENTO_LaCaixa");
+							jsonToken.put("reservation_id", reg_es.getEs_tpv_order());
+							jsonToken.put("event_id", reg_es.getEs_event_id());
+							jsonToken.put("inscription_user_id", reg_es.getEs_inscription_user_id());
+							jsonToken.put("url_redirect", link_redireccion);
+							jsonToken.put("ds_Signature", out_formData.ds_Signature);
+							jsonToken.put("ds_MerchantParameters", out_formData.ds_MerchantParameters);
+							reg_tk.setTk_token_id( token_id );
+							reg_tk.setTk_author( reg_es.getEs_author() );
+							reg_tk.setTk_json( jsonToken.toString() );
+
+							new com.fvr.tk_tokens.db.TkAccesoBaseDatos().tk_crtObj(dataBase, reg_tk);
+						} catch (StExcepcion e) {;}
+						///////////////////////
+
+						
+						
+						// DEVOLVER UN FORMULARIO CON AUTO-SUBMIT:
+
+				        String htmlRespone = "<html>";
+
+				        htmlRespone += "<head>";
+				        htmlRespone += "</head>";
+				        htmlRespone += "<body>";
+				        htmlRespone += "<form id='TPV_form' action='" + link_redireccion + "' method='POST' accept-charset='UTF-8' enctype='application/x-www-form-urlencoded'>";
+				        htmlRespone += "<input type='hidden' name='ds_Signature' value='" + out_formData.ds_Signature + "'/>";
+				        htmlRespone += "<input type='hidden' name='ds_SignatureVersion' value='" + out_formData.ds_SignatureVersion + "'/>";
+				        htmlRespone += "<input type='hidden' name='ds_MerchantParameters' value='" + out_formData.ds_MerchantParameters + "'/>";
+				        htmlRespone += "<input type='submit' value='PRESS FOR PAY'/>";
+				        htmlRespone += "</form>";
+				        htmlRespone += "<script>";
+				        htmlRespone += "document.getElementById('TPV_form').submit()";
+				        htmlRespone += "</script>";
+				        htmlRespone += "</body>";
+
+				        htmlRespone += "</html>";
+
+						PrintWriter out = response.getWriter();
+						out.print( htmlRespone );
+						out.close();
+						return;
+
+				        ///////////////////////////////////////////
+
+//						responder(request, response, true, "Se ha inscrito al usuario " + aux_es.getEs_inscription_user_id() + " en evento:" + aux_es.getEs_EV_name());
+//						return;
+				        /////////////////////////////////////////////////////////////////////
+
+					} catch (StExcepcion e) {
+						responder(request, response, false, e.getMessage());
+					}
+
+				}
+
+		}
+		
+		responder(request, response, false, "Error en parámetros");
+		return;
 	}
 
 	///////////////////////////

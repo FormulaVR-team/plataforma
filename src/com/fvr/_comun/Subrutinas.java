@@ -442,6 +442,12 @@ public class Subrutinas {
 		return false;
 	}
 	public static boolean improvisarUsuario(BDConexion dataBase, String user_id, ActionMessages errores_o_null) {
+		String first_name =  _K.USER_DEFAULT_first_name;
+		String last_name = _K.USER_DEFAULT_last_name;
+		String phone = "";
+		return improvisarUsuario(dataBase, user_id, first_name, last_name, phone, errores_o_null);
+	}
+	public static boolean improvisarUsuario(BDConexion dataBase, String user_id, String first_name, String last_name, String phone, ActionMessages errores_o_null) {
 		boolean resultado = false;
 		
         try {
@@ -458,9 +464,9 @@ public class Subrutinas {
         	reg_us.setUs_hash_code( "" ); // hash_code
         	reg_us.setUs_nick( _K.USER_DEFAULT_nick ); // nick
         	reg_us.setUs_password( "" ); // password
-        	reg_us.setUs_first_name( _K.USER_DEFAULT_first_name ); // first_name
-        	reg_us.setUs_last_name( _K.USER_DEFAULT_last_name ); // last_name
-        	reg_us.setUs_phone( "" ); // phone
+        	reg_us.setUs_first_name( first_name ); // first_name
+        	reg_us.setUs_last_name( last_name ); // last_name
+        	reg_us.setUs_phone( phone ); // phone
         	reg_us.setUs_gender( _K.USER_DEFAULT_gender ); // gender
         	reg_us.setUs_birth_day( _K.USER_DEFAULT_birth_day ); // birth_day
         	reg_us.setUs_avatar( _K.USER_DEFAULT_avatar ); // avatar
@@ -1810,6 +1816,34 @@ public class Subrutinas {
 		////////////
 	}
 
+	public static EsBean derivarCamposRegistro(BDConexion dataBase, EsBean reg_es, EvBean evBean) {
+
+        reg_es.setEs_author( reg_es.getEs_inscription_user_id() );
+
+		reg_es.setEs_tpv_order( "" );
+        reg_es.setEs_amount( 0.0 );
+        reg_es.setEs_currency( "€" );
+
+        if (reg_es.getEs_event_id() != null && reg_es.getEs_event_id().trim().length() > 0) {
+        		reg_es.setEs_EV_location_id(evBean.getEv_location_id());
+        		reg_es.setEs_LO_name(evBean.getEv_LO_name());
+        		
+    			////////////
+    			String order_AUX =  Subrutinas.getDateAuditoria() + reg_es.getEs_event_id().trim() + reg_es.getEs_inscription_user_id().trim();
+    			java.util.zip.CRC32 order_checkSum = new java.util.zip.CRC32();
+    			order_checkSum.update( order_AUX.getBytes() );
+    			String order = Long.toHexString( order_checkSum.getValue() );
+    			
+    			order = Subrutinas.getDateAuditoria().substring(2,6) + order.toUpperCase();
+
+    			reg_es.setEs_tpv_order( order );
+    	        reg_es.setEs_amount( evBean.getEv_amount() );
+    	        reg_es.setEs_currency( evBean.getEv_currency() );
+    			////////////
+        }
+		return reg_es;
+	}
+	
 	public static TkBean getTkFromId(BDConexion dataBase, String token_id) {
 		TkBean key = new TkBean();
 		key.setTk_token_id(token_id);
