@@ -142,7 +142,7 @@ public class FvrServlet extends HttpServlet {
     private static final String getPaymentMethods = "getPaymentMethods";  // Retorna los medios de pago de un location_id
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=getPaymentMethods&USR=eestecha@gmail.com&KEY=2BE9D59820EE1699D54113D60FEDDC90C67D1215&DAT=CENTRAL
     private static final String esAdd = "esAdd";  // Llamada externa para "Inscribir un usuario en un evento"
-    // localhost:8080/FormulaVR/FvrServlet?ACC=esAdd&DAT={"location_id":"CENTRAL","event_id":"1712COPAPORSCHE","inscription_user_id":"iurkullu@gmail.com","first_name":"Iñigo","last_name":"Urkullú+Sánchez+Ferlosío","phone":"677935300"} 
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=esAdd&DAT={"location_id":"CENTRAL","event_id":"1712COPAPORSCHE","inscription_user_id":"iurkullu@gmail.com","first_name":"Iñigo","last_name":"Urkullú+Sánchez+Ferlosío","phone":"677935300"} 
 
 //	/////////////////////////////////
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
