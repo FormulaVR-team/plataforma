@@ -10,7 +10,7 @@
 
 <div name="EvDSPFIL_form">
 
-	<h1 class="page-title">Eventos</h1>
+	<h1 class="page-title">Events</h1>
 	
 	<div class="row">
 		<div class="col-xs-12 col-sm-5" style="margin-top: 15px ;margin-bottom: 10px;">

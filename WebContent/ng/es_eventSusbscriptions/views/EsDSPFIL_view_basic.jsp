@@ -10,7 +10,7 @@
 
 <div name="EsDSPFIL_form">
 
-	<h1 class="page-title">Inscripciones Eventos</h1>
+	<h1 class="page-title">Event registrations</h1>
 	
 	<div layout="row" layout-align="space-between center">
 		<div>

@@ -1402,7 +1402,7 @@ public class FvrServlet extends HttpServlet {
 							request.getSession(true).setAttribute( "roleKey", reg_us.getUs_role_id() );
 
 							// link +=  "/Index_A.do#/RsDSPFIL/panel_add";
-							link +=  "/Index_A.do#/RsDSPFIL/";
+							link +=  "/Index_A.do#/EsADDRCD";
 
 							response.sendRedirect( link );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //							request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
