@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
@@ -201,20 +202,21 @@ public class FvrServlet extends HttpServlet {
 //    	///////////////////////////
 //    	///////////////////////////
 //    	// TRAZA DE LA LLAMADA:
-//		String headers;
+//		Entry<String, String> headers;
 //    	Map<String, String> map = getHeadersInfo(request);
-//    	Iterator<String> it = map.cosaSet().iterator();
+//    	Iterator<Entry<String, String>> it = map.entrySet().iterator();
 //		while (it.hasNext()) {
-//			headers = (String) it.next();
+//			headers =  it.next();
 //			if (headers != null) {
-//				System.out.println( "(H)" + headers + ": " + map.get(headers) );
+//				System.out.println( "(H)" + headers.getKey() + " = " + headers.getValue() );
 //			}
 //		}
+//		String parm;
 //		Enumeration<String> params = request.getParameterNames();
 //		while (params.hasMoreElements()) {
-//			headers = (String) params.nextElement();
-//			if (headers != null) {
-//				System.out.println( "(P)" + headers + ": " + request.getParameter(headers) );
+//			parm = params.nextElement();
+//			if (parm != null) {
+//				System.out.println( "(P)" + parm + ": " + request.getParameter(parm) );
 //			}
 //		}
 //    	///////////////////////////
@@ -1387,8 +1389,28 @@ public class FvrServlet extends HttpServlet {
 					EsBean aux_es = Subrutinas.getEsFromId(dataBase, reg_es);
 					if ( aux_es != null && aux_es.getEs_sincro().trim().length() > 0 ) {
 						// Inscripción ya existía antes:
-						responder(request, response, false, "Usuario " + aux_es.getEs_inscription_user_id() + " ya estaba inscrito en evento: " + aux_es.getEs_EV_name());
-						return;
+//						responder(request, response, false, "Usuario " + aux_es.getEs_inscription_user_id() + " ya estaba inscrito en evento: " + aux_es.getEs_EV_name());
+//						return;
+						UsBean reg_us = Subrutinas.getUsFromId(dataBase, reg_es.getEs_inscription_user_id());
+						if ( reg_us != null && reg_us.getUs_sincro().trim().length() > 0 ) {
+							///////////////////
+							// Reentrada en el sistema:
+							String link = Subrutinas.get_urlBase(request);
+
+					       	request.getSession(true).setAttribute( "logon_USR", reg_us.getUs_user_id() );
+					        request.getSession(true).setAttribute( "logon_HSH", reg_us.getUs_hash_code() );
+							request.getSession(true).setAttribute( "roleKey", reg_us.getUs_role_id() );
+
+							// link +=  "/Index_A.do#/RsDSPFIL/panel_add";
+							link +=  "/Index_A.do#/RsDSPFIL/";
+
+							response.sendRedirect( link );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//							request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
+							///////////////////
+						} else {
+							responder(request, response, false, "Error en parámetros");
+							return;
+						}
 					} 
 
 					try {
