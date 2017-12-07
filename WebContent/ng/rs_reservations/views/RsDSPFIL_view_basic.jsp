@@ -9,6 +9,20 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 
 <div name="RsDSPFIL_form">
+
+<style>
+.avatarClass {
+	width: 40px;
+    transition: width 1s;
+    transition-timing-function: ease;
+    -webkit-transition: width 1s; /* Safari */
+    -webkit-transition-timing-function: ease; /* Safari */
+}
+.avatarClass:hover {
+	width: 300px;
+}
+</style>
+
 	<div class="row" style="margin-top: 25px;">
 
 		<div class="col-xs-12 col-sm-6">
@@ -41,9 +55,9 @@
 								<div class="list-head-first" style="padding:0px; width: 50%;">
 									<div>
 										<div>
-											<md-button class="md-fab md-mini" style="padding: 0;" aria-label="avatar">
-												<img width="40px" ng-src="{{actionForm.rs_US_avatar}}" />
-											</md-button>
+											<!-- <md-button class="md-fab md-mini" style="padding: 0;" aria-label="avatar"> -->
+												<img class="avatarClass" ng-src="{{actionForm.rs_US_avatar}}" />
+											<!-- </md-button> -->
 											<img src="./FvrServlet?ACC=getFlgImg&KPS={{actionForm.rs_US_country_id}}" ></img>
 											{{actionForm.rs_US_nick}}
 										</div>
