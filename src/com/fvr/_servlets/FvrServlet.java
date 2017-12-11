@@ -103,6 +103,8 @@ public class FvrServlet extends HttpServlet {
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=lo_lst
     private static final String cd_lst = "cd_lst";  // Retorna lista de días de cierre del local
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=cd_lst&LOC=CENTRAL
+    private static final String cd_lst_weekly = "cd_lst_weekly";  // Retorna lista de días de la semana de apertura/cierre del local
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=cd_lst_weekly&LOC=CENTRAL
     private static final String cp_lst = "cp_lst";  // Retorna lista de cockpits de la instalación (opcionalmente también los bloqueados)
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=cp_lst&LOC=CENTRAL [&BLK=S]
     private static final String ev_lst = "ev_lst";  // Retorna lista de eventos de la instalación
@@ -268,6 +270,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_rtvNickData(request, response, usr, key, nck);
     	} else if (cd_lst.equalsIgnoreCase( acc )) {
     		cmd_cd_lst(request, response, loc);
+    	} else if (cd_lst_weekly.equalsIgnoreCase( acc )) {
+    		cmd_cd_lst_weekly(request, response, loc);
     	} else if (cp_lst.equalsIgnoreCase( acc )) {
     		cmd_cp_lst(request, response, loc, blk);
     	} else if (ev_lst.equalsIgnoreCase( acc )) {
@@ -751,6 +755,19 @@ public class FvrServlet extends HttpServlet {
 		}
 
 		responder(request, response, true, lista.toString() );
+		return;
+	}
+
+	private void cmd_cd_lst_weekly(HttpServletRequest request, HttpServletResponse response, String location_id) throws IOException {
+		if ( location_id == null || location_id.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		String diasSemana = Subrutinas.getDBValueFromKey(new Subrutinas().getBDConexion(request), location_id, _K.PA_KEY_WEEKLY_CALENDAR);
+		
+		if ( diasSemana == null ) {
+			diasSemana = "";
+		}
+
+		responder(request, response, true, diasSemana );
 		return;
 	}
 

@@ -52,7 +52,9 @@ public class _K {
 	
 	public static final String PA_KEY_RS_LAST_KEY = "RS_LAST_KEY";									// Siguiente clave de reserva
 	public static final String PA_KEY_RS_MIN_FEC = "RS_MIN_FEC";									// Fecha ISO: 2017-09-01
-	
+
+	public static final String PA_KEY_WEEKLY_CALENDAR= "WEEKLY_CALENDAR";	// [DLMXJVS]. "0..3456" => "Abierto todos menos lunes y martes" (Un punto significa cerrado ese día)
+
 	public static final String PA_KEY_URL_WEB_PAGE = "URL_WEB_PAGE";								// Url de la página web: https:www.formulavr.net
 	
 	public static final String PA_KEY_COCKPIT_CONFIG_MASTER_FILE_NAME = "COCKPIT_CONFIG_MASTER_FILE_NAME";	// Fichero para inyectar en el cockpit cuando se ejecuta una reserva.

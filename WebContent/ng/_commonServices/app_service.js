@@ -143,6 +143,13 @@ angular.module('commonServices_module')
 	                    data :  { ACC: "cd_lst", LOC: location_id }
 	                });
 	            }
+	            , cd_lst_weekly : function (location_id) {
+	                return peticionHTTP({
+	                    method: 'POST',
+	                    url: './FvrServlet',
+	                    data :  { ACC: "cd_lst_weekly", LOC: location_id }
+	                });
+	            }
 	            , cp_lst : function (location_id, isBlocked) {
 	                return peticionHTTP({
 	                    method: 'POST',
@@ -183,7 +190,7 @@ angular.module('commonServices_module')
 	                var day = date.getDay();
 	                return day === 0 || day === 6;
 	            }
-	            , md_date_filter_onlyWorkable : function ( date, lst_closedDays ) {
+	            , md_date_filter_onlyWorkable : function ( date, lst_closedDays, lst_weeklyDays ) {
 	            	if ( date === undefined ) { return false; }
 	                var day = date.getDay();
 	                
@@ -196,9 +203,11 @@ angular.module('commonServices_module')
 	                		return false;
 	                	};
 	                }
-	                
+
 //	                return day === 0 || day === 1 || day === 2 || day === 3 || day === 4 || day === 5 || day === 6;
-	                return day === 0              || day === 2 || day === 3 || day === 4 || day === 5 || day === 6;
+//	                return day === 0              || day === 2 || day === 3 || day === 4 || day === 5 || day === 6;
+	                if ( lst_weeklyDays != null && lst_weeklyDays.includes( day ) ) { return true; }
+	                return false;	                
 	            }
 	            , gamingModule : function ( user, hashCode ) {
 	                return peticionHTTP({

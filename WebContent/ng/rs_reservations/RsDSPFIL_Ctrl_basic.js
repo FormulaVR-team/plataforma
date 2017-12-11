@@ -168,6 +168,7 @@ angular
 					$scope.lst_pt = null; // [ {value: "10", displayName: 'Diez'}, {value: "20", displayName: 'Veinte'} ];
 					$scope.lst_cp = null; // [1,2,3,4,5,6];	// Solo VALORES!!!
 					$scope.lst_cd = null; // ["2017-08-07","2017-08-08"];	// Solo VALORES!!!
+					$scope.lst_cd_weekly = null;	// "0..3456" Días de la semana abiertos
 					$scope.lst_pay_status = ["","TPV_OK","PAYPAL_OK"];
 					$scope.lst_durations = [10,20,30];
 
@@ -180,7 +181,7 @@ angular
 					$scope.aux_rs_start_date			= new Date();		// Inicializar el objeto DatePicker...para que no se queje del tipo de dato.
 					$scope.aux_rs_start_date_minDate	= new Date();
 					$scope.aux_rs_start_date_maxDate	= new Date(); $scope.aux_rs_start_date_maxDate.setDate($scope.aux_rs_start_date_minDate.getDate()+60 );
-					$scope.aux_rs_start_date_filterFnc	= null; // function(date) { return app_services.md_date_filter_onlyWorkable( date, $scope.lst_cd ); }
+					$scope.aux_rs_start_date_filterFnc	= null;
 					
 //					$scope.showPayments = false;
 					/////
@@ -523,6 +524,7 @@ angular
 //						$scope.showPayments = false;
 						var date = new Date();
 						$scope.lst_cd = null;
+						$scope.lst_cd_weekly = null;
 
 						// Formato de registro:
 						$scope.actionForm.rs_sincro = ""; // sincro
@@ -575,7 +577,7 @@ angular
 						var date = new Date();
 						// Only workable:
 						var cuentaLimite = 0;
-						while ( ! app_services.md_date_filter_onlyWorkable( date, $scope.lst_cd ) && cuentaLimite <= 30 ) {
+						while ( ! app_services.md_date_filter_onlyWorkable( date, $scope.lst_cd, $scope.lst_cd_weekly ) && cuentaLimite <= 30 ) {
 							date.setDate( date.getDate() + 1 );
 							cuentaLimite++;
 						}
@@ -891,6 +893,7 @@ angular
 						    // Combos dependientes de cambio en location:
 							app_services.tt_lst(location_id,"NORMAL","N").then( function(response) { if (response.rc === 'OK') { $scope.lst_tt = response.text; } else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
 							app_services.cp_lst(location_id,"N").then( function(response) { if (response.rc === 'OK') { $scope.lst_cp = response.text; } else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+							app_services.cd_lst_weekly(location_id).then( function(response) { if (response.rc === 'OK') { $scope.lst_cd_weekly = response.text; } else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
 							app_services.cd_lst(location_id).then( 
 									function(response) { 
 										if (response.rc === 'OK') { 
@@ -906,7 +909,7 @@ angular
 													$scope.aux_rs_start_date			= new Date( minFec.getTime() ); //$scope.aux_rs_start_date.setDate( minFec.getDate() );
 													$scope.aux_rs_start_date_minDate	= new Date( minFec.getTime() ); //$scope.aux_rs_start_date_minDate.setDate( minFec.getDate() );
 													$scope.aux_rs_start_date_maxDate	= new Date( minFec.getTime() ); $scope.aux_rs_start_date_maxDate.setDate( $scope.aux_rs_start_date_maxDate.getDate() + 60 );
-													$scope.aux_rs_start_date_filterFnc	= function(date) { return app_services.md_date_filter_onlyWorkable( date, $scope.lst_cd ); }
+													$scope.aux_rs_start_date_filterFnc	= function(date) { return app_services.md_date_filter_onlyWorkable( date, $scope.lst_cd, $scope.lst_cd_weekly ); }
 												} else { app_services.errorComun( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
 											///////////////
 
