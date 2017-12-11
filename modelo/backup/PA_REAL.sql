@@ -59,7 +59,7 @@ INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'C
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'SYS', 'VERSION', '17254-2');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'CENTRAL', 'chart_max_startdate', '2200');
 INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'CENTRAL', 'chart_min_startdate', '0900');
-
+INSERT INTO "T_PA_systemParameters" VALUES ('1705091000999', ' ', ' ', 'SYS', 'CENTRAL', 'WEEKLY_CALENDAR', '0..3456');
 
 -- Completed on 2017-09-12 10:30:00
 
