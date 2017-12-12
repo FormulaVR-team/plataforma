@@ -53,18 +53,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/us_users/views/rsChangePassword.jsp?version=fake1",
+				templateUrl: "./ng/us_users/views/rsChangePassword.jsp?version=fake2",
 				controller: "userRole_Ctrl"
 			}
 		}
@@ -84,18 +84,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/us_users/views/rsUsEDTRCD.jsp?version=fake1",
+				templateUrl: "./ng/us_users/views/rsUsEDTRCD.jsp?version=fake2",
 				controller: "rsUsEDTRCD_Ctrl"
 			}
 		}
@@ -115,26 +115,26 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnChart": {
 				templateUrl: "./ng/_commonTemplates/chart_view.html",
 				controller: "chart_controller"
 			},
 			"rgnZoom": {
-				templateUrl: "./ng/ac_activityCockpits/views/AcDSPFIL_view_zoom.jsp?version=fake1",
+				templateUrl: "./ng/ac_activityCockpits/views/AcDSPFIL_view_zoom.jsp?version=fake2",
 				controller: "AcDSPFIL_Ctrl_basic"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/ac_activityCockpits/views/AcDSPFIL_view_group10.jsp?version=fake1",
+				templateUrl: "./ng/ac_activityCockpits/views/AcDSPFIL_view_group10.jsp?version=fake2",
 				controller: "AcDSPFIL_Ctrl_group10"
 			}
 		}
@@ -154,18 +154,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/cp_cockpits/views/CpDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/cp_cockpits/views/CpDSPFIL_view_basic.jsp?version=fake2",
 				controller: "CpDSPFIL_Ctrl_basic"
 			}
 		}
@@ -185,18 +185,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/es_eventSusbscriptions/views/EsDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/es_eventSusbscriptions/views/EsDSPFIL_view_basic.jsp?version=fake2",
 				controller: "EsDSPFIL_Ctrl_basic"
 			}
 		}
@@ -216,18 +216,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/es_eventSusbscriptions/views/EsADDRCD_view_CONTAINER.jsp?version=fake1",
+				templateUrl: "./ng/es_eventSusbscriptions/views/EsADDRCD_view_CONTAINER.jsp?version=fake2",
 				controller: "EsDSPFIL_Ctrl_basic"
 			}
 		}
@@ -247,18 +247,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/ev_events/views/EvDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/ev_events/views/EvDSPFIL_view_basic.jsp?version=fake2",
 				controller: "EvDSPFIL_Ctrl_basic"
 			}
 		}
@@ -278,18 +278,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/lg_logs/views/LgDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/lg_logs/views/LgDSPFIL_view_basic.jsp?version=fake2",
 				controller: "LgDSPFIL_Ctrl_basic"
 			}
 		}
@@ -309,18 +309,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/lo_location/views/LoDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/lo_location/views/LoDSPFIL_view_basic.jsp?version=fake2",
 				controller: "LoDSPFIL_Ctrl_basic"
 			}
 		}
@@ -340,18 +340,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/cd_LocationClosedDays/views/CdDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/cd_LocationClosedDays/views/CdDSPFIL_view_basic.jsp?version=fake2",
 				controller: "CdDSPFIL_Ctrl_basic"
 			}
 		}
@@ -371,18 +371,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/pa_systemParameters/views/PaDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/pa_systemParameters/views/PaDSPFIL_view_basic.jsp?version=fake2",
 				controller: "PaDSPFIL_Ctrl_basic"
 			}
 		}
@@ -402,18 +402,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/pm_promosManuales/views/PmDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/pm_promosManuales/views/PmDSPFIL_view_basic.jsp?version=fake2",
 				controller: "PmDSPFIL_Ctrl_basic"
 			}
 		}
@@ -433,18 +433,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/pr_promos/views/PrDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/pr_promos/views/PrDSPFIL_view_basic.jsp?version=fake2",
 				controller: "PrDSPFIL_Ctrl_basic"
 			}
 		}
@@ -464,18 +464,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/ps_countries/views/PsDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/ps_countries/views/PsDSPFIL_view_basic.jsp?version=fake2",
 				controller: "PsDSPFIL_Ctrl_basic"
 			}
 		}
@@ -495,18 +495,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/pt_products/views/PtDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/pt_products/views/PtDSPFIL_view_basic.jsp?version=fake2",
 				controller: "PtDSPFIL_Ctrl_basic"
 			}
 		}
@@ -526,18 +526,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/py_PayPalTokens/views/PyDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/py_PayPalTokens/views/PyDSPFIL_view_basic.jsp?version=fake2",
 				controller: "PyDSPFIL_Ctrl_basic"
 			}
 		}
@@ -554,18 +554,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/ad_rs_reservations/views/Ad_rsDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/ad_rs_reservations/views/Ad_rsDSPFIL_view_basic.jsp?version=fake2",
 				controller: "Ad_rsDSPFIL_Ctrl_basic"
 			}
 		}
@@ -582,18 +582,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/rs_reservations/views/RsDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/rs_reservations/views/RsDSPFIL_view_basic.jsp?version=fake2",
 				controller: "RsDSPFIL_Ctrl_basic"
 			}
 		}
@@ -613,18 +613,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/sg_publicProcesses/views/SgDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/sg_publicProcesses/views/SgDSPFIL_view_basic.jsp?version=fake2",
 				controller: "SgDSPFIL_Ctrl_basic"
 			}
 		}
@@ -644,18 +644,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/tj_tarjetasPrepago/views/TjDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/tj_tarjetasPrepago/views/TjDSPFIL_view_basic.jsp?version=fake2",
 				controller: "TjDSPFIL_Ctrl_basic"
 			}
 		}
@@ -675,18 +675,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/tk_tokens/views/TkDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/tk_tokens/views/TkDSPFIL_view_basic.jsp?version=fake2",
 				controller: "TkDSPFIL_Ctrl_basic"
 			}
 		}
@@ -706,22 +706,22 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnChart": {
 				templateUrl: "./ng/_commonTemplates/chart_view.html",
 				controller: "chart_controller"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/ts_timeSlices/views/TsDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/ts_timeSlices/views/TsDSPFIL_view_basic.jsp?version=fake2",
 				controller: "TsDSPFIL_Ctrl_basic"
 			}
 		}
@@ -741,18 +741,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/tt_timeTableReference/views/TtDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/tt_timeTableReference/views/TtDSPFIL_view_basic.jsp?version=fake2",
 				controller: "TtDSPFIL_Ctrl_basic"
 			}
 		}
@@ -772,18 +772,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake2",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/us_users/views/UsDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/us_users/views/UsDSPFIL_view_basic.jsp?version=fake2",
 				controller: "UsDSPFIL_Ctrl_basic"
 			}
 		}
@@ -792,11 +792,11 @@ $mdThemingProvider
 		url: "/",
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: function ($injector, $location) { window.location = "Off"; }
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			}
 		}
 	})
@@ -804,14 +804,14 @@ $mdThemingProvider
 		url: "/",
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake2",
 				controller: function ($injector, $location) {
 					var $state = $injector.get('$state');
 					$state.go('TtDSPFIL');
 				}
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake2"
 			}
 		}
 	});
