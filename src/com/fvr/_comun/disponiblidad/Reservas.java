@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -468,4 +469,82 @@ public class Reservas implements Serializable{
 		
 		return resultado;
 	}
+
+	public static Date getPrimeraFechaPosible( BDConexion dataBase, String loc ) {
+		
+		Date hoy = Subrutinas.cvtFec_aaaa_mm_dd__date( Subrutinas.getFecha_aaaa_mm_dd() ); // Cero horas y cero minutos....
+		Date minReservaPosible = hoy; 
+		String rsFecMin = null;
+
+//		LoBean reg_lo = Subrutinas.getLoFromId(dataBase, loc);
+//		if ( reg_lo != null && reg_lo.getLo_sincro() != null && reg_lo.getLo_sincro().trim().length() > 0 ) {
+			rsFecMin = Subrutinas.getDBValueFromKey(dataBase, loc, _K.PA_KEY_RS_MIN_FEC);
+//		}
+		
+		if ( rsFecMin != null && rsFecMin.trim().length() == 10 ) {
+			minReservaPosible = Subrutinas.cvtFec_aaaa_mm_dd__date( rsFecMin );
+		}
+
+		Date fecResultado = null;
+		if ( minReservaPosible.after( hoy ) )	{ fecResultado = minReservaPosible; } 
+		else 									{ fecResultado = hoy; }
+
+		///////////////////////
+		// Refinar la fecha propuesta según calendario de vacaciones y días de la semana del Centro
+		///////////////////////
+		
+		boolean isFechaChequeada = false;
+		int contadorIntentos_TOTAL = 0;
+		
+		while ( ! isFechaChequeada && contadorIntentos_TOTAL < 50) {
+
+			// Controlar con "closed days"
+			com.fvr.cd_LocationClosedDays.bean.CdBean[] rgs = Subrutinas.getCdFromLo(dataBase, loc);
+			if ( rgs != null ) {
+				boolean isCerrado = false;
+				int i = 0;
+				do {
+					for ( isCerrado = false; i < rgs.length; i++ ) {
+						Date d = Subrutinas.cvtFec_aaaa_mm_dd__date( rgs[i].getCd_closed_day_aaaa_mm_dd() );
+						if ( d.equals( fecResultado ) ) {
+							fecResultado = Subrutinas.addDays(fecResultado, 1);
+							isCerrado = true;
+							isFechaChequeada = false;
+							break;
+						} else if ( d.after( fecResultado ) ) { 
+							// La serie de dias cerrados debe ser ascendente!!
+							break; 
+						}
+					}
+				} while (isCerrado);
+			}
+			
+			isFechaChequeada = true;
+
+			// Controlar si "día de la semana cerrado":
+			String diasSemana = Subrutinas.getDBValueFromKey(dataBase, loc, _K.PA_KEY_WEEKLY_CALENDAR);
+			if ( diasSemana == null ) { diasSemana = ""; }
+			
+			boolean isFechaAvanzada;
+			int contadorIntentos_diasDeLaSemana = 0;
+			do {
+				isFechaAvanzada = false;
+				Calendar cal = Calendar.getInstance(); cal.setTime(fecResultado);
+				// Mi variable "diasSemana" es algo así: "0..3456" Domingo es cero y sábado es 6. Si no se trabaja no existe el número de ese día.
+				// ( "Calendar.DAY_OF_WEEK" devuelve un número del 1 al 7, siendo 1 domingo y 7 sábado)
+				int fecResultado_diaDeLaSemana = cal.get(Calendar.DAY_OF_WEEK) - 1;
+				if ( ! diasSemana.contains( (""+fecResultado_diaDeLaSemana) ) ) {
+					fecResultado = Subrutinas.addDays(fecResultado, 1);
+					isFechaChequeada = false;
+					isFechaAvanzada = true;
+					contadorIntentos_diasDeLaSemana++;
+				}
+			} while (isFechaAvanzada && (contadorIntentos_diasDeLaSemana < 7) );
+			
+			contadorIntentos_TOTAL++;
+		}
+
+		return fecResultado;
+	}
+
 }
