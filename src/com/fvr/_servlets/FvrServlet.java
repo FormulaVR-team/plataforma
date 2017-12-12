@@ -9,13 +9,13 @@ import java.net.URLDecoder;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
@@ -36,6 +36,7 @@ import com.fvr._comun.Subrutinas;
 import com.fvr._comun._K;
 import com.fvr._comun.TPV_LaCaixa.TPV_API;
 import com.fvr._comun.TPV_LaCaixa.TPV_API.FormStruct;
+import com.fvr._comun.disponiblidad.Reservas;
 import com.fvr._comun.img2D.util.ImageUtils;
 import com.fvr._comun.mail.SendMail;
 import com.fvr._comun.paypal.classes.APICredentials;
@@ -1269,25 +1270,11 @@ public class FvrServlet extends HttpServlet {
 	private void cmd_getRsFecMin(HttpServletRequest request, HttpServletResponse response, String loc) throws IOException {
 		if ( loc == null || loc.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
 
-		Date hoy = Subrutinas.cvtFec_aaaa_mm_dd__date( Subrutinas.getFecha_aaaa_mm_dd() ); 
-		Date minReservar = hoy; 
-		String rsFecMin = null;
 		BDConexion dataBase = new Subrutinas().getBDConexion(request);
-
-//		LoBean reg_lo = Subrutinas.getLoFromId(dataBase, loc);
-//		if ( reg_lo != null && reg_lo.getLo_sincro() != null && reg_lo.getLo_sincro().trim().length() > 0 ) {
-			rsFecMin = Subrutinas.getDBValueFromKey(dataBase, loc, _K.PA_KEY_RS_MIN_FEC);
-//		}
 		
-		if ( rsFecMin != null && rsFecMin.trim().length() == 10 ) {
-			minReservar = Subrutinas.cvtFec_aaaa_mm_dd__date( rsFecMin );
-		}
+		Date fecResultado = Reservas.getPrimeraFechaPosible(dataBase, loc);
 
-		if ( minReservar.after( hoy ) ) {
-			responder(request, response, true, Subrutinas.getFecha_aaaa_mm_dd( minReservar ) );
-		} else {
-			responder(request, response, true, Subrutinas.getFecha_aaaa_mm_dd( hoy ) );
-		}
+		responder(request, response, true, Subrutinas.getFecha_aaaa_mm_dd( fecResultado ) );
 
 	}
 
