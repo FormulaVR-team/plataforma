@@ -41,41 +41,117 @@
 	
 	 	<main flex layout="row" layout-align="center center" class="">
 			<md-content class="logon-content" style="margin: 20px; padding: 20px;">
-	
+
 				<div layout="row" layout-align="space-between start">
-				
+
 					<div layout="column" layout-align="start start">
 
+						<!-- FORMULARIO LOGON inicio -->
+						<form layout="column" layout-align="center start" style="background-color: lightBlue;">
+	
+							<h5>TEST de NAVEGACION</h5>
+
+							<md-input-container>
+								<label>url del sistema</label>
+								<input type="text" size="80" ng-model="system_url" required />
+							</md-input-container>
+							<span>
+								<md-input-container>
+									<label>Usuario</label>
+									<input type="text" size="66" ng-model="formData.USR" required />
+								</md-input-container>
+								<md-button class="md-raised md-accent" aria-label="NUEVO" ng-click="registroDirecto()">CREARLO</md-button> 
+							</span>
+							<span>
+								<md-input-container>
+									<label>Password</label>
+									<input type="password" size="66" ng-model="formData.PWD" required/>
+								</md-input-container>
+								<md-button class="md-raised md-accent" aria-label="LOGON" ng-click="submit()">LOGON</md-button> 
+							</span>
+	
+							<!-- MENU inicio -->
+							<div id="menuBox" style="display:none; border: black solid 1px;">
+								<div class="alert alert-default fade in" style="display: block; padding: 0; margin: 0;">
+								
+									<div class="modal-header">
+										<h4 class="modal-title" style="margin-top: 4px;" layout="row" layout-align="space-between none">
+											<picture>
+												<img class="brand-img hidden-xs" style="width: 250px;margin-left: 20px;" src="./resBS/img/formulavr.png" alt="Formula VR" onclick="window.location ='./index.jsp';"/>
+												<img class="brand-img show-xs" style="width: 200px;margin-left: 20px;" src="./resBS/img/formulavr.png" alt="Formula VR" onclick="window.location ='./index.jsp';"/>
+											</picture>
+											<button type="button" onclick="$('#menuBox').slideUp();">&times;</button>
+										</h4>
+									</div>
+
+									<div layout="column" layout-align="center start">
+										<md-input-container>
+											<label>Clave operaciones (Token)</label>
+											<input type="text" size="80" ng-model="hash_code" value="{{ hash_code === '' ? 'sin sesi&oacute;n' : hash_code }}" />
+										</md-input-container>
+										<div layout="row" layout-align="start center">
+											<md-input-container>
+												<md-button class="md-raised md-warn" aria-label="RESERVAR" ng-click="reservar()">RESERVAR</md-button> 
+											</md-input-container>
+											<md-input-container>
+												<md-button class="md-raised md-warn" aria-label="Mis datos" ng-click="misDatos()">Mis datos</md-button> 
+											</md-input-container>
+											<md-input-container>
+												<md-button class="md-raised md-warn" aria-label="GAMING" ng-click="gaming()">GAMING</md-button> 
+											</md-input-container>
+										</div>
+									</div>
+
+				
+								</div>
+							</div>
+							<!-- MENU final -->
+		
+						</form>
+						<!-- FORMULARIO LOGON inicio -->
+
 						<!-- INSCRIPCIONES inicio -->
-						<form name="esForm" action="https://app.formulavr.net/FvrServlet" layout="column" layout-align="center start" onsubmit="alSometer()">
+						<form name="esForm" action="https://app.formulavr.net/FvrServlet" layout="column" layout-align="center start" onsubmit="alSometer()" style="background-color: lightgreen;">
+	
+							<h5>TEST de INSCRIPCION EN EVENTO</h5>
+
 							<input type="hidden" name="ACC" value="esAdd" />
 							<input type="hidden" name="DAT" id="DAT" />
-							<md-input-container>
-								<label>Nombre</label>
-								<input type="text" id="first_name" required />
-							</md-input-container>
-							<md-input-container>
-								<label>Apellidos</label>
-								<input type="text" id="last_name" required />
-							</md-input-container>
-							<md-input-container>
-								<label>eMail</label>
-								<input type="email" id="email" required />
-							</md-input-container>
-							<md-input-container>
-								<label>Telefono</label>
-								<input type="text" id="phone" />
-							</md-input-container>
-							<div>
-								<input type="submit" value="Inscribirse en..." />URL: https://app.formulavr.net/FvrServlet
+
+							<div layout="row" layout-align="end start" style="width:100%">
+								<md-input-container>
+									<label>Event_id</label>
+									<input type="text" id="event_id" value="1712COPAPORSCHE" required />
+								</md-input-container>
+								<md-input-container>
+									<label>Nombre</label>
+									<input type="text" id="first_name" required />
+								</md-input-container>
+								<md-input-container>
+									<label>Apellidos</label>
+									<input type="text" id="last_name" required />
+								</md-input-container>
 							</div>
-								</br></br></br>
+							<div layout="row" layout-align="end start" style="width:100%">
+								<md-input-container>
+									<label>eMail</label>
+									<input type="email" id="email" required />
+								</md-input-container>
+								<md-input-container>
+									<label>Telefono</label>
+									<input type="text" id="phone" />
+								</md-input-container>
+							</div>
+							
+							<div>
+								<input type="submit" value="Inscribirse en URL..." />&nbsp;&nbsp;https://app.formulavr.net/FvrServlet
+							</div>
 
 							<script>
 							function alSometer() {
 								var obj = { 
 											  "location_id":"CENTRAL"
-											, "event_id":"1712COPAPORSCHE"
+											, "event_id":document.getElementById("event_id").value
 											, "inscription_user_id":document.getElementById("email").value
 											, "first_name":document.getElementById("first_name").value
 											, "last_name":document.getElementById("last_name").value
@@ -87,68 +163,6 @@
 							
 						</form>
 						<!-- INSCRIPCIONES final -->
-
-						<!-- FORMULARIO LOGON inicio -->
-						<form layout="column" layout-align="center start" style="background-color: lightBlue;">
-		
-								<md-input-container>
-									<label>url del sistema</label>
-									<input type="text" size="80" ng-model="system_url" required />
-								</md-input-container>
-								<span>
-									<md-input-container>
-										<label>Usuario</label>
-										<input type="text" size="66" ng-model="formData.USR" required />
-									</md-input-container>
-									<md-button class="md-raised md-accent" aria-label="NUEVO" ng-click="registroDirecto()">CREARLO</md-button> 
-								</span>
-								<md-input-container>
-									<label>Password</label>
-									<input type="password" size="80" ng-model="formData.PWD" required/>
-								</md-input-container>
-								<md-input-container>
-									<md-button class="md-raised md-accent" aria-label="LOGON" ng-click="submit()">LOGON</md-button> 
-								</md-input-container>
-		
-								<!-- MENU inicio -->
-								<div id="menuBox" style="display:none; border: black solid 1px;">
-									<div class="alert alert-default fade in" style="display: block; padding: 0; margin: 0;">
-									
-										<div class="modal-header">
-											<h4 class="modal-title" style="margin-top: 4px;" layout="row" layout-align="space-between none">
-												<picture>
-													<img class="brand-img hidden-xs" style="width: 250px;margin-left: 20px;" src="./resBS/img/formulavr.png" alt="Formula VR" onclick="window.location ='./index.jsp';"/>
-													<img class="brand-img show-xs" style="width: 200px;margin-left: 20px;" src="./resBS/img/formulavr.png" alt="Formula VR" onclick="window.location ='./index.jsp';"/>
-												</picture>
-												<button type="button" onclick="$('#menuBox').slideUp();">&times;</button>
-											</h4>
-										</div>
-	
-										<div layout="column" layout-align="center start">
-											<md-input-container>
-												<label>Clave operaciones (Token)</label>
-												<input type="text" size="80" ng-model="hash_code" value="{{ hash_code === '' ? 'sin sesi&oacute;n' : hash_code }}" />
-											</md-input-container>
-											<div layout="row" layout-align="start center">
-												<md-input-container>
-													<md-button class="md-raised md-warn" aria-label="RESERVAR" ng-click="reservar()">RESERVAR</md-button> 
-												</md-input-container>
-												<md-input-container>
-													<md-button class="md-raised md-warn" aria-label="Mis datos" ng-click="misDatos()">Mis datos</md-button> 
-												</md-input-container>
-												<md-input-container>
-													<md-button class="md-raised md-warn" aria-label="GAMING" ng-click="gaming()">GAMING</md-button> 
-												</md-input-container>
-											</div>
-										</div>
-	
-					
-									</div>
-								</div>
-								<!-- MENU final -->
-		
-						</form>
-						<!-- FORMULARIO LOGON inicio -->
 
 					</div>
 
