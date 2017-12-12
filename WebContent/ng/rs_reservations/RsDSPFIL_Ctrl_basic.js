@@ -522,7 +522,6 @@ angular
 
 						// Inicializar:
 //						$scope.showPayments = false;
-						var date = new Date();
 						$scope.lst_cd = null;
 						$scope.lst_cd_weekly = null;
 
@@ -574,14 +573,11 @@ angular
 
 						// Inicializar:
 						$scope.paymentCheck = { checked: 'TPV' };
-						var date = new Date();
-						// Only workable:
-						var cuentaLimite = 0;
-						while ( ! app_services.md_date_filter_onlyWorkable( date, $scope.lst_cd, $scope.lst_cd_weekly ) && cuentaLimite <= 30 ) {
-							date.setDate( date.getDate() + 1 );
-							cuentaLimite++;
-						}
-						if ( cuentaLimite > 10 ) { date = new Date(); }
+						
+						////////
+						// CALENDARIO selector de fecha de la reserva:
+						var date = new Date();	// Hoy...
+						////////
 						
 						var aaaa = date.getFullYear();
 						var mm = ("00"+(1+date.getMonth())).substr(("00"+(1+date.getMonth())).length-2);
