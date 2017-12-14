@@ -1002,7 +1002,7 @@ angular
 
 					//////////////
 					$scope.go_misEventos = function() {
-						$state.go( "EsADDRCD" );	
+						$state.go( "EsADDRCD",{"panel_add":"panel_add"} );	
 					}
 
 /////////////

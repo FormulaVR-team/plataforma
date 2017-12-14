@@ -590,4 +590,10 @@ angular
 //					}
 					//////////////
 
+					// Esto se pone aqui para evitar problemas de "forward references":
+					if ( $stateParams.panel_add === 'panel_add' ) {
+						$scope.initReg();
+						$('#esDSPFIL_ADDRCD_modal').modal("show");
+					}
+
 				} ]);

@@ -12,9 +12,7 @@
 
 	<h1 class="page-title"><span style="color:blue;">{{actionForm.es_filtro.es_inscription_user_id}}</span></br>Mis inscripciones</h1>
 	
-	<script>
-	$('#esDSPFIL_ADDRCD_modal').modal("show");
-	</script>
+	<%-- <script>$('#esDSPFIL_ADDRCD_modal').modal("show");</script> --%>
 	
 	<div layout="row" layout-align="space-between center">
 		<div>

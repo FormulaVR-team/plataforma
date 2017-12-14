@@ -54,18 +54,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake4",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake4",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake4"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/us_users/views/rsChangePassword.jsp?version=fake1",
+				templateUrl: "./ng/us_users/views/rsChangePassword.jsp?version=fake4",
 				controller: "userRole_Ctrl"
 			}
 		}
@@ -85,18 +85,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake4",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake4",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake4"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/us_users/views/rsRegistration.jsp?version=fake1",
+				templateUrl: "./ng/us_users/views/rsRegistration.jsp?version=fake4",
 				controller: "userRole_Ctrl"
 			}
 		}
@@ -115,18 +115,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake4",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake4",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake4"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/us_users/views/rsUsEDTRCD.jsp?version=fake1",
+				templateUrl: "./ng/us_users/views/rsUsEDTRCD.jsp?version=fake4",
 				controller: "rsUsEDTRCD_Ctrl"
 			}
 		}
@@ -142,29 +142,32 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake4",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake4",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake4"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/rs_reservations/views/RsDSPFIL_view_basic.jsp?version=fake1",
+				templateUrl: "./ng/rs_reservations/views/RsDSPFIL_view_basic.jsp?version=fake4",
 				controller: "RsDSPFIL_Ctrl_basic"
 			}
 		}
 	})
 	.state('EsADDRCD', {
-		url: "/EsADDRCD",
+		url: "/EsADDRCD/:panel_add",
 		params: {
 			logon_USR: {
 				value: null
 			},
 			logon_HSH: {
+				value: null
+			},
+			panel_add: {
 				value: null
 			}
 		},
@@ -173,18 +176,18 @@ $mdThemingProvider
 		},
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake4",
 				controller: "nav_bar_controller"
 			},
 			"rgnHeader": {
-				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/header_view.html?version=fake4",
 				controller: "header_controller"
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake4"
 			},
 			"rgnMain": {
-				templateUrl: "./ng/es_eventSusbscriptions/views/EsADDRCD_view_CONTAINER.jsp?version=fake1",
+				templateUrl: "./ng/es_eventSusbscriptions/views/EsADDRCD_view_CONTAINER.jsp?version=fake4",
 				controller: "EsDSPFIL_Ctrl_basic"
 			}
 		}
@@ -193,11 +196,11 @@ $mdThemingProvider
 		url: "/",
 		views: {
 			"rgnNavBar": {
-				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake1",
+				templateUrl: "./ng/_commonTemplates/nav_bar_view.html?version=fake4",
 				controller: function ($injector, $location) { window.location = "Off"; }
 			},
 			"rgnFooter": {
-				templateUrl: "./ng/_commonTemplates/footer.html?version=fake1"
+				templateUrl: "./ng/_commonTemplates/footer.html?version=fake4"
 			}
 		}
 	})

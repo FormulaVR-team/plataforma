@@ -313,23 +313,26 @@ public class EsADDRCD_A extends Action {
     private String crtRcd(HttpServletRequest request, ActionForm  form) {
         String resultado = "OK";
         ///////////////////////////////////////////
-        EsRCD_AF pantalla = (EsRCD_AF)form;
-        EsBean registro = null;
-        if (pantalla != null ) {
-            registro = new EsBean();
-            
-            pantalla.copyTo( registro );
-            
-            EsAccesoBaseDatos db = new EsAccesoBaseDatos();
-            try {
-                db.es_crtObj( new Subrutinas().getBDConexion(request), registro );
-            } catch (StExcepcion ex) {
-                resultado = "NOVALE";
-                ActionMessages errores = new ActionMessages();
-                errores.add("error", new ActionMessage( "errors.detail", ex.getMessage() ));
-                saveErrors(request,errores);
-            }
-        }
+        
+        // Se registrará al retorno del pago!!!!! (Si no retorna, no existirá y por tanto no ocupará plaza en el evento)
+        
+//        EsRCD_AF pantalla = (EsRCD_AF)form;
+//        EsBean registro = null;
+//        if (pantalla != null ) {
+//            registro = new EsBean();
+//            
+//            pantalla.copyTo( registro );
+//            
+//            EsAccesoBaseDatos db = new EsAccesoBaseDatos();
+//            try {
+//                db.es_crtObj( new Subrutinas().getBDConexion(request), registro );
+//            } catch (StExcepcion ex) {
+//                resultado = "NOVALE";
+//                ActionMessages errores = new ActionMessages();
+//                errores.add("error", new ActionMessage( "errors.detail", ex.getMessage() ));
+//                saveErrors(request,errores);
+//            }
+//        }
         ///////////////////////////////////////////
         return resultado;
     }
@@ -387,6 +390,7 @@ public class EsADDRCD_A extends Action {
 					json.put("reservation_id", order);
 					json.put("event_id", pantalla.getEs_event_id());
 					json.put("inscription_user_id", pantalla.getEs_inscription_user_id());
+					json.put("tpv_order", pantalla.getEs_tpv_order());
 					json.put("url_redirect", link_redireccion);
 					json.put("ds_Signature", out_formData.ds_Signature);
 					json.put("ds_MerchantParameters", out_formData.ds_MerchantParameters);

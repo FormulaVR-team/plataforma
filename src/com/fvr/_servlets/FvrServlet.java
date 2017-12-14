@@ -9,7 +9,6 @@ import java.net.URLDecoder;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -616,55 +615,63 @@ public class FvrServlet extends HttpServlet {
 	private void cmd_tpv_callback_Evento(BDConexion dataBase, HttpServletRequest request, HttpServletResponse response, boolean isOk, TkBean reg_tk, JSONObject json) throws IOException {
 		String event_id = null;
 		String inscription_user_id = null;
+		String tpv_order = null;
 		try { event_id = json.getString("event_id"); } catch (Exception e) {;}
 		try { inscription_user_id = json.getString("inscription_user_id"); } catch (Exception e) {;}
+		try { tpv_order = json.getString("tpv_order"); } catch (Exception e) {;}
+
 		if ( event_id != null && event_id.trim().length() > 0
 			  &&
 			 inscription_user_id != null && inscription_user_id.trim().length() > 0 
+			  &&
+			  tpv_order != null && tpv_order.trim().length() > 0 
 				) {
 			EsBean reg_es = new EsBean();
 			reg_es.setEs_event_id(event_id);
 			reg_es.setEs_inscription_user_id(inscription_user_id);
-			reg_es = Subrutinas.getEsFromId(dataBase, reg_es);
-			if ( reg_es != null && reg_es.getEs_sincro() != null && reg_es.getEs_sincro().trim().length() > 0 ) {
-				try {
-					if ( isOk ) {
-							reg_es.setEs_pay_status( _K.PAY_STS_TPV_Completado );
-							// Actualizar estado del pago en su registro....
-							new com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos().es_chgObj(dataBase, reg_es);
-	
-							List<String> errores = new ArrayList<String>();
-							String url_base = Subrutinas.get_urlBase(request);
-	//						SendMail.send_comprobanteReserva(dataBase, url_base, reg_es.getEs_inscription_user_id(), reg_es.getEs_event_id(), errores, true);
-							Subrutinas.addLog(dataBase, _K.SYS, _K.EV_TPV_PAGO_EVENTO_OK, reg_es.getKey(), "api_doExpressCheckout()" );
-	
-					} else {
-							reg_es.setEs_pay_status( _K.PAY_STS_TPV_Fallido );
-							// Eliminar su registro....
-							new com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos().es_dltObj(dataBase, reg_es);
-					}
-				} catch (StExcepcion e) {
-					responder(request, response, false, e.getMessage());
-					return;
-				}
+			reg_es.setEs_tpv_order( tpv_order);
+			
+			Subrutinas.derivarCamposRegistro(dataBase, reg_es, Subrutinas.getEvFromId(dataBase, event_id) );
 
-				///////////////////
-				// Reentrada en el sistema:
-				String link = Subrutinas.get_urlBase(request) + "/";
-				String user_id = reg_tk.getTk_author();
-				if ( user_id != null && user_id.trim().length() > 0 ) {
-					UsBean reg_us = Subrutinas.getUsFromId(dataBase, user_id);
-				   	request.getSession(true).setAttribute( "logon_USR", reg_us.getUs_user_id() );
-					request.getSession(true).setAttribute( "logon_HSH", reg_us.getUs_hash_code() );
-					request.getSession(true).setAttribute( "roleKey", reg_us.getUs_role_id() );
-					link +=  "Index_A.do#/RsDSPFIL/";
-				}
-				response.sendRedirect( link );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-				//					request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
-				///////////////////
+			// Si la inscripción:
+			//		no existe ==> se crea, si es "OK" el pago.
+			// 		ya existe ==> no se hace nada.
+			
+			EsBean reg_es_AUX = Subrutinas.getEsFromId(dataBase, reg_es);
+			if ( reg_es_AUX == null || reg_es_AUX.getEs_sincro() == null || reg_es_AUX.getEs_sincro().trim().length() < 1 ) {
+				// NO EXISTE LA INSCRIPCIÓN:
+				if ( isOk ) {
+					// SE GENERA LA INSCRIPCIñON COMO "PAGADA":
+					try {
+						reg_es.setEs_pay_status( _K.PAY_STS_TPV_Completado );
+						new com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos().es_crtObj(dataBase, reg_es);
 
+//						List<String> errores = new ArrayList<String>();
+//						String url_base = Subrutinas.get_urlBase(request);
+//						SendMail.send_comprobanteReserva(dataBase, url_base, reg_es.getEs_inscription_user_id(), reg_es.getEs_event_id(), errores, true);
+						Subrutinas.addLog(dataBase, _K.SYS, _K.EV_TPV_PAGO_EVENTO_OK, reg_es.getKey(), "api_doExpressCheckout()" );
+					
+					} catch (StExcepcion e) {;}
+				}
 			}
+
+			///////////////////
+			// Reentrada en el sistema:
+			String link = Subrutinas.get_urlBase(request) + "/";
+			String user_id = reg_tk.getTk_author();
+			if ( user_id != null && user_id.trim().length() > 0 ) {
+				UsBean reg_us = Subrutinas.getUsFromId(dataBase, user_id);
+			   	request.getSession(true).setAttribute( "logon_USR", reg_us.getUs_user_id() );
+				request.getSession(true).setAttribute( "logon_HSH", reg_us.getUs_hash_code() );
+				request.getSession(true).setAttribute( "roleKey", reg_us.getUs_role_id() );
+				link +=  "Index_A.do#/EsADDRCD/";
+			}
+			response.sendRedirect( link );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//			request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
+			///////////////////
+
 		}
+
 	}
 
 	private void cmd_lo_lst(HttpServletRequest request, HttpServletResponse response) throws IOException {
