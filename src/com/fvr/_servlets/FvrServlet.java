@@ -1424,7 +1424,7 @@ public class FvrServlet extends HttpServlet {
 						}
 					} 
 
-					try {
+//					try {
 						
 				        /////////////////////////////////////////////////////////////////////
 						// CREAR USUARIO SI NO EXISTE Y LANZARLE CORREO DE CAMBIO DE PASSWORD:
@@ -1465,7 +1465,7 @@ public class FvrServlet extends HttpServlet {
 				        // Deducir algunos campos del formato:
 						reg_es = Subrutinas.derivarCamposRegistro(dataBase, reg_es, evBean);
 						// Crear registro de inscripción pendiente de cobro:
-						new com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos().es_crtObj(dataBase, reg_es);
+//	ANULADO 2017-12-15	new com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos().es_crtObj(dataBase, reg_es);
 						
 						// Gestión del cobro por TVP virtual:
 						
@@ -1504,6 +1504,7 @@ public class FvrServlet extends HttpServlet {
 							jsonToken.put("reservation_id", reg_es.getEs_tpv_order());
 							jsonToken.put("event_id", reg_es.getEs_event_id());
 							jsonToken.put("inscription_user_id", reg_es.getEs_inscription_user_id());
+							jsonToken.put("tpv_order", reg_es.getEs_tpv_order());
 							jsonToken.put("url_redirect", link_redireccion);
 							jsonToken.put("ds_Signature", out_formData.ds_Signature);
 							jsonToken.put("ds_MerchantParameters", out_formData.ds_MerchantParameters);
@@ -1512,7 +1513,7 @@ public class FvrServlet extends HttpServlet {
 							reg_tk.setTk_json( jsonToken.toString() );
 
 							new com.fvr.tk_tokens.db.TkAccesoBaseDatos().tk_crtObj(dataBase, reg_tk);
-						} catch (StExcepcion e) {;}
+//						} catch (StExcepcion e) {;}
 						///////////////////////
 
 						
