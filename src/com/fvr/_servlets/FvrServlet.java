@@ -694,7 +694,11 @@ public class FvrServlet extends HttpServlet {
 					json = new JSONObject();
 					json.put("value", item.getLo_location_id() );
 					json.put("displayName", item.getLo_name() );
-					jsonArray.add( json );
+					
+					if ( ! item.getLo_location_id().toUpperCase().startsWith("OLEOLE") ) {
+						jsonArray.add( json );
+					}
+					
 				}
 			}
 		} catch (StExcepcion e) {
