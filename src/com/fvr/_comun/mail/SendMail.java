@@ -22,7 +22,10 @@ import com.fvr.FuentesDeDatos.BDConexion;
 import com.fvr._comun.StExcepcion;
 import com.fvr._comun.Subrutinas;
 import com.fvr._comun._K;
+import com.fvr.es_eventSusbscriptions.bean.EsBean;
+import com.fvr.ev_events.bean.EvBean;
 import com.fvr.rs_reservations.bean.RsBean;
+import com.fvr.us_users.bean.UsBean;
 
 import net.sf.json.JSONObject;
 
@@ -563,6 +566,126 @@ public class SendMail implements Serializable {
 				} catch (StExcepcion e) {
 					errores.add("ERROR " + e.getMessage());
 				}
+
+			}
+		} catch (MessagingException e) {
+			errores.add("ERROR " + e.getMessage());
+		}
+		/////////////////////////////////////
+		
+		return docHtml;
+
+	}
+
+	public static String send_OleOleEntrada_20180131( BDConexion dataBase, final String url_base, final EsBean reg_es, final List<String> errores, boolean isEnviar  ) {
+
+		String event_id = reg_es.getEs_event_id();
+		String user_id = reg_es.getEs_inscription_user_id();
+		String reservation_id = reg_es.getEs_tpv_order();
+		
+		UsBean reg_us = Subrutinas.getUsFromId(dataBase, user_id);
+		EvBean reg_ev = Subrutinas.getEvFromId(dataBase, event_id);
+
+		// - - - - - - - - - - 
+		///////////////////////
+		String idioma_ISO = "es";
+		String eMailDestino = user_id;
+		String domain = Subrutinas.getDBValueFromKey(dataBase, _K.PA_KEY_DOMAIN);
+		String molde_pa = _K.PA_KEY_MAIL_OLEOLE_CONFIRM;
+		String docHtml = Subrutinas.getDBValueFromKey(dataBase, molde_pa);
+		if ( docHtml == null ) { errores.add("No hallado en PA el molde del mail o está vacío " + molde_pa); return docHtml; }
+		String smtp_mail_from = Subrutinas.getDBValueFromKey(dataBase, _K.PA_KEY_SMTP_MAIL_OLEOLE_CONFIRM_FROM) + "@" + domain;
+		String smtp_mail_subject = Subrutinas.getDBValueFromKey(dataBase, _K.PA_KEY_SMTP_MAIL_OLEOLE_CONFIRM_SUBJECT) 
+				+ " " + reservation_id
+				;
+
+		// Variables de macrosustitución en este molde de mail:
+//		String callBack;
+		String urlImagenes;
+		String textoBoton1 = reg_ev.getEv_name();
+		String textoBoton2 = reg_us.getUs_first_name() + " " + reg_us.getUs_last_name();
+		String textoBoton3 = reservation_id;
+		///////////////////////
+		// - - - - - - - - - - 
+		
+
+//		///////////////////////
+//		// Conseguir una clave única para el callback:
+//		String token_id = Subrutinas.getHashFromRandomCode();
+//		while ( ! "".equalsIgnoreCase( Subrutinas.getTkFromId(dataBase, token_id).getTk_sincro() ) ) {
+//			// Si tiene "Sincro" es que ya existía...
+//			token_id = Subrutinas.getHashFromRandomCode();
+//		}
+//		com.fvr.tk_tokens.db.TkAccesoBaseDatos dao_tk = new com.fvr.tk_tokens.db.TkAccesoBaseDatos();
+//		com.fvr.tk_tokens.bean.TkBean reg_tk = new com.fvr.tk_tokens.bean.TkBean();
+//		reg_tk.setTk_token_id( token_id );
+//		reg_tk.setTk_author( user_id );
+//		///////////////////////
+
+
+		///////////////////////
+		// Macrosustitución de valores:
+		urlImagenes	= url_base + "/emails/"+idioma_ISO+"/img/";
+//		callBack	= url_base 					
+//					+ "/ConfirmServlet?key=" 
+//					+ token_id 
+//					+ "&lng="+idioma_ISO
+//					;	// Llamada de continuación en el servidor:
+
+		docHtml = Subrutinas.macroSustituye( docHtml, preHTML + "IMG_SRC" + posHTML, urlImagenes + "OleOle20180131.png");
+		docHtml = Subrutinas.macroSustituye( docHtml, preHTML + "TEXTO_BOTON1"  + posHTML, textoBoton1);
+		docHtml = Subrutinas.macroSustituye( docHtml, preHTML + "TEXTO_BOTON2"  + posHTML, textoBoton2);
+		docHtml = Subrutinas.macroSustituye( docHtml, preHTML + "TEXTO_BOTON3"  + posHTML, textoBoton3);
+//		docHtml = Subrutinas.macroSustituye( docHtml, preHTML + "CALLBACK" + posHTML, callBack);
+		///////////////////////
+
+
+		if ( !isEnviar ) {
+			return docHtml;
+		}
+
+
+		/////////////////////////////////////
+		// EMISIÓN DEL CORREO:
+		/////////////////////////////////////
+		try {
+			String replyTo_o_null = null;
+			String smtp_host_name = Subrutinas.getDBValueFromKey(dataBase, _K.PA_KEY_SMTP_HOST_NAME); 
+			String smtp_auth_user = Subrutinas.getDBValueFromKey(dataBase, _K.PA_KEY_SMTP_AUTH_USER);
+			String smtp_auth_pwd  = Subrutinas.getDBValueFromKey(dataBase, _K.PA_KEY_SMTP_AUTH_PWD);
+			String smtp_mail_port = Subrutinas.getDBValueFromKey(dataBase, _K.PA_KEY_SMTP_MAIL_PORT);
+			if (	   
+					   smtp_host_name != null && smtp_host_name.trim().length() > 0
+					&& smtp_auth_user != null && smtp_auth_user.trim().length() > 0
+					&& smtp_auth_pwd  != null && smtp_auth_pwd.trim().length() > 0
+					&& smtp_mail_port != null && smtp_mail_port.trim().length() > 0
+					&& smtp_mail_from != null && smtp_mail_from.trim().length() > 0
+					&& smtp_mail_subject != null && smtp_mail_subject.trim().length() > 0
+					) {
+				
+				sendMail(
+						smtp_host_name, 
+						smtp_auth_user, 
+						smtp_auth_pwd, 
+						smtp_mail_port,
+						smtp_mail_from,
+						eMailDestino,
+						smtp_mail_subject,
+						docHtml,
+						replyTo_o_null
+						);
+
+//				try {
+//					JSONObject json = new JSONObject();
+//					json.put("acc", molde_pa);
+//					json.put("eMailDestino", eMailDestino);
+//					json.put("docHtml", docHtml);
+//					
+//					reg_tk.setTk_json( json.toString() );
+//					dao_tk.tk_crtObj(dataBase, reg_tk);
+//				} catch (StExcepcion e) {
+//					errores.add("ERROR " + e.getMessage());
+//				}
 
 			}
 		} catch (MessagingException e) {

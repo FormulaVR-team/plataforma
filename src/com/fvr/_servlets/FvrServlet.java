@@ -626,12 +626,22 @@ public class FvrServlet extends HttpServlet {
 			  &&
 			  tpv_order != null && tpv_order.trim().length() > 0 
 				) {
+
+
+			if ( event_id.toUpperCase().startsWith( _K.OLEOLE) ) {
+				cmd_tpv_callback_Evento_OLEOLE(dataBase, request, response, isOk, reg_tk, json);
+				return;
+			}
+
+
 			EsBean reg_es = new EsBean();
 			reg_es.setEs_event_id(event_id);
 			reg_es.setEs_inscription_user_id(inscription_user_id);
 			reg_es.setEs_tpv_order( tpv_order);
 			
 			Subrutinas.derivarCamposRegistro(dataBase, reg_es, Subrutinas.getEvFromId(dataBase, event_id) );
+			// EVITAR que su regeneración provoque la pérdida del original
+			reg_es.setEs_tpv_order( tpv_order);
 
 			// Si la inscripción:
 			//		no existe ==> se crea, si es "OK" el pago.
@@ -665,6 +675,72 @@ public class FvrServlet extends HttpServlet {
 				request.getSession(true).setAttribute( "logon_HSH", reg_us.getUs_hash_code() );
 				request.getSession(true).setAttribute( "roleKey", reg_us.getUs_role_id() );
 				link +=  "Index_A.do#/EsADDRCD/";
+			}
+			response.sendRedirect( link );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//			request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
+			///////////////////
+
+		}
+
+	}
+	private void cmd_tpv_callback_Evento_OLEOLE(BDConexion dataBase, HttpServletRequest request, HttpServletResponse response, boolean isOk, TkBean reg_tk, JSONObject json) throws IOException {
+		String event_id = null;
+		String inscription_user_id = null;
+		String tpv_order = null;
+		try { event_id = json.getString("event_id"); } catch (Exception e) {;}
+		try { inscription_user_id = json.getString("inscription_user_id"); } catch (Exception e) {;}
+		try { tpv_order = json.getString("tpv_order"); } catch (Exception e) {;}
+
+		if ( event_id != null && event_id.trim().length() > 0
+			  &&
+			 inscription_user_id != null && inscription_user_id.trim().length() > 0 
+			  &&
+			  tpv_order != null && tpv_order.trim().length() > 0 
+				) {
+			EsBean reg_es = new EsBean();
+			reg_es.setEs_event_id(event_id);
+			reg_es.setEs_inscription_user_id(inscription_user_id);
+			reg_es.setEs_tpv_order( tpv_order);
+			
+			Subrutinas.derivarCamposRegistro(dataBase, reg_es, Subrutinas.getEvFromId(dataBase, event_id) );
+			// EVITAR que su regeneración provoque la pérdida del original
+			reg_es.setEs_tpv_order( tpv_order);
+
+			// Si la inscripción:
+			//		no existe ==> se crea, si es "OK" el pago.
+			// 		ya existe ==> no se hace nada.
+			
+			EsBean reg_es_AUX = Subrutinas.getEsFromId(dataBase, reg_es);
+			if ( reg_es_AUX == null || reg_es_AUX.getEs_sincro() == null || reg_es_AUX.getEs_sincro().trim().length() < 1 ) {
+				// NO EXISTE LA INSCRIPCIÓN:
+				if ( isOk ) {
+					// SE GENERA LA INSCRIPCIñON COMO "PAGADA":
+					try {
+						reg_es.setEs_pay_status( _K.PAY_STS_TPV_Completado );
+						new com.fvr.es_eventSusbscriptions.db.EsAccesoBaseDatos().es_crtObj(dataBase, reg_es);
+
+						if ( event_id.toUpperCase().startsWith( _K.OLEOLE ) ) {
+							List<String> errores = new ArrayList<String>();
+							String url_base = Subrutinas.get_urlBase(request);
+							SendMail.send_OleOleEntrada_20180131(dataBase, url_base, reg_es, errores, true);
+						}
+
+						Subrutinas.addLog(dataBase, _K.SYS, _K.EV_TPV_PAGO_EVENTO_OK, reg_es.getKey(), "api_doExpressCheckout()" );
+					
+					} catch (StExcepcion e) {;}
+				}
+			}
+
+			///////////////////
+			// Reentrada en el sistema:
+			String link = Subrutinas.get_urlBase(request) + "/";
+			String user_id = reg_tk.getTk_author();
+			if ( user_id != null && user_id.trim().length() > 0 ) {
+				UsBean reg_us = Subrutinas.getUsFromId(dataBase, user_id);
+			   	request.getSession(true).setAttribute( "logon_USR", reg_us.getUs_user_id() );
+				request.getSession(true).setAttribute( "logon_HSH", reg_us.getUs_hash_code() );
+				request.getSession(true).setAttribute( "roleKey", reg_us.getUs_role_id() );
+				link +=  "OleOle.htm?p1=" + tpv_order;
 			}
 			response.sendRedirect( link );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //			request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);
@@ -1416,8 +1492,12 @@ public class FvrServlet extends HttpServlet {
 					        request.getSession(true).setAttribute( "logon_HSH", reg_us.getUs_hash_code() );
 							request.getSession(true).setAttribute( "roleKey", reg_us.getUs_role_id() );
 
-							// link +=  "/Index_A.do#/RsDSPFIL/panel_add";
-							link +=  "/Index_A.do#/EsADDRCD";
+							if ( ! aux_es.getEs_event_id().toUpperCase().startsWith( _K.OLEOLE )) {
+								// link +=  "/Index_A.do#/RsDSPFIL/panel_add";
+								link +=  "/Index_A.do#/EsADDRCD/";
+							} else {
+								link +=  "/OleOle.htm?p1=" + aux_es.getEs_tpv_order();
+							}
 
 							response.sendRedirect( link );	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //							request.getRequestDispatcher( "/CpDSPFIL_A.do" ).forward(request, response);

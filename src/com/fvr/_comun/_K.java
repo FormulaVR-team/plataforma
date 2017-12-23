@@ -163,6 +163,11 @@ public class _K {
 	public static final String PA_KEY_MAIL_RESERVE_CONFIRM = "MAIL_RESERVE_CONFIRM";						// También es la ACCIÓN en json de TK.
 	public static final String PA_KEY_SMTP_MAIL_RESERVE_CONFIRM_FROM = "SMTP_MAIL_RESERVE_CONFIRM_FROM";		// no-reply@formulavr.net
 	public static final String PA_KEY_SMTP_MAIL_RESERVE_CONFIRM_SUBJECT = "SMTP_MAIL_RESERVE_CONFIRM_SUBJECT";	// FORMULA-VR: Confirmar reserva
+
+	public static final String OLEOLE = "OLEOLE20180131";
+	public static final String PA_KEY_MAIL_OLEOLE_CONFIRM = "MAIL_OLEOLE_CONFIRM";							// También es la ACCIÓN en json de TK.
+	public static final String PA_KEY_SMTP_MAIL_OLEOLE_CONFIRM_FROM = "SMTP_MAIL_OLEOLE_CONFIRM_FROM";			// no-reply@formulavr.net
+	public static final String PA_KEY_SMTP_MAIL_OLEOLE_CONFIRM_SUBJECT = "SMTP_MAIL_OLEOLE_CONFIRM_SUBJECT";	// FORMULA-VR: Confirmar reserva
 	////////////////////////
 
 	////////////////////////

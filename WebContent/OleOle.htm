@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html ng-app="laAplicacion" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+		<title>OleOle</title>
+
+	    <!-- ==================================== -->
+		<!-- bootstrap -->
+	 	<script src="./ng/_lib/jquery-1.11.3/jquery.min.js"></script>
+		<script src="./ng/_lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+
+		<link id="" href="./ng/_lib//bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+	    <link href="./resBS/css/styles.css" rel="stylesheet" />
+		
+	    <!-- ==================================== -->
+	    <!-- Angular -->    
+	    <script src="./ng/_lib/ng/angular.min.js"></script>
+	    <script src="./ng/_lib/ng/angular-ui-router.min.js"></script>
+		<script src="./ng/_lib/ng/angular-animate.min.js"></script>
+		<script src="./ng/_lib/ng/angular-aria.min.js"></script>
+		<script src="./ng/_lib/ng/angular-messages.min.js"></script>
+		<script src="./ng/_lib/ng/angular-md5.js"></script>
+		
+		<script src="./ng/_lib/ng/i18n/angular-locale_es-es.min.js"></script>
+		
+		<!-- Angular Material Library -->
+		<script src="./ng/_lib/ng/angular-material.min.js"></script>
+		<!-- Angular Material style sheet -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./ng/_lib/ng/css/angular-material.min.css" />
+		<link rel="stylesheet" href="./ng/_lib/ng/css/angular-material.CUSTOM-FVR.css" />
+		<link rel="stylesheet" href="./ng/_lib/ng/css/icon.css?family=Material+Icons" />
+	
+		<script type="text/javascript" src="./script/rutinas.js"></script>
+		<script type="text/javascript" src="./script/md5Obj.js"></script>
+	    <!-- ==================================== -->
+	
+	</head>
+	<body ng-controller="controlador">
+	
+	 	<main flex layout="row" layout-align="center center" class="">
+	 	
+	 	<div layout="column" layout-align="center center">
+	 	
+	 		<div id="msjFrame" style="display: none;">
+	 			<h2>
+		 			<span>
+		 			Ticket id: 
+		 			</span>
+		 			<span style="text-decoration:none;color:#5555ff; font-family:Times New Roman, Times, serif;">
+		 			<input type="text" id="msj" disabled="disabled" style="text-align: center;"/>
+		 			</span>
+	 			</h2>
+	 			<span style="text-decoration:none;color:#CE1417; font-family:Times New Roman, Times, serif;">
+	 			Se le ha enviado la entrada a su email, por favor verifique su correo.
+	 			</span>
+	 		</div>
+
+			<div>
+				<!-- VENTA ANTICIPADA inicio -->
+				<form name="esForm" action="https://app.formulavr.net/FvrServlet" layout="column" layout-align="center start" onsubmit="alSometer()">
+				<!-- <form name="esForm" action="http://eeeb7958.ngrok.io/FormulaVR/FvrServlet" layout="column" layout-align="center start" onsubmit="alSometer()"> -->
+	
+					<h5>VENTA ANTICIPADA DE ENTRADAS</h5>
+	
+					<input type="hidden" name="ACC" value="esAdd" />
+					<input type="hidden" name="DAT" id="DAT" />
+	
+					<div layout="row" layout-align="end start" style="width:100%">
+						<md-input-container>
+							<label>Nombre</label>
+							<input type="text" id="first_name" required />
+						</md-input-container>
+						<md-input-container>
+							<label>Apellidos</label>
+							<input type="text" id="last_name" required />
+						</md-input-container>
+					</div>
+					<div layout="row" layout-align="end start" style="width:100%">
+						<md-input-container>
+							<label>eMail</label>
+							<input type="email" id="email" required />
+						</md-input-container>
+						<md-input-container>
+							<label>Telefono</label>
+							<input type="text" id="phone" />
+						</md-input-container>
+					</div>
+	
+					<div>
+						<input type="submit" value="Comprar entrada" />
+					</div>
+	
+					<script>
+					function alSometer() {
+						var obj = { 
+									  "location_id":"OLEOLE"
+									, "event_id":"OLEOLE20180131"
+									, "inscription_user_id":document.getElementById("email").value
+									, "first_name":document.getElementById("first_name").value
+									, "last_name":document.getElementById("last_name").value
+									, "phone":document.getElementById("phone").value
+								}
+						document.getElementById("DAT").value = JSON.stringify(obj);
+					}
+					</script>
+					
+				</form>
+				<!-- VENTA ANTICIPADA final -->
+			</div>
+
+	 	</div>
+
+	 	</main>
+
+		<script>
+			angular
+				.module('laAplicacion',['ngMaterial', 'ngMessages'])
+				.controller( 'controlador', function($scope,$http) {;} );
+			
+            function recParms() {
+                var v = (window.location.search.length>0)?window.location.search.substring(1):"";
+                parms = v.split('&');
+                for (i=0;i<parms.length;i++) {
+                    parm = parms[i].split('=');
+                    if ( parm.length == 2 ) {
+                        if ( parm[0].toLowerCase() == 'p1' ) {
+    						document.getElementById("msj").value = parm[1];
+    						document.getElementById("msjFrame").style.display = "block";
+                        }
+                    }
+                }
+            }
+            recParms();
+		</script>
+	
+	</body>
+</html>
