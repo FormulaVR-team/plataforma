@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html ng-app="laAplicacion" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -35,15 +35,55 @@
 		<script type="text/javascript" src="./script/rutinas.js"></script>
 		<script type="text/javascript" src="./script/md5Obj.js"></script>
 	    <!-- ==================================== -->
-	
+
+		<style>
+		.parallax {
+		    /* The image used */
+		    background-image: url("emails/es/img/OleOle20180131_web_2.jpg");
+		
+		    /* Set a specific height */
+		    min-height: 400px; 
+		
+		    /* Create the parallax scrolling effect */
+		    background-attachment: fixed;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		}
+
+		.caption {
+		  position: absolute;
+		  left: 0;
+		  top: 5%;
+		  width: 100%;
+		  text-align: center;
+		  color: #000;
+		}
+		
+		.caption span.border {
+		  /* background-color: #111; */
+		  color: #fff;
+		  padding: 18px;
+		  font-size: 25px;
+		  letter-spacing: 10px;
+		}
+		
+		/* Turn off parallax scrolling for tablets and phones */
+		@media only screen and (max-device-width: 1024px) {
+		    .parallax {
+		        background-attachment: scroll;
+		    }
+		}
+		</style>	
+
 	</head>
 	<body ng-controller="controlador">
 	
-	 	<main flex layout="row" layout-align="center center" class="">
-	 	
-	 	<div layout="column" layout-align="center center">
-	 	
-	 		<div id="msjFrame" style="display: none;">
+	<section>
+
+		<div class="row">
+
+	 		<div id="msjFrame" class="col-xs-12 col-sm-12 col-md-12" style="display: none;">
 	 			<h2>
 		 			<span>
 		 			Ticket id: 
@@ -57,60 +97,99 @@
 	 			</span>
 	 		</div>
 
-			<div>
-				<!-- VENTA ANTICIPADA inicio -->
-				<form name="esForm" action="https://app.formulavr.net/FvrServlet" layout="column" layout-align="center start" onsubmit="alSometer()">
-				<!-- <form name="esForm" action="http://eeeb7958.ngrok.io/FormulaVR/FvrServlet" layout="column" layout-align="center start" onsubmit="alSometer()"> -->
-	
-					<h5>VENTA ANTICIPADA DE ENTRADAS</h5>
-	
-					<input type="hidden" name="ACC" value="esAdd" />
-					<input type="hidden" name="DAT" id="DAT" />
-	
-					<div layout="row" layout-align="end start" style="width:100%">
-						<md-input-container>
-							<label>Nombre</label>
-							<input type="text" id="first_name" required />
-						</md-input-container>
-						<md-input-container>
-							<label>Apellidos</label>
-							<input type="text" id="last_name" required />
-						</md-input-container>
-					</div>
-					<div layout="row" layout-align="end start" style="width:100%">
-						<md-input-container>
-							<label>eMail</label>
-							<input type="email" id="email" required />
-						</md-input-container>
-						<md-input-container>
-							<label>Telefono</label>
-							<input type="text" id="phone" />
-						</md-input-container>
-					</div>
-	
-					<div>
-						<input type="submit" value="Comprar entrada" />
-					</div>
-	
-					<script>
-					function alSometer() {
-						var obj = { 
-									  "location_id":"OLEOLE"
-									, "event_id":"OLEOLE20180131"
-									, "inscription_user_id":document.getElementById("email").value
-									, "first_name":document.getElementById("first_name").value
-									, "last_name":document.getElementById("last_name").value
-									, "phone":document.getElementById("phone").value
-								}
-						document.getElementById("DAT").value = JSON.stringify(obj);
-					}
-					</script>
-					
-				</form>
-				<!-- VENTA ANTICIPADA final -->
+		    <div class="caption" style="font-family:Times New Roman, Times, serif;">
+		    	<span class="border">Entradas: 10€ Anticipada / 12€ en taquilla</span>
+		    </div>
+
+			<div class="caption">
+				<span class="border">
+					<!-- <div style="font-family:Times New Roman, Times, serif;"><h3>31 / 01 / 2018</h3></div> -->
+					<div><h4>Sala Galileo Galilei</h4></div>
+					<!-- <div style="font-family:Times New Roman, Times, serif;">c/Galileo 100, Madrid</div> -->
+					<div><h2>Olé Olé en concierto</h2></div>
+				</span>
 			</div>
 
-	 	</div>
+			<div class="parallax"></div>
+
+			<div class="col-xs-12 col-sm-5 col-md-4" style="background-color: transparent; padding: 25px;">
+						<h4>Información del evento</h4>
+						<strong>
+						Miércoles 31/01/2018 - 21:00 hrs.<br/>
+						Sala Galileo Galilei<br/>
+						c/Galileo 100, Madrid
+						</strong>
+						
+						<p>OLÉ-OLÉ con su formación original: Vicky Larraz acompañada de Gustavo Montesano, Emilio Estecha y Pedro Roncero. 
+						Lo han hecho publicando un nuevo disco, "Sin Control", en el que han grabado todos sus éxitos acompañados de grandes artistas invitados. Se han actualizado las canciones, pero se ha mantenido la esencia que les hizo llegar a ser nº 1 tanto en las listas de ventas como en las listas de Radio durante más de 10 años, llegando a vender millones de discos en España, Latinoamérica y Europa.
+						</p>  
+			</div>
+
+			<div class="col-xs-12 col-sm-7 col-md-8" style="background-color: transparent; padding: 25px;">
+
+				<div>
+					<!-- VENTA ANTICIPADA inicio -->
+					<form name="esForm" action="https://app.formulavr.net/FvrServlet" layout="column" layout-align="start start" onsubmit="alSometer()">
+		
+						<h5>VENTA ANTICIPADA DE ENTRADAS</h5>
+		
+						<input type="hidden" name="ACC" value="esAdd" />
+						<input type="hidden" name="DAT" id="DAT" />
+		
+						<div layout="row" layout-align="start center" style="width:100%">
+							<input type="submit" value="Comprar entrada 10€" />
+						</div>
+		
+						<div layout="row" layout-align="start start" style="width:100%">
+							<md-input-container>
+								<label>Nombre</label>
+								<input type="text" id="first_name" required />
+							</md-input-container>
+							<md-input-container>
+								<label>Apellidos</label>
+								<input type="text" id="last_name" required />
+							</md-input-container>
+						</div>
+						<div layout="row" layout-align="start start" style="width:100%">
+							<md-input-container>
+								<label>eMail</label>
+								<input type="email" id="email" required />
+							</md-input-container>
+							<md-input-container>
+								<label>Telefono</label>
+								<input type="text" id="phone" />
+							</md-input-container>
+						</div>
+		
+						<script>
+						function alSometer() {
+							var obj = { 
+										  "location_id":"OLEOLE"
+										, "event_id":"OLEOLE20180131"
+										, "inscription_user_id":document.getElementById("email").value
+										, "first_name":document.getElementById("first_name").value
+										, "last_name":document.getElementById("last_name").value
+										, "phone":document.getElementById("phone").value
+									}
+							document.getElementById("DAT").value = JSON.stringify(obj);
+						}
+						</script>
+						
+					</form>
+					<!-- VENTA ANTICIPADA final -->
+				</div>
+
+			</div>
+		</div>
+
+	</section>
+
+
+	
+	
+</br></br></br></br>	
+	 	<main flex layout="row" layout-align="center center" class="">
+	 	
 
 	 	</main>
 
