@@ -50,7 +50,7 @@
 		.caption {
 		  position: absolute;
 		  left: 0;
-		  top: 5%;
+		  top: 1%;
 		  width: 100%;
 		  text-align: center;
 		  color: #000;
@@ -64,22 +64,27 @@
 		  letter-spacing: 10px;
 		}
 		
-		/* Turn off parallax scrolling for tablets and phones */
-		@media only screen and (max-device-width: 1024px) {
-		    .parallax {
-		        background-attachment: scroll;
-		    }
-		}
 		</style>	
 
 	</head>
 	<body ng-controller="controlador">
 	
 		<section>
+
+				<div class="caption">
+					<span class="border">
+						<!-- <div style="font-family:Times New Roman, Times, serif;"><h3>31 / 01 / 2018</h3></div> -->
+						<div><h4>Sala Galileo<br/>Madrid</h4></div>
+						<!-- <div style="font-family:Times New Roman, Times, serif;">c/Galileo 100, Madrid</div> -->
+						<div><h2>Olé Olé en concierto</h2></div>
+					</span>
+				</div>
+
+				<div class="parallax"></div>
 	
 			<div class="row">
 	
-		 		<div id="msjFrame" class="col-xs-12 col-sm-12 col-md-12" style="display: none;">
+		 		<div id="msjFrame" class="col-xs-12 col-sm-12 col-md-12" style="display: none; text-align: center;">
 		 			<h2>
 			 			<span>
 			 			Ticket id: 
@@ -92,68 +97,30 @@
 		 			Se le ha enviado la entrada a su email, por favor verifique su correo.
 		 			</span>
 		 		</div>
-	
-			    <div class="caption" style="font-family:Times New Roman, Times, serif;">
-			    	<span class="border">Entradas: 10€ Anticipada / 12€ en taquilla</span>
-			    </div>
-	
-	
-				<div class="parallax"></div>
-	
-				<div class="caption">
-					<span class="border">
-						<!-- <div style="font-family:Times New Roman, Times, serif;"><h3>31 / 01 / 2018</h3></div> -->
-						<div><h4>Madrid: Sala Galileo Galilei</h4></div>
-						<!-- <div style="font-family:Times New Roman, Times, serif;">c/Galileo 100, Madrid</div> -->
-						<div><h2>Olé Olé en concierto</h2></div>
-					</span>
-				</div>
-	
-				<div class="col-xs-12 col-sm-7 col-md-6" style="background-color: transparent; padding: 25px;">
-					<h4>Información del evento</h4>
-					<strong>
-					Miércoles 31/01/2018 - 21:00 hrs.<br/>
-					Sala Galileo Galilei<br/>
-					c/Galileo 100, Madrid
-					</strong>
-					
-					<p style="text-align: justify;">El retorno de Olé Olé</p>
-					<p>&nbsp;</p>
-					<p style="text-align: justify;">
-					OLÉ-OLÉ con su formación original: Vicky Larraz acompañada de Gustavo Montesano, Emilio Estecha y Pedro Roncero. 
-					Lo han hecho publicando un nuevo disco, "Sin Control", en el que han grabado todos sus éxitos acompañados de grandes artistas invitados. Se han actualizado las canciones, pero se ha mantenido la esencia que les hizo llegar a ser nº 1 tanto en las listas de ventas como en las listas de Radio durante más de 10 años, llegando a vender millones de discos en España, Latinoamérica y Europa.
-					</p>  
-					<p>&nbsp;</p>
-					<p style="text-align: justify;">
-					Después de 25 años OLÉ-OLÉ se reúnen de nuevo para devolvernos todas esas canciones, que fueron número 1 y así recobrar ese espíritu e imagen del pop español de los años 80 que marcaron a toda una generación. Un espectáculo donde la diversión y los buenos recuerdos están asegurados. 
-					</p>  
-					<p>&nbsp;</p>
-					<p style="text-align: justify;">
-					Desde marzo 2017 han comenzado a recorrer toda la geografía española con su Gira "Sin Control" interpretando los singles más representativos de las tres etapas de la formación. Canciones como "No Controles",  "Voy a Mil", "Lili Marlen", "Soldados del amor", "Con solo una mirada", "Conspiración", "Yo soy infiel", "Bailando sin salir de casa", "Sola", "Búscala", "Dame"... forman parte del repertorio de la gira haciendo disfrutar al público, tanto joven como no tan joven,  que no deja un momento de cantar y bailar a su ritmo.
-					</p>  
-	
-				</div>
-	
-				<div class="col-xs-12 col-sm-5 col-md-6" style="background-color: transparent; padding: 25px;">
+
+				<div class="col-xs-12 col-sm-5 col-md-5" style="background-color: transparent; padding: 25px;">
 	
 					<div>
+					
 						<!-- VENTA ANTICIPADA inicio -->
-						<form name="esForm" action="https://app.formulavr.net/FvrServlet" layout="column" layout-align="start start" onsubmit="alSometer()">
+						<form name="esForm" id="esForm" action="https://app.formulavr.net/FvrServlet" layout="column" layout-align="start start" onsubmit="alSometer()">
 			
-							<h5>VENTA ANTICIPADA DE ENTRADA</h5>
-
-							<div>
-								<p  style="font-family:Times New Roman, Times, serif;">Por favor complete los datos y a continuación pulse el botón.</p>
+							<div layout="row" layout-align="center center" style="width:100%">
+								<h4>VENTA DE ENTRADAS</h4>
 							</div>
-			
+
+							<div layout="row" layout-align="center center" style="width:100%">
+								<h5><!-- Precio:<br/>&nbsp;&nbsp; -->10€ anticipada / 12€ en taquilla</h5>
+							</div>
+<!-- 
+							<div layout="row" layout-align="center center" style="width:100%">
+								<h5><p style="font-family:Times New Roman, Times, serif;">Por favor complete los datos</p></h5>
+							</div>
+ -->			
 							<input type="hidden" name="ACC" value="esAdd" />
 							<input type="hidden" name="DAT" id="DAT" />
-			
-							<div layout="row" layout-align="start center" style="width:100%">
-								<input class="button" type="submit" value="Comprar entrada 10€" />
-							</div>
 
-							<div layout="row" layout-align="start start" style="width:100%">
+							<div layout="row" layout-align="center center" style="width:100%">
 								<md-input-container>
 									<label>Nombre</label>
 									<input type="text" id="first_name" required />
@@ -163,7 +130,8 @@
 									<input type="text" id="last_name" required />
 								</md-input-container>
 							</div>
-							<div layout="row" layout-align="start start" style="width:100%">
+
+							<div layout="row" layout-align="center center" style="width:100%">
 								<md-input-container>
 									<label>eMail</label>
 									<input type="email" id="email" required />
@@ -172,6 +140,12 @@
 									<label>Telefono</label>
 									<input type="text" id="phone" />
 								</md-input-container>
+							</div>
+			
+							<div layout="row" layout-align="center center" style="width:100%">
+								<h5>
+									<input type="submit" class="btn btn-success" value="Comprar entrada 10€">
+								</h5>
 							</div>
 
 							<script>
@@ -191,6 +165,40 @@
 						</form>
 						<!-- VENTA ANTICIPADA final -->
 					</div>
+	
+				</div>
+	
+				<div class="col-xs-12 col-sm-7 col-md-7" style="background-color: transparent; padding: 25px;">
+				
+					<h4><p>Información del evento</p></h4>
+
+					<div class="row">
+							<div style="padding: 20px;" class="col-xs-12 col-sm-6 col-md-6" >
+								<p><strong>Miércoles 31/01/2018 - 21:00 hrs.</strong></p>
+								<p><strong>Sala Galileo Galilei</strong></p>
+								<p><strong>c/Galileo 100, Madrid</strong></p>
+							</div>
+							<div style="padding: 20px;" class="col-xs-12 col-sm-6 col-md-6" >
+								<p><strong>Metro Islas Filipinas y Canal</strong></p>
+								<p><strong>Reserva de mesas:</strong></p>
+								<p><strong>&nbsp;&nbsp;Tel: 91 534 75 57/58</strong></p>
+							</div>
+					</div>
+
+					<!-- <p style="text-align: justify;">El retorno de Olé Olé</p> -->
+					<!-- <p>&nbsp;</p> -->
+					<p style="text-align: justify;">
+					OLÉ-OLÉ vuelve con su formación original: Vicky Larraz acompañada de Gustavo Montesano, Emilio Estecha y Pedro Roncero. 
+					Lo han hecho publicando un nuevo disco, "Sin Control", en el que han grabado todos sus éxitos acompañados de grandes artistas invitados. Se han actualizado las canciones, pero se ha mantenido la esencia que les hizo llegar a ser nº 1 tanto en las listas de ventas como en las listas de Radio durante más de 10 años, llegando a vender millones de discos en España, Latinoamérica y Europa.
+					</p>  
+					<p>&nbsp;</p>
+					<p style="text-align: justify;">
+					Después de 25 años OLÉ-OLÉ se reúnen de nuevo para devolvernos todas esas canciones, que fueron número 1 y así recobrar ese espíritu e imagen del pop español de los años 80 que marcaron a toda una generación. Un espectáculo donde la diversión y los buenos recuerdos están asegurados. 
+					</p>  
+					<p>&nbsp;</p>
+					<p style="text-align: justify;">
+					Desde marzo 2017 han comenzado a recorrer toda la geografía española con su Gira "Sin Control" interpretando los singles más representativos de las tres etapas de la formación. Canciones como "No Controles",  "Voy a Mil", "Lili Marlen", "Soldados del amor", "Con solo una mirada", "Conspiración", "Yo soy infiel", "Bailando sin salir de casa", "Sola", "Búscala", "Dame"... forman parte del repertorio de la gira haciendo disfrutar al público, tanto joven como no tan joven,  que no deja un momento de cantar y bailar a su ritmo.
+					</p>  
 	
 				</div>
 			</div>
