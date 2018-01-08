@@ -38,7 +38,7 @@
 
 		<style>
 		.parallax {
-		    background-image: url("emails/es/img/OleOle20180131_web_2_dark.jpg");
+		    background-image: url("emails/es/img/OleOle20180131_TICKETEA.jpg");
 		    min-height: 400px; 
 		    /* Parallax scrolling effect */
 		    background-attachment: fixed;
@@ -58,7 +58,7 @@
 		
 		.caption span.border {
 		  /* background-color: #111; */
-		  color: #fff;
+		  color: orange;
 		  padding: 18px;
 		  font-size: 25px;
 		  letter-spacing: 10px;
@@ -69,7 +69,7 @@
 	</head>
 	<body ng-controller="controlador">
 	
-		<section>
+		<div>
 
 				<div class="caption">
 					<span class="border">
@@ -98,9 +98,15 @@
 		 			</span>
 		 		</div>
 
-				<div class="col-xs-12 col-sm-5 col-md-5" style="background-color: transparent; padding: 25px;">
-	
-					<div>
+				<div class="col-xs-12 col-sm-3 col-md-3" style="background-color: transparent; padding: 25px;">
+
+
+					<a href="https://www.ticketea.com/entradas-concierto-oleole-sala-galileo/" title="Compra aquí tus entradas">
+						<img src="https://d18t9gwja9h9h.cloudfront.net/assets/images/buttons/es/buyhere.png" alt="Compra aquí tus entradas" />
+					</a>
+
+
+					<div class="hide">
 					
 						<!-- VENTA ANTICIPADA inicio -->
 						<form name="esForm" id="esForm" action="https://app.formulavr.net/FvrServlet" layout="column" layout-align="start start" onsubmit="alSometer()">
@@ -168,7 +174,7 @@
 	
 				</div>
 	
-				<div class="col-xs-12 col-sm-7 col-md-7" style="background-color: transparent; padding: 25px;">
+				<div class="col-xs-12 col-sm-9 col-md-9" style="background-color: transparent; padding: 25px;">
 				
 					<h4><p>Información del evento</p></h4>
 
@@ -203,7 +209,7 @@
 				</div>
 			</div>
 	
-		</section>
+		</div>
 
 		<script>
 			angular
