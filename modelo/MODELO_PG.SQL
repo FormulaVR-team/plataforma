@@ -1,6 +1,6 @@
 ﻿/*
 Created: 01/05/2017
-Modified: 23/12/2017
+Modified: 19/02/2018
 Model: FormulaVR_V10_PostgreSQL
 Database: PostgreSQL 9.2
 */
@@ -669,6 +669,8 @@ CREATE TABLE "FormulaVR"."T_AC_activityCockpits"(
 WITH (OIDS=FALSE)
 ;
 COMMENT ON COLUMN "FormulaVR"."T_AC_activityCockpits"."sincro" IS 'Momento inserción: aammddhhMMssDDD'
+;
+COMMENT ON COLUMN "FormulaVR"."T_AC_activityCockpits"."json" IS 'Datos extra del registro.'
 ;
 
 -- Add keys for table FormulaVR.T_AC_activityCockpits
