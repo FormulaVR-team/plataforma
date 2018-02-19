@@ -100,6 +100,8 @@ public class TjAccesoBaseDatos {
 		", \"balance_current\"" + // balance_current
 		", \"last_sale_amount\"" + // last_sale_amount
 		", \"last_sale_moment\"" + // last_sale_moment
+		", \"qr_image_base64\"" + // qr_image_base64
+		", \"json\"" + // json
                 "  ) VALUES ( " + 
 		"  '"  + registro.getTj_sincro() + "'" + // sincro
 		", '"  + registro.getTj_mark() + "'" + // mark
@@ -109,7 +111,9 @@ public class TjAccesoBaseDatos {
 		", "  + registro.getTj_balance_initial() + "" + // balance_initial
 		", "  + registro.getTj_balance_current() + "" + // balance_current
 		", "  + registro.getTj_last_sale_amount() + "" + // last_sale_amount
-		", '"  + registro.getTj_last_sale_moment() + "'" + // last_sale_moment 
+		", '"  + registro.getTj_last_sale_moment() + "'" + // last_sale_moment
+		", '"  + registro.getTj_qr_image_base64() + "'" + // qr_image_base64
+		", '"  + registro.getTj_json() + "'" + // json 
                 ")"
                 ;
         //////////////////////////////////////////////
@@ -150,6 +154,8 @@ public class TjAccesoBaseDatos {
 		", \"balance_current\" = "  + registro.getTj_balance_current() + "" + // balance_current
 		", \"last_sale_amount\" = "  + registro.getTj_last_sale_amount() + "" + // last_sale_amount
 		", \"last_sale_moment\" = '"  + registro.getTj_last_sale_moment() + "'" + // last_sale_moment
+		", \"qr_image_base64\" = '"  + registro.getTj_qr_image_base64() + "'" + // qr_image_base64
+		", \"json\" = '"  + registro.getTj_json() + "'" + // json
                 " WHERE " + 
 		"  \"card_id\" = '" + registro.getTj_card_id() + "'" + // card_id
                 ""
@@ -237,6 +243,8 @@ public class TjAccesoBaseDatos {
 		regRead.setTj_balance_current( rs.getDouble("balance_current") );  // balance_current
 		regRead.setTj_last_sale_amount( rs.getDouble("last_sale_amount") );  // last_sale_amount
 		regRead.setTj_last_sale_moment( rs.getString("last_sale_moment") ); regRead.setTj_last_sale_moment( (regRead.getTj_last_sale_moment() == null)?"":regRead.getTj_last_sale_moment().trim() ); // last_sale_moment
+		regRead.setTj_qr_image_base64( rs.getString("qr_image_base64") ); regRead.setTj_qr_image_base64( (regRead.getTj_qr_image_base64() == null)?"":regRead.getTj_qr_image_base64().trim() ); // qr_image_base64
+		regRead.setTj_json( rs.getString("json") ); regRead.setTj_json( (regRead.getTj_json() == null)?"":regRead.getTj_json().trim() ); // json
             }
         } catch (SQLException ex0) {
             throw new StExcepcion(ex0.getMessage());
@@ -298,6 +306,8 @@ public class TjAccesoBaseDatos {
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getTj_author(),"author",sqlWhere);   // author
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getTj_card_id(),"card_id",sqlWhere);   // card_id
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getTj_last_sale_moment(),"last_sale_moment",sqlWhere);   // last_sale_moment
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getTj_qr_image_base64(),"qr_image_base64",sqlWhere);   // qr_image_base64
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getTj_json(),"json",sqlWhere);   // json
         //////////////////////////////////////////////////////
         
 	   
@@ -351,6 +361,8 @@ public class TjAccesoBaseDatos {
 		regRead.setTj_balance_current( rs.getDouble("balance_current") );  // balance_current
 		regRead.setTj_last_sale_amount( rs.getDouble("last_sale_amount") );  // last_sale_amount
 		regRead.setTj_last_sale_moment( rs.getString("last_sale_moment") ); regRead.setTj_last_sale_moment( (regRead.getTj_last_sale_moment() == null)?"":regRead.getTj_last_sale_moment().trim() ); // last_sale_moment
+		regRead.setTj_qr_image_base64( rs.getString("qr_image_base64") ); regRead.setTj_qr_image_base64( (regRead.getTj_qr_image_base64() == null)?"":regRead.getTj_qr_image_base64().trim() ); // qr_image_base64
+		regRead.setTj_json( rs.getString("json") ); regRead.setTj_json( (regRead.getTj_json() == null)?"":regRead.getTj_json().trim() ); // json
                         
                         if ( cfg.isExportar() ) getSeq_Sub_ExportMid( regRead );
                         else                    arrayTmp.add( regRead );
@@ -407,6 +419,8 @@ public class TjAccesoBaseDatos {
 				s += "<td><strong style='color:darkblue;'>" + "balance_current" + "</strong></td>";  // balance_current
 				s += "<td><strong style='color:darkblue;'>" + "last_sale_amount" + "</strong></td>";  // last_sale_amount
 				s += "<td><strong style='color:darkblue;'>" + "last_sale_moment" + "</strong></td>";  // last_sale_moment
+				s += "<td><strong style='color:darkblue;'>" + "qr_image_base64" + "</strong></td>";  // qr_image_base64
+				s += "<td><strong style='color:darkblue;'>" + "json" + "</strong></td>";  // json
 				s += "</tr>\r\n";
                 dout.write(s);
             }
@@ -443,6 +457,12 @@ public class TjAccesoBaseDatos {
 				tmp = registro.getTj_last_sale_moment();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // last_sale_moment
+				tmp = registro.getTj_qr_image_base64();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // qr_image_base64
+				tmp = registro.getTj_json();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // json
 		s += "</tr>\r\n";
 
         // Grabar en el archivo de salida:
@@ -614,6 +634,8 @@ public class TjAccesoBaseDatos {
 				registro.setTj_balance_current( jsonReg.getDouble(6) );	// balance_current
 				registro.setTj_last_sale_amount( jsonReg.getDouble(7) );	// last_sale_amount
 				registro.setTj_last_sale_moment( jsonReg.getString(8) );	// last_sale_moment
+				registro.setTj_qr_image_base64( jsonReg.getString(9) );	// qr_image_base64
+				registro.setTj_json( jsonReg.getString(10) );	// json
 					
 					arrayTmp.add(registro);
 				} catch (Exception e) {;}

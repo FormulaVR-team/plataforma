@@ -151,6 +151,7 @@
 					<th>balance_current</th>
 					<th>last_sale_amount</th>
 					<th>last_sale_moment</th>
+					<th>qr_image_base64</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -165,6 +166,7 @@
 					<td>{{reg.tj_balance_current}}&nbsp;</td>
 					<td>{{reg.tj_last_sale_amount}}&nbsp;</td>
 					<td>{{reg.tj_last_sale_moment}}&nbsp;</td>
+					<td><img src="{{reg.tj_qr_image_base64}}"/></td>
 				</tr>
 			</tbody>
 		</table>

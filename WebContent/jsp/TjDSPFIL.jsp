@@ -93,6 +93,8 @@
 <th style="text-align: right;">balance_current</th>
 <th style="text-align: right;">last_sale_amount</th>
 <th style="text-align: left;">last_sale_moment</th>
+<th style="text-align: left;">qr_image_base64</th>
+<th style="text-align: left;">json</th>
 			</tr>
 			<tr>
 				<td><br /></td>
@@ -113,6 +115,10 @@
 			<td><br />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="tj_filtro.tj_last_sale_moment" maxlength="20" style="width: 140px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="tj_filtro.tj_qr_image_base64" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="tj_filtro.tj_json" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			</tr>
 			<!-- -----------------------------------------------------------------------------------------  -->
@@ -144,6 +150,8 @@
 <td style="text-align: right;">&nbsp;<bean:write name="grid" property="tj_balance_current"/><html:hidden name="grid" property="tj_balance_current" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.tj_card_id}';" />&nbsp;</td>   <!-- balance_current -->
 <td style="text-align: right;">&nbsp;<bean:write name="grid" property="tj_last_sale_amount"/><html:hidden name="grid" property="tj_last_sale_amount" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.tj_card_id}';" />&nbsp;</td>   <!-- last_sale_amount -->
 <td>&nbsp;<bean:write name="grid" property="tj_last_sale_moment"/><html:hidden name="grid" property="tj_last_sale_moment" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.tj_card_id}';" />&nbsp;</td>   <!-- last_sale_moment -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="tj_qr_image_base64"/>',30));</script><html:hidden name="grid" property="tj_qr_image_base64" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.tj_card_id}';" />&nbsp;</td>   <!-- qr_image_base64 -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="tj_json"/>',30));</script><html:hidden name="grid" property="tj_json" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.tj_card_id}';" />&nbsp;</td>   <!-- json -->
 				</tr>
 			</logic:iterate>
 		</table>

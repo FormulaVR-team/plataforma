@@ -14,6 +14,8 @@ public class TjBeanFiltro extends StBean {
 	public String tj_balance_current; // balance_current
 	public String tj_last_sale_amount; // last_sale_amount
 	public String tj_last_sale_moment; // last_sale_moment
+	public String tj_qr_image_base64; // qr_image_base64
+	public String tj_json; // json
     
     public TjBeanFiltro() {
         super();
@@ -33,6 +35,8 @@ public class TjBeanFiltro extends StBean {
 	this.setTj_balance_current( "" ); // balance_current
 	this.setTj_last_sale_amount( "" ); // last_sale_amount
 	this.setTj_last_sale_moment( "" ); // last_sale_moment
+	this.setTj_qr_image_base64( "" ); // qr_image_base64
+	this.setTj_json( "" ); // json
     } 
 
     public TjBeanFiltro coalesce(TjBeanFiltro pri, TjBeanFiltro sec) {
@@ -47,6 +51,8 @@ public class TjBeanFiltro extends StBean {
 		r.setTj_balance_current( (pri.getTj_balance_current()==null)?sec.getTj_balance_current():pri.getTj_balance_current() );	// balance_current
 		r.setTj_last_sale_amount( (pri.getTj_last_sale_amount()==null)?sec.getTj_last_sale_amount():pri.getTj_last_sale_amount() );	// last_sale_amount
 		r.setTj_last_sale_moment( (pri.getTj_last_sale_moment()==null)?sec.getTj_last_sale_moment():pri.getTj_last_sale_moment() );	// last_sale_moment
+		r.setTj_qr_image_base64( (pri.getTj_qr_image_base64()==null)?sec.getTj_qr_image_base64():pri.getTj_qr_image_base64() );	// qr_image_base64
+		r.setTj_json( (pri.getTj_json()==null)?sec.getTj_json():pri.getTj_json() );	// json
         }
         return r;
     }
@@ -61,6 +67,8 @@ public class TjBeanFiltro extends StBean {
 	Destino.setTj_balance_current( getTj_balance_current() ); // balance_current
 	Destino.setTj_last_sale_amount( getTj_last_sale_amount() ); // last_sale_amount
 	Destino.setTj_last_sale_moment( getTj_last_sale_moment() ); // last_sale_moment
+	Destino.setTj_qr_image_base64( getTj_qr_image_base64() ); // qr_image_base64
+	Destino.setTj_json( getTj_json() ); // json
     }
     
     public void copyFrom(TjBeanFiltro Origen) {
@@ -73,6 +81,8 @@ public class TjBeanFiltro extends StBean {
 	setTj_balance_current( Origen.getTj_balance_current() ); // balance_current
 	setTj_last_sale_amount( Origen.getTj_last_sale_amount() ); // last_sale_amount
 	setTj_last_sale_moment( Origen.getTj_last_sale_moment() ); // last_sale_moment
+	setTj_qr_image_base64( Origen.getTj_qr_image_base64() ); // qr_image_base64
+	setTj_json( Origen.getTj_json() ); // json
     }
 	////////////////////////////////////////////////////////////
 	public String serializar() {
@@ -87,6 +97,8 @@ public class TjBeanFiltro extends StBean {
 		out.append( _K.sepFld ); out.append( this.getTj_balance_current()==null?"":this.getTj_balance_current() ); // balance_current
 		out.append( _K.sepFld ); out.append( this.getTj_last_sale_amount()==null?"":this.getTj_last_sale_amount() ); // last_sale_amount
 		out.append( _K.sepFld ); out.append( this.getTj_last_sale_moment()==null?"":this.getTj_last_sale_moment() ); // last_sale_moment
+		out.append( _K.sepFld ); out.append( this.getTj_qr_image_base64()==null?"":this.getTj_qr_image_base64() ); // qr_image_base64
+		out.append( _K.sepFld ); out.append( this.getTj_json()==null?"":this.getTj_json() ); // json
 
 		out.append( _K.sepReg );
 		
@@ -111,6 +123,8 @@ public class TjBeanFiltro extends StBean {
 			try { this.setTj_balance_current( trozos[6] ); } catch (Exception e) {;} // balance_current
 			try { this.setTj_last_sale_amount( trozos[7] ); } catch (Exception e) {;} // last_sale_amount
 			try { this.setTj_last_sale_moment( trozos[8] ); } catch (Exception e) {;} // last_sale_moment
+			try { this.setTj_qr_image_base64( trozos[9] ); } catch (Exception e) {;} // qr_image_base64
+			try { this.setTj_json( trozos[10] ); } catch (Exception e) {;} // json
 			
 		}
 	}
@@ -160,5 +174,15 @@ public class TjBeanFiltro extends StBean {
 	public String getTj_last_sale_moment() {return tj_last_sale_moment;}
 	/** Set last_sale_moment*/
 	public void setTj_last_sale_moment(String tj_last_sale_moment) {this.tj_last_sale_moment = tj_last_sale_moment;}
+
+	/** Get qr_image_base64*/
+	public String getTj_qr_image_base64() {return tj_qr_image_base64;}
+	/** Set qr_image_base64*/
+	public void setTj_qr_image_base64(String tj_qr_image_base64) {this.tj_qr_image_base64 = tj_qr_image_base64;}
+
+	/** Get json*/
+	public String getTj_json() {return tj_json;}
+	/** Set json*/
+	public void setTj_json(String tj_json) {this.tj_json = tj_json;}
 
 }

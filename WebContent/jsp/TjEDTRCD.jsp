@@ -111,6 +111,20 @@
 			</div>
 		</div>
 
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">qr_image_base64&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="tj_qr_image_base64"  style="width: 700px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">json&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="tj_json"  style="width: 700px;"/>
+			</div>
+		</div>
+
 					<div class="form-group">
 						<div class="col-sm-9 col-sm-offset-3">
 							<input class="btn btn-info" type="button" value="<bean:message key="common.client.gestion_lista"/>" onclick="setOpcion('TjRCD_AF','Cerrar',null);"> 
@@ -143,6 +157,8 @@
 	<!-- <html:hidden property="tj_balance_current"/> balance_current -->
 	<!-- <html:hidden property="tj_last_sale_amount"/> last_sale_amount -->
 	<!-- <html:hidden property="tj_last_sale_moment"/> last_sale_moment -->
+	<!-- <html:hidden property="tj_qr_image_base64"/> qr_image_base64 -->
+	<!-- <html:hidden property="tj_json"/> json -->
 
 		<!-- external javascript for ui-->
 

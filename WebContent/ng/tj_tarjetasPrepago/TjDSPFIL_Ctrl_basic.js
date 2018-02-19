@@ -60,7 +60,9 @@ angular
 								, tj_balance_initial: "" // balance_initial
 								, tj_balance_current: "" // balance_current
 								, tj_last_sale_amount: "" // last_sale_amount
-								, tj_last_sale_moment: "" // last_sale_moment						
+								, tj_last_sale_moment: "" // last_sale_moment
+								, tj_qr_image_base64: "" // qr_image_base64
+								, tj_json: "" // json						
 							}
 						    // Datos calculados, no de BD:
 						    // Formato de registro:
@@ -72,7 +74,9 @@ angular
 								, tj_balance_initial: "" // balance_initial
 								, tj_balance_current: "" // balance_current
 								, tj_last_sale_amount: "" // last_sale_amount
-								, tj_last_sale_moment: "" // last_sale_moment						
+								, tj_last_sale_moment: "" // last_sale_moment
+								, tj_qr_image_base64: "" // qr_image_base64
+								, tj_json: "" // json						
 							/////////////////////////////////////////////////
 					};
 					
@@ -286,7 +290,9 @@ angular
 						$scope.actionForm.tj_balance_initial = reg.tj_balance_initial; // balance_initial
 						$scope.actionForm.tj_balance_current = reg.tj_balance_current; // balance_current
 						$scope.actionForm.tj_last_sale_amount = reg.tj_last_sale_amount; // last_sale_amount
-						$scope.actionForm.tj_last_sale_moment = reg.tj_last_sale_moment; // last_sale_moment						
+						$scope.actionForm.tj_last_sale_moment = reg.tj_last_sale_moment; // last_sale_moment
+						$scope.actionForm.tj_qr_image_base64 = reg.tj_qr_image_base64; // qr_image_base64
+						$scope.actionForm.tj_json = reg.tj_json; // json						
 					};
 
 					$scope.initKey = function() {
@@ -304,7 +310,9 @@ angular
 						$scope.actionForm.tj_balance_initial = ""; // balance_initial
 						$scope.actionForm.tj_balance_current = ""; // balance_current
 						$scope.actionForm.tj_last_sale_amount = ""; // last_sale_amount
-						$scope.actionForm.tj_last_sale_moment = ""; // last_sale_moment						
+						$scope.actionForm.tj_last_sale_moment = ""; // last_sale_moment
+						$scope.actionForm.tj_qr_image_base64 = ""; // qr_image_base64
+						$scope.actionForm.tj_json = ""; // json						
 					};
 
 					$scope.marcarTodo = function() {

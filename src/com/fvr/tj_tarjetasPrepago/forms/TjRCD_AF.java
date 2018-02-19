@@ -45,6 +45,8 @@ public class TjRCD_AF extends org.apache.struts.action.ActionForm {
 	public double tj_balance_current; // balance_current
 	public double tj_last_sale_amount; // last_sale_amount
 	public String tj_last_sale_moment; // last_sale_moment
+	public String tj_qr_image_base64; // qr_image_base64
+	public String tj_json; // json
     
 
     public TjRCD_AF() {
@@ -74,6 +76,8 @@ public class TjRCD_AF extends org.apache.struts.action.ActionForm {
 	Destino.setTj_balance_current( getTj_balance_current() ); // balance_current
 	Destino.setTj_last_sale_amount( getTj_last_sale_amount() ); // last_sale_amount
 	Destino.setTj_last_sale_moment( getTj_last_sale_moment() ); // last_sale_moment
+	Destino.setTj_qr_image_base64( getTj_qr_image_base64() ); // qr_image_base64
+	Destino.setTj_json( getTj_json() ); // json
     }
     
     public void copyFrom(StBean beanOrigen) {
@@ -88,6 +92,8 @@ public class TjRCD_AF extends org.apache.struts.action.ActionForm {
 	setTj_balance_current( Origen.getTj_balance_current() ); // balance_current
 	setTj_last_sale_amount( Origen.getTj_last_sale_amount() ); // last_sale_amount
 	setTj_last_sale_moment( Origen.getTj_last_sale_moment() ); // last_sale_moment
+	setTj_qr_image_base64( Origen.getTj_qr_image_base64() ); // qr_image_base64
+	setTj_json( Origen.getTj_json() ); // json
     }
     
     public void copyFrom(TjRCD_AF beanOrigen) {
@@ -115,6 +121,8 @@ public class TjRCD_AF extends org.apache.struts.action.ActionForm {
 	setTj_balance_current( Origen.getTj_balance_current() ); // balance_current
 	setTj_last_sale_amount( Origen.getTj_last_sale_amount() ); // last_sale_amount
 	setTj_last_sale_moment( Origen.getTj_last_sale_moment() ); // last_sale_moment
+	setTj_qr_image_base64( Origen.getTj_qr_image_base64() ); // qr_image_base64
+	setTj_json( Origen.getTj_json() ); // json
     }
     
     public TjBeanFiltro getTj_filtro() { return tj_filtro; }
@@ -219,5 +227,15 @@ public class TjRCD_AF extends org.apache.struts.action.ActionForm {
 	public String getTj_last_sale_moment() {return tj_last_sale_moment;}
 	/** Set last_sale_moment*/
 	public void setTj_last_sale_moment(String tj_last_sale_moment) {this.tj_last_sale_moment = tj_last_sale_moment;}
+
+	/** Get qr_image_base64*/
+	public String getTj_qr_image_base64() {return tj_qr_image_base64;}
+	/** Set qr_image_base64*/
+	public void setTj_qr_image_base64(String tj_qr_image_base64) {this.tj_qr_image_base64 = tj_qr_image_base64;}
+
+	/** Get json*/
+	public String getTj_json() {return tj_json;}
+	/** Set json*/
+	public void setTj_json(String tj_json) {this.tj_json = tj_json;}
 
 }

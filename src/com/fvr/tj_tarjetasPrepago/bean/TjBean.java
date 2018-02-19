@@ -15,6 +15,8 @@ public class TjBean extends StBean {
 	public double tj_balance_current; // balance_current
 	public double tj_last_sale_amount; // last_sale_amount
 	public String tj_last_sale_moment; // last_sale_moment
+	public String tj_qr_image_base64; // qr_image_base64
+	public String tj_json; // json
     
     public TjBean() {
         super();
@@ -34,6 +36,8 @@ public class TjBean extends StBean {
 	this.setTj_balance_current( 0.0 ); // balance_current
 	this.setTj_last_sale_amount( 0.0 ); // last_sale_amount
 	this.setTj_last_sale_moment( "" ); // last_sale_moment
+	this.setTj_qr_image_base64( "" ); // qr_image_base64
+	this.setTj_json( "" ); // json
     } 
  /*
     public void copyTo(StBean beanDestino) {
@@ -48,6 +52,8 @@ public class TjBean extends StBean {
 	Destino.setTj_balance_current( getTj_balance_current() ); // balance_current
 	Destino.setTj_last_sale_amount( getTj_last_sale_amount() ); // last_sale_amount
 	Destino.setTj_last_sale_moment( getTj_last_sale_moment() ); // last_sale_moment
+	Destino.setTj_qr_image_base64( getTj_qr_image_base64() ); // qr_image_base64
+	Destino.setTj_json( getTj_json() ); // json
     }
     
     public void copyFrom(StBean beanOrigen) {
@@ -62,6 +68,8 @@ public class TjBean extends StBean {
 	setTj_balance_current( Origen.getTj_balance_current() ); // balance_current
 	setTj_last_sale_amount( Origen.getTj_last_sale_amount() ); // last_sale_amount
 	setTj_last_sale_moment( Origen.getTj_last_sale_moment() ); // last_sale_moment
+	setTj_qr_image_base64( Origen.getTj_qr_image_base64() ); // qr_image_base64
+	setTj_json( Origen.getTj_json() ); // json
     }
 */
 
@@ -111,6 +119,16 @@ public class TjBean extends StBean {
 	/** Set last_sale_moment*/
 	public void setTj_last_sale_moment(String tj_last_sale_moment) {this.tj_last_sale_moment = tj_last_sale_moment;}
 
+	/** Get qr_image_base64*/
+	public String getTj_qr_image_base64() {return tj_qr_image_base64;}
+	/** Set qr_image_base64*/
+	public void setTj_qr_image_base64(String tj_qr_image_base64) {this.tj_qr_image_base64 = tj_qr_image_base64;}
+
+	/** Get json*/
+	public String getTj_json() {return tj_json;}
+	/** Set json*/
+	public void setTj_json(String tj_json) {this.tj_json = tj_json;}
+
 
 	////////////////////////////////////////////////////////////
     public String getKey(){
@@ -133,6 +151,8 @@ public class TjBean extends StBean {
 		out.append( _K.sepFld ); out.append( this.getTj_balance_current() ); // balance_current
 		out.append( _K.sepFld ); out.append( this.getTj_last_sale_amount() ); // last_sale_amount
 		out.append( _K.sepFld ); out.append( this.getTj_last_sale_moment()==null?"":this.getTj_last_sale_moment() ); // last_sale_moment
+		out.append( _K.sepFld ); out.append( this.getTj_qr_image_base64()==null?"":this.getTj_qr_image_base64() ); // qr_image_base64
+		out.append( _K.sepFld ); out.append( this.getTj_json()==null?"":this.getTj_json() ); // json
 
 		out.append( _K.sepReg );
 		
@@ -156,6 +176,8 @@ public class TjBean extends StBean {
 			try { this.setTj_balance_current( Subrutinas.parse_double( trozos[6] )); } catch (Exception e) {;} // balance_current
 			try { this.setTj_last_sale_amount( Subrutinas.parse_double( trozos[7] )); } catch (Exception e) {;} // last_sale_amount
 			try { this.setTj_last_sale_moment( trozos[8] ); } catch (Exception e) {;} // last_sale_moment
+			try { this.setTj_qr_image_base64( trozos[9] ); } catch (Exception e) {;} // qr_image_base64
+			try { this.setTj_json( trozos[10] ); } catch (Exception e) {;} // json
 			
 		}
 	}

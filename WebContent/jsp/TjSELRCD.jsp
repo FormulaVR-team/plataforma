@@ -120,6 +120,8 @@
 <th style="text-align: right;">balance_current</th>
 <th style="text-align: right;">last_sale_amount</th>
 <th style="text-align: left;">last_sale_moment</th>
+<th style="text-align: left;">qr_image_base64</th>
+<th style="text-align: left;">json</th>
                 </tr>
                 <tr>
 			<td><html:text styleClass="form-control input-sm" property="tj_filtro.tj_sincro" maxlength="20" style="width: 140px; text-align: left;" onclick="this.select();" />
@@ -140,6 +142,10 @@
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="tj_filtro.tj_last_sale_moment" maxlength="20" style="width: 140px; text-align: left;" onclick="this.select();" />
 			</td>
+			<td><html:text styleClass="form-control input-sm" property="tj_filtro.tj_qr_image_base64" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="tj_filtro.tj_json" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
                 </tr>
                 <logic:iterate indexId="gridIdx" id="grid" name="TjRCD_AF" property="grid">
                     <tr id="laFila${gridIdx}">
@@ -153,6 +159,8 @@
 <td class="tbceldadetalle" style="text-align: right;"><bean:write name="grid" property="tj_balance_current"/><br/></td>   <!-- balance_current -->
 <td class="tbceldadetalle" style="text-align: right;"><bean:write name="grid" property="tj_last_sale_amount"/><br/></td>   <!-- last_sale_amount -->
 <td class="tbceldadetalle"><bean:write name="grid" property="tj_last_sale_moment"/><br/></td>   <!-- last_sale_moment -->
+<td class="tbceldadetalle"><bean:write name="grid" property="tj_qr_image_base64"/><br/></td>   <!-- qr_image_base64 -->
+<td class="tbceldadetalle"><bean:write name="grid" property="tj_json"/><br/></td>   <!-- json -->
                     </tr>
                 </logic:iterate>
             </table>

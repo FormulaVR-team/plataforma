@@ -66,6 +66,18 @@
 				<input type="text" ng-model="actionForm.tj_last_sale_moment" />
 			</md-input-container>
 			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container>
+				<label>qr_image_base64</label>
+				<input type="text" ng-model="actionForm.tj_qr_image_base64" />
+			</md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container>
+				<label>json</label>
+				<input type="text" ng-model="actionForm.tj_json" />
+			</md-input-container>			
+			</div>
 
 
     </div>
