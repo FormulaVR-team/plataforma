@@ -1,5 +1,7 @@
 package com.fvr._comun;
 
+import java.awt.Color;
+import java.awt.image.BufferedImage;
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -53,7 +55,9 @@ import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
 
 import com.fvr.FuentesDeDatos.BDConexion;
+import com.fvr._comun.QR_zxing.QRCodeGenerator;
 import com.fvr._comun.disponiblidad.Reservas;
+import com.fvr._comun.img2D.util.ImageUtils;
 import com.fvr.cd_LocationClosedDays.bean.CdBean;
 import com.fvr.es_eventSusbscriptions.bean.EsBean;
 import com.fvr.ev_events.bean.EvBean;
@@ -66,6 +70,7 @@ import com.fvr.rs_reservations.bean.RsBean;
 import com.fvr.tj_tarjetasPrepago.bean.TjBean;
 import com.fvr.tk_tokens.bean.TkBean;
 import com.fvr.us_users.bean.UsBean;
+import com.google.zxing.WriterException;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONNull;
@@ -1323,6 +1328,25 @@ public class Subrutinas {
         return sortedHostNames;
     }	
 
+	public static String getQrImage_base64(String qrCodeText, int size) {
+		String resultado = "";
+		
+		if (qrCodeText == null || size < 1) { return resultado; }
+		
+		try {
+			BufferedImage image = QRCodeGenerator.generateQRImage(qrCodeText, size, Color.BLACK, Color.ORANGE);
+			if (image != null) {
+				resultado = ImageUtils.encodeToString(image, "png");
+				resultado = "data:image/png;base64," + resultado;
+			}
+		} catch (WriterException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return resultado;
+	}
+	
 	public static String macroSustituye( String losDatos, String patron, String valor ) {
         String pre, pos;
         for (int ix = losDatos.indexOf(patron);ix>-1;ix=losDatos.indexOf(patron)) {

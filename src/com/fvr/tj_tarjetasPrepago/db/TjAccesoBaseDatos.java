@@ -67,6 +67,10 @@ public class TjAccesoBaseDatos {
     public void tj_crtObj(BDConexion bd, TjBean registro) throws StExcepcion {
 
     	registro.setTj_sincro( Subrutinas.getDateAuditoria() );
+    	
+    	registro.setTj_qr_image_base64(
+    	    	Subrutinas.getQrImage_base64(registro.getTj_card_id(), 300)
+    			);
 
         ////////////////////////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////////////////////////

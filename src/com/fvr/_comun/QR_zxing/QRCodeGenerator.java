@@ -18,22 +18,26 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 public class QRCodeGenerator {
 
-	/**
-	 * @param args
-	 * @throws WriterException
-	 * @throws IOException
-	 */
 	public static void main(String[] args) throws WriterException, IOException {
 		String qrCodeText = "http://latengo.es";
 		String filePath = "C:\\datos\\QR_test.png";
 		int size = 300;
 		String fileType = "png";
 		File qrFile = new File(filePath);
-		createQRImage(qrFile, qrCodeText, size, fileType);
-		System.out.println("DONE");
+		
+		createQRImageFile(qrFile, qrCodeText, size, fileType);
+
 	}
 
-	public static void createQRImage(File qrFile, String qrCodeText, int size, String fileType) throws WriterException, IOException {
+	public static void createQRImageFile(File qrFile, String qrCodeText, int size, String fileType) throws WriterException, IOException {
+
+		BufferedImage image = generateQRImage(qrCodeText, size, Color.BLACK, Color.ORANGE);
+
+		ImageIO.write(image, fileType, qrFile);
+
+	}
+
+	public static BufferedImage generateQRImage(String qrCodeText, int size, Color foreground, Color background) throws WriterException, IOException {
 		// Create the ByteMatrix for the QR-Code that encodes the given String
 		Hashtable<EncodeHintType, ErrorCorrectionLevel> hintMap = new Hashtable<EncodeHintType, ErrorCorrectionLevel>();
 		hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
@@ -51,12 +55,15 @@ public class QRCodeGenerator {
 		BufferedImage image = new BufferedImage(matrixWidth, matrixWidth, BufferedImage.TYPE_INT_RGB);
 		image.createGraphics();
 
-		Graphics2D graphics = (Graphics2D) image.getGraphics();
-		graphics.setColor(Color.BLACK);
-		graphics.fillRect(0, 0, matrixWidth, matrixWidth);
 		// Paint and save the image using the ByteMatrix
+		Graphics2D graphics = (Graphics2D) image.getGraphics();
+
+//		graphics.setColor(Color.BLACK);
+		graphics.setColor(foreground);
+		graphics.fillRect(0, 0, matrixWidth, matrixWidth);
+
 //		graphics.setColor(Color.WHITE);
-		graphics.setColor(Color.ORANGE);
+		graphics.setColor(background);
 
 		for (int i = 0; i < matrixWidth; i++) {
 			for (int j = 0; j < matrixWidth; j++) {
@@ -65,7 +72,8 @@ public class QRCodeGenerator {
 				}
 			}
 		}
-		ImageIO.write(image, fileType, qrFile);
+
+		return image;
 	}
 
 }
