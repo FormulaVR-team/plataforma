@@ -76,18 +76,21 @@
 				</md-select>
 			</md-input-container>
 			</div>
+<!-- 
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>asignation_order</label>
 				<input type="text" ng-model="actionForm.cp_asignation_order" />
 			</md-input-container>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+ -->
+ 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>install_date</label>
 				<input type="text" ng-model="actionForm.cp_install_date" />
 			</md-input-container>
 			</div>
+<!-- 
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>reset_date_used</label>
@@ -100,12 +103,14 @@
 				<input type="text" ng-model="actionForm.cp_hours_used" />
 			</md-input-container>
 			</div>
+ -->
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>note</label>
 				<input type="text" ng-model="actionForm.cp_note" />
 			</md-input-container>
 			</div>
+<!-- 
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>comment</label>
@@ -130,7 +135,7 @@
 				<input type="text" ng-model="actionForm.cp_contact_service" />
 			</md-input-container>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+ 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 				<md-input-container>
 					<label>net_user</label>
 					<input type="text" ng-model="actionForm.cp_json.net_user" />
@@ -144,7 +149,7 @@
 					<input type="text" ng-model="actionForm.cp_json.net_path" />
 				</md-input-container>
 			</div>
-
+-->
 	</div>
 	<div class="row margin-0">
 		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2 pull-right">

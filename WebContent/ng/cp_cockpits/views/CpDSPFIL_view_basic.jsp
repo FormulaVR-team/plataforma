@@ -143,13 +143,13 @@
 							</md-select>
 						</md-input-container>
 					</div>
+<!-- 
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 						<md-input-container>
 							<label>json</label>
 							<input type="text" ng-model="actionForm.cp_filtro.cp_json" />
 						</md-input-container>
 					</div>
-<!-- 
 					<md-input-container>
 						<label>asignation_order</label>
 						<input type="text" ng-model="actionForm.cp_filtro.cp_asignation_order" />
@@ -220,18 +220,18 @@
 					<th>serial_number</th>
 					<th>name</th>
 					<th>isBlocked</th>
-					<th>asignation_order</th>
+					<!-- <th>asignation_order</th> -->
 					<th>install_date</th>
-					<th>reset_date_used</th>
-					<th>hours_used</th>
+					<!-- <th>reset_date_used</th> -->
+					<!-- <th>hours_used</th> -->
 					<th>note</th>
-					<th>comment</th>
-					<th>observation</th>
-					<th>warning</th>
+					<!-- <th>comment</th> -->
+					<!-- <th>observation</th> -->
+					<!-- <th>warning</th> -->
 	<!--
 	 				<th>contact_service</th>
-	 -->
 					<th>json</th>
+	 -->
 	 			</tr>
   		</thead>
   		<tbody>
@@ -257,18 +257,18 @@
 					<td>{{reg.cp_serial_number}}&nbsp;</td>
 					<td>{{reg.cp_name}}&nbsp;</td>
 					<td>{{reg.cp_isBlocked}}&nbsp;</td>
-					<td>{{reg.cp_asignation_order}}&nbsp;</td>
+					<!-- <td>{{reg.cp_asignation_order}}&nbsp;</td> -->
 					<td>{{reg.cp_install_date}}&nbsp;</td>
-					<td>{{reg.cp_reset_date_used}}&nbsp;</td>
-					<td>{{reg.cp_hours_used}}&nbsp;</td>
+					<!-- <td>{{reg.cp_reset_date_used}}&nbsp;</td> -->
+					<!-- <td>{{reg.cp_hours_used}}&nbsp;</td> -->
 					<td>{{reg.cp_note}}&nbsp;</td>
-					<td>{{reg.cp_comment}}&nbsp;</td>
-					<td>{{reg.cp_observation}}&nbsp;</td>
-					<td>{{reg.cp_warning}}&nbsp;</td>
+					<!-- <td>{{reg.cp_comment}}&nbsp;</td> -->
+					<!-- <td>{{reg.cp_observation}}&nbsp;</td> -->
+					<!-- <td>{{reg.cp_warning}}&nbsp;</td> -->
 	<!--
 	 				<td>{{reg.cp_contact_service}}&nbsp;</td>
-	 -->
 					<td title="{{reg.cp_json}}">{{reg.cp_json.net_user}}</td>
+	 -->
 	 			</tr>
   		</tbody>
   	</table>
