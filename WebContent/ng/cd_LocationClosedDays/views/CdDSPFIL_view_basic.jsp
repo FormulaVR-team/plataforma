@@ -129,8 +129,8 @@
 				<tr>
 					<th><!-- {{actionForm.filasMarcadas}}&nbsp;{{actionForm.clavesMarcadas}} --></th>
 					<th>sincro</th>
-					<th>mark</th>
-					<th>is_deleted</th>
+					<th>M</th>
+					<th>D</th>
 					<th>author</th>
 					<th>location_id</th>
 					<th>closed_day_aaaa_mm_dd</th>

@@ -408,8 +408,8 @@
 					<th>created_at</th>
 					<th>exec_at</th>
 					<th>pay_sts</th>
-					<!-- <th>mark</th> -->
-					<!-- <th>is_deleted</th> -->
+					<!-- <th>M</th> -->
+					<!-- <th>D</th> -->
 					<!-- <th>author</th> -->
 					<th>reservation</th>
 					<!-- <th>location_id</th> -->

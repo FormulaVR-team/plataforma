@@ -9,6 +9,19 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 
 <div name="TjDSPFIL_form">
+
+<style>
+.avatarClass {
+	width: 20px;
+    transition: width 0.5s;
+    transition-timing-function: ease;
+    -webkit-transition: width 0.5s; /* Safari */
+    -webkit-transition-timing-function: ease; /* Safari */
+}
+.avatarClass:hover {
+	width: 200px;
+}
+</style>
 			
 	<h1 class="page-title">tarjetasPrepago</h1>
 
@@ -143,21 +156,26 @@
 				<tr>
 					<th><!-- {{actionForm.filasMarcadas}}&nbsp;{{actionForm.clavesMarcadas}} --></th>
 					<th>sincro</th>
-					<th>mark</th>
-					<th>is_deleted</th>
+					<th>M</th>
+					<th>D</th>
 					<th>author</th>
 					<th>card_id</th>
 					<th>balance_initial</th>
 					<th>balance_current</th>
 					<th>last_sale_amount</th>
 					<th>last_sale_moment</th>
-					<th>qr_image_base64</th>
+					<!-- <th>qr_image_base64</th> -->
 				</tr>
 			</thead>
 			<tbody>
 				<tr ng-repeat="reg in actionForm.grid" ng-click="putRecordAsTheCurrent(reg)" data-toggle="modal" data-target="#tjDSPFIL_EDTRCD_modal">
 					<td><input type="checkbox" onclick="event.stopPropagation();" ng-model="actionForm.filasMarcadas[$index]" ng-click="setClaveMarcada( this.reg.key, $index );"/></td>
-					<td>{{reg.tj_sincro}}&nbsp;</td>
+					<td>
+						<div layout="row" layout-align="start start">
+							<div><img class="avatarClass" ng-src="{{reg.tj_qr_image_base64}}" /></div>
+							<div>{{reg.tj_sincro}}</div>
+						</div>
+					</td>
 					<td>{{reg.tj_mark}}&nbsp;</td>
 					<td>{{reg.tj_is_deleted}}&nbsp;</td>
 					<td>{{reg.tj_author}}&nbsp;</td>
@@ -166,7 +184,7 @@
 					<td>{{reg.tj_balance_current}}&nbsp;</td>
 					<td>{{reg.tj_last_sale_amount}}&nbsp;</td>
 					<td>{{reg.tj_last_sale_moment}}&nbsp;</td>
-					<td><img src="{{reg.tj_qr_image_base64}}"/></td>
+					<!-- <td><img src="{{reg.tj_qr_image_base64}}"/></td> -->
 				</tr>
 			</tbody>
 		</table>

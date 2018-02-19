@@ -200,8 +200,8 @@
 				<tr>
 					<th>&nbsp;<!-- {{actionForm.filasMarcadas}}&nbsp;{{actionForm.clavesMarcadas}} --></th>
 					<!-- <th>sincro</th> -->
-					<!-- <th>mark</th> -->
-					<!-- <th>is_deleted</th> -->
+					<!-- <th>M</th> -->
+					<!-- <th>D</th> -->
 					<!-- <th>author</th> -->
 					<th>RS_location_id</th>
 					<th>reservation_id</th>
