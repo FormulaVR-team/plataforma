@@ -710,7 +710,9 @@ CREATE TABLE "FormulaVR"."T_TJ_tarjetasPrepago"(
  "balance_initial" Numeric(12,3) NOT NULL,
  "balance_current" Numeric(12,3) NOT NULL,
  "last_sale_amount" Numeric(12,3) NOT NULL,
- "last_sale_moment" Character varying(20) DEFAULT '' NOT NULL
+ "last_sale_moment" Character varying(20) DEFAULT '' NOT NULL,
+ "qr_image_base64" Text NOT NULL,
+ "json" Text NOT NULL
 )
 WITH (OIDS=FALSE)
 ;
@@ -1024,7 +1026,7 @@ FROM
 ;
 
 CREATE VIEW "FormulaVR"."V_TJ_RTV_tarjetasPrepago" AS
-SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."card_id", "a"."balance_initial", "a"."balance_current", "a"."last_sale_amount", "a"."last_sale_moment"
+SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."card_id", "a"."balance_initial", "a"."balance_current", "a"."last_sale_amount", "a"."last_sale_moment", "a"."qr_image_base64", "a"."json"
 FROM 
 
 
