@@ -31,7 +31,7 @@ public class QRCodeGenerator {
 
 	public static void createQRImageFile(File qrFile, String qrCodeText, int size, String fileType) throws WriterException, IOException {
 
-		BufferedImage image = generateQRImage(qrCodeText, size, Color.BLACK, Color.ORANGE);
+		BufferedImage image = generateQRImage(qrCodeText, size, Color.BLACK, Color.WHITE);
 
 		ImageIO.write(image, fileType, qrFile);
 
