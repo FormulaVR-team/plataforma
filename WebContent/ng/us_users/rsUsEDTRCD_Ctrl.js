@@ -195,7 +195,7 @@ angular
 									function(response) {
 
 										if (response.data.rc === 'OK') {
-											$mdToast.showSimple( "Registro cambiado" );
+											$mdToast.show($mdToast.simple().textContent("Registro cambiado").position('top right').hideDelay(500));
 
 											var modelo = response.data.text;
 											moveModelToView( $scope, modelo );

@@ -420,7 +420,7 @@ angular
 									function(response) {
 	
 										if (response.data.rc === 'OK') {
-											$mdToast.showSimple( "Registro agregado" );
+											$mdToast.show($mdToast.simple().textContent("Registro agregado").position('top right').hideDelay(500));
 											$('.modal-backdrop').remove();
 											$state.reload();
 										} else {
@@ -453,7 +453,7 @@ angular
 
 										if (response.data.rc === 'OK') {
 											$('#acDSPFIL_EDTRCD_modal').modal('hide');
-											$mdToast.showSimple( "Registro cambiado" );
+											$mdToast.show($mdToast.simple().textContent("Registro cambiado").position('top right').hideDelay(500));
 											// $('.modal-backdrop').remove();
 											// $state.reload();
 											$scope.goRow( $scope.actionForm.filaInicioGrid );
@@ -482,7 +482,7 @@ angular
 
 										if (response.data.rc === 'OK') {
 											$('#acDSPFIL_EDTRCD_modal').modal('hide');
-											$mdToast.showSimple( "Registro suprimido" );
+											$mdToast.show($mdToast.simple().textContent("Registro suprimido").position('top right').hideDelay(500));
 											// $('.modal-backdrop').remove();
 											// $state.reload();
 											$scope.goRow( $scope.actionForm.filaInicioGrid );

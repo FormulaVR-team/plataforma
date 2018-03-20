@@ -199,7 +199,7 @@ angular
 									function(response) {
 
 										if (response.data.rc === 'OK') {
-											$mdToast.showSimple( "Registro agregado" );
+											$mdToast.show($mdToast.simple().textContent("Registro agregado").position('top right').hideDelay(500));
 
 											var modelo = response.data.text;
 											moveModelToView( $scope, modelo );
