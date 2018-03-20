@@ -10,27 +10,7 @@
 
 <div name="EsEDTRCD_form">
     <div class="modal-header">
-		<ul>
-			<li>logon_USR &nbsp; {{actionForm.logon_USR}}</li>
-		</ul>
 
-
-			<md-input-container>
-				<label>sincro</label>
-				<input type="text" ng-model="actionForm.es_sincro" />
-			</md-input-container>
-			<md-input-container>
-				<label>mark</label>
-				<input type="text" ng-model="actionForm.es_mark" />
-			</md-input-container>
-			<md-input-container>
-				<label>is_deleted</label>
-				<input type="text" ng-model="actionForm.es_is_deleted" />
-			</md-input-container>
-			<md-input-container>
-				<label>author</label>
-				<input type="text" ng-model="actionForm.es_author" />
-			</md-input-container>
 			<md-input-container>
 				<label>event_id</label>
 				<input type="text" ng-model="actionForm.es_event_id" />
@@ -79,11 +59,6 @@
 				<label>pay_status</label>
 				<input type="text" ng-model="actionForm.es_pay_status" />
 			</md-input-container>
-			<md-input-container>
-				<label>json</label>
-				<input type="text" ng-model="actionForm.es_json" />
-			</md-input-container>
-
 
     </div>
     <div class="modal-footer">

@@ -281,12 +281,12 @@ public class EvEDTRCD_A extends Action {
             resultado = "NOVALE";
             errores.add("error", new ActionMessage( "errors.detail", "MAX_INSCRIPTIONS obligatorio." ));
         }
-        if (
-		   pantalla.getEv_amount() < 1
-                ) {
-            resultado = "NOVALE";
-            errores.add("error", new ActionMessage( "errors.detail", "AMOUNT obligatorio." ));
-        }
+//        if (
+//		   pantalla.getEv_amount() < 1
+//                ) {
+//            resultado = "NOVALE";
+//            errores.add("error", new ActionMessage( "errors.detail", "AMOUNT obligatorio." ));
+//        }
         if (
         		pantalla.getEv_currency() == null || pantalla.getEv_currency().trim().length() < 1
                 ) {

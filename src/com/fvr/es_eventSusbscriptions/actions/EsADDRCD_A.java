@@ -158,11 +158,15 @@ public class EsADDRCD_A extends Action {
         ///////////////////////////////////////////
         resultado = this.chkPantalla( request, pantalla );
         // Altero imagen WRK en disco:
-        if (resultado.equalsIgnoreCase("OK"))
-            resultado = this.crtRcd( request, pantalla );
+//        if (resultado.equalsIgnoreCase("OK"))
+//            resultado = this.crtRcd( request, pantalla );
         if (resultado.equalsIgnoreCase("OK")) {
         	if ( pantalla.getEs_amount() > 0.0 ) {
+                // Se registrará al retorno del pago!!!!! (Si no retorna, no existirá y por tanto no ocupará plaza en el evento)
             	resultado = pagarInscripcion_tpv(request, response, form);
+        	} else {
+        		pantalla.setEs_tpv_order("");
+                resultado = this.crtRcd( request, pantalla );
         	}
         }
         ///////////////////////////////////////////
@@ -313,26 +317,23 @@ public class EsADDRCD_A extends Action {
     private String crtRcd(HttpServletRequest request, ActionForm  form) {
         String resultado = "OK";
         ///////////////////////////////////////////
-        
-        // Se registrará al retorno del pago!!!!! (Si no retorna, no existirá y por tanto no ocupará plaza en el evento)
-        
-//        EsRCD_AF pantalla = (EsRCD_AF)form;
-//        EsBean registro = null;
-//        if (pantalla != null ) {
-//            registro = new EsBean();
-//            
-//            pantalla.copyTo( registro );
-//            
-//            EsAccesoBaseDatos db = new EsAccesoBaseDatos();
-//            try {
-//                db.es_crtObj( new Subrutinas().getBDConexion(request), registro );
-//            } catch (StExcepcion ex) {
-//                resultado = "NOVALE";
-//                ActionMessages errores = new ActionMessages();
-//                errores.add("error", new ActionMessage( "errors.detail", ex.getMessage() ));
-//                saveErrors(request,errores);
-//            }
-//        }
+        EsRCD_AF pantalla = (EsRCD_AF)form;
+        EsBean registro = null;
+        if (pantalla != null ) {
+            registro = new EsBean();
+            
+            pantalla.copyTo( registro );
+            
+            EsAccesoBaseDatos db = new EsAccesoBaseDatos();
+            try {
+                db.es_crtObj( new Subrutinas().getBDConexion(request), registro );
+            } catch (StExcepcion ex) {
+                resultado = "NOVALE";
+                ActionMessages errores = new ActionMessages();
+                errores.add("error", new ActionMessage( "errors.detail", ex.getMessage() ));
+                saveErrors(request,errores);
+            }
+        }
         ///////////////////////////////////////////
         return resultado;
     }

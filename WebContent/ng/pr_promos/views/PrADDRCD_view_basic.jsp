@@ -11,30 +11,6 @@
 <div name="PrADDRCD_form">
 	<div class="row margin-0">
 
-
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-			<md-input-container class="md-block">
-				<label>sincro</label>
-				<input type="text" ng-model="actionForm.pr_sincro" />
-			</md-input-container>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-			<md-input-container class="md-block">
-				<label>mark</label>
-				<input type="text" ng-model="actionForm.pr_mark" />
-			</md-input-container>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-			<md-input-container class="md-block">
-				<label>is_deleted</label>
-				<input type="text" ng-model="actionForm.pr_is_deleted" />
-			</md-input-container>
-			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-			<md-input-container class="md-block">
-				<label>author</label>
-				<input type="text" ng-model="actionForm.pr_author" />
-			</md-input-container>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">

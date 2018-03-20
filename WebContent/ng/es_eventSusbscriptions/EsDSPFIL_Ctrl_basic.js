@@ -110,6 +110,7 @@ angular
 				    // Combos y auxiliares para componentes de presentación:
 				    $scope.lst_lo = null; // [ {value: "10", displayName: 'Diez'}, {value: "20", displayName: 'Veinte'} ];
 				    $scope.aux_es_EV_location_id = "";
+				    $scope.aux_FLT_es_EV_location_id = "";
 				    $scope.lst_ev = null; // [ {value: "10", displayName: 'Diez'}, {value: "20", displayName: 'Veinte'} ];
 				    $scope.aux_es_event_id = "";
 				    /////
@@ -133,6 +134,10 @@ angular
 						$scope.actionForm.es_filtro.es_inscription_user_id = $scope.$parent.$root.varGlobal.logon_USR;
 					} else {
 						$scope.actionForm.es_filtro = angular.fromJson( $window.sessionStorage.getItem("EsDSPFIL.es_filtro") );
+					}
+					if ( null != $scope.actionForm.es_filtro ) {
+					    // Combos y auxiliares para componentes de presentación:
+						$scope.aux_FLT_es_EV_location_id = {value: $scope.actionForm.es_filtro.es_EV_location_id, displayName: ""};
 					}
 					///////////////////////////////////////////////////////////////////////
 					// Funciones internas:
@@ -229,7 +234,11 @@ angular
 					$scope.filtrar = function() {
 						$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
 					    $scope.actionForm.filasGrid = $scope.aux_filasGrid.value;
-						EsDSPFIL_service
+
+					    // Combos y auxiliares para componentes de presentación:
+					    $scope.actionForm.es_filtro.es_EV_location_id = $scope.aux_FLT_es_EV_location_id.value;
+
+					    EsDSPFIL_service
 						.filtrar($scope.actionForm)
 						.then(
 							function(response) {

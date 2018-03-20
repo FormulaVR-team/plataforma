@@ -47,6 +47,17 @@
 			</div>
 			<!-- Botones final -->
 		</div>
+
+		<div class="col-xs-12 col-sm-2 text-right">
+  	<!-- <md-input-container style="vertical-align: top;"> -->
+			<!-- <label>location_id</label> -->
+			<md-select placeholder="location_id" ng-model="aux_FLT_es_EV_location_id" md-on-close="filtrar()" ng-model-options="{trackBy: '$value.value'}">
+				<md-optgroup label="location_id">
+					<md-option ng-value="item" ng-repeat="item in lst_lo">{{ item.displayName }}</md-option>
+				</md-optgroup>			
+			</md-select>
+		<!-- </md-input-container> -->
+		</div>
 		
 		<div>
 			<md-input-container>
@@ -104,14 +115,6 @@
 				<md-input-container>
 					<label>EV_name</label>
 					<input type="text" ng-model="actionForm.es_filtro.es_EV_name" />
-				</md-input-container>
-				<md-input-container>
-					<label>EV_location_id</label>
-					<input type="text" ng-model="actionForm.es_filtro.es_EV_location_id" />
-				</md-input-container>
-				<md-input-container>
-					<label>LO_name</label>
-					<input type="text" ng-model="actionForm.es_filtro.es_LO_name" />
 				</md-input-container>
 				<md-input-container>
 					<label>first_name</label>
@@ -230,15 +233,14 @@
 	
 <!-- Panel EDTRCD inicio -->	
 <div class="container">
-  <!-- Modal -->
-  <div class="modal fade" id="esDSPFIL_EDTRCD_modal" role="dialog" data-backdrop="false">
+  <div class="modal fade modal-full-width" id="esDSPFIL_EDTRCD_modal" role="dialog" data-backdrop="false">
     <div class="modal-dialog">
-    
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modificar: eventSusbscriptions</h4>
+          <button type="button" class="close" data-dismiss="modal">
+			<i class="mfw-icon material-icons">clear</i>
+		  </button>
+          <h2 class="modal-title">Modificar: eventSusbscriptions</h2>
         </div>
         <div class="modal-body">
 			<span ng-include="'ng/es_eventSusbscriptions/views/EsEDTRCD_view_basic.jsp'" />
