@@ -29,8 +29,8 @@
   <link href="./resBS/css/styles.css?fvrVer=${miVersion}" rel="stylesheet" />
 
   <!-- Angular -->    
-  <script src="./ng/_lib/ng/angular.min.js?fvrVer=${miVersion}"></script>
-  <script src="./ng/_lib/ng/angular-ui-router.min.js?fvrVer=${miVersion}"></script>
+	<script src="./ng/_lib/ng/angular.min.js?fvrVer=${miVersion}"></script>
+	<script src="./ng/_lib/ng/angular-ui-router.min.js?fvrVer=${miVersion}"></script>
 	<script src="./ng/_lib/ng/angular-animate.min.js?fvrVer=${miVersion}"></script>
 	<script src="./ng/_lib/ng/angular-aria.min.js?fvrVer=${miVersion}"></script>
 	<script src="./ng/_lib/ng/angular-messages.min.js?fvrVer=${miVersion}"></script>

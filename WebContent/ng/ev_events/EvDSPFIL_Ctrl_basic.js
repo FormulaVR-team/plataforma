@@ -107,6 +107,12 @@ angular
 				    $scope.aux_filasGrid = {value: 0};
 				    $scope.aux_filasGrid.value = $scope.actionForm.filasGrid;
 
+				    /////
+				    // Combos y auxiliares para componentes de presentación:
+				    $scope.lst_lo = null; // [ {value: "10", displayName: 'Diez'}, {value: "20", displayName: 'Veinte'} ];
+				    $scope.aux_ev_location_id = "";
+				    $scope.aux_FLT_ev_location_id = "";
+
 				    $scope.exportLink = "<span></span>";	// Recoge el link al fichero para exportar.
 					///////////////////////////////////////////////////////////////////////
 					// Parametros de entrada:
@@ -121,6 +127,10 @@ angular
 					///////////////////////////////////////////////////////////////////////
 					// Aplicar su filtro persistente:
 					$scope.actionForm.ev_filtro = angular.fromJson( $window.sessionStorage.getItem("EvDSPFIL.ev_filtro") );
+					if ( null != $scope.actionForm.ev_filtro ) {
+					    // Combos y auxiliares para componentes de presentación:
+						$scope.aux_FLT_ev_location_id = {value: $scope.actionForm.ev_filtro.ev_location_id, displayName: ""};
+					}
 					///////////////////////////////////////////////////////////////////////
 					// Funciones internas:
 					function moveModelToView( scope, model ) {
@@ -158,6 +168,10 @@ angular
 							function(response) {
 								console.error("Ha sucedido un error: " + response.statusText);
 							});
+
+				    // Combos y auxiliares para componentes de presentación:
+					app_services.lo_lst().then( function(response) {if (response.rc === 'OK') { $scope.lst_lo = response.text;} else { alert( "ERROR: " + response.text); }},function(response) { console.error("Ha sucedido un error: " + response.statusText); });
+
 					///////////////////////////////////////////////////////////////////////
 					///////////////////////////////////////////////////////////////////////
 					///////////////////////////////////////////////////////////////////////
@@ -179,9 +193,13 @@ angular
 					};
 					
 					$scope.filtrar = function() {
-						$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
+					    $scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
 					    $scope.actionForm.filasGrid = $scope.aux_filasGrid.value;
-						EvDSPFIL_service
+
+					    // Combos y auxiliares para componentes de presentación:
+					    $scope.actionForm.ev_filtro.ev_location_id = $scope.aux_FLT_ev_location_id.value;
+
+					    EvDSPFIL_service
 						.filtrar($scope.actionForm)
 						.then(
 							function(response) {
@@ -314,6 +332,9 @@ angular
 						$scope.actionForm.ev_date3 = reg.ev_date3; // date3
 						$scope.actionForm.ev_date4 = reg.ev_date4; // date4
 						$scope.actionForm.ev_json = reg.ev_json; // json						
+
+					    // Combos y auxiliares para componentes de presentación:
+						$scope.aux_ev_location_id = {value: $scope.actionForm.ev_location_id, 	displayName: ""};
 					};
 
 					$scope.initKey = function() {
@@ -341,6 +362,9 @@ angular
 						$scope.actionForm.ev_date3 = ""; // date3
 						$scope.actionForm.ev_date4 = ""; // date4
 						$scope.actionForm.ev_json = ""; // json						
+
+					    // Combos y auxiliares para componentes de presentación:
+						$scope.aux_ev_location_id	= {value: "", displayName: ""};
 					};
 
 					$scope.marcarTodo = function() {
@@ -406,6 +430,10 @@ angular
 						
 //						if (validationService.validarEmail($scope.actionForm.logon_USR)) {
 
+					    // Combos y auxiliares para componentes de presentación:
+						// Recoger valores de combos:
+						$scope.actionForm.ev_location_id = $scope.aux_ev_location_id.value;
+
 						//llamo a su servicio pasandole el actionForm de entidad
 						EvDSPFIL_service
 								.add($scope.actionForm)
@@ -413,8 +441,9 @@ angular
 									function(response) {
 	
 										if (response.data.rc === 'OK') {
-											$mdToast.showSimple( "Registro agregado" );
+											$mdToast.show($mdToast.simple().textContent("Registro agregado").position('top right').hideDelay(500));
 											$('.modal-backdrop').remove();
+											$('#evDSPFIL_ADDRCD_modal').modal('hide');
 											$state.reload();
 										} else {
 											app_services.errorComun(response.data.text);
@@ -438,6 +467,10 @@ angular
 						
 //						if (validationService.validarEmail($scope.actionForm.logon_USR)) {
 
+					    // Combos y auxiliares para componentes de presentación:
+						// Recoger valores de combos:
+						$scope.actionForm.ev_location_id = $scope.aux_ev_location_id.value;
+
 						//llamo a su servicio pasandole el actionForm de entidad
 						EvDSPFIL_service
 								.chg($scope.actionForm)
@@ -446,9 +479,10 @@ angular
 
 										if (response.data.rc === 'OK') {
 											$('#evDSPFIL_EDTRCD_modal').modal('hide');
-											$mdToast.showSimple( "Registro cambiado" );
+											$mdToast.show($mdToast.simple().textContent('Registro cambiado').position('top right').hideDelay(500));
 											// $('.modal-backdrop').remove();
 											// $state.reload();
+											$('#evDSPFIL_EDTRCD_modal').modal('hide');
 											$scope.goRow( $scope.actionForm.filaInicioGrid );
 										} else {
 											app_services.errorComun(response.data.text);
@@ -475,9 +509,10 @@ angular
 
 										if (response.data.rc === 'OK') {
 											$('#evDSPFIL_EDTRCD_modal').modal('hide');
-											$mdToast.showSimple( "Registro suprimido" );
+											$mdToast.show($mdToast.simple().textContent("Registro suprimido").position('top right').hideDelay(500));
 											// $('.modal-backdrop').remove();
 											// $state.reload();
+											$('#evDSPFIL_EDTRCD_modal').modal('hide');
 											$scope.goRow( $scope.actionForm.filaInicioGrid );
 										} else {
 											app_services.errorComun(response.data.text);

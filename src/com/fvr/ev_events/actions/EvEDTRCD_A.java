@@ -263,6 +263,42 @@ public class EvEDTRCD_A extends Action {
         }
         ///////////////////////////////////////////
 
+        if (
+		   pantalla.getEv_location_id() == null || pantalla.getEv_location_id().trim().length() < 1
+                ) {
+            resultado = "NOVALE";
+            errores.add("error", new ActionMessage( "errors.detail", "LOCATION obligatorio." ));
+        }
+        if (
+		   pantalla.getEv_name() == null || pantalla.getEv_name().trim().length() < 1
+                ) {
+            resultado = "NOVALE";
+            errores.add("error", new ActionMessage( "errors.detail", "NAME obligatorio." ));
+        }
+        if (
+		   pantalla.getEv_max_inscriptions() < 1
+                ) {
+            resultado = "NOVALE";
+            errores.add("error", new ActionMessage( "errors.detail", "MAX_INSCRIPTIONS obligatorio." ));
+        }
+        if (
+		   pantalla.getEv_amount() < 1
+                ) {
+            resultado = "NOVALE";
+            errores.add("error", new ActionMessage( "errors.detail", "AMOUNT obligatorio." ));
+        }
+        if (
+        		pantalla.getEv_currency() == null || pantalla.getEv_currency().trim().length() < 1
+                ) {
+            resultado = "NOVALE";
+            errores.add("error", new ActionMessage( "errors.detail", "CURRENCY obligatorio." ));
+        }
+        if (
+        		pantalla.getEv_deadline() == null || pantalla.getEv_deadline().trim().length() != 10
+                ) {
+            resultado = "NOVALE";
+            errores.add("error", new ActionMessage( "errors.detail", "DEAD_LINE obligatorio." ));
+        }
         
 	
         ///////////////////////////////////////////

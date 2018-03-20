@@ -47,6 +47,18 @@
 			</div>
 			<!-- Botones final -->
 		</div>
+
+		<div class="col-xs-12 col-sm-2 text-right">
+  	<!-- <md-input-container style="vertical-align: top;"> -->
+			<!-- <label>location_id</label> -->
+			<md-select placeholder="location_id" ng-model="aux_FLT_ev_location_id" md-on-close="filtrar()" ng-model-options="{trackBy: '$value.value'}">
+				<md-optgroup label="location_id">
+					<md-option ng-value="item" ng-repeat="item in lst_lo">{{ item.displayName }}</md-option>
+				</md-optgroup>			
+			</md-select>
+		<!-- </md-input-container> -->
+		</div>
+		
 		<div class="col-xs-12 col-sm-5 text-right">
 			<!-- Paginador inicio -->
 			<div>
@@ -72,11 +84,11 @@
 			<div id="evFilterBox" style="display:none; border: black solid 1px;">
 				<md-button class=" md-raised md-warn md-button md-ink-ripple" ng-click="filtrar()" onclick="$('#filterIcon').toggleClass('rotate');$('#evFilterBox').slideToggle();">Aplicar</md-button>
 				<div class="alert alert-default fade in" style="display: block; padding: 0; margin: 0;">
-
 				<md-input-container>
 					<label>sincro</label>
 					<input type="text" ng-model="actionForm.ev_filtro.ev_sincro" />
 				</md-input-container>
+<!-- 
 				<md-input-container>
 					<label>mark</label>
 					<input type="text" ng-model="actionForm.ev_filtro.ev_mark" />
@@ -89,10 +101,16 @@
 					<label>author</label>
 					<input type="text" ng-model="actionForm.ev_filtro.ev_author" />
 				</md-input-container>
-				<md-input-container>
+ -->
+ 				<md-input-container>
 					<label>event_id</label>
 					<input type="text" ng-model="actionForm.ev_filtro.ev_event_id" />
 				</md-input-container>
+				<md-input-container>
+					<label>name</label>
+					<input type="text" ng-model="actionForm.ev_filtro.ev_name" />
+				</md-input-container>
+<!-- 
 				<md-input-container>
 					<label>location_id</label>
 					<input type="text" ng-model="actionForm.ev_filtro.ev_location_id" />
@@ -101,10 +119,7 @@
 					<label>LO_name</label>
 					<input type="text" ng-model="actionForm.ev_filtro.ev_LO_name" />
 				</md-input-container>
-				<md-input-container>
-					<label>name</label>
-					<input type="text" ng-model="actionForm.ev_filtro.ev_name" />
-				</md-input-container>
+ -->
 				<md-input-container>
 					<label>max_inscriptions</label>
 					<input type="text" ng-model="actionForm.ev_filtro.ev_max_inscriptions" />
@@ -121,6 +136,7 @@
 					<label>deadline</label>
 					<input type="text" ng-model="actionForm.ev_filtro.ev_deadline" />
 				</md-input-container>
+<!-- 
 				<md-input-container>
 					<label>comment</label>
 					<input type="text" ng-model="actionForm.ev_filtro.ev_comment" />
@@ -145,7 +161,7 @@
 					<label>json</label>
 					<input type="text" ng-model="actionForm.ev_filtro.ev_json" />
 				</md-input-container>
-
+ -->
 				</div>
 			</div>
 			<!-- Caja de filtros final -->
@@ -163,9 +179,9 @@
 					<!-- <th>D</th> -->
 					<!-- <th>author</th> -->
 					<th>event_id</th>
+					<th>name</th>
 					<!-- <th>location_id</th> -->
 					<th>location</th>
-					<th>name</th>
 					<th style="text-align:right;">max_inscriptions</th>
 					<th style="text-align:right;">amount</th>
 					<!-- <th>currency</th> -->
@@ -186,9 +202,9 @@
 					<!-- <td>{{reg.ev_is_deleted}}&nbsp;</td> -->
 					<!-- <td>{{reg.ev_author}}&nbsp;</td> -->
 					<td>{{reg.ev_event_id}}&nbsp;</td>
+					<td>{{reg.ev_name}}&nbsp;</td>
 					<!-- <td>{{reg.ev_location_id}}&nbsp;</td> -->
 					<td>{{reg.ev_LO_name}}&nbsp;</td>
-					<td>{{reg.ev_name}}&nbsp;</td>
 					<td style="text-align:right;">{{reg.ev_max_inscriptions}}&nbsp;</td>
 					<td style="text-align:right;">{{reg.ev_amount}}&nbsp;{{reg.ev_currency}}</td>
 					<!-- <td>{{reg.ev_currency}}&nbsp;</td> -->
@@ -207,14 +223,14 @@
 <!-- Panel ADDRCD inicio -->	
 <div class="container">
   <!-- Modal -->
-  <div class="modal fade" id="evDSPFIL_ADDRCD_modal" role="dialog" data-backdrop="false">
+  <div class="modal fade modal-full-width" id="evDSPFIL_ADDRCD_modal" role="dialog" data-backdrop="false">
     <div class="modal-dialog">
-    
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Agregar: events</h4>
+          <button type="button" class="close" data-dismiss="modal">
+          	<i class="mfw-icon material-icons">clear</i>
+          </button>
+          <h2 class="modal-title">Agregar: events</h2>
         </div>
         <div class="modal-body">
 			<span ng-include="'ng/ev_events/views/EvADDRCD_view_basic.jsp'" />
@@ -234,14 +250,14 @@
 <!-- Panel EDTRCD inicio -->	
 <div class="container">
   <!-- Modal -->
-  <div class="modal fade" id="evDSPFIL_EDTRCD_modal" role="dialog" data-backdrop="false">
+  <div class="modal fade modal-full-width" id="evDSPFIL_EDTRCD_modal" role="dialog" data-backdrop="false">
     <div class="modal-dialog">
-    
-      <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modificar: events</h4>
+          <button type="button" class="close" data-dismiss="modal">
+          	<i class="mfw-icon material-icons">clear</i>
+          </button>
+          <h2 class="modal-title">Modificar: events</h2>
         </div>
         <div class="modal-body">
 			<span ng-include="'ng/ev_events/views/EvEDTRCD_view_basic.jsp'" />
