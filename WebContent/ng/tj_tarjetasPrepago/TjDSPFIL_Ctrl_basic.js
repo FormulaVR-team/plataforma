@@ -375,7 +375,7 @@ angular
 					};
 
 					$scope.marcados_imprimir = function() {
-						if ( ! confirmar('Suprimir las filas marcadas, ¿está seguro?',this) ) { return; }
+						if ( ! confirmar('Imprimir las tarjetas marcadas, ¿está seguro?',this) ) { return; }
 
 						// Combos y auxiliares para componentes de presentación:
 						$scope.actionForm.filasGrid = $scope.aux_filasGrid.value;
@@ -389,6 +389,12 @@ angular
 									var modelo = response.data.text;
 									moveModelToView( $scope, modelo );
 									$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
+									
+									//////////////
+									// Abrir panel para seleccionar a partir de qué etiqueta (1..27) se de be imprimir:
+									$('#tjDSPFIL_PRINT_modal').modal('show');
+									//////////////
+									
 								} else {
 									app_services.errorComun(response.data.text);
 								}

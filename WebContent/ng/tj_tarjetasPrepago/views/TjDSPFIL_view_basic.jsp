@@ -243,6 +243,28 @@
   </div>
 </div>
 <!-- Panel EDTRCD final -->	
+	
+<!-- Panel PRINT inicio -->	
+<div class="container">
+  <!-- Modal -->
+  <div class="modal fade modal-full-width" id="tjDSPFIL_PRINT_modal" role="dialog" data-backdrop="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+							<i class="mfw-icon material-icons">clear</i>
+					</button>
+          <h2 class="modal-title">Imprimir: tarjetasPrepago</h2>
+        </div>
+        <div class="modal-body">
+        cosas
+			<!-- <span ng-include="'ng/tj_tarjetasPrepago/views/TjEDTRCD_view_basic.jsp'" /> -->
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
+<!-- Panel PRINT final -->	
 
 </div>
 
