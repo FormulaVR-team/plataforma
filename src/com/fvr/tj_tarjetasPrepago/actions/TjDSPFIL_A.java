@@ -397,20 +397,22 @@ public class TjDSPFIL_A extends org.apache.struts.action.Action {
             	json.clear();
             	
             	reg_tj = Subrutinas.getTjFromId( dataBase, k );
-
             	if ( reg_tj != null && reg_tj.getTj_sincro() != null && reg_tj.getTj_sincro().trim().length() > 0 ) {
-                	reg_us = Subrutinas.getUsFromId(dataBase, reg_tj.getTj_author());
+                	reg_us = Subrutinas.getUsFromId(dataBase, reg_tj.getTj_user_id());
                 	if ( reg_us != null && reg_us.getUs_sincro() != null && reg_us.getUs_sincro().trim().length() > 0 ) {
+
                     	json.put("fld_1", reg_us.getUs_user_id());
-                    	json.put("fld_2", reg_us.getUs_first_name());
-                    	json.put("fld_3", reg_us.getUs_last_name());
-                    	json.put("fld_4", reg_us.getUs_nick() );
+                    	json.put("fld_2", reg_us.getUs_nick());
+                    	json.put("fld_3", reg_us.getUs_phone());
+                    	json.put("fld_4", reg_us.getUs_first_name());
+                    	json.put("fld_5", reg_us.getUs_last_name());
 
                     	reg_lp.setLp_card_id(reg_tj.getTj_card_id());
                     	reg_lp.setLp_json( json.toString() );
                     	
                     	db_lp.lp_dltObj(dataBase, reg_lp);
                     	db_lp.lp_crtObj(dataBase, reg_lp);
+
                 	}
             	}
                 
