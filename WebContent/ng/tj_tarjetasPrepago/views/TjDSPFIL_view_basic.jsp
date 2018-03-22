@@ -54,10 +54,13 @@
 				<md-button class="md-icon-button md-accent md-button md-ink-ripple margin-0" ng-click="marcarTodo()">
 					<md-tooltip>Marcar todo</md-tooltip>
 					<md-icon> done_all </md-icon></md-button>
-				<md-button class="md-icon-button md-accent md-button md-ink-ripple margin-0" ng-click="marcados_suprimir()">
+				<md-button class="md-icon-button md-accent md-button md-ink-ripple margin-0" ng-click="marcados_imprimir()">
+					<md-tooltip>IMPRIMIR</md-tooltip>
+					<md-icon> print </md-icon></md-button>
+<!-- 				<md-button class="md-icon-button md-accent md-button md-ink-ripple margin-0" ng-click="marcados_suprimir()">
 					<md-tooltip>Suprimir marcados</md-tooltip>
-					<md-icon> delete </md-icon></md-button>
-			</div>
+					<md-icon> delete </md-icon></md-button> -->
+ 			</div>
 			<!-- Botones final -->
 		</div>
 

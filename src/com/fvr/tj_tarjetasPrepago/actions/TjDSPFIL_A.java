@@ -1,23 +1,29 @@
 ﻿package com.fvr.tj_tarjetasPrepago.actions;
 
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.action.ActionMessages;
+
+import com.fvr.FuentesDeDatos.BDConexion;
 import com.fvr._comun.ConfigPantalla;
 import com.fvr._comun.StExcepcion;
 import com.fvr._comun.Subrutinas;
+import com.fvr.lp_labels2print.bean.LpBean;
+import com.fvr.lp_labels2print.db.LpAccesoBaseDatos;
 import com.fvr.tj_tarjetasPrepago.bean.TjBean;
 import com.fvr.tj_tarjetasPrepago.bean.TjBeanFiltro;
 import com.fvr.tj_tarjetasPrepago.db.TjAccesoBaseDatos;
 import com.fvr.tj_tarjetasPrepago.forms.TjRCD_AF;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import com.fvr.us_users.bean.UsBean;
+import com.fvr.us_users.db.UsAccesoBaseDatos;
 
 import net.sf.json.JSONObject;
-
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMessage;
-import org.apache.struts.action.ActionMessages;
 
 public class TjDSPFIL_A extends org.apache.struts.action.Action {
     
@@ -88,6 +94,8 @@ public class TjDSPFIL_A extends org.apache.struts.action.Action {
                     resultado = this.cargarPantalla( request, pantalla );
                 } else if ( opcion.trim().equalsIgnoreCase("Borrar") ) {
                     resultado = opcion_Selec_Borrar( request, pantalla );
+                } else if ( opcion.trim().equalsIgnoreCase("marcados_imprimir") ) {
+                    resultado = opcion_Selec_Imprimir( request, pantalla );
                 } else if ( opcion.trim().equalsIgnoreCase("Exportar") ) {
                     resultado = this.opcion_Exportar( request, pantalla );
                 } else if ( opcion.trim().equalsIgnoreCase("Grabar") ) {
@@ -344,6 +352,68 @@ public class TjDSPFIL_A extends org.apache.struts.action.Action {
             ///////////////////////////////////
             try {
                 db.tj_dltObj( new Subrutinas().getBDConexion(request), key );
+            } catch (StExcepcion ex) {
+                errores.add("error", new ActionMessage( "errors.detail", ex.getMessage() ));
+            }
+            //////////////////////////////
+        }
+//        errores.add("error", new ActionMessage( "errors.detail", nfilas + " registros procesados." ));
+        if (errores.size()>0) saveErrors(request,errores);
+        pantalla.setClavesMarcadas(null);
+        ///////////////////////////////////////////
+        resultado = cargarPantalla(request,form);
+        return resultado;
+    }
+
+    private String opcion_Selec_Imprimir( HttpServletRequest request, ActionForm  form ) {
+        String resultado = "OK";
+        ///////////////////////////////////////////
+        TjRCD_AF pantalla = (TjRCD_AF)form;
+        BDConexion dataBase = new Subrutinas().getBDConexion(request);
+        ActionMessages errores = new ActionMessages();
+        ///////////////////////////////////////////
+        // Aborta si no hay filas marcadas:
+        int nfilas = (pantalla.getClavesMarcadas()!=null)?pantalla.getClavesMarcadas().length:0;
+        if (nfilas<1) return cargarPantalla(request,form);
+        ///////////////////////////////////////////
+        TjAccesoBaseDatos db = new TjAccesoBaseDatos();
+        String opcion = null;
+        
+        LpAccesoBaseDatos db_lp = new LpAccesoBaseDatos();
+        UsAccesoBaseDatos us_lp = new UsAccesoBaseDatos();
+        LpBean reg_lp = new LpBean();
+        JSONObject json = new JSONObject();
+        UsBean reg_us = new UsBean();
+        
+        TjBean reg_tj = new TjBean();
+        for (int j=0;j<nfilas;j++) {
+            opcion = pantalla.getClavesMarcadas()[j];
+            //////////////////////////////
+            // Rescato la clave concatenada:
+            String k;
+            k = opcion; reg_tj.setTj_card_id( k );
+            ///////////////////////////////////
+            try {
+            	json.clear();
+            	
+            	reg_tj = Subrutinas.getTjFromId( dataBase, k );
+
+            	if ( reg_tj != null && reg_tj.getTj_sincro() != null && reg_tj.getTj_sincro().trim().length() > 0 ) {
+                	reg_us = Subrutinas.getUsFromId(dataBase, reg_tj.getTj_author());
+                	if ( reg_us != null && reg_us.getUs_sincro() != null && reg_us.getUs_sincro().trim().length() > 0 ) {
+                    	json.put("fld_1", reg_us.getUs_user_id());
+                    	json.put("fld_2", reg_us.getUs_first_name());
+                    	json.put("fld_3", reg_us.getUs_last_name());
+                    	json.put("fld_4", reg_us.getUs_nick() );
+
+                    	reg_lp.setLp_card_id(reg_tj.getTj_card_id());
+                    	reg_lp.setLp_json( json.toString() );
+                    	
+                    	db_lp.lp_dltObj(dataBase, reg_lp);
+                    	db_lp.lp_crtObj(dataBase, reg_lp);
+                	}
+            	}
+                
             } catch (StExcepcion ex) {
                 errores.add("error", new ActionMessage( "errors.detail", ex.getMessage() ));
             }

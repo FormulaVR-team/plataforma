@@ -94,6 +94,14 @@ angular
 		 		                data: actionForm
 				            }).then ( function( response) { return response; });
 		        		}
+		        	  , marcados_imprimir: function(actionForm){
+		        			actionForm.opcionPantalla = "marcados_imprimir";
+		        			return $http({
+				                url: './TjDSPFIL_A.do',
+		 		                method: 'POST',
+		 		                data: actionForm
+				            }).then ( function( response) { return response; });
+		        		}
 			        };
 		      }
 	

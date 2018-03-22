@@ -370,6 +370,31 @@ angular
 							});
 					};
 
+					$scope.marcados_imprimir = function() {
+						if ( ! confirmar('Suprimir las filas marcadas, ¿está seguro?',this) ) { return; }
+
+						// Combos y auxiliares para componentes de presentación:
+						$scope.actionForm.filasGrid = $scope.aux_filasGrid.value;
+
+						TjDSPFIL_service
+						.marcados_imprimir($scope.actionForm)
+						.then(
+							function(response) {
+
+								if (response.data.rc === 'OK') {
+									var modelo = response.data.text;
+									moveModelToView( $scope, modelo );
+									$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
+								} else {
+									app_services.errorComun(response.data.text);
+								}
+
+							},
+							function(response) {
+								console.error("Ha sucedido un error: " + response.statusText);
+							});
+					};
+
 					
 	/////////////
 	/////////////
