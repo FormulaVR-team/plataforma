@@ -257,8 +257,7 @@
           <h2 class="modal-title">Imprimir: tarjetasPrepago</h2>
         </div>
         <div class="modal-body">
-        cosas
-			<!-- <span ng-include="'ng/tj_tarjetasPrepago/views/TjEDTRCD_view_basic.jsp'" /> -->
+			<span ng-include="'labels27_70x32.jsp'" />
         </div>
       </div>      
     </div>
