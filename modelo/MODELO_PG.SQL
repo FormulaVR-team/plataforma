@@ -1,6 +1,6 @@
 ﻿/*
 Created: 01/05/2017
-Modified: 19/02/2018
+Modified: 22/03/2018
 Model: FormulaVR_V10_PostgreSQL
 Database: PostgreSQL 9.2
 */
@@ -39,6 +39,8 @@ Database: PostgreSQL 9.2
 
 -- Drop keys for tables section -------------------------------------------------
 
+ALTER TABLE "FormulaVR"."T_LP_labels2print" DROP CONSTRAINT "Key1"
+;
 ALTER TABLE "FormulaVR"."T_ES_eventSusbscriptions" DROP CONSTRAINT "PK_T_ES_eventSusbscriptions"
 ;
 ALTER TABLE "FormulaVR"."T_EV_events" DROP CONSTRAINT "PK_T_EV_events"
@@ -88,6 +90,8 @@ DROP INDEX "FormulaVR"."idx_rs_pkDescend"
 
 -- Drop views section --------------------------------------------------- 
 
+DROP VIEW "FormulaVR"."V_LP_RTV_labels2print"
+;
 DROP VIEW "FormulaVR"."V_ES_RTV_eventSusbscriptions"
 ;
 DROP VIEW "FormulaVR"."V_EV_RTV_events"
@@ -137,6 +141,8 @@ DROP VIEW "FormulaVR"."V_US_RTV_users"
 
 -- Drop tables section ---------------------------------------------------
 
+DROP TABLE "FormulaVR"."T_LP_labels2print"
+;
 DROP TABLE "FormulaVR"."T_ES_eventSusbscriptions"
 ;
 DROP TABLE "FormulaVR"."T_EV_events"
@@ -791,6 +797,20 @@ COMMENT ON COLUMN "FormulaVR"."T_ES_eventSusbscriptions"."pay_status" IS 'CP:Cob
 ALTER TABLE "FormulaVR"."T_ES_eventSusbscriptions" ADD CONSTRAINT "PK_T_ES_eventSusbscriptions" PRIMARY KEY ("event_id","inscription_user_id")
 ;
 
+-- Table FormulaVR.T_LP_labels2print
+
+CREATE TABLE "FormulaVR"."T_LP_labels2print"(
+ "card_id" Character varying(50) DEFAULT '' NOT NULL,
+ "json" Text NOT NULL
+)
+WITH (OIDS=FALSE)
+;
+
+-- Add keys for table FormulaVR.T_LP_labels2print
+
+ALTER TABLE "FormulaVR"."T_LP_labels2print" ADD CONSTRAINT "Key1" PRIMARY KEY ("card_id")
+;
+
 -- Create views section -------------------------------------------------
 
 CREATE VIEW "FormulaVR"."V_US_RTV_users" AS
@@ -1103,6 +1123,19 @@ FROM
 
  LEFT JOIN "FormulaVR"."T_LO_location" "c"
         ON "c"."location_id" = "b"."location_id"
+;
+
+CREATE VIEW "FormulaVR"."V_LP_RTV_labels2print" AS
+SELECT "a"."card_id", "b"."qr_image_base64", "a"."json"
+FROM 
+
+
+-- COD.AUTOGENERADO. Para fijarlo copiar en el apartado 'Notes'...
+
+ "FormulaVR"."T_LP_labels2print" "a"
+
+ LEFT JOIN "FormulaVR"."T_TJ_tarjetasPrepago" "b"
+        ON "b"."card_id" = "a"."card_id"
 ;
 
 

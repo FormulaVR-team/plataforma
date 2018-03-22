@@ -128,6 +128,10 @@
 		<CAM nombre="comment" descripcion="comment" descripcionCorta="comment" longitud="100" tipo="CHAR" />
 		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
 
+		<CAM nombre="card_id" descripcion="card_id" descripcionCorta="card_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="qr_image_base64" descripcion="qr_image_base64" descripcionCorta="qr_image_base64" longitud="100" tipo="CHAR" />
+		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
+
 		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
 		<CAM nombre="mark" descripcion="mark" descripcionCorta="mark" longitud="1" tipo="CHAR" />
 		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
@@ -745,6 +749,25 @@
 			<CAM nombre="comment" />
 			<CAM nombre="json" />
 			<KEY nombre="location_id" orden="ASC" secuencia="1" />
+		</FMT>
+	</ENT>
+
+	<!-- LP labels2print -->
+	<ENT nombre="labels2print" descripcion="labels2print" prefijo="lp">
+		<FMT archivo="T_LP_labels2print" nombre="Fisico" tipo="PHY">
+			<CAM nombre="card_id" />
+			<CAM nombre="json" />
+		</FMT>
+		<FMT archivo="T_LP_labels2print" nombre="Actualizacion" tipo="UPD">
+			<CAM nombre="card_id" />
+			<CAM nombre="json" />
+			<KEY nombre="card_id" orden="ASC" secuencia="1" />
+		</FMT>
+		<FMT archivo="V_LP_RTV_labels2print" nombre="Recuperacion" tipo="RTV">
+			<CAM nombre="card_id" />
+			<CAM nombre="qr_image_base64" />
+			<CAM nombre="json" />
+			<KEY nombre="card_id" orden="ASC" secuencia="1" />
 		</FMT>
 	</ENT>
 

@@ -25,6 +25,7 @@
 		<form-bean name="TjRCD_AF" type="com.fvr.tj_tarjetasPrepago.forms.TjRCD_AF"/>
 		<form-bean name="EvRCD_AF" type="com.fvr.ev_events.forms.EvRCD_AF"/>
 		<form-bean name="EsRCD_AF" type="com.fvr.es_eventSusbscriptions.forms.EsRCD_AF"/>
+		<form-bean name="LpRCD_AF" type="com.fvr.lp_labels2print.forms.LpRCD_AF"/>
 	</form-beans>
 	<global-exceptions>
 	</global-exceptions>
@@ -71,6 +72,7 @@
 			<forward name="TjDSPFIL_A" path="/TjDSPFIL_A.do"/>
 			<forward name="EvDSPFIL_A" path="/EvDSPFIL_A.do"/>
 			<forward name="EsDSPFIL_A" path="/EsDSPFIL_A.do"/>
+			<forward name="LpDSPFIL_A" path="/LpDSPFIL_A.do"/>
 		</action>
 		<!-- ::::::::::::::::::::::::::::::::::::: -->
 		<!-- ::::::::::::::::::::::::::::::::::::: -->
@@ -420,6 +422,22 @@
 		<action input="/jsp/EsEDTRCD.jsp" name="EsRCD_AF" path="/EsEDTRCD_A" scope="request" type="com.fvr.es_eventSusbscriptions.actions.EsEDTRCD_A" validate="false">
 			<forward name="OK" path="/jsp/EsEDTRCD.jsp"/>
 			<forward name="CERRAR" path="/EsDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/LpDSPFIL.jsp" name="LpRCD_AF" path="/LpDSPFIL_A" scope="request" type="com.fvr.lp_labels2print.actions.LpDSPFIL_A" validate="false">
+			<forward name="OK" path="/jsp/LpDSPFIL.jsp"/>
+			<forward name="ADDRCD" path="/LpADDRCD_A.do" redirect="yes"/>
+			<forward name="EDTRCD" path="/LpEDTRCD_A.do"/>
+		</action>
+		<action input="/jsp/LpSELRCD.jsp" name="LpRCD_AF" path="/LpSELRCD_A" scope="request" type="com.fvr.lp_labels2print.actions.LpSELRCD_A" validate="false">
+			<forward name="OK" path="/jsp/LpSELRCD.jsp"/>
+		</action>
+		<action input="/jsp/LpADDRCD.jsp" name="LpRCD_AF" path="/LpADDRCD_A" scope="request" type="com.fvr.lp_labels2print.actions.LpADDRCD_A" validate="false">
+			<forward name="OK" path="/jsp/LpADDRCD.jsp"/>
+			<forward name="CERRAR" path="/LpDSPFIL_A.do"/>
+		</action>
+		<action input="/jsp/LpEDTRCD.jsp" name="LpRCD_AF" path="/LpEDTRCD_A" scope="request" type="com.fvr.lp_labels2print.actions.LpEDTRCD_A" validate="false">
+			<forward name="OK" path="/jsp/LpEDTRCD.jsp"/>
+			<forward name="CERRAR" path="/LpDSPFIL_A.do"/>
 		</action>
 	</action-mappings>
 	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
