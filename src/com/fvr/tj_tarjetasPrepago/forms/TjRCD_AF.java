@@ -41,6 +41,7 @@ public class TjRCD_AF extends org.apache.struts.action.ActionForm {
 	public String tj_is_deleted; // is_deleted
 	public String tj_author; // author
 	public String tj_card_id; // card_id
+	public String tj_user_id; // user_id
 	public double tj_balance_initial; // balance_initial
 	public double tj_balance_current; // balance_current
 	public double tj_last_sale_amount; // last_sale_amount
@@ -72,6 +73,7 @@ public class TjRCD_AF extends org.apache.struts.action.ActionForm {
 	Destino.setTj_is_deleted( getTj_is_deleted() ); // is_deleted
 	Destino.setTj_author( getTj_author() ); // author
 	Destino.setTj_card_id( getTj_card_id() ); // card_id
+	Destino.setTj_user_id( getTj_user_id() ); // user_id
 	Destino.setTj_balance_initial( getTj_balance_initial() ); // balance_initial
 	Destino.setTj_balance_current( getTj_balance_current() ); // balance_current
 	Destino.setTj_last_sale_amount( getTj_last_sale_amount() ); // last_sale_amount
@@ -88,6 +90,7 @@ public class TjRCD_AF extends org.apache.struts.action.ActionForm {
 	setTj_is_deleted( Origen.getTj_is_deleted() ); // is_deleted
 	setTj_author( Origen.getTj_author() ); // author
 	setTj_card_id( Origen.getTj_card_id() ); // card_id
+	setTj_user_id( Origen.getTj_user_id() ); // user_id
 	setTj_balance_initial( Origen.getTj_balance_initial() ); // balance_initial
 	setTj_balance_current( Origen.getTj_balance_current() ); // balance_current
 	setTj_last_sale_amount( Origen.getTj_last_sale_amount() ); // last_sale_amount
@@ -117,6 +120,7 @@ public class TjRCD_AF extends org.apache.struts.action.ActionForm {
 	setTj_is_deleted( Origen.getTj_is_deleted() ); // is_deleted
 	setTj_author( Origen.getTj_author() ); // author
 	setTj_card_id( Origen.getTj_card_id() ); // card_id
+	setTj_user_id( Origen.getTj_user_id() ); // user_id
 	setTj_balance_initial( Origen.getTj_balance_initial() ); // balance_initial
 	setTj_balance_current( Origen.getTj_balance_current() ); // balance_current
 	setTj_last_sale_amount( Origen.getTj_last_sale_amount() ); // last_sale_amount
@@ -207,6 +211,11 @@ public class TjRCD_AF extends org.apache.struts.action.ActionForm {
 	public String getTj_card_id() {return tj_card_id;}
 	/** Set card_id*/
 	public void setTj_card_id(String tj_card_id) {this.tj_card_id = tj_card_id;}
+
+	/** Get user_id*/
+	public String getTj_user_id() {return tj_user_id;}
+	/** Set user_id*/
+	public void setTj_user_id(String tj_user_id) {this.tj_user_id = tj_user_id;}
 
 	/** Get balance_initial*/
 	public double getTj_balance_initial() {return tj_balance_initial;}

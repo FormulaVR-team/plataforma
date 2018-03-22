@@ -69,6 +69,15 @@
 		<tr>
 			<td>&nbsp;</td>
 			<td>
+				<button type="button" class="btn btn-info pull-right" style="width:70%;" onclick="if ( confirmar('<bean:message key="common.client.pregunta_modificar_marcados"/>',this)==true ) setOpcion('TjRCD_AF','colectivo_user_id', null);"><span class="glyphicon glyphicon-ok pull-left"></span>
+				&nbsp;user_id
+				</button>
+			</td>
+			<td><html:text maxlength="50" styleClass="form-control" property="tj_user_id"  style="width: 105px;"/></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>
 				<button type="button" class="btn btn-info pull-right" style="width:70%;" onclick="if ( confirmar('<bean:message key="common.client.pregunta_modificar_marcados"/>',this)==true ) setOpcion('TjRCD_AF','colectivo_balance_initial', null);"><span class="glyphicon glyphicon-ok pull-left"></span>
 				&nbsp;balance_initial
 				</button>

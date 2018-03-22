@@ -56,9 +56,16 @@
 		</div>
 
 		<div class='form-group'>
-			<label class="col-sm-3 control-label" for="textinput">qr_image_base64&nbsp;</label>
+			<label class="col-sm-3 control-label" for="textinput">TJ_user_id&nbsp;</label>
 			<div class="col-sm-9">
-				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="lp_qr_image_base64"  disabled="true" style="width: 700px;"/>
+				<html:text maxlength="50" styleId="textinput" styleClass="form-control" property="lp_TJ_user_id"  disabled="true" style="width: 350px;"/>
+			</div>
+		</div>
+
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">TJ_qr_image_base64&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleId="textinput" styleClass="form-control" property="lp_TJ_qr_image_base64"  disabled="true" style="width: 700px;"/>
 			</div>
 		</div>
 
@@ -93,7 +100,8 @@
 		<!-- Formato completo -->
 		
 	     <html:hidden property="lp_card_id"/> <!-- card_id -->
-	     <html:hidden property="lp_qr_image_base64"/> <!-- qr_image_base64 -->
+	     <html:hidden property="lp_TJ_user_id"/> <!-- TJ_user_id -->
+	     <html:hidden property="lp_TJ_qr_image_base64"/> <!-- TJ_qr_image_base64 -->
 	<!-- <html:hidden property="lp_json"/> json -->
 
 		<!-- external javascript for ui-->

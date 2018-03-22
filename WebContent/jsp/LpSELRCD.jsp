@@ -112,13 +112,16 @@
             <table class="table table-nonfluid table-striped table-curved table-hover">
                 <tr>
 <th style="text-align: left;">card_id</th>
-<th style="text-align: left;">qr_image_base64</th>
+<th style="text-align: left;">TJ_user_id</th>
+<th style="text-align: left;">TJ_qr_image_base64</th>
 <th style="text-align: left;">json</th>
                 </tr>
                 <tr>
 			<td><html:text styleClass="form-control input-sm" property="lp_filtro.lp_card_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
-			<td><html:text styleClass="form-control input-sm" property="lp_filtro.lp_qr_image_base64" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			<td><html:text styleClass="form-control input-sm" property="lp_filtro.lp_TJ_user_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="lp_filtro.lp_TJ_qr_image_base64" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="lp_filtro.lp_json" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
@@ -127,7 +130,8 @@
                     <tr id="laFila${gridIdx}">
                         
 <td class="tbceldadetalle" onmouseover="onTdOver(this);" onmouseout="onTdOut(this);" onclick="javascript:setRetorno( '<bean:write name="grid" property="lp_card_id"/>' );"><bean:write name="grid" property="lp_card_id"/><br/></td>   <!-- card_id -->
-<td class="tbceldadetalle"><bean:write name="grid" property="lp_qr_image_base64"/><br/></td>   <!-- qr_image_base64 -->
+<td class="tbceldadetalle"><bean:write name="grid" property="lp_TJ_user_id"/><br/></td>   <!-- TJ_user_id -->
+<td class="tbceldadetalle"><bean:write name="grid" property="lp_TJ_qr_image_base64"/><br/></td>   <!-- TJ_qr_image_base64 -->
 <td class="tbceldadetalle"><bean:write name="grid" property="lp_json"/><br/></td>   <!-- json -->
                     </tr>
                 </logic:iterate>

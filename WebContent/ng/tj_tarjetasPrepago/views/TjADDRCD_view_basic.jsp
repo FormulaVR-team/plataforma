@@ -42,6 +42,14 @@
 				<input type="text" ng-model="actionForm.tj_card_id" />
 			</md-input-container>
 			</div>
+			
+			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<md-input-container>
+				<label>user_id</label>
+				<input type="text" ng-model="actionForm.tj_user_id" />
+			</md-input-container>
+			</div>
+			
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>balance_initial</label>

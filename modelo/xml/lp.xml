@@ -3,7 +3,8 @@
 	<MODELO comentario="Descriptivo del modelo." nombre="Creado por 'auto-destripador'." prefijo="fvr">
 	<CAMPOS>
 		<CAM nombre="card_id" descripcion="card_id" descripcionCorta="card_id" longitud="50" tipo="CHAR" />
-		<CAM nombre="qr_image_base64" descripcion="qr_image_base64" descripcionCorta="qr_image_base64" longitud="100" tipo="CHAR" />
+		<CAM nombre="TJ_user_id" descripcion="TJ_user_id" descripcionCorta="TJ_user_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="TJ_qr_image_base64" descripcion="TJ_qr_image_base64" descripcionCorta="TJ_qr_image_base64" longitud="100" tipo="CHAR" />
 		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
 
 	</CAMPOS>
@@ -21,7 +22,8 @@
 		</FMT>
 		<FMT archivo="V_LP_RTV_labels2print" nombre="Recuperacion" tipo="RTV">
 			<CAM nombre="card_id" />
-			<CAM nombre="qr_image_base64" />
+			<CAM nombre="TJ_user_id" />
+			<CAM nombre="TJ_qr_image_base64" />
 			<CAM nombre="json" />
 			<KEY nombre="card_id" orden="ASC" secuencia="1" />
 		</FMT>

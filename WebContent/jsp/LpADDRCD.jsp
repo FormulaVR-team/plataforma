@@ -55,9 +55,17 @@
 		</div>
 <!-- CAMPO VIRTUAL
 		<div class='form-group'>
-			<label class="col-sm-3 control-label" for="textinput">qr_image_base64&nbsp;</label>
+			<label class="col-sm-3 control-label" for="textinput">TJ_user_id&nbsp;</label>
 			<div class="col-sm-9">
-				<html:text maxlength="100" styleClass="form-control" property="lp_qr_image_base64"  disabled="true" style="width: 700px;"/>
+				<html:text maxlength="50" styleClass="form-control" property="lp_TJ_user_id"  disabled="true" style="width: 350px;"/>
+			</div>
+		</div>
+-->
+<!-- CAMPO VIRTUAL
+		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">TJ_qr_image_base64&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="100" styleClass="form-control" property="lp_TJ_qr_image_base64"  disabled="true" style="width: 700px;"/>
 			</div>
 		</div>
 -->

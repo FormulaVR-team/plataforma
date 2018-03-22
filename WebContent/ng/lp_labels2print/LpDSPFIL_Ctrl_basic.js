@@ -53,13 +53,15 @@ angular
 							, filasMarcadas					: []	// boolean[] - No pertenece al ActionForm real. Solo se mete aqui como soporte del componente visual (checkbox)
 						    , lp_filtro : {
 								  lp_card_id: "" // card_id
-								, lp_qr_image_base64: "" // qr_image_base64
+								, lp_TJ_user_id: "" // TJ_user_id
+								, lp_TJ_qr_image_base64: "" // TJ_qr_image_base64
 								, lp_json: "" // json						
 							}
 						    // Datos calculados, no de BD:
 						    // Formato de registro:
 								, lp_card_id: "" // card_id
-								, lp_qr_image_base64: "" // qr_image_base64
+								, lp_TJ_user_id: "" // TJ_user_id
+								, lp_TJ_qr_image_base64: "" // TJ_qr_image_base64
 								, lp_json: "" // json						
 							/////////////////////////////////////////////////
 					};
@@ -267,7 +269,8 @@ angular
 					$scope.putRecordAsTheCurrent = function( reg ) {
 						// Formato de registro:
 						$scope.actionForm.lp_card_id = reg.lp_card_id; // card_id
-						$scope.actionForm.lp_qr_image_base64 = reg.lp_qr_image_base64; // qr_image_base64
+						$scope.actionForm.lp_TJ_user_id = reg.lp_TJ_user_id; // TJ_user_id
+						$scope.actionForm.lp_TJ_qr_image_base64 = reg.lp_TJ_qr_image_base64; // TJ_qr_image_base64
 						$scope.actionForm.lp_json = reg.lp_json; // json						
 					};
 
@@ -279,7 +282,8 @@ angular
 					$scope.initReg = function() {
 						// Formato de registro:
 						$scope.actionForm.lp_card_id = ""; // card_id
-						$scope.actionForm.lp_qr_image_base64 = ""; // qr_image_base64
+						$scope.actionForm.lp_TJ_user_id = ""; // TJ_user_id
+						$scope.actionForm.lp_TJ_qr_image_base64 = ""; // TJ_qr_image_base64
 						$scope.actionForm.lp_json = ""; // json						
 					};
 

@@ -129,7 +129,8 @@
 		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
 
 		<CAM nombre="card_id" descripcion="card_id" descripcionCorta="card_id" longitud="50" tipo="CHAR" />
-		<CAM nombre="qr_image_base64" descripcion="qr_image_base64" descripcionCorta="qr_image_base64" longitud="100" tipo="CHAR" />
+		<CAM nombre="TJ_user_id" descripcion="TJ_user_id" descripcionCorta="TJ_user_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="TJ_qr_image_base64" descripcion="TJ_qr_image_base64" descripcionCorta="TJ_qr_image_base64" longitud="100" tipo="CHAR" />
 		<CAM nombre="json" descripcion="json" descripcionCorta="json" longitud="100" tipo="CHAR" />
 
 		<CAM nombre="sincro" descripcion="sincro" descripcionCorta="sincro" longitud="20" tipo="CHAR" />
@@ -269,6 +270,7 @@
 		<CAM nombre="is_deleted" descripcion="is_deleted" descripcionCorta="is_deleted" longitud="1" tipo="CHAR" />
 		<CAM nombre="author" descripcion="author" descripcionCorta="author" longitud="50" tipo="CHAR" />
 		<CAM nombre="card_id" descripcion="card_id" descripcionCorta="card_id" longitud="50" tipo="CHAR" />
+		<CAM nombre="user_id" descripcion="user_id" descripcionCorta="user_id" longitud="50" tipo="CHAR" />
 		<CAM nombre="balance_initial" descripcion="balance_initial" descripcionCorta="balance_initial" longitud="12" tipo="DEC" />
 		<CAM nombre="balance_current" descripcion="balance_current" descripcionCorta="balance_current" longitud="12" tipo="DEC" />
 		<CAM nombre="last_sale_amount" descripcion="last_sale_amount" descripcionCorta="last_sale_amount" longitud="12" tipo="DEC" />
@@ -765,7 +767,8 @@
 		</FMT>
 		<FMT archivo="V_LP_RTV_labels2print" nombre="Recuperacion" tipo="RTV">
 			<CAM nombre="card_id" />
-			<CAM nombre="qr_image_base64" />
+			<CAM nombre="TJ_user_id" />
+			<CAM nombre="TJ_qr_image_base64" />
 			<CAM nombre="json" />
 			<KEY nombre="card_id" orden="ASC" secuencia="1" />
 		</FMT>
@@ -1199,6 +1202,7 @@
 			<CAM nombre="is_deleted" />
 			<CAM nombre="author" />
 			<CAM nombre="card_id" />
+			<CAM nombre="user_id" />
 			<CAM nombre="balance_initial" />
 			<CAM nombre="balance_current" />
 			<CAM nombre="last_sale_amount" />
@@ -1212,6 +1216,7 @@
 			<CAM nombre="is_deleted" />
 			<CAM nombre="author" />
 			<CAM nombre="card_id" />
+			<CAM nombre="user_id" />
 			<CAM nombre="balance_initial" />
 			<CAM nombre="balance_current" />
 			<CAM nombre="last_sale_amount" />
@@ -1226,6 +1231,7 @@
 			<CAM nombre="is_deleted" />
 			<CAM nombre="author" />
 			<CAM nombre="card_id" />
+			<CAM nombre="user_id" />
 			<CAM nombre="balance_initial" />
 			<CAM nombre="balance_current" />
 			<CAM nombre="last_sale_amount" />

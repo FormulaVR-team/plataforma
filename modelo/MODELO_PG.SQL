@@ -713,6 +713,7 @@ CREATE TABLE "FormulaVR"."T_TJ_tarjetasPrepago"(
  "is_deleted" Character(1) DEFAULT '' NOT NULL,
  "author" Character varying(50) DEFAULT '' NOT NULL,
  "card_id" Character varying(50) DEFAULT '' NOT NULL,
+ "user_id" Character varying(50) DEFAULT '' NOT NULL,
  "balance_initial" Numeric(12,3) NOT NULL,
  "balance_current" Numeric(12,3) NOT NULL,
  "last_sale_amount" Numeric(12,3) NOT NULL,
@@ -1046,7 +1047,7 @@ FROM
 ;
 
 CREATE VIEW "FormulaVR"."V_TJ_RTV_tarjetasPrepago" AS
-SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."card_id", "a"."balance_initial", "a"."balance_current", "a"."last_sale_amount", "a"."last_sale_moment", "a"."qr_image_base64", "a"."json"
+SELECT "a"."sincro", "a"."mark", "a"."is_deleted", "a"."author", "a"."card_id", "a"."user_id", "a"."balance_initial", "a"."balance_current", "a"."last_sale_amount", "a"."last_sale_moment", "a"."qr_image_base64", "a"."json"
 FROM 
 
 
@@ -1126,7 +1127,7 @@ FROM
 ;
 
 CREATE VIEW "FormulaVR"."V_LP_RTV_labels2print" AS
-SELECT "a"."card_id", "b"."qr_image_base64", "a"."json"
+SELECT "a"."card_id", "b"."user_id" AS "TJ_user_id", "b"."qr_image_base64" AS "TJ_qr_image_base64", "a"."json"
 FROM 
 
 

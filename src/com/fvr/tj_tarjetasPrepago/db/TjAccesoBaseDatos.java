@@ -100,6 +100,7 @@ public class TjAccesoBaseDatos {
 		", \"is_deleted\"" + // is_deleted
 		", \"author\"" + // author
 		", \"card_id\"" + // card_id
+		", \"user_id\"" + // user_id
 		", \"balance_initial\"" + // balance_initial
 		", \"balance_current\"" + // balance_current
 		", \"last_sale_amount\"" + // last_sale_amount
@@ -112,6 +113,7 @@ public class TjAccesoBaseDatos {
 		", '"  + registro.getTj_is_deleted() + "'" + // is_deleted
 		", '"  + registro.getTj_author() + "'" + // author
 		", '"  + registro.getTj_card_id() + "'" + // card_id
+		", '"  + registro.getTj_user_id() + "'" + // user_id
 		", "  + registro.getTj_balance_initial() + "" + // balance_initial
 		", "  + registro.getTj_balance_current() + "" + // balance_current
 		", "  + registro.getTj_last_sale_amount() + "" + // last_sale_amount
@@ -154,6 +156,7 @@ public class TjAccesoBaseDatos {
 		", \"is_deleted\" = '"  + registro.getTj_is_deleted() + "'" + // is_deleted
 		", \"author\" = '"  + registro.getTj_author() + "'" + // author
 		", \"card_id\" = '"  + registro.getTj_card_id() + "'" + // card_id
+		", \"user_id\" = '"  + registro.getTj_user_id() + "'" + // user_id
 		", \"balance_initial\" = "  + registro.getTj_balance_initial() + "" + // balance_initial
 		", \"balance_current\" = "  + registro.getTj_balance_current() + "" + // balance_current
 		", \"last_sale_amount\" = "  + registro.getTj_last_sale_amount() + "" + // last_sale_amount
@@ -243,6 +246,7 @@ public class TjAccesoBaseDatos {
 		regRead.setTj_is_deleted( rs.getString("is_deleted") ); regRead.setTj_is_deleted( (regRead.getTj_is_deleted() == null)?"":regRead.getTj_is_deleted().trim() ); // is_deleted
 		regRead.setTj_author( rs.getString("author") ); regRead.setTj_author( (regRead.getTj_author() == null)?"":regRead.getTj_author().trim() ); // author
 		regRead.setTj_card_id( rs.getString("card_id") ); regRead.setTj_card_id( (regRead.getTj_card_id() == null)?"":regRead.getTj_card_id().trim() ); // card_id
+		regRead.setTj_user_id( rs.getString("user_id") ); regRead.setTj_user_id( (regRead.getTj_user_id() == null)?"":regRead.getTj_user_id().trim() ); // user_id
 		regRead.setTj_balance_initial( rs.getDouble("balance_initial") );  // balance_initial
 		regRead.setTj_balance_current( rs.getDouble("balance_current") );  // balance_current
 		regRead.setTj_last_sale_amount( rs.getDouble("last_sale_amount") );  // last_sale_amount
@@ -309,6 +313,7 @@ public class TjAccesoBaseDatos {
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getTj_is_deleted(),"is_deleted",sqlWhere);   // is_deleted
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getTj_author(),"author",sqlWhere);   // author
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getTj_card_id(),"card_id",sqlWhere);   // card_id
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getTj_user_id(),"user_id",sqlWhere);   // user_id
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getTj_last_sale_moment(),"last_sale_moment",sqlWhere);   // last_sale_moment
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getTj_qr_image_base64(),"qr_image_base64",sqlWhere);   // qr_image_base64
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getTj_json(),"json",sqlWhere);   // json
@@ -361,6 +366,7 @@ public class TjAccesoBaseDatos {
 		regRead.setTj_is_deleted( rs.getString("is_deleted") ); regRead.setTj_is_deleted( (regRead.getTj_is_deleted() == null)?"":regRead.getTj_is_deleted().trim() ); // is_deleted
 		regRead.setTj_author( rs.getString("author") ); regRead.setTj_author( (regRead.getTj_author() == null)?"":regRead.getTj_author().trim() ); // author
 		regRead.setTj_card_id( rs.getString("card_id") ); regRead.setTj_card_id( (regRead.getTj_card_id() == null)?"":regRead.getTj_card_id().trim() ); // card_id
+		regRead.setTj_user_id( rs.getString("user_id") ); regRead.setTj_user_id( (regRead.getTj_user_id() == null)?"":regRead.getTj_user_id().trim() ); // user_id
 		regRead.setTj_balance_initial( rs.getDouble("balance_initial") );  // balance_initial
 		regRead.setTj_balance_current( rs.getDouble("balance_current") );  // balance_current
 		regRead.setTj_last_sale_amount( rs.getDouble("last_sale_amount") );  // last_sale_amount
@@ -419,6 +425,7 @@ public class TjAccesoBaseDatos {
 				s += "<td><strong style='color:darkblue;'>" + "is_deleted" + "</strong></td>";  // is_deleted
 				s += "<td><strong style='color:darkblue;'>" + "author" + "</strong></td>";  // author
 				s += "<td><strong style='color:darkblue;'>" + "card_id" + "</strong></td>";  // card_id
+				s += "<td><strong style='color:darkblue;'>" + "user_id" + "</strong></td>";  // user_id
 				s += "<td><strong style='color:darkblue;'>" + "balance_initial" + "</strong></td>";  // balance_initial
 				s += "<td><strong style='color:darkblue;'>" + "balance_current" + "</strong></td>";  // balance_current
 				s += "<td><strong style='color:darkblue;'>" + "last_sale_amount" + "</strong></td>";  // last_sale_amount
@@ -455,6 +462,9 @@ public class TjAccesoBaseDatos {
 				tmp = registro.getTj_card_id();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // card_id
+				tmp = registro.getTj_user_id();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // user_id
 				s += "<td>" + new Double(registro.getTj_balance_initial()).toString() + "</td>";  // balance_initial
 				s += "<td>" + new Double(registro.getTj_balance_current()).toString() + "</td>";  // balance_current
 				s += "<td>" + new Double(registro.getTj_last_sale_amount()).toString() + "</td>";  // last_sale_amount
@@ -634,12 +644,13 @@ public class TjAccesoBaseDatos {
 				registro.setTj_is_deleted( jsonReg.getString(2) );	// is_deleted
 				registro.setTj_author( jsonReg.getString(3) );	// author
 				registro.setTj_card_id( jsonReg.getString(4) );	// card_id
-				registro.setTj_balance_initial( jsonReg.getDouble(5) );	// balance_initial
-				registro.setTj_balance_current( jsonReg.getDouble(6) );	// balance_current
-				registro.setTj_last_sale_amount( jsonReg.getDouble(7) );	// last_sale_amount
-				registro.setTj_last_sale_moment( jsonReg.getString(8) );	// last_sale_moment
-				registro.setTj_qr_image_base64( jsonReg.getString(9) );	// qr_image_base64
-				registro.setTj_json( jsonReg.getString(10) );	// json
+				registro.setTj_user_id( jsonReg.getString(5) );	// user_id
+				registro.setTj_balance_initial( jsonReg.getDouble(6) );	// balance_initial
+				registro.setTj_balance_current( jsonReg.getDouble(7) );	// balance_current
+				registro.setTj_last_sale_amount( jsonReg.getDouble(8) );	// last_sale_amount
+				registro.setTj_last_sale_moment( jsonReg.getString(9) );	// last_sale_moment
+				registro.setTj_qr_image_base64( jsonReg.getString(10) );	// qr_image_base64
+				registro.setTj_json( jsonReg.getString(11) );	// json
 					
 					arrayTmp.add(registro);
 				} catch (Exception e) {;}

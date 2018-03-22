@@ -116,6 +116,7 @@
 <th style="text-align: left;">is_deleted</th>
 <th style="text-align: left;">author</th>
 <th style="text-align: left;">card_id</th>
+<th style="text-align: left;">user_id</th>
 <th style="text-align: right;">balance_initial</th>
 <th style="text-align: right;">balance_current</th>
 <th style="text-align: right;">last_sale_amount</th>
@@ -133,6 +134,8 @@
 			<td><html:text styleClass="form-control input-sm" property="tj_filtro.tj_author" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="tj_filtro.tj_card_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="tj_filtro.tj_user_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><br />
 			</td>
@@ -155,6 +158,7 @@
 <td class="tbceldadetalle"><bean:write name="grid" property="tj_is_deleted"/><br/></td>   <!-- is_deleted -->
 <td class="tbceldadetalle"><bean:write name="grid" property="tj_author"/><br/></td>   <!-- author -->
 <td class="tbceldadetalle" onmouseover="onTdOver(this);" onmouseout="onTdOut(this);" onclick="javascript:setRetorno( '<bean:write name="grid" property="tj_card_id"/>' );"><bean:write name="grid" property="tj_card_id"/><br/></td>   <!-- card_id -->
+<td class="tbceldadetalle"><bean:write name="grid" property="tj_user_id"/><br/></td>   <!-- user_id -->
 <td class="tbceldadetalle" style="text-align: right;"><bean:write name="grid" property="tj_balance_initial"/><br/></td>   <!-- balance_initial -->
 <td class="tbceldadetalle" style="text-align: right;"><bean:write name="grid" property="tj_balance_current"/><br/></td>   <!-- balance_current -->
 <td class="tbceldadetalle" style="text-align: right;"><bean:write name="grid" property="tj_last_sale_amount"/><br/></td>   <!-- last_sale_amount -->

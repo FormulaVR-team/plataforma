@@ -85,14 +85,17 @@
 			<tr>
 				<th><br /></th>
 <th style="text-align: left;">card_id</th>
-<th style="text-align: left;">qr_image_base64</th>
+<th style="text-align: left;">TJ_user_id</th>
+<th style="text-align: left;">TJ_qr_image_base64</th>
 <th style="text-align: left;">json</th>
 			</tr>
 			<tr>
 				<td><br /></td>
 			<td><html:text styleClass="form-control input-sm" property="lp_filtro.lp_card_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
-			<td><html:text styleClass="form-control input-sm" property="lp_filtro.lp_qr_image_base64" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
+			<td><html:text styleClass="form-control input-sm" property="lp_filtro.lp_TJ_user_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="lp_filtro.lp_TJ_qr_image_base64" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="lp_filtro.lp_json" maxlength="100" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
@@ -118,7 +121,8 @@
 						</div>
 					</td>
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="lp_card_id"/>',30));</script><html:hidden name="grid" property="lp_card_id" indexed="true" />&nbsp;</td>   <!-- card_id -->
-<td><script>document.write(recortarTexto('<bean:write name="grid" property="lp_qr_image_base64"/>',30));</script><html:hidden name="grid" property="lp_qr_image_base64" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.lp_card_id}';" />&nbsp;</td>   <!-- qr_image_base64 -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="lp_TJ_user_id"/>',30));</script><html:hidden name="grid" property="lp_TJ_user_id" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.lp_card_id}';" />&nbsp;</td>   <!-- TJ_user_id -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="lp_TJ_qr_image_base64"/>',30));</script><html:hidden name="grid" property="lp_TJ_qr_image_base64" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.lp_card_id}';" />&nbsp;</td>   <!-- TJ_qr_image_base64 -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="lp_json"/>',30));</script><html:hidden name="grid" property="lp_json" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.lp_card_id}';" />&nbsp;</td>   <!-- json -->
 				</tr>
 			</logic:iterate>

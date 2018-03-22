@@ -89,6 +89,7 @@
 <th style="text-align: left;">is_deleted</th>
 <th style="text-align: left;">author</th>
 <th style="text-align: left;">card_id</th>
+<th style="text-align: left;">user_id</th>
 <th style="text-align: right;">balance_initial</th>
 <th style="text-align: right;">balance_current</th>
 <th style="text-align: right;">last_sale_amount</th>
@@ -107,6 +108,8 @@
 			<td><html:text styleClass="form-control input-sm" property="tj_filtro.tj_author" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><html:text styleClass="form-control input-sm" property="tj_filtro.tj_card_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
+			</td>
+			<td><html:text styleClass="form-control input-sm" property="tj_filtro.tj_user_id" maxlength="50" style="width: 200px; text-align: left;" onclick="this.select();" />
 			</td>
 			<td><br />
 			</td>
@@ -146,6 +149,7 @@
 <td>&nbsp;<bean:write name="grid" property="tj_is_deleted"/><html:hidden name="grid" property="tj_is_deleted" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.tj_card_id}';" />&nbsp;</td>   <!-- is_deleted -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="tj_author"/>',30));</script><html:hidden name="grid" property="tj_author" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.tj_card_id}';" />&nbsp;</td>   <!-- author -->
 <td><script>document.write(recortarTexto('<bean:write name="grid" property="tj_card_id"/>',30));</script><html:hidden name="grid" property="tj_card_id" indexed="true" />&nbsp;</td>   <!-- card_id -->
+<td><script>document.write(recortarTexto('<bean:write name="grid" property="tj_user_id"/>',30));</script><html:hidden name="grid" property="tj_user_id" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.tj_card_id}';" />&nbsp;</td>   <!-- user_id -->
 <td style="text-align: right;">&nbsp;<bean:write name="grid" property="tj_balance_initial"/><html:hidden name="grid" property="tj_balance_initial" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.tj_card_id}';" />&nbsp;</td>   <!-- balance_initial -->
 <td style="text-align: right;">&nbsp;<bean:write name="grid" property="tj_balance_current"/><html:hidden name="grid" property="tj_balance_current" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.tj_card_id}';" />&nbsp;</td>   <!-- balance_current -->
 <td style="text-align: right;">&nbsp;<bean:write name="grid" property="tj_last_sale_amount"/><html:hidden name="grid" property="tj_last_sale_amount" indexed="true" onchange="this.style.color='red';(document.getElementsByName('grid[${gridIdx}].chg'))[0].value='${grid.tj_card_id}';" />&nbsp;</td>   <!-- last_sale_amount -->

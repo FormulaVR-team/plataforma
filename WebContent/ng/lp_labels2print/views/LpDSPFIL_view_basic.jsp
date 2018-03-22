@@ -75,8 +75,12 @@
 						<input type="text" ng-model="actionForm.lp_filtro.lp_card_id" />
 					</md-input-container>
 					<md-input-container>
-						<label>qr_image_base64</label>
-						<input type="text" ng-model="actionForm.lp_filtro.lp_qr_image_base64" />
+						<label>TJ_user_id</label>
+						<input type="text" ng-model="actionForm.lp_filtro.lp_TJ_user_id" />
+					</md-input-container>
+					<md-input-container>
+						<label>TJ_qr_image_base64</label>
+						<input type="text" ng-model="actionForm.lp_filtro.lp_TJ_qr_image_base64" />
 					</md-input-container>
 					<md-input-container>
 						<label>json</label>
@@ -96,14 +100,16 @@
 			<tr>
 				<th><!-- {{actionForm.filasMarcadas}}&nbsp;{{actionForm.clavesMarcadas}} --></th>
 				<th>card_id</th>
-				<th>qr_image_base64</th>
+				<th>TJ_user_id</th>
+				<th>TJ_qr_image_base64</th>
 				<th>json</th>
 			</tr>
 
 			<tr ng-repeat="reg in actionForm.grid" ng-click="putRecordAsTheCurrent(reg)" data-toggle="modal" data-target="#lpDSPFIL_EDTRCD_modal">
 				<td><input type="checkbox" onclick="event.stopPropagation();" ng-model="actionForm.filasMarcadas[$index]" ng-click="setClaveMarcada( this.reg.key, $index );"/></td>
 				<td>{{reg.lp_card_id}}&nbsp;</td>
-				<td>{{reg.lp_qr_image_base64}}&nbsp;</td>
+				<td>{{reg.lp_TJ_user_id}}&nbsp;</td>
+				<td>{{reg.lp_TJ_qr_image_base64}}&nbsp;</td>
 				<td>{{reg.lp_json}}&nbsp;</td>
 			</tr>
 		</table>

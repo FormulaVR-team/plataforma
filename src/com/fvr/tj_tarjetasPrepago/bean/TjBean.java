@@ -11,6 +11,7 @@ public class TjBean extends StBean {
 	public String tj_is_deleted; // is_deleted
 	public String tj_author; // author
 	public String tj_card_id; // card_id
+	public String tj_user_id; // user_id
 	public double tj_balance_initial; // balance_initial
 	public double tj_balance_current; // balance_current
 	public double tj_last_sale_amount; // last_sale_amount
@@ -32,6 +33,7 @@ public class TjBean extends StBean {
 	this.setTj_is_deleted( "" ); // is_deleted
 	this.setTj_author( "" ); // author
 	this.setTj_card_id( "" ); // card_id
+	this.setTj_user_id( "" ); // user_id
 	this.setTj_balance_initial( 0.0 ); // balance_initial
 	this.setTj_balance_current( 0.0 ); // balance_current
 	this.setTj_last_sale_amount( 0.0 ); // last_sale_amount
@@ -48,6 +50,7 @@ public class TjBean extends StBean {
 	Destino.setTj_is_deleted( getTj_is_deleted() ); // is_deleted
 	Destino.setTj_author( getTj_author() ); // author
 	Destino.setTj_card_id( getTj_card_id() ); // card_id
+	Destino.setTj_user_id( getTj_user_id() ); // user_id
 	Destino.setTj_balance_initial( getTj_balance_initial() ); // balance_initial
 	Destino.setTj_balance_current( getTj_balance_current() ); // balance_current
 	Destino.setTj_last_sale_amount( getTj_last_sale_amount() ); // last_sale_amount
@@ -64,6 +67,7 @@ public class TjBean extends StBean {
 	setTj_is_deleted( Origen.getTj_is_deleted() ); // is_deleted
 	setTj_author( Origen.getTj_author() ); // author
 	setTj_card_id( Origen.getTj_card_id() ); // card_id
+	setTj_user_id( Origen.getTj_user_id() ); // user_id
 	setTj_balance_initial( Origen.getTj_balance_initial() ); // balance_initial
 	setTj_balance_current( Origen.getTj_balance_current() ); // balance_current
 	setTj_last_sale_amount( Origen.getTj_last_sale_amount() ); // last_sale_amount
@@ -98,6 +102,11 @@ public class TjBean extends StBean {
 	public String getTj_card_id() {return tj_card_id;}
 	/** Set card_id*/
 	public void setTj_card_id(String tj_card_id) {this.tj_card_id = tj_card_id;}
+
+	/** Get user_id*/
+	public String getTj_user_id() {return tj_user_id;}
+	/** Set user_id*/
+	public void setTj_user_id(String tj_user_id) {this.tj_user_id = tj_user_id;}
 
 	/** Get balance_initial*/
 	public double getTj_balance_initial() {return tj_balance_initial;}
@@ -147,6 +156,7 @@ public class TjBean extends StBean {
 		out.append( _K.sepFld ); out.append( this.getTj_is_deleted()==null?"":this.getTj_is_deleted() ); // is_deleted
 		out.append( _K.sepFld ); out.append( this.getTj_author()==null?"":this.getTj_author() ); // author
 		out.append( _K.sepFld ); out.append( this.getTj_card_id()==null?"":this.getTj_card_id() ); // card_id
+		out.append( _K.sepFld ); out.append( this.getTj_user_id()==null?"":this.getTj_user_id() ); // user_id
 		out.append( _K.sepFld ); out.append( this.getTj_balance_initial() ); // balance_initial
 		out.append( _K.sepFld ); out.append( this.getTj_balance_current() ); // balance_current
 		out.append( _K.sepFld ); out.append( this.getTj_last_sale_amount() ); // last_sale_amount
@@ -172,12 +182,13 @@ public class TjBean extends StBean {
 			try { this.setTj_is_deleted( trozos[2] ); } catch (Exception e) {;} // is_deleted
 			try { this.setTj_author( trozos[3] ); } catch (Exception e) {;} // author
 			try { this.setTj_card_id( trozos[4] ); } catch (Exception e) {;} // card_id
-			try { this.setTj_balance_initial( Subrutinas.parse_double( trozos[5] )); } catch (Exception e) {;} // balance_initial
-			try { this.setTj_balance_current( Subrutinas.parse_double( trozos[6] )); } catch (Exception e) {;} // balance_current
-			try { this.setTj_last_sale_amount( Subrutinas.parse_double( trozos[7] )); } catch (Exception e) {;} // last_sale_amount
-			try { this.setTj_last_sale_moment( trozos[8] ); } catch (Exception e) {;} // last_sale_moment
-			try { this.setTj_qr_image_base64( trozos[9] ); } catch (Exception e) {;} // qr_image_base64
-			try { this.setTj_json( trozos[10] ); } catch (Exception e) {;} // json
+			try { this.setTj_user_id( trozos[5] ); } catch (Exception e) {;} // user_id
+			try { this.setTj_balance_initial( Subrutinas.parse_double( trozos[6] )); } catch (Exception e) {;} // balance_initial
+			try { this.setTj_balance_current( Subrutinas.parse_double( trozos[7] )); } catch (Exception e) {;} // balance_current
+			try { this.setTj_last_sale_amount( Subrutinas.parse_double( trozos[8] )); } catch (Exception e) {;} // last_sale_amount
+			try { this.setTj_last_sale_moment( trozos[9] ); } catch (Exception e) {;} // last_sale_moment
+			try { this.setTj_qr_image_base64( trozos[10] ); } catch (Exception e) {;} // qr_image_base64
+			try { this.setTj_json( trozos[11] ); } catch (Exception e) {;} // json
 			
 		}
 	}

@@ -460,6 +460,7 @@ public class TjDSPFIL_A extends org.apache.struts.action.Action {
 		if ( accion.trim().equalsIgnoreCase("colectivo_mark") ) { reg.setTj_mark( pantalla.getTj_mark() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_is_deleted") ) { reg.setTj_is_deleted( pantalla.getTj_is_deleted() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_author") ) { reg.setTj_author( pantalla.getTj_author() ); }
+		if ( accion.trim().equalsIgnoreCase("colectivo_user_id") ) { reg.setTj_user_id( pantalla.getTj_user_id() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_balance_initial") ) { reg.setTj_balance_initial( pantalla.getTj_balance_initial() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_balance_current") ) { reg.setTj_balance_current( pantalla.getTj_balance_current() ); }
 		if ( accion.trim().equalsIgnoreCase("colectivo_last_sale_amount") ) { reg.setTj_last_sale_amount( pantalla.getTj_last_sale_amount() ); }

@@ -78,6 +78,12 @@
 			</div>
 		</div>
 		<div class='form-group'>
+			<label class="col-sm-3 control-label" for="textinput">user_id&nbsp;</label>
+			<div class="col-sm-9">
+				<html:text maxlength="50" styleClass="form-control" property="tj_user_id"  style="width: 350px;"/>
+			</div>
+		</div>
+		<div class='form-group'>
 			<label class="col-sm-3 control-label" for="textinput">balance_initial&nbsp;</label>
 			<div class="col-sm-9">
 				<html:text maxlength="12" styleClass="form-control" property="tj_balance_initial"  style="text-align: right; width: 84px;" onkeypress="return soloNumeros(event);"/>
@@ -139,6 +145,7 @@
 		<!-- <html:hidden property="tj_is_deleted"/> is_deleted -->
 		<!-- <html:hidden property="tj_author"/> author -->
 		<!-- <html:hidden property="tj_card_id"/> card_id -->
+		<!-- <html:hidden property="tj_user_id"/> user_id -->
 		<!-- <html:hidden property="tj_balance_initial"/> balance_initial -->
 		<!-- <html:hidden property="tj_balance_current"/> balance_current -->
 		<!-- <html:hidden property="tj_last_sale_amount"/> last_sale_amount -->

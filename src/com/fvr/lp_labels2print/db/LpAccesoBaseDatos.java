@@ -208,7 +208,8 @@ public class LpAccesoBaseDatos {
                 regRead = new LpBean();
                 
 		regRead.setLp_card_id( rs.getString("card_id") ); regRead.setLp_card_id( (regRead.getLp_card_id() == null)?"":regRead.getLp_card_id().trim() ); // card_id
-		regRead.setLp_qr_image_base64( rs.getString("qr_image_base64") ); regRead.setLp_qr_image_base64( (regRead.getLp_qr_image_base64() == null)?"":regRead.getLp_qr_image_base64().trim() ); // qr_image_base64
+		regRead.setLp_TJ_user_id( rs.getString("TJ_user_id") ); regRead.setLp_TJ_user_id( (regRead.getLp_TJ_user_id() == null)?"":regRead.getLp_TJ_user_id().trim() ); // TJ_user_id
+		regRead.setLp_TJ_qr_image_base64( rs.getString("TJ_qr_image_base64") ); regRead.setLp_TJ_qr_image_base64( (regRead.getLp_TJ_qr_image_base64() == null)?"":regRead.getLp_TJ_qr_image_base64().trim() ); // TJ_qr_image_base64
 		regRead.setLp_json( rs.getString("json") ); regRead.setLp_json( (regRead.getLp_json() == null)?"":regRead.getLp_json().trim() ); // json
             }
         } catch (SQLException ex0) {
@@ -266,7 +267,8 @@ public class LpAccesoBaseDatos {
         RstAplicar fltOper = new RstAplicar(dataBase.getRwUpperCase(),dataBase.getRwLike(),dataBase.getRwAnyString());
 	
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getLp_card_id(),"card_id",sqlWhere);   // card_id
-	sqlWhere = fltOper.getCHAR_LIKE(rst.getLp_qr_image_base64(),"qr_image_base64",sqlWhere);   // qr_image_base64
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getLp_TJ_user_id(),"TJ_user_id",sqlWhere);   // TJ_user_id
+	sqlWhere = fltOper.getCHAR_LIKE(rst.getLp_TJ_qr_image_base64(),"TJ_qr_image_base64",sqlWhere);   // TJ_qr_image_base64
 	sqlWhere = fltOper.getCHAR_LIKE(rst.getLp_json(),"json",sqlWhere);   // json
         //////////////////////////////////////////////////////
         
@@ -313,7 +315,8 @@ public class LpAccesoBaseDatos {
                         regRead = new LpBean();
                         
 		regRead.setLp_card_id( rs.getString("card_id") ); regRead.setLp_card_id( (regRead.getLp_card_id() == null)?"":regRead.getLp_card_id().trim() ); // card_id
-		regRead.setLp_qr_image_base64( rs.getString("qr_image_base64") ); regRead.setLp_qr_image_base64( (regRead.getLp_qr_image_base64() == null)?"":regRead.getLp_qr_image_base64().trim() ); // qr_image_base64
+		regRead.setLp_TJ_user_id( rs.getString("TJ_user_id") ); regRead.setLp_TJ_user_id( (regRead.getLp_TJ_user_id() == null)?"":regRead.getLp_TJ_user_id().trim() ); // TJ_user_id
+		regRead.setLp_TJ_qr_image_base64( rs.getString("TJ_qr_image_base64") ); regRead.setLp_TJ_qr_image_base64( (regRead.getLp_TJ_qr_image_base64() == null)?"":regRead.getLp_TJ_qr_image_base64().trim() ); // TJ_qr_image_base64
 		regRead.setLp_json( rs.getString("json") ); regRead.setLp_json( (regRead.getLp_json() == null)?"":regRead.getLp_json().trim() ); // json
                         
                         if ( cfg.isExportar() ) getSeq_Sub_ExportMid( regRead );
@@ -363,7 +366,8 @@ public class LpAccesoBaseDatos {
 				s += "\r\n<html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=iso-8859-1\"><title>"+fo.getName()+"</title></head><body><table>\r\n";
 				s += "<tr>";
 				s += "<td><strong style='color:darkblue;'>" + "card_id" + "</strong></td>";  // card_id
-				s += "<td><strong style='color:darkblue;'>" + "qr_image_base64" + "</strong></td>";  // qr_image_base64
+				s += "<td><strong style='color:darkblue;'>" + "TJ_user_id" + "</strong></td>";  // TJ_user_id
+				s += "<td><strong style='color:darkblue;'>" + "TJ_qr_image_base64" + "</strong></td>";  // TJ_qr_image_base64
 				s += "<td><strong style='color:darkblue;'>" + "json" + "</strong></td>";  // json
 				s += "</tr>\r\n";
                 dout.write(s);
@@ -383,9 +387,12 @@ public class LpAccesoBaseDatos {
 				tmp = registro.getLp_card_id();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // card_id
-				tmp = registro.getLp_qr_image_base64();
+				tmp = registro.getLp_TJ_user_id();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
-				s += "<td>" + tmp + "</td>";  // qr_image_base64
+				s += "<td>" + tmp + "</td>";  // TJ_user_id
+				tmp = registro.getLp_TJ_qr_image_base64();
+				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
+				s += "<td>" + tmp + "</td>";  // TJ_qr_image_base64
 				tmp = registro.getLp_json();
 				try {tmp = new String( tmp.getBytes(), "iso-8859-1" );} catch (UnsupportedEncodingException ex) {;}
 				s += "<td>" + tmp + "</td>";  // json
@@ -552,8 +559,9 @@ public class LpAccesoBaseDatos {
 					LpBean registro = new LpBean();
 					
 				registro.setLp_card_id( jsonReg.getString(0) );	// card_id
-				registro.setLp_qr_image_base64( jsonReg.getString(1) );	// qr_image_base64
-				registro.setLp_json( jsonReg.getString(2) );	// json
+				registro.setLp_TJ_user_id( jsonReg.getString(1) );	// TJ_user_id
+				registro.setLp_TJ_qr_image_base64( jsonReg.getString(2) );	// TJ_qr_image_base64
+				registro.setLp_json( jsonReg.getString(3) );	// json
 					
 					arrayTmp.add(registro);
 				} catch (Exception e) {;}

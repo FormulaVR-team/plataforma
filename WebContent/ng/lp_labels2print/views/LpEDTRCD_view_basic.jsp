@@ -20,8 +20,12 @@
 				<input type="text" ng-model="actionForm.lp_card_id" />
 			</md-input-container>
 			<md-input-container>
-				<label>qr_image_base64</label>
-				<input type="text" ng-model="actionForm.lp_qr_image_base64" disabled="disabled" />
+				<label>TJ_user_id</label>
+				<input type="text" ng-model="actionForm.lp_TJ_user_id" disabled="disabled" />
+			</md-input-container>
+			<md-input-container>
+				<label>TJ_qr_image_base64</label>
+				<input type="text" ng-model="actionForm.lp_TJ_qr_image_base64" disabled="disabled" />
 			</md-input-container>
 			<md-input-container>
 				<label>json</label>

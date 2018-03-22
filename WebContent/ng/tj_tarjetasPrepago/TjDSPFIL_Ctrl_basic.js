@@ -57,6 +57,7 @@ angular
 								, tj_is_deleted: "" // is_deleted
 								, tj_author: "" // author
 								, tj_card_id: "" // card_id
+								, tj_user_id: "" // user_id
 								, tj_balance_initial: "" // balance_initial
 								, tj_balance_current: "" // balance_current
 								, tj_last_sale_amount: "" // last_sale_amount
@@ -71,6 +72,7 @@ angular
 								, tj_is_deleted: "" // is_deleted
 								, tj_author: "" // author
 								, tj_card_id: "" // card_id
+								, tj_user_id: "" // user_id
 								, tj_balance_initial: "" // balance_initial
 								, tj_balance_current: "" // balance_current
 								, tj_last_sale_amount: "" // last_sale_amount
@@ -287,6 +289,7 @@ angular
 						$scope.actionForm.tj_is_deleted = reg.tj_is_deleted; // is_deleted
 						$scope.actionForm.tj_author = reg.tj_author; // author
 						$scope.actionForm.tj_card_id = reg.tj_card_id; // card_id
+						$scope.actionForm.tj_user_id = reg.tj_user_id; // user_id
 						$scope.actionForm.tj_balance_initial = reg.tj_balance_initial; // balance_initial
 						$scope.actionForm.tj_balance_current = reg.tj_balance_current; // balance_current
 						$scope.actionForm.tj_last_sale_amount = reg.tj_last_sale_amount; // last_sale_amount
@@ -307,6 +310,7 @@ angular
 						$scope.actionForm.tj_is_deleted = ""; // is_deleted
 						$scope.actionForm.tj_author = ""; // author
 						$scope.actionForm.tj_card_id = ""; // card_id
+						$scope.actionForm.tj_user_id = ""; // user_id
 						$scope.actionForm.tj_balance_initial = ""; // balance_initial
 						$scope.actionForm.tj_balance_current = ""; // balance_current
 						$scope.actionForm.tj_last_sale_amount = ""; // last_sale_amount

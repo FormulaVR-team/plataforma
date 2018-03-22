@@ -120,6 +120,12 @@
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 						<md-input-container class="md-block">
+							<label>user_id</label>
+							<input type="text" ng-model="actionForm.tj_filtro.tj_user_id" />
+						</md-input-container>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+						<md-input-container class="md-block">
 							<label>balance_initial</label>
 							<input type="text" ng-model="actionForm.tj_filtro.tj_balance_initial" />
 						</md-input-container>
@@ -163,6 +169,7 @@
 					<th>D</th>
 					<th>author</th>
 					<th>card_id</th>
+					<th>user_id</th>
 					<th>balance_initial</th>
 					<th>balance_current</th>
 					<th>last_sale_amount</th>
@@ -183,6 +190,7 @@
 					<td>{{reg.tj_is_deleted}}&nbsp;</td>
 					<td>{{reg.tj_author}}&nbsp;</td>
 					<td>{{reg.tj_card_id}}&nbsp;</td>
+					<td>{{reg.tj_user_id}}&nbsp;</td>
 					<td>{{reg.tj_balance_initial}}&nbsp;</td>
 					<td>{{reg.tj_balance_current}}&nbsp;</td>
 					<td>{{reg.tj_last_sale_amount}}&nbsp;</td>
