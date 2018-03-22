@@ -388,13 +388,24 @@ angular
 								if (response.data.rc === 'OK') {
 									var modelo = response.data.text;
 									moveModelToView( $scope, modelo );
-									$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
 									
 									//////////////
 									// Abrir panel para seleccionar a partir de qué etiqueta (1..27) se de be imprimir:
-									$('#tjDSPFIL_PRINT_modal').modal('show');
+									app_services
+									.lp_lst( JSON.stringify( $scope.actionForm.clavesMarcadas) )
+									.then(
+											function(response) {
+												if (response.rc === 'OK') {
+													$scope.lst_lp = response.text;
+													
+													$('#tjDSPFIL_PRINT_modal').modal('show');
+												}
+											}
+											
+									);
 									//////////////
 									
+									$scope.actionForm.clavesMarcadas.length = 0; $scope.actionForm.filasMarcadas.length = 0;	// Borrar los selectores de fila.
 								} else {
 									app_services.errorComun(response.data.text);
 								}

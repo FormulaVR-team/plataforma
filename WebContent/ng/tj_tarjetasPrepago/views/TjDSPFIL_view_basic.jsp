@@ -250,11 +250,14 @@
   <div class="modal fade modal-full-width" id="tjDSPFIL_PRINT_modal" role="dialog" data-backdrop="false">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">
-							<i class="mfw-icon material-icons">clear</i>
-					</button>
-          <h2 class="modal-title">Imprimir: tarjetasPrepago</h2>
+        <div class="modal-header" id="tjDSPFIL_PRINT_modal_header">
+			<button type="button" class="close" data-dismiss="modal">
+				<i class="mfw-icon material-icons">clear</i>
+			</button>
+			<h2 class="modal-title">Imprimir: tarjetasPrepago</h2>
+			<button type="button" onclick="$('#tjDSPFIL_PRINT_modal_header').toggle();">
+				<i class="mfw-icon material-icons">accessible</i>
+			</button>
         </div>
         <div class="modal-body">
 			<span ng-include="'labels27_70x32.jsp'" />

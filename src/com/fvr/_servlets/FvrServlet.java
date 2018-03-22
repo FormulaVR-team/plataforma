@@ -45,6 +45,7 @@ import com.fvr.cp_cockpits.bean.CpBean;
 import com.fvr.es_eventSusbscriptions.bean.EsBean;
 import com.fvr.ev_events.bean.EvBean;
 import com.fvr.lo_location.bean.LoBean;
+import com.fvr.lp_labels2print.bean.LpBean;
 import com.fvr.ps_countries.bean.PsBean;
 import com.fvr.pt_products.bean.PtBean;
 import com.fvr.rs_reservations.bean.RsBean;
@@ -109,6 +110,8 @@ public class FvrServlet extends HttpServlet {
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=cp_lst&LOC=CENTRAL [&BLK=S]
     private static final String ev_lst = "ev_lst";  // Retorna lista de eventos de la instalación
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=ev_lst&LOC=CENTRAL
+    private static final String lp_lst = "lp_lst";  // Retorna lista de etiquetass a imprimir
+    // http://localhost:8080/FormulaVR/FvrServlet?ACC=lp_lst&LST=LaUno
     private static final String tt_lst = "tt_lst";  // Retorna lista de sesiones
     // http://localhost:8080/FormulaVR/FvrServlet?ACC=tt_lst&LOC=CENTRAL&TYP=NORMAL [&BLK=S]
     private static final String pt_lst = "pt_lst";  // Retorna lista de Productos
@@ -229,7 +232,7 @@ public class FvrServlet extends HttpServlet {
     	// Recepción de parámetros
     	String acc = null; 
     	String usr = null; String key = null; 
-    	String loc = null; String typ = null; String blk = null; String dat = null; String tim = null; String kps = null; String nck = null;; String pwd = null;
+    	String loc = null; String typ = null; String blk = null; String dat = null; String tim = null; String kps = null; String nck = null; String pwd = null; String lst = null;
     	
     	try { acc = payload.getString("ACC"); } catch (Exception e) { ; }
     	try { usr = payload.getString("USR"); } catch (Exception e) { ; }
@@ -242,6 +245,7 @@ public class FvrServlet extends HttpServlet {
     	try { kps = payload.getString("KPS"); } catch (Exception e) { ; }
     	try { nck = payload.getString("NCK"); } catch (Exception e) { ; }
     	try { pwd = payload.getString("PWD"); } catch (Exception e) { ; }
+    	try { lst = payload.getString("LST"); } catch (Exception e) { ; }
 
     	acc = acc==null?request.getParameter("ACC"):acc;   // Clave ACCIÓN: LOGON, UPLOAD, DOWNLOAD.
     	usr = usr==null?request.getParameter("USR"):usr;   // Usuario
@@ -254,6 +258,7 @@ public class FvrServlet extends HttpServlet {
     	kps = kps==null?request.getParameter("KPS"):kps;   // Clave de país
     	nck = nck==null?request.getParameter("NCK"):nck;   // Nick del usuario
     	pwd = pwd==null?request.getParameter("PWD"):pwd;   // Password en md5
+    	lst = lst==null?request.getParameter("LST"):lst;   // Password en md5
     	///////////////////////////
     	// El distribuidor de procesos:
     	if(        lo_lst.equalsIgnoreCase( acc ) ) {
@@ -276,6 +281,8 @@ public class FvrServlet extends HttpServlet {
     		cmd_cp_lst(request, response, loc, blk);
     	} else if (ev_lst.equalsIgnoreCase( acc )) {
     		cmd_ev_lst(request, response, loc);
+    	} else if (lp_lst.equalsIgnoreCase( acc )) {
+    		cmd_lp_lst(request, response, lst);
     	} else if (tt_lst.equalsIgnoreCase( acc )) {
     		cmd_tt_lst(request, response, loc, typ, blk);
     	} else if (pt_lst.equalsIgnoreCase( acc )) {
@@ -926,6 +933,47 @@ public class FvrServlet extends HttpServlet {
 				responder(request, response, false, e.getMessage());
 				return;
 			}
+		}
+
+		responder(request, response, true, jsonArray.toString() );
+		return;
+	}
+
+	private void cmd_lp_lst(HttpServletRequest request, HttpServletResponse response, String card_id_list) throws IOException {
+		if ( card_id_list == null || card_id_list.trim().length() < 1 ) { responder(request, response, false, "Error en parámetros"); return; }
+
+		JSONArray jsonArray = new JSONArray();
+
+		if ( card_id_list != null && card_id_list.trim().length() > 0 ) {
+
+			JSONArray lstClaves = JSONArray.fromObject(card_id_list);
+			for ( int i=0; i < lstClaves.size(); i++ ) {
+
+				try {
+					BDConexion dataBase = new Subrutinas().getBDConexion(request);
+
+					com.fvr.lp_labels2print.db.LpAccesoBaseDatos dao = new com.fvr.lp_labels2print.db.LpAccesoBaseDatos();
+					com.fvr.lp_labels2print.bean.LpBeanFiltro    flt = new com.fvr.lp_labels2print.bean.LpBeanFiltro();
+					com.fvr.lp_labels2print.bean.LpBean[]        rgs = null;
+					
+					flt.setLp_card_id( lstClaves.getString(i) );
+					
+					rgs = dao.lp_getSeq(dataBase, new ConfigPantalla( 1 ), flt);
+
+					if ( rgs != null ) {
+						JSONObject json = null;
+						for ( LpBean item : rgs ) {
+							json = JSONObject.fromObject(item);
+							jsonArray.add( json );
+						}
+					}
+				} catch (StExcepcion e) {
+					responder(request, response, false, e.getMessage());
+					return;
+				}
+
+			}
+
 		}
 
 		responder(request, response, true, jsonArray.toString() );

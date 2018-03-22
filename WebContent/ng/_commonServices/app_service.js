@@ -171,6 +171,13 @@ angular.module('commonServices_module')
 	                    data :  { ACC: "ev_lst", LOC: location_id }
 	                });
 	            }
+	            , lp_lst : function (card_id_list) {
+	                return peticionHTTP({
+	                    method: 'POST',
+	                    url: './FvrServlet',
+	                    data :  { ACC: "lp_lst", LST: card_id_list }
+	                });
+	            }
 	            , rtvUsData : function ( user, hashCode ) {
 	                return peticionHTTP({
 	                    method: 'POST',
