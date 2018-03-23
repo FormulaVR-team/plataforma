@@ -444,6 +444,11 @@ angular
 						$scope.setLabels_27( $scope.labels, $scope.lst_lp, $scope.inicial );
 					}
 
+					$scope.print = function() {
+						$('#tjDSPFIL_PRINT_modal_header').hide();
+						window.print();
+					}
+
 					
 	/////////////
 	/////////////

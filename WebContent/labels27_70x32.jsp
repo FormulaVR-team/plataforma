@@ -1,8 +1,5 @@
 
 	<style>
-		body {
-			padding: 10px;
-		}
 		.frame_labels {
 			/* padding: 10px; */
 			background-color: silver;
@@ -35,9 +32,11 @@
 				<div ng-repeat="item in group_labels">
 					<!--  -->
 					<div class="frame_label" layout="column">
+		<span ng-if=" item.lp_TJ_user_id != null">
 						<div class="frame_label_head">
 							{{ item.lp_TJ_user_id }}
 						</div>
+		</span>
 						<div>
 							<div layout="row">
 								<div style="margin: 10px 10px 10px 10px;">

@@ -247,20 +247,15 @@
 <!-- Panel PRINT inicio -->	
 <div class="container">
   <!-- Modal -->
-  <div class="modal fade modal-full-width" id="tjDSPFIL_PRINT_modal" role="dialog" data-backdrop="false">
+  <div class="modal fade modal-full-width" id="tjDSPFIL_PRINT_modal" role="dialog" data-backdrop="false" style="background-color: rgba(255, 255, 255, 1.0);">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header" id="tjDSPFIL_PRINT_modal_header">
-			<button type="button" class="close" data-dismiss="modal">
-				<i class="mfw-icon material-icons">clear</i>
-			</button>
+			<button type="button" class="close" data-dismiss="modal"><i class="mfw-icon material-icons">clear</i></button>
 			<h2 class="modal-title">Imprimir: tarjetasPrepago</h2>
-			<button type="button" ng-click="labels_decr()">
-				<i class="mfw-icon material-icons">accessible</i>
-			</button>
-			<button type="button" ng-click="labels_incr()">
-				<i class="mfw-icon material-icons">accessible</i>
-			</button>
+			<button type="button" ng-click="labels_decr()"><i class="mfw-icon material-icons">navigate_before</i></button>
+			<button type="button" ng-click="labels_incr()"><i class="mfw-icon material-icons">navigate_next</i></button>
+			<button type="button" ng-click="print()"><i class="mfw-icon material-icons">print</i></button>
         </div>
         <div class="modal-body">
 			<span ng-include="'labels27_70x32.jsp'" />
