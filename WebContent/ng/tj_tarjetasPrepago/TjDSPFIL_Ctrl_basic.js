@@ -375,8 +375,6 @@ angular
 					};
 
 					$scope.marcados_imprimir = function() {
-						if ( ! confirmar('Imprimir las tarjetas marcadas, ¿está seguro?',this) ) { return; }
-
 						// Combos y auxiliares para componentes de presentación:
 						$scope.actionForm.filasGrid = $scope.aux_filasGrid.value;
 
@@ -427,7 +425,7 @@ angular
 									labels[i] = lst_lp[idx];
 									idx++;
 							} else {
-								labels[i] = {"lp_TJ_qr_image_base64":"https://www.formulavr.net/wp-content/uploads/2017/09/formulvr-wh.png"};
+								labels[i] = {"lp_TJ_qr_image_base64":"./resBS/img/formulvr-wh.png"};
 							}
 						}
 					}
@@ -445,6 +443,7 @@ angular
 					}
 
 					$scope.print = function() {
+						if ( ! confirmar('Imprimir las tarjetas indicadas, ¿está seguro?',this) ) { return; }
 						$('#tjDSPFIL_PRINT_modal_header').hide();
 						window.print();
 					}
