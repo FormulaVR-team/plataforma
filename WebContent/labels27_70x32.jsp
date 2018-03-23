@@ -1,30 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="theNgApp" ng-controller="AppCtrl">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>labels 27</title>
-
-
-  <!-- Angular -->    
-	<script src="./ng/_lib/ng/angular.min.js?fvrVer=${miVersion}"></script>
-	<script src="./ng/_lib/ng/angular-ui-router.min.js?fvrVer=${miVersion}"></script>
-	<script src="./ng/_lib/ng/angular-animate.min.js?fvrVer=${miVersion}"></script>
-	<script src="./ng/_lib/ng/angular-aria.min.js?fvrVer=${miVersion}"></script>
-	<script src="./ng/_lib/ng/angular-messages.min.js?fvrVer=${miVersion}"></script>
-	<script src="./ng/_lib/ng/angular-sanitize.min.js?fvrVer=${miVersion}"></script>
-	<script src="./ng/_lib/ng/angular-md5.js?fvrVer=${miVersion}"></script>
-	
-	<script src="./ng/_lib/ng/i18n/angular-locale_es-es.min.js"></script>
-	
-	<!-- Angular Material Library -->
-	<script src="./ng/_lib/ng/angular-material.min.js?fvrVer=${miVersion}"></script>
-	<!-- Angular Material style sheet -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./ng/_lib/ng/css/angular-material.min.css?fvrVer=${miVersion}" />
-	<link rel="stylesheet" href="./ng/_lib/ng/css/angular-material.CUSTOM-FVR.css?fvrVer=${miVersion}" />
-	<link rel="stylesheet" href="./ng/_lib/ng/css/icon.css?family=Material+Icons" />
 
 	<style>
 		body {
@@ -47,231 +20,41 @@
 			height: 30mm;
 			background-color: white;
 		}
+		.frame_label_head {
+			text-align: center;
+			border-bottom: solid 1px;
+		}
 		.frame_label_row {
 			/* padding: 1px; */
 		}
 	</style>
 
-	</head>
-	<body>
-		<main class="frame_labels">
-			<div layout="column">
-				<div layout="row" layout-align:"space-between end" class="frame_label_row">
-					<div class="frame_label">
-						* 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 *
+	<main class="frame_labels" layout="column" ng-repeat="reg in labels">
+		<div ng-if="$index % 3 === 0" ng-init="group_labels = labels.slice($index, $index + 3)">
+			<div layout="row" layout-align:"space-between end" class="frame_label_row">
+				<div ng-repeat="item in group_labels">
+					<!--  -->
+					<div class="frame_label" layout="column">
+						<div class="frame_label_head">
+							{{ item.lp_TJ_user_id }}
+						</div>
+						<div>
+							<div layout="row">
+								<div style="margin: 10px 10px 10px 10px;">
+									<img width="50px" src="{{ item.lp_TJ_qr_image_base64 }}" ></img>
+								</div>
+								<div layout="column" style="margin: 5px 0px 0px 0px;">
+									<div>{{ item.lp_json.fld_2 }}</div>
+									<div>{{ item.lp_json.fld_3 }}</div>
+									<div>{{ item.lp_json.fld_4 }}</div>
+									<div>{{ item.lp_json.fld_5 }}</div>
+									<div>{{ item.lp_json.fld_6 }}</div>
+								</div>
+							</div>
+						</div>
 					 </div>
-					<div class="frame_label">
-						* 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 *
-					 </div>
-					<div class="frame_label">
-						* 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 *
-					 </div>
-				</div>
-				<div layout="row" layout-align:"space-between end" class="frame_label_row">
-					<div class="frame_label">
-						* 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 *
-					 </div>
-					<div class="frame_label">
-						* 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 *
-					 </div>
-					<div class="frame_label">
-						* 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 *
-					 </div>
-				</div>
-				<div layout="row" layout-align:"space-between end" class="frame_label_row">
-					<div class="frame_label">
-						* 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 *
-					 </div>
-					<div class="frame_label">
-						* 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 *
-					 </div>
-					<div class="frame_label">
-						* 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 *
-					 </div>
-				</div>
-				<div layout="row" layout-align:"space-between end" class="frame_label_row">
-					<div class="frame_label">
-						* 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 *
-					 </div>
-					<div class="frame_label">
-						* 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 *
-					 </div>
-					<div class="frame_label">
-						* 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 *
-					 </div>
-				</div>
-				<div layout="row" layout-align:"space-between end" class="frame_label_row">
-					<div class="frame_label">
-						* 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 *
-					 </div>
-					<div class="frame_label">
-						* 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 *
-					 </div>
-					<div class="frame_label">
-						* 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 *
-					 </div>
-				</div>
-				<div layout="row" layout-align:"space-between end" class="frame_label_row">
-					<div class="frame_label">
-						* 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 *
-					 </div>
-					<div class="frame_label">
-						* 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 *
-					 </div>
-					<div class="frame_label">
-						* 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 *
-					 </div>
-				</div>
-				<div layout="row" layout-align:"space-between end" class="frame_label_row">
-					<div class="frame_label">
-						* 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 *
-					 </div>
-					<div class="frame_label">
-						* 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 *
-					 </div>
-					<div class="frame_label">
-						* 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 *
-					 </div>
-				</div>
-				<div layout="row" layout-align:"space-between end" class="frame_label_row">
-					<div class="frame_label">
-						* 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 *
-					 </div>
-					<div class="frame_label">
-						* 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 *
-					 </div>
-					<div class="frame_label">
-						* 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 *
-					 </div>
-				</div>
-				<div layout="row" layout-align:"space-between end" class="frame_label_row">
-					<div class="frame_label">
-						* 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
-						1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 *
-					 </div>
-					<div class="frame_label">
-						* 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-						2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 *
-					 </div>
-					<div class="frame_label">
-						* 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
-						3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 *
-					 </div>
+					<!--  -->
 				</div>
 			</div>
-		</main>
-
-<script>
-	var app = angular.module('theNgApp', ['ngMaterial', 'ngMessages']);
-	app.controller('AppCtrl', function($scope, $timeout, $mdToast, $http) {
-		$scope.cosa = "La mierda";
-	});	
-</script>
-	
-	</body>
-</html>
+		</div>
+	</main>

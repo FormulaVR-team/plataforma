@@ -255,7 +255,10 @@
 				<i class="mfw-icon material-icons">clear</i>
 			</button>
 			<h2 class="modal-title">Imprimir: tarjetasPrepago</h2>
-			<button type="button" onclick="$('#tjDSPFIL_PRINT_modal_header').toggle();">
+			<button type="button" ng-click="labels_decr()">
+				<i class="mfw-icon material-icons">accessible</i>
+			</button>
+			<button type="button" ng-click="labels_incr()">
 				<i class="mfw-icon material-icons">accessible</i>
 			</button>
         </div>

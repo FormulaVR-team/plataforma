@@ -397,6 +397,10 @@ angular
 											function(response) {
 												if (response.rc === 'OK') {
 													$scope.lst_lp = response.text;
+													$scope.labels = [];
+													$scope.inicial = 0;
+													
+													$scope.setLabels_27( $scope.labels, $scope.lst_lp, $scope.inicial );
 													
 													$('#tjDSPFIL_PRINT_modal').modal('show');
 												}
@@ -415,6 +419,30 @@ angular
 								console.error("Ha sucedido un error: " + response.statusText);
 							});
 					};
+
+					$scope.setLabels_27 = function(labels, lst_lp, inicial) {
+						var idx = 0;
+						for (var i = 0; i < 27; i++) {
+							if ( i >= inicial && idx < lst_lp.length ) {
+									labels[i] = lst_lp[idx];
+									idx++;
+							} else {
+								labels[i] = {"lp_TJ_qr_image_base64":"https://www.formulavr.net/wp-content/uploads/2017/09/formulvr-wh.png"};
+							}
+						}
+					}
+
+					$scope.labels_incr = function() {
+						$scope.inicial++;
+						if ($scope.inicial > 26 ) { $scope.inicial = 0; }
+						$scope.setLabels_27( $scope.labels, $scope.lst_lp, $scope.inicial );
+					}
+
+					$scope.labels_decr = function() {
+						$scope.inicial--;
+						if ($scope.inicial<0) { $scope.inicial = 0; }
+						$scope.setLabels_27( $scope.labels, $scope.lst_lp, $scope.inicial );
+					}
 
 					
 	/////////////
