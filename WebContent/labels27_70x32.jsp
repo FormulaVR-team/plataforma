@@ -26,21 +26,21 @@
 		}
 	</style>
 
-	<main class="frame_labels" layout="column" ng-repeat="reg in labels">
+	<div class="frame_labels" layout="column" ng-repeat="reg in labels">
 		<div ng-if="$index % 3 === 0" ng-init="group_labels = labels.slice($index, $index + 3)">
 			<div layout="row" layout-align:"space-between end" class="frame_label_row">
 				<div ng-repeat="item in group_labels">
 					<!--  -->
 					<div class="frame_label" layout="column">
-		<span ng-if=" item.lp_TJ_user_id != null">
-						<div class="frame_label_head">
-							{{ item.lp_TJ_user_id }}
-						</div>
-		</span>
+						<span ng-if=" item.lp_TJ_user_id != null">
+							<div class="frame_label_head">{{ item.lp_TJ_user_id }}</div>
+						</span>
 						<div>
 							<div layout="row">
 								<div style="margin: 10px 10px 10px 10px;">
-									<img width="50px" src="{{ item.lp_TJ_qr_image_base64 }}" ></img>
+									<span ng-if=" item.lp_TJ_user_id != null">
+										<img width="50px" src="{{ item.lp_TJ_qr_image_base64 }}" ></img>
+									</span>
 								</div>
 								<div layout="column" style="margin: 5px 0px 0px 0px;">
 									<div>{{ item.lp_json.fld_2 }}</div>
@@ -56,4 +56,4 @@
 				</div>
 			</div>
 		</div>
-	</main>
+	</div>

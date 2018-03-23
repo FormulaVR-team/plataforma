@@ -444,8 +444,30 @@ angular
 
 					$scope.print = function() {
 						if ( ! confirmar('Imprimir las tarjetas indicadas, ¿está seguro?',this) ) { return; }
-						$('#tjDSPFIL_PRINT_modal_header').hide();
-						window.print();
+						$('#tjDSPFIL_PRINT_modal').modal('hide');
+
+				        var printContents = new $("#tjDSPFIL_PRINT_modal_body").clone();
+				        var myWindow = window.open("", "popup", "width=800,height=600,scrollbars=yes,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0");
+				        var doc = myWindow.document;
+				        doc.open();
+
+					        doc.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">");
+					        doc.write("<html>");
+					        doc.write("<head>");
+					        doc.write("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />");
+					        doc.write("<title>labels 27</title>");
+					        doc.write("<link rel='stylesheet' href='./ng/_lib/ng/css/angular-material.min.css?fvrVer=${miVersion}' />");
+					        doc.write("<link rel='stylesheet' href='./ng/_lib/ng/css/angular-material.CUSTOM-FVR.css?fvrVer=${miVersion}' />");
+					        doc.write("</head>");
+					        doc.write("<body>");
+					        doc.write($(printContents).html());
+					        doc.write("</body>");
+					        doc.write("</html>");
+
+				        doc.close();
+
+				        myWindow.print();
+
 					}
 
 					
