@@ -21,6 +21,11 @@
 			text-align: center;
 			border-bottom: solid 1px;
 		}
+		.frame_label_foot {
+			text-align: center;
+			border-top: solid 1px;
+			font-weight: bold;
+		}
 		.frame_label_row {
 			/* padding: 1px; */
 		}
@@ -37,7 +42,7 @@
 						</span>
 						<div>
 							<div layout="row">
-								<div style="margin: 10px 10px 10px 10px;">
+								<div style="margin: 5px;">
 									<span ng-if=" item.lp_TJ_user_id != null">
 										<img width="50px" src="{{ item.lp_TJ_qr_image_base64 }}" ></img>
 									</span>
@@ -45,12 +50,13 @@
 								<div layout="column" style="margin: 5px 0px 0px 0px;">
 									<div>{{ item.lp_json.fld_2 }}</div>
 									<div>{{ item.lp_json.fld_3 }}</div>
-									<div>{{ item.lp_json.fld_4 }}</div>
-									<div>{{ item.lp_json.fld_5 }}</div>
-									<div>{{ item.lp_json.fld_6 }}</div>
+									<div>{{ item.lp_json.fld_4 | limitTo:10 }}&nbsp;{{ item.lp_json.fld_5 | limitTo:18 }}</div>
 								</div>
 							</div>
 						</div>
+						<span ng-if=" item.lp_TJ_user_id != null">
+							<div class="frame_label_foot">{{ item.lp_card_id }}</div>
+						</span>
 					 </div>
 					<!--  -->
 				</div>

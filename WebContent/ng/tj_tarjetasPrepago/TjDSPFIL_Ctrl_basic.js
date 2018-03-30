@@ -540,8 +540,12 @@ angular
 						if ( ! confirmar('Suprimir el registro, ¿está seguro?',this) ) { return; }
 
 						//llamo a su servicio pasandole el actionForm de entidad
+						
+						// Marcdo no suprimido real:
+						$scope.actionForm.tj_is_deleted = "Y";
+						
 						TjDSPFIL_service
-								.dlt($scope.actionForm)
+								.chg($scope.actionForm)
 								.then(
 									function(response) {
 

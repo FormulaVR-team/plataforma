@@ -1,23 +1,26 @@
 ﻿package com.fvr.tj_tarjetasPrepago.actions;
 
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessage;
+import org.apache.struts.action.ActionMessages;
+
+import com.fvr.FuentesDeDatos.BDConexion;
 import com.fvr._comun.ConfigPantalla;
 import com.fvr._comun.StExcepcion;
 import com.fvr._comun.Subrutinas;
 import com.fvr.tj_tarjetasPrepago.bean.TjBean;
 import com.fvr.tj_tarjetasPrepago.db.TjAccesoBaseDatos;
 import com.fvr.tj_tarjetasPrepago.forms.TjRCD_AF;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import com.fvr.us_users.bean.UsBean;
 
 import net.sf.json.JSONObject;
-
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMessage;
-import org.apache.struts.action.ActionMessages;
 
 public class TjADDRCD_A extends Action {
     
@@ -180,24 +183,35 @@ public class TjADDRCD_A extends Action {
         String resultado = "OK";
         ///////////////////////////////////////////
         TjRCD_AF pantalla = (TjRCD_AF)form;
+		BDConexion dataBase = new Subrutinas().getBDConexion(request);
         ///////////////////////////////////////////
         // Inicializar campos:
-        
+
         pantalla.setTj_author(pantalla.getLogon_USR());
+
+        pantalla.setTj_balance_current( pantalla.getTj_balance_initial() );
 
         ///////////////////////////////////////////
         // Campos deducidos:
         ///////////////////////////////////////////
 
-        
+        long k = Subrutinas.parse_long( Subrutinas.getDateAuditoria() );
+		TjBean reg_tj = Subrutinas.getTjFromId(dataBase, ""+k);
+		while( reg_tj.getTj_sincro() != null && reg_tj.getTj_sincro().trim().length() > 0 ) {
+			k++;
+			reg_tj = Subrutinas.getTjFromId(dataBase, ""+k);			
+		}
+		pantalla.setTj_card_id( ""+k );
+
         ///////////////////////////////////////////
         return resultado;
     }
-    
+
     private String chkPantalla(HttpServletRequest request, ActionForm  form) {
         String resultado = "OK";
         ///////////////////////////////////////////
         TjRCD_AF pantalla = (TjRCD_AF)form;
+    	BDConexion dataBase = new Subrutinas().getBDConexion(request);
         ///////////////////////////////////////////
         CamposCalculados(request,pantalla);
         ///////////////////////////////////////////
@@ -212,7 +226,16 @@ public class TjADDRCD_A extends Action {
 
         ///////////////////////////////////////////
 
-        
+        if ( pantalla.getTj_user_id() == null || pantalla.getTj_user_id().trim().length() < 1 ) {
+            resultado = "NOVALE";
+            errores.add("error", new ActionMessage( "errors.detail", "USUARIO obligatorio." ));
+        } else {
+			UsBean reg_us = Subrutinas.getUsFromId(dataBase, pantalla.getTj_user_id());
+			if ( reg_us.getUs_sincro() == null || reg_us.getUs_sincro().trim().length() < 1 ) {
+	            resultado = "NOVALE";
+	            errores.add("error", new ActionMessage( "errors.detail", "USUARIO '" + pantalla.getTj_user_id() + "' no hallado en el sistema." ));
+			}
+        }
 	
         ///////////////////////////////////////////
         if ( errores.size() > 0 )

@@ -1329,12 +1329,15 @@ public class Subrutinas {
     }	
 
 	public static String getQrImage_base64(String qrCodeText, int size) {
+		return getQrImage_base64(qrCodeText, size, Color.BLACK, Color.ORANGE);
+	}
+	public static String getQrImage_base64(String qrCodeText, int size, Color foreColor, Color backColor) {
 		String resultado = "";
 		
 		if (qrCodeText == null || size < 1) { return resultado; }
 		
 		try {
-			BufferedImage image = QRCodeGenerator.generateQRImage(qrCodeText, size, Color.BLACK, Color.ORANGE);
+			BufferedImage image = QRCodeGenerator.generateQRImage(qrCodeText, size, foreColor, backColor);
 			if (image != null) {
 				resultado = ImageUtils.encodeToString(image, "png");
 				resultado = "data:image/png;base64," + resultado;

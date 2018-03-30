@@ -11,7 +11,7 @@
 <div name="TjEDTRCD_form">
 		<div class="row margin-0">
 
-
+<!-- 
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>sincro</label>
@@ -30,16 +30,17 @@
 				<input type="text" ng-model="actionForm.tj_is_deleted" />
 			</md-input-container>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+ -->
+ 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>author</label>
-				<input type="text" ng-model="actionForm.tj_author" />
+				<input type="text" ng-model="actionForm.tj_author" disabled="true"/>
 			</md-input-container>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>card_id</label>
-				<input type="text" ng-model="actionForm.tj_card_id" />
+				<input type="text" ng-model="actionForm.tj_card_id" disabled="true"/>
 			</md-input-container>
 			</div>
 			
@@ -53,7 +54,7 @@
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>balance_initial</label>
-				<input type="text" ng-model="actionForm.tj_balance_initial" />
+				<input type="text" ng-model="actionForm.tj_balance_initial" disabled="true"/>
 			</md-input-container>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
@@ -65,19 +66,20 @@
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>last_sale_amount</label>
-				<input type="text" ng-model="actionForm.tj_last_sale_amount" />
+				<input type="text" ng-model="actionForm.tj_last_sale_amount" disabled="true"/>
 			</md-input-container>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>last_sale_moment</label>
-				<input type="text" ng-model="actionForm.tj_last_sale_moment" />
+				<input type="text" ng-model="actionForm.tj_last_sale_moment" disabled="true"/>
 			</md-input-container>
 			</div>
+<!-- 
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container>
 				<label>qr_image_base64</label>
-				<input type="text" ng-model="actionForm.tj_qr_image_base64" />
+				<input type="text" ng-model="actionForm.tj_qr_image_base64" disabled="true"/>
 			</md-input-container>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
@@ -86,7 +88,7 @@
 				<input type="text" ng-model="actionForm.tj_json" />
 			</md-input-container>			
 			</div>
-
+ -->
 
     </div>
 	<div class="row margin-0">

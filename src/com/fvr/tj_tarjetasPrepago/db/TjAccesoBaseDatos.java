@@ -1,14 +1,6 @@
 ﻿package com.fvr.tj_tarjetasPrepago.db;
 
-import com.fvr.FuentesDeDatos.BDConexion;
-import com.fvr._comun.ConfigPantalla;
-import com.fvr._comun.StExcepcion;
-import com.fvr._comun.Subrutinas;
-import com.fvr._comun._K;
-import com.fvr._comun.RstAplicar;
-import com.fvr._comun.StBean;
-import com.fvr.tj_tarjetasPrepago.bean.TjBean;
-import com.fvr.tj_tarjetasPrepago.bean.TjBeanFiltro;
+import java.awt.Color;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,6 +11,17 @@ import java.io.UnsupportedEncodingException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import com.fvr.FuentesDeDatos.BDConexion;
+import com.fvr._comun.ConfigPantalla;
+import com.fvr._comun.RstAplicar;
+import com.fvr._comun.StBean;
+import com.fvr._comun.StExcepcion;
+import com.fvr._comun.Subrutinas;
+import com.fvr._comun._K;
+import com.fvr.tj_tarjetasPrepago.bean.TjBean;
+import com.fvr.tj_tarjetasPrepago.bean.TjBeanFiltro;
+
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -67,9 +70,9 @@ public class TjAccesoBaseDatos {
     public void tj_crtObj(BDConexion bd, TjBean registro) throws StExcepcion {
 
     	registro.setTj_sincro( Subrutinas.getDateAuditoria() );
-    	
-    	registro.setTj_qr_image_base64(
-    	    	Subrutinas.getQrImage_base64(registro.getTj_card_id(), 300)
+
+		registro.setTj_qr_image_base64(
+    	    	Subrutinas.getQrImage_base64(registro.getTj_card_id(), 300, Color.BLACK, Color.ORANGE)
     			);
 
         ////////////////////////////////////////////////////////////////////////////////////////////

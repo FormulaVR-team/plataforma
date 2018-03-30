@@ -963,6 +963,8 @@ public class FvrServlet extends HttpServlet {
 					if ( rgs != null ) {
 						JSONObject json = null;
 						for ( LpBean item : rgs ) {
+							// Eliminar el registro de LP (...era temporal)
+							try { dao.lp_dltObj(dataBase, item); } catch (Exception e) {;}
 							json = JSONObject.fromObject(item);
 							jsonArray.add( json );
 						}

@@ -11,7 +11,7 @@
 <div name="TjADDRCD_form">
 		<div class="row margin-0">
 
-
+<!-- 
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>sincro</label>
@@ -36,13 +36,13 @@
 				<input type="text" ng-model="actionForm.tj_author" />
 			</md-input-container>
 			</div>
-			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+ 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>card_id</label>
 				<input type="text" ng-model="actionForm.tj_card_id" />
 			</md-input-container>
 			</div>
-			
+ -->
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container>
 				<label>user_id</label>
@@ -56,6 +56,7 @@
 				<input type="text" ng-model="actionForm.tj_balance_initial" />
 			</md-input-container>
 			</div>
+<!--
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
 			<md-input-container class="md-block">
 				<label>balance_current</label>
@@ -75,7 +76,7 @@
 			</md-input-container>
 			</div>
 			<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
-			<md-input-container>
+ 			<md-input-container>
 				<label>qr_image_base64</label>
 				<input type="text" ng-model="actionForm.tj_qr_image_base64" />
 			</md-input-container>
@@ -86,7 +87,7 @@
 				<input type="text" ng-model="actionForm.tj_json" />
 			</md-input-container>			
 			</div>
-
+ -->
 
     </div>
 	<div class="row margin-0">
