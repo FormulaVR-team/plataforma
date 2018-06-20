@@ -566,6 +566,28 @@ public class SendMail implements Serializable {
 				} catch (StExcepcion e) {
 					errores.add("ERROR " + e.getMessage());
 				}
+				
+				////////////////////
+				// 2018-0620 EED: Pedro quiere que además se envíe un correo a reservas@formulavr.net
+				try {
+					String nick = Subrutinas.getUsFromId(dataBase, user_id).us_nick; nick = (nick==null)?"":nick;
+					String datos = smtp_mail_subject + "    " + eMailDestino;
+					datos += (nick.trim().length()>0)?"     " + nick:"";
+					sendMail(
+							smtp_host_name, 
+							smtp_auth_user, 
+							smtp_auth_pwd, 
+							smtp_mail_port,
+							smtp_mail_from,
+							"reservas@formulavr.net",	// eMailDestino,
+							smtp_mail_subject,
+							datos,						// docHtml,
+							null						// replyTo_o_null
+							);
+				} catch (MessagingException e) {
+					;
+				}
+				////////////////////
 
 			}
 		} catch (MessagingException e) {
