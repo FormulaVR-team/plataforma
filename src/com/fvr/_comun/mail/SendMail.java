@@ -568,7 +568,7 @@ public class SendMail implements Serializable {
 				}
 				
 				////////////////////
-				// 2018-0620 EED: Pedro quiere que además se envíe un correo a reservas@formulavr.net
+				// 2018-06-20 EED: Pedro quiere que además se envíe un correo a reservas@formulavr.net
 				try {
 					String nick = Subrutinas.getUsFromId(dataBase, user_id).us_nick; nick = (nick==null)?"":nick;
 					String datos = smtp_mail_subject + "    " + eMailDestino;
